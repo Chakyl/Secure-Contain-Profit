@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:the_nether",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "scp:citadel",
+      "layers": []
+    }
+  }
+}

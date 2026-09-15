@@ -1,0 +1,4 @@
+#Whether entering the nether or defeating the ender dragon should send a message to all players
+sendProgressionMessage = true
+#Whether progression tags should be used for mob spawning
+enableProgression = true
