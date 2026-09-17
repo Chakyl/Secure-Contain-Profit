@@ -1,0 +1,206 @@
+{
+	"shop_id": "armor",
+	"name": {
+		"translate": "shop.scp.armor"
+	},
+	"texture": "armor:textures/item/armor",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "scguns:anthralite_chestplate"
+	},
+	"selector_weight": 4,
+	"trades": [
+		{
+			"offer": {
+				"id": "scguns:anthralite_respirator",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"trade_id": "armor_scguns_anthralite_respirator"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_chestplate",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_anthralite_chestplate"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_leggings",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_anthralite_leggings"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_boots",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"trade_id": "armor_scguns_anthralite_boots"
+		},
+		{
+			"offer": {
+				"id": "scguns:diamond_steel_helmet",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_diamond_steel_helmet"
+		},
+		{
+			"offer": {
+				"id": "scguns:diamond_steel_chestplate",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 3
+			},
+			"trade_id": "armor_scguns_diamond_steel_chestplate"
+		},
+		{
+			"offer": {
+				"id": "scguns:diamond_steel_leggings",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 3
+			},
+			"trade_id": "armor_scguns_diamond_steel_leggings"
+		},
+		{
+			"offer": {
+				"id": "scguns:diamond_steel_boots",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_diamond_steel_boots"
+		},
+		{
+			"offer": {
+				"id": "scguns:treated_brass_helmet",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "armor_scguns_treated_brass_helmet"
+		},
+		{
+			"offer": {
+				"id": "scguns:treated_brass_chestplate",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 6
+			},
+			"trade_id": "armor_scguns_treated_brass_chestplate"
+		},
+		{
+			"offer": {
+				"id": "scguns:treated_brass_leggings",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 6
+			},
+			"trade_id": "armor_scguns_treated_brass_leggings"
+		},
+		{
+			"offer": {
+				"id": "scguns:treated_brass_boots",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "armor_scguns_treated_brass_boots"
+		},
+		{
+			"offer": {
+				"id": "scguns:exo_suit_helmet",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "creaturefeature:coat_scraps",
+				"count": 1
+			},
+			"trade_id": "armor_scguns_exo_suit_helmet"
+		},
+		{
+			"offer": {
+				"id": "scguns:exo_suit_chestplate",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 24
+			},
+			"second_request": {
+				"id": "creaturefeature:coat_scraps",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_exo_suit_chestplate"
+		},
+		{
+			"offer": {
+				"id": "scguns:exo_suit_leggings",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 24
+			},
+			"second_request": {
+				"id": "creaturefeature:coat_scraps",
+				"count": 2
+			},
+			"trade_id": "armor_scguns_exo_suit_leggings"
+		},
+		{
+			"offer": {
+				"id": "scguns:exo_suit_boots",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "creaturefeature:coat_scraps",
+				"count": 1
+			},
+			"trade_id": "armor_scguns_exo_suit_boots"
+		}
+	]
+}

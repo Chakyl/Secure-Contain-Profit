@@ -1,0 +1,254 @@
+{
+	"shop_id": "guns",
+	"name": {
+		"translate": "shop.scp.guns"
+	},
+	"texture": "guns:textures/item/guns",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "scguns:defender_pistol"
+	},
+	"selector_weight": 2,
+	"trades": [
+		{
+			"offer": {
+				"id": "scguns:defender_pistol",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "guns_scguns_defender_pistol"
+		},
+		{
+			"offer": {
+				"id": "scguns:greaser_smg",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "guns_scguns_greaser_smg"
+		},
+		{
+			"offer": {
+				"id": "scguns:grandle_og",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "guns_scguns_grandle_og"
+		},
+		{
+			"offer": {
+				"id": "scguns:makeshift_rifle",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "guns_scguns_makeshift_rifle"
+		},
+		{
+			"offer": {
+				"id": "scguns:birdfeeder",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "guns_scguns_birdfeeder"
+		},
+		{
+			"offer": {
+				"id": "scguns:llr_director",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "guns_scguns_llr_director"
+		},
+		{
+			"offer": {
+				"id": "scguns:pax",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "guns_scguns_pax"
+		},
+		{
+			"offer": {
+				"id": "scguns:mak_mkii",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "guns_scguns_mak_mkii"
+		},
+		{
+			"offer": {
+				"id": "scguns:winnie",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "guns_scguns_winnie"
+		},
+		{
+			"offer": {
+				"id": "scguns:callwell_terminal",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_callwell_terminal"
+		},
+		{
+			"offer": {
+				"id": "scguns:combat_shotgun",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_combat_shotgun"
+		},
+		{
+			"offer": {
+				"id": "scguns:jr_wristbreaker",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_jr_wristbreaker"
+		},
+		{
+			"offer": {
+				"id": "scguns:lockewood",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "guns_scguns_lockewood"
+		},
+		{
+			"offer": {
+				"id": "scguns:spirulida",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "guns_scguns_spirulida"
+		},
+		{
+			"offer": {
+				"id": "scguns:iron_javelin",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "guns_scguns_iron_javelin"
+		}
+	]
+}

@@ -20,7 +20,9 @@
   "stackGroupsCraftables": true,
   "stackGroupsWorkstation": false,
   "stackGroupsFavorites": false,
-  "disabledStackGroups": [],
+  "disabledStackGroups": [
+    "industrialhellscape:vesselplate_smeltable_item"
+  ],
   "stackGroupItemOrder": {},
   "emiOnlyInRecipeBook": false,
   "emiOnlyInRecipeBookState": false,

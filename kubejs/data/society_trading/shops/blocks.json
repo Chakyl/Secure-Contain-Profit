@@ -1,0 +1,510 @@
+{
+	"shop_id": "blocks",
+	"name": {
+		"translate": "shop.scp.blocks"
+	},
+	"texture": "blocks:textures/item/blocks",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "industrialhellscape:metalworks"
+	},
+	"selector_weight": 1,
+	"trades": [
+		{
+			"offer": {
+				"id": "industrialhellscape:inhell_haven_device",
+				"count": null
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "blocks_industrialhellscape_inhell_haven_device"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:gray_rockrete",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_industrialhellscape_gray_rockrete"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:duct",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrialhellscape_duct"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:horizontal_vesselplate",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrialhellscape_horizontal_vesselplate"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:truss",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrialhellscape_truss"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:vesselglass",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrialhellscape_vesselglass"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:metalworks",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 24,
+			"trade_id": "blocks_industrialhellscape_metalworks"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:pipeworks",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "blocks_industrialhellscape_pipeworks"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:ihea_furniture_kit",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "blocks_industrialhellscape_ihea_furniture_kit"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:white_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_white_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:light_gray_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_light_gray_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:gray_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_gray_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:black_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_black_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:brown_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_brown_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:maroon_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_maroon_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:rose_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_rose_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:red_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_red_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:coral_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_coral_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:ginger_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_ginger_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:orange_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_orange_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:tan_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_tan_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:beige_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_beige_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:yellow_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_yellow_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:amber_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_amber_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:olive_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_olive_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:lime_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_lime_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:forest_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_forest_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:green_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_green_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:verdant_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_verdant_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:teal_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_teal_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:cyan_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_cyan_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:mint_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_mint_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:aqua_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_aqua_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:light_blue_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_light_blue_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:blue_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_blue_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:slate_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_slate_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:navy_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_navy_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:indigo_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_indigo_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:purple_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_purple_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:magenta_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_magenta_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:pink_plating_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_pink_plating_block"
+		}
+	]
+}

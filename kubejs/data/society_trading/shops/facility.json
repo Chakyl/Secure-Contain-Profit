@@ -1,0 +1,173 @@
+{
+	"shop_id": "facility",
+	"name": {
+		"translate": "shop.scp.facility"
+	},
+	"texture": "facility:textures/item/facility",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "scp:verdant_hallway_expansion_card"
+	},
+	"selector_weight": 0,
+	"trades": [
+		{
+			"offer": {
+				"id": "scp:verdant_hallway_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"trade_id": "facility_scp_verdant_hallway_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:verdant_containment_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "facility_scp_verdant_containment_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:amber_hallway_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"trade_id": "facility_scp_amber_hallway_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:amber_containment_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"trade_id": "facility_scp_amber_containment_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:maroon_hallway_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 32
+			},
+			"trade_id": "facility_scp_maroon_hallway_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:maroon_containment_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"trade_id": "facility_scp_maroon_containment_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:indigo_hallway_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 64
+			},
+			"trade_id": "facility_scp_indigo_hallway_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:indigo_containment_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 32
+			},
+			"trade_id": "facility_scp_indigo_containment_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:vent_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "facility_scp_vent_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "numismatics:bank_terminal",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_numismatics_bank_terminal"
+		},
+		{
+			"offer": {
+				"id": "numismaticsutils:portable_bank_terminal",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "facility_numismaticsutils_portable_bank_terminal"
+		},
+		{
+			"offer": {
+				"id": "numismaticsutils:bank_meter",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_numismaticsutils_bank_meter"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_lamp",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_scguns_anthralite_lamp"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_lamp",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"trade_id": "facility_scguns_anthralite_lamp"
+		}
+	]
+}

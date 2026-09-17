@@ -1,0 +1,74 @@
+{
+	"shop_id": "ammunition",
+	"name": {
+		"translate": "shop.scp.ammunition"
+	},
+	"texture": "ammunition:textures/item/ammunition",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "scguns:standard_copper_round"
+	},
+	"selector_weight": 3,
+	"trades": [
+		{
+			"offer": {
+				"id": "scguns:compact_copper_round",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "ammunition_scguns_compact_copper_round"
+		},
+		{
+			"offer": {
+				"id": "scguns:standard_copper_round",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "ammunition_scguns_standard_copper_round"
+		},
+		{
+			"offer": {
+				"id": "scguns:compact_advanced_round",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "ammunition_scguns_compact_advanced_round"
+		},
+		{
+			"offer": {
+				"id": "scguns:advanced_round",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "ammunition_scguns_advanced_round"
+		},
+		{
+			"offer": {
+				"id": "scguns:shotgun_shell",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "ammunition_scguns_shotgun_shell"
+		}
+	]
+}

@@ -1,24 +1,7 @@
 const scpPool = new Map([
     ["verdant", ["creaturefeature:minedflayer", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:chicken"]]
 ])
-const evolutionChains = new Map([
-    // Pig line
-    ["minecraft:pig", ["minecraft:piglin", "minecraft:creeper"]],
-    ["minecraft:piglin", ["minecraft:piglin_brute", "minecraft:zombified_piglin"]],
-    ["creeper:pig", ["creaturefeature:eeper"]],
-    // Pathogen
-    ["creaturefeature:pathogen", ["creaturefeature:minedflayer"]],
-    // Goat
-    ["minecraft:goat", ["creaturefeature:vertigo"]],
-    // Chicken
-    ["minecraft:chicken", ["creaturefeature:stained_glass", "creaturefeature:mockingbird", "peaceless:harpy"]],
-    // Villager
-    ["minecraft:villager", ["minecraft:zombie_villager", "minecraft:zombie"]],
-    ["minecraft:zombie_villager", ["creaturefeature:blossom"]],
-    ["minecraft:zombie", ["creaturefeature:minds"]],
-    // Frog
-    ["minecraft:frog", ["companions:cornelius"]]
-])
+
 
 BlockEvents.rightClicked('scp:containment_unit', e => {
     const { inventory, hand, player, level, block } = e;
@@ -36,10 +19,10 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             console.warn("[SCP] WARNING: FAILED TO ROLL SCP")
             return;
         }
-        let newSCPEntity = level.createEntity("creaturefeature:fiend");
+        let newSCPEntity = level.createEntity(newSCP);
         newSCPEntity.setPos(block.x + 0.5, block.y + 1.0, block.z + 0.5);
         newSCPEntity.spawn();
-        newSCPEntity.setCustomName(Text.of(`SCP-${tier.charAt(0).toUpperCase() + global.getSCPID(newSCP)}`).red().bold());
+        newSCPEntity.setCustomName(Text.of(`${tier.charAt(0).toUpperCase()}-${global.getSCPID(newSCP)}`).red().bold());
         newSCPEntity.setPersistenceRequired();
 
         let newHealth = newSCPEntity.getMaxHealth() * 50;

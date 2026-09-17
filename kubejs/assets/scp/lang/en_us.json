@@ -1,0 +1,13 @@
+{
+    "shop.scp.facility": "Facility Management",
+    "shop.scp.blocks": "Building Blocks",
+    "shop.scp.armor": "Armor",
+    "shop.scp.guns": "Guns",
+    "shop.scp.ammunition": "Ammunition",
+
+    "shop.scp.facility.description": "Expand and grow your facility, supporting more Abnormalities.",
+    "shop.scp.blocks.description": "Build out your facility, for both protection and Aesthetics.",
+    "shop.scp.armor.description": "Protect your fleshy being from abnormalities.",
+    "shop.scp.guns.description": "Contain abnormalities through violent projectiles.",
+    "shop.scp.ammunition.description": "Feed your hungry weaponry."
+}

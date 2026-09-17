@@ -1,50 +1,50 @@
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/reload
+/kjs reload startup-scripts
+/particle scguns:turret_muzzle_flash
+/particle creaturefeature:rabies
+/kjs reload startup-scripts
+/particle creaturefeature:spores_spit
+/particle creaturefeature:cleave
+/particle creaturefeature:sparkle
+/particle companions:blizzard_ice
+/particle companions:black_hole_star
+/kjs reload startup-scripts
+/particle companions:shade_trail
+/particle companions:shade_summon
+/kjs reload startup-scripts
 /difficulty peaceful
 /difficulty normal
-/effect give Chakyl minecraft:regeneration infinite
-/summon creaturefeature:minedflayer
-/summon creaturefeature:minds
-/summon companions:cornelius
-/kjs errors server
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kill @e[type=!player]
-/kjs reload startup-scripts
-/kill @e[type=!player]
-/kjs reload startup-scripts
-/kill @e[type=!player]
-/kjs reload server-scripts
-//copy
-//flip
-//paste
-//undo
-//flip
-//paste
-//undo
-//paste
-//undo
-//flip
-//paste
-//undo
-//paste
-//copy
-/schematic save starting_room
-/kjs reload server-scripts
-/place template scp:verdant_containment_west
-/place template scp:verdant_containment_east
-/kjs reload server-scripts
-/summon creaturefeature:minedflayer
+/particle peaceless:black_poof
+/particle opposing_force:laser_dust
+/particle opposing_force:laser_impact
+/particle companions:ember_pole_explosion
 /difficulty normal
-/summon creaturefeature:minedflayer
+/kjs reload startup-scripts
+/difficulty peaceful
+/playsound minecraft:entity.tnt.primed
+/playsound minecraft:entity.creeper.death
+/kjs reload startup-scripts
+/difficulty normal
+/kjs reload startup-scripts
+/difficulty peaceful
+/difficulty normal
+/playsound minecraft:entity.creeper.primed
+/kjs reload startup-scripts
+/playsound minecraft:block.fire.extinguish
+/kjs reload startup-scripts
+/particle knightlib:starset
+/particle minecraft:glow
+/playsound minecraft:entity.enderman.teleport
+/kjs reload startup-scripts
 /kjs reload server-scripts
 /kjs reload startup-scripts
-/gamerule keepInventory true
-/kill
 /kjs reload server-scripts
+/kjs reload startup-scripts
+/playsound sinew:enter_nether
+/playsound abyssal_decor:silver_step
+/kjs reload startup-scripts
+/particle scguns:turret_muzzle_flash
+/particle companions:blizzard_ice
+/kjs reload startup-scripts
