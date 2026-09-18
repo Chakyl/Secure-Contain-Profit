@@ -3,8 +3,12 @@ const shops = [
         id: "facility",
         jeiCatalyst: "scp:verdant_hallway_expansion_card",
         trades: [
-            { item: "scp:verdant_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 8 } },
-            { item: "scp:verdant_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+            { item: 'scguns:syringe', count: 4, numiCost: 1 },
+            { item: 'abyssal_decor:cave_taco', count: 4, numiCost: 1 },
+            { item: 'companions:wrench', count: 1, numiCost: 16 },
+            { item: 'scguns:anthralite_paxel', count: 1, numiCost: 16 },
+            { item: "scp:verdant_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 6 } },
+            { item: "scp:verdant_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 3 } },
             { item: "scp:amber_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 16 } },
             { item: "scp:amber_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 8 } },
             { item: "scp:maroon_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 32 } },
@@ -15,8 +19,7 @@ const shops = [
             { item: "numismatics:bank_terminal", count: 1, numiCost: 16 },
             { item: "numismaticsutils:portable_bank_terminal", count: 1, numiCost: 128 },
             { item: "numismaticsutils:bank_meter", count: 1, numiCost: 16 },
-            { item: "scguns:anthralite_lamp", count: 1, numiCost: 16  },
-            { item: "scguns:anthralite_lamp", count: 1, itemCost1: { item: 'scp:enkephalin', count: 1 }  }
+            { item: "scguns:anthralite_lamp", count: 1, itemCost1: { item: 'scp:enkephalin', count: 1 } }
         ]
     },
     {
@@ -32,6 +35,8 @@ const shops = [
             { item: "industrialhellscape:metalworks", count: 8, numiCost: 24 },
             { item: "industrialhellscape:pipeworks", count: 8, numiCost: 32 },
             { item: "industrialhellscape:ihea_furniture_kit", count: 8, numiCost: 32 },
+            { item: 'industrialhellscape:stamped_metal_door', count: 1, numiCost: 8 },
+            { item: 'industrialhellscape:bulkhead_door', count: 1, numiCost: 8 },
             { item: "industrially_plated:white_plating_block", count: 8, numiCost: 16 },
             { item: "industrially_plated:light_gray_plating_block", count: 8, numiCost: 16 },
             { item: "industrially_plated:gray_plating_block", count: 8, numiCost: 16 },
@@ -64,23 +69,25 @@ const shops = [
             { item: "industrially_plated:purple_plating_block", count: 8, numiCost: 16 },
             { item: "industrially_plated:magenta_plating_block", count: 8, numiCost: 16 },
             { item: "industrially_plated:pink_plating_block", count: 8, numiCost: 16 },
+            { item: 'industrially_plated:hazard_stripe_block', count: 8, numiCost: 16 }
         ]
     },
     {
         id: "guns",
         jeiCatalyst: "scguns:defender_pistol",
         trades: [
-            { item: "scguns:defender_pistol", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-            { item: "scguns:greaser_smg", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-            { item: "scguns:grandle_og", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+
+            { item: "scguns:pax", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "scguns:mak_mkii", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "scguns:winnie", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
 
             { item: "scguns:makeshift_rifle", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
             { item: "scguns:birdfeeder", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
             { item: "scguns:llr_director", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
 
-            { item: "scguns:pax", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
-            { item: "scguns:mak_mkii", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
-            { item: "scguns:winnie", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
+            { item: "scguns:defender_pistol", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
+            { item: "scguns:greaser_smg", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
+            { item: "scguns:grandle_og", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
 
             { item: "scguns:callwell_terminal", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
             { item: "scguns:combat_shotgun", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },

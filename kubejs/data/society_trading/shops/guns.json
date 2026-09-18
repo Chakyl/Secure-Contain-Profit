@@ -12,7 +12,7 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "scguns:defender_pistol",
+				"id": "scguns:pax",
 				"count": null
 			},
 			"request": {
@@ -24,11 +24,11 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
-			"trade_id": "guns_scguns_defender_pistol"
+			"trade_id": "guns_scguns_pax"
 		},
 		{
 			"offer": {
-				"id": "scguns:greaser_smg",
+				"id": "scguns:mak_mkii",
 				"count": null
 			},
 			"request": {
@@ -40,11 +40,11 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
-			"trade_id": "guns_scguns_greaser_smg"
+			"trade_id": "guns_scguns_mak_mkii"
 		},
 		{
 			"offer": {
-				"id": "scguns:grandle_og",
+				"id": "scguns:winnie",
 				"count": null
 			},
 			"request": {
@@ -56,7 +56,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
-			"trade_id": "guns_scguns_grandle_og"
+			"trade_id": "guns_scguns_winnie"
 		},
 		{
 			"offer": {
@@ -108,7 +108,7 @@
 		},
 		{
 			"offer": {
-				"id": "scguns:pax",
+				"id": "scguns:defender_pistol",
 				"count": null
 			},
 			"request": {
@@ -120,11 +120,11 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
-			"trade_id": "guns_scguns_pax"
+			"trade_id": "guns_scguns_defender_pistol"
 		},
 		{
 			"offer": {
-				"id": "scguns:mak_mkii",
+				"id": "scguns:greaser_smg",
 				"count": null
 			},
 			"request": {
@@ -136,11 +136,11 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
-			"trade_id": "guns_scguns_mak_mkii"
+			"trade_id": "guns_scguns_greaser_smg"
 		},
 		{
 			"offer": {
-				"id": "scguns:winnie",
+				"id": "scguns:grandle_og",
 				"count": null
 			},
 			"request": {
@@ -152,7 +152,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
-			"trade_id": "guns_scguns_winnie"
+			"trade_id": "guns_scguns_grandle_og"
 		},
 		{
 			"offer": {

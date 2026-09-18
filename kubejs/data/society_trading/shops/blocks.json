@@ -124,6 +124,30 @@
 		},
 		{
 			"offer": {
+				"id": "industrialhellscape:stamped_metal_door",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_industrialhellscape_stamped_metal_door"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:bulkhead_door",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_industrialhellscape_bulkhead_door"
+		},
+		{
+			"offer": {
 				"id": "industrially_plated:white_plating_block",
 				"count": 8
 			},
@@ -505,6 +529,18 @@
 			},
 			"numismatics_cost": 16,
 			"trade_id": "blocks_industrially_plated_pink_plating_block"
+		},
+		{
+			"offer": {
+				"id": "industrially_plated:hazard_stripe_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "blocks_industrially_plated_hazard_stripe_block"
 		}
 	]
 }

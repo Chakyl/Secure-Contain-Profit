@@ -26,16 +26,13 @@ global.handleAbnormality = (entity) => {
             let chance = blockType == "NUKE" ? 1 : 0.05;
             let { x, y, z } = entity;
 
-            let pos1 = new BlockPos(x - radius, y - radius, z - radius);
-            let pos2 = new BlockPos(x + radius, y + radius, z + radius);
+            for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y - radius, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
+                let scanPos = new BlockPos(pos.x, pos.y, pos.z);
+                if (!level.isLoaded(scanPos)) continue;
 
-            for (let pos of BlockPos.betweenClosed(pos1, pos2)) {
-                let immutablePos = new BlockPos(pos.x, pos.y, pos.z);
-                if (!level.isLoaded(immutablePos)) continue;
-
-                let scanBlock = level.getBlock(immutablePos);
+                let scanBlock = level.getBlock(scanPos);
                 if (Math.random() < chance && !scanBlock.hasTag("scp:sap_immune")) {
-                    level.setBlock(pos, 'minecraft:air', 3);
+                    level.setBlock(scanPos, 'minecraft:air', 3);
                 }
             }
             level.getServer().runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.2`);

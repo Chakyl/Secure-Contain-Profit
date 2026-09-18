@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:the_nether",
+  "type": "scp:citadel",
   "generator": {
     "type": "minecraft:flat",
     "settings": {

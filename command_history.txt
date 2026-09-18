@@ -1,50 +1,50 @@
+/particle companions:golden_allay_trail
 /kjs reload server-scripts
 /kjs reload startup-scripts
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/data get block -9 124 -302
+/kjs reload server-scripts
+/data get block -9 124 -302
+/kjs hand
+/kjs reload server-scripts
+/kjs hand
+/kjs reload server-scripts
 /reload
-/kjs reload startup-scripts
-/particle scguns:turret_muzzle_flash
-/particle creaturefeature:rabies
-/kjs reload startup-scripts
-/particle creaturefeature:spores_spit
-/particle creaturefeature:cleave
-/particle creaturefeature:sparkle
-/particle companions:blizzard_ice
-/particle companions:black_hole_star
-/kjs reload startup-scripts
-/particle companions:shade_trail
-/particle companions:shade_summon
-/kjs reload startup-scripts
-/difficulty peaceful
-/difficulty normal
-/particle peaceless:black_poof
-/particle opposing_force:laser_dust
-/particle opposing_force:laser_impact
-/particle companions:ember_pole_explosion
-/difficulty normal
-/kjs reload startup-scripts
-/difficulty peaceful
-/playsound minecraft:entity.tnt.primed
-/playsound minecraft:entity.creeper.death
-/kjs reload startup-scripts
-/difficulty normal
-/kjs reload startup-scripts
-/difficulty peaceful
-/difficulty normal
-/playsound minecraft:entity.creeper.primed
-/kjs reload startup-scripts
-/playsound minecraft:block.fire.extinguish
-/kjs reload startup-scripts
-/particle knightlib:starset
-/particle minecraft:glow
-/playsound minecraft:entity.enderman.teleport
-/kjs reload startup-scripts
 /kjs reload server-scripts
-/kjs reload startup-scripts
+/reload
+/kjs hand
 /kjs reload server-scripts
-/kjs reload startup-scripts
-/playsound sinew:enter_nether
-/playsound abyssal_decor:silver_step
-/kjs reload startup-scripts
-/particle scguns:turret_muzzle_flash
-/particle companions:blizzard_ice
-/kjs reload startup-scripts
+/time add 24000
+/reload
+/time add 1000
+/reload
+/kjs hand
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+/reload
+/damage Chakyl 3
+/time add 200
+/time add 2000
+/reload
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 2000
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs reload server-scripts
+/time add 24000

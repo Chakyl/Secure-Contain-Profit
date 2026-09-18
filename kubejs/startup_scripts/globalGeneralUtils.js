@@ -62,8 +62,9 @@ global.setBlockEntityData = (block, nbt) => {
 };
 
 global.getSCPID = (entity) => {
-  let entityId = entity.replace(/:/g, "");
-
+  console.log(entity)
+  let entityId = entity.replace(/:/g, "").replace(/"/g, "");
+  console.log(entityId)
   let hash = 3434343434;
   for (let i = 0; i < entityId.length; i++) {
     hash ^= entityId.codePointAt(i);
@@ -72,3 +73,14 @@ global.getSCPID = (entity) => {
 
   return String((Math.abs(hash) % 999) + 1).padStart(3, '0');
 };
+
+global.increaseStage = (input, count) => {
+  let num = Number(input);
+  num += count || 1;
+  return num;
+};
+
+global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${global.getSCPID(id)}`
+
+
+global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid);

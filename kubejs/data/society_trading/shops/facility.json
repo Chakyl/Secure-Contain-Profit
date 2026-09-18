@@ -12,12 +12,60 @@
 	"trades": [
 		{
 			"offer": {
+				"id": "scguns:syringe",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "facility_scguns_syringe"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:cave_taco",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "facility_abyssal_decor_cave_taco"
+		},
+		{
+			"offer": {
+				"id": "companions:wrench",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_companions_wrench"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_paxel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_scguns_anthralite_paxel"
+		},
+		{
+			"offer": {
 				"id": "scp:verdant_hallway_expansion_card",
 				"count": 1
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 8
+				"count": 6
 			},
 			"trade_id": "facility_scp_verdant_hallway_expansion_card"
 		},
@@ -28,7 +76,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 4
+				"count": 3
 			},
 			"trade_id": "facility_scp_verdant_containment_expansion_card"
 		},
@@ -145,18 +193,6 @@
 			},
 			"numismatics_cost": 16,
 			"trade_id": "facility_numismaticsutils_bank_meter"
-		},
-		{
-			"offer": {
-				"id": "scguns:anthralite_lamp",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:sprocket",
-				"count": 1
-			},
-			"numismatics_cost": 16,
-			"trade_id": "facility_scguns_anthralite_lamp"
 		},
 		{
 			"offer": {
