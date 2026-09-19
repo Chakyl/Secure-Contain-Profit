@@ -181,7 +181,7 @@
 	#Scorched Guns raid configuration
 	[common.raids]
 		#If enabled, Scorched Guns raid flares and nightly raid scheduling can start custom raids.
-		raidsEnabled = true
+		raidsEnabled = false
 		#Chance each night to schedule a progression raid for an eligible player.
 		# Default: 0.2
 		# Range: 0.0 ~ 1.0

@@ -69,6 +69,30 @@
 			},
 			"numismatics_cost": 32,
 			"trade_id": "ammunition_scguns_shotgun_shell"
+		},
+		{
+			"offer": {
+				"id": "scguns:powder_and_ball",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "ammunition_scguns_powder_and_ball"
+		},
+		{
+			"offer": {
+				"id": "scguns:sculk_cell",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "ammunition_scguns_sculk_cell"
 		}
 	]
 }

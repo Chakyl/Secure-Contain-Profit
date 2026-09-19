@@ -1,0 +1,446 @@
+{
+	"shop_id": "electrical_control",
+	"name": {
+		"translate": "shop.scp.electrical_control"
+	},
+	"texture": "electrical_control:textures/item/electrical_control",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "minecraft:redstone"
+	},
+	"selector_weight": 6,
+	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:redstone",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_minecraft_redstone"
+		},
+		{
+			"offer": {
+				"id": "minecraft:redstone_torch",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_minecraft_redstone_torch"
+		},
+		{
+			"offer": {
+				"id": "minecraft:comparator",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_minecraft_comparator"
+		},
+		{
+			"offer": {
+				"id": "minecraft:repeater",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_minecraft_repeater"
+		},
+		{
+			"offer": {
+				"id": "create:redstone_link",
+				"count": 2
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_create_redstone_link"
+		},
+		{
+			"offer": {
+				"id": "create:pulse_repeater",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_create_pulse_repeater"
+		},
+		{
+			"offer": {
+				"id": "create:pulse_extender",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_create_pulse_extender"
+		},
+		{
+			"offer": {
+				"id": "create:pulse_timer",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_create_pulse_timer"
+		},
+		{
+			"offer": {
+				"id": "create:powered_latch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_create_powered_latch"
+		},
+		{
+			"offer": {
+				"id": "create:powered_toggle_latch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_create_powered_toggle_latch"
+		},
+		{
+			"offer": {
+				"id": "create:analog_lever",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "electrical_control_create_analog_lever"
+		},
+		{
+			"offer": {
+				"id": "create:placard",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_create_placard"
+		},
+		{
+			"offer": {
+				"id": "create:linked_controller",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "electrical_control_create_linked_controller"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:indicator_light",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "electrical_control_abyssal_decor_indicator_light"
+		},
+		{
+			"offer": {
+				"id": "minecraft:redstone_lamp",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "electrical_control_minecraft_redstone_lamp"
+		},
+		{
+			"offer": {
+				"id": "create:rose_quartz_lamp",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "electrical_control_create_rose_quartz_lamp"
+		},
+		{
+			"offer": {
+				"id": "create:nixie_tube",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "electrical_control_create_nixie_tube"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:control_panel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "electrical_control_dashpanels_control_panel"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:wall_control_panel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "electrical_control_dashpanels_wall_control_panel"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:ceiling_control_panel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "electrical_control_dashpanels_ceiling_control_panel"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:cable",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_cable"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:panel_link",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_panel_link"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:cable_stripper",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_cable_stripper"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:wrench",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_wrench"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:paint_brush",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_paint_brush"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:key",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_key"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:control_lever",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_control_lever"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:indicator_bulb",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_indicator_bulb"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:joystick",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_joystick"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:key_switch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_key_switch"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:knob",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_knob"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:label",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_label"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:momentary_switch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_momentary_switch"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:push_button",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_push_button"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:seven_segment",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_seven_segment"
+		},
+		{
+			"offer": {
+				"id": "dashpanels:switch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "electrical_control_dashpanels_switch"
+		}
+	]
+}

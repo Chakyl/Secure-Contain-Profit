@@ -62,9 +62,7 @@ global.setBlockEntityData = (block, nbt) => {
 };
 
 global.getSCPID = (entity) => {
-  console.log(entity)
   let entityId = entity.replace(/:/g, "").replace(/"/g, "");
-  console.log(entityId)
   let hash = 3434343434;
   for (let i = 0; i < entityId.length; i++) {
     hash ^= entityId.codePointAt(i);

@@ -1,0 +1,134 @@
+{
+	"shop_id": "equipment",
+	"name": {
+		"translate": "shop.scp.equipment"
+	},
+	"texture": "equipment:textures/item/equipment",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "create:brown_toolbox"
+	},
+	"selector_weight": 7,
+	"trades": [
+		{
+			"offer": {
+				"id": "create:brown_toolbox",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "equipment_create_brown_toolbox"
+		},
+		{
+			"offer": {
+				"id": "scguns:rifle_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_rifle_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:shotgun_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_shotgun_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:magnum_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_magnum_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:energy_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_energy_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:rocket_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_rocket_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:special_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_special_ammo_box"
+		},
+		{
+			"offer": {
+				"id": "scguns:empty_casing_pouch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_empty_casing_pouch"
+		},
+		{
+			"offer": {
+				"id": "scguns:rock_pouch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_rock_pouch"
+		},
+		{
+			"offer": {
+				"id": "scguns:dishes_pouch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_dishes_pouch"
+		}
+	]
+}

@@ -124,6 +124,18 @@
 		},
 		{
 			"offer": {
+				"id": "industrialhellscape:armored_door",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_industrialhellscape_armored_door"
+		},
+		{
+			"offer": {
 				"id": "industrialhellscape:stamped_metal_door",
 				"count": 1
 			},

@@ -1,0 +1,398 @@
+{
+	"shop_id": "dye_depot",
+	"name": {
+		"translate": "shop.scp.dye_depot"
+	},
+	"texture": "dye_depot:textures/item/dye_depot",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "dye_depot:ginger_dye"
+	},
+	"selector_weight": 8,
+	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:white_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_white_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:light_gray_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_light_gray_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:gray_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_gray_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:black_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_black_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:brown_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_brown_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:maroon_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_maroon_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:rose_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_rose_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:red_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_red_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:coral_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_coral_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:ginger_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_ginger_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:orange_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_orange_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:tan_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_tan_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:beige_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_beige_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:yellow_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_yellow_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:olive_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_olive_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:amber_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_amber_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:lime_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_lime_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:forest_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_forest_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:green_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_green_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:verdant_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_verdant_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:teal_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_teal_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:cyan_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_cyan_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:aqua_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_aqua_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:mint_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_mint_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:light_blue_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_light_blue_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:blue_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_blue_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:navy_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_navy_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:slate_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_slate_dye"
+		},
+		{
+			"offer": {
+				"id": "dye_depot:indigo_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_dye_depot_indigo_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:purple_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_purple_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:magenta_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_magenta_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:pink_dye",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "dye_depot_minecraft_pink_dye"
+		}
+	]
+}

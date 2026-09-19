@@ -35,6 +35,7 @@ const shops = [
             { item: "industrialhellscape:metalworks", count: 8, numiCost: 24 },
             { item: "industrialhellscape:pipeworks", count: 8, numiCost: 32 },
             { item: "industrialhellscape:ihea_furniture_kit", count: 8, numiCost: 32 },
+            { item: 'industrialhellscape:armored_door', count: 1, numiCost: 8},
             { item: 'industrialhellscape:stamped_metal_door', count: 1, numiCost: 8 },
             { item: 'industrialhellscape:bulkhead_door', count: 1, numiCost: 8 },
             { item: "industrially_plated:white_plating_block", count: 8, numiCost: 16 },
@@ -89,13 +90,14 @@ const shops = [
             { item: "scguns:greaser_smg", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
             { item: "scguns:grandle_og", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
 
-            { item: "scguns:callwell_terminal", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
-            { item: "scguns:combat_shotgun", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
-            { item: "scguns:jr_wristbreaker", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+            { item: "scguns:lockewood", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+            { item: "scguns:spirulida", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+            { item: "scguns:iron_javelin", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
 
-            { item: "scguns:lockewood", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-            { item: "scguns:spirulida", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
-            { item: "scguns:iron_javelin", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } }
+            { item: "scguns:callwell_terminal", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "scguns:combat_shotgun", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+            { item: "scguns:jr_wristbreaker", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } }
+
         ]
     },
     {
@@ -107,6 +109,8 @@ const shops = [
             { item: "scguns:compact_advanced_round", count: 8, numiCost: 64 },
             { item: "scguns:advanced_round", count: 8, numiCost: 128 },
             { item: "scguns:shotgun_shell", count: 4, numiCost: 32 },
+            { item: "scguns:powder_and_ball", count: 4, numiCost: 8 },
+            { item: 'scguns:sculk_cell', count: 4, numiCost: 256 }
         ]
     },
     {
@@ -131,6 +135,120 @@ const shops = [
             { item: "scguns:exo_suit_boots", itemCost1: { item: 'scp:enkephalin', count: 16 }, itemCost2: { item: 'creaturefeature:coat_scraps', count: 1 } }
         ]
     },
+    {
+        id: "tool_abnormalities",
+        jeiCatalyst: "companions:frog_bonanza_block",
+        trades: [
+            { item: "whimsy_deco:red_phone", count: 1, numiCost: 512 },
+            { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
+            { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
+            { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
+            { item: "whimsy_deco:rubber_duck", count: 1, numiCost: 4096 },
+            { item: "whimsy_deco:gnome", count: 1, numiCost: 4096 },
+            { item: "whimsy_deco:lucky_cat", count: 1, numiCost: 8192 },
+            { item: "whimsy_deco:singing_frog", count: 1, numiCost: 8192 },
+            { item: "companions:empty_puppet_block", count: 1, numiCost: 16384 },
+            { item: "companions:croissant_egg_block", count: 1, numiCost: 16384 },
+            { item: 'companions:soul_furnace_block', count: 1, numiCost: 32768 },
+            { item: "companions:respawn_totem_block", count: 1, numiCost: 32768 },
+        ]
+    },
+    {
+        id: "electrical_control",
+        jeiCatalyst: "minecraft:redstone",
+        trades: [
+            { item: "minecraft:redstone", count: 8, numiCost: 8 },
+            { item: "minecraft:redstone_torch", count: 8, numiCost: 8 },
+            { item: "minecraft:comparator", count: 4, numiCost: 8 },
+            { item: "minecraft:repeater", count: 4, numiCost: 8 },
+            { item: "create:redstone_link", count: 2, numiCost: 8 },
+            { item: "create:pulse_repeater", count: 1, numiCost: 128 },
+            { item: "create:pulse_extender", count: 1, numiCost: 128 },
+            { item: "create:pulse_timer", count: 1, numiCost: 128 },
+            { item: "create:powered_latch", count: 1, numiCost: 128 },
+            { item: "create:powered_toggle_latch", count: 1, numiCost: 128 },
+            { item: "create:analog_lever", count: 1, numiCost: 4 },
+            { item: "create:placard", count: 4, numiCost: 8 },
+            { item: "create:linked_controller", count: 1, numiCost: 256 },
+            { item: "abyssal_decor:indicator_light", count: 1, numiCost: 4 },
+            { item: "minecraft:redstone_lamp", count: 1, numiCost: 4 },
+            { item: "create:rose_quartz_lamp", count: 1, numiCost: 16 },
+            { item: "create:nixie_tube", count: 1, numiCost: 32 },
+            { item: "dashpanels:control_panel", count: 1, numiCost: 32 },
+            { item: "dashpanels:wall_control_panel", count: 1, numiCost: 32 },
+            { item: "dashpanels:ceiling_control_panel", count: 1, numiCost: 32 },
+            { item: "dashpanels:cable", count: 8, numiCost: 8 },
+            { item: "dashpanels:panel_link", count: 1, numiCost: 8 },
+            { item: "dashpanels:cable_stripper", count: 1, numiCost: 8 },
+            { item: "dashpanels:wrench", count: 1, numiCost: 8 },
+            { item: "dashpanels:paint_brush", count: 1, numiCost: 8 },
+            { item: "dashpanels:key", count: 1, numiCost: 8 },
+            { item: "dashpanels:control_lever", count: 1, numiCost: 8 },
+            { item: "dashpanels:indicator_bulb", count: 1, numiCost: 8 },
+            { item: "dashpanels:joystick", count: 1, numiCost: 8 },
+            { item: "dashpanels:key_switch", count: 1, numiCost: 8 },
+            { item: "dashpanels:knob", count: 1, numiCost: 8 },
+            { item: "dashpanels:label", count: 1, numiCost: 8 },
+            { item: "dashpanels:momentary_switch", count: 1, numiCost: 8 },
+            { item: "dashpanels:push_button", count: 1, numiCost: 8 },
+            { item: "dashpanels:seven_segment", count: 1, numiCost: 8 },
+            { item: "dashpanels:switch", count: 1, numiCost: 8 },
+        ]
+    },
+    {
+        id: "equipment",
+        jeiCatalyst: "create:brown_toolbox",
+        trades: [
+            { item: "create:brown_toolbox", count: 1, numiCost: 64 },
+            { item: "scguns:rifle_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:shotgun_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:magnum_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:energy_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:rocket_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:special_ammo_box", count: 1, numiCost: 128 },
+            { item: "scguns:empty_casing_pouch", count: 1, numiCost: 128 },
+            { item: "scguns:rock_pouch", count: 1, numiCost: 128 },
+            { item: "scguns:dishes_pouch", count: 1, numiCost: 128 }
+        ]
+    },
+    {
+        id: "dye_depot",
+        jeiCatalyst: "dye_depot:ginger_dye",
+        trades: [
+            { item: "minecraft:white_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:light_gray_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:gray_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:black_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:brown_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:maroon_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:rose_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:red_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:coral_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:ginger_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:orange_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:tan_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:beige_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:yellow_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:olive_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:amber_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:lime_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:forest_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:green_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:verdant_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:teal_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:cyan_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:aqua_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:mint_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:light_blue_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:blue_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:navy_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:slate_dye", count: 1, numiCost: 1 },
+            { item: "dye_depot:indigo_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:purple_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:magenta_dye", count: 1, numiCost: 1 },
+            { item: "minecraft:pink_dye", count: 1, numiCost: 1 }
+        ]
+    }
 ]
 
 const coinMap = [

@@ -4,6 +4,10 @@
     "shop.scp.armor": "Armor",
     "shop.scp.guns": "Guns",
     "shop.scp.ammunition": "Ammunition",
+    "shop.scp.equipment": "Equipment",
+    "shop.scp.tool_abnormalities": "Tool Abnormalities",
+    "shop.scp.electrical_control": "Electrical Control",
+    "shop.scp.dye_depot": "Dye Depot",
 
     "shop.scp.facility.description": "Expand and grow your facility, supporting more Abnormalities.",
     "shop.scp.blocks.description": "Build out your facility, for both protection and Aesthetics.",

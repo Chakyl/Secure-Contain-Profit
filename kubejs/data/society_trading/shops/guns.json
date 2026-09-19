@@ -156,55 +156,55 @@
 		},
 		{
 			"offer": {
-				"id": "scguns:callwell_terminal",
-				"count": null
-			},
-			"request": {
-				"id": "scp:enkephalin",
-				"count": 16
-			},
-			"second_request": {
-				"id": "numismatics:sun",
-				"count": 16
-			},
-			"numismatics_cost": 65536,
-			"trade_id": "guns_scguns_callwell_terminal"
-		},
-		{
-			"offer": {
-				"id": "scguns:combat_shotgun",
-				"count": null
-			},
-			"request": {
-				"id": "scp:enkephalin",
-				"count": 16
-			},
-			"second_request": {
-				"id": "numismatics:sun",
-				"count": 16
-			},
-			"numismatics_cost": 65536,
-			"trade_id": "guns_scguns_combat_shotgun"
-		},
-		{
-			"offer": {
-				"id": "scguns:jr_wristbreaker",
-				"count": null
-			},
-			"request": {
-				"id": "scp:enkephalin",
-				"count": 16
-			},
-			"second_request": {
-				"id": "numismatics:sun",
-				"count": 16
-			},
-			"numismatics_cost": 65536,
-			"trade_id": "guns_scguns_jr_wristbreaker"
-		},
-		{
-			"offer": {
 				"id": "scguns:lockewood",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_lockewood"
+		},
+		{
+			"offer": {
+				"id": "scguns:spirulida",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_spirulida"
+		},
+		{
+			"offer": {
+				"id": "scguns:iron_javelin",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 16
+			},
+			"numismatics_cost": 65536,
+			"trade_id": "guns_scguns_iron_javelin"
+		},
+		{
+			"offer": {
+				"id": "scguns:callwell_terminal",
 				"count": null
 			},
 			"request": {
@@ -216,11 +216,11 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
-			"trade_id": "guns_scguns_lockewood"
+			"trade_id": "guns_scguns_callwell_terminal"
 		},
 		{
 			"offer": {
-				"id": "scguns:spirulida",
+				"id": "scguns:combat_shotgun",
 				"count": null
 			},
 			"request": {
@@ -232,11 +232,11 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
-			"trade_id": "guns_scguns_spirulida"
+			"trade_id": "guns_scguns_combat_shotgun"
 		},
 		{
 			"offer": {
-				"id": "scguns:iron_javelin",
+				"id": "scguns:jr_wristbreaker",
 				"count": null
 			},
 			"request": {
@@ -248,7 +248,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
-			"trade_id": "guns_scguns_iron_javelin"
+			"trade_id": "guns_scguns_jr_wristbreaker"
 		}
 	]
 }

@@ -17,4 +17,13 @@ StartupEvents.registry("item", (e) => {
   });
 
   e.create(`scp:vent_expansion_card`).maxStackSize(4);
+
+    [
+    "verdant",
+    "amber",
+    "maroon",
+    "indigo",
+  ].forEach((color) => {
+    e.create(`scp:${color}_research`);
+  });
 });

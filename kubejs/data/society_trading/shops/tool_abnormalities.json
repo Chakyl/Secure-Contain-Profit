@@ -1,0 +1,158 @@
+{
+	"shop_id": "tool_abnormalities",
+	"name": {
+		"translate": "shop.scp.tool_abnormalities"
+	},
+	"texture": "tool_abnormalities:textures/item/tool_abnormalities",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "companions:frog_bonanza_block"
+	},
+	"selector_weight": 5,
+	"trades": [
+		{
+			"offer": {
+				"id": "whimsy_deco:red_phone",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"trade_id": "tool_abnormalities_whimsy_deco_red_phone"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:gatcha_machine",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "tool_abnormalities_whimsy_deco_gatcha_machine"
+		},
+		{
+			"offer": {
+				"id": "companions:frog_bonanza_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_companions_frog_bonanza_block"
+		},
+		{
+			"offer": {
+				"id": "companions:porcelain_pottery",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_companions_porcelain_pottery"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:rubber_duck",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "tool_abnormalities_whimsy_deco_rubber_duck"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:gnome",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "tool_abnormalities_whimsy_deco_gnome"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:lucky_cat",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 2
+			},
+			"numismatics_cost": 8192,
+			"trade_id": "tool_abnormalities_whimsy_deco_lucky_cat"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:singing_frog",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 2
+			},
+			"numismatics_cost": 8192,
+			"trade_id": "tool_abnormalities_whimsy_deco_singing_frog"
+		},
+		{
+			"offer": {
+				"id": "companions:empty_puppet_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "tool_abnormalities_companions_empty_puppet_block"
+		},
+		{
+			"offer": {
+				"id": "companions:croissant_egg_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 4
+			},
+			"numismatics_cost": 16384,
+			"trade_id": "tool_abnormalities_companions_croissant_egg_block"
+		},
+		{
+			"offer": {
+				"id": "companions:soul_furnace_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 8
+			},
+			"numismatics_cost": 32768,
+			"trade_id": "tool_abnormalities_companions_soul_furnace_block"
+		},
+		{
+			"offer": {
+				"id": "companions:respawn_totem_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 8
+			},
+			"numismatics_cost": 32768,
+			"trade_id": "tool_abnormalities_companions_respawn_totem_block"
+		}
+	]
+}

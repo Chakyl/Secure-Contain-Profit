@@ -1,50 +1,50 @@
-/particle companions:golden_allay_trail
+/dialog show red_phone_choice_dialog_choice_1
+/weather rain
+/weather clear
+/reload
+/dialog show red_phone_choice_dialog_choice_1
+/dialog list
+/execute as Chakyl run dialog show red_phone_choice_dialog_choice_1
+/dialog @e[type=villager,limit=1] show @s debug_dialog
+/dialog show red_phone_choice_dialog_choice_1
+/say hay
+/reload
+/dialog show red_phone_choice_dialog_choice_1
+/dialog lis
+/dialog list
+/dialog show test_dialog
+/dialog show red_phone_choice_dialog_choice_1
+/difficulty peaceful
+/difficulty normal
+/effect clear
+/reload
+/dialog show red_phone_choice_dialog_choice_1
+/playsound industrialhellscape:metal_box_opening
 /kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/data get block -9 124 -302
-/kjs reload server-scripts
-/data get block -9 124 -302
 /kjs hand
 /kjs reload server-scripts
+/effect clear
+/kjs persistent-data entity Chakyl get
+/kjs persistent-data entity Chakyl get *
+/kjs persistent-data entity Chakyl get
+/time add 240000
+/kjs reload server-scripts
+/time add 240000
+/kjs reload server-scripts
+/time add 240000
+/kjs reload server-scripts
+/time add 24000
 /kjs hand
+/kjs reload se
 /kjs reload server-scripts
-/reload
+/data get block 9 139 -301
 /kjs reload server-scripts
-/reload
-/kjs hand
-/kjs reload server-scripts
-/time add 24000
-/reload
-/time add 1000
-/reload
-/kjs hand
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/reload
-/damage Chakyl 3
-/time add 200
-/time add 2000
-/reload
-/time add 24000
+/data get block 9 139 -301
 /kjs reload server-scripts
 /time add 24000
 /kjs reload server-scripts
-/time add 24000
+/enchant Chakyl minecraft:sharpness 5
+/effect clear
 /kjs reload server-scripts
 /time add 24000
 /kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 2000
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000

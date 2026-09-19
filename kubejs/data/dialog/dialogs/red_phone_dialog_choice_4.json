@@ -1,0 +1,72 @@
+{
+	"id": "red_phone_choice_dialog_choice_4",
+	"title": "red_phone choice_4",
+	"description": "dialog.npc.red_phone.dialog.choice_4",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.red_phone.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.red_phone.dialog.choice_4.line_0"
+				}
+			],
+			"portraits": [
+				{
+					"path": "abyssal_decor:textures/item/ironskull.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.red_phone.dialog.choice_4.option_0"
+					},
+					"target": "end",
+					"commands": [
+						"give @p minecraft:air"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.red_phone.dialog.choice_4.option_1"
+					},
+					"target": "end",
+					"commands": [
+						"give @p scguns:grenade"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.red_phone.dialog.choice_4.option_2"
+					},
+					"target": "end",
+					"commands": [
+						"give @p scp:verdant_research"
+					]
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.red_phone.name",
+				"color": "white"
+			},
+			"portraits": [
+				{
+					"path": "abyssal_decor:textures/item/ironskull.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"text": {
+				"translate": "dialog.npc.red_phone.end"
+			}
+		}
+	]
+}
