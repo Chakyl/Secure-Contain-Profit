@@ -1,0 +1,127 @@
+#Fangs 'n Claws — Server Configuration
+[spawn_weights]
+	#Spawn weight for each mob. Set to 0 to disable natural spawning.
+	#Goblin (overworld, any biome) — default: 20
+	# Default: 20
+	# Range: 0 ~ 500
+	goblin = 20
+	#Ogre (overworld, any biome) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	ogre = 15
+	#Cave Ogre (caves only) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	cave_ogre = 15
+	#Big Golem (plains only) — default: 5
+	# Default: 5
+	# Range: 0 ~ 500
+	golem = 5
+	#Owlbear (forest + taiga) — default: 8
+	# Default: 8
+	# Range: 0 ~ 500
+	owlbear = 8
+	#Shrike (snowy forest + snowy taiga) — default: 5
+	# Default: 5
+	# Range: 0 ~ 500
+	shrike = 5
+	#Silver Skeleton (overworld) — default: 20ckGobl
+	# Default: 20
+	# Range: 0 ~ 500
+	silver_skeleton = 20
+	#Evil Bat (overworld) — default: 20
+	# Default: 20
+	# Range: 0 ~ 500
+	evil_bat = 20
+	#Ghost (overworld) — default: 25
+	# Default: 25
+	# Range: 0 ~ 500
+	ghost = 25
+	#Ghost (Soul Sand Valley) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	ghost_nether = 15
+	#Werewolf (overworld) — default: 25
+	# Default: 25
+	# Range: 0 ~ 500
+	werewolf = 25
+	#Dart Goblin (overworld, any biome) — default: 5
+	# Default: 5
+	# Range: 0 ~ 500
+	dart_goblin = 5
+	#Imp (Crimson Forest + Nether Wastes) — default: 10
+	# Default: 10
+	# Range: 0 ~ 500
+	imp = 10
+	#Hell Ogre (nether, all biomes) — default: 10
+	# Default: 10
+	# Range: 0 ~ 500
+	hell_ogre = 10
+	#Scorpion (overworld, any biome) — default: 25
+	# Default: 25
+	# Range: 0 ~ 500
+	scorpion = 25
+	#Ice Golem (snowy biomes) — default: 5
+	# Default: 5
+	# Range: 0 ~ 500
+	ice_golem = 5
+	#Fire Ghost (overworld, rare) — default: 10
+	# Default: 10
+	# Range: 0 ~ 500
+	fire_ghost = 10
+	#Fire Ghost (Crimson Forest + Nether Wastes) — default: 12
+	# Default: 12
+	# Range: 0 ~ 500
+	fire_ghost_nether = 12
+	#Desert Scorpion (desert, daytime) — default: 20
+	# Default: 20
+	# Range: 0 ~ 500
+	desert_scorpion = 20
+	#Frost Scorpion (snowy biomes) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	frost_scorpion = 15
+	#Nether Scorpion (Crimson Forest + Nether Wastes) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	nether_scorpion = 15
+	#Horse Bat (overworld) — default: 3
+	# Default: 3
+	# Range: 0 ~ 500
+	horse_bat = 3
+	#Nightmare Horse (Nether) — default: 8
+	# Default: 8
+	# Range: 0 ~ 500
+	nightmare_horse = 8
+	#Skeleton Horse (overworld, night) — default: 3
+	# Default: 3
+	# Range: 0 ~ 500
+	skeleton_horse = 3
+	#Zombie Horse (overworld, night) — default: 3
+	# Default: 3
+	# Range: 0 ~ 500
+	zombie_horse = 3
+	#Wild Wolf (overworld) — default: 8 (vanilla wolf weight)
+	# Default: 8
+	# Range: 0 ~ 500
+	wild_wolf = 8
+	#Hyena (desert, savanna, badlands, surface only) — default: 20
+	# Default: 20
+	# Range: 0 ~ 500
+	hyena = 20
+	#Carnivorous Plant (jungle) — default: 20
+	# Default: 20
+	# Range: 0 ~ 500
+	carnivorous_plant = 20
+	#Fire Skull (overworld, above lava) — default: 12
+	# Default: 12
+	# Range: 0 ~ 500
+	fire_skull = 12
+	#Fire Skull (nether, above lava) — default: 4, lower on purpose since lava is everywhere there
+	# Default: 4
+	# Range: 0 ~ 500
+	fire_skull_nether = 4
+	#Acid Skull (swamps) — default: 15
+	# Default: 15
+	# Range: 0 ~ 500
+	acid_skull = 15

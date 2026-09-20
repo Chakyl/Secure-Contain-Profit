@@ -1,0 +1,31 @@
+{
+  "title": "Facility Wing: Verdant",
+  "description": "Due to a catastrophic incident with the overeager MANAGER-252, all facility expansion is done with Expansion Cards.\n\nUse the Verdant Hallway Expansion Card on its corresponding Verdant Hallway Lock to start your facility.\n\n",
+  "icon": {
+    "item": "industrially_plated:verdant_cut_plating"
+  },
+  "chapter": "training",
+  "sort_order": 1,
+  "objectives": [
+    {
+      "type": "questlog:block_interact",
+      "name": "Unlock Verdant Hallway",
+      "block": "scp:verdant_hallway_lock_block",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_ba2877aa",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_containment_expansion_card",
+      "count": 1
+    }
+  ]
+}

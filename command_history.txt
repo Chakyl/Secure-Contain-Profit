@@ -1,50 +1,50 @@
-/dialog show red_phone_choice_dialog_choice_1
-/weather rain
-/weather clear
-/reload
-/dialog show red_phone_choice_dialog_choice_1
-/dialog list
-/execute as Chakyl run dialog show red_phone_choice_dialog_choice_1
-/dialog @e[type=villager,limit=1] show @s debug_dialog
-/dialog show red_phone_choice_dialog_choice_1
-/say hay
-/reload
-/dialog show red_phone_choice_dialog_choice_1
-/dialog lis
-/dialog list
-/dialog show test_dialog
-/dialog show red_phone_choice_dialog_choice_1
+/difficulty normal
 /difficulty peaceful
 /difficulty normal
-/effect clear
+/kill
+/ql
+/ql open
+/ql edit_mode
+/ql open
+/kjs hand
+/ql open
+/kjs hand
+/time add 24000
+/kill @e[type=!player]
+/time add 24000
+/kjs hand
+/ql
+/kjs hand
+/time set day
+/effect give Chakylh minecraft:night_vision infinite
 /reload
-/dialog show red_phone_choice_dialog_choice_1
-/playsound industrialhellscape:metal_box_opening
 /kjs reload server-scripts
-/kjs hand
+/ql
+/ql edit_mode false
+/ql edit_mode true
+/ql edit_mode false
+/ql edit_mode true
+/ql edit_mode false
+/ql edit_mode true
+/ql edit_mode false
+/reload
 /kjs reload server-scripts
-/effect clear
-/kjs persistent-data entity Chakyl get
-/kjs persistent-data entity Chakyl get *
-/kjs persistent-data entity Chakyl get
-/time add 240000
+/ql edit_mode
+/data get block -5 122 -17
+/kjs persistent-data server get *
+/kjs reload startup-scripts
+/kjs persistent-data server merge {chaos:2}
+/kjs persistent-data server get *
+/time add 5000
 /kjs reload server-scripts
-/time add 240000
-/kjs reload server-scripts
-/time add 240000
-/kjs reload server-scripts
-/time add 24000
-/kjs hand
-/kjs reload se
-/kjs reload server-scripts
-/data get block 9 139 -301
-/kjs reload server-scripts
-/data get block 9 139 -301
-/kjs reload server-scripts
+/kjs persistent-data server merge {threat_level:3}
 /time add 24000
 /kjs reload server-scripts
-/enchant Chakyl minecraft:sharpness 5
-/effect clear
+/kjs reload startup-scripts
 /kjs reload server-scripts
+/kjs persistent-data server get *
 /time add 24000
+/kjs persistent-data server get *
 /kjs reload server-scripts
+/kjs persistent-data server merge {chaos:4}
+/time add 24000

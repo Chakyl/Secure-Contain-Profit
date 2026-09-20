@@ -1,0 +1,29 @@
+{
+  "title": "The RESEARCH task",
+  "description": "When a Containment Unit is in the RESEEARCH state, the Abnormality contained is exhibiting unstable behaviors.\n\nA manager must be present in the Containment Unit for 15 seconds to re-tether the Abnormality, in which certain things about will be learned.\n\nVerdant Abnormalities have 3 research levels, with the last of them possibly triggering an EVOLUTION. \n\nPlease make use of these synthetic researches to observe your Abnormalty's EVOLUTION.\n",
+  "icon": {
+    "item": "scp:verdant_research"
+  },
+  "chapter": "training",
+  "sort_order": 7,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_229d9a3b",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_research",
+      "count": 3
+    }
+  ]
+}

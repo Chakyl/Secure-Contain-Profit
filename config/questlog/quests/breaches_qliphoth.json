@@ -1,0 +1,30 @@
+{
+  "title": "Breaches & Qliphoth Counters",
+  "description": "Each Abnormality has a certain tolerance for instability in its Containment Unit. This is represented by a Qliphoth Counter, which is viewable after 2 research levels.\n\nIf a Qliphoth Counter reaches its maximum for the type of Abnormality, it will BREACH.\n\nDo not allow Abnormalities to Breach as it can be disastrous for the Moonlit Company's metrics, structural integrity of the facility, and your personal safety.\n\nThe only way to stop an Abnormality from breaching is to enact violence and harvest its heart, returning it to the Containment Unit.",
+  "icon": {
+    "item": "industrially_plated:generic_prohibition_sign"
+  },
+  "chapter": "training",
+  "sort_order": 10,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scguns:pax",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_8ff850aa",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scguns:compact_copper_round",
+      "count": 64
+    }
+  ]
+}

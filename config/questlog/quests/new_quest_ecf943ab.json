@@ -1,0 +1,44 @@
+{
+  "title": "Adding Containment Units",
+  "description": "Similar to hallways, each Containment Unit has its own corresponding Expansion Card.\n\nThis is the primary way to increase Abnormality capacity in your Facility.\n\nVerdant Abnormalities are the safest class, at least until they EVOLVE...",
+  "icon": {
+    "item": "scp:verdant_containment_expansion_card"
+  },
+  "chapter": "training",
+  "sort_order": 2,
+  "objectives": [
+    {
+      "type": "questlog:or",
+      "name": "Unlock a Containment Unit",
+      "objectives": [
+        {
+          "type": "questlog:block_interact",
+          "name": "Containment Unit 1",
+          "block": "scp:verdant_containment_lock_block_1",
+          "required_amount": 1
+        },
+        {
+          "type": "questlog:block_interact",
+          "name": "Containment Unit 2",
+          "block": "scp:verdant_containment_lock_block_2",
+          "required_amount": 1
+        }
+      ],
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_c4acc052",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_containment_expansion_card",
+      "count": 1
+    }
+  ]
+}

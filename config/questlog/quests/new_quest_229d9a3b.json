@@ -1,0 +1,31 @@
+{
+  "title": "Your First Abnormality",
+  "description": "Unleash your first Abnormality from the Containment Unit by interacting with its block.\n\nThe Containment Unit block is critical for tethering your Abnormality to this plane of existence.\n\nEvery day you will need to do one of the following things:\n- MAINTENANCE - Repair the Containment Unit\n- RESEARCH - Observe behaviors of the abnormality, learning more about it\n- WORK - Extract Enkephalin from the Abnormality\n\nFailure to do any of these things my have financial and/or security related consequences.",
+  "icon": {
+    "item": "scp:containment_unit"
+  },
+  "chapter": "training",
+  "sort_order": 4,
+  "objectives": [
+    {
+      "type": "questlog:block_interact",
+      "name": "Interact with the Containment Unit",
+      "block": "scp:containment_unit",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_ecf943ab",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scguns:syringe",
+      "count": 16
+    }
+  ]
+}

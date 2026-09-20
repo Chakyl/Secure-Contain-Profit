@@ -1,0 +1,30 @@
+{
+  "title": "Enkephalin",
+  "description": "Enkephalin is the most important aspect of your facilitiy as it is the entire point of its existence.\n\nIt can be used on an Enkephalin Depositor to send it straight to the Moonlit Company. You recieve a small percentage of the profits from it to improve your ability to harvest Enkephalin and improve facility security.\n\nEnkephalin can also be used to purchase special equipment like weaponry and armor, however this is discouraged as it has lower margins for the Moonlit Company.",
+  "icon": {
+    "item": "scp:enkephalin"
+  },
+  "chapter": "training",
+  "sort_order": 8,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "numismatics:crown",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:new_quest_4872d0d9",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_containment_expansion_card",
+      "count": 1
+    }
+  ]
+}

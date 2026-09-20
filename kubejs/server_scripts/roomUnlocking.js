@@ -1,7 +1,7 @@
 
 let structureMap = new Map([
     ['scp:verdant_containment_lock_block_1', { card: 'scp:verdant_containment_expansion_card', template: "verdant_containment_west", x: -16, y: -3, z: -8 }],
-    ['scp:verdant_containment_lock_block_2', { card: 'scp:verdant_containment_expansion_card', template: "verdant_containment_east", x: 0, y: -3, z: -8 }],
+    ['scp:verdant_containment_lock_block_2', { card: 'scp:verdant_containment_expansion_card', template: "verdant_containment_east", x: 1, y: -3, z: -8 }],
     ['scp:verdant_hallway_lock_block', { card: 'scp:verdant_hallway_expansion_card', template: "verdant_hallways", x: - 8, y: -3, z: -16 }]
 ])
 

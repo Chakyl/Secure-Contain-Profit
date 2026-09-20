@@ -1,0 +1,9 @@
+{
+  "name": "Training",
+  "icon": {
+    "item": "abyssal_decor:book_block"
+  },
+  "order": 0,
+  "default_chapter": true,
+  "hidden": false
+}
