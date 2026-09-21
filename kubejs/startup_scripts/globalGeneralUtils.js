@@ -83,6 +83,17 @@ global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${glo
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid);
 
-global.addChaos = (server, chaosCount) => server.persistentData.chaos = server.persistentData.chaos ? Number(server.persistentData.getInt("chaos")) + chaosCount : chaosCount;
+global.addChaos = (server, block, chaosCount) => {
+  server.persistentData.chaos = server.persistentData.chaos ? Number(server.persistentData.getInt("chaos")) + chaosCount : chaosCount;
+  server.runCommandSilent(`playsound abyssal_decor:thehorrors4 block @a ${block.x} ${block.y} ${block.z} 2 1`);
+};
 
 global.addThreatLevel = (server, threatLevelCount) => server.persistentData.threat_level = server.persistentData.threat_level ? Number(server.persistentData.getInt("threat_level")) + threatLevelCount : threatLevelCount;
+
+global.updateSignalers = (level, block) => {
+  let belowBlock = level.getBlock(block.getPos().below());
+  if (belowBlock.id == "scp:containment_unit_signaler") {
+    belowBlock.set("minecraft:air")
+    belowBlock.set("scp:containment_unit_signaler")
+  }
+}

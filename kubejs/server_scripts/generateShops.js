@@ -35,7 +35,7 @@ const shops = [
             { item: "industrialhellscape:metalworks", count: 8, numiCost: 24 },
             { item: "industrialhellscape:pipeworks", count: 8, numiCost: 32 },
             { item: "industrialhellscape:ihea_furniture_kit", count: 8, numiCost: 32 },
-            { item: 'industrialhellscape:armored_door', count: 1, numiCost: 8},
+            { item: 'industrialhellscape:armored_door', count: 1, numiCost: 8 },
             { item: 'industrialhellscape:stamped_metal_door', count: 1, numiCost: 8 },
             { item: 'industrialhellscape:bulkhead_door', count: 1, numiCost: 8 },
             { item: "industrially_plated:white_plating_block", count: 8, numiCost: 16 },
@@ -157,7 +157,9 @@ const shops = [
         id: "electrical_control",
         jeiCatalyst: "minecraft:redstone",
         trades: [
+            { item: 'scp:containment_unit_signaler', count: 1, numiCost: 16 },
             { item: "minecraft:redstone", count: 8, numiCost: 8 },
+            { item: "supplementaries:cog_block", count: 8, numiCost: 16 },
             { item: "minecraft:redstone_torch", count: 8, numiCost: 8 },
             { item: "minecraft:comparator", count: 4, numiCost: 8 },
             { item: "minecraft:repeater", count: 4, numiCost: 8 },

@@ -44,7 +44,6 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     if (hand !== "MAIN_HAND") return;
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
-
     let tier = String(nbt.data.getString("tier")).trim();
     const { abnormalityType, abnormalityUUID } = nbt.data;
     if (abnormalityType == null || abnormalityType == "") {
@@ -107,6 +106,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
                     state: "NONE"
                 },
             });
+            global.setBlockEntityData(block, nbt)
         } else if (state.equals("MAINTENANCE") && item.id == 'companions:wrench') {
             nbt.merge({
                 data: {
@@ -134,6 +134,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
 
         }
     }
+    global.updateSignalers(level, block);
 })
 const getClassRadius = (tier) => {
     switch (tier) {
@@ -144,7 +145,6 @@ const getClassRadius = (tier) => {
         case "verdant": return 2;
     }
 }
-
 /**
  * States:
  * - RESEARCH - Player must be in containment unit for 30 seconds. Will always be the first state if researchLevel = 0. Increases counter if failed
@@ -156,7 +156,6 @@ const getClassRadius = (tier) => {
 const containmentChamberTickRate = 20;
 
 const containmentChamberProgTime = 20;
-
 BlockEvents.blockEntityTick('scp:containment_unit', e => {
     const { inventory, level, tick, block } = e;
     const { x, y, z } = block;
@@ -178,7 +177,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         let increaseCounter = false;
         // TODO: Share method
         if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
-            level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS ESCAPED CONTAINMENT AT [x: ${x} z: ${z}]. COUNTER INCREASED.`))
+            level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS ESCAPED CONTAINMENT AT [x: ${x} z: ${z}]. COUNTER INCREASED TO ${Number(nbt.data.getInt("counter")) + 1}`))
             increaseCounter = true;
         }
         if (state == "MAINTENANCE") {
@@ -189,15 +188,17 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             if (state == "RESEARCH") increaseCounter = true;
             let dailyStates = ["WORKABLE", "WORKABLE", "MAINTENANCE"];
             if (Number(nbt.data.getInt("researchLevel")) < 3) dailyStates.push("RESEARCH");
+            let newState = day < 2 ? "WORKABLE" : global.rollArray(dailyStates);
             nbt.merge({
                 data: {
-                    state: day < 2 ? "WORKABLE" : global.rollArray(dailyStates),
+                    state: newState,
                     researchTime: 0
                 }
             });
+
         }
         if (increaseCounter) {
-            increaseCounter(level, block, abnormalityName, abnormalityUUID, nbt);
+            increaseUnitCounter(level, block, abnormalityName, abnormalityUUID, nbt);
         }
         nbt.merge({
             data: {
@@ -205,12 +206,13 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             }
         });
         global.setBlockEntityData(block, nbt)
+        global.updateSignalers(level, block);
     }
     // Validation logic
     if (tick % 20 == 0) {
         if (level.getServer().persistentData.chaos && level.getServer().persistentData.getInt("chaos") >= 1) {
             level.getServer().persistentData.chaos = level.getServer().persistentData.getInt("chaos") - 1;
-            increaseCounter(level, block, global.getAbnormalityName(String(nbt.data.getString("tier")).trim(), String(nbt.data.getString("abnormalityType")).trim()), abnormalityUUID, nbt);
+            increaseUnitCounter(level, block, global.getAbnormalityName(String(nbt.data.getString("tier")).trim(), String(nbt.data.getString("abnormalityType")).trim()), abnormalityUUID, nbt);
         }
     }
     if (tick % 100 == 0) {
@@ -252,14 +254,16 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 level.getServer().runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.2`);
             } else {
                 incrementResearch(level, block, x, y, z, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt)
+                global.updateSignalers(level, block);
             }
             global.setBlockEntityData(block, nbt)
         }
     }
 })
-let increaseCounter = (level, block, abnormalityName, abnormalityUUID, nbt) => {
+let increaseUnitCounter = (level, block, abnormalityName, abnormalityUUID, nbt) => {
     let { x, y, z } = block;
-    if (Number(nbt.data.getInt("counter")) + 1 < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter) {
+    console.log(`${Number(nbt.data.getInt("counter")) + 1}/${global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}: ${(nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}` )
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter) {
         nbt.merge({
             data: {
                 counter: global.increaseStage(Number(nbt.data.getInt("counter")))
@@ -282,6 +286,7 @@ let increaseCounter = (level, block, abnormalityName, abnormalityUUID, nbt) => {
                     counter: 0,
                 }
             });
+            global.updateSignalers(level, block);
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
             level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x: ${x} z: ${z}].`))

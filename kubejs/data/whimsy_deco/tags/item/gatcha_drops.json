@@ -31,6 +31,7 @@
     "scguns:repeating_musket",
     "scguns:longarm",
     "scguns:drill",
-    "scguns:powder_keg"
+    "scguns:powder_keg",
+    "minecraft:bee_spawn_egg"
   ]
 }

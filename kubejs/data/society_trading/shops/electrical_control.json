@@ -12,6 +12,18 @@
 	"trades": [
 		{
 			"offer": {
+				"id": "scp:containment_unit_signaler",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "electrical_control_scp_containment_unit_signaler"
+		},
+		{
+			"offer": {
 				"id": "minecraft:redstone",
 				"count": 8
 			},
@@ -21,6 +33,18 @@
 			},
 			"numismatics_cost": 8,
 			"trade_id": "electrical_control_minecraft_redstone"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:cog_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "electrical_control_supplementaries_cog_block"
 		},
 		{
 			"offer": {

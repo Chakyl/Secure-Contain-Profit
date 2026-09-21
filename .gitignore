@@ -42,6 +42,8 @@ patchouli_data.json
 observable_announce
 data/fabricDefaultResourcePacks.dat
 package-lock.json
+dynamic-data-pack-cache/
+dynamic-resource-pack-cache/
 lwjgl.dll
 jemalloc.dll
 glfw.dll

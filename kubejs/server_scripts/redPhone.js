@@ -9,6 +9,6 @@ BlockEvents.rightClicked('whimsy_deco:red_phone', (e) => {
     }
     server.runCommandSilent(`execute as ${player.username} run dialog show red_phone_choice_dialog_choice_${Math.floor(Math.random() * 6) + 1}`);
     server.runCommandSilent(`playsound industrialhellscape:metal_box_opening block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
-    global.addChaos(server, 2);
+    global.addChaos(server, block, 2);
     player.persistentData.dayLastCalled = day;
 });
