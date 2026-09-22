@@ -1,5 +1,6 @@
 const scpPool = new Map([
-    ["verdant", ["minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]]
+    ["verdant", ["minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
+    ["amber", ["netherman:statue_bossunit", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:wild_antlion", "companions:hostile_puppet_glove"]]
 ])
 const printContainmentUnitInfo = (player, data) => {
     const { state } = data;
@@ -28,13 +29,38 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
         },
     });
     global.setBlockEntityData(block, nbt)
+    global.addThreatLevel(server, 1);
+    if (Number(server.persistentData.getInt("threat_level")) % 5 == 0) {
+        server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${Number(server.persistentData.getInt("threat_level")) / 5}`))
+        global.addChaos(server, block, Number(server.persistentData.getInt("threat_level")));
+    }
 }
-const dropEnkephalin = (block, x, y, z) => {
+
+const getClassRadius = (tier) => {
+    switch (tier) {
+        case "amber": return 3;
+        case "maroon": return 4;
+        case "indigo": return 5;
+        default:
+        case "verdant": return 2;
+    }
+}
+
+const getClassEnkephalinCount = (tier) => {
+    switch (tier) {
+        case "amber": return 2;
+        case "maroon": return 4;
+        case "indigo": return 8;
+        default:
+        case "verdant": return 1;
+    }
+}
+const dropEnkephalin = (block, x, y, z, count) => {
     let itemEntity = block.createEntity('item')
     itemEntity.x = x
     itemEntity.y = y + 0.2
     itemEntity.z = z
-    itemEntity.item = 'scp:enkephalin'
+    itemEntity.item = Item.of(`${count}x scp:enkephalin`);
     itemEntity.spawn()
 };
 BlockEvents.rightClicked('scp:containment_unit', e => {
@@ -44,6 +70,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     if (hand !== "MAIN_HAND") return;
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
+    
     let tier = String(nbt.data.getString("tier")).trim();
     const { abnormalityType, abnormalityUUID } = nbt.data;
     if (abnormalityType == null || abnormalityType == "") {
@@ -77,11 +104,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
                     player.tell(Text.green("ABNORMALITY RESTORED"))
                     item.shrink(1);
                     spawnAbnormality(server, level, block, nbt, String(nbt.data.getString("abnormalityType")).trim(), tier)
-                    global.addThreatLevel(server, 1);
-                    if (server.persistentData.threat_level % 5 == 0) {
-                        server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${server.persistentData.threat_level / 5}`))
-                        global.addThreatLevel(server, server.persistentData.threat_level);
-                    }
+
                     nbt.merge({
                         data: {
                             state: "NONE"
@@ -100,7 +123,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.2`);
             server.runCommandSilent(`playsound minecraft:entity.cow.milk block @a ${x} ${y} ${z} 2 0.2`);
             level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-            dropEnkephalin(block, x, y, z);
+            dropEnkephalin(block, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier"))));
             nbt.merge({
                 data: {
                     state: "NONE"
@@ -136,15 +159,6 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     }
     global.updateSignalers(level, block);
 })
-const getClassRadius = (tier) => {
-    switch (tier) {
-        case "amber": return 3;
-        case "maroon": return 4;
-        case "indigo": return 5;
-        default:
-        case "verdant": return 2;
-    }
-}
 /**
  * States:
  * - RESEARCH - Player must be in containment unit for 30 seconds. Will always be the first state if researchLevel = 0. Increases counter if failed
@@ -175,10 +189,24 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         let abnormalityName = global.getAbnormalityName(String(nbt.data.getString("tier")).trim(), String(nbt.data.getString("abnormalityType")).trim());
         let state = String(nbt.data.getString("state")).trim();
         let increaseCounter = false;
-        // TODO: Share method
         if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
-            level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS ESCAPED CONTAINMENT AT [x: ${x} z: ${z}]. COUNTER INCREASED TO ${Number(nbt.data.getInt("counter")) + 1}`))
-            increaseCounter = true;
+            let foundEntity = false;
+            for (let entity of level.getServer().getEntities()) {
+                if (entity.uuid.toString() == abnormalityUUID) {
+                    entity.persistentData.breaching = true;
+                    foundEntity = true;
+                    break;
+                }
+            }
+            if (foundEntity) {
+                level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS ESCAPED CONTAINMENT AT [x: ${x} z: ${z}]. COUNTER INCREASED TO ${Number(nbt.data.getInt("counter")) + 1}`))
+                increaseCounter = true;
+            } else {
+                level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x: ${x} z: ${z}].`))
+                nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
+                global.setBlockEntityData(block, nbt)
+                return;
+            }
         }
         if (state == "MAINTENANCE") {
             if (Math.random() < 0.5) {
@@ -262,7 +290,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
 })
 let increaseUnitCounter = (level, block, abnormalityName, abnormalityUUID, nbt) => {
     let { x, y, z } = block;
-    console.log(`${Number(nbt.data.getInt("counter")) + 1}/${global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}: ${(nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}` )
+    console.log(`${Number(nbt.data.getInt("counter")) + 1}/${global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}: ${(nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter}`)
     if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter) {
         nbt.merge({
             data: {
@@ -290,7 +318,7 @@ let increaseUnitCounter = (level, block, abnormalityName, abnormalityUUID, nbt) 
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
             level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x: ${x} z: ${z}].`))
-            nbt.merge({ data: { tier: "verdant", boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
+            nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
             global.setBlockEntityData(block, nbt)
             return;
         }
@@ -318,11 +346,9 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
             let evolution = global.rollArray(evolutions);
             server.scheduleInTicks(100, () => {
                 possibleAbnormality[0].setRemoved("unloaded_to_chunk");
-                global.addThreatLevel(server, -1);
                 spawnAbnormality(server, level, block, nbt, evolution, String(nbt.data.getString("tier")).trim())
             });
-
-            dropEnkephalin(block, x, y, z);
+            dropEnkephalin(block, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier")) * 3));
             nbt.merge({
                 data: {
                     researchLevel: 0,
@@ -333,7 +359,7 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
                 },
             });
         } else {
-            dropEnkephalin(block, x, y, z);
+            dropEnkephalin(block, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier")) * 2));
             nbt.merge({
                 data: {
                     researchTime: 0,

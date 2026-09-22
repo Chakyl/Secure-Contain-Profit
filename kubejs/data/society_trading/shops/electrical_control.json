@@ -240,6 +240,18 @@
 		},
 		{
 			"offer": {
+				"id": "supplementaries:speaker_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "electrical_control_supplementaries_speaker_block"
+		},
+		{
+			"offer": {
 				"id": "dashpanels:control_panel",
 				"count": 1
 			},

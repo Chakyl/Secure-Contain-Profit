@@ -1,0 +1,15 @@
+{
+  "comment": "These are the most popular and trustworthy sources for pre compiled FFMPEG binaries. If you prefer not to use these swap them out for something else. Note that pre compiled FFMPEG from official sources do not exist. A value can be a single url or a list of urls, for sources that ship ffmpeg and ffprobe as separate archives. Keys ending in -arm64 are used on ARM cpus, when missing the plain one is used.",
+  "config_version": 3,
+  "linux": "johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
+  "linux-arm64": "johnvansickle.com/ffmpeg/releases/ffmpeg-release-arm64-static.tar.xz",
+  "windows": "gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",
+  "macos": [
+    "evermeet.cx/ffmpeg/getrelease/zip",
+    "evermeet.cx/ffprobe/getrelease/zip"
+  ],
+  "macos-arm64": [
+    "ffmpeg.martin-riedl.de/redirect/latest/macos/arm64/release/ffmpeg.zip",
+    "ffmpeg.martin-riedl.de/redirect/latest/macos/arm64/release/ffprobe.zip"
+  ]
+}

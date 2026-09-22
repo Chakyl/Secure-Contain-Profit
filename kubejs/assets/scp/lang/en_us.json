@@ -8,10 +8,15 @@
     "shop.scp.tool_abnormalities": "Tool Abnormalities",
     "shop.scp.electrical_control": "Electrical Control",
     "shop.scp.dye_depot": "Dye Depot",
+    "shop.scp.security": "Facility Security",
 
     "shop.scp.facility.description": "Expand and grow your facility, supporting more Abnormalities.",
     "shop.scp.blocks.description": "Build out your facility, for both protection and Aesthetics.",
     "shop.scp.armor.description": "Protect your fleshy being from abnormalities.",
     "shop.scp.guns.description": "Contain abnormalities through violent projectiles.",
-    "shop.scp.ammunition.description": "Feed your hungry weaponry."
+    "shop.scp.ammunition.description": "Feed your hungry weaponry.",
+    "shop.scp.tool_abnormalities.description": "Purchase 'useful' Abnormalities that can be used as tools.",
+    "shop.scp.electrical_control.description": "Wire your facility up",
+    "shop.scp.dye_depot.description": "Dye!!!",
+    "shop.scp.security.description": "For the defence of your ancient facility."
 }

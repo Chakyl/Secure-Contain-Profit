@@ -8,6 +8,7 @@ local/
 logs
 config/CSC/Data/variables.data
 config/CSC/Log/CSC_Record.log
+vista_ffmpeg_bin/
 options.txt
 resourcepacks/*
 !/resourcepacks/sunlit_overrides.zip

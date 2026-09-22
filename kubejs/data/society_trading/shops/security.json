@@ -1,0 +1,345 @@
+{
+	"shop_id": "security",
+	"name": {
+		"translate": "shop.scp.security"
+	},
+	"texture": "security:textures/item/security",
+	"display_type": "thin",
+	"jei_catalyst": {
+		"id": "supplementaries:cannon"
+	},
+	"selector_weight": 8,
+	"trades": [
+		{
+			"offer": {
+				"id": "supplementaries:bamboo_spikes",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "security_supplementaries_bamboo_spikes"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:cannon",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "security_supplementaries_cannon"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:cannonball",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "security_supplementaries_cannonball"
+		},
+		{
+			"offer": {
+				"id": "scguns:mine_unit",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "security_scguns_mine_unit"
+		},
+		{
+			"offer": {
+				"id": "scguns:basic_turret",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "security_scguns_basic_turret"
+		},
+		{
+			"offer": {
+				"id": "scguns:auto_turret",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "security_scguns_auto_turret"
+		},
+		{
+			"offer": {
+				"id": "scguns:shotgun_turret",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 12
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "security_scguns_shotgun_turret"
+		},
+		{
+			"offer": {
+				"id": "scguns:sniper_turret",
+				"count": null
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 26
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "security_scguns_sniper_turret"
+		},
+		{
+			"offer": {
+				"id": "scguns:hostile_turret_targeting_module",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_scguns_hostile_turret_targeting_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:turret_targeting_module",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_scguns_turret_targeting_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:player_turret_targeting_module",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_scguns_player_turret_targeting_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:damage_turret_module",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "peaceless:shrapin_scute",
+				"count": 4
+			},
+			"trade_id": "security_scguns_damage_turret_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:range_turret_module",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "creaturefeature:blighted_brain",
+				"count": 1
+			},
+			"trade_id": "security_scguns_range_turret_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:shell_catcher_turret_module",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "minecraft:blaze_rod",
+				"count": 1
+			},
+			"trade_id": "security_scguns_shell_catcher_turret_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:ammo_turret_module",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "creaturefeature:fiendish_essence",
+				"count": 1
+			},
+			"trade_id": "security_scguns_ammo_turret_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:fire_rate_turret_module",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "creaturefeature:thingamabob",
+				"count": 1
+			},
+			"trade_id": "security_scguns_fire_rate_turret_module"
+		},
+		{
+			"offer": {
+				"id": "scguns:enemy_log",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "security_scguns_enemy_log"
+		},
+		{
+			"offer": {
+				"id": "scguns:team_log",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "security_scguns_team_log"
+		},
+		{
+			"offer": {
+				"id": "vista:television",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "security_vista_television"
+		},
+		{
+			"offer": {
+				"id": "vista:hollow_cassette",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "security_vista_hollow_cassette"
+		},
+		{
+			"offer": {
+				"id": "vista:viewfinder",
+				"count": 1
+			},
+			"request": {
+				"id": "creaturefeature:living_glass_shards",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "security_vista_viewfinder"
+		},
+		{
+			"offer": {
+				"id": "vista:picture_tape",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_vista_picture_tape"
+		},
+		{
+			"offer": {
+				"id": "vista:wave_gate",
+				"count": 1
+			},
+			"request": {
+				"id": "creaturefeature:blitz_rod",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_vista_wave_gate"
+		},
+		{
+			"offer": {
+				"id": "vista:mirror",
+				"count": 1
+			},
+			"request": {
+				"id": "creaturefeature:living_glass_shards",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "security_vista_mirror"
+		}
+	]
+}

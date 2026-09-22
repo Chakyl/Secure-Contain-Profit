@@ -1,8 +1,8 @@
 StartupEvents.registry("block", (e) => {
-
+    let formatName = (type) => type.charAt(0).toUpperCase() + type.slice(1);
     const createLockBlocks = (type) => {
         e.create(`scp:${type}_hallway_lock_block`)
-            .displayName("Verdant Hallway Lock")
+            .displayName(`${formatName(type)} Hallway Lock`)
             .soundType("metal")
             .soundType("stone")
             .resistance(3600000)
@@ -10,7 +10,7 @@ StartupEvents.registry("block", (e) => {
             .unbreakable()
 
         e.create(`scp:${type}_containment_lock_block_1`)
-            .displayName("Verdant Containment Lock")
+            .displayName(`${formatName(type)} Containment Lock`)
             .soundType("metal")
             .soundType("stone")
             .resistance(3600000)
@@ -18,7 +18,7 @@ StartupEvents.registry("block", (e) => {
             .unbreakable()
 
         e.create(`scp:${type}_containment_lock_block_2`)
-            .displayName("Verdant Containment Lock")
+            .displayName(`${formatName(type)} Containment Lock`)
             .soundType("metal")
             .soundType("stone")
             .resistance(3600000)
@@ -34,6 +34,7 @@ StartupEvents.registry("block", (e) => {
     ].forEach((color) => {
         createLockBlocks(color);
     });
+    
     e.create(`scp:vent_lock_block`)
         .displayName("Vent Lock")
         .soundType("metal")
@@ -42,3 +43,5 @@ StartupEvents.registry("block", (e) => {
         .texture(`scp:block/vent_lock_block`)
         .unbreakable()
 });
+
+

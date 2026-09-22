@@ -1,50 +1,50 @@
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload startup-scripts
-/time add 24000
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/time add 24000
-/kjs reload startup-scripts
-/time add 24000
-/kjs reload startup-scripts
-/time add 24000
+/kjs hand
+/kjs handt
+/kjs hand
+/kjs hadn
+/kjs hand
+/kjs inventory
 /kjs hand
 /kjs reload server-scripts
 /reload
-/kjs reload server-scripts
+/kjs inventory
+/kjs hand
+/kjs inventory
+/kjs hand
 /reload
 /kjs reload server-scripts
 /reload
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/time add 2000
-/kjs reload server-scripts
-/kjs reload startup-scripts
+/kjs inventory
+/reload
+/ql edit_mode
+/kjs hand
+/kjs stages list Chakyl
+/ql edit_mode false
+/ql progress reset questlog:amber_wing
+/ql progress reset questlog:amber_level
+/reload
+/kjs hand
 /kjs reload server-scripts
 /time add 1000
-/time add 5000
+/kjs persistent-data server get *
+/kjs persistent-data server merge {threat_level:4}
+/kjs persistent-data server get *
+/kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs persistent-data server merge {threat_level:4}
+/kjs reload server-scripts
+/time add 1000
+/kjs persistent-data server get *
+/data get block 21 122 26
+/kjs reload server-scripts
 /time add 24000
+/data get block 21 122 26
+/kjs reload server-scripts
+//wand
+//copy
+//rotate 180
+//paste
+/data get block 21 122 26
+/kjs reload server-scripts

@@ -1,0 +1,9 @@
+{
+  "name": "Amber Wing",
+  "icon": {
+    "item": "dye_depot:amber_dye"
+  },
+  "order": 1,
+  "default_chapter": false,
+  "hidden": false
+}

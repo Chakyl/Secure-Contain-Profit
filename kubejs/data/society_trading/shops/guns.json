@@ -249,6 +249,238 @@
 			},
 			"numismatics_cost": 16384,
 			"trade_id": "guns_scguns_jr_wristbreaker"
+		},
+		{
+			"offer": {
+				"id": "scguns:gun_shelf",
+				"count": null
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "guns_scguns_gun_shelf"
+		},
+		{
+			"offer": {
+				"id": "scguns:reflex_sight",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_reflex_sight"
+		},
+		{
+			"offer": {
+				"id": "scguns:laser_sight",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_laser_sight"
+		},
+		{
+			"offer": {
+				"id": "scguns:medium_scope",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_medium_scope"
+		},
+		{
+			"offer": {
+				"id": "scguns:long_scope",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_long_scope"
+		},
+		{
+			"offer": {
+				"id": "scguns:light_stock",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_light_stock"
+		},
+		{
+			"offer": {
+				"id": "scguns:weighted_stock",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_weighted_stock"
+		},
+		{
+			"offer": {
+				"id": "scguns:wooden_stock",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_wooden_stock"
+		},
+		{
+			"offer": {
+				"id": "scguns:bump_stock",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_bump_stock"
+		},
+		{
+			"offer": {
+				"id": "scguns:silencer",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_silencer"
+		},
+		{
+			"offer": {
+				"id": "scguns:advanced_silencer",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 2
+			},
+			"trade_id": "guns_scguns_advanced_silencer"
+		},
+		{
+			"offer": {
+				"id": "scguns:extended_barrel",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_extended_barrel"
+		},
+		{
+			"offer": {
+				"id": "scguns:muzzle_brake",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_muzzle_brake"
+		},
+		{
+			"offer": {
+				"id": "scguns:light_grip",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_light_grip"
+		},
+		{
+			"offer": {
+				"id": "scguns:vertical_grip",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_vertical_grip"
+		},
+		{
+			"offer": {
+				"id": "scguns:iron_bayonet",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 1
+			},
+			"trade_id": "guns_scguns_iron_bayonet"
+		},
+		{
+			"offer": {
+				"id": "scguns:anthralite_bayonet",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 2
+			},
+			"trade_id": "guns_scguns_anthralite_bayonet"
+		},
+		{
+			"offer": {
+				"id": "scguns:diamond_bayonet",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 3
+			},
+			"trade_id": "guns_scguns_diamond_bayonet"
+		},
+		{
+			"offer": {
+				"id": "scguns:netherite_bayonet",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 4
+			},
+			"trade_id": "guns_scguns_netherite_bayonet"
+		},
+		{
+			"offer": {
+				"id": "scguns:extended_mag",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 2
+			},
+			"trade_id": "guns_scguns_extended_mag"
+		},
+		{
+			"offer": {
+				"id": "scguns:speed_mag",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:netherite_scrap",
+				"count": 2
+			},
+			"trade_id": "guns_scguns_speed_mag"
 		}
 	]
 }

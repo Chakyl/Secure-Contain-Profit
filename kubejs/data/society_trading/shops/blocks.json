@@ -124,39 +124,135 @@
 		},
 		{
 			"offer": {
-				"id": "industrialhellscape:armored_door",
-				"count": 1
+				"id": "abyssal_decor:deepbronze_block",
+				"count": 8
 			},
 			"request": {
 				"id": "numismatics:bevel",
 				"count": 1
 			},
 			"numismatics_cost": 8,
-			"trade_id": "blocks_industrialhellscape_armored_door"
+			"trade_id": "blocks_abyssal_decor_deepbronze_block"
 		},
 		{
 			"offer": {
-				"id": "industrialhellscape:stamped_metal_door",
-				"count": 1
+				"id": "abyssal_decor:raw_marble",
+				"count": 8
 			},
 			"request": {
 				"id": "numismatics:bevel",
 				"count": 1
 			},
 			"numismatics_cost": 8,
-			"trade_id": "blocks_industrialhellscape_stamped_metal_door"
+			"trade_id": "blocks_abyssal_decor_raw_marble"
 		},
 		{
 			"offer": {
-				"id": "industrialhellscape:bulkhead_door",
-				"count": 1
+				"id": "abyssal_decor:cobbled_talcrock",
+				"count": 8
 			},
 			"request": {
 				"id": "numismatics:bevel",
 				"count": 1
 			},
 			"numismatics_cost": 8,
-			"trade_id": "blocks_industrialhellscape_bulkhead_door"
+			"trade_id": "blocks_abyssal_decor_cobbled_talcrock"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:bellmetal_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_bellmetal_block"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:rough_jade",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_rough_jade"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:block_of_pearl",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_block_of_pearl"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:block_of_black_pearl",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_block_of_black_pearl"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:seabrass_block",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_seabrass_block"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:filthcrete",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_filthcrete"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:serpent_scales",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_serpent_scales"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:rough_blood_coral",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_rough_blood_coral"
 		},
 		{
 			"offer": {

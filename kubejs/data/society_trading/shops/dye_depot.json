@@ -8,7 +8,7 @@
 	"jei_catalyst": {
 		"id": "dye_depot:ginger_dye"
 	},
-	"selector_weight": 8,
+	"selector_weight": 9,
 	"trades": [
 		{
 			"offer": {

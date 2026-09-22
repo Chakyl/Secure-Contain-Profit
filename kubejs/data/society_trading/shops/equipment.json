@@ -129,6 +129,42 @@
 			},
 			"numismatics_cost": 128,
 			"trade_id": "equipment_scguns_dishes_pouch"
+		},
+		{
+			"offer": {
+				"id": "scguns:grenade",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "equipment_scguns_grenade"
+		},
+		{
+			"offer": {
+				"id": "scguns:stun_grenade",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "equipment_scguns_stun_grenade"
+		},
+		{
+			"offer": {
+				"id": "scguns:gas_grenade",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "equipment_scguns_gas_grenade"
 		}
 	]
 }
