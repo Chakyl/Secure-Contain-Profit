@@ -1,6 +1,3 @@
-/stopsound Chakyl
-/playsound netherman:riftsound
-/playsound netherman:azazel_phase
 /playsound netherman:speech_1
 /kjs hand
 /playsound netherman:azazel_phase
@@ -48,3 +45,6 @@
 /kjs stages list Chakyl
 /kjs reload server-scripts
 /reload
+/ql edit_mode
+/kjs hand
+/kjs reload server-scripts

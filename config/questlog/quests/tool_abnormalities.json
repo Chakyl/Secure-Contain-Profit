@@ -1,20 +1,20 @@
 {
   "title": "Tool Abnormalities",
-  "description": "Not every Abnormality must be contained in a Containment Unit.\n\nThose classified as \"Tool Abnormalities\" are manifested as mundane looking objects, and they can be purchased from the Moonlit Company for internal study.\n\nDo not let the fact that these need no containing lure you into a false sense of security. Tool Abnormalities are often useful, but cause facility CHAOS to rise, triggering instability.\n\nCareful monitoring and usage of Tool Abnormalities is profitable and recommended.",
+  "description": "Not every Abnormality must be contained in a Containment Unit.\n\nThose classified as \"Tool Abnormalities\" are manifested as mundane looking objects, and they can be purchased from the Moonlit Company for internal study.\n\nDo not let the fact that these need no containing lure you into a false sense of security. Tool Abnormalities are often useful, but may have adverse effects. \n\nCareful monitoring and usage of Tool Abnormalities is profitable and recommended.",
   "icon": {
-    "item": "whimsy_deco:red_phone"
+    "item": "supplementaries:clock_block"
   },
   "chapter": "training",
   "sort_order": 9,
   "objectives": [
     {
       "type": "questlog:item_obtain",
-      "item": "whimsy_deco:red_phone",
+      "item": "supplementaries:clock_block",
       "required_amount": 1
     },
     {
       "type": "questlog:block_interact",
-      "block": "whimsy_deco:red_phone",
+      "block": "supplementaries:clock_block",
       "required_amount": 1
     }
   ],

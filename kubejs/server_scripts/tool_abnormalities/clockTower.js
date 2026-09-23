@@ -7,7 +7,7 @@ BlockEvents.rightClicked('supplementaries:clock_block', (e) => {
     let currentHunger = hunger.getFoodLevel()
     if (currentHunger == 0) {
         server.runCommandSilent(`playsound create:peculiar_bell_use block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
-        player.attack(4)
+        player.attack(15)
         server.scheduleInTicks(20, () => {
             server.runCommandSilent(`time add 24000`);
         });

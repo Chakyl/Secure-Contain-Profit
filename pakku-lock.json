@@ -258,6 +258,67 @@
             ]
         },
         {
+            "pakku_id": "U4JmFQD4zq5IB8ee",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "blueprint",
+                "modrinth": "blueprint"
+            },
+            "name": {
+                "curseforge": "Blueprint",
+                "modrinth": "Blueprint"
+            },
+            "id": {
+                "curseforge": "382216",
+                "modrinth": "VsM5EDoI"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "blueprint-1.21.1-8.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8819/375/blueprint-1.21.1-8.2.0.jar",
+                    "id": "8819375",
+                    "parent_id": "382216",
+                    "hashes": {
+                        "sha1": "b947d5faef872a3f4c856a814c994d70f2065666",
+                        "md5": "4cd57a62d5989584960d30d50d96dcd0"
+                    },
+                    "required_dependencies": [],
+                    "size": 1214507,
+                    "date_published": "2026-09-06T04:10:25.637Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "blueprint-1.21.1-8.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/VsM5EDoI/versions/FHOjk8Ez/blueprint-1.21.1-8.2.0.jar",
+                    "id": "FHOjk8Ez",
+                    "parent_id": "VsM5EDoI",
+                    "hashes": {
+                        "sha512": "0b523c2d53a56676286ddd13adbe65b1a24f5af6040dbec6af9a38cc535b7ba2531a1879afb7a496c407683eacbfbed22701053861a5fd12271b08ac93239db4",
+                        "sha1": "b947d5faef872a3f4c856a814c994d70f2065666"
+                    },
+                    "required_dependencies": [],
+                    "size": 1214507,
+                    "date_published": "2026-09-06T04:10:25.828392Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "R0WWjSlkkwwLtCrL",
             "type": "MOD",
             "side": "BOTH",
@@ -685,6 +746,76 @@
             ]
         },
         {
+            "pakku_id": "NCkxWnu3uAlasCrE",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "crash-assistant",
+                "modrinth": "crash-assistant"
+            },
+            "name": {
+                "curseforge": "Crash Assistant",
+                "modrinth": "Crash Assistant"
+            },
+            "id": {
+                "curseforge": "1154099",
+                "modrinth": "ix1qq8Ux"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.4",
+                        "1.21.1",
+                        "1.21.3",
+                        "1.21.2"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8636/685/CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+                    "id": "8636685",
+                    "parent_id": "1154099",
+                    "hashes": {
+                        "sha1": "ec9e35065ce3a49ecec6bd6ff7fec6992476f7bb",
+                        "md5": "9f9ad561ad8ad08d5bb492675a0456b9"
+                    },
+                    "required_dependencies": [],
+                    "size": 3481341,
+                    "date_published": "2026-08-13T00:59:15.240Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+                    "mc_versions": [
+                        "1.20.6",
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ix1qq8Ux/versions/18SR4EJw/CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+                    "id": "18SR4EJw",
+                    "parent_id": "ix1qq8Ux",
+                    "hashes": {
+                        "sha512": "43d4f453e346df095e494eac6b2a3adbdaf6c679e32ab88c88294db1414e3d747c0667543a0c9be57f45837504dfeeb2af15fe57ffdf3d0f1c968482ed6b6820",
+                        "sha1": "ec9e35065ce3a49ecec6bd6ff7fec6992476f7bb"
+                    },
+                    "required_dependencies": [],
+                    "size": 3481341,
+                    "date_published": "2026-08-13T00:59:13.580122Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "wJml6fGluxGcZatL",
             "type": "MOD",
             "side": "SERVER",
@@ -1015,6 +1146,48 @@
                     ],
                     "size": 42250,
                     "date_published": "2026-08-29T00:00:55.726378Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "tgSCTwN2H0g7v5Hk",
+            "pakku_links": [
+                "U4JmFQD4zq5IB8ee"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "creature-feature"
+            },
+            "name": {
+                "modrinth": "Creature Feature"
+            },
+            "id": {
+                "modrinth": "7nEkcq0F"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "creaturefeature-1.2.3.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/7nEkcq0F/versions/eW0CuJzM/creaturefeature-1.2.3.3.jar",
+                    "id": "eW0CuJzM",
+                    "parent_id": "7nEkcq0F",
+                    "hashes": {
+                        "sha512": "57e4be76859b4ebedc6ed04b01080191ba5b14dc759322fd52839290a4bb99cdaa6bb031dba30e20faf65705561e351f6ac2fb21a8e1ee62b355cbd338551684",
+                        "sha1": "e8550e1bae25f437fdaa142877027a0b783c074b"
+                    },
+                    "required_dependencies": [
+                        "VsM5EDoI"
+                    ],
+                    "size": 3213088,
+                    "date_published": "2026-08-27T13:19:08.946892Z"
                 }
             ]
         },
@@ -4302,6 +4475,74 @@
                     "required_dependencies": [],
                     "size": 262609,
                     "date_published": "2026-07-25T15:06:30.068933Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ehyiIAn1K1Zq31Qc",
+            "pakku_links": [
+                "sPmY3D0SXBa6fcJC"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "toast-control",
+                "modrinth": "toast-control"
+            },
+            "name": {
+                "curseforge": "Toast Control",
+                "modrinth": "Toast Control"
+            },
+            "id": {
+                "curseforge": "271740",
+                "modrinth": "CnOG2wlS"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ToastControl-1.21.1-9.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6751/464/ToastControl-1.21.1-9.0.1.jar",
+                    "id": "6751464",
+                    "parent_id": "271740",
+                    "hashes": {
+                        "sha1": "33477c2db0479c9be33d1ca3b2fa47cf6c97988c",
+                        "md5": "1f83b8749f48753bb50d9e22e5f6706c"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 21079,
+                    "date_published": "2025-07-10T07:02:27.877Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "ToastControl-1.21.1-9.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/CnOG2wlS/versions/jXHDAUrd/ToastControl-1.21.1-9.0.1.jar",
+                    "id": "jXHDAUrd",
+                    "parent_id": "CnOG2wlS",
+                    "hashes": {
+                        "sha512": "544965f940c3b3eb856a57e9d35c79b7a88b9562a82a39618247b796037f7f4a83279f1effa08557a1a1d363f6169429b265e8645d5bb89578b32fdf22e4ee39",
+                        "sha1": "47f9b3eb9e499996c77a7567c85e6bb9d3d51be8"
+                    },
+                    "required_dependencies": [
+                        "tCkE8p2N"
+                    ],
+                    "size": 21072,
+                    "date_published": "2026-06-19T01:57:17.208535Z"
                 }
             ]
         },

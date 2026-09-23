@@ -170,8 +170,8 @@ const shops = [
         id: "tool_abnormalities",
         jeiCatalyst: "companions:frog_bonanza_block",
         trades: [
-            { item: "whimsy_deco:red_phone", count: 1, numiCost: 512 },
-            { item: 'supplementaries:clock_block', count: 1, numiCost: 1024 },
+            { item: 'supplementaries:clock_block', count: 1, numiCost: 512 },
+            { item: "whimsy_deco:red_phone", count: 1, numiCost: 1024 },
             { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
             { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
             { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
