@@ -5,6 +5,7 @@
 	},
 	"texture": "electrical_control:textures/item/electrical_control",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "minecraft:redstone"
 	},

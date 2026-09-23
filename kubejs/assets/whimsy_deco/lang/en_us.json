@@ -1,8 +1,7 @@
 {
-
   "block.whimsy_deco.red_phone": "Abnormality T-001",
   "tooltip.always.whimsy_deco.red_phone.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;E-Mergent-C Phone</ltcolor>",
-  "block.whimsy_deco.gatcha_machine": "Abnormality T-002",
+  "block.whimsy_deco.gatcha_machine": "Abnormality T-003",
   "tooltip.always.whimsy_deco.gatcha_machine.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Gotchya Machine</ltcolor>",
   "block.whimsy_deco.rubber_duck": "Abnormality T-006",
   "tooltip.always.whimsy_deco.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",

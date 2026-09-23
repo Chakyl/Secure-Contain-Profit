@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "numismatics:id_cards",
+  "tag": "numismatics:id_cards",
+  "registry": "minecraft:item",
+  "enabled": true
+}

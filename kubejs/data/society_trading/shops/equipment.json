@@ -5,6 +5,7 @@
 	},
 	"texture": "equipment:textures/item/equipment",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "create:brown_toolbox"
 	},

@@ -5,6 +5,7 @@
 	},
 	"texture": "facility:textures/item/facility",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "scp:verdant_hallway_expansion_card"
 	},
@@ -25,14 +26,25 @@
 		{
 			"offer": {
 				"id": "abyssal_decor:cave_taco",
-				"count": 4
-			},
-			"request": {
-				"id": "numismatics:spur",
 				"count": 1
 			},
-			"numismatics_cost": 1,
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
 			"trade_id": "facility_abyssal_decor_cave_taco"
+		},
+		{
+			"offer": {
+				"id": "reliable_requiem:crystal_heart",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "facility_reliable_requiem_crystal_heart"
 		},
 		{
 			"offer": {

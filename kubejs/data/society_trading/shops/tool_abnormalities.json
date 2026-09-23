@@ -5,6 +5,7 @@
 	},
 	"texture": "tool_abnormalities:textures/item/tool_abnormalities",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "companions:frog_bonanza_block"
 	},
@@ -21,6 +22,18 @@
 			},
 			"numismatics_cost": 512,
 			"trade_id": "tool_abnormalities_whimsy_deco_red_phone"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:clock_block",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "tool_abnormalities_supplementaries_clock_block"
 		},
 		{
 			"offer": {

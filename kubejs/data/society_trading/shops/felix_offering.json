@@ -1,0 +1,276 @@
+{
+	"shop_id": "felix_offering",
+	"name": {
+		"translate": "shop.scp.felix_offering"
+	},
+	"texture": "felix_offering:textures/item/felix_offering",
+	"display_type": "thin",
+	"hidden_from_selector": true,
+	"jei_catalyst": {
+		"id": "scguns:felix_memorial"
+	},
+	"selector_weight": 11,
+	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:cat_spawn_egg",
+				"count": null
+			},
+			"request": {
+				"id": "companions:end_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_minecraft_cat_spawn_egg"
+		},
+		{
+			"offer": {
+				"id": "scguns:hyperbaria",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 16
+			},
+			"trade_id": "felix_offering_scguns_hyperbaria"
+		},
+		{
+			"offer": {
+				"id": "scguns:zilk_45",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 16
+			},
+			"trade_id": "felix_offering_scguns_zilk_45"
+		},
+		{
+			"offer": {
+				"id": "scguns:bomb_lance",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 16
+			},
+			"trade_id": "felix_offering_scguns_bomb_lance"
+		},
+		{
+			"offer": {
+				"id": "scguns:frog_dart",
+				"count": 4
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 2
+			},
+			"trade_id": "felix_offering_scguns_frog_dart"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:scroll_pride",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"trade_id": "felix_offering_creaturefeature_scroll_pride"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:scroll_bi",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"trade_id": "felix_offering_creaturefeature_scroll_bi"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:scroll_trans",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"trade_id": "felix_offering_creaturefeature_scroll_trans"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:scroll_pan",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"trade_id": "felix_offering_creaturefeature_scroll_pan"
+		},
+		{
+			"offer": {
+				"id": "companions:relic_gold",
+				"count": null
+			},
+			"request": {
+				"id": "companions:end_coin",
+				"count": 64
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 64
+			},
+			"trade_id": "felix_offering_companions_relic_gold"
+		},
+		{
+			"offer": {
+				"id": "companions:book_ice_shard",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_ice_shard"
+		},
+		{
+			"offer": {
+				"id": "companions:book_ice_tornado",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_ice_tornado"
+		},
+		{
+			"offer": {
+				"id": "companions:book_fire_mark",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_fire_mark"
+		},
+		{
+			"offer": {
+				"id": "companions:book_brace",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_brace"
+		},
+		{
+			"offer": {
+				"id": "companions:book_heal_ring",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_heal_ring"
+		},
+		{
+			"offer": {
+				"id": "companions:book_stone_spikes",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_stone_spikes"
+		},
+		{
+			"offer": {
+				"id": "companions:book_magic_ray",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_magic_ray"
+		},
+		{
+			"offer": {
+				"id": "companions:book_black_hole",
+				"count": null
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 32
+			},
+			"trade_id": "felix_offering_companions_book_black_hole"
+		},
+		{
+			"offer": {
+				"id": "companions:book_naginata",
+				"count": null
+			},
+			"request": {
+				"id": "companions:relic_gold",
+				"count": 4
+			},
+			"second_request": {
+				"id": "companions:end_coin",
+				"count": 64
+			},
+			"trade_id": "felix_offering_companions_book_naginata"
+		}
+	]
+}

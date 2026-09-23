@@ -5,6 +5,7 @@
 	},
 	"texture": "guns:textures/item/guns",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "scguns:defender_pistol"
 	},

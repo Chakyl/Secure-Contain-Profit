@@ -1,50 +1,50 @@
+/stopsound Chakyl
+/playsound netherman:riftsound
+/playsound netherman:azazel_phase
+/playsound netherman:speech_1
 /kjs hand
-/kjs handt
-/kjs hand
-/kjs hadn
-/kjs hand
+/playsound netherman:azazel_phase
+/stopsound Chakyl
+/playsound netherman:totemus_puzzle
+/playsound netherman:azazel_idle1
+/playsound netherman:big_text
+/playsound netherman:spinning_wheel
+/playsound netherman:boss_fight
+/playsound netherman:boss_fight_loop
+/stopsound Chakyl
+/playsound netherman:boss_fight_loop
+/stopsound Chakyl
+/playsound netherman:boss_fight
+/stopsound Chakyl
+/playsound netherman:prison1
+/playsound netherman:church_ambient
+/playsound netherman:city_ambient
+/playsound netherman:damned
+/playsound netherman:goodluck
+/playsound netherman:riftsound
+/stopsound Chakyl
+/playsound netherman:cave_ambient
+/stopsound Chakyl
+/playsound netherman:maze_ambient
+/stopsound Chakyl
+/playsound netherman:boss_fight
+/playsound netherman:azazel_fight
+/stopsound Chakyl
+/playsound creaturefeature:music_disc.nothing
+/stopsound Chakyl
+/playsound creaturefeature:music_disc.newagenevermore
+/stopsound Chakyl
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/kjs inventory
+/reload
+/kjs reload startup-scripts
+/kjs inventory
+/reload
 /kjs inventory
 /kjs hand
 /kjs reload server-scripts
 /reload
-/kjs inventory
-/kjs hand
-/kjs inventory
-/kjs hand
-/reload
-/kjs reload server-scripts
-/reload
-/kjs inventory
-/reload
-/ql edit_mode
-/kjs hand
 /kjs stages list Chakyl
-/ql edit_mode false
-/ql progress reset questlog:amber_wing
-/ql progress reset questlog:amber_level
+/kjs reload server-scripts
 /reload
-/kjs hand
-/kjs reload server-scripts
-/time add 1000
-/kjs persistent-data server get *
-/kjs persistent-data server merge {threat_level:4}
-/kjs persistent-data server get *
-/kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {threat_level:4}
-/kjs reload server-scripts
-/time add 1000
-/kjs persistent-data server get *
-/data get block 21 122 26
-/kjs reload server-scripts
-/time add 24000
-/data get block 21 122 26
-/kjs reload server-scripts
-//wand
-//copy
-//rotate 180
-//paste
-/data get block 21 122 26
-/kjs reload server-scripts

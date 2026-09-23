@@ -5,10 +5,12 @@
 	},
 	"texture": "dye_depot:textures/item/dye_depot",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "dye_depot:ginger_dye"
 	},
-	"selector_weight": 9,
+	"selector_weight": 10,
+	"stage_required": "amber_level",
 	"trades": [
 		{
 			"offer": {

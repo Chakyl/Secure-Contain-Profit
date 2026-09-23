@@ -1,0 +1,29 @@
+{
+  "title": "Days Work",
+  "description": "Every day, the state of the Containment Units will change depending on their current state.\n\nIt is most economical to ensure all Containment Units are in the \"NONE\" state before the next day.\n\nIf a Manager has extra time, it is recommended to spend it improving security or sleeping. \n\nA certain Tool Abnormality may also be effective in skipping time during the day, though this remains unverified.",
+  "icon": {
+    "item": "minecraft:clock"
+  },
+  "chapter": "training",
+  "sort_order": 10,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:tool_abnormalities",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "industrialhellscape:medical_bed",
+      "count": 1
+    }
+  ]
+}

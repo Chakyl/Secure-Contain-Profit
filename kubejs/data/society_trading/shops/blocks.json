@@ -5,6 +5,7 @@
 	},
 	"texture": "blocks:textures/item/blocks",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "industrialhellscape:metalworks"
 	},

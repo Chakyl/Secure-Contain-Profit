@@ -80,6 +80,7 @@ global.increaseStage = (input, count) => {
 
 global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${global.getSCPID(id)}`
 
+global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName(String(data.getString("tier")).trim(), String(data.getString("abnormalityType")).trim())}: ${Number(data.getInt("researchLevel")) >= 2 ? `${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).name}` : fallback}`
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid);
 
@@ -90,10 +91,24 @@ global.addChaos = (server, block, chaosCount) => {
 
 global.addThreatLevel = (server, threatLevelCount) => server.persistentData.threat_level = server.persistentData.threat_level ? Number(server.persistentData.getInt("threat_level")) + threatLevelCount : threatLevelCount;
 
+global.addKnownAbnormalities = (server, id) => {
+  let known = server.persistentData.known_abnormalities ? JSON.parse(server.persistentData.getString("known_abnormalities")) : [];
+  if(!known.includes(id)) known.push(id);
+  server.persistentData.known_abnormalities = JSON.stringify(known);
+}
+
 global.updateSignalers = (level, block) => {
   let belowBlock = level.getBlock(block.getPos().below());
   if (belowBlock.id == "scp:containment_unit_signaler") {
     belowBlock.set("minecraft:air")
     belowBlock.set("scp:containment_unit_signaler")
   }
+}
+
+global.filterKnownAbnormalities = (server, abnormalitiesNext) => {
+  if (!server.persistentData.known_abnormalities) return abnormalitiesNext;
+  let known = JSON.parse(server.persistentData.getString("known_abnormalities"));
+  let filteredAbnormalities = abnormalitiesNext.filter(item => known.indexOf(item) === -1);
+  if (filteredAbnormalities.length == 0) return abnormalitiesNext;
+  else return filteredAbnormalities
 }

@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "supplementaries:non_cleanable",
+  "tag": "supplementaries:non_cleanable",
+  "registry": "minecraft:item",
+  "enabled": true
+}

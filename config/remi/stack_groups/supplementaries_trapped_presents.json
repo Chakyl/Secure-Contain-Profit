@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "supplementaries:trapped_presents",
+  "tag": "supplementaries:trapped_presents",
+  "registry": "minecraft:item",
+  "enabled": true
+}

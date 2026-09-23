@@ -5,6 +5,7 @@
 	},
 	"texture": "ammunition:textures/item/ammunition",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "scguns:standard_copper_round"
 	},

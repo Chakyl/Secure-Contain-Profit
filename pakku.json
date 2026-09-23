@@ -2,6 +2,155 @@
     "name": "Secure Contain Profit",
     "version": "0.0.1",
     "overrides": [
-        "config"
-    ]
+        "config",
+        "defaultconfigs",
+        "kubejs",
+        "patchouli_books"
+    ],
+    "client_overrides": [
+        "resourcepacks/sunlit_overrides.zip",
+        "shaderpacks",
+        "configureddefaults"
+    ],
+    "projects": {
+        "appleskin": {
+            "side": "CLIENT"
+        },
+        "better-advancements": {
+            "side": "CLIENT"
+        },
+        "bad-wither-no-cookie-reloaded": {
+            "side": "CLIENT"
+        },
+        "bobby": {
+            "side": "CLIENT"
+        },
+        "chat-heads": {
+            "side": "CLIENT"
+        },
+        "cleanview": {
+            "side": "CLIENT"
+        },
+        "colorful-hearts": {
+            "side": "CLIENT"
+        },
+        "colorwheel": {
+            "side": "CLIENT"
+        },
+        "colorwheel-patcher": {
+            "side": "CLIENT"
+        },
+        "controlling": {
+            "side": "CLIENT"
+        },
+        "controllable": {
+            "side": "CLIENT"
+        },
+        "crash-assistant": {
+            "side": "CLIENT"
+        },
+        "default-options": {
+            "side": "CLIENT"
+        },
+        "drippy-loading-screen": {
+            "side": "CLIENT"
+        },
+        "embeddium": {
+            "side": "CLIENT"
+        },
+        "entity-model-features": {
+            "side": "CLIENT"
+        },
+        "entity-texture-features-fabric": {
+            "side": "CLIENT"
+        },
+        "enchantment-descriptions": {
+            "side": "CLIENT"
+        },
+        "entityculling": {
+            "side": "CLIENT"
+        },
+        "falling-leaves-forge": {
+            "side": "CLIENT"
+        },
+        "fancymenu": {
+            "side": "CLIENT"
+        },
+        "just-enough-effect-descriptions-jeed": {
+            "side": "CLIENT"
+        },
+        "immediatelyfast": {
+            "side": "CLIENT"
+        },
+        "loot-journal": {
+            "side": "CLIENT"
+        },
+        "more-overlays-updated": {
+            "side": "CLIENT"
+        },
+        "mouse-tweaks": {
+            "side": "CLIENT"
+        },
+        "my-server-is-compatible": {
+            "side": "CLIENT"
+        },
+        "particle-rain": {
+            "side": "CLIENT"
+        },
+        "iris-flywheel-compat": {
+            "side": "CLIENT"
+        },
+        "journeypac": {
+            "side": "CLIENT"
+        },
+        "oculus": {
+            "side": "CLIENT"
+        },
+        "ok-zoomer": {
+            "side": "CLIENT"
+        },
+        "radiant-gear": {
+            "side": "CLIENT"
+        },
+        "selectivebounds": {
+            "side": "CLIENT"
+        },
+        "shoulder-surfing-reloaded": {
+            "side": "CLIENT"
+        },
+        "tips": {
+            "side": "CLIENT"
+        },
+        "tmrv": {
+            "side": "CLIENT"
+        },
+        "raws-visual-keybinder": {
+            "side": "CLIENT"
+        },
+        "watermedia": {
+            "side": "CLIENT"
+        },
+        "tooltip-overhaul": {
+            "side": "CLIENT"
+        },
+        "ftb-quest-localizer": {
+            "side": "CLIENT"
+        },
+        "flerovium": {
+            "side": "CLIENT"
+        },
+        "certain-questing-additions": {
+            "side": "CLIENT"
+        },
+        "toast-control": {
+            "side": "CLIENT"
+        },
+        "waystones": {
+            "side": "BOTH"
+        },
+        "skillexpnotifier": {
+            "side": "BOTH"
+        }
+    },
+    "export_server_side_projects_to_client": true
 }

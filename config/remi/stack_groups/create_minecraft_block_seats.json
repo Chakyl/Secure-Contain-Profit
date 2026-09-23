@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "create:minecraft_block_seats",
+  "tag": "create:seats",
+  "registry": "minecraft:block",
+  "enabled": true
+}

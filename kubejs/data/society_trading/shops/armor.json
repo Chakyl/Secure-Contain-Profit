@@ -5,6 +5,7 @@
 	},
 	"texture": "armor:textures/item/armor",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "scguns:anthralite_chestplate"
 	},

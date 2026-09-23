@@ -4,7 +4,7 @@
   "icon": {
     "item": "scp:amber_hallway_expansion_card"
   },
-  "chapter": "amber_level",
+  "chapter": "main",
   "sort_order": 0,
   "objectives": [
     {
@@ -30,5 +30,6 @@
       "type": "questlog:command",
       "command": "/kjs stages add @p amber_level"
     }
-  ]
+  ],
+  "include_in_main": false
 }

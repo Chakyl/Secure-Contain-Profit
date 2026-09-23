@@ -5,10 +5,12 @@
 	},
 	"texture": "security:textures/item/security",
 	"display_type": "thin",
+	"hidden_from_selector": false,
 	"jei_catalyst": {
 		"id": "supplementaries:cannon"
 	},
 	"selector_weight": 8,
+	"stage_required": "amber_level",
 	"trades": [
 		{
 			"offer": {

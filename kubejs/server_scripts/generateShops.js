@@ -5,7 +5,8 @@ const shops = [
         jeiCatalyst: "scp:verdant_hallway_expansion_card",
         trades: [
             { item: 'scguns:syringe', count: 4, numiCost: 1 },
-            { item: 'abyssal_decor:cave_taco', count: 4, numiCost: 1 },
+            { item: 'abyssal_decor:cave_taco', count: 1, numiCost: 8 },
+            { item: 'reliable_requiem:crystal_heart', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
             { item: 'companions:wrench', count: 1, numiCost: 16 },
             { item: 'scguns:anthralite_paxel', count: 1, numiCost: 16 },
             { item: "scp:verdant_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 6 } },
@@ -170,6 +171,7 @@ const shops = [
         jeiCatalyst: "companions:frog_bonanza_block",
         trades: [
             { item: "whimsy_deco:red_phone", count: 1, numiCost: 512 },
+            { item: 'supplementaries:clock_block', count: 1, numiCost: 1024 },
             { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
             { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
             { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
@@ -250,6 +252,7 @@ const shops = [
     {
         id: "security",
         jeiCatalyst: "supplementaries:cannon",
+        stageRequired: "amber_level",
         trades: [
             { item: "supplementaries:bamboo_spikes", count: 1, numiCost: 128 },
             { item: "supplementaries:cannon", count: 1, numiCost: 2048 },
@@ -278,8 +281,58 @@ const shops = [
         ]
     },
     {
+        id: "technology",
+        jeiCatalyst: "scguns:polar_generator",
+        stageRequired: "amber_level",
+        trades: [
+            { item: "scguns:polar_generator", count: 1, numiCost: 1024 },
+            { item: "scguns:lightning_battery", count: 1, numiCost: 512 },
+            { item: "createaddition:copper_spool", count: 1, numiCost: 32 },
+            { item: "createaddition:connector", count: 2, numiCost: 4 },
+            { item: "createaddition:small_light_connector", count: 2, numiCost: 24 },
+            { item: "createaddition:gold_spool", count: 1, numiCost: 64 },
+            { item: "createaddition:large_connector", count: 2, numiCost: 16 },
+            { item: "createaddition:electric_motor", count: 1, numiCost: 2048, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "createaddition:redstone_relay", count: 1, numiCost: 64 },
+            { item: "create:wrench", count: 1, numiCost: 16 },
+            { item: "create:goggles", count: 1, numiCost: 16 },
+            { item: "create:shaft", count: 1, numiCost: 4 },
+            { item: "create:cogwheel", count: 1, numiCost: 4 },
+            { item: "create:gearbox", count: 1, numiCost: 4 },
+            { item: "create:clutch", count: 1, numiCost: 16 },
+            { item: "create:gearshift", count: 1, numiCost: 16 },
+            { item: "create:adjustable_chain_gearshift", count: 1, numiCost: 32 },
+            { item: "create:encased_chain_drive", count: 1, numiCost: 8 },
+            { item: "minecraft:hopper", count: 1, numiCost: 32 },
+            { item: "create:chute", count: 1, numiCost: 32 },
+            { item: "create:smart_chute", count: 1, numiCost: 128 },
+            { item: "create:andesite_funnel", count: 1, numiCost: 32 },
+            { item: "create:brass_funnel", count: 1, numiCost: 128 },
+            { item: "create:mechanical_arm", count: 1, numiCost: 512 },
+            { item: "create:rotation_speed_controller", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "create:mechanical_crafter", count: 1, numiCost: 64 },
+            { item: "create:chain_conveyor", count: 1, numiCost: 16 },
+            { item: "minecraft:chain", count: 1, numiCost: 4 },
+            { item: "create:item_vault", count: 1, numiCost: 32 },
+            { item: "create:packager", count: 1, numiCost: 64 },
+            { item: "create:repackager", count: 1, numiCost: 64 },
+            { item: "create:package_frogport", count: 1, numiCost: 4, itemCost1: { item: 'companions:nether_coin', count: 4 } },
+            { item: "create:stock_link", count: 1, numiCost: 32 },
+            { item: "create:stock_ticker", count: 1, numiCost: 32 },
+            { item: "create:factory_gauge", count: 1, numiCost: 64 },
+            { item: "create_hypertube:hypertube_entrance", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+            { item: "create_hypertube:hypertube", count: 1, numiCost: 256 },
+            { item: "create_hypertube:hypertube_junction", count: 1, numiCost: 256 },
+            { item: "create_hypertube:hypertube_accelerator", count: 1, itemCost1: { item: 'creaturefeature:blitz_rod', count: 1 } },
+            { item: "create_hypertube:hypertube_funnel", count: 1, numiCost: 128 },
+            { item: "create_hypertube:redstone_detector_tube_attachment", count: 1, numiCost: 256 },
+            { item: "create_hypertube:tube_scanner_attachment", count: 1, numiCost: 256 }
+        ]
+    },
+    {
         id: "dye_depot",
         jeiCatalyst: "dye_depot:ginger_dye",
+        stageRequired: "amber_level",
         trades: [
             { item: "minecraft:white_dye", count: 1, numiCost: 1 },
             { item: "minecraft:light_gray_dye", count: 1, numiCost: 1 },
@@ -314,6 +367,32 @@ const shops = [
             { item: "minecraft:magenta_dye", count: 1, numiCost: 1 },
             { item: "minecraft:pink_dye", count: 1, numiCost: 1 }
         ]
+    },
+    {
+        id: "felix_offering",
+        jeiCatalyst: "scguns:felix_memorial",
+        hiddenFromSelector: true,
+        trades: [
+            { item: "minecraft:cat_spawn_egg", itemCost1: { item: 'companions:end_coin', count: 1 } },
+            { item: "scguns:hyperbaria", itemCost1: { item: 'companions:nether_coin', count: 4 }, itemCost2: { item: 'companions:end_coin', count: 16 } },
+            { item: "scguns:zilk_45", itemCost1: { item: 'companions:nether_coin', count: 4 }, itemCost2: { item: 'companions:end_coin', count: 16 } },
+            { item: "scguns:bomb_lance", itemCost1: { item: 'companions:nether_coin', count: 4 }, itemCost2: { item: 'companions:end_coin', count: 16 } },
+            { item: "scguns:frog_dart", count: 4, itemCost1: { item: 'companions:copper_coin', count: 2 } },
+            { item: "creaturefeature:scroll_pride", itemCost1: { item: 'companions:nether_coin', count: 4 } },
+            { item: "creaturefeature:scroll_bi", itemCost1: { item: 'companions:nether_coin', count: 4 } },
+            { item: "creaturefeature:scroll_trans", itemCost1: { item: 'companions:nether_coin', count: 4 } },
+            { item: "creaturefeature:scroll_pan", itemCost1: { item: 'companions:nether_coin', count: 4 } },
+            { item: "companions:relic_gold", itemCost1: { item: 'companions:end_coin', count: 64 }, itemCost2: { item: 'companions:end_coin', count: 64 } },
+            { item: "companions:book_ice_shard", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_ice_tornado", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_fire_mark", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_brace", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_heal_ring", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_stone_spikes", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_magic_ray", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_black_hole", itemCost1: { item: 'companions:nether_coin', count: 16 }, itemCost2: { item: 'companions:end_coin', count: 32 } },
+            { item: "companions:book_naginata", itemCost1: { item: 'companions:relic_gold', count: 4 }, itemCost2: { item: 'companions:end_coin', count: 64 } }
+        ]
     }
 ]
 
@@ -343,25 +422,28 @@ const calculateCoinsFromValue = (price, output) => {
 };
 
 
-let getFrontMatter = (id, item, index) => {
+let getFrontMatter = (id, item, hiddenFromSelector, stageRequired, index) => {
     let splitId = id.split(":")
-    return {
+    let shopData = {
         shop_id: id,
         name: {
             "translate": `shop.scp.${id}`
         },
         texture: `${splitId[0]}:textures/item/${splitId[0]}`,
         display_type: "thin",
+        hidden_from_selector: hiddenFromSelector ? true : false,
         jei_catalyst: {
             id: item
         },
-        selector_weight: index,
-        trades: []
+        selector_weight: index
     }
+    if (stageRequired) shopData.stage_required = stageRequired;
+    shopData.trades = [];
+    return shopData;
 }
 
 shops.forEach((shop, index) => {
-    let shopJson = getFrontMatter(shop.id, shop.jeiCatalyst, index);
+    let shopJson = getFrontMatter(shop.id, shop.jeiCatalyst, shop.hiddenFromSelector, shop.stageRequired, index);
     let tradeJson = {}
     shop.trades.forEach((trade) => {
         tradeJson = {};
@@ -406,3 +488,4 @@ shops.forEach((shop, index) => {
     })
     JsonIO.write(`kubejs/data/society_trading/shops/${shop.id}.json`, shopJson)
 })
+

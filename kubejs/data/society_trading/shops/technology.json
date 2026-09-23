@@ -1,0 +1,539 @@
+{
+	"shop_id": "technology",
+	"name": {
+		"translate": "shop.scp.technology"
+	},
+	"texture": "technology:textures/item/technology",
+	"display_type": "thin",
+	"hidden_from_selector": false,
+	"jei_catalyst": {
+		"id": "scguns:polar_generator"
+	},
+	"selector_weight": 9,
+	"stage_required": "amber_level",
+	"trades": [
+		{
+			"offer": {
+				"id": "scguns:polar_generator",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "technology_scguns_polar_generator"
+		},
+		{
+			"offer": {
+				"id": "scguns:lightning_battery",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"trade_id": "technology_scguns_lightning_battery"
+		},
+		{
+			"offer": {
+				"id": "createaddition:copper_spool",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_createaddition_copper_spool"
+		},
+		{
+			"offer": {
+				"id": "createaddition:connector",
+				"count": 2
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_createaddition_connector"
+		},
+		{
+			"offer": {
+				"id": "createaddition:small_light_connector",
+				"count": 2
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 24,
+			"trade_id": "technology_createaddition_small_light_connector"
+		},
+		{
+			"offer": {
+				"id": "createaddition:gold_spool",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_createaddition_gold_spool"
+		},
+		{
+			"offer": {
+				"id": "createaddition:large_connector",
+				"count": 2
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_createaddition_large_connector"
+		},
+		{
+			"offer": {
+				"id": "createaddition:electric_motor",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "technology_createaddition_electric_motor"
+		},
+		{
+			"offer": {
+				"id": "createaddition:redstone_relay",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_createaddition_redstone_relay"
+		},
+		{
+			"offer": {
+				"id": "create:wrench",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_create_wrench"
+		},
+		{
+			"offer": {
+				"id": "create:goggles",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_create_goggles"
+		},
+		{
+			"offer": {
+				"id": "create:shaft",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_create_shaft"
+		},
+		{
+			"offer": {
+				"id": "create:cogwheel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_create_cogwheel"
+		},
+		{
+			"offer": {
+				"id": "create:gearbox",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_create_gearbox"
+		},
+		{
+			"offer": {
+				"id": "create:clutch",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_create_clutch"
+		},
+		{
+			"offer": {
+				"id": "create:gearshift",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_create_gearshift"
+		},
+		{
+			"offer": {
+				"id": "create:adjustable_chain_gearshift",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_adjustable_chain_gearshift"
+		},
+		{
+			"offer": {
+				"id": "create:encased_chain_drive",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "technology_create_encased_chain_drive"
+		},
+		{
+			"offer": {
+				"id": "minecraft:hopper",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_minecraft_hopper"
+		},
+		{
+			"offer": {
+				"id": "create:chute",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_chute"
+		},
+		{
+			"offer": {
+				"id": "create:smart_chute",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "technology_create_smart_chute"
+		},
+		{
+			"offer": {
+				"id": "create:andesite_funnel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_andesite_funnel"
+		},
+		{
+			"offer": {
+				"id": "create:brass_funnel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "technology_create_brass_funnel"
+		},
+		{
+			"offer": {
+				"id": "create:mechanical_arm",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"trade_id": "technology_create_mechanical_arm"
+		},
+		{
+			"offer": {
+				"id": "create:rotation_speed_controller",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "technology_create_rotation_speed_controller"
+		},
+		{
+			"offer": {
+				"id": "create:mechanical_crafter",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_create_mechanical_crafter"
+		},
+		{
+			"offer": {
+				"id": "create:chain_conveyor",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_create_chain_conveyor"
+		},
+		{
+			"offer": {
+				"id": "minecraft:chain",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_minecraft_chain"
+		},
+		{
+			"offer": {
+				"id": "create:item_vault",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_item_vault"
+		},
+		{
+			"offer": {
+				"id": "create:packager",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_create_packager"
+		},
+		{
+			"offer": {
+				"id": "create:repackager",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_create_repackager"
+		},
+		{
+			"offer": {
+				"id": "create:package_frogport",
+				"count": 1
+			},
+			"request": {
+				"id": "companions:nether_coin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "technology_create_package_frogport"
+		},
+		{
+			"offer": {
+				"id": "create:stock_link",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_stock_link"
+		},
+		{
+			"offer": {
+				"id": "create:stock_ticker",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "technology_create_stock_ticker"
+		},
+		{
+			"offer": {
+				"id": "create:factory_gauge",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "technology_create_factory_gauge"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:hypertube_entrance",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "technology_create_hypertube_hypertube_entrance"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:hypertube",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "technology_create_hypertube_hypertube"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:hypertube_junction",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "technology_create_hypertube_hypertube_junction"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:hypertube_accelerator",
+				"count": 1
+			},
+			"request": {
+				"id": "creaturefeature:blitz_rod",
+				"count": 1
+			},
+			"trade_id": "technology_create_hypertube_hypertube_accelerator"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:hypertube_funnel",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "technology_create_hypertube_hypertube_funnel"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:redstone_detector_tube_attachment",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "technology_create_hypertube_redstone_detector_tube_attachment"
+		},
+		{
+			"offer": {
+				"id": "create_hypertube:tube_scanner_attachment",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "technology_create_hypertube_tube_scanner_attachment"
+		}
+	]
+}

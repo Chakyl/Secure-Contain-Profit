@@ -1,0 +1,10 @@
+#Obscura's Panoramica Configuration
+[general]
+	#Resolution for each panorama face (in pixels). Higher values = better quality but larger files.
+	# Default: 1300
+	# Range: 64 ~ 4096
+	panoramaResolution = 1300
+	#Delay in game ticks between each screenshot capture. Higher values = more stable but slower capture.
+	# Default: 10
+	# Range: 1 ~ 100
+	screenshotDelay = 10

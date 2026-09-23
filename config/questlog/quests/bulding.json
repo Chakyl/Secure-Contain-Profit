@@ -1,0 +1,30 @@
+{
+  "title": "Facility Repair",
+  "description": "Abnormalities may destroy parts of your facility when breaching. Repairs and upgraded security are essential to facility functioning.\n\n\nThe HAVEN tool is equipped for this task, allowing you to cut blocks into other variants.\n\nBe careful not to place blocks in the working area of a Containment Unit, as it degrades the effectiveness of it.",
+  "icon": {
+    "item": "industrialhellscape:inhell_haven_device"
+  },
+  "chapter": "training",
+  "sort_order": 11,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "industrialhellscape:inhell_haven_device",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:breaches_qliphoth",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "industrialhellscape:gray_riveted_vesselplate",
+      "count": 1
+    }
+  ]
+}

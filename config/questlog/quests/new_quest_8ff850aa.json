@@ -9,7 +9,7 @@
   "objectives": [
     {
       "type": "questlog:item_obtain",
-      "name": "companions:wrench",
+      "item": "companions:wrench",
       "required_amount": 1
     }
   ],

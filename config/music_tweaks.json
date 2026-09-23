@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "min_pursuit_entities": 4,
+  "decay_time": 3,
+  "sounds": [
+    "netherman:boss_fight",
+    "minecraft:music_disc.mellohi",
+    "netherman:azazel_fight",
+    "creaturefeature:music_disc.newagenevermore",
+    ""
+  ],
+  "music_frequency": "DEFAULT",
+  "show_music_toast": true,
+  "better_jukeboxes": true,
+  "jukebox_distance": 64.0,
+  "permanent_toast_in_options": true,
+  "play_toast_sound": true,
+  "play_music_when_paused": true,
+  "log_missing_artists": true,
+  "show_music_id_in_toast": false
+}
