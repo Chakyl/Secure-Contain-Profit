@@ -3,14 +3,11 @@
     "version": "0.0.1",
     "overrides": [
         "config",
-        "defaultconfigs",
         "kubejs",
-        "patchouli_books"
+        "MODRINTH.md"
     ],
     "client_overrides": [
-        "resourcepacks/sunlit_overrides.zip",
-        "shaderpacks",
-        "configureddefaults"
+        "shaderpacks"
     ],
     "projects": {
         "appleskin": {
