@@ -1,10 +1,10 @@
 {
   "title": "Facility Wing: Amber",
-  "description": "Verdant Abnormalities are not a challenge to extract from. You will generally not weep when one inevitably breaches in your facility.\n\nAmber Abnormalities do not have this luxury. Poor preperation will result in a dissolved facility. \n\nHandle them with care. ",
+  "description": "Verdant Abnormalities are not a challenge to extract from. You will generally not weep when one inevitably breaches in your facility.\n\nAmber Abnormalities do not have this luxury. Poor preparation will result in a dissolved facility. \n\nHandle them with care. ",
   "icon": {
     "item": "scp:amber_hallway_expansion_card"
   },
-  "chapter": "main",
+  "chapter": "amber_level",
   "sort_order": 0,
   "objectives": [
     {
@@ -30,6 +30,5 @@
       "type": "questlog:command",
       "command": "/kjs stages add @p amber_level"
     }
-  ],
-  "include_in_main": false
+  ]
 }

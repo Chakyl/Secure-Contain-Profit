@@ -1,4 +1,8 @@
 {
+  "conveyor_belt_plus:belt_contents": null,
+  "conveyor_belt_plus:chute_filters": null,
+  "conveyor_belt_plus:chute_redstone": null,
+  "conveyor_belt_plus:splitter_contents": null,
   "jade:block_face": null,
   "jade:block_properties": null,
   "jade:block_states": null,

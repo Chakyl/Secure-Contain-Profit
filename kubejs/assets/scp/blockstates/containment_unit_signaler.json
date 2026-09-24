@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "scp:block/containment_unit_signaler"
+    }
+  }
+}

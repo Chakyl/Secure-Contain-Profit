@@ -17,7 +17,6 @@ ItemEvents.entityInteracted((e) => {
                 if (target.uuid.toString() == nbt.data.abnormalityUUID) {
                     player.tell(Text.green("ABNORMALITY CALMED"))
                     item.shrink(1);
-                    global.addThreatLevel(server, 1);
                     target.persistentData.breaching = false;
                     nbt.merge({
                         data: {

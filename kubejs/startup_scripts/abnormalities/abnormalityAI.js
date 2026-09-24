@@ -160,7 +160,7 @@ EntityJSEvents.modifyEntity((e) => {
     for (let abnormality of global.ABNORMALITIES.keys()) {
         e.modify(abnormality, (modifyBuilder) => {
             modifyBuilder.tick((entity) => {
-                if (entity.level.time % 20 === 0) {
+                if (entity.tickCount % 20 === 0) {
                     global.handleAbnormality(entity);
                 }
             });

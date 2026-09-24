@@ -1,6 +1,6 @@
 {
   "title": "Facility Repair",
-  "description": "Abnormalities may destroy parts of your facility when breaching. Repairs and upgraded security are essential to facility functioning.\n\n\nThe HAVEN tool is equipped for this task, allowing you to cut blocks into other variants.\n\nBe careful not to place blocks in the working area of a Containment Unit, as it degrades the effectiveness of it.",
+  "description": "Abnormalities may destroy parts of your facility when breaching. Repairs and upgraded security are essential to facility functioning.\n\nThe HAVEN tool is equipped for this task, allowing you to stonecut blocks into other variants.\n\nBe careful not to place blocks in the working area of a Containment Unit, as it degrades the effectiveness of it.",
   "icon": {
     "item": "industrialhellscape:inhell_haven_device"
   },

@@ -39,5 +39,10 @@
     "tooltip.always.scp.amber_hallway_expansion_card.0": "Use on a Amber Hallway Lock to unlock it.",
     "tooltip.always.scp.maroon_hallway_expansion_card.0": "Use on a Maroon Hallway Lock to unlock it.",
     "tooltip.always.scp.indigo_hallway_expansion_card.0": "[INDIGO NOT YET IMPLEMENTED] Use on an Indigo Hallway Lock to unlock it.",
-    "tooltip.always.scp.vent_expansion_card.0": "[NOT YET IMPLEMENTED] Use on a Vent Lock to unlock it."
+    "tooltip.always.scp.vent_expansion_card.0": "[NOT YET IMPLEMENTED] Use on a Vent Lock to unlock it.",
+
+    "block.scp.rubber_duck": "Abnormality T-006",
+    "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
+    "block.scp.spoon_bender": "Abnormality T-007",
+    "tooltip.always.scp.spoon_bender.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Spoon Bender</ltcolor>"
 }

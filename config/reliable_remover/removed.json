@@ -176,7 +176,9 @@
             "createaddition:diamond_grit",
             "create:sand_paper",
             "create:red_sand_paper",
-            "create:super_glue"
+            "create:super_glue",
+            "whimsy_deco:gnome",
+            "whimsy_deco:rubber_duck"
         ]
     }
 ]

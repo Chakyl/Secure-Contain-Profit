@@ -27,3 +27,7 @@ noQuestsColor = 4995099
 hoverFillColor = -2130706433
 toastTitleColor = 10380850
 toastDescriptionColor = 4995099
+[preferences]
+hideCompleted = false
+descriptionsCondensed = false
+lastOpenChapter = "questlog:amber_level"

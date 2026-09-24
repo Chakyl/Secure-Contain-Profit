@@ -51,6 +51,8 @@ global.ABNORMALITIES = new Map([
     // Frog
     ["minecraft:frog", { class: "verdant", name: "Cornelius the Frog", counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:cornelius"] }],
     ["companions:cornelius", { class: "verdant", name: "Cornelius the Frog UNCHAINED", counter: 15, breachTypes: ["NOTHING"] }],
+    // No Evos
+    ["companions:living_candle", { class: "verdant", name: "Friend of Coal", counter: 6, breachTypes: ["DISSOLVE"] }],
     /**
      *   AMBER ABNORMALITIES
      */
@@ -122,3 +124,8 @@ global.ABNORMALITIES = new Map([
 
 
 
+
+global.ABNORMALITY_LITTERS = new Map([
+    ["companions:living_candle", { items: [{ item: "minecraft:coal", chance: 0.75 }] }],
+    ["scguns:sulfurhead", { items: [{ item: 'scguns:sulfur_chunk', chance: 0.1 }] }],
+])

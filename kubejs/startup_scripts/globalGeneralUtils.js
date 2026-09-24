@@ -112,3 +112,16 @@ global.filterKnownAbnormalities = (server, abnormalitiesNext) => {
   if (filteredAbnormalities.length == 0) return abnormalitiesNext;
   else return filteredAbnormalities
 }
+
+global.getFacing = (facing, pos) => {
+  switch (facing) {
+    case "north":
+      return pos.offset(0, 0, -1);
+    case "south":
+      return pos.offset(0, 0, 1);
+    case "west":
+      return pos.offset(-1, 0, 0);
+    case "east":
+      return pos.offset(1, 0, 0);
+  }
+};

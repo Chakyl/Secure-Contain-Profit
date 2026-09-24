@@ -1,5 +1,5 @@
 const scpPool = new Map([
-    ["verdant", ["minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
+    ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
     ["amber", ["netherman:statue_bossunit", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:wild_antlion", "companions:hostile_puppet_glove"]]
 ])
 
@@ -75,10 +75,6 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
         },
     });
     global.setBlockEntityData(block, nbt)
-    if (Number(server.persistentData.getInt("threat_level")) % 5 == 0) {
-        server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${Number(server.persistentData.getInt("threat_level")) / 5}`))
-        global.addChaos(server, block, Number(server.persistentData.getInt("threat_level")));
-    }
 }
 
 const getClassRadius = (tier) => {
@@ -126,6 +122,10 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             console.warn("[SCP] WARNING: FAILED TO ROLL SCP")
             return;
         }
+        if (!player.stages.has("tutorial_abnormality")) {
+            newAbnormality = "minecraft:chicken";
+            player.stages.add("tutorial_abnormality")
+        }
         global.addKnownAbnormalities(server, newAbnormality);
         player.tell(Text.red(`Unleashing Abnormality: ${global.getAbnormalityName(tier, newAbnormality)} in 10 seconds...`))
         server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.2`);
@@ -142,6 +142,10 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
         server.scheduleInTicks(200, () => {
             spawnAbnormality(server, level, block, nbt, newAbnormality, tier)
             global.addThreatLevel(server, 1);
+            if (Number(server.persistentData.getInt("threat_level")) % 5 == 0) {
+                server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${Number(server.persistentData.getInt("threat_level")) / 5}`))
+                global.addChaos(server, block, Number(server.persistentData.getInt("threat_level")));
+            }
         });
     } else {
         let state = String(nbt.data.getString("state")).trim();

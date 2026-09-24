@@ -13,7 +13,7 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "whimsy_deco:red_phone",
+				"id": "supplementaries:clock_block",
 				"count": 1
 			},
 			"request": {
@@ -21,11 +21,11 @@
 				"count": 1
 			},
 			"numismatics_cost": 512,
-			"trade_id": "tool_abnormalities_whimsy_deco_red_phone"
+			"trade_id": "tool_abnormalities_supplementaries_clock_block"
 		},
 		{
 			"offer": {
-				"id": "supplementaries:clock_block",
+				"id": "whimsy_deco:red_phone",
 				"count": 1
 			},
 			"request": {
@@ -33,7 +33,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
-			"trade_id": "tool_abnormalities_supplementaries_clock_block"
+			"trade_id": "tool_abnormalities_whimsy_deco_red_phone"
 		},
 		{
 			"offer": {
@@ -73,7 +73,7 @@
 		},
 		{
 			"offer": {
-				"id": "whimsy_deco:rubber_duck",
+				"id": "scp:rubber_duck",
 				"count": 1
 			},
 			"request": {
@@ -81,11 +81,11 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
-			"trade_id": "tool_abnormalities_whimsy_deco_rubber_duck"
+			"trade_id": "tool_abnormalities_scp_rubber_duck"
 		},
 		{
 			"offer": {
-				"id": "whimsy_deco:gnome",
+				"id": "scp:spoon_bender",
 				"count": 1
 			},
 			"request": {
@@ -93,7 +93,7 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
-			"trade_id": "tool_abnormalities_whimsy_deco_gnome"
+			"trade_id": "tool_abnormalities_scp_spoon_bender"
 		},
 		{
 			"offer": {

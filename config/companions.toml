@@ -387,7 +387,7 @@
 	# Bonanza entity spawns from 3 skull heads: [entity, amount; ...]
 	# 
 	# Default: minecraft:warden, 1
-	BONANZA_3_SKULL_DROP_ENTITIES = "minecraft:warden, 1"
+	BONANZA_3_SKULL_DROP_ENTITIES = "scguns:finforcer, 1"
 	# Maximum damage the falling anvil from 2 skull heads can deal to a player.
 	# 
 	# Default: 20.0

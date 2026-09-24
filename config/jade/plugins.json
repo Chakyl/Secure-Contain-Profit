@@ -52,6 +52,12 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "conveyor_belt_plus": {
+    "chute_redstone": true,
+    "splitter_contents": true,
+    "belt_contents": true,
+    "chute_filters": true
+  },
   "jade_access": {
     "held_item": true,
     "sign": true,

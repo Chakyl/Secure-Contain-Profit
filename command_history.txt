@@ -1,29 +1,3 @@
-/playsound netherman:speech_1
-/kjs hand
-/playsound netherman:azazel_phase
-/stopsound Chakyl
-/playsound netherman:totemus_puzzle
-/playsound netherman:azazel_idle1
-/playsound netherman:big_text
-/playsound netherman:spinning_wheel
-/playsound netherman:boss_fight
-/playsound netherman:boss_fight_loop
-/stopsound Chakyl
-/playsound netherman:boss_fight_loop
-/stopsound Chakyl
-/playsound netherman:boss_fight
-/stopsound Chakyl
-/playsound netherman:prison1
-/playsound netherman:church_ambient
-/playsound netherman:city_ambient
-/playsound netherman:damned
-/playsound netherman:goodluck
-/playsound netherman:riftsound
-/stopsound Chakyl
-/playsound netherman:cave_ambient
-/stopsound Chakyl
-/playsound netherman:maze_ambient
-/stopsound Chakyl
 /playsound netherman:boss_fight
 /playsound netherman:azazel_fight
 /stopsound Chakyl
@@ -48,3 +22,29 @@
 /ql edit_mode
 /kjs hand
 /kjs reload server-scripts
+/summon creaturefeature:minedflayer
+/execute in minecraft:the_nether run tp ~ ~ ~
+/locate structure netherman:mansion_nether
+/tp @s -480 ~ 416
+/kill
+/kjs hand
+/openshop
+/openselector
+/openselector Chakyl
+/kjs reload startup-scripts
+/kjs persistent-data entity bdb0c73d-eb2a-4528-ba2d-097ee73b7bb5 merge {abnoramlity:true}
+/kjs persistent-data entity bdb0c73d-eb2a-4528-ba2d-097ee73b7bb5 merge {abnormality:true}
+/kjs reload server-scripts
+/data get entity
+/kjs reload server-scripts
+/kjs persistent-data server merge {threat_level:-15}
+/kjs persistent-data server get *
+/kjs persistent-data server merge {threat_level:0}
+/ql edit_mode
+/summon scguns:finforcer
+/summon scguns:hornlin
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/difficulty peaceful
+/neoforge tps
