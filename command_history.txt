@@ -1,5 +1,3 @@
-/kjs reload server-scripts
-/summon goat
 /summon creaturefeature:canary
 /kjs reload server-scripts
 /kjs persistent-data server get *
@@ -48,3 +46,5 @@
 /kjs reload server-scripts
 /kjs hand
 /kjs reload server-scripts
+/open_gateway
+/open_gateway Chakyl gateways:verdant_raid

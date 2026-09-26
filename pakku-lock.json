@@ -69,6 +69,74 @@
             ]
         },
         {
+            "pakku_id": "9skzAaL49swqIN69",
+            "pakku_links": [
+                "sPmY3D0SXBa6fcJC"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "apothic-attributes",
+                "modrinth": "apothic-attributes"
+            },
+            "name": {
+                "curseforge": "Apothic Attributes",
+                "modrinth": "Apothic Attributes"
+            },
+            "id": {
+                "curseforge": "898963",
+                "modrinth": "DGaH8Rh0"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ApothicAttributes-1.21.1-2.10.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8502/288/ApothicAttributes-1.21.1-2.10.1.jar",
+                    "id": "8502288",
+                    "parent_id": "898963",
+                    "hashes": {
+                        "sha1": "6a6b84d09801621df5cc2c8a68f35bd93a6cda0f",
+                        "md5": "b49358dd4a833938be48e0f8b27dc5f0"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 323264,
+                    "date_published": "2026-07-24T20:38:55.723Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "ApothicAttributes-1.21.1-2.10.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/DGaH8Rh0/versions/Xtaunf84/ApothicAttributes-1.21.1-2.10.1.jar",
+                    "id": "Xtaunf84",
+                    "parent_id": "DGaH8Rh0",
+                    "hashes": {
+                        "sha512": "ecfa2c6b9eca3793977a29d57961a0f552cfc1995ee5d7c6e6dcca888d4c427c4d940c484ebd13c6d2db7c7341d4da0d212e6897ec1f26f0e5c093ce508d4858",
+                        "sha1": "cdcf0c7a6398913efa76b5b4e41e4fb67033156e"
+                    },
+                    "required_dependencies": [
+                        "tCkE8p2N"
+                    ],
+                    "size": 323265,
+                    "date_published": "2026-07-24T20:35:13.359105Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "eaoFOjoHTca2d3fE",
             "type": "MOD",
             "side": "CLIENT",
@@ -130,6 +198,74 @@
                     "required_dependencies": [],
                     "size": 75804,
                     "date_published": "2026-04-01T04:50:54.655459Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "4ZDwb5tIF5ZdX8XP",
+            "pakku_links": [
+                "PqQopUUhLX57orDb"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "applied-energistics-2",
+                "modrinth": "ae2"
+            },
+            "name": {
+                "curseforge": "Applied Energistics 2",
+                "modrinth": "Applied Energistics 2"
+            },
+            "id": {
+                "curseforge": "223794",
+                "modrinth": "XxWD5pD3"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "appliedenergistics2-19.2.17.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7027/323/appliedenergistics2-19.2.17.jar",
+                    "id": "7027323",
+                    "parent_id": "223794",
+                    "hashes": {
+                        "sha1": "49c18d6a4af487957d7e5a6ad5dcbf71090b8e14",
+                        "md5": "1d9768edc90fb50f065949f2628ea991"
+                    },
+                    "required_dependencies": [
+                        "1173950"
+                    ],
+                    "size": 8230896,
+                    "date_published": "2025-09-23T23:32:36.190Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "appliedenergistics2-19.2.17.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/XxWD5pD3/versions/kfyIqgJ6/appliedenergistics2-19.2.17.jar",
+                    "id": "kfyIqgJ6",
+                    "parent_id": "XxWD5pD3",
+                    "hashes": {
+                        "sha512": "55edfd948366aff620881e0625e48c333a2cb847e73249bc0b588efbc4b86709992a8ffbca97ea387e270df4186fe7f74ee2f27b739f1c952e932becfb9dea33",
+                        "sha1": "49c18d6a4af487957d7e5a6ad5dcbf71090b8e14"
+                    },
+                    "required_dependencies": [
+                        "Ck4E7v7R"
+                    ],
+                    "size": 8230896,
+                    "date_published": "2025-09-23T23:32:37.609648Z"
                 }
             ]
         },
@@ -579,6 +715,46 @@
                     ],
                     "size": 7189704,
                     "date_published": "2026-09-11T12:19:28.612059Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "gOPegUQJPBF4SjsH",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "curseforge": "configured",
+                "modrinth": "configured"
+            },
+            "name": {
+                "curseforge": "Configured",
+                "modrinth": "Configured"
+            },
+            "id": {
+                "curseforge": "457570",
+                "modrinth": "HlpEBg3R"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "configured-neoforge-1.21.1-2.6.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7276/577/configured-neoforge-1.21.1-2.6.3.jar",
+                    "id": "7276577",
+                    "parent_id": "457570",
+                    "hashes": {
+                        "sha1": "e977d86eec39d49295df4e2c4265d6710ae065e8",
+                        "md5": "6bc7aea6278cd85c5eb7beb7edbb555b"
+                    },
+                    "required_dependencies": [],
+                    "size": 428793,
+                    "date_published": "2025-11-30T02:21:15.073Z"
                 }
             ]
         },
@@ -2072,6 +2248,77 @@
             ]
         },
         {
+            "pakku_id": "P5tbsfZSbzOyrtdL",
+            "pakku_links": [
+                "9skzAaL49swqIN69",
+                "sPmY3D0SXBa6fcJC"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "gateways-to-eternity",
+                "modrinth": "gateways-to-eternity"
+            },
+            "name": {
+                "curseforge": "Gateways to Eternity",
+                "modrinth": "Gateways to Eternity"
+            },
+            "id": {
+                "curseforge": "417802",
+                "modrinth": "8OIeAukW"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "GatewaysToEternity-1.21.1-5.1.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6926/284/GatewaysToEternity-1.21.1-5.1.0.jar",
+                    "id": "6926284",
+                    "parent_id": "417802",
+                    "hashes": {
+                        "sha1": "f91a593378209f527fe81e731ca60fe8f8da2319",
+                        "md5": "7f6417fce9a1d9fc3771021d5420d2aa"
+                    },
+                    "required_dependencies": [
+                        "898963",
+                        "283644"
+                    ],
+                    "size": 646451,
+                    "date_published": "2025-08-25T10:59:55.367Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "GatewaysToEternity-1.21.1-5.1.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/8OIeAukW/versions/FNtkt80G/GatewaysToEternity-1.21.1-5.1.0.jar",
+                    "id": "FNtkt80G",
+                    "parent_id": "8OIeAukW",
+                    "hashes": {
+                        "sha512": "83448ff2215b9a5d645bf9b0e0a0babfdfb04e60a2d9ca07783c962575b5770d095fdbfdd8ab6cb861871b98ecbc29204af3be14cb830623b442ad9894d462fb",
+                        "sha1": "594098a08a23474310ca51bbef6d997303757348"
+                    },
+                    "required_dependencies": [
+                        "DGaH8Rh0",
+                        "tCkE8p2N"
+                    ],
+                    "size": 649614,
+                    "date_published": "2026-06-19T01:29:00.407132Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "hopYaPWuN0N1TtgP",
             "type": "MOD",
             "side": "CLIENT",
@@ -2129,6 +2376,67 @@
                     "required_dependencies": [],
                     "size": 634531,
                     "date_published": "2026-09-16T07:34:19.892008Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "PqQopUUhLX57orDb",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "guideme",
+                "modrinth": "guideme"
+            },
+            "name": {
+                "curseforge": "GuideME",
+                "modrinth": "GuideME"
+            },
+            "id": {
+                "curseforge": "1173950",
+                "modrinth": "Ck4E7v7R"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "guideme-21.1.19.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8897/145/guideme-21.1.19.jar",
+                    "id": "8897145",
+                    "parent_id": "1173950",
+                    "hashes": {
+                        "sha1": "e85cd4c266f974dd360c46e8dad7ecf4c7ee96c6",
+                        "md5": "32f4654af216e5cae74a8c6b67c08c73"
+                    },
+                    "required_dependencies": [],
+                    "size": 9311992,
+                    "date_published": "2026-09-16T17:18:53.717Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "guideme-21.1.19.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Ck4E7v7R/versions/hFpGwC6q/guideme-21.1.19.jar",
+                    "id": "hFpGwC6q",
+                    "parent_id": "Ck4E7v7R",
+                    "hashes": {
+                        "sha512": "4dfa132e5cfd69a86c958867067f1c5ab39bb69ae35b2a62c24bb9924e9c688f1a4930ab75d335b22378d9f98cd7fceae8d030812b8f90c9aa282de8ea129f5a",
+                        "sha1": "e85cd4c266f974dd360c46e8dad7ecf4c7ee96c6"
+                    },
+                    "required_dependencies": [],
+                    "size": 9311992,
+                    "date_published": "2026-09-16T17:18:45.961167Z"
                 }
             ]
         },
