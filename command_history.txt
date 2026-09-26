@@ -1,6 +1,3 @@
-/summon creaturefeature:canary
-/kjs reload server-scripts
-/kjs persistent-data server get *
 /addfacilitychaos 1000
 /kjs reload server-scripts
 /kjs reload startup-scripts
@@ -47,4 +44,7 @@
 /kjs hand
 /kjs reload server-scripts
 /open_gateway
+/open_gateway Chakyl gateways:verdant_raid
+/kjs inventory
+/kjs hand
 /open_gateway Chakyl gateways:verdant_raid

@@ -59,7 +59,15 @@
     "tooltip.always.supplementaries.flute.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony I</ltcolor>",
     "tooltip.always.minecraft.goat_horn.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.minecraft.goat_horn.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony II</ltcolor>",
+    "tooltip.always.scp.verdant_research.0": "Right click a Containment Unit block to add one research point.",
+    "tooltip.always.scp.amber_research.0": "Right click a Containment Unit block to add one research point.",
+    "tooltip.always.scp.maroon_research.0": "Right click a Containment Unit block to add one research point.",
+    "tooltip.always.scp.indigo_research.0": "Right click a Containment Unit block to add one research point.",
     
+    "tooltip.always.vista.television.0": "When powered with redstone, plays a video based off the provided cassette. Forms multiblock screens",
+    "tooltip.always.vista.viewfinder.0": "Captures live footage of the pointed area when linked with a Hollow Cassette",
+    "tooltip.always.vista.hollow_cassette.0": "Right click on a viewfinder to link",
+
     "block.scp.rubber_duck": "Abnormality T-009",
     "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
     "block.scp.spoon_bender": "Abnormality T-010",
@@ -76,4 +84,5 @@
     "gateways.indigo_raid": "Facility Raid",
 
     "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?"
+    
 }
