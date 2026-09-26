@@ -4,10 +4,8 @@ const shops = [
         id: "facility",
         jeiCatalyst: "scp:verdant_hallway_expansion_card",
         trades: [
-            { item: 'scguns:syringe', count: 4, numiCost: 1 },
             { item: 'abyssal_decor:cave_taco', count: 1, numiCost: 8 },
             { item: 'reliable_requiem:crystal_heart', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
-            { item: 'companions:wrench', count: 1, numiCost: 16 },
             { item: 'scguns:anthralite_paxel', count: 1, numiCost: 16 },
             { item: "scp:verdant_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 6 } },
             { item: "scp:verdant_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 3 } },
@@ -17,7 +15,6 @@ const shops = [
             { item: "scp:maroon_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 16 } },
             { item: "scp:indigo_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 64 } },
             { item: "scp:indigo_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 32 } },
-            { item: "scp:vent_expansion_card", count: 1, numiCost: 64 },
             { item: "numismatics:bank_terminal", count: 1, numiCost: 16 },
             { item: "numismaticsutils:portable_bank_terminal", count: 1, numiCost: 128 },
             { item: "numismaticsutils:bank_meter", count: 1, numiCost: 16 },
@@ -25,8 +22,23 @@ const shops = [
         ]
     },
     {
+        id: "abnormality_management",
+        jeiCatalyst: "scp:enkephalin",
+        trades: [
+            { item: 'companions:wrench', count: 1, numiCost: 16 },
+            { item: 'scguns:syringe', count: 4, numiCost: 1 },
+            { item: "scguns:needle", count: 1, numiCost: 256 },
+            { item: "supplementaries:flute", count: 1, numiCost: 256 },
+            { item: "minecraft:book", count: 1, numiCost: 256 },
+            { stageRequired: "amber_level", item: "companions:netherite_dagger", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+            { stageRequired: "amber_level", item: "minecraft:goat_horn", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+            { stageRequired: "amber_level", item: "scp:spiritual_book", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+        ]
+    },
+    {
         id: "blocks",
         jeiCatalyst: "industrialhellscape:metalworks",
+        removalExempt: true,
         trades: [
             { item: 'industrialhellscape:inhell_haven_device', numiCost: 64 },
             { item: "industrialhellscape:gray_rockrete", count: 8, numiCost: 8 },
@@ -171,18 +183,23 @@ const shops = [
         jeiCatalyst: "companions:frog_bonanza_block",
         trades: [
             { item: 'supplementaries:clock_block', count: 1, numiCost: 512 },
-            { item: "whimsy_deco:red_phone", count: 1, numiCost: 1024 },
+            { item: "whimsy_deco:red_phone", count: 1, numiCost: 512 },
+            { item: 'whimsy_deco:horseshoe', count: 1, numiCost: 512 },
             { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
+            { item: 'abyssal_decor:bottomless_bag_of_dirt', count: 1, numiCost: 1024 },
+            { item: 'minecraft:enchanting_table', count: 1, numiCost: 1024 },
             { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
-            { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
             { item: "scp:rubber_duck", count: 1, numiCost: 4096 },
             { item: "scp:spoon_bender", count: 1, numiCost: 4096 },
+            { item: 'scguns:the_pact', count: 1, numiCost: 1024 },
+            { item: 'netherman:maze_door', count: 1, numiCost: 2048 },
             { item: "whimsy_deco:lucky_cat", count: 1, numiCost: 8192 },
             { item: "whimsy_deco:singing_frog", count: 1, numiCost: 8192 },
             { item: "companions:empty_puppet_block", count: 1, numiCost: 16384 },
             { item: "companions:croissant_egg_block", count: 1, numiCost: 16384 },
             { item: 'companions:soul_furnace_block', count: 1, numiCost: 32768 },
             { item: "companions:respawn_totem_block", count: 1, numiCost: 32768 },
+            { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
         ]
     },
     {
@@ -209,6 +226,12 @@ const shops = [
             { item: "create:rose_quartz_lamp", count: 1, numiCost: 16 },
             { item: "create:nixie_tube", count: 1, numiCost: 32 },
             { item: 'supplementaries:speaker_block', count: 1, numiCost: 128 },
+            { stageRequired: "amber_level", item: "createaddition:copper_spool", count: 1, numiCost: 32 },
+            { stageRequired: "amber_level", item: "createaddition:connector", count: 2, numiCost: 4 },
+            { stageRequired: "amber_level", item: "createaddition:small_light_connector", count: 2, numiCost: 24 },
+            { stageRequired: "amber_level", item: "createaddition:gold_spool", count: 1, numiCost: 64 },
+            { stageRequired: "amber_level", item: "createaddition:large_connector", count: 2, numiCost: 16 },
+            { stageRequired: "amber_level", item: "createaddition:redstone_relay", count: 1, numiCost: 64 },
             { item: "dashpanels:control_panel", count: 1, numiCost: 32 },
             { item: "dashpanels:wall_control_panel", count: 1, numiCost: 32 },
             { item: "dashpanels:ceiling_control_panel", count: 1, numiCost: 32 },
@@ -285,15 +308,13 @@ const shops = [
         jeiCatalyst: "scguns:polar_generator",
         stageRequired: "amber_level",
         trades: [
+            { item: 'minecraft:crafting_table', count: 1, numiCost: 16 },
             { item: "scguns:polar_generator", count: 1, numiCost: 1024 },
             { item: "scguns:lightning_battery", count: 1, numiCost: 512 },
-            { item: "createaddition:copper_spool", count: 1, numiCost: 32 },
-            { item: "createaddition:connector", count: 2, numiCost: 4 },
-            { item: "createaddition:small_light_connector", count: 2, numiCost: 24 },
-            { item: "createaddition:gold_spool", count: 1, numiCost: 64 },
-            { item: "createaddition:large_connector", count: 2, numiCost: 16 },
+            { item: "scguns:powered_macerator", count: 1, numiCost: 2048 },
+            { item: 'scguns:powered_mechanical_press', count: 1, numiCost: 2048 },
+            { item: 'scguns:advanced_composter', count: 1, numiCost: 512 },
             { item: "createaddition:electric_motor", count: 1, numiCost: 2048, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-            { item: "createaddition:redstone_relay", count: 1, numiCost: 64 },
             { item: "create:wrench", count: 1, numiCost: 16 },
             { item: "create:goggles", count: 1, numiCost: 16 },
             { item: "create:shaft", count: 1, numiCost: 4 },
@@ -321,7 +342,7 @@ const shops = [
             { item: "create:stock_ticker", count: 1, numiCost: 32 },
             { item: "create:factory_gauge", count: 1, numiCost: 64 },
             { item: "create_hypertube:hypertube_entrance", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-            { item: "create_hypertube:hypertube", count: 1, numiCost: 256 },
+            { item: "create_hypertube:hypertube", count: 1, numiCost: 8 },
             { item: "create_hypertube:hypertube_junction", count: 1, numiCost: 256 },
             { item: "create_hypertube:hypertube_accelerator", count: 1, itemCost1: { item: 'creaturefeature:blitz_rod', count: 1 } },
             { item: "create_hypertube:hypertube_funnel", count: 1, numiCost: 128 },
@@ -333,6 +354,7 @@ const shops = [
         id: "dye_depot",
         jeiCatalyst: "dye_depot:ginger_dye",
         stageRequired: "amber_level",
+        removalExempt: true,
         trades: [
             { item: "minecraft:white_dye", count: 1, numiCost: 1 },
             { item: "minecraft:light_gray_dye", count: 1, numiCost: 1 },
@@ -442,10 +464,17 @@ let getFrontMatter = (id, item, hiddenFromSelector, stageRequired, index) => {
     return shopData;
 }
 
+let removalJson = [
+    {
+        action: "remove_output",
+        id: []
+    }
+]
 shops.forEach((shop, index) => {
     let shopJson = getFrontMatter(shop.id, shop.jeiCatalyst, shop.hiddenFromSelector, shop.stageRequired, index);
     let tradeJson = {}
     shop.trades.forEach((trade) => {
+        if (!shop.removalExempt) removalJson[0].id.push(trade.item)
         tradeJson = {};
         tradeJson.offer = {
             id: trade.item,
@@ -483,9 +512,14 @@ shops.forEach((shop, index) => {
             }
             tradeJson.numismatics_cost = trade.numiCost
         }
+
+        if (trade.stageRequired) tradeJson.stage_required = trade.stageRequired;
         tradeJson.trade_id = `${shop.id}_${trade.item.replace(":", "_")}`
         shopJson.trades.push(tradeJson)
     })
     JsonIO.write(`kubejs/data/society_trading/shops/${shop.id}.json`, shopJson)
 })
+
+
+// JsonIO.write(`config/reliable_recipes/shop_removals.json`, removalJson)
 

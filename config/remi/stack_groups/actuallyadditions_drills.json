@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "actuallyadditions:drills",
+  "tag": "actuallyadditions:drills",
+  "registry": "minecraft:item",
+  "enabled": true
+}

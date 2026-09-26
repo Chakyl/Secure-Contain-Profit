@@ -9,7 +9,7 @@
 	"jei_catalyst": {
 		"id": "companions:frog_bonanza_block"
 	},
-	"selector_weight": 5,
+	"selector_weight": 6,
 	"trades": [
 		{
 			"offer": {
@@ -30,10 +30,22 @@
 			},
 			"request": {
 				"id": "numismatics:crown",
-				"count": 2
+				"count": 1
 			},
-			"numismatics_cost": 1024,
+			"numismatics_cost": 512,
 			"trade_id": "tool_abnormalities_whimsy_deco_red_phone"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:horseshoe",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"trade_id": "tool_abnormalities_whimsy_deco_horseshoe"
 		},
 		{
 			"offer": {
@@ -49,6 +61,30 @@
 		},
 		{
 			"offer": {
+				"id": "abyssal_decor:bottomless_bag_of_dirt",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "tool_abnormalities_abyssal_decor_bottomless_bag_of_dirt"
+		},
+		{
+			"offer": {
+				"id": "minecraft:enchanting_table",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "tool_abnormalities_minecraft_enchanting_table"
+		},
+		{
+			"offer": {
 				"id": "companions:frog_bonanza_block",
 				"count": 1
 			},
@@ -58,18 +94,6 @@
 			},
 			"numismatics_cost": 2048,
 			"trade_id": "tool_abnormalities_companions_frog_bonanza_block"
-		},
-		{
-			"offer": {
-				"id": "companions:porcelain_pottery",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:crown",
-				"count": 4
-			},
-			"numismatics_cost": 2048,
-			"trade_id": "tool_abnormalities_companions_porcelain_pottery"
 		},
 		{
 			"offer": {
@@ -94,6 +118,30 @@
 			},
 			"numismatics_cost": 4096,
 			"trade_id": "tool_abnormalities_scp_spoon_bender"
+		},
+		{
+			"offer": {
+				"id": "scguns:the_pact",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "tool_abnormalities_scguns_the_pact"
+		},
+		{
+			"offer": {
+				"id": "netherman:maze_door",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_netherman_maze_door"
 		},
 		{
 			"offer": {
@@ -166,6 +214,18 @@
 			},
 			"numismatics_cost": 32768,
 			"trade_id": "tool_abnormalities_companions_respawn_totem_block"
+		},
+		{
+			"offer": {
+				"id": "companions:porcelain_pottery",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_companions_porcelain_pottery"
 		}
 	]
 }

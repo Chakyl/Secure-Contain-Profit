@@ -1,13 +1,18 @@
 {
   "title": "Modpack Info",
-  "description": "Welcome to Secure Contain Profit!\n\nThis is a modpack made for the Big Autumn Packjam, or BAP for short.\n\nIt is largely a proof of concept rather than a complete experience, but at the very least is a fairly complete experience.\n\nWant me to continue updating the pack? Let me in the Society Modpacks Discord!",
+  "description": "Welcome to Secure Contain Profit!\n\nThis is a modpack made for the Big Autumn Packjam, or BAP for short.\n\nIt is largely a proof of concept rather than a complete experience, but at the very least is a fairly complete experience.\n\nWant me to continue updating the pack? Let me in the Society Modpacks Discord! I don't really know what to expect from the reception!",
   "icon": {
     "item": "industrialhellscape:ihea_furniture_kit"
   },
   "chapter": "main",
   "sort_order": 0,
   "include_in_main": false,
-  "objectives": [],
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
   "prerequisites": [],
   "rewards": []
 }

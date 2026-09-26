@@ -9,7 +9,7 @@
 	"jei_catalyst": {
 		"id": "supplementaries:cannon"
 	},
-	"selector_weight": 8,
+	"selector_weight": 9,
 	"stage_required": "amber_level",
 	"trades": [
 		{

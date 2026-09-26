@@ -1,0 +1,17 @@
+{
+  "title": "Is this a Create modpack?",
+  "description": "No.\n\nAlmost all of Create is removed. Logistical blocks like Hypertubes and Packagers optionally exist for those that would like to use them.",
+  "icon": {
+    "item": "create:wrench"
+  },
+  "chapter": "main",
+  "sort_order": 3,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [],
+  "rewards": []
+}

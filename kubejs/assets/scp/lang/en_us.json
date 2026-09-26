@@ -1,5 +1,6 @@
 {
     "shop.scp.facility": "Facility Management",
+    "shop.scp.abnormality_management": "Abnormality Management",
     "shop.scp.blocks": "Building Blocks",
     "shop.scp.armor": "Armor",
     "shop.scp.guns": "Guns",
@@ -10,6 +11,7 @@
     "shop.scp.dye_depot": "Dye Depot",
     "shop.scp.security": "Facility Security",
     "shop.scp.felix_offering": "Felix Offering",
+    "shop.scp.storage": "Storage",
     "shop.scp.technology": "Technology",
     
     "shop.society_trading.facility.description": "Expand and grow your facility, supporting more Abnormalities.",
@@ -22,9 +24,11 @@
     "shop.society_trading.equipment.description": "General unsorted equipment. Useful stuff here!",
     "shop.society_trading.dye_depot.description": "Dye!!!",
     "shop.society_trading.security.description": "For the defence of your ancient facility.",
+    "shop.society_trading.storage.description": "Store things in your facility.",
     
     "tooltip.always.scp.enkephalin.0": "Send to the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor> using an Enkephalin Depositor for money.",
     "tooltip.always.scguns.syringe.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scguns.syringe.1": "Consumed after use, always increases its counter by 1",
     "tooltip.always.reliable_requiem.crystal_heart.0": "Adds one heart container, up to a max of 20.",
     "tooltip.always.scp.abnormality_heart.0": "Return to its Containment Unit immediately.",
     "tooltip.always.industrialhellscape.retro_computer.0": "Allows you to purchase goods from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
@@ -41,8 +45,35 @@
     "tooltip.always.scp.indigo_hallway_expansion_card.0": "[INDIGO NOT YET IMPLEMENTED] Use on an Indigo Hallway Lock to unlock it.",
     "tooltip.always.scp.vent_expansion_card.0": "[NOT YET IMPLEMENTED] Use on a Vent Lock to unlock it.",
 
-    "block.scp.rubber_duck": "Abnormality T-006",
+    "tooltip.always.scguns.needle.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scguns.needle.1": "Type: <ltcolor>c=FF5555;c=FF5555;c=#D10000;p=3;w=5;Violence I</ltcolor>",
+    "tooltip.always.companions.netherite_dagger.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.companions.netherite_dagger.1": "Type: <ltcolor>c=FF5555;c=FF5555;c=#D10000;p=3;w=5;Violence II</ltcolor>",
+
+    "tooltip.always.minecraft.book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.minecraft.book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I</ltcolor>",
+    "tooltip.always.scp.spiritual_book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scp.spiritual_book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight II</ltcolor>",
+
+    "tooltip.always.supplementaries.flute.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.supplementaries.flute.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony I</ltcolor>",
+    "tooltip.always.minecraft.goat_horn.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.minecraft.goat_horn.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony II</ltcolor>",
+    
+    "block.scp.rubber_duck": "Abnormality T-009",
     "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
-    "block.scp.spoon_bender": "Abnormality T-007",
-    "tooltip.always.scp.spoon_bender.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Spoon Bender</ltcolor>"
+    "block.scp.spoon_bender": "Abnormality T-010",
+    "tooltip.always.scp.spoon_bender.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Spoon Bender</ltcolor>",
+
+    "tooltip.always.scguns.polar_generator.0": "Generates power from burnable fuel",
+    "tooltip.always.scguns.lightning_battery.0": "Stores power",
+    "tooltip.always.scguns.powered_macerator.0":  "Grinds up things into their base resources",
+    "tooltip.always.scguns.powered_mechanical_press.0": "Fills empty casings to create bullets",
+    "tooltip.always.scguns.advanced_composter.0": "Turns organic items into useful resources",
+    "gateways.verdant_raid": "Facility Raid",
+    "gateways.amber_raid": "Facility Raid",
+    "gateways.maroon_raid": "Facility Raid",
+    "gateways.indigo_raid": "Facility Raid",
+
+    "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?"
 }

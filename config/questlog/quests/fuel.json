@@ -1,0 +1,49 @@
+{
+  "title": "Finding Fuel",
+  "description": "The Moonlit Company no longer sells fuel to managers after incident 00183. \n\nCertain abnormalities may be exploited for burnable fuels.",
+  "icon": {
+    "item": "minecraft:coal"
+  },
+  "chapter": "amber_level",
+  "sort_order": 3,
+  "objectives": [
+    {
+      "type": "questlog:or",
+      "objectives": [
+        {
+          "type": "questlog:entity_approach",
+          "name": "Approach V-643",
+          "entity": "companions:living_candle",
+          "range": 5
+        },
+        {
+          "type": "questlog:entity_approach",
+          "name": "Approach A-458",
+          "entity": "creaturefeature:beauty",
+          "range": 5
+        },
+        {
+          "type": "questlog:entity_approach",
+          "name": "Approach V-287",
+          "entity": "creaturefeature:blossom",
+          "range": 5
+        }
+      ],
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:automation",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scguns:lightning_battery",
+      "count": 1
+    }
+  ]
+}

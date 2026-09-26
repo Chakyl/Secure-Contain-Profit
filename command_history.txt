@@ -1,50 +1,50 @@
-/playsound netherman:boss_fight
-/playsound netherman:azazel_fight
-/stopsound Chakyl
-/playsound creaturefeature:music_disc.nothing
-/stopsound Chakyl
-/playsound creaturefeature:music_disc.newagenevermore
-/stopsound Chakyl
-/kjs reload startup-scripts
 /kjs reload server-scripts
-/kjs inventory
-/reload
-/kjs reload startup-scripts
-/kjs inventory
-/reload
-/kjs inventory
-/kjs hand
+/summon goat
+/summon creaturefeature:canary
 /kjs reload server-scripts
-/reload
-/kjs stages list Chakyl
-/kjs reload server-scripts
-/reload
-/ql edit_mode
-/kjs hand
-/kjs reload server-scripts
-/summon creaturefeature:minedflayer
-/execute in minecraft:the_nether run tp ~ ~ ~
-/locate structure netherman:mansion_nether
-/tp @s -480 ~ 416
-/kill
-/kjs hand
-/openshop
-/openselector
-/openselector Chakyl
-/kjs reload startup-scripts
-/kjs persistent-data entity bdb0c73d-eb2a-4528-ba2d-097ee73b7bb5 merge {abnoramlity:true}
-/kjs persistent-data entity bdb0c73d-eb2a-4528-ba2d-097ee73b7bb5 merge {abnormality:true}
-/kjs reload server-scripts
-/data get entity
-/kjs reload server-scripts
-/kjs persistent-data server merge {threat_level:-15}
 /kjs persistent-data server get *
-/kjs persistent-data server merge {threat_level:0}
-/ql edit_mode
-/summon scguns:finforcer
-/summon scguns:hornlin
+/addfacilitychaos 1000
 /kjs reload server-scripts
 /kjs reload startup-scripts
 /kjs reload server-scripts
-/difficulty peaceful
-/neoforge tps
+/effect clear a70d6407-15ff-4685-a486-63bc87a252fc
+/kjs reload startup-scripts
+/effect clear a70d6407-15ff-4685-a486-63bc87a252fc
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs reload server-scripts
+/playsound netherman:totemus_puzzle
+/playsound netherman:bell_beast_laugh
+/playsound netherman:flash
+/playsound netherman:respawn_totem
+/playsound netherman:riftsound
+/playsound netherman:respawn_totem
+/playsound netherman:spring3
+/playsound minecraft:block.enchantment_table.use
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/kjs hand
+/reload
+/kjs hand
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload
+/kjs reload server-scripts
+/time add 240000
+/fieldguide revoke *
+/fieldguide revoke Chakyl everything
+/kjs reload server-scripts
+/fieldguide revoke Chakyl everything
+/kjs reload server-scripts
+/kjs hand
+/kjs reload server-scripts
+/kjs inventory
+/kjs hand
+/kjs reload server-scripts
+/kjs hand
+/kjs reload server-scripts

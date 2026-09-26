@@ -1,0 +1,9 @@
+{
+  "name": "Maroon Wing",
+  "icon": {
+    "item": "dye_depot:maroon_dye"
+  },
+  "order": 4,
+  "default_chapter": false,
+  "hidden": false
+}

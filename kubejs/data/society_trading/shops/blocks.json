@@ -9,7 +9,7 @@
 	"jei_catalyst": {
 		"id": "industrialhellscape:metalworks"
 	},
-	"selector_weight": 1,
+	"selector_weight": 2,
 	"trades": [
 		{
 			"offer": {

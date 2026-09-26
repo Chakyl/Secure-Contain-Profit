@@ -1,0 +1,17 @@
+{
+  "title": "Disclaimers",
+  "description": "Difficulty:\nThis is a difficult modpack! Bad things will happen in your facility that you might not have control over! If you don't like when mobs break blocks or when death is punishing, this might not be the modpack for you.\n\nPhotosensitivity:\nSome Abnormalities contain obtrusive pulsating on-screen visual effects. \n\nHorror:\nThis modpack contains light horror elements, particularly psychological horror. There are no intentional jumpscares, though some Abnormalities will teleport in ways that may surprise you.",
+  "icon": {
+    "item": "industrially_plated:biohazard_sign"
+  },
+  "chapter": "main",
+  "sort_order": 1,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [],
+  "rewards": []
+}

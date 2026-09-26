@@ -1,0 +1,334 @@
+{
+	"sort_index": 2,
+	"icon": "fieldguide:textures/gui/icons/creeper.png",
+	"contents": [
+		{
+			"type": "entry",
+			"id": "minecraft:pig"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:piglin"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:piglin_brute"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:zombified_piglin"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:creeper"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:eeper"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:pathogen"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:minedflayer"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:goat"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:vertigo"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:chicken"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:stained_glass"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:mockingbird"
+		},
+		{
+			"type": "entry",
+			"id": "peaceless:harpy"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:villager"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:zombie_villager"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:zombie"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:blossom"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:minds"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:frog"
+		},
+		{
+			"type": "entry",
+			"id": "companions:cornelius"
+		},
+		{
+			"type": "entry",
+			"id": "companions:living_candle"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:statue_bossunit"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:gilded_golem"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:machination"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:sinister"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:spider"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:cave_spider"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:dreamweaver"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:polar_bear"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:saint_solis"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:breeze"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:blitz"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:blaze"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:turtle"
+		},
+		{
+			"type": "entry",
+			"id": "peaceless:shrapin"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:beauty"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:fiend"
+		},
+		{
+			"type": "entry",
+			"id": "companions:broken_dinamo"
+		},
+		{
+			"type": "entry",
+			"id": "companions:illager_golem"
+		},
+		{
+			"type": "entry",
+			"id": "peaceless:shade"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:nothing"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:statue_entity"
+		},
+		{
+			"type": "entry",
+			"id": "companions:hostile_puppet_glove"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:viventrum"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:canary"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:manipulator"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:coat_of_arms"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:rabbit"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:friend"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:ghastly"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:ghast"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:mother_ghast"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:dissident"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:praetor"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:swarm"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:hive"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:allay"
+		},
+		{
+			"type": "entry",
+			"id": "companions:golden_allay"
+		},
+		{
+			"type": "entry",
+			"id": "peaceless:mimic"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:runaway"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:detritus"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:sulfurhead"
+		},
+		{
+			"type": "entry",
+			"id": "supplementaries:clock_block"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:red_phone"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:horseshoe"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:gatcha_machine"
+		},
+		{
+			"type": "entry",
+			"id": "abyssal_decor:bottomless_bag_of_dirt"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:enchanting_table"
+		},
+		{
+			"type": "entry",
+			"id": "companions:frog_bonanza_block"
+		},
+		{
+			"type": "entry",
+			"id": "scp:rubber_duck"
+		},
+		{
+			"type": "entry",
+			"id": "scp:spoon_bender"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:the_pact"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:maze_door"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:lucky_cat"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:singing_frog"
+		},
+		{
+			"type": "entry",
+			"id": "companions:empty_puppet_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:croissant_egg_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:soul_furnace_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:respawn_totem_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:porcelain_pottery"
+		},
+		{
+			"type": "entry",
+			"id": "companions:holy_porcelain_pottery"
+		}
+	]
+}

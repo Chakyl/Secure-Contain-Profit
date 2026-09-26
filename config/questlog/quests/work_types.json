@@ -1,0 +1,62 @@
+{
+  "title": "Work Types",
+  "description": "Syringes are not a recommended long term solution for harvesting Enkephalin as they irritate abnormalities. \n\nManagers can use one of three work types to harvest from Abnormalities:\n- Violence \n- Insight\n- Harmony\n\nAbnormalities all have work types they prefer and dislike. It is up to the Manager to figure this out for themselves.\n\nEach work type has tools associated with it for purchase from the Moonlit Company.\n",
+  "icon": {
+    "item": "supplementaries:flute"
+  },
+  "chapter": "training",
+  "sort_order": 10,
+  "objectives": [
+    {
+      "type": "questlog:or",
+      "required_amount": 1,
+      "objectives": [
+        {
+          "type": "questlog:item_obtain",
+          "item": "scguns:needle",
+          "required_amount": 1
+        },
+        {
+          "type": "questlog:item_obtain",
+          "item": "minecraft:book",
+          "required_amount": 1
+        },
+        {
+          "type": "questlog:item_obtain",
+          "item": "supplementaries:flute",
+          "required_amount": 1
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:day_mechanics",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:choice",
+      "choices": [
+        {
+          "type": "questlog:item",
+          "item": "scguns:needle",
+          "count": 1
+        },
+        {
+          "type": "questlog:item",
+          "item": "minecraft:book",
+          "count": 1
+        },
+        {
+          "type": "questlog:item",
+          "item": "supplementaries:flute",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "include_in_main": true
+}

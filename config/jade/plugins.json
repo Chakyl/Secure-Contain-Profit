@@ -52,18 +52,15 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "conveyor_belt_plus": {
-    "chute_redstone": true,
-    "splitter_contents": true,
-    "belt_contents": true,
-    "chute_filters": true
-  },
   "jade_access": {
     "held_item": true,
     "sign": true,
     "block": true,
     "entity": true,
     "entity_variant": true
+  },
+  "oritech": {
+    "machine_core_controller": true
   },
   "supplementaries": {
     "hat_stand": true
@@ -78,5 +75,17 @@
     "registry_name": "OFF",
     "block_properties": false,
     "mod_name": true
+  },
+  "ae2": {
+    "part_icon": true,
+    "charger": true,
+    "debug": true,
+    "part_tooltip": true,
+    "grid_node_state": true,
+    "pattern_provider": true,
+    "part_mod_name": true,
+    "power_storage": true,
+    "crafting_monitor": true,
+    "part_name": true
   }
 }

@@ -84,16 +84,23 @@ global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid);
 
+global.getNearestAbnormalities = (level, pos, radius) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.persistentData.getBoolean("abnormality"));
+
+global.addDisrepair = (server, block, disrepairCount) => {
+  server.persistentData.disrepair = server.persistentData.disrepair ? Number(server.persistentData.getInt("disrepair")) + disrepairCount : disrepairCount;
+  if (block) server.runCommandSilent(`playsound minecraft:entity.iron_golem.death block @a ${block.x} ${block.y} ${block.z} 0.5 0.2`);
+};
+
 global.addChaos = (server, block, chaosCount) => {
   server.persistentData.chaos = server.persistentData.chaos ? Number(server.persistentData.getInt("chaos")) + chaosCount : chaosCount;
-  server.runCommandSilent(`playsound abyssal_decor:thehorrors4 block @a ${block.x} ${block.y} ${block.z} 2 1`);
+  if (block) server.runCommandSilent(`playsound abyssal_decor:thehorrors4 block @a ${block.x} ${block.y} ${block.z} 2 1`);
 };
 
 global.addThreatLevel = (server, threatLevelCount) => server.persistentData.threat_level = server.persistentData.threat_level ? Number(server.persistentData.getInt("threat_level")) + threatLevelCount : threatLevelCount;
 
 global.addKnownAbnormalities = (server, id) => {
   let known = server.persistentData.known_abnormalities ? JSON.parse(server.persistentData.getString("known_abnormalities")) : [];
-  if(!known.includes(id)) known.push(id);
+  if (!known.includes(id)) known.push(id);
   server.persistentData.known_abnormalities = JSON.stringify(known);
 }
 

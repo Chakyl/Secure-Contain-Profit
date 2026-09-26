@@ -1,0 +1,30 @@
+{
+  "title": "Mechanical Automation",
+  "description": "Running a facility is enough manual labor on its own. An efficient manager will attempt to automate all possible parts of their facility.\n\nThe first step is generating electricity.",
+  "icon": {
+    "item": "scguns:polar_generator"
+  },
+  "chapter": "amber_level",
+  "sort_order": 1,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scguns:polar_generator",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "minecraft:coal",
+      "count": 8
+    }
+  ]
+}

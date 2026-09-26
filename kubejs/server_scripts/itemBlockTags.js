@@ -1,4 +1,8 @@
 ServerEvents.tags('item', (e) => {
+    e.add('c:tools/wrench', "companions:wrench")
+    e.add('minecraft:enchantable/mining', 'scguns:anthralite_paxel')
+    e.add('minecraft:enchantable/durability', 'scguns:anthralite_paxel')
+    e.add('minecraft:enchantable/mining_loot', 'scguns:anthralite_paxel')
 })
 
 ServerEvents.tags('block', (e) => {
@@ -20,6 +24,6 @@ ServerEvents.tags('block', (e) => {
         "scp:indigo_containment_lock_block_2",
         "scp:vent_lock_block"
     ].forEach((item) => {
-        e.add("scp:sap_immune", item);
+        e.add("scp:setblock_immune", item);
     });
 })

@@ -9,7 +9,7 @@
 	"jei_catalyst": {
 		"id": "dye_depot:ginger_dye"
 	},
-	"selector_weight": 10,
+	"selector_weight": 11,
 	"stage_required": "amber_level",
 	"trades": [
 		{

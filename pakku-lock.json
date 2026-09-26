@@ -1896,6 +1896,73 @@
             ]
         },
         {
+            "pakku_id": "g9hsBtAEm75v8iyx",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "field-guide",
+                "modrinth": "field-guide"
+            },
+            "name": {
+                "curseforge": "Field Guide",
+                "modrinth": "Field Guide"
+            },
+            "id": {
+                "curseforge": "1470590",
+                "modrinth": "72RRCWM6"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fieldguide-neoforge-1.21.1-1.18.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8945/632/fieldguide-neoforge-1.21.1-1.18.0.jar",
+                    "id": "8945632",
+                    "parent_id": "1470590",
+                    "hashes": {
+                        "sha1": "9a5b7d0cd8f72a3de01188e81433e8bb4b50f03a",
+                        "md5": "6cb14bdfa8550d11f62f18e0b905ce01"
+                    },
+                    "required_dependencies": [
+                        "1101501",
+                        "1245453"
+                    ],
+                    "size": 1231067,
+                    "date_published": "2026-09-22T08:01:16.433Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "fieldguide-neoforge-1.21.1-1.18.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/72RRCWM6/versions/SnTxS7mZ/fieldguide-neoforge-1.21.1-1.18.0.jar",
+                    "id": "SnTxS7mZ",
+                    "parent_id": "72RRCWM6",
+                    "hashes": {
+                        "sha512": "6559c4f8894495af9599c684cdea157dea7e83af9fffb017b9df3b12fbc1d50377d588570baeb9cf756f793c30cbe011e3ad668808d22ab81d95b2651209e5c5",
+                        "sha1": "9a5b7d0cd8f72a3de01188e81433e8bb4b50f03a"
+                    },
+                    "required_dependencies": [
+                        "UaizcMKP",
+                        "PKoLkD98"
+                    ],
+                    "size": 1231067,
+                    "date_published": "2026-09-22T08:01:16.205369Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "3Yr9tmTOuui5uMG4",
             "type": "MOD",
             "slug": {

@@ -1,0 +1,30 @@
+{
+  "title": "Power Transmission",
+  "description": "Power can be routed by connecting 2 different connectors with a spool of wire.\n\nAny kind of wrench can toggle a connector from insert to extract mode.",
+  "icon": {
+    "item": "createaddition:copper_spool"
+  },
+  "chapter": "amber_level",
+  "sort_order": 3,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "createaddition:copper_spool",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:automation",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "createaddition:small_light_connector",
+      "count": 2
+    }
+  ]
+}

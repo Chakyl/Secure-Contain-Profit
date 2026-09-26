@@ -35,18 +35,20 @@ StartupEvents.registry("block", (e) => {
         createLockBlocks(color);
     });
 
-    e.create(`scp:vent_lock_block`)
-        .displayName("Vent Lock")
+    e.create(`scp:warehouse_lock_block`)
+        .displayName("Warehouse Lock")
         .soundType("metal")
         .soundType("stone")
         .resistance(3600000)
-        .texture(`scp:block/vent_lock_block`)
+        .texture(`scp:block/warehouse_lock_block`)
         .unbreakable()
 
     e.create("scp:containment_unit")
         .tagBlock("minecraft:mineable/pickaxe")
         .tagBlock("minecraft:needs_stone_tool")
         .soundType("copper")
+        .resistance(3600000)
+        .unbreakable()
         .defaultCutout()
         .blockEntity((blockInfo) => {
             blockInfo.initialData({ tier: "verdant", boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: 0, state: "", researchLevel: 0, researchTime: 0 });
@@ -54,24 +56,24 @@ StartupEvents.registry("block", (e) => {
             blockInfo.tickFrequency(20)
         });
 
-    e.create("scp:rubber_duck")
+    e.create("scp:rubber_duck", "cardinal")
         .soundType("shroomlight")
         .parentModel("whimsy_deco:block/rubber_duck")
-        .box(1, 0, 1, 5, 5, 5)
         .defaultCutout()
+        .box(1, 0, 1, 15, 16, 15)
         .blockEntity((blockInfo) => {
             blockInfo.serverTicking()
-            blockInfo.tickFrequency(200)
+            blockInfo.tickFrequency(1000)
         });
 
     e.create("scp:spoon_bender", "cardinal")
         .soundType("wood")
         .parentModel("whimsy_deco:block/gnome/display")
         .defaultCutout()
-        .box(1, 0, 1, 14, 15, 14)
+        .box(1, 0, 1, 15, 16, 15)
         .blockEntity((blockInfo) => {
             blockInfo.serverTicking()
-            blockInfo.tickFrequency(20)
+            blockInfo.tickFrequency(100)
         });
 });
 

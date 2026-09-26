@@ -23,6 +23,7 @@ immersive_paintings_cache/
 emberstextapi/sdf-cache/
 ESM/
 etched-cache/
+xaero/
 modernfix/
 schematics/
 .vscode
@@ -39,6 +40,7 @@ emi.json
 rhino.local.properties
 minecraftinstance.json
 user-prefs.json
+fieldguide_cache
 patchouli_data.json
 observable_announce
 data/fabricDefaultResourcePacks.dat

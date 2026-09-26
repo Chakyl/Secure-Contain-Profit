@@ -1,11 +1,11 @@
 {
   "title": "The MAINTENANCE task",
-  "description": "When a Containment Unit is in its MAINTENANCE state, it will need minor internal repairs to remain fully functional.\n\nIgnoring this state for a day has a chance to reduce the stability of the Abnormality, represented with the Qliphoth Counter. ",
+  "description": "When a Containment Unit is in its MAINTENANCE state, it will need minor internal repairs to remain fully functional.\n\nIgnoring this state for a day has a chance to reduce the stability of the Abnormality, represented with the Qliphoth Counter. \n\nThis is not a state that occurs automatically. It's usually caused by an abnormality or other factor.",
   "icon": {
     "item": "companions:wrench"
   },
   "chapter": "training",
-  "sort_order": 6,
+  "sort_order": 7,
   "objectives": [
     {
       "type": "questlog:item_obtain",

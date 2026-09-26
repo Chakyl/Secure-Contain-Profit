@@ -13,6 +13,14 @@
     "curseForgeHash": 2856970585,
     "modrinthHash": "8033176da762df7e9455f6c8584b20b7461c707f"
   },
+  "ApothicAttributes-1.21.1-2.10.1.jar": {
+    "jarName": "ApothicAttributes-1.21.1-2.10.1.jar",
+    "modId": "apothic_attributes",
+    "name": "Apothic Attributes",
+    "version": "2.10.1",
+    "curseForgeHash": 185200915,
+    "modrinthHash": "6a6b84d09801621df5cc2c8a68f35bd93a6cda0f"
+  },
   "appleskin-neoforge-mc1.21-3.0.9.jar": {
     "jarName": "appleskin-neoforge-mc1.21-3.0.9.jar",
     "modId": "appleskin",
@@ -21,6 +29,14 @@
     "curseForgeHash": 3551532297,
     "modrinthHash": "81cf0e668f991f83ac8820c386fbd6c9c3602246"
   },
+  "appliedenergistics2-19.2.17.jar": {
+    "jarName": "appliedenergistics2-19.2.17.jar",
+    "modId": "ae2",
+    "name": "Applied Energistics 2",
+    "version": "19.2.17",
+    "curseForgeHash": 581628875,
+    "modrinthHash": "49c18d6a4af487957d7e5a6ad5dcbf71090b8e14"
+  },
   "architectury-13.0.11-neoforge.jar": {
     "jarName": "architectury-13.0.11-neoforge.jar",
     "modId": "architectury",
@@ -28,6 +44,14 @@
     "version": "13.0.11",
     "curseForgeHash": 3623028036,
     "modrinthHash": "008656a0702801174b8ec245ed7aad1921d6e9f1"
+  },
+  "athena-neoforge-1.21.1-4.0.6.jar": {
+    "jarName": "athena-neoforge-1.21.1-4.0.6.jar",
+    "modId": "athena",
+    "name": "Athena",
+    "version": "4.0.6",
+    "curseForgeHash": 669268138,
+    "modrinthHash": "4bcbdf388bd5e387beca7c627224aac33584b55b"
   },
   "better-advanced-tooltips-2101.1.0-build.5.jar": {
     "jarName": "better-advanced-tooltips-2101.1.0-build.5.jar",
@@ -229,6 +253,14 @@
     "curseForgeHash": 2808038058,
     "modrinthHash": "9563692efb708b6b568df27a01ec52f6311928ef"
   },
+  "fieldguide-neoforge-1.21.1-1.18.0.jar": {
+    "jarName": "fieldguide-neoforge-1.21.1-1.18.0.jar",
+    "modId": "fieldguide",
+    "name": "Field Guide",
+    "version": "1.18.0",
+    "curseForgeHash": 456527077,
+    "modrinthHash": "9a5b7d0cd8f72a3de01188e81433e8bb4b50f03a"
+  },
   "framework-neoforge-1.21.1-0.13.11.jar": {
     "jarName": "framework-neoforge-1.21.1-0.13.11.jar",
     "modId": "framework",
@@ -236,6 +268,22 @@
     "version": "0.13.11",
     "curseForgeHash": 1313912180,
     "modrinthHash": "e46eb138fbb13a12f37154fb4ec407d64b326475"
+  },
+  "gatewaysjs-1.8-neoforge.jar": {
+    "jarName": "gatewaysjs-1.8-neoforge.jar",
+    "modId": "gatewaysjs",
+    "name": "GatewaysJS",
+    "version": "1.8-neoforge",
+    "curseForgeHash": 2578632710,
+    "modrinthHash": "f96360e6e5272bf13512c41b779ad9f44b55af87"
+  },
+  "GatewaysToEternity-1.21.1-5.1.0.jar": {
+    "jarName": "GatewaysToEternity-1.21.1-5.1.0.jar",
+    "modId": "gateways",
+    "name": "Gateways To Eternity",
+    "version": "5.1.0",
+    "curseForgeHash": 1661329890,
+    "modrinthHash": "f91a593378209f527fe81e731ca60fe8f8da2319"
   },
   "geckolib-neoforge-1.21.1-4.9.2.jar": {
     "jarName": "geckolib-neoforge-1.21.1-4.9.2.jar",
@@ -252,6 +300,14 @@
     "version": "4.7",
     "curseForgeHash": 2995215827,
     "modrinthHash": "d3834b97b550ecae3a5f738f4c40e48dca9884fb"
+  },
+  "guideme-21.1.19.jar": {
+    "jarName": "guideme-21.1.19.jar",
+    "modId": "guideme",
+    "name": "GuideME",
+    "version": "21.1.19",
+    "curseForgeHash": 2524119287,
+    "modrinthHash": "e85cd4c266f974dd360c46e8dad7ecf4c7ee96c6"
   },
   "hideexperimentalwarning-1.21.1-1.2.jar": {
     "jarName": "hideexperimentalwarning-1.21.1-1.2.jar",

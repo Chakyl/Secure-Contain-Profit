@@ -9,9 +9,21 @@
 	"jei_catalyst": {
 		"id": "scguns:polar_generator"
 	},
-	"selector_weight": 9,
+	"selector_weight": 10,
 	"stage_required": "amber_level",
 	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:crafting_table",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "technology_minecraft_crafting_table"
+		},
 		{
 			"offer": {
 				"id": "scguns:polar_generator",
@@ -38,67 +50,39 @@
 		},
 		{
 			"offer": {
-				"id": "createaddition:copper_spool",
+				"id": "scguns:powered_macerator",
 				"count": 1
 			},
 			"request": {
-				"id": "numismatics:sprocket",
-				"count": 2
-			},
-			"numismatics_cost": 32,
-			"trade_id": "technology_createaddition_copper_spool"
-		},
-		{
-			"offer": {
-				"id": "createaddition:connector",
-				"count": 2
-			},
-			"request": {
-				"id": "numismatics:spur",
+				"id": "numismatics:crown",
 				"count": 4
 			},
-			"numismatics_cost": 4,
-			"trade_id": "technology_createaddition_connector"
+			"numismatics_cost": 2048,
+			"trade_id": "technology_scguns_powered_macerator"
 		},
 		{
 			"offer": {
-				"id": "createaddition:small_light_connector",
-				"count": 2
+				"id": "scguns:powered_mechanical_press",
+				"count": 1
 			},
 			"request": {
-				"id": "numismatics:sprocket",
-				"count": 1
+				"id": "numismatics:crown",
+				"count": 4
 			},
-			"second_request": {
-				"id": "numismatics:bevel",
-				"count": 1
-			},
-			"numismatics_cost": 24,
-			"trade_id": "technology_createaddition_small_light_connector"
+			"numismatics_cost": 2048,
+			"trade_id": "technology_scguns_powered_mechanical_press"
 		},
 		{
 			"offer": {
-				"id": "createaddition:gold_spool",
+				"id": "scguns:advanced_composter",
 				"count": 1
 			},
 			"request": {
-				"id": "numismatics:cog",
+				"id": "numismatics:crown",
 				"count": 1
 			},
-			"numismatics_cost": 64,
-			"trade_id": "technology_createaddition_gold_spool"
-		},
-		{
-			"offer": {
-				"id": "createaddition:large_connector",
-				"count": 2
-			},
-			"request": {
-				"id": "numismatics:sprocket",
-				"count": 1
-			},
-			"numismatics_cost": 16,
-			"trade_id": "technology_createaddition_large_connector"
+			"numismatics_cost": 512,
+			"trade_id": "technology_scguns_advanced_composter"
 		},
 		{
 			"offer": {
@@ -115,18 +99,6 @@
 			},
 			"numismatics_cost": 2048,
 			"trade_id": "technology_createaddition_electric_motor"
-		},
-		{
-			"offer": {
-				"id": "createaddition:redstone_relay",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:cog",
-				"count": 1
-			},
-			"numismatics_cost": 64,
-			"trade_id": "technology_createaddition_redstone_relay"
 		},
 		{
 			"offer": {
@@ -470,10 +442,10 @@
 				"count": 1
 			},
 			"request": {
-				"id": "numismatics:cog",
-				"count": 4
+				"id": "numismatics:bevel",
+				"count": 1
 			},
-			"numismatics_cost": 256,
+			"numismatics_cost": 8,
 			"trade_id": "technology_create_hypertube_hypertube"
 		},
 		{

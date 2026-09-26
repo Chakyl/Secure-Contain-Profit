@@ -16,6 +16,7 @@ BlockEvents.rightClicked('companions:porcelain_pottery', (e) => {
         itemEntity.z = z
         itemEntity.item = Item.of(`16x scp:enkephalin`);
         itemEntity.spawn()
+        FieldGuide.unlock(player, `block:companions/porcelain_pottery`);
     } else {
         server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
     }

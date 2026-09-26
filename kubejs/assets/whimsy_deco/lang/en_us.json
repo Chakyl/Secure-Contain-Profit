@@ -1,12 +1,14 @@
 {
   "block.whimsy_deco.red_phone": "Abnormality T-002",
   "tooltip.always.whimsy_deco.red_phone.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;E-Mergent-C Phone</ltcolor>",
-  "block.whimsy_deco.gatcha_machine": "Abnormality T-003",
+  "block.whimsy_deco.horseshoe": "Abnormality T-003",
+  "tooltip.always.whimsy_deco.horseshoe.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Horseshoe Theory</ltcolor>",
+  "block.whimsy_deco.gatcha_machine": "Abnormality T-004",
   "tooltip.always.whimsy_deco.gatcha_machine.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Gotchya Machine</ltcolor>",
-  "block.whimsy_deco.lucky_cat": "Abnormality T-008",
+  "block.whimsy_deco.lucky_cat": "Abnormality T-013",
   "tooltip.always.whimsy_deco.lucky_cat.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Unlucky Cat</ltcolor>",
-  "block.whimsy_deco.gold_lucky_cat": "Abnormality T-009",
+  "block.whimsy_deco.gold_lucky_cat": "Abnormality T-045",
   "tooltip.always.whimsy_deco.gold_lucky_cat.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Fortunate Son</ltcolor>",
-  "block.whimsy_deco.singing_frog": "Abnormality T-010",
+  "block.whimsy_deco.singing_frog": "Abnormality T-014",
   "tooltip.always.whimsy_deco.singing_frog.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Jamming Frog</ltcolor>"
 }

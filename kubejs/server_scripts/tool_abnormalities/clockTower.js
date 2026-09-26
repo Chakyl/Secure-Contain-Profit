@@ -8,6 +8,7 @@ BlockEvents.rightClicked('supplementaries:clock_block', (e) => {
     if (currentHunger == 0) {
         server.runCommandSilent(`playsound create:peculiar_bell_use block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
         player.attack(15)
+        FieldGuide.unlock(player, `block:supplementaries/clock_block`);
         server.scheduleInTicks(20, () => {
             server.runCommandSilent(`time add 24000`);
         });
@@ -15,8 +16,8 @@ BlockEvents.rightClicked('supplementaries:clock_block', (e) => {
             server.runCommandSilent(`time add 24000`);
         });
     } else {
-        
-    hunger.setFoodLevel(Math.max(0, currentHunger - 4))
+
+        hunger.setFoodLevel(Math.max(0, currentHunger - 4))
         server.runCommandSilent(`playsound create:desk_bell block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
     }
 });

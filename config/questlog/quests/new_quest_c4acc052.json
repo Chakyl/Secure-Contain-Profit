@@ -2,9 +2,9 @@
   "title": "Facility Wing: Verdant",
   "description": "Due to a catastrophic incident with the overeager MANAGER-252, all facility expansion is done with Expansion Cards.\n\nUse the Verdant Hallway Expansion Card on its corresponding Verdant Hallway Lock to start your facility.\n\n",
   "icon": {
-    "item": "industrially_plated:verdant_cut_plating"
+    "item": "scp:verdant_hallway_expansion_card"
   },
-  "chapter": "training",
+  "chapter": "verdant_wing",
   "sort_order": 1,
   "objectives": [
     {

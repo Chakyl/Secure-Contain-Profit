@@ -13,18 +13,6 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "scguns:syringe",
-				"count": 4
-			},
-			"request": {
-				"id": "numismatics:spur",
-				"count": 1
-			},
-			"numismatics_cost": 1,
-			"trade_id": "facility_scguns_syringe"
-		},
-		{
-			"offer": {
 				"id": "abyssal_decor:cave_taco",
 				"count": 1
 			},
@@ -45,18 +33,6 @@
 				"count": 4
 			},
 			"trade_id": "facility_reliable_requiem_crystal_heart"
-		},
-		{
-			"offer": {
-				"id": "companions:wrench",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:sprocket",
-				"count": 1
-			},
-			"numismatics_cost": 16,
-			"trade_id": "facility_companions_wrench"
 		},
 		{
 			"offer": {
@@ -157,18 +133,6 @@
 				"count": 32
 			},
 			"trade_id": "facility_scp_indigo_containment_expansion_card"
-		},
-		{
-			"offer": {
-				"id": "scp:vent_expansion_card",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:cog",
-				"count": 1
-			},
-			"numismatics_cost": 64,
-			"trade_id": "facility_scp_vent_expansion_card"
 		},
 		{
 			"offer": {

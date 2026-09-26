@@ -1,0 +1,126 @@
+{
+	"shop_id": "abnormality_management",
+	"name": {
+		"translate": "shop.scp.abnormality_management"
+	},
+	"texture": "abnormality_management:textures/item/abnormality_management",
+	"display_type": "thin",
+	"hidden_from_selector": false,
+	"jei_catalyst": {
+		"id": "scp:enkephalin"
+	},
+	"selector_weight": 1,
+	"trades": [
+		{
+			"offer": {
+				"id": "companions:wrench",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "abnormality_management_companions_wrench"
+		},
+		{
+			"offer": {
+				"id": "scguns:syringe",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "abnormality_management_scguns_syringe"
+		},
+		{
+			"offer": {
+				"id": "scguns:needle",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "abnormality_management_scguns_needle"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:flute",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "abnormality_management_supplementaries_flute"
+		},
+		{
+			"offer": {
+				"id": "minecraft:book",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "abnormality_management_minecraft_book"
+		},
+		{
+			"offer": {
+				"id": "companions:netherite_dagger",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"stage_required": "amber_level",
+			"trade_id": "abnormality_management_companions_netherite_dagger"
+		},
+		{
+			"offer": {
+				"id": "minecraft:goat_horn",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"stage_required": "amber_level",
+			"trade_id": "abnormality_management_minecraft_goat_horn"
+		},
+		{
+			"offer": {
+				"id": "scp:spiritual_book",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"second_request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"stage_required": "amber_level",
+			"trade_id": "abnormality_management_scp_spiritual_book"
+		}
+	]
+}

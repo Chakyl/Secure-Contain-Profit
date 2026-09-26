@@ -1,3 +1,5 @@
 {
-    "block.scguns.anthralite_lamp": "Enkephalin Depositor"
+    "block.scguns.anthralite_lamp": "Enkephalin Depositor",
+    "item.scguns.the_pact":  "Abnormality T-011",
+    "tooltip.always.scguns.the_pact.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Devil Deeds Done Dirt Cheap</ltcolor>"
 }

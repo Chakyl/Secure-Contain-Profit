@@ -1,0 +1,138 @@
+{
+	"shop_id": "storage",
+	"name": {
+		"translate": "shop.scp.storage"
+	},
+	"texture": "storage:textures/item/storage",
+	"display_type": "thin",
+	"hidden_from_selector": false,
+	"jei_catalyst": {
+		"id": "ae2:controller"
+	},
+	"selector_weight": 11,
+	"stage_required": "amber_level",
+	"trades": [
+		{
+			"offer": {
+				"id": "ae2:controller",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 8
+			},
+			"trade_id": "storage_controller_for_sun"
+		},
+		{
+			"offer": {
+				"id": "ae2:energy_acceptor",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "storage_energy_acceptor_for_sun"
+		},
+		{
+			"offer": {
+				"id": "ae2:dense_energy_cell",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "storage_dense_energy_cell_for_sun"
+		},
+		{
+			"offer": {
+				"id": "ae2:drive",
+				"components": {
+					"block_entity_data": {
+						"id": "ae2:drive",
+						"inv": {
+							"item0": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item1": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item2": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item3": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item4": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item5": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item6": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item7": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item8": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							},
+							"item9": {
+								"count": 1,
+								"id": "ae2:item_storage_cell_16k"
+							}
+						},
+						"priority": 0,
+						"proxy": {
+							"p": 0
+						}
+					}
+				},
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 2
+			},
+			"numismatics_cost": 8192,
+			"trade_id": "storage_drive_block_for_sun"
+		},
+		{
+			"offer": {
+				"id": "ae2:crafting_terminal",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"trade_id": "storage_crafting_terminal_for_sun"
+		},
+		{
+			"offer": {
+				"id": "ae2:blue_covered_cable",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "storage_cable_for_cog"
+		}
+	]
+}

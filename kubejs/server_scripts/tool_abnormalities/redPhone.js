@@ -11,4 +11,5 @@ BlockEvents.rightClicked('whimsy_deco:red_phone', (e) => {
     server.runCommandSilent(`playsound industrialhellscape:metal_box_opening block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
     global.addChaos(server, block, 2);
     player.persistentData.dayLastCalled = day;
+    FieldGuide.unlock(player, `block:whimsy_deco/red_phone`);
 });

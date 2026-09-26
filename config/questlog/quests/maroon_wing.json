@@ -1,0 +1,35 @@
+{
+  "title": "Facility Wing: Maroon",
+  "description": "Maroon Abnormalities are considered extremely dangerous to all life on this plane of existence. Their containment is not trivial, and your facility must be airtight.\n\nDo your best.",
+  "icon": {
+    "item": "scp:maroon_hallway_expansion_card"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 0,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:maroon_hallway_expansion_card",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:maroon_containment_expansion_card",
+      "count": 1
+    },
+    {
+      "type": "questlog:command",
+      "name": "Additional Shops & Items",
+      "command": "/kjs stages add @p amber_level"
+    }
+  ]
+}
