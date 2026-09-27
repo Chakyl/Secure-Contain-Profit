@@ -1,0 +1,79 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "scguns:trenchur",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:m3_carabine",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:m3_marksman",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:venturi",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:iron_spear",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:auvtomag",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:pulsar",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:gyrojet_pistol",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:brawler",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:crusader",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:mk43_rifle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:triquetra",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:rocket_rifle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:ultra_knight_hawk",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

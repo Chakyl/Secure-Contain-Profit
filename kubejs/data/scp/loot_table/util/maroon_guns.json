@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "scguns:scrapper",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:rusty_gnat",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:umax_pistol",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "scguns:boomstick",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "scguns:bruiser",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "scguns:whistler",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:blooper",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:arc_worker",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

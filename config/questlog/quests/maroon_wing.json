@@ -29,7 +29,7 @@
     {
       "type": "questlog:command",
       "name": "Additional Shops & Items",
-      "command": "/kjs stages add @p amber_level"
+      "command": "/kjs stages add @p maroon_level"
     }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "title": "Recycling Waste",
+  "description": "The Moonlit Company requires all employees to reduce waste when possible. The Macerator can be used for this end.\n\nRecycling of guns, casing, and rockcrete is only authorized on a strictly necessary basis. The Moonlit Company encourages all managers to not deviate from corporate policy on crafting and construction.",
+  "icon": {
+    "item": "scguns:powered_macerator"
+  },
+  "chapter": "amber_level",
+  "sort_order": 4,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scguns:powered_macerator",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:automation",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "numismatics:crown",
+      "count": 1
+    }
+  ]
+}

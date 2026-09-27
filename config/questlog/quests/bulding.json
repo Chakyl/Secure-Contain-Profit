@@ -5,7 +5,7 @@
     "item": "industrialhellscape:inhell_haven_device"
   },
   "chapter": "verdant_wing",
-  "sort_order": 11,
+  "sort_order": 3,
   "objectives": [
     {
       "type": "questlog:item_obtain",
@@ -24,7 +24,7 @@
     {
       "type": "questlog:item",
       "item": "industrialhellscape:gray_riveted_vesselplate",
-      "count": 1
+      "count": 64
     }
   ]
 }

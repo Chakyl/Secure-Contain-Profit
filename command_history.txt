@@ -1,31 +1,3 @@
-/stopsound Chakyl *
-/stopsound Chakyl
-/kjs hand
-/questlog open
-/kjs hand
-/kjs reload server-scripts
-/questlog open questlog:main Chakyl
-/kjs reload server-scripts
-/reload
-/playsound netherman:prison1
-/playsound netherman:maze_ambient
-/playsound netherman:azazel_phase
-/playsound netherman:roar
-/playsound netherman:church_ambient
-/playsound netherman:city_ambient
-/stopsound Chakyl
-/playsound netherman:city_ambient
-/stopsound Chakyl
-/playsound abyssal_decor:woodenfrogsong1
-/playsound abyssal_decor:subways_of_your_mind
-/stopsound Chakyl
-/playsound abyssal_decor:stranger_1n_my_head
-/stopsound Chakyl
-/playsound antarchy:music_disc_underside
-/stopsound Chakyl
-/playsound antarchy:music_disc_verdance
-/stopsound Chakyl
-/playsound antarchy:music_disc_underside
 /stopsound Chakyl
 /playsound companions:pontiff_activate
 /playsound companions:holiness_appear
@@ -48,3 +20,31 @@
 //schematic save starting_room
 //copy
 //schematic save starting_room
+/kjs hand
+/kjs stages list Chakyl
+/kjs reload server-scripts
+/kjs inventory
+/kjs reload server-scripts
+//paste
+/reload
+/kjs hand
+/ql edit_mode false
+/kill
+/ql edit_mode false
+/ql edit_mode true
+/ql edit_mode false
+/ql edit_mode true
+/summon scguns:subjugator
+/difficulty normal
+/summon scguns:subjugator
+/reload
+/kjs reload server-scripts
+/kjs hand
+/reload
+/kjs inventory
+/kjs hand
+/reload
+/kjs reload server-scripts
+/addfacilitychaos 20
+/time add 24000
+/kjs reload server-scripts

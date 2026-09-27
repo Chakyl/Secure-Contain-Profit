@@ -1,0 +1,29 @@
+{
+  "title": "End of content!",
+  "description": "You've reached the end of 'intentional' content for the sake of the Big Autumn Packjam. Thank you for playing!\n\nThere's nothing stopping you from playing more, I just haven't put a ton of effort into the content going forward.\n\nThis modpack was made in 2 weeks! If you want me to keep making it, please let me know in the discord! Feedback and suggestions are always welcome.",
+  "icon": {
+    "item": "abyssal_decor:rockwater_tear"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 2,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "maroon",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:maroon_containment_expansion_card",
+      "count": 1
+    }
+  ]
+}

@@ -5,16 +5,20 @@
      "spawn_algorithm": "gateways:inward_spiral",
     "leash_range": 256,
     "lives": 3,
-    "color": "#398e36",
+    "color": "#ca8f0b",
     "waves": [
         {
             "entities": [
                 {
+                    "entity": "scguns:cog_knight",
+                    "count": 3
+                },
+                {
                     "entity": "scguns:trauma_unit",
                     "count": 1
                 },
                 {
-                    "entity": "scguns:redcoat",
+                    "entity": "scguns:adjudicator",
                     "count": 1
                 }
             ],
@@ -22,7 +26,7 @@
                 {
                     "attribute": "generic.max_health",
                     "operation": "add_multiplied_total",
-                    "value": 0.25
+                    "value": 0.5
                 },
                 {
                     "attribute": "generic.armor",
@@ -37,22 +41,22 @@
             "entities": [
                 {
                     "entity": "scguns:cog_knight",
+                    "count": 4
+                },
+                {
+                    "entity": "scguns:adjudicator",
                     "count": 2
                 },
                 {
-                    "entity": "scguns:redcoat",
+                    "entity": "scguns:trauma_unit",
                     "count": 2
-                },
-                {
-                    "entity": "scguns:cog_minion",
-                    "count": 1
                 }
             ],
             "modifiers": [
                 {
                     "attribute": "generic.max_health",
                     "operation": "add_multiplied_total",
-                    "value": 0.25
+                    "value": 0.5
                 },
                 {
                     "attribute": "generic.armor",
@@ -67,26 +71,26 @@
             "entities": [
                 {
                     "entity": "scguns:cog_knight",
-                    "count": 2
+                    "count": 6
                 },
                 {
                     "entity": "scguns:trauma_unit",
                     "count": 2
                 },
                 {
-                    "entity": "scguns:redcoat",
+                    "entity": "scguns:adjudicator",
                     "count": 2
                 },
                 {
-                    "entity": "scguns:cog_minion",
-                    "count": 2
+                    "entity": "scguns:subjugator",
+                    "count": 1
                 }
             ],
             "modifiers": [
                 {
                     "attribute": "generic.max_health",
                     "operation": "add_multiplied_total",
-                    "value": 0.25
+                    "value": 0.5
                 },
                 {
                     "attribute": "generic.armor",
@@ -101,15 +105,15 @@
     "rewards": [
         {
             "type": "gateways:loot_table",
-            "loot_table": "scp:raid/verdant_raid",
+            "loot_table": "scp:raid/amber_raid",
             "rolls": 1,
-            "desc": "Verdant Raid Loot"
+            "desc": "Amber Raid Loot"
         }
     ],
     "failures": [
         {
             "type": "gateways:command",
-            "command": "addfacilitychaos 10",
+            "command": "addfacilitychaos 20",
             "desc": "Adds facility chaos"
         }
     ]

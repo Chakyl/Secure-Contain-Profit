@@ -3,7 +3,7 @@
   "icon": {
     "item": "dye_depot:amber_dye"
   },
-  "order": 1,
+  "order": 3,
   "default_chapter": false,
   "hidden": false
 }

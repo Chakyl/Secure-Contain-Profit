@@ -184,13 +184,24 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             for (let entity of level.getServer().getEntities()) {
                 if (entity.uuid.toString() == abnormalityUUID) {
                     entity.persistentData.breaching = true;
-                    foundEntity = true;
+                    foundEntity = entity;
                     break;
                 }
             }
             if (foundEntity) {
                 global.paintToServer(level.getServer(), `${abnormalityName} ESCAPED CONTAINMENT AT [x:${x}/z:${z}]. COUNTER INCREASED BY 1`, '#FF5555');
                 increaseCounter = true;
+                if (foundEntity.type == "creaturefeature:pathogen") {
+                    foundEntity.teleportTo("minecraft:overworld", block.x, block.y + 1, block.z, 0, 0)
+                    nbt.merge({
+                        data: {
+                            state: "NONE",
+                            counter: 0,
+                        }
+                    });
+                    global.setBlockEntityData(block, nbt);
+                    global.updateSignalers(level, block);
+                }
             } else {
                 level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`))
                 nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
@@ -311,12 +322,12 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
     server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${x} ${y} ${z} 1 0.5`);
     let researchLevel = Number(nbt.data.getInt("researchLevel"));
     let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
-    if (researchLevel == 3) {
+    if (researchLevel == 2) {
         nearbyPlayers.forEach((player) => {
             FieldGuide.unlock(player, `entity:${abnormalityId.replace(":", "/")}`)
         })
     }
-    if (researchLevel > 3) {
+    if (researchLevel >= 3) {
         let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions;
         if (evolutions && evolutions.length > 0) {
             evolutions = global.filterKnownAbnormalities(server, evolutions);

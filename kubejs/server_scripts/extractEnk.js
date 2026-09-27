@@ -74,7 +74,7 @@ const handleResearchFromWork = (level, abnormality, radius) => {
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 if (Number(nbt.data.getInt("researchLevel")) < 4 && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
-                    let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
+                    let { radius, centerRadiusPos } = global.getClassRadii(nbt.data.getString("tier"), scanBlock);
                     let nearbyPlayers = level.getEntitiesWithin(AABB.ofBlock(level.getBlock(centerRadiusPos)).inflate(radius)).filter((entity) => entity.isPlayer());
                     incrementResearch(level, scanBlock, centerRadiusPos, radius, nbt.data.abnormalityUUID, nearbyPlayers, nbt)
                     return true;
@@ -167,7 +167,7 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
     }
     if (processed) {
         printWorkResult(player, server, workResult)
-        if (workResult.result != "BAD" && Math.random() < 0.25) {
+        if (workResult.result != "BAD" && Math.random() < .25) {
             handleResearchFromWork(level, abnormality, radius);
         }
     }

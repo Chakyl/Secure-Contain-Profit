@@ -3,7 +3,7 @@
   "icon": {
     "item": "abyssal_decor:book_block"
   },
-  "order": 0,
+  "order": 1,
   "default_chapter": true,
   "hidden": false
 }

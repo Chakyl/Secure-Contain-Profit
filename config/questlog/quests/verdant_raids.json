@@ -1,0 +1,12 @@
+{
+  "title": "The Sunlit Insurgency",
+  "description": "It seems your facility has been targeted by a terrorist organization known as \"The Sunlit Insurgency\".\n\nIt is their belief that abnormalities should be free, in the natural order of the world.\n\nNaturally as manager of this facility, you can not let that happen. \n\nIf you fail to dispatch units in a timely manner, or perish from their hands, they will do everything they will cause containment units to malfunction, causing mass breaches.",
+  "icon": {
+    "item": "scguns:callwell_conversion"
+  },
+  "chapter": "verdant_wing",
+  "sort_order": 8,
+  "objectives": [],
+  "prerequisites": [],
+  "rewards": []
+}

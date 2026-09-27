@@ -1,0 +1,29 @@
+{
+  "title": "Manager Abandonment (Death)",
+  "description": "Due to work related incidents, you may meet your untimely demise. \n\nThe Moonlit Company makes use of T-666 to return managers from death to their facility.\n\nAdverse effects may include:\n- Loss of maximum health\n- Loss of items not directly in possesion of the manager\n- Loss of durability on tools and equipment\n\n\n",
+  "icon": {
+    "item": "reliable_requiem:crystal_heart"
+  },
+  "chapter": "verdant_wing",
+  "sort_order": 5,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:stat",
+      "stat": "minecraft:deaths",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "reliable_requiem:crystal_heart",
+      "count": 1
+    }
+  ]
+}

@@ -73,6 +73,18 @@
 		},
 		{
 			"offer": {
+				"id": "scguns:grapeshot",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 4
+			},
+			"numismatics_cost": 4,
+			"trade_id": "ammunition_scguns_grapeshot"
+		},
+		{
+			"offer": {
 				"id": "scguns:powder_and_ball",
 				"count": 4
 			},
@@ -90,10 +102,34 @@
 			},
 			"request": {
 				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "ammunition_scguns_sculk_cell"
+		},
+		{
+			"offer": {
+				"id": "scguns:depleted_energy_core",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "ammunition_scguns_depleted_energy_core"
+		},
+		{
+			"offer": {
+				"id": "scguns:empty_cell",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
 				"count": 4
 			},
-			"numismatics_cost": 256,
-			"trade_id": "ammunition_scguns_sculk_cell"
+			"numismatics_cost": 2048,
+			"trade_id": "ammunition_scguns_empty_cell"
 		}
 	]
 }

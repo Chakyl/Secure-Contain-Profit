@@ -1,0 +1,79 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "scguns:handcannon",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:blunderbuss",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:fencer_thumper",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:doublet",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "scguns:winnie_millend",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:callwell_conversion",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:callwell",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:saketini",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "scguns:saketini_ironport",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "scguns:red_raydar",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "scguns:laser_musket",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:teslock_rifle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:kiln_gun",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "scguns:plasmabuss",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
