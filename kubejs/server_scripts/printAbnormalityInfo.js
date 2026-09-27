@@ -11,9 +11,9 @@ const handleInfo = (level, server, player, abnormality, radius) => {
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 if (abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
-                    if (Number(nbt.data.getInt("researchLevel")) >= 2) {
+                    if (Number(nbt.data.getInt("researchLevel")) > 1) {
                         abnormality.setCustomName(Text.of(global.getFullAbnormalityName(nbt.data)).red().bold());
-                        if (Number(nbt.data.getInt("researchLevel")) >= 3) {
+                        if (Number(nbt.data.getInt("researchLevel")) > 2) {
                             FieldGuide.unlock(player, `entity:${abnormality.type.replace(":", "/")}`)
                         }
                     }
@@ -44,7 +44,7 @@ ItemEvents.entityInteracted((e) => {
                     shadow: true,
                     centered: true,
                     x: 2,
-                    y: -90,
+                    y: -120,
                     color: "#AA00AA"
                 }
             },

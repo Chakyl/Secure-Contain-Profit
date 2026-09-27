@@ -1,8 +1,10 @@
 {
     "size": "small",
     "allow_discarding": true,
-    "spawn_range": 1,
+    "spawn_range": 2,
+     "spawn_algorithm": "gateways:inward_spiral",
     "leash_range": 256,
+    "lives": 3,
     "color": "#056608",
     "waves": [
         {
@@ -104,7 +106,7 @@
         {
             "type": "gateways:loot_table",
             "loot_table": "minecraft:chests/simple_dungeon",
-            "rolls": 10,
+            "rolls": 1,
             "desc": "rewards.gateways.loot_table.simple_dungeon"
         }
     ],

@@ -41,7 +41,7 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
         server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${Math.floor(Number(server.persistentData.getInt("threat_level")) / 5)}`))
         global.addChaos(server, block, Number(server.persistentData.getInt("threat_level")));
     } else if (breachTypes.includes("ESCAPEARTIST")) {
-        global.escapeArtist(level, entity);
+        global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);
     }
 }
 global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
@@ -64,7 +64,7 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
             }
         }
         if (foundEntity) {
-            global.breachAbnormality(server, level, block, foundEntity,  abnormalityName, nbt);
+            global.breachAbnormality(server, level, block, foundEntity, abnormalityName, nbt);
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
             global.paintToServer(server, `${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`, '#FF5555');
@@ -100,35 +100,59 @@ global.renderUiText = (player, server, messages, clearedMessages) => {
     });
 };
 
+let getClassHexColor = (tier) => {
+    switch (tier) {
+        case "amber": return "#ca8f0b";
+        case "maroon": return "#c53c23";
+        case "indigo": return "#623f8e";
+        default:
+        case "verdant": return "#398e36";
+    }
+}
 
 global.printContainmentUnitInfo = (player, server, data) => {
     const { state } = data;
+    let abnomalityData = global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim());
     global.renderUiText(
         player,
         server,
         {
             containmentSummary: {
                 type: 'text',
-                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).counter}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
+                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${abnomalityData.counter}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
                 alignX: 'center',
                 alignY: 'bottom',
                 shadow: true,
                 centered: true,
                 x: 2,
-                y: -90,
-                color: "#AA00AA"
+                y: -110,
+                color: getClassHexColor(abnomalityData.class)
             }
         },
         global.mainUiElementIds
     );
 }
 
-let yLevelsChecked = [-1, 0, 1, 2, 3, 4]
+const getClassRadius = (tier) => {
+    switch (tier) {
+        case "amber": return 3;
+        case "maroon": return 4;
+        case "indigo": return 5;
+        default:
+        case "verdant": return 2;
+    }
+}
+
+global.getClassRadii = (tier, block) => {
+    let radius = getClassRadius(tier);
+    return { radius: radius, centerRadiusPos: block.getPos().offset(0, radius, 0) };
+}
+
 let maxAttempts = 30;
 let minRange = 8;
 let maxRange = 8;
-global.escapeArtist = (level, entity) => {
-    let { x, y, z } = entity;;
+global.escapeArtist = (level, entity, possibleYLevels) => {
+    let { x, y, z } = entity;
     let found = false
     let foundX = 0
     let foundY = 0
@@ -140,8 +164,8 @@ global.escapeArtist = (level, entity) => {
         let angle = Math.random() * Math.PI * 2
         let attemptX = Math.floor(x + Math.cos(angle) * distance)
         let attemptZ = Math.floor(z + Math.sin(angle) * distance)
-        for (let i = 0; i < yLevelsChecked.length; i++) {
-            let attemptY = Math.floor(y + yLevelsChecked[i]);
+        for (let i = 0; i < possibleYLevels.length; i++) {
+            let attemptY = Math.floor(y + possibleYLevels[i]);
             scannedPos = BlockPos(attemptX, attemptY, attemptZ)
             scannedBlockstate = level.getBlockState(scannedPos)
 

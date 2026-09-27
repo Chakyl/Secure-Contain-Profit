@@ -60,6 +60,30 @@ const handleBadWorkResult = (level, abnormality, radius) => {
         }
     }
 }
+
+const handleResearchFromWork = (level, abnormality, radius) => {
+    let x = abnormality.x;
+    let y = abnormality.y;
+    let z = abnormality.z;
+    for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y - radius, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
+        let scanPos = new BlockPos(pos.x, pos.y, pos.z);
+        if (!level.isLoaded(scanPos)) continue;
+
+        let scanBlock = level.getBlock(scanPos);
+        if (scanBlock.id == "scp:containment_unit") {
+            let nbt = scanBlock.getEntityData();
+            if (!(!nbt || !nbt.data)) {
+                if (Number(nbt.data.getInt("researchLevel")) < 4 && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
+                    let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
+                    let nearbyPlayers = level.getEntitiesWithin(AABB.ofBlock(level.getBlock(centerRadiusPos)).inflate(radius)).filter((entity) => entity.isPlayer());
+                    incrementResearch(level, scanBlock, centerRadiusPos, radius, nbt.data.abnormalityUUID, nearbyPlayers, nbt)
+                    return true;
+                }
+            }
+        }
+    }
+}
+
 const dropCog = (block) => {
     let itemEntity = block.createEntity('item')
     itemEntity.x = block.x
@@ -88,6 +112,7 @@ const getWorkResult = (abnormalityData, workType, workLevel) => {
     if (Math.random() < eff) return { result: "BAD", efficiency: eff };
     else return { result: "NEUTRAL", efficiency: eff };
 }
+
 const getWorkResultColor = (result) => {
     switch (result) {
         case "GOOD": return "#55FF55";
@@ -96,6 +121,7 @@ const getWorkResultColor = (result) => {
         case "BAD": return "#FF5555";
     }
 }
+
 const printWorkResult = (player, server, workResult) => {
     global.renderUiText(
         player,
@@ -129,17 +155,22 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
                 dropShard(level.getBlock(player.getOnPos()));
             } else if (workType == "insight") {
                 player.giveExperienceLevels(1)
-            } else { 
-                
+            } else {
+
                 dropCog(level.getBlock(player.getOnPos()));
             }
         }
     } else if (workResult.result == "NEUTRAL") {
         processed = handleEnk(level, server, abnormality, radius, 1, item);
     } else {
-        processed = handleBadWorkResult(level, abnormality, radius)
+        processed = handleBadWorkResult(level, abnormality, radius);
     }
-    if (processed) printWorkResult(player, server, workResult)
+    if (processed) {
+        printWorkResult(player, server, workResult)
+        if (workResult.result != "BAD" && Math.random() < 0.25) {
+            handleResearchFromWork(level, abnormality, radius);
+        }
+    }
 }
 
 

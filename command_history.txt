@@ -1,17 +1,3 @@
-/kjs reload startup-scripts
-/effect give @e minecraft:glowing
-/effect give Chakyl minecraft:night_vision infinite
-/tp @e[type=companions:living_candle] Chakyl
-/data get block 25 122 -17
-/tp @e[type=creaturefeature:stained_glass] Chakyl
-/kjs reload server-scripts
-/fieldguide grant Chakyl everything
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs hand
-/kjs reload server-scripts
-/playsound scp:apparition
 /stopsound Chakyl *
 /stopsound Chakyl
 /kjs hand
@@ -48,3 +34,17 @@
 /stopsound Chakyl
 /kjs reload server-scripts
 /experience add Chakyl 4 levels
+/kjs reload startup-scripts
+/effect give Chakyl minecraft:night_vision infinite
+/kill
+/effect give Chakyl minecraft:night_vision infinite
+/data get block 55 57 73
+/data get block 55 57 102
+/data get block 8 57 103
+/kjs reload server-scripts
+/data get block 8 57 103
+/data get block 39 57 103
+//wand
+//schematic save starting_room
+//copy
+//schematic save starting_room

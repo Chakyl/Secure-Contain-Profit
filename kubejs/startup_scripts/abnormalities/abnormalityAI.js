@@ -129,23 +129,22 @@ global.handleAbnormality = (entity, abnormalityData) => {
     // Effects/damage
     if (Math.random() < 0.75 && breachTypes.includes("SAP") || breachTypes.includes("BITE")) {
         let bite = breachTypes.includes("BITE")
-        entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5))
+        entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5)).filter((entity) => entity.isPlayer())
         if (entities.length > 1) {
             server.runCommandSilent(`playsound abyssal_decor:silver_step block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("companions:blizzard_ice", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 1.01);
             entities.forEach((scanEnt) => {
-                if (entity.type != scanEnt.type) scanEnt.attack(bite ? 10 : 2)
+                scanEnt.attack(bite ? 10 : 2)
             });
         }
     }
     if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
-        let bite = breachTypes.includes("BITE")
-        entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5))
+        entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
         if (entities.length > 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("scguns:sulfur_smoke", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 4, 1.01);
             entities.forEach((scanEnt) => {
-                if (scanEnt != entity) setEffectByTrait(scanEnt, breachTypes);
+               setEffectByTrait(scanEnt, breachTypes);
             });
         }
     }

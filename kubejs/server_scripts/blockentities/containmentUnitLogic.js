@@ -29,15 +29,7 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     global.setBlockEntityData(block, nbt)
 }
 
-const getClassRadius = (tier) => {
-    switch (tier) {
-        case "amber": return 3;
-        case "maroon": return 4;
-        case "indigo": return 5;
-        default:
-        case "verdant": return 2;
-    }
-}
+
 
 const getClassEnkephalinCount = (tier) => {
     switch (tier) {
@@ -65,6 +57,9 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     if (hand !== "MAIN_HAND") return;
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
+    // nbt.merge({ data: { tier: "maroon" } });
+    // global.setBlockEntityData(block, nbt)
+    // return;
     let tier = String(nbt.data.getString("tier")).trim();
     const { abnormalityType, abnormalityUUID } = nbt.data;
     if ((abnormalityType == null || abnormalityType == "") && nbt.data.getInt("timeUnleashed") + 200 < level.dayTime()) {
@@ -106,8 +101,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
         });
     } else {
         let state = String(nbt.data.getString("state")).trim();
-        let radius = getClassRadius(tier);
-        let centerRadiusPos = block.getPos().offset(0, radius, 0)
+        let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
         if (item.id == "scp:abnormality_heart") {
             if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
                 if (String(nbt.data.getString("abnormalityType")).trim().equals(String(item.getCustomData().get("entity_id")).trim().replace('\"', "").replace('\"', ""))) {
@@ -137,12 +131,12 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             server.runCommandSilent(`playsound industrialhellscape:metal_box_closing block @a ${x} ${y} ${z} 2 0.5`);
             global.setBlockEntityData(block, nbt)
         } else if (tier == "verdant" && item.id == "scp:verdant_research") {
-            if (Number(nbt.data.getInt("researchLevel")) < 3) {
+            if (Number(nbt.data.getInt("researchLevel")) < 4) {
                 let nearbyPlayers = level.getEntitiesWithin(AABB.ofBlock(level.getBlock(centerRadiusPos)).inflate(radius)).filter((entity) => entity.isPlayer());
                 if (nearbyPlayers.length >= 1) {
                     item.shrink(1)
                     player.addItemCooldown(item, 10);
-                    incrementResearch(level, block, x, y, z, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item)
+                    incrementResearch(level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item)
                 } else {
                     player.tell("You're not close enough...")
                 }
@@ -176,8 +170,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     if (!nbt || !nbt.data) return;
     const { tier, player, abnormalityUUID, counter, researchTime } = nbt.data;
     if (abnormalityUUID == "") return;
-    let radius = getClassRadius(tier);
-    let centerRadiusPos = block.getPos().offset(0, radius, 0)
+    let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
     // TODO: Make abnormality name show in messages
     // Daily logic
     let day = global.getDay(level);
@@ -214,7 +207,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         } else if (state !== "BREACH") {
             if (state == "RESEARCH") increaseCounter = true;
             let dailyStates = ["WORKABLE", "WORKABLE"];
-            if (Number(nbt.data.getInt("researchLevel")) < 3) dailyStates.push("RESEARCH");
+            if (Number(nbt.data.getInt("researchLevel")) < 4) dailyStates.push("RESEARCH");
             let newState = day < 2 ? "WORKABLE" : global.rollArray(dailyStates);
             if (level.getServer().persistentData.disrepair && level.getServer().persistentData.getInt("disrepair") >= 1) {
                 level.getServer().persistentData.disrepair = level.getServer().persistentData.getInt("disrepair") - 1;
@@ -296,7 +289,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 level.spawnParticles("companions:golden_allay_trail", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
                 level.getServer().runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.5`);
             } else {
-                incrementResearch(level, block, x, y, z, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt)
+                incrementResearch(level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt)
                 global.updateSignalers(level, block);
             }
             global.setBlockEntityData(block, nbt)
@@ -304,23 +297,27 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     }
 })
 
-let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item) => {
+let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item) => {
+    let { x, y, z } = block;
     let server = level.getServer();
     let possibleAbnormality = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
     if (possibleAbnormality.length < 1) {
         global.paintAlert(server, nearbyPlayers[0], "FAILED TO APPLY RESEARCH! ABNORMALITY MISSING!", '#FF5555');
-        if (item) nearbyPlayers[0].give(item.id)
+        if (item) nearbyPlayers[0].give(item)
         return;
     }
     global.paintAlert(server, nearbyPlayers[0], "ABNORMALITY RESEARCH LEVEL INCREASED BY 1.", '#55FF55');
     level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
     server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${x} ${y} ${z} 1 0.5`);
-    if (Number(nbt.data.getInt("researchLevel")) >= 2) {
-        let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
-        let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions;
+    let researchLevel = Number(nbt.data.getInt("researchLevel"));
+    let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
+    if (researchLevel == 3) {
         nearbyPlayers.forEach((player) => {
             FieldGuide.unlock(player, `entity:${abnormalityId.replace(":", "/")}`)
         })
+    }
+    if (researchLevel > 3) {
+        let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions;
         if (evolutions && evolutions.length > 0) {
             evolutions = global.filterKnownAbnormalities(server, evolutions);
             global.paintToServer(server, `${global.getFullAbnormalityName(nbt.data, "???")} IS EVOLVING. EVACUATE THE CONTAINMENT UNIT IMMEDIATELY.`, '#55FF55');
@@ -348,7 +345,7 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
                 data: {
                     researchTime: 0,
                     state: "NONE",
-                    researchLevel: global.increaseStage(Number(nbt.data.getInt("researchLevel")))
+                    researchLevel: global.increaseStage(researchLevel)
                 },
             });
         }
@@ -358,7 +355,7 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
             data: {
                 researchTime: 0,
                 state: "NONE",
-                researchLevel: global.increaseStage(Number(nbt.data.getInt("researchLevel")))
+                researchLevel: global.increaseStage(researchLevel)
             },
         });
     }
