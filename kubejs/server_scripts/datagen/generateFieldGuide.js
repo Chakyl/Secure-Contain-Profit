@@ -1,5 +1,14 @@
 
 if (true) {
+    let getClassColor = (tier) => {
+        switch (tier) {
+            case "amber": return 6;
+            case "maroon": return 4;
+            case "indigo": return 1;
+            default:
+            case "verdant": return 2;
+        }
+    }
     let formatName = (type) => type.charAt(0).toUpperCase() + type.slice(1);
     let getWorkPrefToString = (num) => {
         switch (num) {
@@ -15,14 +24,109 @@ if (true) {
     let fieldGuideEntries = []
     let translationKeys = {}
     translationKeys["category.fieldguide.fieldguide.abnormalities"] = "Abnormalities";
+    let abnormalityDescs = new Map([
+        /**
+         *   VERDANT ABNORMALITIES
+         */
+        // Pig line
+        ["minecraft:pig", { description: "It looks like a pig, acts like a pig. But it's not a pig." }],
+        ["minecraft:piglin", { description: "WIP" }],
+        ["minecraft:piglin_brute", { description: "WIP" }],
+        ["minecraft:zombified_piglin", { description: "WIP" }],
+        ["minecraft:creeper", { description: "Evolution has torn apart the DNA of the ZUSHI, causing it to only vaguely resemble itself. Its explosions are anomalous in nature, causing some other being to return it back from the dead. This seems to make abnormalities at the facility uncomfortable." }],
+        ["creaturefeature:pathogen", { description: "Difficult to contain due to its ability to phase through solid matter and harbor inside living beings. Quick suppression is advised due to the ability for the Pathogen to entirely leave the facility at any time, though it will return to its containment unit the next day out of habit." }],
+        ["creaturefeature:minedflayer", { description: "WIP" }],
+        ["minecraft:goat", { description: "It looks like a goat, acts like a goat. But it's not a goat." }],
+        ['antarchy:ouranwood_deer', { description: "WIP" }],
+        ["creaturefeature:vertigo", { description: "WIP" }],
+        ["minecraft:chicken", { description: "It looks like a chicken, acts like a chicken. But it's not a chicken." }],
+        ["creaturefeature:stained_glass", { description: "WIP" }],
+        ["creaturefeature:mockingbird", { description: "Manager 019 observed 'Crude Drawing of an Angel' plastered on the rockcrete floor 45 days before encountering the evolution in the facility." }],
+        ["peaceless:harpy", { description: "Primarily nocturnal, TU AMIGO gets it name from its habit of dragging abnormalities out of containment units. Managers should suppress with the utmost speed, to avoid these 'AMIGOS'." }],
+        ["minecraft:villager", { description: "Rumors say this abnormality was formed by the Moonlit company itself using T-493. It is the recommendation of the company that these rumors be met with extreme doubt." }],
+        ["minecraft:zombie_villager", { description: "WIP" }],
+        ["minecraft:zombie", { description: "WIP" }],
+        ["creaturefeature:blossom", { description: "WIP" }],
+        ["creaturefeature:minds", { description: "WIP" }],
+        ["minecraft:frog", { description: "It looks like a frog, acts like a frog. But it's not a frog." }],
+        ["companions:cornelius", { description: "Cornelius' UNCHAINED form is the only known evolved abnormality that does nothing when breaching. Manager 0093's experiments has found Cornelius to enjoy feasting upon wild bees, becomig friendly to the manager in the process. Once friendly, Cornelius will play a crude form of blackjack with the manager for Frogcoins using sneak and right click." }],
+        ["companions:living_candle", { description: "Manager 0029 discovered Friends of Coal during a power outage pertaining to Incident 00292313. It is unknown where the coal it drops comes from, as material studies have not found traces of it inside of its own body." }],
+        /**
+         *   AMBER ABNORMALITIES
+         */
+        ["creaturefeature:machination", { description: "WIP" }],
+        ["creaturefeature:sinister", { description: "WIP" }],
+        ["minecraft:spider", { description: "WIP" }],
+        ["minecraft:cave_spider", { description: "WIP" }],
+        ["creaturefeature:dreamweaver", { description: "WIP" }],
+        ["minecraft:polar_bear", { description: "WIP" }],
+        ["creaturefeature:saint_solis", { description: "WIP" }],
+        ["minecraft:breeze", { description: "WIP" }],
+        ["creaturefeature:blitz", { description: "WIP" }],
+        ["minecraft:blaze", { description: "WIP" }],
+        ["minecraft:turtle", { description: "WIP" }],
+        ["peaceless:shrapin", { description: "WIP" }],
+        ["creaturefeature:beauty", { description: "WIP" }],
+        ["creaturefeature:fiend", { description: "WIP" }],
+        ["companions:broken_dinamo", { description: "WIP" }],
+        ["companions:illager_golem", { description: "WIP" }],
+        ["peaceless:shade", { description: "WIP" }],
+        ["creaturefeature:nothing", { description: "WIP" }],
+        ["antarchy:rolly_polly", { description: "WIP" }],
+        ["antarchy:red_ant", { description: "WIP" }],
+        ["antarchy:stink_bug", { description: "WIP" }],
+        ["antarchy:brown_ant", { description: "WIP" }],
+        ["antarchy:jerry", { description: "WIP" }],
+        ["netherman:statue_entity", { description: "WIP" }],
+        ["companions:hostile_puppet_glove", { description: "WIP" }],
+        /**
+         *   MAROON ABNORMALITIES
+         */
+        ["scguns:viventrum", { description: "WIP" }],
+        ["creaturefeature:canary", { description: "WIP" }],
+        ["netherman:manipulator", { description: "WIP" }],
+        ["creaturefeature:coat_of_arms", { description: "WIP" }],
+        ["minecraft:rabbit", { description: "WIP" }],
+        ["creaturefeature:friend", { description: "WIP" }],
+        ["antarchy:easter_bunny", { description: "WIP" }],
+        ["netherman:ghastly", { description: "WIP" }],
+        ["minecraft:ghast", { description: "WIP" }],
+        ["scguns:mother_ghast", { description: "WIP" }],
+        ["scguns:dissident", { description: "WIP" }],
+        ["scguns:praetor", { description: "WIP" }],
+        ["netherman:statue_bossunit", { description: "WIP" }],
+        ["netherman:gilded_golem", { description: "WIP" }],
+        ["scguns:swarm", { description: "WIP" }],
+        ["antarchy:wasp", { description: "WIP" }],
+        ["scguns:hive", { description: "WIP" }],
+        ["minecraft:allay", { description: "WIP" }],
+        ["companions:golden_allay", { description: "WIP" }],
+        ["peaceless:mimic", { description: "WIP" }],
+        ["creaturefeature:runaway", { description: "WIP" }],
+        ["antarchy:crawling_blight", { description: "WIP" }],
+        ["antarchy:skulking_fright", { description: "WIP" }],
+        ["antarchy:termite", { description: "WIP" }],
+        ["antarchy:elka", { description: "WIP" }],
+        ["antarchy:manticore", { description: "WIP" }],
+        ["antarchy:mantis", { description: "WIP" }],
+        ["antarchy:alpha_mantis", { description: "WIP" }],
+        ["antarchy:worm", { description: "WIP" }],
+        ["antarchy:moleworm", { description: "WIP" }],
+        ["antarchy:molevore", { description: "WIP" }],
+        ["creaturefeature:detritus", { description: "WIP" }],
+        ["scguns:sulfurhead", { description: "WIP" }],
+        ["antarchy:flytrap", { description: "WIP" }],
+        ["antarchy:lucid", { description: "WIP" }],
+        ["antarchy:vortex", { description: "WIP" }],
+    ]);
     for (let abnormality of global.ABNORMALITIES.keys()) {
         fieldGuideEntries.push({
             type: "entry",
             id: abnormality
         });
         let data = global.ABNORMALITIES.get(`${abnormality}`);
-        translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `${data.name}`
-        translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: ${global.getAbnormalityName(data.class, abnormality)}\nClass: ${formatName(data.class)}\nQliphoth Counter: ${data.counter}\nEvolutions: ${data.evolutions ? data.evolutions.length : "None"}${data.preferences ? `\n\n${getWorkPreferences(data.preferences)}` : ""}`
+        translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `§${getClassColor(data.class)}${data.name}`
+        translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: ${global.getAbnormalityName(data.class, abnormality)}\nClass: ${formatName(data.class)}\nQliphoth Counter: ${data.counter}\nEvolutions: ${data.evolutions ? data.evolutions.length : "None"}${data.preferences ? `\n\n${getWorkPreferences(data.preferences)}` : ""}\n\nKnown information:\n${abnormalityDescs.get(`${abnormality}`).description}`
         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.hint`] = `Requires research level 3`
     }
     let TOOL_ABNORMALITIES = new Map([
@@ -31,7 +135,7 @@ if (true) {
         ['whimsy_deco:horseshoe', { num: 3, name: "Horseshoe Theory", hint: "Place in front of a Containment Unit", summary: "Widely regarded as a safe abnormality, Horsehoe Theory resonates with nearby containment units, allowing the user to see the stats of them remotely." }],
         ["whimsy_deco:gatcha_machine", { num: 4, name: "Gotchya Machine", hint: "Gotchya!", summary: "The earliest user of the Gotchya Machine was driven to believe she was a soldier in the british infantry during the 18th century.\nIt seems to draw in unknowing users with the promise of toys, occasionally causing psychic distortions that disrupt abnormalities." }],
         ['abyssal_decor:bottomless_bag_of_dirt', { num: 5, name: "NIRVANA", hint: "Use it...", summary: "Careful usage of NIRVANA is advised, as spilling the bag may result in entombment. When handled carefully, an entirely safe abnormality." }],
-        ['minecraft:enchanting_table', { num: 6, name: "Eraserhead", hint: "Erase your head", summary: "It is not known of 'Eraserhead' is a being inside the table, or the table itself. Regardless, it seems to have a disdain for greed, chopping off the head of the user if it gives an enchantment that the user already has on the item it offers." }],
+        ['minecraft:enchanting_table', { num: 6, name: "Eraserhead", hint: "Erase your head", summary: "It is not known if 'Eraserhead' is the being inside the table, or the table itself. Regardless, it seems to have a disdain for greed, chopping off the head of the user if it gives an enchantment that the user already has on the item it offers." }],
         ["companions:frog_bonanza_block", { num: 7, name: "Gambledeath", hint: "Feed the beast", summary: "Gambledeath is a roguelike machine of froglike orgins that can be fed coins. It seems to be malevolent, heavily punishing users with 'permadeath' if their luck fails." }],
         ["scp:rubber_duck", { num: 9, name: "Rubber Duck", hint: "Get ducked", summary: "Promises of endless fortune are fortold by the Rubber Duck.\n The gold it drops seems to be at the expense of living abnormalities." }],
         ["scp:spoon_bender", { num: 10, name: "Spoon Bender", hint: "Get bent", summary: "Spoon Benders are incredibly fast, presenting as simple garden gnomes. They seem to love small objects left around, instantly grabbing items no matter where they are located.\n\n Enjoys messing around with the internals of containment units, occasionally damaging them." }],
@@ -63,4 +167,3 @@ if (true) {
         contents: fieldGuideEntries
     })
 }
-

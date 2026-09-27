@@ -8,6 +8,6 @@ BlockEvents.rightClicked('scguns:anthralite_lamp', (e) => {
     }
     item.shrink(1)
     player.give("numismatics:crown")
-    server.runCommandSilent(`playsound opposing_force:laser_bolt_impact block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
+    server.runCommandSilent(`playsound opposing_force:laser_bolt_impact block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
 }
 );

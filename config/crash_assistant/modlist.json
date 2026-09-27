@@ -13,6 +13,22 @@
     "curseForgeHash": 2856970585,
     "modrinthHash": "8033176da762df7e9455f6c8584b20b7461c707f"
   },
+  "antarchy-2.1.1+1.21.1-neoforge.jar": {
+    "jarName": "antarchy-2.1.1+1.21.1-neoforge.jar",
+    "modId": "antarchy",
+    "name": "Antarchy",
+    "version": "2.1.1+1.21.1-neoforge",
+    "curseForgeHash": 3166985845,
+    "modrinthHash": "122e296906385c9f87759d0fde475bb49b9e53c8"
+  },
+  "antos-neoforge-1.21.1-1.2.2.jar": {
+    "jarName": "antos-neoforge-1.21.1-1.2.2.jar",
+    "modId": "antos",
+    "name": "AntOS",
+    "version": "1.2.2",
+    "curseForgeHash": 1821356242,
+    "modrinthHash": "9cff1009f70faa6d08c0f78620a1beca3f62b7f8"
+  },
   "ApothicAttributes-1.21.1-2.10.1.jar": {
     "jarName": "ApothicAttributes-1.21.1-2.10.1.jar",
     "modId": "apothic_attributes",
@@ -60,6 +76,14 @@
     "version": "8.2.0",
     "curseForgeHash": 3988167639,
     "modrinthHash": "b947d5faef872a3f4c856a814c994d70f2065666"
+  },
+  "bookshelf-neoforge-1.21.1-21.1.81.jar": {
+    "jarName": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+    "modId": "bookshelf",
+    "name": "Bookshelf",
+    "version": "21.1.81",
+    "curseForgeHash": 2267427357,
+    "modrinthHash": "efc4cda6da4dd879f24d057ed0a6413764c9ba40"
   },
   "cloth-config-15.0.140-neoforge.jar": {
     "jarName": "cloth-config-15.0.140-neoforge.jar",
@@ -229,6 +253,14 @@
     "curseForgeHash": 2937070771,
     "modrinthHash": "3fd494b37027dfbc7f78414d7cbf251c9eb6738a"
   },
+  "enchdesc-neoforge-1.21.1-21.1.11.jar": {
+    "jarName": "enchdesc-neoforge-1.21.1-21.1.11.jar",
+    "modId": "enchdesc",
+    "name": "EnchantmentDescriptions",
+    "version": "21.1.11",
+    "curseForgeHash": 3739969139,
+    "modrinthHash": "4d453df785ac21e0e7389cba949f4fa460c3e267"
+  },
   "entityjs-1.5.0.jar": {
     "jarName": "entityjs-1.5.0.jar",
     "modId": "entityjs",
@@ -340,6 +372,14 @@
     "version": "1.1.0",
     "curseForgeHash": 1298674142,
     "modrinthHash": "623eb3661ece0ce94579f1113842eb2229d2e3e5"
+  },
+  "integrated_api-neoforge-1.21.1-1.9.0.jar": {
+    "jarName": "integrated_api-neoforge-1.21.1-1.9.0.jar",
+    "modId": "integrated_api",
+    "name": "Integrated API",
+    "version": "1.9.0",
+    "curseForgeHash": 635086514,
+    "modrinthHash": "b092c3f2f5368ca04215491a264cc840f8ad889a"
   },
   "Jade-1.21.1-NeoForge-15.10.6.jar": {
     "jarName": "Jade-1.21.1-NeoForge-15.10.6.jar",
@@ -498,6 +538,14 @@
     "curseForgeHash": 81278458,
     "modrinthHash": "d44335094cf2db64998cb3ee31e58d8c01e80b4a"
   },
+  "prickle-neoforge-1.21.1-21.1.11.jar": {
+    "jarName": "prickle-neoforge-1.21.1-21.1.11.jar",
+    "modId": "prickle",
+    "name": "PrickleMC",
+    "version": "21.1.11",
+    "curseForgeHash": 3352390329,
+    "modrinthHash": "5174059ecf97340a0de5ef211b938de26c4eaa36"
+  },
   "questlog-neoforge-1.21.1-3.4.1.jar": {
     "jarName": "questlog-neoforge-1.21.1-3.4.1.jar",
     "modId": "questlog",
@@ -570,6 +618,14 @@
     "curseForgeHash": 3425501107,
     "modrinthHash": "f7a625a16d4137fe59528a18aeac4bc38631ca9b"
   },
+  "sizeable_foliage-neoforge-1.21.1-1.2.1.jar": {
+    "jarName": "sizeable_foliage-neoforge-1.21.1-1.2.1.jar",
+    "modId": "sizeable_foliage",
+    "name": "Sizeable Foliage",
+    "version": "1.2.1",
+    "curseForgeHash": 157337671,
+    "modrinthHash": "fbaec299a3106d1099899a741680d22fd6509c5d"
+  },
   "society_trading-1.2.11-1.21.1.jar": {
     "jarName": "society_trading-1.2.11-1.21.1.jar",
     "modId": "society_trading",
@@ -607,8 +663,8 @@
     "modId": "dialog",
     "name": "SVDialog",
     "version": "1.6-1.21.1",
-    "curseForgeHash": 2863263996,
-    "modrinthHash": "b13b9de4f1d1686d5ad0a555f8bed6c078a474ee"
+    "curseForgeHash": 3145687893,
+    "modrinthHash": "e856bfc0813ec32b155070666e42e352655c3b66"
   },
   "teallib-1.3.teal.jar": {
     "jarName": "teallib-1.3.teal.jar",

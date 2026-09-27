@@ -8,7 +8,7 @@ BlockEvents.rightClicked('companions:porcelain_pottery', (e) => {
         return;
     }
     if (Math.random() < 0.05) {
-        server.runCommandSilent(`playsound netherman:whisper block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
+        server.runCommandSilent(`playsound netherman:whisper block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
         block.set('companions:holy_porcelain_pottery');
         let itemEntity = block.createEntity('item')
         itemEntity.x = x
@@ -18,7 +18,7 @@ BlockEvents.rightClicked('companions:porcelain_pottery', (e) => {
         itemEntity.spawn()
         FieldGuide.unlock(player, `block:companions/porcelain_pottery`);
     } else {
-        server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${block.x} ${block.y} ${block.z} 2 0.2`);
+        server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
     }
     item.shrink(1);
 });

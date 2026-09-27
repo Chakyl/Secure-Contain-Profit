@@ -25,7 +25,7 @@ let respawnAbnormality = (level, tier, oldEntity) => {
     let newAbnormalityEntity = level.createEntity(oldEntity.type);
     newAbnormalityEntity.setPos(oldEntity.x + 0.5, oldEntity.y + 1.0, oldEntity.z + 0.5);
     newAbnormalityEntity.spawn();
-    newAbnormalityEntity.setCustomName(Text.of(`${global.getAbnormalityName(tier, oldEntity.type)}`).red().bold());
+    newAbnormalityEntity.setCustomName(Text.of(`${global.getAbnormalityName(tier, String("minecraft:creeper"))}`).red().bold());
     newAbnormalityEntity.setPersistenceRequired();
 
     let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassEnkephalinCount(tier) * 5);
@@ -40,9 +40,10 @@ NativeEvents.onEvent($ExplosionEvent, (e) => {
     let server = level.getServer();
     let entity = explosion.getIndirectSourceEntity();
     if (entity && "minecraft:creeper" == entity.type) {
-    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
+        if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
         server.scheduleInTicks(200, () => {
-            server.runCommandSilent(`playsound netherman:respawn_totem block @a ${entity.x} ${entity.y} ${entity.z} 2 0.2`);
+            global.addChaos(server, level.getBlock(entity.getOnPos()), 1);
+            server.runCommandSilent(`playsound netherman:respawn_totem block @a ${entity.x} ${entity.y} ${entity.z} 2 0.5`);
             respawnAbnormality(level, "verdant", entity);
         });
     }

@@ -10,7 +10,7 @@ let structureMap = new Map([
 
     ['scp:maroon_containment_lock_block_1', { card: 'scp:maroon_containment_expansion_card', template: "maroon_containment_west", x: 1, z: -7 }],
     ['scp:maroon_containment_lock_block_2', { card: 'scp:maroon_containment_expansion_card', template: "maroon_containment_east", x: -16, z: -8 }],
-    ['scp:maroon_hallway_lock_block', { card: 'scp:maroon_hallway_expansion_card', template: "maroon_hallways", x: -7, z: 0 }]
+    ['scp:maroon_hallway_lock_block', { card: 'scp:maroon_hallway_expansion_card', template: "maroon_hallways", x: -7, z: 0 }],
 ])
 
 BlockEvents.rightClicked(['scp:verdant_hallway_lock_block', 'scp:verdant_containment_lock_block_1', 'scp:verdant_containment_lock_block_2', 'scp:amber_hallway_lock_block', 'scp:amber_containment_lock_block_1', 'scp:amber_containment_lock_block_2', 'scp:maroon_hallway_lock_block', 'scp:maroon_containment_lock_block_1', 'scp:maroon_containment_lock_block_2'], e => {
@@ -25,8 +25,8 @@ BlockEvents.rightClicked(['scp:verdant_hallway_lock_block', 'scp:verdant_contain
     }
     if (!player.isCreative()) item.shrink(1);
 
-    server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.2`);
-    server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.2`);
+    server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
+    server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
 
     server.runCommandSilent(`place template scp:${structureData.template} ${block.x + structureData.x} ${block.y - 3} ${block.z + structureData.z}`);
     block.set("minecraft:air")

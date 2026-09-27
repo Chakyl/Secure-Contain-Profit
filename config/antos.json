@@ -1,0 +1,22 @@
+{
+  "unlockAllArchiveEntries": false,
+  "unlockAllGameEntries": false,
+  "desktopApps": {
+    "archive": true,
+    "files": true,
+    "settings": true,
+    "terminal": true,
+    "textEditor": true,
+    "paint": true,
+    "antmail": true,
+    "antazon": false,
+    "games": true,
+    "trash": true,
+    "tasks": false
+  },
+  "lastAnternetUsername": "yeet",
+  "initialBootSeen": true,
+  "completedComputerTours": [
+    "e00389bb-aee3-4cb0-948b-79c0af6db8a0"
+  ]
+}

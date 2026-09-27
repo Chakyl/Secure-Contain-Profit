@@ -1,12 +1,12 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
-    ["amber", ["netherman:statue_bossunit", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:wild_antlion", "companions:hostile_puppet_glove"]],
-    ["maroon", ["scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "scguns:swarm", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
+    ["amber", ["antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove"]],
+    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "scguns:swarm", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
 ])
 
 const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     let { x, y, z } = block;
-    server.runCommandSilent(`playsound scguns:entity.praetor.roar block @a ${x} ${y} ${z} 1 0.2`);
+    server.runCommandSilent(`playsound scguns:entity.praetor.roar block @a ${x} ${y} ${z} 1 0.5`);
     server.runCommandSilent(`playsound scguns:item.jetpack.fire block @a ${x} ${y} ${z} 2 0.7`);
     level.spawnParticles("companions:teddy_transformation_cloud", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
     level.spawnParticles("scguns:sonic_blast", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
@@ -65,7 +65,6 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     if (hand !== "MAIN_HAND") return;
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
-
     let tier = String(nbt.data.getString("tier")).trim();
     const { abnormalityType, abnormalityUUID } = nbt.data;
     if ((abnormalityType == null || abnormalityType == "") && nbt.data.getInt("timeUnleashed") + 200 < level.dayTime()) {
@@ -85,11 +84,11 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
         });
         global.setBlockEntityData(block, nbt)
         player.tell(Text.red(`Unleashing Abnormality: ${global.getAbnormalityName(tier, newAbnormality)} in 10 seconds...`))
-        server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.2`);
-        server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.2`);
+        server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
+        server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
         level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+        global.addKnownAbnormalities(server, newAbnormality);
         server.scheduleInTicks(200, () => {
-            global.addKnownAbnormalities(server, newAbnormality);
             nbt.merge({
                 data: {
                     state: "WORKABLE",
@@ -135,7 +134,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
                 },
             });
             level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-            server.runCommandSilent(`playsound industrialhellscape:metal_box_closing block @a ${x} ${y} ${z} 2 0.2`);
+            server.runCommandSilent(`playsound industrialhellscape:metal_box_closing block @a ${x} ${y} ${z} 2 0.5`);
             global.setBlockEntityData(block, nbt)
         } else if (tier == "verdant" && item.id == "scp:verdant_research") {
             if (Number(nbt.data.getInt("researchLevel")) < 3) {
@@ -175,7 +174,6 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
 
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
-
     const { tier, player, abnormalityUUID, counter, researchTime } = nbt.data;
     if (abnormalityUUID == "") return;
     let radius = getClassRadius(tier);
@@ -261,17 +259,28 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             }
         }
         if (!validContainmentUnit) {
-            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.1`);
+            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             if (Math.random() < 0.1) global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
         }
 
     }
     if (tick % 600 == 0) {
         centerRadiusPos = block.getPos().offset(0, radius, 0)
-        if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
-            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.1`);
+        let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
+        if (checkedAbs.length == 0) {
+            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
             global.paintToServer(level.getServer(), `${global.getFullAbnormalityName(nbt.data, "???")} ESCAPED CONTAINMENT AT [x:${x}/z:${z}].`, '#FF5555');
+        } else {
+            if (checkedAbs[0].persistentData.respawned && checkedAbs[0].persistentData.getBoolean("respawned") && String(`${nbt.data.getString("abnormalityType")}`).trim() == checkedAbs[0].type) {
+                nbt.merge({
+                    data: {
+                        abnormalityUUID: checkedAbs[0].uuid.toString()
+                    },
+                });
+                checkedAbs[0].persistentData.respawned = false;
+                global.setBlockEntityData(block, nbt)
+            }
         }
     }
     if (state == "RESEARCH") {
@@ -285,7 +294,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 });
 
                 level.spawnParticles("companions:golden_allay_trail", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-                level.getServer().runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.2`);
+                level.getServer().runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.5`);
             } else {
                 incrementResearch(level, block, x, y, z, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt)
                 global.updateSignalers(level, block);
@@ -305,7 +314,7 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
     }
     global.paintAlert(server, nearbyPlayers[0], "ABNORMALITY RESEARCH LEVEL INCREASED BY 1.", '#55FF55');
     level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-    server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${x} ${y} ${z} 1 0.2`);
+    server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${x} ${y} ${z} 1 0.5`);
     if (Number(nbt.data.getInt("researchLevel")) >= 2) {
         let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
         let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions;
@@ -315,8 +324,8 @@ let incrementResearch = (level, block, x, y, z, centerRadiusPos, radius, abnorma
         if (evolutions && evolutions.length > 0) {
             evolutions = global.filterKnownAbnormalities(server, evolutions);
             global.paintToServer(server, `${global.getFullAbnormalityName(nbt.data, "???")} IS EVOLVING. EVACUATE THE CONTAINMENT UNIT IMMEDIATELY.`, '#55FF55');
-            server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.2`);
-            server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.2`);
+            server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
+            server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
             level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
             let evolution = global.rollArray(evolutions);
             server.scheduleInTicks(100, () => {

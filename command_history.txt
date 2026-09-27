@@ -1,50 +1,50 @@
-/addfacilitychaos 1000
-/kjs reload server-scripts
 /kjs reload startup-scripts
+/effect give @e minecraft:glowing
+/effect give Chakyl minecraft:night_vision infinite
+/tp @e[type=companions:living_candle] Chakyl
+/data get block 25 122 -17
+/tp @e[type=creaturefeature:stained_glass] Chakyl
 /kjs reload server-scripts
-/effect clear a70d6407-15ff-4685-a486-63bc87a252fc
-/kjs reload startup-scripts
-/effect clear a70d6407-15ff-4685-a486-63bc87a252fc
+/fieldguide grant Chakyl everything
+/kjs reload server-scripts
 /kjs reload startup-scripts
 /kjs reload server-scripts
 /kjs hand
+/kjs reload server-scripts
+/playsound scp:apparition
+/stopsound Chakyl *
+/stopsound Chakyl
+/kjs hand
+/questlog open
+/kjs hand
+/kjs reload server-scripts
+/questlog open questlog:main Chakyl
+/kjs reload server-scripts
 /reload
-/kjs hand
-/reload
+/playsound netherman:prison1
+/playsound netherman:maze_ambient
+/playsound netherman:azazel_phase
+/playsound netherman:roar
+/playsound netherman:church_ambient
+/playsound netherman:city_ambient
+/stopsound Chakyl
+/playsound netherman:city_ambient
+/stopsound Chakyl
+/playsound abyssal_decor:woodenfrogsong1
+/playsound abyssal_decor:subways_of_your_mind
+/stopsound Chakyl
+/playsound abyssal_decor:stranger_1n_my_head
+/stopsound Chakyl
+/playsound antarchy:music_disc_underside
+/stopsound Chakyl
+/playsound antarchy:music_disc_verdance
+/stopsound Chakyl
+/playsound antarchy:music_disc_underside
+/stopsound Chakyl
+/playsound companions:pontiff_activate
+/playsound companions:holiness_appear
+/playsound companions:pop
+/playsound opposing_force:slayser_disc
+/stopsound Chakyl
 /kjs reload server-scripts
-/playsound netherman:totemus_puzzle
-/playsound netherman:bell_beast_laugh
-/playsound netherman:flash
-/playsound netherman:respawn_totem
-/playsound netherman:riftsound
-/playsound netherman:respawn_totem
-/playsound netherman:spring3
-/playsound minecraft:block.enchantment_table.use
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs hand
-/reload
-/kjs hand
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload
-/kjs reload server-scripts
-/time add 240000
-/fieldguide revoke *
-/fieldguide revoke Chakyl everything
-/kjs reload server-scripts
-/fieldguide revoke Chakyl everything
-/kjs reload server-scripts
-/kjs hand
-/kjs reload server-scripts
-/kjs inventory
-/kjs hand
-/kjs reload server-scripts
-/kjs hand
-/kjs reload server-scripts
-/open_gateway
-/open_gateway Chakyl gateways:verdant_raid
-/kjs inventory
-/kjs hand
-/open_gateway Chakyl gateways:verdant_raid
+/experience add Chakyl 4 levels

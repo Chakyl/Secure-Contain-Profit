@@ -16,8 +16,8 @@ const handleEnk = (level, server, abnormality, radius, mult, item) => {
                         item.shrink(1);
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                     }
-                    server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.2`);
-                    server.runCommandSilent(`playsound minecraft:entity.cow.milk block @a ${x} ${y} ${z} 2 0.2`);
+                    server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.5`);
+                    server.runCommandSilent(`playsound minecraft:entity.cow.milk block @a ${x} ${y} ${z} 2 0.5`);
                     level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
                     dropEnkephalin(scanBlock, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier")) * mult));
                     nbt.merge({
@@ -60,6 +60,23 @@ const handleBadWorkResult = (level, abnormality, radius) => {
         }
     }
 }
+const dropCog = (block) => {
+    let itemEntity = block.createEntity('item')
+    itemEntity.x = block.x
+    itemEntity.y = block.y + 0.2
+    itemEntity.z = block.z
+    itemEntity.item = 'numismatics:cog';
+    itemEntity.spawn()
+};
+
+const dropShard = (block) => {
+    let itemEntity = block.createEntity('item')
+    itemEntity.x = block.x
+    itemEntity.y = block.y + 0.2
+    itemEntity.z = block.z
+    itemEntity.item = 'reliable_requiem:crystal_shard';
+    itemEntity.spawn()
+};
 
 const getWorkResult = (abnormalityData, workType, workLevel) => {
     if (!abnormalityData) return { result: "BAD", efficiency: -1 };
@@ -107,6 +124,16 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
     // TODO: Sounds, effects
     if (workResult.result == "GOOD") {
         processed = handleEnk(level, server, abnormality, radius, 2, item);
+        if (processed) {
+            if (workType == "violence") {
+                dropShard(level.getBlock(player.getOnPos()));
+            } else if (workType == "insight") {
+                player.giveExperienceLevels(1)
+            } else { 
+                
+                dropCog(level.getBlock(player.getOnPos()));
+            }
+        }
     } else if (workResult.result == "NEUTRAL") {
         processed = handleEnk(level, server, abnormality, radius, 1, item);
     } else {
@@ -118,7 +145,7 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
 
 
 ItemEvents.entityInteracted((e) => {
-    const { item,  target, level, hand, server } = e;
+    const { item, target, level, hand, server } = e;
     if (hand !== "MAIN_HAND") return;
     if (item.id != 'scguns:syringe') return;
     if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;

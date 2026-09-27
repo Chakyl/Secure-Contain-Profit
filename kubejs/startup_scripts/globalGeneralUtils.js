@@ -82,7 +82,7 @@ global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${glo
 
 global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName(String(data.getString("tier")).trim(), String(data.getString("abnormalityType")).trim())}: ${Number(data.getInt("researchLevel")) >= 2 ? `${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).name}` : fallback}`
 
-global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid);
+global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid || (entity.persistentData.respawned != null && entity.persistentData.getBoolean("respawned")));
 
 global.getNearestAbnormalities = (level, pos, radius) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.persistentData.getBoolean("abnormality"));
 
@@ -116,7 +116,10 @@ global.filterKnownAbnormalities = (server, abnormalitiesNext) => {
   if (!server.persistentData.known_abnormalities) return abnormalitiesNext;
   let known = JSON.parse(server.persistentData.getString("known_abnormalities"));
   let filteredAbnormalities = abnormalitiesNext.filter(item => known.indexOf(item) === -1);
-  if (filteredAbnormalities.length == 0) return abnormalitiesNext;
+  if (filteredAbnormalities.length == 0) {
+    server.persistentData.known_abnormalities = JSON.stringify(known.filter((ab) => !abnormalitiesNext.includes(ab)));
+    return abnormalitiesNext;
+  }
   else return filteredAbnormalities
 }
 

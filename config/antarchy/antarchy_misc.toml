@@ -1,0 +1,111 @@
+[elythia]
+	#Whether firefly ambient particles appear at night in the Elythia dimension.
+	fireflyParticlesEnabled = true
+
+[dreamSand]
+	#If true, jumping from dream sand applies temporary low gravity until solid ground is touched.
+	enabled = true
+	#Multiplier applied to upward jump velocity when leaving dream sand.
+	# Default: 1.3
+	# Range: 0.0 ~ 16.0
+	jumpVelocityMultiplier = 1.3
+	#Multiplier applied to downward velocity while low gravity is active.
+	# Default: 0.45
+	# Range: 0.0 ~ 1.0
+	gravityMultiplier = 0.45
+	#Seconds the low-gravity effect remains active after leaving dream sand.
+	# Default: 7.0
+	# Range: 0.0 ~ 60.0
+	effectDurationSeconds = 7.0
+	#Multiplier applied to dream sand's own falling-block gravity (how slowly it falls as a block, distinct from the player low-gravity effect).
+	# Default: 0.4
+	# Range: 0.0 ~ 16.0
+	fallingBlockGravityMultiplier = 0.4
+
+[ichor]
+	#If true, players submerged in ichor receive a Wither effect.
+	witherEnabled = true
+
+[hushweed]
+	#How long (in seconds) a Hushweed spore projectile stays alive before disappearing.
+	# Default: 5.0
+	# Range: 0.1 ~ 120.0
+	sporeLifetimeSeconds = 5.0
+
+[infinityDimensions]
+	#If true, book and quills cannot be thrown into nether portals to create random dimensions.
+	disableInfinityBookPortalCreation = true
+	#Whether rainbow ants open randomly generated Infinity dimensions.
+	#Only works if the Infinite Dimensions mod is installed.
+	rainbowAntsLeadToInfinityDimensions = true
+	#Chance for a rainbow ant Infinity destination roll to select an Infinity easter egg dimension instead of a normal generated one.
+	#0.01 = 1%, 0 disables easter egg rolls.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	rainbowAntInfinityEasterEggChance = 0.01
+
+[permanentPortals]
+	#Master toggle for sacrifice-activated permanent portals.
+	permanentPortalsEnabled = true
+	#Whether flint and steel can ignite permanent portal frames.
+	permanentPortalsFlintAndSteelEnabled = false
+	#Whether mossy ouranwood wood portals to Elythia can activate and function.
+	elythiaPortalEnabled = true
+	#Whether Nyxite portals to Thoraxis can activate and function.
+	thoraxisPortalEnabled = true
+	#Whether Myrmite portals to Cavaryn can activate and function.
+	cavarynPortalEnabled = true
+
+[diamondMinecart]
+	#Master toggle for the diamond minecart's custom propulsion and rail-laying behavior.
+	enabled = true
+	#Whether the cart automatically places normal rails from the rider's inventory.
+	placesRails = true
+	#Minimum maintained speed while ridden without holding W. Set to 0 for manual control.
+	# Default: 0.0
+	# Range: 0.0 ~ 2.0
+	cruiseSpeed = 0.0
+	#Maximum speed in blocks/tick when W is held. Vanilla rideable minecarts cap at 0.4.
+	# Default: 0.55
+	# Range: 0.05 ~ 2.0
+	maxSpeed = 0.55
+	#Speed gained per tick while accelerating.
+	# Default: 0.02
+	# Range: 0.001 ~ 0.5
+	acceleration = 0.02
+	#Speed lost per tick while S is held (active braking).
+	# Default: 0.05
+	# Range: 0.001 ~ 0.5
+	deceleration = 0.05
+	#Speed lost per tick when neither W nor S is held.
+	# Default: 0.02
+	# Range: 0.001 ~ 0.5
+	coastDeceleration = 0.02
+	#Whether the cart damages mobs it hits while moving.
+	mobDamageEnabled = false
+	#Maximum collision damage dealt at full speed if mob damage is enabled.
+	# Default: 4.0
+	# Range: 0.0 ~ 200.0
+	maxMobDamage = 4.0
+
+[hoverboard]
+	#Maximum hoverboard speed in blocks/tick while moving forward.
+	# Default: 6.0
+	# Range: 0.05 ~ 12.0
+	maxSpeed = 6.0
+	#Hoverboard speed gained per tick while moving forward. Lower values take longer to reach top speed.
+	# Default: 0.05
+	# Range: 0.001 ~ 1.0
+	acceleration = 0.05
+
+[world]
+	#If false, duplicator trees do not generate and duplicator saplings produce nothing.
+	duplicatorTreeEnabled = true
+	#Whether glow vines can be placed and survive when attached under leaf blocks.
+	glowVinesUnderLeaves = true
+	#If true, empty collision plants like grass do not block melee target picking.
+	swingThroughGrassEnabled = true
+	fabricKeybindingConflictFixEnabled = true
+	experimentalSettingsPopupDisabled = true
+	#If true, burning entities use soul fire / dream fire overlays where appropriate.
+	entitySpecificFireOverlayEnabled = true

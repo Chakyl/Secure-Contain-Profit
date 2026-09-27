@@ -1,0 +1,25 @@
+{
+  "title": "The Warehouse",
+  "description": "The facility you manage has one primary purpose: containing abnormalities. Because of this, your space is limited to maximize profits for the Moonlit Company. \n\nDue to your performance in the Verdant Wing, you've been given the authorization to expand your management area vertically. ",
+  "icon": {
+    "item": "scp:warehouse_expansion_card"
+  },
+  "chapter": "amber_level",
+  "sort_order": 1,
+  "include_in_main": true,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:warehouse_expansion_card",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": []
+}

@@ -17,7 +17,7 @@ EntityJSEvents.modifyEntity((e) => {
     for (let abnormality of ["scguns:cog_knight", "scguns:trauma_unit", "scguns:redcoat", "scguns:cog_minion"]) {
         e.modify(abnormality, (modifyBuilder) => {
             modifyBuilder.tick((entity) => {
-                if (entity.tickCount % 20 === 0) {
+                if (entity.tickCount % 1000 === 0) {
                     global.handleRaidUnit(entity);
                 }
             });

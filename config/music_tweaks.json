@@ -1,15 +1,15 @@
 {
-  "enabled": false,
-  "min_pursuit_entities": 4,
+  "enabled": true,
+  "min_pursuit_entities": 3,
   "decay_time": 3,
   "sounds": [
     "netherman:boss_fight",
-    "minecraft:music_disc.mellohi",
+    "netherman:church_ambient",
     "netherman:azazel_fight",
     "creaturefeature:music_disc.newagenevermore",
-    ""
+    "abyssal_decor:stranger_1n_my_head"
   ],
-  "music_frequency": "DEFAULT",
+  "music_frequency": "FREQUENT",
   "show_music_toast": true,
   "better_jukeboxes": true,
   "jukebox_distance": 64.0,

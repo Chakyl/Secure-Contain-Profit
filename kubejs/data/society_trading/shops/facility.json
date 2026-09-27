@@ -88,6 +88,7 @@
 				"id": "scp:enkephalin",
 				"count": 8
 			},
+			"stage_required": "amber_level",
 			"trade_id": "facility_scp_amber_containment_expansion_card"
 		},
 		{
@@ -99,6 +100,7 @@
 				"id": "scp:enkephalin",
 				"count": 32
 			},
+			"stage_required": "amber_level",
 			"trade_id": "facility_scp_maroon_hallway_expansion_card"
 		},
 		{
@@ -110,29 +112,20 @@
 				"id": "scp:enkephalin",
 				"count": 16
 			},
+			"stage_required": "amber_level",
 			"trade_id": "facility_scp_maroon_containment_expansion_card"
 		},
 		{
 			"offer": {
-				"id": "scp:indigo_hallway_expansion_card",
-				"count": 1
-			},
-			"request": {
-				"id": "scp:enkephalin",
-				"count": 64
-			},
-			"trade_id": "facility_scp_indigo_hallway_expansion_card"
-		},
-		{
-			"offer": {
-				"id": "scp:indigo_containment_expansion_card",
+				"id": "scp:warehouse_expansion_card",
 				"count": 1
 			},
 			"request": {
 				"id": "scp:enkephalin",
 				"count": 32
 			},
-			"trade_id": "facility_scp_indigo_containment_expansion_card"
+			"stage_required": "amber_level",
+			"trade_id": "facility_scp_warehouse_expansion_card"
 		},
 		{
 			"offer": {

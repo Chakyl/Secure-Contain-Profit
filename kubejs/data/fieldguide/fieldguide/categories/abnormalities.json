@@ -24,10 +24,6 @@
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:eeper"
-		},
-		{
-			"type": "entry",
 			"id": "creaturefeature:pathogen"
 		},
 		{
@@ -37,6 +33,10 @@
 		{
 			"type": "entry",
 			"id": "minecraft:goat"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:ouranwood_deer"
 		},
 		{
 			"type": "entry",
@@ -89,14 +89,6 @@
 		{
 			"type": "entry",
 			"id": "companions:living_candle"
-		},
-		{
-			"type": "entry",
-			"id": "netherman:statue_bossunit"
-		},
-		{
-			"type": "entry",
-			"id": "netherman:gilded_golem"
 		},
 		{
 			"type": "entry",
@@ -172,6 +164,26 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:rolly_polly"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:red_ant"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:stink_bug"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:brown_ant"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:jerry"
+		},
+		{
+			"type": "entry",
 			"id": "netherman:statue_entity"
 		},
 		{
@@ -204,6 +216,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:easter_bunny"
+		},
+		{
+			"type": "entry",
 			"id": "netherman:ghastly"
 		},
 		{
@@ -224,7 +240,19 @@
 		},
 		{
 			"type": "entry",
+			"id": "netherman:statue_bossunit"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:gilded_golem"
+		},
+		{
+			"type": "entry",
 			"id": "scguns:swarm"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:wasp"
 		},
 		{
 			"type": "entry",
@@ -248,11 +276,63 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:crawling_blight"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:skulking_fright"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:termite"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:elka"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:manticore"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:mantis"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:alpha_mantis"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:worm"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:moleworm"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:molevore"
+		},
+		{
+			"type": "entry",
 			"id": "creaturefeature:detritus"
 		},
 		{
 			"type": "entry",
 			"id": "scguns:sulfurhead"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:flytrap"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:lucid"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:vortex"
 		},
 		{
 			"type": "entry",

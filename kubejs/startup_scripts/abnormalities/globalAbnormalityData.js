@@ -34,26 +34,26 @@ global.ABNORMALITIES = new Map([
      *   VERDANT ABNORMALITIES
      */
     // Pig line
-    ["minecraft:pig", { class: "verdant", preferences: { violence: 0, insight: 2, harmony: 0 }, name: "Hog Ham", counter: 3, breachTypes: ["TELEPORT", "DECOUNT"], evolutions: ["minecraft:piglin", "minecraft:creeper"] }],
-    ["minecraft:piglin", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Human Hog", counter: 5, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
-    ["minecraft:piglin_brute", { class: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Hog Cultist", counter: 6, breachTypes: ["STEAMROLLER"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
-    ["minecraft:zombified_piglin", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 2 }, name: "Corrupted Hog", counter: 3, breachTypes: ["STEAMROLLER"] }],
-    ["minecraft:creeper", { class: "verdant", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "Little Bit of Spark", counter: 12, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:eeper"] }],
-    ["creaturefeature:eeper", { class: "verdant", preferences: { violence: 4, insight: 3, harmony: 1 }, name: "Little Bit of Sleep", counter: 7, breachTypes: [ "SLEEPING"] }],
+    ["minecraft:pig", { class: "verdant", preferences: { violence: 0, insight: 2, harmony: 0 }, name: "ZUSHI", counter: 3, breachTypes: ["TELEPORT", "DECOUNT"], evolutions: ["minecraft:piglin", "minecraft:creeper"] }],
+    ["minecraft:piglin", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Direct Line", counter: 5, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
+    ["minecraft:piglin_brute", { class: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Direct Line 2", counter: 6, breachTypes: ["STEAMROLLER"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
+    ["minecraft:zombified_piglin", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 2 }, name: "Coroner", counter: 3, breachTypes: ["STEAMROLLER"] }],
+    ["minecraft:creeper", { class: "verdant", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "Heaven Surrounds Us Like a Hood", counter: 12, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:eeper"] }],
     // Pathogen
     ["creaturefeature:pathogen", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 1 }, name: "Pathogen", counter: 3, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:minedflayer"] }],
     ["creaturefeature:minedflayer", { class: "verdant", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "According to the Mind's Flayed Eye", counter: 10, breachTypes: ["NUKE"] }],
     // Goat
-    ["minecraft:goat", { class: "verdant", preferences: { violence: 1, insight: 1, harmony: 1 }, name: "Go Goat", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo"] }],
-    ["creaturefeature:vertigo", { class: "verdant", preferences: { violence: 2, insight: 1, harmony: 1 }, name: "Verti Goat", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
+    ["minecraft:goat", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, name: "Go Goat", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo"] }],
+    ['antarchy:ouranwood_deer', { class: "verdant", preferences: { violence: 5, insight: 3, harmony: 0 }, name: "Halcyon Digest", counter: 9, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
+    ["creaturefeature:vertigo", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, name: "Verti Goat", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
     // Chicken
     ["minecraft:chicken", { class: "verdant", preferences: { violence: 0, insight: 0, harmony: 0 }, name: "Popper", counter: 3, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["creaturefeature:stained_glass", "creaturefeature:mockingbird", "peaceless:harpy"] }],
-    ["creaturefeature:stained_glass", { class: "verdant", preferences: { violence: 3, insight: 2, harmony: 1 }, name: "Whispershard", counter: 4, breachTypes: ["TELEPORT"] }],
+    ["creaturefeature:stained_glass", { class: "verdant", preferences: { violence: 3, insight: 2, harmony: 1 }, name: "Fragments Of A Lily", counter: 4, breachTypes: ["TELEPORT"] }],
     ["creaturefeature:mockingbird", { class: "verdant", preferences: { violence: 1, insight: 2, harmony: 4 }, name: "Crude Drawing of an Angel", counter: 6, breachTypes: ["ESCAPEARTIST", "SAP"] }],
     ["peaceless:harpy", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "TU AMIGO", counter: 7, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
     // Villager
     ["minecraft:villager", { class: "verdant", preferences: { violence: 4, insight: 0, harmony: 0 }, name: "The Architect", counter: 3, breachTypes: ["ESCAPEARTIST", "CHAOS"], evolutions: ["minecraft:zombie_villager", "minecraft:zombie"] }],
-    ["minecraft:zombie_villager", { class: "verdant", preferences: { violence: 0, insight: 1, harmony: 4 }, name: "The Painter", counter: 4, breachTypes: ["ESCAPEARTIST","SUPERCHAOS"], evolutions: ["creaturefeature:blossom"] }],
+    ["minecraft:zombie_villager", { class: "verdant", preferences: { violence: 0, insight: 1, harmony: 4 }, name: "The Painter", counter: 4, breachTypes: ["ESCAPEARTIST", "SUPERCHAOS"], evolutions: ["creaturefeature:blossom"] }],
     ["minecraft:zombie", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Live From Hell", counter: 4, breachTypes: ["ESCAPEARTIST", "SAP", "CHAOS"], evolutions: ["creaturefeature:minds"] }],
     ["creaturefeature:blossom", { class: "verdant", preferences: { violence: 3, insight: 3, harmony: 1 }, name: "Flatbush", counter: 4, breachTypes: ["SAP", "STEAMROLLER"] }],
     ["creaturefeature:minds", { class: "verdant", preferences: { violence: 3, insight: 1, harmony: 3 }, name: "Minehuck", counter: 2, breachTypes: ["CHAOS", "DISSOLVE"] }],
@@ -65,9 +65,6 @@ global.ABNORMALITIES = new Map([
     /**
      *   AMBER ABNORMALITIES
      */
-    // Bell
-    ["netherman:statue_bossunit", { class: "amber", preferences: { violence: 3, insight: 4, harmony: 2 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
-    ["netherman:gilded_golem", { class: "amber", preferences: { violence: 4, insight: 3, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
     // Machination
     ["creaturefeature:machination", { class: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:sinister"] }],
     ["creaturefeature:sinister", { class: "amber", preferences: { violence: 4, insight: 0, harmony: 3 }, name: "Portrait of a Lady on Fire", counter: 4, breachTypes: ["ESCAPEARTIST"] }],
@@ -93,8 +90,15 @@ global.ABNORMALITIES = new Map([
     ["companions:illager_golem", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["NUKE"] }],
     // Shade
     ["peaceless:shade", { class: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "DECOUNT", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
-    ["creaturefeature:nothing", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS","ESCAPEARTIST", "SAP", "DECOUNT"] }],
+    ["creaturefeature:nothing", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "DECOUNT"] }],
+    // [Red Ant] Rolly Polly
+    ["antarchy:rolly_polly", { class: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"] }],
+    ["antarchy:red_ant", { class: "amber", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
+    // [Brown Ant] Stink bug
+    ["antarchy:stink_bug", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"] }],
+    ["antarchy:brown_ant", { class: "amber", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // No evos
+    ["antarchy:jerry", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Jerry", counter: 8, breachTypes: ["ESCAPEARTIST", "BITE", "SUCK"] }],
     ["netherman:statue_entity", { class: "amber", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Security!", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
     ["companions:hostile_puppet_glove", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "Meteora Blues", counter: 8, breachTypes: ["CHAOS"] }],
     /**
@@ -108,7 +112,8 @@ global.ABNORMALITIES = new Map([
     ["creaturefeature:coat_of_arms", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "RAF", counter: 8, breachTypes: ["TELEPORT", "SUMMON", "SLEEPING"] }],
     // Rabbit
     ["minecraft:rabbit", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Cottagecore", counter: 8, breachTypes: ["BITE", "STEAMROLLER"] }],
-    ["creaturefeature:friend", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "DISSOLVE", "STEAMROLLER", "SUMMON"] }],
+    ["creaturefeature:friend", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "NUKE", "STEAMROLLER", "SUMMON"] }],
+    ["antarchy:easter_bunny", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Gorpcore", counter: 8, breachTypes: ["SUPERCHAOS", "BITE", "TELEPORT"] }],
     // Ghastly
     ["netherman:ghastly", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "For I Am The Light (And Mine Is The Only Way)", counter: 8, breachTypes: ["DISSOLVE", "BLIND", "DECOUNT"] }],
     ["minecraft:ghast", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "PENNSYLVANIA FURNACE", counter: 8, breachTypes: ["NUKE"] }],
@@ -116,8 +121,12 @@ global.ABNORMALITIES = new Map([
     // Dissident
     ["scguns:dissident", { class: "maroon", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Leroy", counter: 4, breachTypes: ["ESCAPEARTIST"] }],
     ["scguns:praetor", { class: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Bart", counter: 6, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
+    // Bell
+    ["netherman:statue_bossunit", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 2 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
+    ["netherman:gilded_golem", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
     // Swarm
     ["scguns:swarm", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Bugsnax", counter: 3, breachTypes: ["DISSOLVE", "SAP", "DECOUNT", "ESCAPEARTIST"] }],
+    ["antarchy:wasp", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Flamingo", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"] }],
     ["scguns:hive", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Only Acting", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
     // Allay
     ["minecraft:allay", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"] }],
@@ -125,13 +134,27 @@ global.ABNORMALITIES = new Map([
     // Mimic
     ["peaceless:mimic", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"] }],
     ["creaturefeature:runaway", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
+    // [Termite] Crawling Blight
+    ["antarchy:crawling_blight", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "YMTHLYFYMBIKWHRLYFIYBNLSPH", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:skulking_fright", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Inanimate Sensation", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:termite", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 4 }, name: "Artificial Death in the West", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    // Elka
+    ["antarchy:elka", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "BOA", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DECOUNT"] }],
+    ["antarchy:manticore", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Figueroa", counter: 3, breachTypes: ["BEGONE", "ESCAPEARTIST", "GRANDIOSE"] }],
+    // Mantis 
+    ["antarchy:mantis", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Killer Queen", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:alpha_mantis", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bites the Dust", counter: 3, breachTypes: ["DARKNESS", "NUKE", "ESCAPEARTIST"] }],
+    // Worm
+    ["antarchy:worm", { class: "maroon", preferences: { violence: 0, insight: 0, harmony: 0 }, name: "Eartheater", counter: 13, breachTypes: ["NONE"] }],
+    ["antarchy:moleworm", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:molevore", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
     // No evos
     ["creaturefeature:detritus", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST", "SUPERCHAOS"] }],
     ["scguns:sulfurhead", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Head in the Clouds", counter: 1, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
+    ["antarchy:flytrap", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"] }],
+    ["antarchy:lucid", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Rhinestone Eye", counter: 3, breachTypes: ["SLEEP", "ESCAPEARTIST",] }],
+    ["antarchy:vortex", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Cowgirl Clue", counter: 3, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"] }],
 ]);
-
-
-
 
 global.ABNORMALITY_LITTERS = new Map([
     ["companions:living_candle", { items: [{ item: "minecraft:coal", chance: 0.75 }] }],

@@ -24,19 +24,7 @@ const dropLitter = (block, x, y, z, item) => {
 global.handleAbnormality = (entity, abnormalityData) => {
     const { level } = entity;
     if (level.isClientSide()) return;
-    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
-    level.spawnParticles(
-        "companions:shade_summon",
-        true,
-        entity.x,
-        entity.y + 1.0,
-        entity.z,
-        0.3,
-        0.3,
-        0.3,
-        5,
-        0.01
-    );
+    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return
     if (!abnormalityData) return;
     let server = level.getServer();
     /**
@@ -52,6 +40,20 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
+    
+    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
+    level.spawnParticles(
+        "companions:shade_summon",
+        true,
+        entity.x,
+        entity.y + 1.0,
+        entity.z,
+        0.3,
+        0.3,
+        0.3,
+        5,
+        0.01
+    );
     /**
      * Breaching
      */
@@ -73,7 +75,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
                     level.setBlock(scanPos, 'minecraft:air', 3);
                 }
             }
-            server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.2`);
+            server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
             level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
         }
     }
@@ -170,7 +172,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
                 }
             }
         }
-        server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.2`);
+        server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
         level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
 
     }
