@@ -1,6 +1,3 @@
-
-
-![SCP - Secure Contain Profit](https://media.forgecdn.net/attachments/description/1707590/description_11be829d-ecd8-473b-9135-cdb19ac6467d.png)
 # Secure Contain Profit 
 Secure Contain Profit  is an incremental economy pack inspired by the worlds and mechanics of **SCP** and **Lobotomy Corporation**. Expand your facility to ship Enkephalin for the Moonlit Company, harvested from dangerous abnormalities.
 
