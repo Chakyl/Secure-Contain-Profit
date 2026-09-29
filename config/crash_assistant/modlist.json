@@ -698,14 +698,6 @@
     "curseForgeHash": 1843361633,
     "modrinthHash": "c04c476db9c7bc8952feba19e3cc3a6919ea0162"
   },
-  "worldedit-mod-7.3.8.jar": {
-    "jarName": "worldedit-mod-7.3.8.jar",
-    "modId": "worldedit",
-    "name": "WorldEdit",
-    "version": "7.3.8+6939-7d32b45",
-    "curseForgeHash": 683807693,
-    "modrinthHash": "924fe181a29bd66be6783f6d589968ab0ee02250"
-  },
   "xaeroworldmap-neoforge-1.21.1-1.46.0.jar": {
     "jarName": "xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
     "modId": "xaeroworldmap",

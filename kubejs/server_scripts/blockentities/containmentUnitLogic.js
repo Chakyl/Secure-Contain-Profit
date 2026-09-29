@@ -145,7 +145,6 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             }
         } else {
             global.printContainmentUnitInfo(player, server, nbt.data)
-
         }
     }
     global.updateSignalers(level, block);

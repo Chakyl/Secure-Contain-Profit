@@ -6,7 +6,24 @@
   },
   "chapter": "verdant_wing",
   "sort_order": 8,
-  "objectives": [],
-  "prerequisites": [],
-  "rewards": []
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:stat",
+      "stat": "minecraft:play_time",
+      "required_amount": 72000
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scguns:anthralite_chestplate",
+      "count": 1
+    }
+  ]
 }

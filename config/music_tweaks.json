@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "min_pursuit_entities": 3,
-  "decay_time": 3,
+  "decay_time": 5,
   "sounds": [
     "netherman:boss_fight",
     "netherman:church_ambient",
@@ -14,8 +14,8 @@
   "better_jukeboxes": true,
   "jukebox_distance": 64.0,
   "permanent_toast_in_options": true,
-  "play_toast_sound": true,
+  "play_toast_sound": false,
   "play_music_when_paused": true,
-  "log_missing_artists": true,
+  "log_missing_artists": false,
   "show_music_id_in_toast": false
 }

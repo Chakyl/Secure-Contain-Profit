@@ -6,14 +6,24 @@
   },
   "chapter": "training",
   "sort_order": 12,
-  "objectives": [],
-  "prerequisites": [
+  "objectives": [
     {
-      "type": "questlog:quest_complete",
-      "quest": "questlog:chaos",
+      "type": "questlog:read",
       "required_amount": 1
     }
   ],
-  "rewards": [],
-  "include_in_main": false
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:verdant_raids",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_research",
+      "count": 2
+    }
+  ]
 }

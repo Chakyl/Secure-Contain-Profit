@@ -1,36 +1,3 @@
-/stopsound Chakyl
-/playsound companions:pontiff_activate
-/playsound companions:holiness_appear
-/playsound companions:pop
-/playsound opposing_force:slayser_disc
-/stopsound Chakyl
-/kjs reload server-scripts
-/experience add Chakyl 4 levels
-/kjs reload startup-scripts
-/effect give Chakyl minecraft:night_vision infinite
-/kill
-/effect give Chakyl minecraft:night_vision infinite
-/data get block 55 57 73
-/data get block 55 57 102
-/data get block 8 57 103
-/kjs reload server-scripts
-/data get block 8 57 103
-/data get block 39 57 103
-//wand
-//schematic save starting_room
-//copy
-//schematic save starting_room
-/kjs hand
-/kjs stages list Chakyl
-/kjs reload server-scripts
-/kjs inventory
-/kjs reload server-scripts
-//paste
-/reload
-/kjs hand
-/ql edit_mode false
-/kill
-/ql edit_mode false
 /ql edit_mode true
 /ql edit_mode false
 /ql edit_mode true
@@ -48,3 +15,36 @@
 /addfacilitychaos 20
 /time add 24000
 /kjs reload server-scripts
+/kjs hand
+/reload
+/kjs hand
+/openselector
+/openselector @p
+/data get block 86 122 26
+/summon antarchy:stink_bug
+/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d merge {respawned:true}
+/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d merge {respawned:true,abnormality:true}
+/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d get *
+/kjs reload server-scripts
+/reload
+/ql edit_mode
+/time add 24000
+/data merge block 86 122 26 {research:3}
+/data get block 86 122 26
+/data merge block 86 122 26 {state:"RESEARCH"}
+/data get block 86 122 26
+/data merge block 86 122 26 {researchLevel:3}
+/data merge block 86 122 26 {researchLevel:3.0d}
+/data get block 86 122 26
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/ql edit_mode
+/questlog progress reset questlog:verdant_raids
+/ql edit_mode
+/questlog progress reset questlog:verdant_raids
+/ql edit_mode
+/questlog progress reset questlog:verdant_raids
+/ql edit_mode
+/questlog progress reset questlog:threat_level
+/ql edit_mode

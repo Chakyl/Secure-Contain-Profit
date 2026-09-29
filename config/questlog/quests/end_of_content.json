@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "maroon",
+      "quest": "questlog:maroon_wing",
       "required_amount": 1
     }
   ],
