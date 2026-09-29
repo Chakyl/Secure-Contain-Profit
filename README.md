@@ -10,5 +10,5 @@ Secure Contain Profit  is an incremental economy pack inspired by the worlds and
 **Combat**: Fill out your arsenal of weaponry to take down any threats and raids in your facility...
 
 # Additional Credits
-__**malcolmriley**__  - Various random textures from the unused-textures library
-__**PPEAK**__ - Main menu [music](https://ppeak.itch.io/ambiences-free)
+- __**malcolmriley**__  - Various random textures from the unused-textures library
+- __**PPEAK**__ - Main menu [music](https://ppeak.itch.io/ambiences-free)
