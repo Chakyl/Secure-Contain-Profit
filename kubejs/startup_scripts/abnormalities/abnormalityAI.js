@@ -67,6 +67,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             let { x, y, z } = entity;
 
             for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y - radius, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
+                if (pos.y <= (global.BEDROCK_Y_LEVEL + 1)) continue;
                 let scanPos = new BlockPos(pos.x, pos.y, pos.z);
                 if (!level.isLoaded(scanPos)) continue;
 

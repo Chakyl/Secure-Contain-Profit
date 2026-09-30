@@ -26,6 +26,7 @@
     "shop.society_trading.equipment.description": "General unsorted equipment. Useful stuff here!",
     "shop.society_trading.dye_depot.description": "Dye!!!",
     "shop.society_trading.security.description": "For the defence of your ancient facility.",
+    "shop.society_trading.technology.description": "Automate parts of your facility to focus on containment.",
     "shop.society_trading.storage.description": "Store things in your facility.",
     
     "tooltip.always.scp.manager_pda.0": "Your manager PDA from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
@@ -86,6 +87,14 @@
     "tooltip.always.scp.maroon_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.scp.indigo_research.0": "Right click a Containment Unit block to add one research point.",
     
+    "tooltip.always.scp.containment_unit_signaler.0": "Reads the state of the above Containment Unit and emits a redstone signal based on it",
+    "tooltip.scp.containment_unit_signaler.0": "Power map:",
+    "tooltip.scp.containment_unit_signaler.1": "- BREACH = 15",
+    "tooltip.scp.containment_unit_signaler.2": "- MAINTENANCE = 12",
+    "tooltip.scp.containment_unit_signaler.3": "- RESEARCH = 9",
+    "tooltip.scp.containment_unit_signaler.4": "- WORKABLE = 5",
+    "tooltip.scp.containment_unit_signaler.5": "- NONE = 0",
+
     "tooltip.always.vista.television.0": "When powered with redstone, plays a video based off the provided cassette. Forms multiblock screens",
     "tooltip.always.vista.viewfinder.0": "Captures live footage of the pointed area when linked with a Hollow Cassette",
     "tooltip.always.vista.hollow_cassette.0": "Right click on a viewfinder to link",

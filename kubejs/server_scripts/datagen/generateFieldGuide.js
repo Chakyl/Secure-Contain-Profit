@@ -12,12 +12,14 @@
 //     let formatName = (type) => type.charAt(0).toUpperCase() + type.slice(1);
 //     let getWorkPrefToString = (num) => {
 //         switch (num) {
+//             case -1: return "Always GOOD"
 //             case 0: return "Loved"
 //             case 1: return "Liked"
 //             case 2: return "Neutral"
 //             case 3: return "Disliked"
-//             default:
 //             case 4: return "Hated"
+//             default:
+//             case 5: return "Always BAD"
 //         }
 //     }
 //     let getWorkPreferences = (preferences) => `Work preferences:\n- Violence: ${getWorkPrefToString(preferences.violence)}\n- Insight: ${getWorkPrefToString(preferences.insight)}\n- Harmony: ${getWorkPrefToString(preferences.harmony)}`
@@ -42,7 +44,7 @@
 //         ["minecraft:chicken", { description: "It looks like a chicken, acts like a chicken. But it's not a chicken." }],
 //         ["creaturefeature:stained_glass", { description: "WIP" }],
 //         ["creaturefeature:mockingbird", { description: "Manager 019 observed 'Crude Drawing of an Angel' plastered on the rockcrete floor 45 days before encountering the evolution in the facility." }],
-//         ["peaceless:harpy", { description: "Primarily nocturnal, TU AMIGO gets it name from its habit of dragging abnormalities out of containment units. Managers should suppress with the utmost speed, to avoid these 'AMIGOS'." }],
+//         ["peaceless:harpy", { description: "Primarily nocturnal, it is advised that working procedures be done during the day to prevent the manager from being killed in the 'otherside' of the facility.\n\nTU AMIGO gets it name from its habit of dragging abnormalities out of containment units. Managers should suppress with the utmost speed, to avoid these 'AMIGOS'." }],
 //         ["minecraft:villager", { description: "Rumors say this abnormality was formed by the Moonlit company itself using T-493. It is the recommendation of the company that these rumors be met with extreme doubt." }],
 //         ["minecraft:zombie_villager", { description: "WIP" }],
 //         ["minecraft:zombie", { description: "WIP" }],

@@ -1,4 +1,6 @@
 // Priority: 1000
+global.BEDROCK_Y_LEVEL = 120;
+
 global.getDay = (level) => Number((Math.floor(Number(level.dayTime() / 24000)) + 1).toFixed());
 
 /**

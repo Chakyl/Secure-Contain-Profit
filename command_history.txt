@@ -1,16 +1,3 @@
-/ql edit_mode
-/questlog progress reset questlog:threat_level
-/ql edit_mode
-/kjs hand
-/reloda
-/reload
-/summon minecraft:zombie
-/kjs hand
-/gamerule randomTickSpeed 10000
-/gamerule randomTickSpeed 1000
-/effect give Chakyl minecraft:night_vision infinite
-/kjs hand
-/kjs reload server-scripts
 /reload
 /fieldguide grant Chakyl everything
 /gamerule randomTickSpeed
@@ -48,3 +35,16 @@
 /kjs reload startup-scripts
 /kjs reload server-scripts
 /reload
+/kjs hand
+/data get block 4 120 0
+/setblock 4 120 0 air
+/setblock 4 120 0 minecraft:bedrock
+/kjs reload startup-scripts
+/addfacilitychaos 200
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/fieldguide grant Chakyl everything
+/effect clear
+/effect give Chakyl minecraft:darkness infinite

@@ -123,9 +123,9 @@ const getResearchBuff = (researchLevel) => {
 const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
     if (!abnormalityData) return { result: "BAD", efficiency: -1 };
     let abnormalityPref = abnormalityData.preferences[workType];
-    if (abnormalityPref == 0) return { result: "GOOD", efficiency: 1 };
-    if (abnormalityPref == 4) return { result: "BAD", efficiency: 0 };
-    let eff = workLevel / abnormalityPref;
+    if (abnormalityPref == -1) return { result: "GOOD", efficiency: 1 };
+    if (abnormalityPref == 5) return { result: "BAD", efficiency: 0 };
+    let eff = workLevel / (abnormalityPref + 1);
     eff -= getTierDebuff(abnormalityData.class);
     eff += getResearchBuff(researchLevel);
     if (eff > 0.75) return { result: "GOOD", efficiency: eff };
