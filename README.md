@@ -1,6 +1,3 @@
-
-
-![SCP - Secure Contain Profit](https://media.forgecdn.net/attachments/description/1707590/description_11be829d-ecd8-473b-9135-cdb19ac6467d.png)
 # Secure Contain Profit 
 Secure Contain Profit  is an incremental economy pack inspired by the worlds and mechanics of **SCP** and **Lobotomy Corporation**. Expand your facility to ship Enkephalin for the Moonlit Company, harvested from dangerous abnormalities.
 
@@ -13,5 +10,5 @@ Secure Contain Profit  is an incremental economy pack inspired by the worlds and
 **Combat**: Fill out your arsenal of weaponry to take down any threats and raids in your facility...
 
 # Additional Credits
-__**malcolmriley**__  - Various random textures from the unused-textures library
-__**PPEAK**__ - Main menu [music](https://ppeak.itch.io/ambiences-free)
+- __**malcolmriley**__  - Various random textures from the unused-textures library
+- __**PPEAK**__ - Main menu [music](https://ppeak.itch.io/ambiences-free)
