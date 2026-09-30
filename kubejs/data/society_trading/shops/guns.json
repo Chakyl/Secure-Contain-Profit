@@ -166,9 +166,9 @@
 			},
 			"second_request": {
 				"id": "numismatics:sun",
-				"count": 16
+				"count": 8
 			},
-			"numismatics_cost": 65536,
+			"numismatics_cost": 32768,
 			"trade_id": "guns_scguns_lockewood"
 		},
 		{
@@ -182,9 +182,9 @@
 			},
 			"second_request": {
 				"id": "numismatics:sun",
-				"count": 16
+				"count": 8
 			},
-			"numismatics_cost": 65536,
+			"numismatics_cost": 32768,
 			"trade_id": "guns_scguns_spirulida"
 		},
 		{
@@ -198,9 +198,9 @@
 			},
 			"second_request": {
 				"id": "numismatics:sun",
-				"count": 16
+				"count": 8
 			},
-			"numismatics_cost": 65536,
+			"numismatics_cost": 32768,
 			"trade_id": "guns_scguns_iron_javelin"
 		},
 		{

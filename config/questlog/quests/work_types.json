@@ -1,6 +1,6 @@
 {
   "title": "Work Types",
-  "description": "Syringes are not a recommended long term solution for harvesting Enkephalin as they irritate abnormalities. \n\nManagers can use one of three work types to harvest from Abnormalities:\n- Violence \n- Insight\n- Harmony\n\nAbnormalities all have work types they prefer and dislike. It is up to the Manager to figure this out for themselves.\n\nEach work type has tools associated with it for purchase from the Moonlit Company.\n",
+  "description": "Syringes are not a recommended long term solution for harvesting Enkephalin as they irritate abnormalities. \n\nManagers can use one of three work types to harvest from Abnormalities:\n- Violence \n- Insight\n- Harmony\n\nAbnormalities all have work types they prefer and dislike. It is up to the Manager to figure this out for themselves.\n\nAdditionally, the research level of an abnormality has a positive impact on work success rate.\n\nEach work type has tools associated with it for purchase from the Moonlit Company.\n",
   "icon": {
     "item": "supplementaries:flute"
   },

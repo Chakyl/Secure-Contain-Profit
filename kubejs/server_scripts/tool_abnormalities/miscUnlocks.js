@@ -5,7 +5,9 @@ BlockEvents.rightClicked('companions:frog_bonanza_block', (e) => {
     if (!['numismatics:sprocket', 'numismatics:cog', 'numismatics:crown'].includes(item.id)) return;
     FieldGuide.unlock(player, `block:companions/frog_bonanza_block`);
 });
-
+BlockEvents.placed("scp:rubber_duck", (e) => {
+    FieldGuide.unlock(e.player, `block:scp/rubber_duck`);
+});
 BlockEvents.placed("scp:rubber_duck", (e) => {
     FieldGuide.unlock(e.player, `block:scp/rubber_duck`);
 });

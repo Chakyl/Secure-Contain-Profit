@@ -40,7 +40,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
-    
+
     if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
     level.spawnParticles(
         "companions:shade_summon",
@@ -144,13 +144,16 @@ global.handleAbnormality = (entity, abnormalityData) => {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("scguns:sulfur_smoke", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 4, 1.01);
             entities.forEach((scanEnt) => {
-               setEffectByTrait(scanEnt, breachTypes);
+                setEffectByTrait(scanEnt, breachTypes);
             });
         }
     }
     // Facility Disasters
     if (entity.tickCount % 600 == 0 && (breachTypes.includes("SUPER") || breachTypes.includes("CHAOS"))) {
         global.addChaos(server, level.getBlock(entity.getOnPos()), breachTypes.includes("CHAOS") ? 1 : 3);
+    }
+    if (entity.tickCount % 600 == 0 && breachTypes.includes("CLANKER")) {
+        global.addDisrepair(server, level.getBlock(entity.getOnPos()), 1);
     }
     if (Math.random() < 0.15 && breachTypes.includes("DECOUNT")) {
         let radius = 4;

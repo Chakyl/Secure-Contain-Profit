@@ -9,7 +9,6 @@ BlockEvents.rightClicked('whimsy_deco:horseshoe', (e) => {
         if (!level.isLoaded(pos)) continue;
         let scanBlock = level.getBlock(pos);
         if (scanBlock.id == "scp:containment_unit") {
-
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 global.printContainmentUnitInfo(player, server, nbt.data)

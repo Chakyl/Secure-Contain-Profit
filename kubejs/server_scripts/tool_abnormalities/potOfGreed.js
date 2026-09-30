@@ -11,9 +11,9 @@ BlockEvents.rightClicked('companions:porcelain_pottery', (e) => {
         server.runCommandSilent(`playsound netherman:whisper block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
         block.set('companions:holy_porcelain_pottery');
         let itemEntity = block.createEntity('item')
-        itemEntity.x = x
-        itemEntity.y = y + 0.2
-        itemEntity.z = z
+        itemEntity.x = block.x
+        itemEntity.y = block.y + 1.2
+        itemEntity.z = block.z
         itemEntity.item = Item.of(`16x scp:enkephalin`);
         itemEntity.spawn()
         FieldGuide.unlock(player, `block:companions/porcelain_pottery`);

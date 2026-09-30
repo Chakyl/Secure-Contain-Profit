@@ -54,7 +54,9 @@
     "tooltip.scguns.needle.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
     "tooltip.always.companions.netherite_dagger.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.companions.netherite_dagger.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence II</ltcolor>",
-    "tooltip.companions.netherite_dagger.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
+    "tooltip.always.scp.soul_needle.0":  "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scp.soul_needle.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence I-IV</ltcolor>. Correlates negatively to user's <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;HP</ltcolor>.",
+    "tooltip.scp.soul_needle.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
 
     "tooltip.always.minecraft.book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.minecraft.book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I</ltcolor>",
@@ -62,6 +64,9 @@
     "tooltip.always.scp.spiritual_book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.scp.spiritual_book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight II</ltcolor>",
     "tooltip.scp.spiritual_book.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
+    "tooltip.always.scp.black_opal.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scp.black_opal.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I-IV</ltcolor>. Correlates positively to user's <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
+    "tooltip.scp.black_opal.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
 
     "tooltip.always.supplementaries.flute.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.supplementaries.flute.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony I</ltcolor>",
@@ -69,6 +74,13 @@
     "tooltip.always.minecraft.goat_horn.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.minecraft.goat_horn.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony II</ltcolor>",
     "tooltip.minecraft.goat_horn.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
+    "tooltip.always.scp.tubasmoke_stick.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin. Consumed after use.",
+    "tooltip.always.scp.tubasmoke_stick.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony III</ltcolor>",
+    "tooltip.scp.tubasmoke_stick.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
+    "tooltip.always.placeholder.placeholder.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.placeholder.placeholder.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony I-IV</ltcolor>. Correlates positively to user's <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Bank Account</ltcolor>.",
+    "tooltip.placeholder.placeholder.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
+
     "tooltip.always.scp.verdant_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.scp.amber_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.scp.maroon_research.0": "Right click a Containment Unit block to add one research point.",
@@ -82,6 +94,8 @@
     "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
     "block.scp.spoon_bender": "Abnormality T-010",
     "tooltip.always.scp.spoon_bender.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Spoon Bender</ltcolor>",
+    "item.scp.deaths_dynamic_shroud": "Abnormality T-008",
+    "tooltip.always.scp.deaths_dynamic_shroud.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Death's Dynamic Shroud</ltcolor>",
 
     "tooltip.always.scguns.polar_generator.0": "Generates power from burnable fuel",
     "tooltip.always.scguns.lightning_battery.0": "Stores power",

@@ -32,6 +32,9 @@
 //             { stageRequired: "amber_level", item: "companions:netherite_dagger", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
 //             { stageRequired: "amber_level", item: "minecraft:goat_horn", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
 //             { stageRequired: "amber_level", item: "scp:spiritual_book", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+//             { stageRequired: "maroon_level", item: "scp:soul_needle", count: 1, numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+//             { stageRequired: "maroon_level", item: "scp:tubasmoke_stick", count: 1, itemCost1: { item: 'scp:enkephalin', count: 1 } },
+//             { stageRequired: "maroon_level", item: "scp:black_opal", count: 1, numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 16 } }
 //         ]
 //     },
 //     {
@@ -111,9 +114,9 @@
 //             { item: "scguns:greaser_smg", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
 //             { item: "scguns:grandle_og", numiCost: 16384, itemCost1: { item: 'scp:enkephalin', count: 8 } },
 
-//             { item: "scguns:lockewood", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
-//             { item: "scguns:spirulida", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
-//             { item: "scguns:iron_javelin", numiCost: 65536, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+//             { item: "scguns:lockewood", numiCost: 32768, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+//             { item: "scguns:spirulida", numiCost: 32768, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+//             { item: "scguns:iron_javelin", numiCost: 32768, itemCost1: { item: 'scp:enkephalin', count: 16 } },
 
 //             { item: "scguns:callwell_terminal", numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 1 } },
 //             { item: "scguns:combat_shotgun", numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 4 } },
@@ -190,6 +193,7 @@
 //             { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
 //             { item: 'abyssal_decor:bottomless_bag_of_dirt', count: 1, numiCost: 1024 },
 //             { item: 'minecraft:enchanting_table', count: 1, numiCost: 1024 },
+//             { item: 'scp:deaths_dynamic_shroud', count: 1, numiCost: 8192 },
 //             { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
 //             { item: "scp:rubber_duck", count: 1, numiCost: 4096 },
 //             { item: "scp:spoon_bender", count: 1, numiCost: 4096 },

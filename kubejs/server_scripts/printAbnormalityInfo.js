@@ -17,6 +17,7 @@ const handleInfo = (level, server, player, abnormality, radius) => {
                             FieldGuide.unlock(player, `entity:${abnormality.type.replace(":", "/")}`)
                         }
                     }
+                    abnormality.persistentData.researchLevel = nbt.data.researchLevel ? nbt.data.getInt("researchLevel") : 0;
                     global.printContainmentUnitInfo(player, server, nbt.data)
                     return true;
                 }

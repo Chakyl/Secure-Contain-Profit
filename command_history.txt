@@ -1,50 +1,50 @@
-/ql edit_mode true
-/ql edit_mode false
-/ql edit_mode true
-/summon scguns:subjugator
-/difficulty normal
-/summon scguns:subjugator
-/reload
-/kjs reload server-scripts
-/kjs hand
-/reload
-/kjs inventory
-/kjs hand
-/reload
-/kjs reload server-scripts
-/addfacilitychaos 20
-/time add 24000
-/kjs reload server-scripts
-/kjs hand
-/reload
-/kjs hand
-/openselector
-/openselector @p
-/data get block 86 122 26
-/summon antarchy:stink_bug
-/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d merge {respawned:true}
-/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d merge {respawned:true,abnormality:true}
-/kjs persistent-data entity 57e930e8-1a36-4e10-b2db-4abb9874a76d get *
-/kjs reload server-scripts
-/reload
-/ql edit_mode
-/time add 24000
-/data merge block 86 122 26 {research:3}
-/data get block 86 122 26
-/data merge block 86 122 26 {state:"RESEARCH"}
-/data get block 86 122 26
-/data merge block 86 122 26 {researchLevel:3}
-/data merge block 86 122 26 {researchLevel:3.0d}
-/data get block 86 122 26
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/ql edit_mode
-/questlog progress reset questlog:verdant_raids
-/ql edit_mode
-/questlog progress reset questlog:verdant_raids
-/ql edit_mode
-/questlog progress reset questlog:verdant_raids
 /ql edit_mode
 /questlog progress reset questlog:threat_level
 /ql edit_mode
+/kjs hand
+/reloda
+/reload
+/summon minecraft:zombie
+/kjs hand
+/gamerule randomTickSpeed 10000
+/gamerule randomTickSpeed 1000
+/effect give Chakyl minecraft:night_vision infinite
+/kjs hand
+/kjs reload server-scripts
+/reload
+/fieldguide grant Chakyl everything
+/gamerule randomTickSpeed
+/gamerule randomTickSpeed 1
+/kjs hand
+/kjs reload server-scripts
+/summon minecraft:sheep
+/particle scguns:plasma_explosion
+/particle scguns:sulfur_dust
+/particle scguns:plasma_explosion -85 77 -26
+/particle scguns:sulfur_dust -85 77 -26
+/particle supplementaries:bomb_smoke -85 77 -26
+/particle minecraft:large_smoke -85 77 -26
+/particle supplementaries:bomb_smoke -85 77 -26
+/kjs reload server-scripts
+/kjs hand
+/kjs reload server-scripts
+/kjs persistent-data entity 8a0e634a-d46e-4703-a220-613a50bc7dbb get
+/kjs persistent-data entity 8a0e634a-d46e-4703-a220-613a50bc7dbb get *
+/kjs reload server-scripts
+/ql edit_mode
+/tp Chakyl -93 ~ -36
+/tp Chakyl -93 -36 ~
+/tp Chakyl -93 ~ -36
+/tp Chakyl -93 ~ 36
+/tp Chakyl -93 122 36
+/tp Chakyl -93 ~ -36
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/tp @e[type=scguns:hive] Chakyl
+/tp @e[type=scguns:swarm] Chakyl
+/kjs reload server-scripts
+/reload
+/kjs reload startup-scripts
+/kjs reload server-scripts
+/reload

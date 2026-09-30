@@ -101,12 +101,33 @@ const dropShard = (block) => {
     itemEntity.item = 'reliable_requiem:crystal_shard';
     itemEntity.spawn()
 };
-
-const getWorkResult = (abnormalityData, workType, workLevel) => {
+const getTierDebuff = (abnormalityClass) => {
+    switch (abnormalityClass) {
+        case "amber": return 0.1
+        case "maroon": return 0.2
+        case "indigo": return 0.3
+        default:
+        return 0;
+    }
+}
+const getResearchBuff = (researchLevel) => {
+    switch (researchLevel) {
+        case 1: return 0.05
+        case 2: return 0.1
+        case 3: return 0.15
+        case 4: return 0.2
+        default:
+        return 0;
+    }
+}
+const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
     if (!abnormalityData) return { result: "BAD", efficiency: -1 };
     let abnormalityPref = abnormalityData.preferences[workType];
     if (abnormalityPref == 0) return { result: "GOOD", efficiency: 1 };
+    if (abnormalityPref == 4) return { result: "BAD", efficiency: 0 };
     let eff = workLevel / abnormalityPref;
+    eff -= getTierDebuff(abnormalityData.class);
+    eff += getResearchBuff(researchLevel);
     if (eff > 0.75) return { result: "GOOD", efficiency: eff };
     if (eff < 0.25) return { result: "BAD", efficiency: eff };
     if (Math.random() < eff) return { result: "BAD", efficiency: eff };
@@ -145,7 +166,7 @@ const printWorkResult = (player, server, workResult) => {
 
 const processWork = (level, server, player, abnormality, radius, workType, workLevel, item) => {
     let abnormalityData = global.ABNORMALITIES.get(`${abnormality.type}`);
-    let workResult = getWorkResult(abnormalityData, workType, workLevel)
+    let workResult = getWorkResult(abnormalityData, workType, workLevel, abnormality.persistentData.getInt("researchLevel"))
     let processed = false;
     // TODO: Sounds, effects
     if (workResult.result == "GOOD") {
@@ -156,7 +177,6 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
             } else if (workType == "insight") {
                 player.giveExperienceLevels(1)
             } else {
-
                 dropCog(level.getBlock(player.getOnPos()));
             }
         }
@@ -200,6 +220,21 @@ ItemEvents.entityInteracted((e) => {
     if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;
     processWork(level, server, player, target, 8, "insight", 2);
 });
+
+const getBlackOpalInsight = (experienceLevel) => {
+    if (experienceLevel > 10) return 2;
+    if (experienceLevel > 20) return 3;
+    if (experienceLevel > 30) return 4;
+    return 1;
+}
+
+ItemEvents.entityInteracted((e) => {
+    const { item, target, player, level, hand, server } = e;
+    if (hand !== "MAIN_HAND") return;
+    if (item.id != 'scp:black_opal') return;
+    if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;
+    processWork(level, server, player, target, 8, "insight", getBlackOpalInsight(player.experienceLevel));
+});
 /**
  * Harmony
  */
@@ -217,7 +252,6 @@ ItemEvents.rightClicked('supplementaries:flute', (e) => {
     })
 })
 
-
 ItemEvents.rightClicked('minecraft:goat_horn', (e) => {
     const { player, level, server } = e;
     let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
@@ -225,6 +259,35 @@ ItemEvents.rightClicked('minecraft:goat_horn', (e) => {
         processWork(level, server, player, nearestAb[0], 8, "harmony", 2);
     }
 })
+
+let rnd = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+ItemEvents.rightClicked('scp:tubasmoke_stick', (e) => {
+    const { player, level, item, server } = e;
+    let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
+    if (nearestAb && nearestAb.length > 0) {
+        server.runCommandSilent(
+            `playsound minecraft:item.flintandsteel.use block @a ${player.x} ${player.y} ${player.z}`
+        );
+        item.count--;
+        level.spawnParticles(
+            "supplementaries:bomb_smoke",
+            true,
+            player.x,
+            player.y + 1,
+            player.z,
+            0.1 * rnd(1, 6),
+            0.1 * rnd(1, 4),
+            0.1 * rnd(1, 4),
+            22,
+            0.001
+        );
+        processWork(level, server, player, nearestAb[0], 8, "harmony", 3);
+    } else {
+        player.tell(Text.gray("There's no abnormalities nearby..."))
+    }
+});
 
 /**
  * Violence
@@ -236,10 +299,25 @@ EntityEvents.afterHurt((e) => {
     if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
     processWork(level, server, source.player, entity, 8, "violence", 1);
 });
+
 EntityEvents.afterHurt((e) => {
     const { level, server, entity, source } = e;
     if (!source.player) return;
     if (source.player.getHeldItem("main_hand").id != 'companions:netherite_dagger') return;
     if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
     processWork(level, server, source.player, entity, 8, "violence", 2);
+});
+
+const getSoulNeedleViolence = (health) => {
+    if (health <= 10) return 4;
+    if (health <= 20) return 3;
+    if (health <= 30) return 2;
+    return 1;
+}
+EntityEvents.afterHurt((e) => {
+    const { level, server, entity, source } = e;
+    if (!source.player) return;
+    if (source.player.getHeldItem("main_hand").id != 'scp:soul_needle') return;
+    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
+    processWork(level, server, source.player, entity, 8, "violence", getSoulNeedleViolence(source.player.getHealth()));
 });

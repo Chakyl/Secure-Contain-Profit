@@ -13,6 +13,8 @@
  *   - [x] GRANDIOSE - Instantly adds 1 threat level upon breaching
  *   - [x] CHAOS - Adds CHAOS
  *   - [x] SUPERCHAOS - Adds a LOT of Chaos
+ *   - [x] CLANKER - Adds disrepair
+ *   - [x] CLANKER - Adds disrepair
  *   - [x] SAP - Reduces health of nearby entities
  *   - [x] BITE - Reduces health of nearby entities significantly at a lower range
  *   - [x] DARKNESS - Darknesses nearby entities
@@ -81,13 +83,13 @@ global.ABNORMALITIES = new Map([
     ["minecraft:blaze", { class: "amber", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Blaze Bird", counter: 6, breachTypes: ["TELEPORT"] }],
     // Turtle
     ["minecraft:turtle", { class: "amber", preferences: { violence: 4, insight: 0, harmony: 0 }, name: "EoO", counter: 6, breachTypes: ["NOTHING"], evolutions: ["peaceless:shrapin"] }],
-    ["peaceless:shrapin", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["STEAMROLLER"] }],
+    ["peaceless:shrapin", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["SUMMON", "SUCK"] }],
     // Beauty
     ["creaturefeature:beauty", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "Pagan Poetry", counter: 3, breachTypes: ["ESCAPEARTIST", "DISSOLVE"], evolutions: ["creaturefeature:fiend"] }],
     ["creaturefeature:fiend", { class: "amber", preferences: { violence: 1, insight: 1, harmony: 3 }, name: "All Neon Like", counter: 2, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
     // Dinamo
     ["companions:broken_dinamo", { class: "amber", preferences: { violence: 0, insight: 0, harmony: 0 }, name: "Baby Blue", counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:illager_golem"] }],
-    ["companions:illager_golem", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["NUKE"] }],
+    ["companions:illager_golem", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["CLANKER", "SUCK"] }],
     // Shade
     ["peaceless:shade", { class: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "DECOUNT", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
     ["creaturefeature:nothing", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "DECOUNT"] }],
@@ -108,57 +110,56 @@ global.ABNORMALITIES = new Map([
     ["scguns:viventrum", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Mchngrl", counter: 8, breachTypes: ["NUKE"], evolutions: ["creaturefeature:canary"] }],
     ["creaturefeature:canary", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 4 }, name: "Bitten Twice", counter: 8, breachTypes: ["DISSOLVE", "NUKE", "STEAMROLLER"] }],
     // Manipulator
-    ["netherman:manipulator", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 4 }, name: "Quavo", counter: 8, breachTypes: ["SLEEPING", "DARKNESS"], evolutions: ["creaturefeature:coat_of_arms"] }],
-    ["creaturefeature:coat_of_arms", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 4 }, name: "RAF", counter: 8, breachTypes: ["TELEPORT", "SUMMON", "SLEEPING"] }],
+    ["netherman:manipulator", { class: "maroon", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Quavo", counter: 8, breachTypes: ["SLEEPING", "DARKNESS"], evolutions: ["creaturefeature:coat_of_arms"] }],
+    ["creaturefeature:coat_of_arms", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "RAF", counter: 8, breachTypes: ["TELEPORT", "SUMMON", "SLEEPING"] }],
     // Rabbit
-    ["minecraft:rabbit", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Cottagecore", counter: 8, breachTypes: ["BITE", "STEAMROLLER"], evolutions: ["creaturefeature:friend", "antarchy:easter_bunny"] }],
-    ["creaturefeature:friend", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "NUKE", "STEAMROLLER", "SUMMON"] }],
-    ["antarchy:easter_bunny", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Gorpcore", counter: 8, breachTypes: ["SUPERCHAOS", "BITE", "TELEPORT"] }],
+    ["minecraft:rabbit", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Cottagecore", counter: 8, breachTypes: ["BITE", "STEAMROLLER"], evolutions: ["creaturefeature:friend", "antarchy:easter_bunny"] }],
+    ["creaturefeature:friend", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 2 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "NUKE", "STEAMROLLER", "SUMMON"] }],
+    ["antarchy:easter_bunny", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Gorpcore", counter: 8, breachTypes: ["SUPERCHAOS", "BITE", "TELEPORT"] }],
     // Ghastly
-    ["netherman:ghastly", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "For I Am The Light (And Mine Is The Only Way)", counter: 8, breachTypes: ["DISSOLVE", "BLIND", "DECOUNT"], evolutions: ["minecraft:ghast"] }],
-    ["minecraft:ghast", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "PENNSYLVANIA FURNACE", counter: 8, breachTypes: ["NUKE"], evolutions: ["scguns:mother_ghast"] }],
-    ["scguns:mother_ghast", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Big Autumn Ghastjam", counter: 8, breachTypes: ["NUKE", "CHAOS", "BEGONE"] }],
+    ["netherman:ghastly", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 2 }, name: "For I Am The Light (And Mine Is The Only Way)", counter: 8, breachTypes: ["DISSOLVE", "BLIND", "DECOUNT"], evolutions: ["minecraft:ghast"] }],
+    ["minecraft:ghast", { class: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "PENNSYLVANIA FURNACE", counter: 8, breachTypes: ["NUKE"], evolutions: ["scguns:mother_ghast"] }],
+    ["scguns:mother_ghast", { class: "maroon", preferences: { violence: 2, insight: 3, harmony: 2 }, name: "Big Autumn Ghastjam", counter: 8, breachTypes: ["NUKE", "CHAOS", "BEGONE"] }],
     // Dissident
     ["scguns:dissident", { class: "maroon", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Leroy", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["scguns:praetor"] }],
     ["scguns:praetor", { class: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Bart", counter: 6, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
     // Bell
-    ["netherman:statue_bossunit", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 2 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
-    ["netherman:gilded_golem", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
+    ["netherman:statue_bossunit", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 1 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
+    ["netherman:gilded_golem", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
     // Swarm
-    ["scguns:swarm", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Bugsnax", counter: 3, breachTypes: ["DISSOLVE", "SAP", "DECOUNT", "ESCAPEARTIST"], evolutions: ["antarchy:wasp", "scguns:hive"] }],
-    ["antarchy:wasp", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Flamingo", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"] }],
-    ["scguns:hive", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Only Acting", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
+    ["antarchy:wasp", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bugsnax", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"], evolutions: ["scguns:hive"] }],
+    ["scguns:hive", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Only Acting", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
     // Allay
-    ["minecraft:allay", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
-    ["companions:golden_allay", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"] }],
+    ["minecraft:allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
+    ["companions:golden_allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"] }],
     // Mimic
-    ["peaceless:mimic", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:runaway"] }],
-    ["creaturefeature:runaway", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
+    ["peaceless:mimic", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:runaway"] }],
+    ["creaturefeature:runaway", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
     // [Termite] Crawling Blight
     ["antarchy:crawling_blight", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "YMTHLYFYMBIKWHRLYFIYBNLSPH", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:skulking_fright"] }],
     ["antarchy:skulking_fright", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Inanimate Sensation", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:termite"] }],
-    ["antarchy:termite", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 4 }, name: "Artificial Death in the West", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:termite", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Artificial Death in the West", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
     // Elka
-    ["antarchy:elka", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "BOA", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DECOUNT"], evolutions: ["antarchy:manticore"] }],
-    ["antarchy:manticore", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Figueroa", counter: 3, breachTypes: ["BEGONE", "ESCAPEARTIST", "GRANDIOSE"] }],
+    ["antarchy:elka", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 1 }, name: "BOA", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DECOUNT"], evolutions: ["antarchy:manticore"] }],
+    ["antarchy:manticore", { class: "maroon", preferences: { violence: 2, insight: 3, harmony: 3 }, name: "Figueroa", counter: 3, breachTypes: ["BEGONE", "ESCAPEARTIST", "GRANDIOSE"] }],
     // Mantis 
     ["antarchy:mantis", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Killer Queen", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:alpha_mantis"] }],
     ["antarchy:alpha_mantis", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bites the Dust", counter: 3, breachTypes: ["DARKNESS", "NUKE", "ESCAPEARTIST"] }],
     // Worm
     ["antarchy:worm", { class: "maroon", preferences: { violence: 0, insight: 0, harmony: 0 }, name: "Eartheater", counter: 13, breachTypes: ["NONE"], evolutions: ["antarchy:moleworm"] }],
-    ["antarchy:moleworm", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:molevore"] }],
-    ["antarchy:molevore", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
+    ["antarchy:moleworm", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:molevore"] }],
+    ["antarchy:molevore", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
     // No evos
-    ["creaturefeature:detritus", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST", "SUPERCHAOS"] }],
-    ["scguns:sulfurhead", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Head in the Clouds", counter: 1, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
-    ["antarchy:flytrap", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"] }],
-    ["antarchy:lucid", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Rhinestone Eye", counter: 3, breachTypes: ["SLEEP", "ESCAPEARTIST",] }],
-    ["antarchy:vortex", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 3 }, name: "Cowgirl Clue", counter: 3, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"] }],
+    ["creaturefeature:detritus", { class: "maroon", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST", "SUPERCHAOS"] }],
+    ["scguns:sulfurhead", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Head in the Clouds", counter: 1, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
+    ["antarchy:flytrap", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 2 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"] }],
+    ["antarchy:lucid", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Rhinestone Eye", counter: 3, breachTypes: ["SLEEP", "ESCAPEARTIST",] }],
+    ["antarchy:vortex", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 2 }, name: "Cowgirl Clue", counter: 3, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"] }],
 ]);
 
 global.ABNORMALITY_LITTERS = new Map([
     ["companions:living_candle", { items: [{ item: "minecraft:coal", chance: 0.75 }] }],
-    ["scguns:sulfurhead", { items: [{ item: 'scguns:sulfur_chunk', chance: 0.2 }] }],
-    ["creaturefeature:blossom", { items: [{ item: "minecraft:oak_sapling", chance: 0.5 }] }],
-    ["creaturefeature:beauty", { items: [{ item: "minecraft:oak_sapling", chance: 0.5 }] }],
+    ["scguns:sulfurhead", { items: [{ item: 'scguns:sulfur_chunk', chance: 0.32 }] }],
+    ["creaturefeature:blossom", { items: [{ item: "minecraft:oak_sapling", chance: 0.45 }] }],
+    ["creaturefeature:beauty", { items: [{ item: "minecraft:oak_sapling", chance: 0.45 }] }],
 ])

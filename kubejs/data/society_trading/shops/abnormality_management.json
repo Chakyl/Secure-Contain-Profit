@@ -121,6 +121,52 @@
 			"numismatics_cost": 1024,
 			"stage_required": "amber_level",
 			"trade_id": "abnormality_management_scp_spiritual_book"
+		},
+		{
+			"offer": {
+				"id": "scp:soul_needle",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"stage_required": "maroon_level",
+			"trade_id": "abnormality_management_scp_soul_needle"
+		},
+		{
+			"offer": {
+				"id": "scp:tubasmoke_stick",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 1
+			},
+			"stage_required": "maroon_level",
+			"trade_id": "abnormality_management_scp_tubasmoke_stick"
+		},
+		{
+			"offer": {
+				"id": "scp:black_opal",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 16
+			},
+			"second_request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"stage_required": "maroon_level",
+			"trade_id": "abnormality_management_scp_black_opal"
 		}
 	]
 }

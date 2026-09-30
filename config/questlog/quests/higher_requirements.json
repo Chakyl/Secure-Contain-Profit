@@ -1,0 +1,30 @@
+{
+  "title": "Higher Tier Abnormalities",
+  "description": "Verdant abnormalities are for all intents and purposes, fairly standard and easy to work with.\n\nThe same cannnot be said for Amber and higher tiers of abnormalities. These have lower work success rates, more disliked work types, and are generally more difficult to contain or world altering in some way.\n\nMake use of your income from trading with the Moonlit Company to obtain more powerful means of containment.",
+  "icon": {
+    "item": "supplementaries:trapped_present_maroon"
+  },
+  "chapter": "amber_level",
+  "sort_order": 1,
+  "include_in_main": true,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "numismatics:sun",
+      "count": 1
+    }
+  ]
+}

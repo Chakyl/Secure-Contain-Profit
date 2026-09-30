@@ -6,8 +6,13 @@ BlockEvents.rightClicked('scguns:anthralite_lamp', (e) => {
         player.tell("§7Right click with Enkephalin to sell to the Moonlit Company.")
         return;
     }
-    item.shrink(1)
-    player.give("numismatics:crown")
+    if (player.isCrouching()) {
+        player.give(Item.of(`${item.count}x numismatics:crown`))
+        item.count = 0;
+    } else {
+        item.shrink(1)
+        player.give("numismatics:crown")
+    }
     server.runCommandSilent(`playsound opposing_force:laser_bolt_impact block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
 }
 );

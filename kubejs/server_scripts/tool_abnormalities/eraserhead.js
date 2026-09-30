@@ -1,4 +1,4 @@
-const $REGISTRIES = Java.loadClass('net.minecraft.core.registries.Registries');
+const $Registries = Java.loadClass('net.minecraft.core.registries.Registries');
 
 let hasDupe = (enchants, enchantmentKey, registry) => {
     let alreadyHas = false;
@@ -17,7 +17,7 @@ BlockEvents.rightClicked('minecraft:enchanting_table', (e) => {
         player.tell(Text.darkRed("You don't have enough experience I'm afraid..."));
         e.cancel();
     }
-    let registry = level.registryAccess().registryOrThrow($REGISTRIES.ENCHANTMENT);
+    let registry = level.registryAccess().registryOrThrow($Registries.ENCHANTMENT);
     let enchantments = registry.stream().filter(enchantment => enchantment.canEnchant(item)).toList();
     if (enchantments.length === 0) {
         player.tell(Text.darkRed("I can't do anything with that..."));

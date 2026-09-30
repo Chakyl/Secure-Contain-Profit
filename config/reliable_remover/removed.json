@@ -390,7 +390,8 @@
             "ae2:growth_accelerator",
             "ae2:energy_cell",
             "ae2:crafting_unit",
-            "ae2:crafting_accelerator"
+            "ae2:crafting_accelerator",
+            "#minecraft:boats"
         ]
     }
 ]

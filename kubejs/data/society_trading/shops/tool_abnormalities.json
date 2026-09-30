@@ -85,6 +85,18 @@
 		},
 		{
 			"offer": {
+				"id": "scp:deaths_dynamic_shroud",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 2
+			},
+			"numismatics_cost": 8192,
+			"trade_id": "tool_abnormalities_scp_deaths_dynamic_shroud"
+		},
+		{
+			"offer": {
 				"id": "companions:frog_bonanza_block",
 				"count": 1
 			},

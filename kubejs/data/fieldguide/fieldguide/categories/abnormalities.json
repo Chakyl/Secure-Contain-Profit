@@ -248,10 +248,6 @@
 		},
 		{
 			"type": "entry",
-			"id": "scguns:swarm"
-		},
-		{
-			"type": "entry",
 			"id": "antarchy:wasp"
 		},
 		{
@@ -364,6 +360,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "scp:deaths_dynamic_shroud"
+		},
+		{
+			"type": "entry",
 			"id": "scp:rubber_duck"
 		},
 		{
@@ -397,6 +397,10 @@
 		{
 			"type": "entry",
 			"id": "companions:soul_furnace_block"
+		},
+		{
+			"type": "entry",
+			"id": "abyssal_decor:black_mold"
 		},
 		{
 			"type": "entry",

@@ -3,6 +3,9 @@ StartupEvents.registry("item", (e) => {
   e.create("scp:enkephalin");
   e.create("scp:abnormality_heart");
   e.create("scp:spiritual_book");
+  e.create("scp:soul_needle");
+  e.create("scp:black_opal");
+  e.create("scp:tubasmoke_stick");
 
   const createLockCards = (type) => {
     e.create(`scp:${type}_hallway_expansion_card`).maxStackSize(4);
@@ -29,4 +32,5 @@ StartupEvents.registry("item", (e) => {
     e.create(`scp:${color}_research`);
   });
 
+  e.create("scp:deaths_dynamic_shroud");
 });

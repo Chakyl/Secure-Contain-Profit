@@ -1,7 +1,7 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
     ["amber", ["antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove"]],
-    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "scguns:swarm", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
+    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
 ])
 
 const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
@@ -14,13 +14,18 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     let newAbnormalityEntity = level.createEntity(abnormalityId);
     newAbnormalityEntity.setPos(x + 0.5, y + 1.0, z + 0.5);
     newAbnormalityEntity.spawn();
-    newAbnormalityEntity.setCustomName(Text.of(`${global.getAbnormalityName(tier, abnormalityId)}`).red().bold());
+    if (nbt.data.getInt("researchLevel") > 1) {
+        newAbnormalityEntity.setCustomName(Text.of(global.getFullAbnormalityName(nbt.data)).red().bold());
+    } else {
+        newAbnormalityEntity.setCustomName(Text.of(`${global.getAbnormalityName(tier, abnormalityId)}`).red().bold());
+    }
     newAbnormalityEntity.setPersistenceRequired();
 
     let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassEnkephalinCount(tier) * 5);
     newAbnormalityEntity.setMaxHealth(newHealth);
     newAbnormalityEntity.setHealth(newHealth);
     newAbnormalityEntity.persistentData.abnormality = true;
+    newAbnormalityEntity.persistentData.researchLevel = nbt.data.researchLevel ? nbt.data.getInt("researchLevel") : 0;
     nbt.merge({
         data: {
             abnormalityUUID: newAbnormalityEntity.uuid.toString()
@@ -255,7 +260,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y, z - radius), new BlockPos(x + radius, y + (radius * 2), z + radius))) {
             if (!level.isLoaded(pos)) continue;
             let scanBlock = level.getBlock(pos);
-            if (!["scp:containment_unit", "minecraft:air"].includes(scanBlock.id)) {
+            if (!["scp:containment_unit", "minecraft:air", "antarchy:mucus"].includes(scanBlock.id)) {
                 validContainmentUnit = false;
                 level.spawnParticles("minecraft:angry_villager", true, pos.x, pos.y + 0.5, pos.z, 0.2, 0.2, 0.2, 4, 1.01);
                 break;
@@ -273,6 +278,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         if (checkedAbs.length == 0) {
             level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
+            console.log(nbt.data.toString());
             global.paintToServer(level.getServer(), `${global.getFullAbnormalityName(nbt.data, "???")} ESCAPED CONTAINMENT AT [x:${x}/z:${z}].`, '#FF5555');
         } else {
             if (checkedAbs[0].persistentData.respawned && checkedAbs[0].persistentData.getBoolean("respawned") && String(`${nbt.data.getString("abnormalityType")}`).trim() == checkedAbs[0].type) {
@@ -320,6 +326,7 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
     level.spawnParticles("minecraft:happy_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
     server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${x} ${y} ${z} 1 0.5`);
     let researchLevel = Number(nbt.data.getInt("researchLevel"));
+    let newLevel = global.increaseStage(researchLevel)
     let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
     if (researchLevel == 2) {
         nearbyPlayers.forEach((player) => {
@@ -351,21 +358,22 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
             });
         } else {
             dropEnkephalin(block, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier")) * 2));
+            possibleAbnormality[0].persistentData.researchLevel = newLevel;
             nbt.merge({
                 data: {
                     researchTime: 0,
                     state: "NONE",
-                    researchLevel: global.increaseStage(researchLevel)
+                    researchLevel: newLevel
                 },
             });
         }
-
     } else {
+            possibleAbnormality[0].persistentData.researchLevel = newLevel;
         nbt.merge({
             data: {
                 researchTime: 0,
                 state: "NONE",
-                researchLevel: global.increaseStage(researchLevel)
+                researchLevel: newLevel
             },
         });
     }
