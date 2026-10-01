@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "ae2:quartz_glass"
+    },
+    "b": {
+      "item": "ae2:fluix_covered_cable"
+    },
+    "c": {
+      "tag": "antarchy:titanium_nugget"
+    }
+  },
+  "pattern": [
+    "aba",
+    "ccc",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:spatial_pylon"
+  }
+}

@@ -91,7 +91,7 @@ ServerEvents.recipes((e) => {
 
     macerating('scguns:small_diamond_steel_casing', 'scguns:diamond_steel_blend', 1)
     macerating('scguns:medium_diamond_steel_casing', 'scguns:diamond_steel_blend', 2)
-
+    macerating('scguns:diamond_steel_flare', 'scguns:diamond_steel_blend', 5)
 
     macerating('scguns:small_brass_casing', 'create:brass_nugget', 1)
     macerating('scguns:medium_brass_casing', 'create:brass_nugget', 2)

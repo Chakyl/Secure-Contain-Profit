@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "tag": "c:ingots/iron"
+    },
+    "b": {
+      "tag": "c:glass_blocks/cheap"
+    },
+    "c": {
+      "item": "antarchy:uranium_ingot"
+    },
+    "d": {
+      "item": "antarchy:titanium_ingot"
+    }
+  },
+  "pattern": [
+    "aba",
+    "c d",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:interface"
+  }
+}

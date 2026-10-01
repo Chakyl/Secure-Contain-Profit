@@ -4,6 +4,6 @@
     "item": "minecraft:knowledge_book"
   },
   "order": 0,
-  "default_chapter": true,
+  "default_chapter": false,
   "hidden": false
 }

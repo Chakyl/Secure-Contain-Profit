@@ -94,7 +94,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     let entities;
     if (Math.random() < 0.1 && breachTypes.includes("TELEPORT")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(10)).filter((foundEntity) => foundEntity.type != entity.type);
-        if (entities.length > 1) {
+        if (entities.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
             entity.teleportTo("minecraft:overworld", entities[1].x, entities[1].y + 1, entities[1].z, 0, 0)
@@ -103,7 +103,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     if (Math.random() < 0.01 && breachTypes.includes("BEGONE")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(14)).filter((foundEntity) => foundEntity.type != entity.type);
         let closeEntities = level.getEntitiesWithin(entity.boundingBox.inflate(5)).filter((foundEntity) => foundEntity.type != entity.type);
-        if (entities.length > 1 && closeEntities.length > 1) {
+        if (entities.length > 1 && closeEntities.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
             closeEntities[0].teleportTo("minecraft:overworld", entities[1].x, entities[1].y + 1, entities[1].z, 0, 0)
@@ -111,7 +111,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
     if (Math.random() < 0.1 && breachTypes.includes("SUCK")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((foundEntity) => foundEntity.type != entity.type);
-        if (entities.length > 1) {
+        if (entities.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
             entities.forEach((arrEntity) => {
@@ -120,7 +120,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
         }
     }
     if (Math.random() < 0.05 && breachTypes.includes("SUMMON")) {
-        if (server.players.length > 1) {
+        if (server.players.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
             server.players[0].teleportTo("minecraft:overworld", entity.x, entity.y, entity.z, 0, 0)
@@ -131,7 +131,8 @@ global.handleAbnormality = (entity, abnormalityData) => {
     if (Math.random() < 0.75 && breachTypes.includes("SAP") || breachTypes.includes("BITE")) {
         let bite = breachTypes.includes("BITE")
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5)).filter((entity) => entity.isPlayer())
-        if (entities.length > 1) {
+        
+        if (entities.length >= 1) {
             server.runCommandSilent(`playsound abyssal_decor:silver_step block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("companions:blizzard_ice", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 1.01);
             entities.forEach((scanEnt) => {
@@ -141,7 +142,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
     if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
-        if (entities.length > 1) {
+        if (entities.length >= 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("scguns:sulfur_smoke", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 4, 1.01);
             entities.forEach((scanEnt) => {

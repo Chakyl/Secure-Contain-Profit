@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "industrialhellscape:inhell_haven_device"
+    },
+    "b": {
+      "tag": "c:ingots/iron"
+    },
+    "c": {
+      "item": "ae2:item_storage_cell_16k"
+    },
+    "d": {
+      "item": "ae2:dense_energy_cell"
+    }
+  },
+  "pattern": [
+    "ab ",
+    "bc ",
+    "  d"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:color_applicator"
+  }
+}

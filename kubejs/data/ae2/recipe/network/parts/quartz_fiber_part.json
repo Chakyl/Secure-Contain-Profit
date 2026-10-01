@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "tag": "c:glass_blocks/cheap"
+    },
+    "b": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "aaa",
+    "bbb",
+    "aaa"
+  ],
+  "result": {
+    "count": 3,
+    "id": "ae2:quartz_fiber"
+  }
+}

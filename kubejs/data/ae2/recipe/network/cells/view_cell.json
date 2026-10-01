@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "ae2:quartz_glass"
+    },
+    "b": {
+      "item": "scguns:plasma"
+    },
+    "c": {
+      "item": "ae2:item_storage_cell_16k"
+    },
+    "d": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    "aba",
+    "bcb",
+    "ddd"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:view_cell"
+  }
+}

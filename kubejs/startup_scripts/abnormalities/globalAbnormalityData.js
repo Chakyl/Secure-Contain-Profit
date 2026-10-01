@@ -68,8 +68,8 @@ global.ABNORMALITIES = new Map([
      *   AMBER ABNORMALITIES
      */
     // Machination
-    ["creaturefeature:machination", { class: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:sinister"] }],
-    ["creaturefeature:sinister", { class: "amber", preferences: { violence: 4, insight: -1, harmony: 3 }, name: "Portrait of a Lady on Fire", counter: 4, breachTypes: ["ESCAPEARTIST"] }],
+    ["creaturefeature:sinister", { class: "amber", preferences: { violence: 4, insight: -1, harmony: 3 }, name: "Portrait of a Lady on Fire", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:machination"] }],
+    ["creaturefeature:machination", { class: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 2, breachTypes: ["ESCAPEARTIST"] }],
     // Spider
     ["minecraft:spider", { class: "amber", preferences: { violence: 1, insight: 1, harmony: 1 }, name: "Dewpider", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:cave_spider"] }],
     ["minecraft:cave_spider", { class: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Araquanid", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:dreamweaver"] }],
@@ -88,8 +88,8 @@ global.ABNORMALITIES = new Map([
     ["creaturefeature:beauty", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "Pagan Poetry", counter: 3, breachTypes: ["ESCAPEARTIST", "DISSOLVE"], evolutions: ["creaturefeature:fiend"] }],
     ["creaturefeature:fiend", { class: "amber", preferences: { violence: 1, insight: 3, harmony: 4 }, name: "All Neon Like", counter: 2, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
     // Dinamo
-    ["companions:broken_dinamo", { class: "amber", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "Baby Blue", counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:illager_golem"] }],
-    ["companions:illager_golem", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["CLANKER", "SUCK", "ESCAPEARTIST"] }],
+    ["companions:illager_golem", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["CLANKER", "SUCK", "ESCAPEARTIST"], evolutions: ["companions:broken_dinamo"] }],
+    ["companions:broken_dinamo", { class: "amber", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "Baby Blue", counter: 8, breachTypes: ["NOTHING"] }],
     // Shade
     ["peaceless:shade", { class: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "DECOUNT", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
     ["creaturefeature:nothing", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "DECOUNT"] }],

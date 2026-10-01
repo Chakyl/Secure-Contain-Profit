@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "creaturefeature:dream_silk"
+    },
+    {
+      "item": "ae2:basic_card"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:capacity_card"
+  }
+}

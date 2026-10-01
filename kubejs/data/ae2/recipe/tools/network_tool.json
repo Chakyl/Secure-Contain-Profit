@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "ae2:illuminated_panel"
+    },
+    {
+      "tag": "c:chests/wooden"
+    },
+    {
+      "item": "industrialhellscape:inhell_haven_device"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:network_tool"
+  }
+}

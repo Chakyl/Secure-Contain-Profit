@@ -1,50 +1,50 @@
-/reload
-/fieldguide grant Chakyl everything
-/gamerule randomTickSpeed
-/gamerule randomTickSpeed 1
-/kjs hand
-/kjs reload server-scripts
-/summon minecraft:sheep
-/particle scguns:plasma_explosion
-/particle scguns:sulfur_dust
-/particle scguns:plasma_explosion -85 77 -26
-/particle scguns:sulfur_dust -85 77 -26
-/particle supplementaries:bomb_smoke -85 77 -26
-/particle minecraft:large_smoke -85 77 -26
-/particle supplementaries:bomb_smoke -85 77 -26
-/kjs reload server-scripts
-/kjs hand
-/kjs reload server-scripts
-/kjs persistent-data entity 8a0e634a-d46e-4703-a220-613a50bc7dbb get
-/kjs persistent-data entity 8a0e634a-d46e-4703-a220-613a50bc7dbb get *
-/kjs reload server-scripts
-/ql edit_mode
-/tp Chakyl -93 ~ -36
-/tp Chakyl -93 -36 ~
-/tp Chakyl -93 ~ -36
-/tp Chakyl -93 ~ 36
-/tp Chakyl -93 122 36
-/tp Chakyl -93 ~ -36
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/tp @e[type=scguns:hive] Chakyl
-/tp @e[type=scguns:swarm] Chakyl
-/kjs reload server-scripts
-/reload
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/reload
-/kjs hand
-/data get block 4 120 0
-/setblock 4 120 0 air
-/setblock 4 120 0 minecraft:bedrock
-/kjs reload startup-scripts
-/addfacilitychaos 200
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/fieldguide grant Chakyl everything
 /effect clear
 /effect give Chakyl minecraft:darkness infinite
+/ql edit_mode
+/kjs reload startup-scripts
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/difficulty peaceful
+/kill @e[type=gateways:normal_gateway]
+/kjs hand
+/reload
+/kjs hand
+/reload
+/give Chakyl industrialhellscape:body_pillow
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/kjs reload server-scripts

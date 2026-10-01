@@ -3732,25 +3732,25 @@
             ]
         },
         {
-            "pakku_id": "Zhw6mdkPLwBCM1u9",
+            "pakku_id": "xJHErGAboQJQOaCN",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
                 "curseforge": "selene",
-                "modrinth": "selene"
+                "modrinth": "moonlight"
             },
             "name": {
                 "curseforge": "Moonlight Lib",
-                "modrinth": "Selene"
+                "modrinth": "Moonlight Lib"
             },
             "id": {
                 "curseforge": "499980",
-                "modrinth": "hRandqZM"
+                "modrinth": "twkfQtEc"
             },
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "moonlight-1.21.1-3.6.6-neoforge.jar",
+                    "file_name": "moonlight-1.21.1-3.7.0-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3758,16 +3758,37 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8929/425/moonlight-1.21.1-3.6.6-neoforge.jar",
-                    "id": "8929425",
+                    "url": "https://edge.forgecdn.net/files/8981/395/moonlight-1.21.1-3.7.0-neoforge.jar",
+                    "id": "8981395",
                     "parent_id": "499980",
                     "hashes": {
-                        "sha1": "6a99f961fd6bf4964791e8c474dae1dcb2910ad4",
-                        "md5": "7f16cd8b81ad52b377eeb28bb4d0ae45"
+                        "sha1": "3e909f886ffca21bbe03cce510c68da2e7165580",
+                        "md5": "4d026ca6821138e3ed72b4955206b06b"
                     },
                     "required_dependencies": [],
-                    "size": 2286632,
-                    "date_published": "2026-09-20T10:03:48.503Z"
+                    "size": 2298394,
+                    "date_published": "2026-09-26T14:11:15.887Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "moonlight-1.21.1-3.7.0-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/t6iFh4M3/moonlight-1.21.1-3.7.0-neoforge.jar",
+                    "id": "t6iFh4M3",
+                    "parent_id": "twkfQtEc",
+                    "hashes": {
+                        "sha512": "dbe4e44f61d9b83c89bb4da73228b72c4d42670b2c67b7c7e0cb16dca1c9673a291d99628c093cf2ae50e29c28d24631d9943e4d89465153e3a84487cc6f0a17",
+                        "sha1": "3e909f886ffca21bbe03cce510c68da2e7165580"
+                    },
+                    "required_dependencies": [],
+                    "size": 2298394,
+                    "date_published": "2026-09-26T14:11:22.907302Z"
                 }
             ]
         },

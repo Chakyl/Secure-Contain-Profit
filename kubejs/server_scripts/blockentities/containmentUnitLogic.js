@@ -1,6 +1,6 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
-    ["amber", ["antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:machination", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:broken_dinamo", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove"]],
+    ["amber", ["antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:sinister", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:illager_golem", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove"]],
     ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
 ])
 
