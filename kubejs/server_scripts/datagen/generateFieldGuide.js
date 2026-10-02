@@ -73,6 +73,8 @@
 //         ["companions:broken_dinamo", { description: "WIP" }],
 //         ["companions:illager_golem", { description: "WIP" }],
 //         ["peaceless:shade", { description: "WIP" }],
+//         ["antarchy:spit_bug", { description: "WIP" }],
+//         ["opposing_force:bewilder", { description: "WIP" }],
 //         ["creaturefeature:nothing", { description: "WIP" }],
 //         ["antarchy:rolly_polly", { description: "WIP" }],
 //         ["antarchy:red_ant", { description: "WIP" }],
@@ -81,6 +83,7 @@
 //         ["antarchy:jerry", { description: "WIP" }],
 //         ["netherman:statue_entity", { description: "WIP" }],
 //         ["companions:hostile_puppet_glove", { description: "WIP" }],
+//         ["opposing_force:scorcher", { description: "WIP" }],
 //         /**
 //          *   MAROON ABNORMALITIES
 //          */
@@ -98,13 +101,12 @@
 //         ["scguns:praetor", { description: "WIP" }],
 //         ["netherman:statue_bossunit", { description: "WIP" }],
 //         ["netherman:gilded_golem", { description: "WIP" }],
-//         ["scguns:swarm", { description: "WIP" }],
 //         ["antarchy:wasp", { description: "WIP" }],
 //         ["scguns:hive", { description: "WIP" }],
 //         ["minecraft:allay", { description: "WIP" }],
 //         ["companions:golden_allay", { description: "WIP" }],
 //         ["peaceless:mimic", { description: "WIP" }],
-//         ["creaturefeature:runaway", { description: "WIP" }],
+//         ["creaturefeature:cannonball_crab", { description: "WIP" }],
 //         ["antarchy:crawling_blight", { description: "WIP" }],
 //         ["antarchy:skulking_fright", { description: "WIP" }],
 //         ["antarchy:termite", { description: "WIP" }],
@@ -119,7 +121,7 @@
 //         ["scguns:sulfurhead", { description: "WIP" }],
 //         ["antarchy:flytrap", { description: "WIP" }],
 //         ["antarchy:lucid", { description: "WIP" }],
-//         ["antarchy:vortex", { description: "WIP" }],
+//         ["antarchy:vortex", { description: "Facility managers are advised to not enter Cowgirl Clue's containment unit under any circumstances. Those trapped in the vortex of this abnormalities wake often die slow and painful deaths, unless the containment unit is fitted with a way to vertically escape the containment unit." }],
 //     ]);
 //     for (let abnormality of global.ABNORMALITIES.keys()) {
 //         fieldGuideEntries.push({
@@ -128,6 +130,8 @@
 //         });
 //         let data = global.ABNORMALITIES.get(`${abnormality}`);
 //         translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `§${getClassColor(data.class)}${data.name}`
+
+//         console.log(data)
 //         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: ${global.getAbnormalityName(data.class, abnormality)}\nClass: ${formatName(data.class)}\nQliphoth Counter: ${data.counter}\nEvolutions: ${data.evolutions ? data.evolutions.length : "None"}${data.preferences ? `\n\n${getWorkPreferences(data.preferences)}` : ""}\n\nKnown information:\n${abnormalityDescs.get(`${abnormality}`).description}`
 //         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.hint`] = `Requires research level 3`
 //     }

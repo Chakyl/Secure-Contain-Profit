@@ -92,11 +92,11 @@
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:machination"
+			"id": "creaturefeature:sinister"
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:sinister"
+			"id": "creaturefeature:machination"
 		},
 		{
 			"type": "entry",
@@ -148,11 +148,11 @@
 		},
 		{
 			"type": "entry",
-			"id": "companions:broken_dinamo"
+			"id": "companions:illager_golem"
 		},
 		{
 			"type": "entry",
-			"id": "companions:illager_golem"
+			"id": "companions:broken_dinamo"
 		},
 		{
 			"type": "entry",
@@ -161,6 +161,14 @@
 		{
 			"type": "entry",
 			"id": "creaturefeature:nothing"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:spit_bug"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:bewilder"
 		},
 		{
 			"type": "entry",
@@ -189,6 +197,10 @@
 		{
 			"type": "entry",
 			"id": "companions:hostile_puppet_glove"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:scorcher"
 		},
 		{
 			"type": "entry",
@@ -268,7 +280,7 @@
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:runaway"
+			"id": "creaturefeature:cannonball_crab"
 		},
 		{
 			"type": "entry",

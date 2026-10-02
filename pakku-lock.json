@@ -3943,8 +3943,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta2.jar",
+                    "type": "modrinth",
+                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta5.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3952,39 +3952,39 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/8852/993/Opposing-Force-1.21.1-3.0.0-beta2.jar",
-                    "id": "8852993",
+                    "url": "https://cdn.modrinth.com/data/oqwxmBF3/versions/XepfTw0W/Opposing-Force-1.21.1-3.0.0-beta5.jar",
+                    "id": "XepfTw0W",
+                    "parent_id": "oqwxmBF3",
+                    "hashes": {
+                        "sha512": "65f1e472aab3757b5f91f8bf611f06e21e7c45e833f449bc4c417e4613cc81a56e11cd5a5ec57eb79142a9da542ef19c17972564b3c75160574c955a106b9eba",
+                        "sha1": "78fa2e3626c9f504fd26cd303a924aa0b9023611"
+                    },
+                    "required_dependencies": [],
+                    "size": 2051963,
+                    "date_published": "2026-10-01T21:50:17.144378Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/9031/525/Opposing-Force-1.21.1-3.0.0-beta5.jar",
+                    "id": "9031525",
                     "parent_id": "1051360",
                     "hashes": {
-                        "sha1": "38d424c282dfbc076a668964a8f62147e75891c8",
-                        "md5": "9a8d9896710861d80b757450733b13d9"
+                        "sha1": "78fa2e3626c9f504fd26cd303a924aa0b9023611",
+                        "md5": "fd879d9427929c7c00d87f5c09252e35"
                     },
                     "required_dependencies": [
                         "1686754"
                     ],
-                    "size": 1716604,
-                    "date_published": "2026-09-10T19:55:00.047Z"
-                },
-                {
-                    "type": "modrinth",
-                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta2.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/oqwxmBF3/versions/G7jsWxhv/Opposing-Force-1.21.1-3.0.0-beta2.jar",
-                    "id": "G7jsWxhv",
-                    "parent_id": "oqwxmBF3",
-                    "hashes": {
-                        "sha512": "197c4df1fd36990a8545410cc817586155263b295dc12dcad0c6dbfacb7fc4dcfe0f1fb48edb63fb89d2a0a21d1e53645d2eb3bf4d17566305fe2b4339965247",
-                        "sha1": "38d424c282dfbc076a668964a8f62147e75891c8"
-                    },
-                    "required_dependencies": [],
-                    "size": 1716604,
-                    "date_published": "2026-09-10T19:50:49.610852Z"
+                    "size": 2051963,
+                    "date_published": "2026-10-01T21:52:22.297Z"
                 }
             ]
         },
@@ -4885,7 +4885,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "Sinew-1.21.1-1.1.3.jar",
+                    "file_name": "Sinew-1.21.1-1.2.14.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4893,16 +4893,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8852/980/Sinew-1.21.1-1.1.3.jar",
-                    "id": "8852980",
+                    "url": "https://edge.forgecdn.net/files/9031/486/Sinew-1.21.1-1.2.14.jar",
+                    "id": "9031486",
                     "parent_id": "1686754",
                     "hashes": {
-                        "sha1": "f7a625a16d4137fe59528a18aeac4bc38631ca9b",
-                        "md5": "0018a4129712af314401ae2b14300107"
+                        "sha1": "34a4de3a8379a521af589e40fe226b71a8b84ec0",
+                        "md5": "0b0ff01cdcb83d06973c91558927adba"
                     },
                     "required_dependencies": [],
-                    "size": 214677,
-                    "date_published": "2026-09-10T19:53:50.053Z"
+                    "size": 161057,
+                    "date_published": "2026-10-01T21:43:30.340Z"
                 }
             ]
         },

@@ -5,6 +5,9 @@ const setEffectByTrait = (entity, traits) => {
     if (Math.random() < 0.1 && traits.includes("BLIND")) {
         entity.potionEffects.add('scguns:blinded', 100, 1)
     }
+    if (traits.includes("POISON")) {
+        entity.potionEffects.add('minecraft:poison', 400, 1)
+    }
     if (traits.includes("SULFUR")) {
         entity.potionEffects.add('scguns:sulfur_poisoning', 400, 1)
     }
@@ -140,7 +143,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
-    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
+    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("POISON") || breachTypes.includes("SULFUR")|| breachTypes.includes("SLEEPING")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);

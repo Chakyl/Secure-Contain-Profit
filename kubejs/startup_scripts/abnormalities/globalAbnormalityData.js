@@ -19,6 +19,7 @@
  *   - [x] BITE - Reduces health of nearby entities significantly at a lower range
  *   - [x] DARKNESS - Darknesses nearby entities
  *   - [x] BLIND - Blinds nearby entities
+ *   - [x] POISON - Suflur poisons nearby entities
  *   - [x] SULFUR - Suflur poisons nearby entities
  *   - [x] SLEEPING - Sleeps nearby entities
  *   - [x] NOTHING - Does nothing. Same as not including any breaching behaviors, just more 
@@ -69,7 +70,7 @@ global.ABNORMALITIES = new Map([
      */
     // Machination
     ["creaturefeature:sinister", { class: "amber", preferences: { violence: 4, insight: -1, harmony: 3 }, name: "Portrait of a Lady on Fire", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:machination"] }],
-    ["creaturefeature:machination", { class: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 2, breachTypes: ["ESCAPEARTIST"] }],
+    ["creaturefeature:machination", { class: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 3, breachTypes: ["ESCAPEARTIST"] }],
     // Spider
     ["minecraft:spider", { class: "amber", preferences: { violence: 1, insight: 1, harmony: 1 }, name: "Dewpider", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:cave_spider"] }],
     ["minecraft:cave_spider", { class: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Araquanid", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:dreamweaver"] }],
@@ -78,7 +79,7 @@ global.ABNORMALITIES = new Map([
     ["minecraft:polar_bear", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 1 }, name: "Ice Peek", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:saint_solis"] }],
     ["creaturefeature:saint_solis", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Society Sunlit Bearly", counter: 6, breachTypes: ["NUKE"] }],
     // Breeze
-    ["minecraft:breeze", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Choke Enough", counter: 7, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:blitz",] }],
+    ["minecraft:breeze", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Choke Enough", counter: 7, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:blitz", "minecraft:blaze"] }],
     ["creaturefeature:blitz", { class: "amber", preferences: { violence: 2, insight: 2, harmony: 4 }, name: "Endless", counter: 5, breachTypes: ["TELEPORT"] }],
     ["minecraft:blaze", { class: "amber", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Blaze Bird", counter: 6, breachTypes: ["TELEPORT"] }],
     // Turtle
@@ -93,16 +94,20 @@ global.ABNORMALITIES = new Map([
     // Shade
     ["peaceless:shade", { class: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "DECOUNT", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
     ["creaturefeature:nothing", { class: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "DECOUNT"] }],
+    // Spit bug
+    ["antarchy:spit_bug", { class: "amber", preferences: { violence: 4, insight: 4, harmony: 2 }, name: "Bugsnax", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"],  evolutions: ["opposing_force:bewilder"] }],
+    ["opposing_force:bewilder", { class: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"] }],
     // [Red Ant] Rolly Polly
     ["antarchy:rolly_polly", { class: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["minecraft:cave_spider"] }],
     ["antarchy:red_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"], evolutions: ["antarchy:red_ant"] }],
     // [Brown Ant] Stink bug
-    ["antarchy:stink_bug", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"]  }],
-    ["antarchy:brown_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"]}],
+    ["antarchy:stink_bug", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
+    ["antarchy:brown_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // No evos
     ["antarchy:jerry", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Jerry", counter: 8, breachTypes: ["ESCAPEARTIST", "BITE", "SUCK"] }],
     ["netherman:statue_entity", { class: "amber", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Security!", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
     ["companions:hostile_puppet_glove", { class: "amber", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "Meteora Blues", counter: 8, breachTypes: ["CHAOS"] }],
+    ["opposing_force:scorcher", { class: "amber", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Paprika Pony", counter: 2, breachTypes: ["DARKNESS", "SUCK", "ESCAPEARTIST"] }],
     /**
      *   MAROON ABNORMALITIES
      */
@@ -127,14 +132,14 @@ global.ABNORMALITIES = new Map([
     ["netherman:statue_bossunit", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 1 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
     ["netherman:gilded_golem", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
     // Swarm
-    ["antarchy:wasp", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bugsnax", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"], evolutions: ["scguns:hive"] }],
-    ["scguns:hive", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Only Acting", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
+    ["antarchy:wasp", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Big Fig Wasp", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"], evolutions: ["scguns:hive"] }],
+    ["scguns:hive", { class: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "People-Vulture", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
     // Allay
     ["minecraft:allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
     ["companions:golden_allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"] }],
     // Mimic
-    ["peaceless:mimic", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:runaway"] }],
-    ["creaturefeature:runaway", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
+    ["peaceless:mimic", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:cannonball_crab"] }],
+    ["creaturefeature:cannonball_crab", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
     // [Termite] Crawling Blight
     ["antarchy:crawling_blight", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "YMTHLYFYMBIKWHRLYFIYBNLSPH", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:skulking_fright"] }],
     ["antarchy:skulking_fright", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Inanimate Sensation", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:termite"] }],
