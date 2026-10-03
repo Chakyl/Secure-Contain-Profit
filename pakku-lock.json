@@ -69,16 +69,20 @@
             ]
         },
         {
-            "pakku_id": "FjgN9KrQviCDx7UE",
+            "pakku_id": "bvqxfu6jNwvdNivv",
             "type": "MOD",
+            "side": "BOTH",
             "slug": {
-                "curseforge": "antos"
+                "curseforge": "antos",
+                "modrinth": "antos"
             },
             "name": {
-                "curseforge": "AntOS Computer | Quests + Guidebook"
+                "curseforge": "AntOS Computer | Quests + Guidebook",
+                "modrinth": "AntOS Computer | Quests + Guidebook"
             },
             "id": {
-                "curseforge": "1700593"
+                "curseforge": "1700593",
+                "modrinth": "MzU6Lh9B"
             },
             "files": [
                 {
@@ -101,17 +105,38 @@
                     "required_dependencies": [],
                     "size": 616741,
                     "date_published": "2026-09-25T00:03:50.503Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "antos-neoforge-1.21.1-1.2.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/MzU6Lh9B/versions/wykDflW4/antos-neoforge-1.21.1-1.2.2.jar",
+                    "id": "wykDflW4",
+                    "parent_id": "MzU6Lh9B",
+                    "hashes": {
+                        "sha512": "9a78e0731b3395301182c6efba691f82dddb3683fd4448e8bf55e582a2c0b0f1c50d70621eb8dd26654b73b95735eb9f7fa5eabe16024d99c471466cf6acb6e2",
+                        "sha1": "9cff1009f70faa6d08c0f78620a1beca3f62b7f8"
+                    },
+                    "required_dependencies": [],
+                    "size": 616741,
+                    "date_published": "2026-09-25T00:04:19.539836Z"
                 }
             ]
         },
         {
             "pakku_id": "TQMLl0krafhmPmMM",
             "pakku_links": [
-                "FjgN9KrQviCDx7UE",
                 "NXFsCbCs1ggbXsFN",
                 "cORpzZTWlTigMIkS",
                 "hopYaPWuN0N1TtgP",
-                "LVuhtE48tzvbcaQ9"
+                "LVuhtE48tzvbcaQ9",
+                "bvqxfu6jNwvdNivv"
             ],
             "type": "MOD",
             "side": "BOTH",
@@ -565,22 +590,43 @@
             ]
         },
         {
-            "pakku_id": "1Pwiq0qTDZF7RFLP",
+            "pakku_id": "3nyXIV0B21et18oi",
             "type": "MOD",
-            "side": "SERVER",
+            "side": "BOTH",
             "slug": {
-                "curseforge": "bookshelf",
-                "modrinth": "bookshelf"
+                "modrinth": "bookshelf-lib",
+                "curseforge": "bookshelf"
             },
             "name": {
-                "curseforge": "Bookshelf",
-                "modrinth": "Bookshelf"
+                "modrinth": "Bookshelf",
+                "curseforge": "Bookshelf"
             },
             "id": {
-                "curseforge": "228525",
-                "modrinth": "VUkUwfUG"
+                "modrinth": "uy4Cnpcm",
+                "curseforge": "228525"
             },
             "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/uy4Cnpcm/versions/1sdJl7J1/bookshelf-neoforge-1.21.1-21.1.81.jar",
+                    "id": "1sdJl7J1",
+                    "parent_id": "uy4Cnpcm",
+                    "hashes": {
+                        "sha512": "78d4577a8e8fbb241216968475dd73f5b9e5efeb7da802b18a4e6c290e49af6cb4a5676e9855d0d8ff3613f967812e4bd363bbb9196c17c954d19454f84b2214",
+                        "sha1": "efc4cda6da4dd879f24d057ed0a6413764c9ba40"
+                    },
+                    "required_dependencies": [],
+                    "size": 328813,
+                    "date_published": "2026-02-10T22:44:22.165059Z"
+                },
                 {
                     "type": "curseforge",
                     "file_name": "bookshelf-neoforge-1.21.1-21.1.81.jar",
@@ -1244,8 +1290,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "createaddition-1.7.1.jar",
+                    "type": "modrinth",
+                    "file_name": "createaddition-1.7.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1253,39 +1299,39 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/8887/653/createaddition-1.7.1.jar",
-                    "id": "8887653",
+                    "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/hsjVajlP/createaddition-1.7.2.jar",
+                    "id": "hsjVajlP",
+                    "parent_id": "kU1G12Nn",
+                    "hashes": {
+                        "sha512": "f3a3ddb5600189da818fc71ea659d17f0d1097c5ad664433eed400b3ecc67d0f9305b348e5b7c5fd872d7a6e51330c7158b3181e77192c576c205a74dd0298ff",
+                        "sha1": "8e7158d3144b1ee97e58092fe006675b0e09f6d8"
+                    },
+                    "required_dependencies": [],
+                    "size": 1772844,
+                    "date_published": "2026-10-01T17:49:20.743820Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "createaddition-1.7.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/9029/800/createaddition-1.7.2.jar",
+                    "id": "9029800",
                     "parent_id": "439890",
                     "hashes": {
-                        "sha1": "779c49416643a6c5f176d5d500bf1bcbe75a5d18",
-                        "md5": "32194e140e05e9b136c6bf9cf38fe97e"
+                        "sha1": "8e7158d3144b1ee97e58092fe006675b0e09f6d8",
+                        "md5": "be51442949442ba01134601c080eb4eb"
                     },
                     "required_dependencies": [
                         "328085"
                     ],
-                    "size": 1726257,
-                    "date_published": "2026-09-15T17:06:12.663Z"
-                },
-                {
-                    "type": "modrinth",
-                    "file_name": "createaddition-1.7.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/vD7sHwsm/createaddition-1.7.1.jar",
-                    "id": "vD7sHwsm",
-                    "parent_id": "kU1G12Nn",
-                    "hashes": {
-                        "sha512": "2f839213f43b311378659ee1d643b444b3ce2b2cc2c3fa6239c176c17ee3cf53b9f471e1d13442813e5683d40e0da8ca3609498ee1690cb87efb21bdeeae9598",
-                        "sha1": "779c49416643a6c5f176d5d500bf1bcbe75a5d18"
-                    },
-                    "required_dependencies": [],
-                    "size": 1726257,
-                    "date_published": "2026-09-15T17:08:02.519602Z"
+                    "size": 1772844,
+                    "date_published": "2026-10-01T17:48:51.270Z"
                 }
             ]
         },
@@ -3944,7 +3990,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta5.jar",
+                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta6.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3952,20 +3998,20 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/oqwxmBF3/versions/XepfTw0W/Opposing-Force-1.21.1-3.0.0-beta5.jar",
-                    "id": "XepfTw0W",
+                    "url": "https://cdn.modrinth.com/data/oqwxmBF3/versions/Nzc0m7m6/Opposing-Force-1.21.1-3.0.0-beta6.jar",
+                    "id": "Nzc0m7m6",
                     "parent_id": "oqwxmBF3",
                     "hashes": {
-                        "sha512": "65f1e472aab3757b5f91f8bf611f06e21e7c45e833f449bc4c417e4613cc81a56e11cd5a5ec57eb79142a9da542ef19c17972564b3c75160574c955a106b9eba",
-                        "sha1": "78fa2e3626c9f504fd26cd303a924aa0b9023611"
+                        "sha512": "5d24c049f977e496d545d1208aacee7a7964c1d040bc20c5c1674e51ae133f62da684fdd2dcbd2556fb832a1aacb60848d275d8e8a4f9383ee8d914cd53bb981",
+                        "sha1": "a01fcf2b83eb617518f25d8e9557495f7b8367cf"
                     },
                     "required_dependencies": [],
-                    "size": 2051963,
-                    "date_published": "2026-10-01T21:50:17.144378Z"
+                    "size": 2189238,
+                    "date_published": "2026-10-02T21:37:35.143521Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta5.jar",
+                    "file_name": "Opposing-Force-1.21.1-3.0.0-beta6.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3973,18 +4019,18 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/9031/525/Opposing-Force-1.21.1-3.0.0-beta5.jar",
-                    "id": "9031525",
+                    "url": "https://edge.forgecdn.net/files/9041/312/Opposing-Force-1.21.1-3.0.0-beta6.jar",
+                    "id": "9041312",
                     "parent_id": "1051360",
                     "hashes": {
-                        "sha1": "78fa2e3626c9f504fd26cd303a924aa0b9023611",
-                        "md5": "fd879d9427929c7c00d87f5c09252e35"
+                        "sha1": "a01fcf2b83eb617518f25d8e9557495f7b8367cf",
+                        "md5": "5ebc8d53751c79e0038135e9eb7633ca"
                     },
                     "required_dependencies": [
                         "1686754"
                     ],
-                    "size": 2051963,
-                    "date_published": "2026-10-01T21:52:22.297Z"
+                    "size": 2189238,
+                    "date_published": "2026-10-02T21:39:17.527Z"
                 }
             ]
         },

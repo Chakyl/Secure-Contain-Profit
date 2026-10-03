@@ -58,6 +58,23 @@ global.handleAbnormality = (entity, abnormalityData) => {
         0.01
     );
     /**
+     * Seats
+     */
+    if (Math.random() < 0.01) {
+        let seatRadius = 4
+        let { x, y, z } = entity;
+        for (let pos of BlockPos.betweenClosed(new BlockPos(x - seatRadius, y - seatRadius, z - seatRadius), new BlockPos(x + seatRadius, y + seatRadius, z + seatRadius))) {
+            if (!level.isLoaded(pos)) continue;
+            let scanBlock = level.getBlock(pos);
+            if (scanBlock.hasTag("create:seats")) {
+                level.spawnParticles("minecraft:angry_villager", true, pos.x, pos.y + 0.5, pos.z, 0.2, 0.2, 0.2, 4, 1.01);
+                scanBlock.set("minecraft:air")
+                global.addChaos(server, scanBlock, 1);
+                break;
+            }
+        }
+    }
+    /**
      * Breaching
      */
     let breachTypes = abnormalityData.breachTypes;
@@ -134,7 +151,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     if (Math.random() < 0.75 && breachTypes.includes("SAP") || breachTypes.includes("BITE")) {
         let bite = breachTypes.includes("BITE")
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5)).filter((entity) => entity.isPlayer())
-        
+
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound abyssal_decor:silver_step block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
             level.spawnParticles("companions:blizzard_ice", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 1.01);
@@ -143,7 +160,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
-    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("POISON") || breachTypes.includes("SULFUR")|| breachTypes.includes("SLEEPING")) {
+    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("POISON") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);

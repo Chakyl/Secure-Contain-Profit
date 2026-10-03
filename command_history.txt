@@ -1,50 +1,50 @@
-/reload
 /kjs hand
-/reload
-/kjs hand
-/reload
+/summon netherman:azazel
 /difficulty peaceful
-/kill @e[type=gateways:normal_gateway]
 /kjs hand
-/reload
-/kjs hand
-/reload
-/give Chakyl industrialhellscape:body_pillow
-/kjs hand
-/reload
-/kjs hand
-/reload
-/kjs hand
-/reload
-/kjs hand
-/reload
 /kjs reload server-scripts
-/effect clear
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/kjs hand
-/effect give Chakyl minecraft:poison 200 2
-/kjs reload
+/summon netherman:believer
 /kjs reload server-scripts
+/summon netherman:believer
+/playsound opposing_force:slayser_disc
+/kjs reload server-scripts
+/kjs hand
+/kjs reload server-scripts
+/playsound netherman:bell_beast5
+/kjs reload server-scripts
+/stopsound Chakyl
+/kjs persistent-data server get *
+/kjs persistent-data server merge {jamming:false}
+/stopsound Chakyl
+/kjs reload server-scripts
+/stopsound Chakyl
+/kjs persistent-data server merge {jamming:false}
+/kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs persistent-data server merge {jamming:false}
+/kjs reload server-scripts
+/stopsound Chakyl
+/kjs persistent-data server merge {jamming:false}
+/kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs persistent-data server merge {jamming:false}
+/kjs reload server-scripts
+/kjs persistent-data server merge {jamming:false}
+/kjs reload server-scripts
+/stopsound Chakyl
+/kjs reload server-scripts
+/stopsound Chakyl
+/setblock 1 128 2 air
 /fieldguide grant Chakyl everything
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/reload
+/summon creaturefeature:cannonball_crab
+/difficulty normal
+/summon creaturefeature:cannonball_crab
+/summon antarchy:crawling_blight
+/summon creaturefeature:cannonball_crab
+/summon creaturefeature:dreamweaver
+/summon creaturefeature:cannonball_crab
+/time set day
+/summon creaturefeature:cannonball_crab
+/summon antarchy:crawling_blight
 /fieldguide grant Chakyl everything
-/summon creaturefeature:vertigo
-/summon creaturefeature:star
-/kjs reload server-scripts
-/reload
-/kjs reload startup-scripts
-/kjs reload server-scripts
-/reload
-/fieldguide grant Chakyl everything
+/fieldguide revoke Chakyl everything

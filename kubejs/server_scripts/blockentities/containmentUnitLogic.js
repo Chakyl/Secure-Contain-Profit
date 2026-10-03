@@ -278,7 +278,6 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         if (checkedAbs.length == 0) {
             level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-            console.log(nbt.data.toString());
             global.paintToServer(level.getServer(), `${global.getFullAbnormalityName(nbt.data, "???")} ESCAPED CONTAINMENT AT [x:${x}/z:${z}].`, '#FF5555');
         } else {
             if (checkedAbs[0].persistentData.respawned && checkedAbs[0].persistentData.getBoolean("respawned") && String(`${nbt.data.getString("abnormalityType")}`).trim() == checkedAbs[0].type) {

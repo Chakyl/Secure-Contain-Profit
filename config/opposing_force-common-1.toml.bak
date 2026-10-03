@@ -1,0 +1,6 @@
+#Whether the spawn cap for monsters should be increased
+increaseMonsterSpawnCap = true
+#The spawn cap for monsters if increaseMonsterSpawnCap is enabled
+# Default: 90
+# Range: 0 ~ 200
+monsterSpawnCap = 90

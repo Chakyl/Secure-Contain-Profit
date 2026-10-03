@@ -138,7 +138,7 @@ global.ABNORMALITIES = new Map([
     ["minecraft:allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
     ["companions:golden_allay", { class: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"] }],
     // Mimic
-    ["peaceless:mimic", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Playdate", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:cannonball_crab"] }],
+    ["peaceless:mimic", { class: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Melos", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:cannonball_crab"] }],
     ["creaturefeature:cannonball_crab", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
     // [Termite] Crawling Blight
     ["antarchy:crawling_blight", { class: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "YMTHLYFYMBIKWHRLYFIYBNLSPH", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:skulking_fright"] }],

@@ -116,6 +116,7 @@
     "gateways.maroon_raid": "Facility Raid",
     "gateways.indigo_raid": "Facility Raid",
 
-    "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?"
+    "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?",
+    "messages.scp.eraserhead.curse": "I've already cursed you with %s. I'll let your greed slide this time..."
     
 }

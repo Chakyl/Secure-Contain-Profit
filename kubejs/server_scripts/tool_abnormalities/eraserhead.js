@@ -36,12 +36,18 @@ BlockEvents.rightClicked('minecraft:enchanting_table', (e) => {
         }
 
         if (hasDupe(currentEnchantments, enchantmentKey, registry)) {
-            server.runCommandSilent(`playsound netherman:bell_beast_laugh block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
-            player.attack(666)
-            let splitId = enchantmentKey.toString().split(":");
-            player.tell(Text.translatable("messages.scp.eraserhead.death", Text.translatable(`enchantment.${splitId[0]}.${splitId[1]}`)).darkRed());
-            FieldGuide.unlock(player, `block:minecraft/enchanting_table`);
-            e.cancel();
+            if (enchantmentKey.toString().includes("curse_")) {
+                player.tell(Text.translatable("messages.scp.eraserhead.curse", Text.translatable(`enchantment.${splitId[0]}.${splitId[1]}`)).darkRed());
+                server.runCommandSilent(`playsound netherman:bell_beast_laugh block @a ${block.x} ${block.y} ${block.z} 2 1.5`);
+                e.cancel();
+            } else {
+                server.runCommandSilent(`playsound netherman:bell_beast_laugh block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
+                player.attack(666)
+                let splitId = enchantmentKey.toString().split(":");
+                player.tell(Text.translatable("messages.scp.eraserhead.death", Text.translatable(`enchantment.${splitId[0]}.${splitId[1]}`)).darkRed());
+                FieldGuide.unlock(player, `block:minecraft/enchanting_table`);
+                e.cancel();
+            }
         }
 
         server.runCommandSilent(`playsound minecraft:block.enchantment_table.use block @a ${block.x} ${block.y} ${block.z} 1 1`);
