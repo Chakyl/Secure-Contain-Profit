@@ -33,4 +33,5 @@ StartupEvents.registry("item", (e) => {
   });
 
   e.create("scp:deaths_dynamic_shroud");
+  e.create("scp:qliphoth_neutralizer");
 });

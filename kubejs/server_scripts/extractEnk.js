@@ -13,7 +13,7 @@ const handleEnk = (level, server, abnormality, radius, mult, item) => {
                 if (String(nbt.data.getString("state")).trim() == "WORKABLE" && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
                     // Syringe
                     if (item) {
-                        item.shrink(1);
+                        if (!player.isCreative()) item.shrink(1);
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                     }
                     server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.5`);
@@ -107,7 +107,7 @@ const getTierDebuff = (abnormalityClass) => {
         case "maroon": return 0.2
         case "indigo": return 0.3
         default:
-        return 0;
+            return 0;
     }
 }
 const getResearchBuff = (researchLevel) => {
@@ -117,7 +117,7 @@ const getResearchBuff = (researchLevel) => {
         case 3: return 0.15
         case 4: return 0.2
         default:
-        return 0;
+            return 0;
     }
 }
 const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
@@ -261,7 +261,7 @@ ItemEvents.rightClicked('minecraft:goat_horn', (e) => {
 })
 
 let rnd = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ItemEvents.rightClicked('scp:tubasmoke_stick', (e) => {
     const { player, level, item, server } = e;

@@ -1,0 +1,31 @@
+{
+  "title": "Abnormality Expiration",
+  "description": "When an abnormality is suppressed, its soul shrinks back into a projection of its heart.\n\nThis heart can then be returned to its containment unit for revival, making it difficult to truly 'lose' an abnormality.\n\nEvery morning the Containment Unit will check for the existence of its abnormality. If it is no longer living (such as being inside of a heart), the containment unit's qliphoth core will go haywire and the unit will be marked as EXPIRED.\n\nThe heart can still be returned, but if it no longer exists a Qliphoth Neutralizer must be used to obtain a new abnormality.",
+  "icon": {
+    "item": "scp:abnormality_heart"
+  },
+  "chapter": "verdant_wing",
+  "sort_order": 8,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:abnormality_heart",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:abnormality_heart",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:qliphoth_neutralizer",
+      "count": 1
+    }
+  ],
+  "include_in_main": false
+}

@@ -24,8 +24,6 @@
 //         id: "abnormality_management",
 //         jeiCatalyst: "scp:enkephalin",
 //         trades: [
-//             { item: 'companions:wrench', count: 1, numiCost: 16 },
-//             { item: 'scguns:syringe', count: 4, numiCost: 1 },
 //             { item: "scguns:needle", count: 1, numiCost: 256 },
 //             { item: "supplementaries:flute", count: 1, numiCost: 256 },
 //             { item: "minecraft:book", count: 1, numiCost: 256 },
@@ -34,7 +32,10 @@
 //             { stageRequired: "amber_level", item: "scp:spiritual_book", count: 1, numiCost: 1024, itemCost1: { item: 'scp:enkephalin', count: 4 } },
 //             { stageRequired: "maroon_level", item: "scp:soul_needle", count: 1, numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 16 } },
 //             { stageRequired: "maroon_level", item: "scp:tubasmoke_stick", count: 1, itemCost1: { item: 'scp:enkephalin', count: 1 } },
-//             { stageRequired: "maroon_level", item: "scp:black_opal", count: 1, numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 16 } }
+//             { stageRequired: "maroon_level", item: "scp:black_opal", count: 1, numiCost: 4096, itemCost1: { item: 'scp:enkephalin', count: 16 } },
+//             { item: 'companions:wrench', count: 1, numiCost: 16 },
+//             { item: 'scp:qliphoth_neutralizer', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+//             { item: 'scguns:syringe', count: 4, numiCost: 1 },
 //         ]
 //     },
 //     {

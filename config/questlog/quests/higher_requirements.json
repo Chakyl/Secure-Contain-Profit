@@ -6,7 +6,7 @@
   },
   "chapter": "amber_level",
   "sort_order": 1,
-  "include_in_main": true,
+  "include_in_main": false,
   "objectives": [
     {
       "type": "questlog:read",

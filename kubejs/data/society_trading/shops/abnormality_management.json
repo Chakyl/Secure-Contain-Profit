@@ -13,30 +13,6 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "companions:wrench",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:sprocket",
-				"count": 1
-			},
-			"numismatics_cost": 16,
-			"trade_id": "abnormality_management_companions_wrench"
-		},
-		{
-			"offer": {
-				"id": "scguns:syringe",
-				"count": 4
-			},
-			"request": {
-				"id": "numismatics:spur",
-				"count": 1
-			},
-			"numismatics_cost": 1,
-			"trade_id": "abnormality_management_scguns_syringe"
-		},
-		{
-			"offer": {
 				"id": "scguns:needle",
 				"count": 1
 			},
@@ -167,6 +143,41 @@
 			"numismatics_cost": 4096,
 			"stage_required": "maroon_level",
 			"trade_id": "abnormality_management_scp_black_opal"
+		},
+		{
+			"offer": {
+				"id": "companions:wrench",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "abnormality_management_companions_wrench"
+		},
+		{
+			"offer": {
+				"id": "scp:qliphoth_neutralizer",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "abnormality_management_scp_qliphoth_neutralizer"
+		},
+		{
+			"offer": {
+				"id": "scguns:syringe",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:spur",
+				"count": 1
+			},
+			"numismatics_cost": 1,
+			"trade_id": "abnormality_management_scguns_syringe"
 		}
 	]
 }

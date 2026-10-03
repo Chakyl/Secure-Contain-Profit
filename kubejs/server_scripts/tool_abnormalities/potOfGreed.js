@@ -20,5 +20,5 @@ BlockEvents.rightClicked('companions:porcelain_pottery', (e) => {
     } else {
         server.runCommandSilent(`playsound whimsy_deco:kaching block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
     }
-    item.shrink(1);
+    if (!player.isCreative()) item.shrink(1);
 });

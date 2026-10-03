@@ -67,6 +67,15 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     // return;
     let tier = String(nbt.data.getString("tier")).trim();
     const { abnormalityType, abnormalityUUID } = nbt.data;
+    if (item.id == "scp:qliphoth_neutralizer") {
+        if (String(nbt.data.getString("state")).trim() == "EXPIRED") {
+            if (!player.isCreative()) item.shrink(1);
+            nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
+            global.setBlockEntityData(block, nbt)
+        } else {
+            player.tell(Text.green("This only works on EXPIRED containment units."))
+        }
+    }
     if ((abnormalityType == null || abnormalityType == "") && nbt.data.getInt("timeUnleashed") + 200 < level.dayTime()) {
         let newAbnormality = global.rollArray(global.filterKnownAbnormalities(server, scpPool.get(tier)))
         if (!newAbnormality) {
@@ -110,8 +119,8 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
         if (item.id == "scp:abnormality_heart") {
             if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
                 if (String(nbt.data.getString("abnormalityType")).trim().equals(String(item.getCustomData().get("entity_id")).trim().replace('\"', "").replace('\"', ""))) {
-                    player.tell(Text.green("ABNORMALITY RESTORED"))
-                    item.shrink(1);
+                    global.paintAlert(server, player, "ABNORMALITY RESTORED", '#55FF55');
+                    if (!player.isCreative()) item.shrink(1);
                     spawnAbnormality(server, level, block, nbt, String(nbt.data.getString("abnormalityType")).trim(), tier)
 
                     nbt.merge({
@@ -179,7 +188,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     // Daily logic
     let day = global.getDay(level);
     let state = String(nbt.data.getString("state")).trim();
-    if (global.compareDay(day, nbt.data.getInt("dayLastTriggered"), 1)) {
+    if (global.compareDay(day, nbt.data.getInt("dayLastTriggered"), 1) && state != "EXPIRED") {
         let abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
         let increaseCounter = false;
         let scanForAb = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
@@ -208,7 +217,13 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 }
             } else {
                 level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`))
-                nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
+                nbt.merge({
+                    data: {
+                        state: "EXPIRED",
+                        dayLastTriggered: day
+                    }
+                });
+
                 global.setBlockEntityData(block, nbt)
                 return;
             }
@@ -367,7 +382,7 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
             });
         }
     } else {
-            possibleAbnormality[0].persistentData.researchLevel = newLevel;
+        possibleAbnormality[0].persistentData.researchLevel = newLevel;
         nbt.merge({
             data: {
                 researchTime: 0,

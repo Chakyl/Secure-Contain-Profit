@@ -1,12 +1,3 @@
-/kjs hand
-/summon netherman:azazel
-/difficulty peaceful
-/kjs hand
-/kjs reload server-scripts
-/summon netherman:believer
-/kjs reload server-scripts
-/summon netherman:believer
-/playsound opposing_force:slayser_disc
 /kjs reload server-scripts
 /kjs hand
 /kjs reload server-scripts
@@ -48,3 +39,12 @@
 /summon antarchy:crawling_blight
 /fieldguide grant Chakyl everything
 /fieldguide revoke Chakyl everything
+/kjs reload startup-scripts
+/kill 1a120d84-00b3-4cb2-b3de-bfa808f99cfb
+/time add 24000
+/data get block 111 143 -137
+/kjs reload server-scripts
+/fieldguide grant Chakyl everything
+/ql edit_mode
+/kjs reload server-scripts
+/reload

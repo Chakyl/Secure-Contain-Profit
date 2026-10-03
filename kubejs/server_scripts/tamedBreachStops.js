@@ -16,7 +16,7 @@ ItemEvents.entityInteracted((e) => {
             if (!(!nbt || !nbt.data)) {
                 if (target.uuid.toString() == nbt.data.abnormalityUUID) {
                     player.tell(Text.green("ABNORMALITY CALMED"))
-                    item.shrink(1);
+                    if (!player.isCreative()) item.shrink(1);
                     target.persistentData.breaching = false;
                     nbt.merge({
                         data: {
