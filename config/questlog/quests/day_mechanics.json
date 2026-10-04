@@ -1,5 +1,5 @@
 {
-  "title": "Days Work",
+  "title": "Day's Work",
   "description": "Every day, the state of the Containment Units will change depending on their current state.\n\nIt is most economical to ensure all Containment Units are in the \"NONE\" state before the next day.\n\nIf a Manager has extra time, it is recommended to spend it improving security or sleeping. \n\nA certain Tool Abnormality may also be effective in skipping time during the day, though this remains unverified.",
   "icon": {
     "item": "minecraft:clock"

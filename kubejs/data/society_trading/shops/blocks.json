@@ -25,6 +25,30 @@
 		},
 		{
 			"offer": {
+				"id": "industrialhellscape:locker_box",
+				"count": null
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "blocks_industrialhellscape_locker_box"
+		},
+		{
+			"offer": {
+				"id": "industrialhellscape:large_locker",
+				"count": null
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "blocks_industrialhellscape_large_locker"
+		},
+		{
+			"offer": {
 				"id": "industrialhellscape:gray_rockrete",
 				"count": 8
 			},

@@ -1,0 +1,63 @@
+{
+    "size": "small",
+    "allow_discarding": true,
+    "spawn_range": 2,
+     "spawn_algorithm": "gateways:inward_spiral",
+    "leash_range": 256,
+    "lives": 3,
+    "color": "#398e36",
+    "waves": [
+        {
+            "entities": [
+                {
+                    "entity": "scguns:trauma_unit",
+                    "count": 1
+                }
+            ],
+            "modifiers": [],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        },
+        {
+            "entities": [
+                {
+                    "entity": "scguns:redcoat",
+                    "count": 1
+                },
+                {
+                    "entity": "scguns:cog_minion",
+                    "count": 1
+                }
+            ],
+            "modifiers": [],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        },
+        {
+            "entities": [
+                {
+                    "entity": "scguns:cog_knight",
+                    "count": 1
+                }
+            ],
+            "modifiers": [],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        }
+    ],
+    "rewards": [
+        {
+            "type": "gateways:loot_table",
+            "loot_table": "scp:raid/verdant_raid",
+            "rolls": 1,
+            "desc": "Verdant Raid Loot"
+        }
+    ],
+    "failures": [
+        {
+            "type": "gateways:command",
+            "command": "addfacilitychaos 10",
+            "desc": "Adds facility chaos"
+        }
+    ]
+}

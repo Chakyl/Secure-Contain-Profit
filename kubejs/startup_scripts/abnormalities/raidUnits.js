@@ -6,7 +6,7 @@ global.handleRaidUnit = (entity, breakers) => {
     let onPos = entity.getOnPos();
     if (onPos.y > global.BEDROCK_Y_LEVEL && level.getBlock(onPos).id == "minecraft:bedrock") global.escapeArtist(level, entity, [-2, -3, -4, -5, -6, -7, -8, -9])
 
-    if (entity.tickCount % 1200 && Math.random() < 0.5 && breakers.includes(entity.type)) {
+    if (entity.tickCount % 1400 && Math.random() < 0.5 && breakers.includes(entity.type)) {
         let abovePos = entity.getOnPos().above().offset(Math.random() < 0.5 ? 1 : -1, 0, Math.random() < 0.5 ? 1 : -1);
         let aboveAbovePos = abovePos.above();
         let aboveAboveAbovePos = aboveAbovePos.above();

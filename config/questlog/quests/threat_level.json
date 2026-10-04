@@ -1,6 +1,6 @@
 {
   "title": "Threat Level",
-  "description": "Every time a new abnormality is added into your facility, existing abnormalities become more rowdy. This is known as \"Threat\".\n\nEvery 5 Threat, your Threat Level increases, and 5 Chaos is added into your facility for each level. \n\nBe careful when expanding the capacity of your facility. \n\nIt is encouraged to work with Amber and Maroon class abnormalities as soon as possible, to maximize Enkephalin  production per-threat",
+  "description": "Every time a new abnormality is added into your facility, existing abnormalities become more rowdy. This is known as \"Threat\".\n\nEvery 5 abnormalities your facility summons, your Threat Level increases by 1. When the threat level increases, 5 Chaos is immediately added to your facility for each threat level. \n\nBe careful when expanding the capacity of your facility. \n\nIt is encouraged to work with Amber and Maroon class abnormalities as soon as possible, to maximize Enkephalin  production per-threat",
   "icon": {
     "item": "industrially_plated:fire_alarm_sign"
   },
@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:verdant_raids",
+      "quest": "questlog:bulding",
       "required_amount": 1
     }
   ],

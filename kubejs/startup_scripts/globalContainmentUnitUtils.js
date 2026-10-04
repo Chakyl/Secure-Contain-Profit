@@ -1,6 +1,16 @@
 // Priority: 200
 let notifs = {}
+
+const flushNotifs = (server, level) => {
+    let day = global.getDay(level);
+    if (!server.persistentData.dayLastNotifFlushed) server.persistentData.dayLastNotifFlushed = day;
+    if (global.compareDay(day, server.persistentData.getInt("dayLastNotifFlushed"), 1)) {
+        server.persistentData.dayLastNotifFlushed = day;
+        notifs = {}
+    }
+}
 global.paintAlert = (server, player, text, color) => {
+    flushNotifs(server, player.getLevel());
     let notifNum = Object.keys(notifs).filter(key => (key).includes(player.username)).length;
     notifs[`${player.username}notif${notifNum}`] = {
         type: 'text',

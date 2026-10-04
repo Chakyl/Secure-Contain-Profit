@@ -112,10 +112,21 @@
     "tooltip.always.scguns.powered_macerator.0":  "Grinds up things into their base resources",
     "tooltip.always.scguns.powered_mechanical_press.0": "Fills empty casings to create bullets",
     "tooltip.always.scguns.advanced_composter.0": "Turns organic items into useful resources",
-    "gateways.verdant_raid": "Facility Raid",
-    "gateways.amber_raid": "Facility Raid",
-    "gateways.maroon_raid": "Facility Raid",
-    "gateways.indigo_raid": "Facility Raid",
+
+    "gateways.verdant_raid_1": "Verdant Raid I",
+    "gateways.amber_raid_1": "Amber Raid I",
+    "gateways.maroon_raid_1": "Maroon Raid I",
+    "gateways.indigo_raid_1": "Verdant Raid I",
+
+    "gateways.verdant_raid_2": "Verdant Raid II",
+    "gateways.amber_raid_2": "Amber Raid II",
+    "gateways.maroon_raid_2": "Maroon Raid II",
+    "gateways.indigo_raid_2": "Verdant Raid II",
+
+    "gateways.verdant_raid_3": "Verdant Raid III",
+    "gateways.amber_raid_3": "Amber Raid III",
+    "gateways.maroon_raid_3": "Maroon Raid III",
+    "gateways.indigo_raid_3": "Verdant Raid III",
 
     "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?",
     "messages.scp.eraserhead.curse": "I've already cursed you with %s. I'll let your greed slide this time..."

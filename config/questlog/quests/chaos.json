@@ -1,6 +1,6 @@
 {
   "title": "Chaos & Disrepair",
-  "description": "Abnormalities can cause broad effects to your facility. They are categorized under the following terms.\n\n- Chaos: General abnormality stability. When something causes chaos, random abnormalities have their counter increase.\n\n- Disrepair: Malfunctioning of containment units. Some abnormalities mess with containment units, either phisically or otherwise. This causes the units to require maintenance.\n\nMake careful note of which abnormalities cause Chaos and Disrepair. Tool abnormalities are especially dangers due to how commonly they do this.",
+  "description": "Abnormalities can cause broad effects to your facility. They are categorized under the following terms.\n\n- Chaos: General abnormality instability. When something causes a unit of chaos, a random containment unit's counter increases.\n\n- Disrepair: Malfunctioning of containment units. Some abnormalities mess with containment units, either physically or otherwise. This causes the units to require maintenance.\n\nMake careful note of which abnormalities cause Chaos and Disrepair. Tool abnormalities are especially dangerous due to how commonly they do this.",
   "icon": {
     "item": "industrially_plated:generic_fire_safety_sign"
   },

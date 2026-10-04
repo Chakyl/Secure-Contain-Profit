@@ -151,6 +151,12 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
                     item.shrink(1)
                     player.addItemCooldown(item, 10);
                     incrementResearch(level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item)
+                    nbt.merge({
+                        data: {
+                            state: state
+                        },
+                    });
+                    global.setBlockEntityData(block, nbt);
                 } else {
                     player.tell("You're not close enough...")
                 }
@@ -333,7 +339,7 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
     let possibleAbnormality = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
     if (possibleAbnormality.length < 1) {
         global.paintAlert(server, nearbyPlayers[0], "FAILED TO APPLY RESEARCH! ABNORMALITY MISSING!", '#FF5555');
-        if (item) nearbyPlayers[0].give(item)
+        if (item) nearbyPlayers[0].give(item.id)
         return;
     }
     global.paintAlert(server, nearbyPlayers[0], "ABNORMALITY RESEARCH LEVEL INCREASED BY 1.", '#55FF55');

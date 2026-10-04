@@ -44,6 +44,8 @@
 //         removalExempt: true,
 //         trades: [
 //             { item: 'industrialhellscape:inhell_haven_device', numiCost: 64 },
+//             { item: 'industrialhellscape:locker_box', numiCost: 32 },
+//             { item: 'industrialhellscape:large_locker', numiCost: 32 },
 //             { item: "industrialhellscape:gray_rockrete", count: 8, numiCost: 8 },
 //             { item: "industrialhellscape:duct", count: 8, numiCost: 16 },
 //             { item: "industrialhellscape:horizontal_vesselplate", count: 8, numiCost: 16 },

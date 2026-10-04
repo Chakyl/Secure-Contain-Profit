@@ -1,50 +1,50 @@
-/kjs hand
 /kjs reload server-scripts
-/playsound netherman:bell_beast5
-/kjs reload server-scripts
-/stopsound Chakyl
-/kjs persistent-data server get *
-/kjs persistent-data server merge {jamming:false}
-/stopsound Chakyl
-/kjs reload server-scripts
-/stopsound Chakyl
-/kjs persistent-data server merge {jamming:false}
-/kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {jamming:false}
-/kjs reload server-scripts
-/stopsound Chakyl
-/kjs persistent-data server merge {jamming:false}
-/kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {jamming:false}
-/kjs reload server-scripts
-/kjs persistent-data server merge {jamming:false}
-/kjs reload server-scripts
-/stopsound Chakyl
-/kjs reload server-scripts
-/stopsound Chakyl
-/setblock 1 128 2 air
-/fieldguide grant Chakyl everything
-/summon creaturefeature:cannonball_crab
-/difficulty normal
-/summon creaturefeature:cannonball_crab
-/summon antarchy:crawling_blight
-/summon creaturefeature:cannonball_crab
-/summon creaturefeature:dreamweaver
-/summon creaturefeature:cannonball_crab
-/time set day
-/summon creaturefeature:cannonball_crab
-/summon antarchy:crawling_blight
-/fieldguide grant Chakyl everything
-/fieldguide revoke Chakyl everything
-/kjs reload startup-scripts
-/kill 1a120d84-00b3-4cb2-b3de-bfa808f99cfb
+/time add 1000
 /time add 24000
-/data get block 111 143 -137
 /kjs reload server-scripts
-/fieldguide grant Chakyl everything
-/ql edit_mode
+/time add 24000
+/kjs persistent-data server get *
+/kjs persistent-data server merge {raidCount:0}
+/time add 24000
 /kjs reload server-scripts
-/reload
+/kjs persistent-data server get *
+/kjs persistent-data server merge {raidCount:0}
+/difficulty peaceful
+/difficulty normal
+/kjs persistent-data server merge {raidCount:0}
 /kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs persistent-data server merge {raidCount:1}
+/kjs reload startup-scripts
+/kjs persistent-data server merge {raidCount:1}
+/kjs persistent-data server get *
+/time add 24000
+/kjs reload server-scripts
+/time add 24000
+/kjs persistent-data server get *
+/kjs persistent-data server merge {raidCount:1}
+/kjs reload server-scripts
+/kjs persistent-data server get *
+/kjs reload server-scripts
+/kjs persistent-data server merge {raidCount:1}
+/kjs reload server-scripts
+/time add 240000
+/kjs reload server-scripts
+/kjs persistent-data server merge {raidCount:1}
+/time add 240000
+/time add 24000
+/time add 240000
+/time set 0
+/time add 24000
+/time set 0
+/time add 240000
+/time add 1000
+/time add 3000
+/time add 240000
+/kjs stages add Chakyl amber_level
+/time add 240000
+/kjs reload server-scripts
+/time add 1000
+/time add 240000
+/kjs reload server-scripts
+/time add 24000

@@ -1,0 +1,116 @@
+{
+    "size": "small",
+    "allow_discarding": true,
+    "spawn_range": 2,
+     "spawn_algorithm": "gateways:inward_spiral",
+    "leash_range": 256,
+    "lives": 3,
+    "color": "#c53c23",
+    "waves": [
+        {
+            "entities": [
+                {
+                    "entity": "scguns:cog_knight",
+                    "count": 2
+                },
+                {
+                    "entity": "scguns:adjudicator",
+                    "count": 2
+                },
+                {
+                    "entity": "scguns:subjugator",
+                    "count": 1
+                }
+            ],
+            "modifiers": [
+                {
+                    "attribute": "generic.max_health",
+                    "operation": "add_multiplied_total",
+                    "value": 0.75
+                },
+                {
+                    "attribute": "generic.armor",
+                    "operation": "add_value",
+                    "value": 5
+                }
+            ],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        },
+        {
+            "entities": [
+                {
+                    "entity": "scguns:adjudicator",
+                    "count": 2
+                },
+                {
+                    "entity": "scguns:trauma_unit",
+                    "count": 2
+                },
+                {
+                    "entity": "scguns:subjugator",
+                    "count": 1
+                }
+            ],
+            "modifiers": [
+                {
+                    "attribute": "generic.max_health",
+                    "operation": "add_multiplied_total",
+                    "value": 0.75
+                },
+                {
+                    "attribute": "generic.armor",
+                    "operation": "add_value",
+                    "value": 5
+                }
+            ],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        },
+        {
+            "entities": [
+                {
+                    "entity": "scguns:cog_knight",
+                    "count": 4
+                },
+                {
+                    "entity": "scguns:adjudicator",
+                    "count": 1
+                },
+                {
+                    "entity": "scguns:subjugator",
+                    "count": 1
+                }
+            ],
+            "modifiers": [
+                {
+                    "attribute": "generic.max_health",
+                    "operation": "add_multiplied_total",
+                    "value": 0.75
+                },
+                {
+                    "attribute": "generic.armor",
+                    "operation": "add_value",
+                    "value": 5
+                }
+            ],
+            "max_wave_time": 5000,
+            "setup_time": 200
+        }
+    ],
+    "rewards": [
+        {
+            "type": "gateways:loot_table",
+            "loot_table": "scp:raid/amber_raid",
+            "rolls": 1,
+            "desc": "Maroon Raid Loot"
+        }
+    ],
+    "failures": [
+        {
+            "type": "gateways:command",
+            "command": "addfacilitychaos 30",
+            "desc": "Adds facility chaos"
+        }
+    ]
+}

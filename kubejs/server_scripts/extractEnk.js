@@ -13,7 +13,7 @@ const handleEnk = (level, server, abnormality, radius, mult, item) => {
                 if (String(nbt.data.getString("state")).trim() == "WORKABLE" && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
                     // Syringe
                     if (item) {
-                        if (!player.isCreative()) item.shrink(1);
+                        item.shrink(1);
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                     }
                     server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.5`);

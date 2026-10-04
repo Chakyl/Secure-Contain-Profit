@@ -1,0 +1,29 @@
+{
+  "title": "Abnormality Notes",
+  "description": "When an abnormality has 3 or more research, notes are downloaded into your field guide that contain useful containment information, such as preferred work types.\n\nThis is located in the book button of your inventory or the pause menu.\n\nTool abnormalities work a little differently, unlocking entries whenever the worst outcome possible with it is triggered. If you don't know what a tool abnormality is doing, read its notes.",
+  "icon": {
+    "item": "fieldguide:page"
+  },
+  "chapter": "training",
+  "sort_order": 12,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:tool_abnormalities",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "components": "scp:verdant_research",
+      "count": 1
+    }
+  ]
+}
