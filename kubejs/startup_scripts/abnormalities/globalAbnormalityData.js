@@ -46,11 +46,11 @@ global.ABNORMALITIES = new Map([
     ["creaturefeature:pathogen", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 1 }, name: "Pathogen", counter: 3, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:minedflayer"] }],
     ["creaturefeature:minedflayer", { class: "verdant", preferences: { violence: 5, insight: 1, harmony: 2 }, name: "According to the Mind's Flayed Eye", counter: 10, breachTypes: ["NUKE"] }],
     // Goat
-    ["minecraft:goat", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, name: "Go Goat", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
+    ["minecraft:goat", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, name: "Tailwhip", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
     ['antarchy:ouranwood_deer', { class: "verdant", preferences: { violence: 5, insight: 3, harmony: 0 }, name: "Halcyon Digest", counter: 9, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
-    ["creaturefeature:vertigo", { class: "verdant", preferences: { violence: -1, insight: 3, harmony: 1 }, name: "Verti Goat", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
+    ["creaturefeature:vertigo", { class: "verdant", preferences: { violence: -1, insight: 3, harmony: 1 }, name: "Norton Commander", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
     // Chicken
-    ["minecraft:chicken", { class: "verdant", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "Popper", counter: 3, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["creaturefeature:stained_glass", "creaturefeature:mockingbird", "peaceless:harpy"] }],
+    ["minecraft:chicken", { class: "verdant", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "A Feast Before The Drought", counter: 3, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["creaturefeature:stained_glass", "creaturefeature:mockingbird", "peaceless:harpy"] }],
     ["creaturefeature:stained_glass", { class: "verdant", preferences: { violence: 3, insight: 2, harmony: 1 }, name: "Fragments Of A Lily", counter: 4, breachTypes: ["TELEPORT"] }],
     ["creaturefeature:mockingbird", { class: "verdant", preferences: { violence: 1, insight: 2, harmony: 4 }, name: "Crude Drawing of an Angel", counter: 6, breachTypes: ["ESCAPEARTIST", "SAP"] }],
     ["peaceless:harpy", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "TU AMIGO", counter: 7, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],

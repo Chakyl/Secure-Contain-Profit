@@ -1,8 +1,9 @@
 const $ExplosionEvent = Java.loadClass('net.neoforged.neoforge.event.level.ExplosionEvent$Start');
 
 EntityEvents.death((e) => {
-    const { entity, source } = e;
+    const { entity, server,level, source } = e;
     if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
+    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) global.addChaos(server, entity.block, 1);
     let killer = source.player
 
     let heart = Item.of('scp:abnormality_heart')

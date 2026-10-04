@@ -109,13 +109,13 @@
     "curseForgeHash": 83917681,
     "modrinthHash": "ec63110d126cf95dabe220116bd394e701265de7"
   },
-  "companions-neoforge-1.21.1-1.3.4.jar": {
-    "jarName": "companions-neoforge-1.21.1-1.3.4.jar",
+  "companions-neoforge-1.21.1-1.3.6.jar": {
+    "jarName": "companions-neoforge-1.21.1-1.3.6.jar",
     "modId": "companions",
     "name": "Companions!",
-    "version": "1.3.4",
-    "curseForgeHash": 4099131554,
-    "modrinthHash": "23f6e4f27a457a8d016412e495e417c0b36fdcc1"
+    "version": "1.3.6",
+    "curseForgeHash": 4157782993,
+    "modrinthHash": "ce962afe533a28902ecb5aa27b9650762d2f30b8"
   },
   "ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar": {
     "jarName": "ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar",
@@ -397,13 +397,13 @@
     "curseForgeHash": 3823452882,
     "modrinthHash": "8824d6c726b8e7964dca1aff620bef4e4e2265ea"
   },
-  "knightlib-neoforge-1.21.1-2.0.2.jar": {
-    "jarName": "knightlib-neoforge-1.21.1-2.0.2.jar",
+  "knightlib-neoforge-1.21.1-2.0.4.jar": {
+    "jarName": "knightlib-neoforge-1.21.1-2.0.4.jar",
     "modId": "knightlib",
     "name": "Knight Lib",
-    "version": "2.0.2",
-    "curseForgeHash": 2303524538,
-    "modrinthHash": "4a8718320f8ec47ddd85485744a8a7c92685d42a"
+    "version": "2.0.4",
+    "curseForgeHash": 1577732675,
+    "modrinthHash": "46df8f51c765f3b34aebc7317092a89dee6218ca"
   },
   "konkrete_neoforge_1.9.9_MC_1.21.jar": {
     "jarName": "konkrete_neoforge_1.9.9_MC_1.21.jar",
