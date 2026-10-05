@@ -27,7 +27,7 @@ ServerEvents.tick((e) => {
     if (day > 5 && day % 10 == 0 && global.compareDay(day, server.persistentData.getInt("dayLastRaided"), 1)) {
         let raid = getRaidFromTier(server.players[0], server);
         server.runCommandSilent(`open_gateway ${server.players[0].username} gateways:${raid}`)
-        if (server.player.length >= 3) {
+        if (server.players.length >= 3) {
             server.runCommandSilent(`open_gateway ${server.players[1].username} gateways:${raid}`)
         }
         server.persistentData.dayLastRaided = day;

@@ -10,7 +10,7 @@ const flushNotifs = (server, level) => {
     }
 }
 global.paintAlert = (server, player, text, color) => {
-    flushNotifs(server, player.getLevel());
+    flushNotifs(server, player.level);
     let notifNum = Object.keys(notifs).filter(key => (key).includes(player.username)).length;
     notifs[`${player.username}notif${notifNum}`] = {
         type: 'text',

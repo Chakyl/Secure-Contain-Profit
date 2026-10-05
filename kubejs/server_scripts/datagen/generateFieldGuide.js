@@ -51,7 +51,7 @@
 //         ["creaturefeature:blossom", { description: "WIP" }],
 //         ["creaturefeature:minds", { description: "WIP" }],
 //         ["minecraft:frog", { description: "It looks like a frog, acts like a frog. But it's not a frog." }],
-//         ["companions:cornelius", { description: "Cornelius' UNCHAINED form is the only known evolved abnormality that does nothing when breaching. Manager 0093's experiments has found Cornelius to enjoy feasting upon wild bees, becomig friendly to the manager in the process.\n\nOnce friendly, Cornelius will play a crude form of blackjack with the manager for Frogcoins using sneak and right click.\n\nCornelius does nothing when breaching, and can be calmed down with any denomination of frogcoin." }],
+//         ["companions:cornelius", { description: "Cornelius' UNCHAINED form is the only known evolved abnormality that does nothing when breaching. Manager 0093's experiments has found Cornelius to enjoy feasting upon wild bees, becoming friendly to the manager in the process.\n\nOnce friendly, Cornelius will play a crude form of blackjack with the manager for Frogcoins using sneak and right click.\n\nCornelius does nothing when breaching, and can be calmed down with any denomination of frogcoin." }],
 //         ["companions:living_candle", { description: "Manager 0029 discovered Friends of Coal during a power outage pertaining to Incident 00292313. It is unknown where the coal it drops comes from, as material studies have not found traces of it inside of its own body." }],
 //         /**
 //          *   AMBER ABNORMALITIES

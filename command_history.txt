@@ -1,9 +1,3 @@
-/kjs reload server-scripts
-/time add 1000
-/time add 24000
-/kjs reload server-scripts
-/time add 24000
-/kjs persistent-data server get *
 /kjs persistent-data server merge {raidCount:0}
 /time add 24000
 /kjs reload server-scripts
@@ -48,3 +42,9 @@
 /time add 240000
 /kjs reload server-scripts
 /time add 24000
+/time set 0
+/time add 240000
+/time add 12000
+/kjs persistent-data server get *
+/kjs reload server-scripts
+/kjs persistent-data server get *
