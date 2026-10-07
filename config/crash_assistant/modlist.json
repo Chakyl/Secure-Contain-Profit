@@ -69,6 +69,14 @@
     "curseForgeHash": 3337930731,
     "modrinthHash": "5b73537b908764f2d3fd593a0f56a8b1b034bc50"
   },
+  "blocksabound-0.4.0.jar": {
+    "jarName": "blocksabound-0.4.0.jar",
+    "modId": "blocksabound",
+    "name": "Blocks Abound",
+    "version": "0.4.0",
+    "curseForgeHash": 3414957887,
+    "modrinthHash": "146d526981664aced0ac4df2e7c2ce34d9e0c9bd"
+  },
   "blueprint-1.21.1-8.2.0.jar": {
     "jarName": "blueprint-1.21.1-8.2.0.jar",
     "modId": "blueprint",
@@ -229,6 +237,14 @@
     "curseForgeHash": 2519274428,
     "modrinthHash": "2d8b1f07b0ef3f24610324ec3e594edf356b8f36"
   },
+  "DefaultWorldType-1.21-5.0.4.jar": {
+    "jarName": "DefaultWorldType-1.21-5.0.4.jar",
+    "modId": "defaultworldtype",
+    "name": "Default World Type",
+    "version": "1.21-5.0.4",
+    "curseForgeHash": 3895498008,
+    "modrinthHash": "ee1a6664e67858b64f1e95ebbfcd6fa1e3111069"
+  },
   "dye_depot-2.1.1.jar": {
     "jarName": "dye_depot-2.1.1.jar",
     "modId": "dye_depot",
@@ -292,6 +308,14 @@
     "version": "7.0.3",
     "curseForgeHash": 2808038058,
     "modrinthHash": "9563692efb708b6b568df27a01ec52f6311928ef"
+  },
+  "fieldguide-1.21.0+1.21.1-neoforge.jar": {
+    "jarName": "fieldguide-1.21.0+1.21.1-neoforge.jar",
+    "modId": "fieldguide",
+    "name": "Field Guide",
+    "version": "1.21.0+1.21.1",
+    "curseForgeHash": 2632329625,
+    "modrinthHash": "7ffd128605b5dac8cd361a8d6c23f7bb22fc0b6d"
   },
   "fieldguide-neoforge-1.21.1-1.18.0.jar": {
     "jarName": "fieldguide-neoforge-1.21.1-1.18.0.jar",
@@ -381,6 +405,14 @@
     "curseForgeHash": 635086514,
     "modrinthHash": "b092c3f2f5368ca04215491a264cc840f8ad889a"
   },
+  "item_descriptions-2.8.0+1.21.1-neoforge.jar": {
+    "jarName": "item_descriptions-2.8.0+1.21.1-neoforge.jar",
+    "modId": "item_descriptions",
+    "name": "Item Descriptions",
+    "version": "2.8.0+1.21.1",
+    "curseForgeHash": 3982344233,
+    "modrinthHash": "fd8df1a7398539d66ecbcf406d22b8408d2d4808"
+  },
   "Jade-1.21.1-NeoForge-15.10.6.jar": {
     "jarName": "Jade-1.21.1-NeoForge-15.10.6.jar",
     "modId": "jade",
@@ -433,6 +465,14 @@
     "version": "2.3.1-NEOFORGE-1.21.1",
     "curseForgeHash": 178762649,
     "modrinthHash": "b02a33bad4466237bb974aa3bb7d7687afe3ddbf"
+  },
+  "LibX-1.21.1-6.0.9.jar": {
+    "jarName": "LibX-1.21.1-6.0.9.jar",
+    "modId": "libx",
+    "name": "LibX",
+    "version": "1.21.1-6.0.9",
+    "curseForgeHash": 2782464545,
+    "modrinthHash": "06a144a41aa7affca17f30a28c0e9effdddc3f4e"
   },
   "lmft-1.1.1+1.21.9-neoforge.jar": {
     "jarName": "lmft-1.1.1+1.21.9-neoforge.jar",
@@ -626,6 +666,14 @@
     "curseForgeHash": 157337671,
     "modrinthHash": "fbaec299a3106d1099899a741680d22fd6509c5d"
   },
+  "SkyblockBuilder-21.1.31.jar": {
+    "jarName": "SkyblockBuilder-21.1.31.jar",
+    "modId": "skyblockbuilder",
+    "name": "Skyblock Builder",
+    "version": "21.1.31",
+    "curseForgeHash": 1490594438,
+    "modrinthHash": "c13df34bb22a9862b82644ae85a84dc1b5d19cdb"
+  },
   "society_trading-1.2.11-1.21.1.jar": {
     "jarName": "society_trading-1.2.11-1.21.1.jar",
     "modId": "society_trading",
@@ -641,14 +689,6 @@
     "version": "0.8.13+mc1.21.1",
     "curseForgeHash": 1375682531,
     "modrinthHash": "1757289be21ed18db5b0d90703fa3db1b2de5693"
-  },
-  "starterstructure-1.21.1-4.2.jar": {
-    "jarName": "starterstructure-1.21.1-4.2.jar",
-    "modId": "starterstructure",
-    "name": "Starter Structure",
-    "version": "4.2",
-    "curseForgeHash": 1051005680,
-    "modrinthHash": "740b1775e3a66fe29a872b411cf5dc5c1f516929"
   },
   "supplementaries-1.21.1-3.9.9-neoforge.jar": {
     "jarName": "supplementaries-1.21.1-3.9.9-neoforge.jar",
@@ -697,6 +737,14 @@
     "version": "1.3-1.21.1",
     "curseForgeHash": 1843361633,
     "modrinthHash": "c04c476db9c7bc8952feba19e3cc3a6919ea0162"
+  },
+  "worldedit-mod-7.3.8.jar": {
+    "jarName": "worldedit-mod-7.3.8.jar",
+    "modId": "worldedit",
+    "name": "WorldEdit",
+    "version": "7.3.8+6939-7d32b45",
+    "curseForgeHash": 683807693,
+    "modrinthHash": "924fe181a29bd66be6783f6d589968ab0ee02250"
   },
   "xaeroworldmap-neoforge-1.21.1-1.46.0.jar": {
     "jarName": "xaeroworldmap-neoforge-1.21.1-1.46.0.jar",

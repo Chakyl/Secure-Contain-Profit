@@ -1,7 +1,8 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken"]],
     ["amber", ["antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:sinister", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:illager_golem", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove"]],
-    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic", "creaturefeature:detritus", "scguns:sulfurhead"]]
+    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
+    ["indigo", ["creaturefeature:detritus", "companions:sacred_pontiff", "opposing_force:dicer", "netherman:guardian", "netherman:believer_villager"]]
 ])
 
 const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
@@ -295,7 +296,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     }
     if (tick % 600 == 0) {
         centerRadiusPos = block.getPos().offset(0, radius, 0)
-        let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
+        let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos.below(), radius + 1, abnormalityUUID);
         if (checkedAbs.length == 0) {
             level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);

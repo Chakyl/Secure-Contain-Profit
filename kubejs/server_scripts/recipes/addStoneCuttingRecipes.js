@@ -1,6 +1,7 @@
+
 ServerEvents.tags('item', event => {
     let furniture = ['industrialhellscape:amenity_furnishings', 'whimsy_deco:moroccan_sofa', 'whimsy_deco:paper_lantern', 'whimsy_deco:red_paper_lantern', 'whimsy_deco:blue_paper_lantern', 'whimsy_deco:wood_framed_paper_lantern', 'whimsy_deco:bamboo_framed_paper_lantern', 'whimsy_deco:tree_paper_lantern', 'whimsy_deco:phone', 'whimsy_deco:black_phone', 'whimsy_deco:blue_phone', 'whimsy_deco:vine_rattan_chair', 'whimsy_deco:warped_rattan_chair', 'whimsy_deco:rattan_stool', 'whimsy_deco:recorder', 'whimsy_deco:ship_helm', 'whimsy_deco:shower', 'whimsy_deco:red_stocking', 'whimsy_deco:green_stocking', 'whimsy_deco:blue_stocking', 'whimsy_deco:orange_stocking', 'whimsy_deco:traffic_cone', 'whimsy_deco:black_atm', 'whimsy_deco:green_atm', 'whimsy_deco:red_atm', 'whimsy_deco:yellow_atm', 'whimsy_deco:blue_atm', 'whimsy_deco:bamboo_candle', 'whimsy_deco:bathroom_rack', 'whimsy_deco:broom', 'whimsy_deco:push_broom', 'whimsy_deco:cash_register', 'whimsy_deco:black_cash_register', 'whimsy_deco:gray_cash_register', 'whimsy_deco:black_curio_cash_register',
-        'whimsy_deco:gold_curio_cash_register', 'whimsy_deco:copper_curio_cash_register', 'whimsy_deco:iron_curio_cash_register', 'whimsy_deco:caution_floor_sign', 'whimsy_deco:cowbell', 'whimsy_deco:bronze_cowbell', 'whimsy_deco:dartboard', 'whimsy_deco:oak_desk_mirror', 'whimsy_deco:spruce_desk_mirror', 'whimsy_deco:dark_oak_desk_mirror', 'whimsy_deco:fan', 'whimsy_deco:froggy_chair', 'whimsy_deco:orange_froggy_chair', 'whimsy_deco:yellow_froggy_chair', 'whimsy_deco:blue_froggy_chair', 'whimsy_deco:pink_froggy_chair', 'whimsy_deco:horseshoe', 'whimsy_deco:golden_horseshoe', 'whimsy_deco:red_life_preserver_ring', 'whimsy_deco:orange_life_preserver_ring', 'whimsy_deco:yellow_life_preserver_ring', 'whimsy_deco:blue_life_preserver_ring', 'abyssal_decor:solar_rod', 'abyssal_decor:stellar_rod', 'abyssal_decor:terrestrial_rod', 'abyssal_decor:lunar_rod', 'abyssal_decor:ethereal_rod', 'abyssal_decor:desk_bell', 'abyssal_decor:bulb_lamp_floor', 'abyssal_decor:wall_bulb_lamp', 'abyssal_decor:tube_lamp', 'abyssal_decor:iron_lamp_item', 'abyssal_decor:flower_lamp', 'abyssal_decor:frosted_ceiling_lamp', 'abyssal_decor:quartz_lamp_item', 'abyssal_decor:bulkhead_lamp', 'abyssal_decor:embedded_lamp', 'abyssal_decor:seaglass_lamp', 'abyssal_decor:jade_lamp_item', 'abyssal_decor:blaze_lamp_on', 'abyssal_decor:street_lamp', 'abyssal_decor:candle_stand', 'abyssal_decor:rainbow_lamp_off', 'abyssal_decor:life_preserver', 'abyssal_decor:wood_support', 'abyssal_decor:ship_wheel', 'abyssal_decor:wooden_dragon_head', 'abyssal_decor:wooden_frog', 'abyssal_decor:barb_barrier_base', 'abyssal_decor:rope_barrier_base', 'abyssal_decor:velvet_barrier_base', 'abyssal_decor:iron_barrier_base', 'abyssal_decor:lion_statue_bottom', 'abyssal_decor:gargoyle_base', 'abyssal_decor:door_knocker', 'abyssal_decor:nithing_bottom', 'abyssal_decor:telescope_bottom', 'abyssal_decor:velvet', 'abyssal_decor:gilded_velvet', 'abyssal_decor:velvet_curtain'];
+        'whimsy_deco:gold_curio_cash_register', 'whimsy_deco:copper_curio_cash_register', 'whimsy_deco:iron_curio_cash_register', 'whimsy_deco:caution_floor_sign', 'whimsy_deco:cowbell', 'whimsy_deco:bronze_cowbell', 'whimsy_deco:dartboard', 'whimsy_deco:oak_desk_mirror', 'whimsy_deco:spruce_desk_mirror', 'whimsy_deco:dark_oak_desk_mirror', 'whimsy_deco:fan', 'whimsy_deco:froggy_chair', 'whimsy_deco:orange_froggy_chair', 'whimsy_deco:yellow_froggy_chair', 'whimsy_deco:blue_froggy_chair', 'whimsy_deco:pink_froggy_chair', 'whimsy_deco:golden_horseshoe', 'whimsy_deco:red_life_preserver_ring', 'whimsy_deco:orange_life_preserver_ring', 'whimsy_deco:yellow_life_preserver_ring', 'whimsy_deco:blue_life_preserver_ring', 'abyssal_decor:solar_rod', 'abyssal_decor:stellar_rod', 'abyssal_decor:terrestrial_rod', 'abyssal_decor:lunar_rod', 'abyssal_decor:ethereal_rod', 'abyssal_decor:desk_bell', 'abyssal_decor:bulb_lamp_floor', 'abyssal_decor:wall_bulb_lamp', 'abyssal_decor:tube_lamp', 'abyssal_decor:iron_lamp_item', 'abyssal_decor:flower_lamp', 'abyssal_decor:frosted_ceiling_lamp', 'abyssal_decor:quartz_lamp_item', 'abyssal_decor:bulkhead_lamp', 'abyssal_decor:embedded_lamp', 'abyssal_decor:seaglass_lamp', 'abyssal_decor:jade_lamp_item', 'abyssal_decor:blaze_lamp_on', 'abyssal_decor:street_lamp', 'abyssal_decor:candle_stand', 'abyssal_decor:rainbow_lamp_off', 'abyssal_decor:life_preserver', 'abyssal_decor:wood_support', 'abyssal_decor:ship_wheel', 'abyssal_decor:wooden_dragon_head', 'abyssal_decor:wooden_frog', 'abyssal_decor:barb_barrier_base', 'abyssal_decor:rope_barrier_base', 'abyssal_decor:velvet_barrier_base', 'abyssal_decor:iron_barrier_base', 'abyssal_decor:lion_statue_bottom', 'abyssal_decor:gargoyle_base', 'abyssal_decor:door_knocker', 'abyssal_decor:nithing_bottom', 'abyssal_decor:telescope_bottom', 'abyssal_decor:velvet', 'abyssal_decor:gilded_velvet', 'abyssal_decor:velvet_curtain'];
     event.add('industrialhellscape:amenity_furniture_category', furniture);
     event.add('industrialhellscape:all_furniture_blocks', furniture);
     event.add('industrialhellscape:metalworks_items', ['industrialhellscape:armored_door', 'industrialhellscape:stamped_metal_door', 'industrialhellscape:bulkhead_door', 'whimsy_deco:cast_iron_ledge', 'whimsy_deco:cast_iron_trapdoor', 'create:andesite_ladder', 'create:andesite_table_cloth', 'create:andesite_bars', 'create:andesite_scaffolding', 'create:andesite_door', 'create:brass_ladder', 'create:brass_table_cloth', 'create:brass_bars', 'create:brass_scaffolding', 'create:copper_door', 'create:brass_door', 'create:copper_ladder', 'create:copper_table_cloth', 'create:copper_bars', 'create:copper_scaffolding', 'create:copper_door'])
@@ -14,29 +15,49 @@ ServerEvents.tags('item', event => {
     event.add('scp:seabrass', ['abyssal_decor:seabrass_block', 'abyssal_decor:seabrass_stairs', 'abyssal_decor:seabrass_slab', 'abyssal_decor:seabrass_wall', 'abyssal_decor:riveted_seabrass', 'abyssal_decor:riveted_seabrass_stairs', 'abyssal_decor:rivited_seabrass_slab', 'abyssal_decor:riveted_seabrass_wall', 'abyssal_decor:seabrass_plating', 'abyssal_decor:seabrass_trim', 'abyssal_decor:seabrass_pillar', 'abyssal_decor:large_seabrass_pipe', 'abyssal_decor:small_seabrass_pipes', 'abyssal_decor:seabrass_tiles', 'abyssal_decor:seabrass_lamp_off', 'abyssal_decor:seabrass_button', 'abyssal_decor:seabrass_pressure_plate', 'abyssal_decor:seabrass_chain', 'abyssal_decor:seabrass_sconce', 'abyssal_decor:big_seabrass_sconce', 'abyssal_decor:seabrass_door', 'abyssal_decor:seabrass_trapdoor', 'abyssal_decor:seabrass_bars', 'abyssal_decor:ornate_seabrass_bars', 'abyssal_decor:seabrass_catalyst', 'abyssal_decor:seabrass_spire'])
     event.add('scp:filthcrete', ['abyssal_decor:filthcrete', 'abyssal_decor:filthcrete_stairs', 'abyssal_decor:filthcrete_slab', 'abyssal_decor:filthcrete_wall', 'abyssal_decor:filthcrete_border', 'abyssal_decor:filthcrete_pillar', 'abyssal_decor:reinforced_filthcrete'])
     event.add('scp:serpent', ['abyssal_decor:serpent_scales', 'abyssal_decor:serpent_scale_slab', 'abyssal_decor:damaged_serpent_scales', 'abyssal_decor:damaged_serpent_scale_slab', 'abyssal_decor:serpent_skin', 'abyssal_decor:damaged_serpent_skin', 'abyssal_decor:serpent_flesh', 'abyssal_decor:serpent_flesh_slab', 'abyssal_decor:serpent_artery', 'abyssal_decor:ribbed_veins', 'abyssal_decor:serpent_eye', 'abyssal_decor:serpent_small_eyes', 'abyssal_decor:netted_eye'])
-    event.add('scp:blood', ['abyssal_decor:rough_blood_coral', 'abyssal_decor:blood_coral_bud', 'abyssal_decor:polished_blood_coral', 'abyssal_decor:polished_blood_coral_stairs', 'abyssal_decor:polished_blood_coral_slab', 'abyssal_decor:polished_blood_coral_wall', 'abyssal_decor:smooth_blood_coral', 'abyssal_decor:smooth_blood_coral_stairs', 'abyssal_decor:smooth_blood_coral_slab', 'abyssal_decor:smooth_blood_coral_wall', 'abyssal_decor:blood_coral_bricks', 'abyssal_decor:blood_coral_brick_stairs', 'abyssal_decor:blood_coral_brick_slab', 'abyssal_decor:blood_coral_brick_wall', 'abyssal_decor:blood_coral_pillar', 'abyssal_decor:gilded_blood_coral_pillar', 'abyssal_decor:blood_lantern', 'abyssal_decor:blood_coral_door', 'abyssal_decor:blood_coral_trapdoor', 'abyssal_decor:blood_coral_bars_solo', 'abyssal_decor:small_blood_coral_bars', 'abyssal_decor:small_blood_coral_bars_corner', 'abyssal_decor:blood_coral_sconce', 'abyssal_decor:big_blood_coral_sconce'])
-
+    event.add('scp:blood', ['abyssal_decor:rough_blood_coral', 'abyssal_decor:blood_coral_bud', 'abyssal_decor:polished_blood_coral', 'abyssal_decor:polished_blood_coral_stairs', 'abyssal_decor:polished_blood_coral_slab', 'abyssal_decor:polished_blood_coral_wall', 'abyssal_decor:smooth_blood_coral', 'abyssal_decor:smooth_blood_coral_stairs', 'abyssal_decor:smooth_blood_coral_slab', 'abyssal_decor:smooth_blood_coral_wall', 'abyssal_decor:blood_coral_bricks', 'abyssal_decor:blood_coral_brick_stairs', 'abyssal_decor:blood_coral_brick_slab', 'abyssal_decor:blood_coral_brick_wall', 'abyssal_decor:blood_coral_pillar', 'abyssal_decor:gilded_blood_coral_pillar', 'abyssal_decor:blood_lantern', 'abyssal_decor:blood_coral_door', 'abyssal_decor:blood_coral_trapdoor', 'abyssal_decor:blood_coral_bars_solo', 'abyssal_decor:small_blood_coral_bars', 'abyssal_decor:small_blood_coral_bars_corner', 'abyssal_decor:blood_coral_sconce', 'abyssal_decor:big_blood_coral_sconce']);
+    [
+        "verdant",
+        "amber",
+        "maroon",
+        "indigo",
+    ].forEach(color => {
+        event.add(`scp:${color}_hallway_card`, `scp:${color}_hallway_expansion_card`);
+        ["left", "right", "t_intersection", "cross_intersection", "dead_end"].forEach((direction) => {
+            event.add(`scp:${color}_hallway_card`, `scp:${color}_hallway_${direction}_expansion_card`);
+        })
+    });
 })
 
 ServerEvents.recipes((event) => {
     function stonecuttingSwitching(switchingTag) {
         let output = Ingredient.of(switchingTag).itemIds
         output.forEach(output => {
+            if (output.includes("industrialhellscape")) event.remove({ type: "stonecutting", output: output });
             event.stonecutting(output, switchingTag)
         })
     }
 
-    stonecuttingSwitching('#industrialhellscape:metalworks_items')
-    stonecuttingSwitching('#industrialhellscape:amenity_furniture_category')
-    stonecuttingSwitching('#scp:deepbronze')
-    stonecuttingSwitching('#scp:marble')
-    stonecuttingSwitching('#scp:talcrock')
-    stonecuttingSwitching('#scp:bellmetal')
-    stonecuttingSwitching('#scp:jade')
-    stonecuttingSwitching('#scp:pearl')
-    stonecuttingSwitching('#scp:black_pearl')
-    stonecuttingSwitching('#scp:seabrass')
-    stonecuttingSwitching('#scp:filthcrete')
-    stonecuttingSwitching('#scp:serpent')
-    stonecuttingSwitching('#scp:blood')
+    stonecuttingSwitching('#industrialhellscape:metalworks_items');
+    stonecuttingSwitching('#industrialhellscape:amenity_furniture_category');
+    stonecuttingSwitching('#scp:deepbronze');
+    stonecuttingSwitching('#scp:marble');
+    stonecuttingSwitching('#scp:talcrock');
+    stonecuttingSwitching('#scp:bellmetal');
+    stonecuttingSwitching('#scp:jade');
+    stonecuttingSwitching('#scp:pearl');
+    stonecuttingSwitching('#scp:black_pearl');
+    stonecuttingSwitching('#scp:seabrass');
+    stonecuttingSwitching('#scp:filthcrete');
+    stonecuttingSwitching('#scp:serpent');
+    stonecuttingSwitching('#scp:blood');
+    [
+        "verdant",
+        "amber",
+        "maroon",
+        "indigo",
+    ].forEach(color => {
+        stonecuttingSwitching(`#scp:${color}_hallway_card`);
+    });
+    event.stonecutting('industrialhellscape:amenity_furnishings', 'industrialhellscape:ihea_furniture_kit')
 })

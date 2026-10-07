@@ -59,9 +59,6 @@
     "entity": true,
     "entity_variant": true
   },
-  "oritech": {
-    "machine_core_controller": true
-  },
   "supplementaries": {
     "hat_stand": true
   },
@@ -75,6 +72,10 @@
     "registry_name": "OFF",
     "block_properties": false,
     "mod_name": true
+  },
+  "item_descriptions": {
+    "block_descriptions": true,
+    "entity_descriptions": true
   },
   "ae2": {
     "part_icon": true,

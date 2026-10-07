@@ -1,0 +1,31 @@
+{
+  "title": "Hallway Shapes",
+  "description": "There is infinite space for you to expand your facility at will.\n\nThe HAVEN tool can be used to select which shape you want a given hallway to be. Some hallway types have more or less containment units, as there can only be a hallway or containment unit slot in the 4 cardinal directions.",
+  "icon": {
+    "item": "scp:verdant_hallway_cross_intersection_expansion_card"
+  },
+  "chapter": "verdant_wing",
+  "sort_order": 5,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:verdant_hallway_cross_intersection_expansion_card",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:building",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:containment_unit",
+      "count": 1
+    }
+  ],
+  "include_in_main": true
+}

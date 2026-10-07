@@ -1,50 +1,50 @@
-/kjs persistent-data server merge {raidCount:0}
-/time add 24000
+//replace abyssal_decor:bellmetal_plating abyssal_decor:bellmetal_trim
+//replace industrialhellscape:smooth_vesselplate abyssal_decor:bellmetal_block
+//replace industrialhellscape:smooth_gray_vesselplate abyssal_decor:bellmetal_block
+//replace industrialhellscape:gray_rockrete abyssal_decor:bellmetal_shingles
+//replace industrialhellscape:gray_riveted_vesselplate abyssal_decor:bellmetal_plating
+//replace industrialhellscape:smooth_gray_vesselplate abyssal_decor:bellmetal_block
+//replace industrialhellscape:gray_rockrete abyssal_decor:bellmetal_shingles
+//replace industrialhellscape:smooth_vesselplate abyssal_decor:bellmetal_block
+//replace industrially_plated:verdant_cut_plating industrially_plated:maroon_cut_plating
+//replace scp:verdant_hallway_lock_block scp:maroon_hallway_lock_block
+//replace scp:verdant_containment_lock_block scp:maroon_containment_lock_block
+//replace abyssal_decor:bellmetal_plating abyssal_decor:bellmetal_trim
 /kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:0}
-/difficulty peaceful
-/difficulty normal
-/kjs persistent-data server merge {raidCount:0}
+/reload
 /kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:1}
-/kjs reload startup-scripts
-/kjs persistent-data server merge {raidCount:1}
-/kjs persistent-data server get *
-/time add 24000
+/kill
 /kjs reload server-scripts
-/time add 24000
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:1}
+/reload
 /kjs reload server-scripts
-/kjs persistent-data server get *
+/reload
 /kjs reload server-scripts
-/kjs persistent-data server merge {raidCount:1}
+/reload
+//pos 1
+//pos1
+//pos2
+//replace bedrock air
+/effect give Chakyl minecraft:night_vision infinite
+//set air
+//cop
+//copy
+//paste
+//copy
+//paste
+//copy
+//paste
+/reload
+/execute in minecraft:overworld run tp ~ ~ ~
+/reload
+//pos1
+//pos 2
+//pos2
+//replace bedrock air
+/effect give Chakyl minecraft:night_vision infinite
+/reload
+/kjs hand
+/reload
+/kjs hand
+/reload
+/ql edit_mode
 /kjs reload server-scripts
-/time add 240000
-/kjs reload server-scripts
-/kjs persistent-data server merge {raidCount:1}
-/time add 240000
-/time add 24000
-/time add 240000
-/time set 0
-/time add 24000
-/time set 0
-/time add 240000
-/time add 1000
-/time add 3000
-/time add 240000
-/kjs stages add Chakyl amber_level
-/time add 240000
-/kjs reload server-scripts
-/time add 1000
-/time add 240000
-/kjs reload server-scripts
-/time add 24000
-/time set 0
-/time add 240000
-/time add 12000
-/kjs persistent-data server get *
-/kjs reload server-scripts
-/kjs persistent-data server get *

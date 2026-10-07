@@ -9,6 +9,14 @@ StartupEvents.registry("block", (e) => {
             .texture(`scp:block/${type}_hallway_lock_block`)
             .unbreakable()
 
+        e.create(`scp:${type}_containment_lock_block`)
+            .displayName(`${formatName(type)} Containment Lock`)
+            .soundType("metal")
+            .soundType("stone")
+            .resistance(3600000)
+            .texture(`scp:block/${type}_containment_lock_block`)
+            .unbreakable()
+            
         e.create(`scp:${type}_containment_lock_block_1`)
             .displayName(`${formatName(type)} Containment Lock`)
             .soundType("metal")

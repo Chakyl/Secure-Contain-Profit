@@ -1,6 +1,6 @@
 
 let warehouseMap = new Map([
-    ['31333', { template: "warehouse_up", x: -7, z: 0 }],
+    ['76', { template: "warehouse_up", x: -7, z: 0 }],
 ])
 
 BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
@@ -18,7 +18,7 @@ BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
     }
     if (!player.isCreative()) item.shrink(1);
 
-    let warehouse = warehouseMap.get(`${xyz}`);
+    let warehouse = { template: "warehouse_up", x: -7, z: 0 }
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
 

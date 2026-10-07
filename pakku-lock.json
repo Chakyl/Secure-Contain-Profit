@@ -1833,6 +1833,71 @@
             ]
         },
         {
+            "pakku_id": "oWjB66n62kNQIHfe",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "curseforge": "defaultworldtype",
+                "modrinth": "defaultworldtype"
+            },
+            "name": {
+                "curseforge": "Default World Type [Forge]",
+                "modrinth": "Default World Type"
+            },
+            "id": {
+                "curseforge": "373014",
+                "modrinth": "kZvO1mDq"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "DefaultWorldType-1.21-5.0.4.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/6821/633/DefaultWorldType-1.21-5.0.4.jar",
+                    "id": "6821633",
+                    "parent_id": "373014",
+                    "hashes": {
+                        "sha1": "ee1a6664e67858b64f1e95ebbfcd6fa1e3111069",
+                        "md5": "38b285b1782d0fe10acc3e0582aaf2b6"
+                    },
+                    "required_dependencies": [],
+                    "size": 14563,
+                    "date_published": "2025-07-28T15:39:29.893Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "DefaultWorldType-1.21-5.0.4.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/kZvO1mDq/versions/CCrwlupr/DefaultWorldType-1.21-5.0.4.jar",
+                    "id": "CCrwlupr",
+                    "parent_id": "kZvO1mDq",
+                    "hashes": {
+                        "sha512": "6d862519baa92d08dfb31fd64ee9b3e1457f78e189eb1843f5fb91051603abd13ec64610c0597247a4a2badc8f144002079fda6890dc6d6142fdf09ad5137408",
+                        "sha1": "ee1a6664e67858b64f1e95ebbfcd6fa1e3111069"
+                    },
+                    "required_dependencies": [],
+                    "size": 14563,
+                    "date_published": "2025-07-28T15:39:27.867816Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "DLYTiPFEmPL80mNk",
             "type": "MOD",
             "side": "BOTH",
@@ -2377,52 +2442,54 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "fieldguide-neoforge-1.21.1-1.18.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8945/632/fieldguide-neoforge-1.21.1-1.18.0.jar",
-                    "id": "8945632",
-                    "parent_id": "1470590",
-                    "hashes": {
-                        "sha1": "9a5b7d0cd8f72a3de01188e81433e8bb4b50f03a",
-                        "md5": "6cb14bdfa8550d11f62f18e0b905ce01"
-                    },
-                    "required_dependencies": [
-                        "1101501",
-                        "1245453"
-                    ],
-                    "size": 1231067,
-                    "date_published": "2026-09-22T08:01:16.433Z"
-                },
-                {
                     "type": "modrinth",
-                    "file_name": "fieldguide-neoforge-1.21.1-1.18.0.jar",
+                    "file_name": "fieldguide-1.21.1+1.21.1-neoforge.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/72RRCWM6/versions/SnTxS7mZ/fieldguide-neoforge-1.21.1-1.18.0.jar",
-                    "id": "SnTxS7mZ",
+                    "url": "https://cdn.modrinth.com/data/72RRCWM6/versions/B7VC43nG/fieldguide-1.21.1+1.21.1-neoforge.jar",
+                    "id": "B7VC43nG",
                     "parent_id": "72RRCWM6",
                     "hashes": {
-                        "sha512": "6559c4f8894495af9599c684cdea157dea7e83af9fffb017b9df3b12fbc1d50377d588570baeb9cf756f793c30cbe011e3ad668808d22ab81d95b2651209e5c5",
-                        "sha1": "9a5b7d0cd8f72a3de01188e81433e8bb4b50f03a"
+                        "sha512": "73f2d546f52d020d0bfe143309507fdebec2e9aa14e88760a892cf94ddb1107d50d0b86f9358cbdc723a830b19b3940653ffd36dd3ed5162376826bda1e10f56",
+                        "sha1": "7d95b8438a0e6340cfa223ce7b3ae2027a39a277"
                     },
                     "required_dependencies": [
                         "UaizcMKP",
                         "PKoLkD98"
                     ],
-                    "size": 1231067,
-                    "date_published": "2026-09-22T08:01:16.205369Z"
+                    "size": 1306796,
+                    "date_published": "2026-10-06T03:33:02.114938Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "fieldguide-1.21.1+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9075/969/fieldguide-1.21.1+1.21.1-neoforge.jar",
+                    "id": "9075969",
+                    "parent_id": "1470590",
+                    "hashes": {
+                        "sha1": "7d95b8438a0e6340cfa223ce7b3ae2027a39a277",
+                        "md5": "2816fc736dc103ea6a792c7bc49a0349"
+                    },
+                    "required_dependencies": [
+                        "1245453",
+                        "1101501"
+                    ],
+                    "size": 1306796,
+                    "date_published": "2026-10-06T03:33:01.283Z"
                 }
             ]
         },
@@ -3494,6 +3561,67 @@
                     "required_dependencies": [],
                     "size": 18126,
                     "date_published": "2026-07-04T13:20:50.785009Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "5wYfhfwvBu5QwxNX",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "libx",
+                "modrinth": "libx"
+            },
+            "name": {
+                "curseforge": "LibX",
+                "modrinth": "LibX"
+            },
+            "id": {
+                "curseforge": "412525",
+                "modrinth": "qEH6GYul"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "LibX-1.21.1-6.0.15.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://edge.forgecdn.net/files/8813/62/LibX-1.21.1-6.0.15.jar",
+                    "id": "8813062",
+                    "parent_id": "412525",
+                    "hashes": {
+                        "sha1": "2361a1abbb4a55dd729fb90c6df41d31864dacc6",
+                        "md5": "0b95f22c8060aa87a9e7aff6400c79c9"
+                    },
+                    "required_dependencies": [],
+                    "size": 1263056,
+                    "date_published": "2026-09-05T09:40:32.270Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "LibX-1.21.1-6.0.15.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/qEH6GYul/versions/ADxNEmse/LibX-1.21.1-6.0.15.jar",
+                    "id": "ADxNEmse",
+                    "parent_id": "qEH6GYul",
+                    "hashes": {
+                        "sha512": "944dd7834cfb88b15de9527c302dc7206d7e8b1e449d97cc605fb6e7225619c68d05ea5ba934f1d1da1bf5ff2a7e79bb990870e886293dc336deeea537e07382",
+                        "sha1": "2361a1abbb4a55dd729fb90c6df41d31864dacc6"
+                    },
+                    "required_dependencies": [],
+                    "size": 1263056,
+                    "date_published": "2026-09-05T09:40:31.498827Z"
                 }
             ]
         },
@@ -5010,6 +5138,74 @@
                     "required_dependencies": [],
                     "size": 176967,
                     "date_published": "2026-08-01T15:36:00.951233Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "MKo1UzGv72FktNbp",
+            "pakku_links": [
+                "5wYfhfwvBu5QwxNX"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "skyblock-builder",
+                "modrinth": "skyblock-builder"
+            },
+            "name": {
+                "curseforge": "Skyblock Builder",
+                "modrinth": "Skyblock Builder"
+            },
+            "id": {
+                "curseforge": "446691",
+                "modrinth": "por2AZc5"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "SkyblockBuilder-21.1.37.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/8988/845/SkyblockBuilder-21.1.37.jar",
+                    "id": "8988845",
+                    "parent_id": "446691",
+                    "hashes": {
+                        "sha1": "b4d24d886fabd577fd4a52c06add7d5300998f9e",
+                        "md5": "5e7cf87108df7cf6c1f22d4a57e5b450"
+                    },
+                    "required_dependencies": [
+                        "412525"
+                    ],
+                    "size": 614104,
+                    "date_published": "2026-09-27T09:45:48.640Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "SkyblockBuilder-21.1.37.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/por2AZc5/versions/NmXF6maO/SkyblockBuilder-21.1.37.jar",
+                    "id": "NmXF6maO",
+                    "parent_id": "por2AZc5",
+                    "hashes": {
+                        "sha512": "267af0122bc0151bb4c00259fe776d8d46d8b2f16e94298b4fdd4adc6249e7efbf4e28399f7de692156e03ea5e9aeef62cc2f90ef0f9f255201fde4125c2d41b",
+                        "sha1": "b4d24d886fabd577fd4a52c06add7d5300998f9e"
+                    },
+                    "required_dependencies": [
+                        "qEH6GYul"
+                    ],
+                    "size": 614104,
+                    "date_published": "2026-09-27T09:45:47.953975Z"
                 }
             ]
         },

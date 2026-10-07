@@ -39,7 +39,7 @@ global.ABNORMALITIES = new Map([
     // Pig line
     ["minecraft:pig", { class: "verdant", preferences: { violence: 0, insight: 2, harmony: 0 }, name: "ZUSHI", counter: 3, breachTypes: ["TELEPORT", "DECOUNT"], evolutions: ["minecraft:piglin", "minecraft:creeper"] }],
     ["minecraft:piglin", { class: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Direct Line", counter: 5, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
-    ["minecraft:piglin_brute", { class: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Direct Line 2", counter: 6, breachTypes: ["STEAMROLLER"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
+    ["minecraft:piglin_brute", { class: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Direct Line 2", counter: 6, breachTypes: ["STEAMROLLER"]}],
     ["minecraft:zombified_piglin", { class: "verdant", preferences: { violence: 3, insight: 0, harmony: 2 }, name: "Coroner", counter: 3, breachTypes: ["STEAMROLLER"] }],
     ["minecraft:creeper", { class: "verdant", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "Heaven Surrounds Us Like a Hood", counter: 12, breachTypes: ["ESCAPEARTIST"] }],
     // Pathogen
@@ -155,11 +155,14 @@ global.ABNORMALITIES = new Map([
     ["antarchy:moleworm", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:molevore"] }],
     ["antarchy:molevore", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
     // No evos
-    ["creaturefeature:detritus", { class: "maroon", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST", "SUPERCHAOS"] }],
     ["scguns:sulfurhead", { class: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Head in the Clouds", counter: 3, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
     ["antarchy:flytrap", { class: "maroon", preferences: { violence: 3, insight: 3, harmony: 2 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"] }],
     ["antarchy:lucid", { class: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Rhinestone Eye", counter: 6, breachTypes: ["SLEEP", "ESCAPEARTIST",] }],
     ["antarchy:vortex", { class: "maroon", preferences: { violence: 4, insight: 3, harmony: 2 }, name: "Cowgirl Clue", counter: 6, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"] }],
+    /**
+     *   Indigo ABNORMALITIES
+     */
+    ["creaturefeature:detritus", { class: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST"] }],
 ]);
 
 global.ABNORMALITY_LITTERS = new Map([

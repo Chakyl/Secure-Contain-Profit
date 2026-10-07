@@ -8,8 +8,11 @@ StartupEvents.registry("item", (e) => {
   e.create("scp:tubasmoke_stick");
 
   const createLockCards = (type) => {
-    e.create(`scp:${type}_hallway_expansion_card`).maxStackSize(4);
-    e.create(`scp:${type}_containment_expansion_card`).maxStackSize(8);
+    e.create(`scp:${type}_hallway_expansion_card`).texture(`scp:item/cards/${type}/${type}_hallway_expansion_card`).maxStackSize(4);
+    ["left", "right", "t_intersection", "cross_intersection", "dead_end"].forEach((direction) => {
+      e.create(`scp:${type}_hallway_${direction}_expansion_card`).texture(`scp:item/cards/${type}/${type}_hallway_${direction}_expansion_card`).maxStackSize(4);
+    })
+    e.create(`scp:${type}_containment_expansion_card`).texture(`scp:item/cards/${type}/${type}_containment_expansion_card`).maxStackSize(8);
   };
 
   [

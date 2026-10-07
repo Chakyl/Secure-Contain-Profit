@@ -22,7 +22,7 @@
   "rewards": [
     {
       "type": "questlog:item",
-      "components": "scp:verdant_research",
+      "item": "scp:verdant_research",
       "count": 1
     }
   ]
