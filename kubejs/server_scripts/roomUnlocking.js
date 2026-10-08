@@ -29,7 +29,7 @@ BlockEvents.rightClicked(['scp:verdant_hallway_lock_block', 'scp:verdant_contain
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
 
-    server.runCommandSilent(`place template scp:${structureData.template} ${block.x + structureData.x} ${block.y - 3} ${block.z + structureData.z} none ${structureData.mirror ? structureData.mirror : "none"}`);
+    server.runCommandSilent(`place template scp:legacy/${structureData.template} ${block.x + structureData.x} ${block.y - 3} ${block.z + structureData.z} none ${structureData.mirror ? structureData.mirror : "none"}`);
     block.set("minecraft:air")
     level.getBlock(block.getPos().below()).set("minecraft:air")
 })

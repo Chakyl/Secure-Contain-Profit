@@ -1,6 +1,6 @@
 
 let warehouseMap = new Map([
-    ['76', { template: "warehouse_up", x: -7, z: 0 }],
+    ['31333', { template: "warehouse_up", x: -7, z: 0 }],
 ])
 
 BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
@@ -19,11 +19,11 @@ BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
     }
     if (!player.isCreative()) item.shrink(1);
 
-    let warehouse = { template: "warehouse_up", x: -7, z: 0 }
+    let warehouse = warehouseMap.get(`${xyz}`);
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
 
-    server.runCommandSilent(`place template scp:${warehouse.template} ${block.x - 14} ${block.y + 1} ${block.z - 14}`);
+    server.runCommandSilent(`place template scp:legacy${warehouse.template} ${block.x - 14} ${block.y + 1} ${block.z - 14}`);
     block.set("minecraft:air")
     level.getBlock(block.getPos().above()).set("minecraft:air")
 })
