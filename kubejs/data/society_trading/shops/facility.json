@@ -129,6 +129,17 @@
 		},
 		{
 			"offer": {
+				"id": "scp:utility_expansion_room_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 4
+			},
+			"trade_id": "facility_scp_utility_expansion_room_card"
+		},
+		{
+			"offer": {
 				"id": "numismatics:bank_terminal",
 				"count": 1
 			},
@@ -162,6 +173,18 @@
 			},
 			"numismatics_cost": 16,
 			"trade_id": "facility_numismaticsutils_bank_meter"
+		},
+		{
+			"offer": {
+				"id": "create:clipboard",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 2
+			},
+			"numismatics_cost": 32,
+			"trade_id": "facility_create_clipboard"
 		},
 		{
 			"offer": {

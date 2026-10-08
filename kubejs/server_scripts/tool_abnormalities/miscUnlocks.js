@@ -1,10 +1,3 @@
-BlockEvents.rightClicked('companions:frog_bonanza_block', (e) => {
-    const { player, item, level, hand, block, server } = e;
-    if (hand !== "MAIN_HAND") return;
-    if (level.isClientSide()) return;
-    if (!['numismatics:sprocket', 'numismatics:cog', 'numismatics:crown'].includes(item.id)) return;
-    FieldGuide.unlock(player, `block:companions/frog_bonanza_block`);
-});
 BlockEvents.placed("scp:rubber_duck", (e) => {
     FieldGuide.unlock(e.player, `block:scp/rubber_duck`);
 });

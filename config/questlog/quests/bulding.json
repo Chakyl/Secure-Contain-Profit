@@ -16,7 +16,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:breaches_qliphoth",
+      "quest": "questlog:chaos",
       "required_amount": 1
     }
   ],

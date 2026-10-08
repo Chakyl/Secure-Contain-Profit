@@ -16,7 +16,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:new_quest_8ff850aa",
+      "quest": "questlog:work_types",
       "required_amount": 1
     }
   ],

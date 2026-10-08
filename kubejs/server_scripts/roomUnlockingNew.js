@@ -58,6 +58,7 @@ let structureMap = new Map([
     ["scp:maroon_hallway_t_intersection_expansion_card", { structurePool: ["maroon_hallways_t_intersection"] }],
     ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"] }],
     ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"] }],
+    ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"] }],
     ['scp:warehouse_expansion_card', {}]
 ])
 let clearBlocks = (level, block) => {
@@ -81,6 +82,7 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
     if (player.stages.has("starting_items")) return;
 
     let isContainment = block.id.includes("containment")
+    let isContainmentCard = item.id.includes("containment") || item.id.includes("utility")
     let foundDirection = getBedrockDirection(block)
     if (foundDirection == null) {
         player.tell("§7There's already a room in this direction...")
@@ -88,7 +90,7 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
         return;
     }
     let structureData = structureMap.get(`${item.id}`);
-    if (structureData.structurePool == null || (isContainment && !item.id.includes("containment")) || (!isContainment && item.id.includes("containment"))) {
+    if (structureData.structurePool == null || (isContainment && !isContainmentCard) || (!isContainment && isContainmentCard)) {
         player.tell("§7You need an §6Expansion Card§7 to unlock this.")
         return;
     }

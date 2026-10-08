@@ -16,6 +16,7 @@ ServerEvents.tags('item', event => {
     event.add('scp:filthcrete', ['abyssal_decor:filthcrete', 'abyssal_decor:filthcrete_stairs', 'abyssal_decor:filthcrete_slab', 'abyssal_decor:filthcrete_wall', 'abyssal_decor:filthcrete_border', 'abyssal_decor:filthcrete_pillar', 'abyssal_decor:reinforced_filthcrete'])
     event.add('scp:serpent', ['abyssal_decor:serpent_scales', 'abyssal_decor:serpent_scale_slab', 'abyssal_decor:damaged_serpent_scales', 'abyssal_decor:damaged_serpent_scale_slab', 'abyssal_decor:serpent_skin', 'abyssal_decor:damaged_serpent_skin', 'abyssal_decor:serpent_flesh', 'abyssal_decor:serpent_flesh_slab', 'abyssal_decor:serpent_artery', 'abyssal_decor:ribbed_veins', 'abyssal_decor:serpent_eye', 'abyssal_decor:serpent_small_eyes', 'abyssal_decor:netted_eye'])
     event.add('scp:blood', ['abyssal_decor:rough_blood_coral', 'abyssal_decor:blood_coral_bud', 'abyssal_decor:polished_blood_coral', 'abyssal_decor:polished_blood_coral_stairs', 'abyssal_decor:polished_blood_coral_slab', 'abyssal_decor:polished_blood_coral_wall', 'abyssal_decor:smooth_blood_coral', 'abyssal_decor:smooth_blood_coral_stairs', 'abyssal_decor:smooth_blood_coral_slab', 'abyssal_decor:smooth_blood_coral_wall', 'abyssal_decor:blood_coral_bricks', 'abyssal_decor:blood_coral_brick_stairs', 'abyssal_decor:blood_coral_brick_slab', 'abyssal_decor:blood_coral_brick_wall', 'abyssal_decor:blood_coral_pillar', 'abyssal_decor:gilded_blood_coral_pillar', 'abyssal_decor:blood_lantern', 'abyssal_decor:blood_coral_door', 'abyssal_decor:blood_coral_trapdoor', 'abyssal_decor:blood_coral_bars_solo', 'abyssal_decor:small_blood_coral_bars', 'abyssal_decor:small_blood_coral_bars_corner', 'abyssal_decor:blood_coral_sconce', 'abyssal_decor:big_blood_coral_sconce']);
+    event.add('scp:sign', ['minecraft:oak_sign', 'minecraft:spruce_sign', 'minecraft:birch_sign', 'minecraft:jungle_sign', 'minecraft:acacia_sign', 'minecraft:dark_oak_sign', 'minecraft:mangrove_sign', 'minecraft:cherry_sign', 'minecraft:bamboo_sign', 'minecraft:crimson_sign', 'minecraft:warped_sign', 'antarchy:ouranwood_sign', 'antarchy:peach_sign', 'antarchy:truffalo_sign', 'antarchy:royal_sign', 'antarchy:nadir_sign', 'minecraft:oak_hanging_sign', 'minecraft:spruce_hanging_sign', 'minecraft:birch_hanging_sign', 'minecraft:jungle_hanging_sign', 'minecraft:acacia_hanging_sign', 'minecraft:dark_oak_hanging_sign', 'minecraft:mangrove_hanging_sign', 'minecraft:cherry_hanging_sign', 'minecraft:bamboo_hanging_sign', 'minecraft:crimson_hanging_sign', 'minecraft:warped_hanging_sign', 'antarchy:ouranwood_hanging_sign', 'antarchy:peach_hanging_sign', 'antarchy:truffalo_hanging_sign', 'antarchy:royal_hanging_sign', 'antarchy:nadir_hanging_sign', 'supplementaries:way_sign_oak', 'supplementaries:way_sign_spruce', 'supplementaries:way_sign_birch', 'supplementaries:way_sign_jungle', 'supplementaries:way_sign_acacia', 'supplementaries:way_sign_dark_oak', 'supplementaries:way_sign_mangrove', 'supplementaries:way_sign_cherry', 'supplementaries:way_sign_bamboo', 'supplementaries:way_sign_crimson', 'supplementaries:way_sign_warped', 'supplementaries:antarchy/way_sign_ouranwood', 'supplementaries:antarchy/way_sign_peach', 'supplementaries:antarchy/way_sign_royal', 'supplementaries:antarchy/way_sign_truffalo', 'supplementaries:abyssal_decor/way_sign_blackwood', 'supplementaries:abyssal_decor/way_sign_cinnamon', 'supplementaries:abyssal_decor/way_sign_white_wood']);
     [
         "verdant",
         "amber",
@@ -51,6 +52,7 @@ ServerEvents.recipes((event) => {
     stonecuttingSwitching('#scp:filthcrete');
     stonecuttingSwitching('#scp:serpent');
     stonecuttingSwitching('#scp:blood');
+    stonecuttingSwitching('#scp:sign');
     [
         "verdant",
         "amber",
@@ -60,4 +62,7 @@ ServerEvents.recipes((event) => {
         stonecuttingSwitching(`#scp:${color}_hallway_card`);
     });
     event.stonecutting('industrialhellscape:amenity_furnishings', 'industrialhellscape:ihea_furniture_kit')
+    event.stonecutting('minecraft:oak_sign', 'industrialhellscape:ihea_furniture_kit')
 })
+
+

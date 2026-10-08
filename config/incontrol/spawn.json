@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "hostile": true,
+    "dimension": "minecraft:overworld",
+    "result": "deny"
+  }
+]

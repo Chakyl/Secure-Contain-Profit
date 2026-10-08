@@ -3,3 +3,9 @@ renderDistance:12
 simulationDistance:24
 overrideWidth:1280
 overrideHeight:720
+key_iris.keybind.reload:key.keyboard.unknown
+key_iris.keybind.toggleShaders:key.keyboard.unknown
+key_iris.keybind.shaderPackSelection:key.keyboard.o
+key_iris.keybind.wireframe:key.keyboard.unknown
+key_key.fieldguide.open:key.keyboard.g
+key_key.fieldguide.scan:key.keyboard.unknown

@@ -24,7 +24,8 @@ StartupEvents.registry("item", (e) => {
     createLockCards(color);
   });
 
-  e.create(`scp:warehouse_expansion_card`).maxStackSize(4);
+  e.create(`scp:warehouse_expansion_card`).texture(`scp:item/cards/warehouse_expansion_card`).maxStackSize(1);
+  e.create(`scp:utility_expansion_room_card`).texture(`scp:item/cards/utility_room_card`).maxStackSize(1);
 
   [
     "verdant",

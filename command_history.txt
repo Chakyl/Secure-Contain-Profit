@@ -1,50 +1,50 @@
-/kjs hand
-/incontrol reload
+/particle antarchy:peach_leaves_particle 30 141 -320
+/particle antarchy:lotus_pollen 30 141 -320
+/kjs inventory
 /kjs reload server-scripts
-/relod
+/kjs inventory
+/kjs hand
+/kjs inventory
+/reload
+/kjs inventory
+/kjs hand
+/kjs reload server-scripts
 /reload
 /kjs hand
-/summon antarchy:nightmare
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/difficulty peaceful
-/summon antarchy:nightmare
-/difficulty normal
-/summon antarchy:nightmare
-/difficulty normal
-/difficulty peaceful
-/difficulty normal
-/summon companions:shade_maw
-/difficulty normal
-/summon companions:shade_bat
-/summon companions:shade_sword
-/summon antarchy:nightmare
-/data get block 39 137 -344
-/playsound antarchy:nightmare_roar
-/difficulty peaceful
 /kjs reload server-scripts
 /kjs reload startup-scripts
-/kjs persistent-data server get *
-/kjs reload startup-scripts
-/kjs persistent-data server get *
 /kjs reload server-scripts
-/data get block -6 65 -8
+//wand
+//wnad
+//wand
+//copy
+//paste
+//wand
+//copy
+//paste
+//set abyssal_decor:white_wallpaper
+//set air
+//set abyssal_decor:white_wallpaper
+//set air
+//copy
+//paste
+//undo
+//paste
+//wand
+//copy
+//paste
+//undo
+//paste
+//copy
+//paste
+//copy
+//paste
 /kjs reload server-scripts
-/difficulty peaceful
+//wand
+/ql edit_mode
 /kjs reload server-scripts
-/data get block 21 65 -8
+/reload
 /kjs reload server-scripts
-/data get block 21 65 -8
+/reload
 /kjs reload server-scripts
-/enchant Chakyl minecraft:protection 10
-/difficulty normal
-/kjs reload server-scripts
-/damage 19826b9f-c6ad-47a8-8e1a-5ec4419841c5 1000
-/effect give Chakyl creaturefeature:sleepy
-/kjs reload server-scripts
-/data get block -8 65 -6
-/kjs reload server-scripts
+/reload

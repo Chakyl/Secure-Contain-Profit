@@ -269,8 +269,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:iron_ingot",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_reflex_sight"
 		},
@@ -280,8 +280,12 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:gold_ingot",
+				"count": 4
+			},
+			"second_request": {
+				"id": "minecraft:diamond",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_laser_sight"
 		},
@@ -291,8 +295,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:gold_ingot",
+				"count": 2
 			},
 			"trade_id": "guns_scguns_medium_scope"
 		},
@@ -302,10 +306,21 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:diamond",
+				"count": 2
 			},
 			"trade_id": "guns_scguns_long_scope"
+		},
+		{
+			"offer": {
+				"id": "scguns:wooden_stock",
+				"count": 1
+			},
+			"request": {
+				"id": "minecraft:copper_ingot",
+				"count": 4
+			},
+			"trade_id": "guns_scguns_wooden_stock"
 		},
 		{
 			"offer": {
@@ -313,8 +328,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:iron_ingot",
+				"count": 6
 			},
 			"trade_id": "guns_scguns_light_stock"
 		},
@@ -324,21 +339,10 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "scguns:anthralite_ingot",
+				"count": 6
 			},
 			"trade_id": "guns_scguns_weighted_stock"
-		},
-		{
-			"offer": {
-				"id": "scguns:wooden_stock",
-				"count": 1
-			},
-			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
-			},
-			"trade_id": "guns_scguns_wooden_stock"
 		},
 		{
 			"offer": {
@@ -347,7 +351,11 @@
 			},
 			"request": {
 				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"count": 2
+			},
+			"second_request": {
+				"id": "minecraft:diamond",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_bump_stock"
 		},
@@ -357,8 +365,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:diamond",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_silencer"
 		},
@@ -371,6 +379,10 @@
 				"id": "minecraft:netherite_scrap",
 				"count": 2
 			},
+			"second_request": {
+				"id": "minecraft:diamond",
+				"count": 4
+			},
 			"trade_id": "guns_scguns_advanced_silencer"
 		},
 		{
@@ -379,8 +391,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:gold_ingot",
+				"count": 16
 			},
 			"trade_id": "guns_scguns_extended_barrel"
 		},
@@ -390,8 +402,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:gold_ingot",
+				"count": 16
 			},
 			"trade_id": "guns_scguns_muzzle_brake"
 		},
@@ -401,8 +413,12 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:iron_ingot",
+				"count": 4
+			},
+			"second_request": {
+				"id": "minecraft:copper_ingot",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_light_grip"
 		},
@@ -412,8 +428,12 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:iron_ingot",
+				"count": 4
+			},
+			"second_request": {
+				"id": "minecraft:copper_ingot",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_vertical_grip"
 		},
@@ -423,8 +443,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 1
+				"id": "minecraft:iron_ingot",
+				"count": 2
 			},
 			"trade_id": "guns_scguns_iron_bayonet"
 		},
@@ -434,7 +454,7 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
+				"id": "scguns:anthralite_ingot",
 				"count": 2
 			},
 			"trade_id": "guns_scguns_anthralite_bayonet"
@@ -445,8 +465,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 3
+				"id": "minecraft:diamond",
+				"count": 2
 			},
 			"trade_id": "guns_scguns_diamond_bayonet"
 		},
@@ -457,7 +477,7 @@
 			},
 			"request": {
 				"id": "minecraft:netherite_scrap",
-				"count": 4
+				"count": 2
 			},
 			"trade_id": "guns_scguns_netherite_bayonet"
 		},
@@ -467,8 +487,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 2
+				"id": "antarchy:titanium_ingot",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_extended_mag"
 		},
@@ -478,8 +498,8 @@
 				"count": 1
 			},
 			"request": {
-				"id": "minecraft:netherite_scrap",
-				"count": 2
+				"id": "antarchy:uranium_ingot",
+				"count": 4
 			},
 			"trade_id": "guns_scguns_speed_mag"
 		}

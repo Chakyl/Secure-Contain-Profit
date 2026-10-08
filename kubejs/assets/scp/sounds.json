@@ -1,0 +1,10 @@
+{
+  "playgamblethbygcat101": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "scp:playgamblethbygcat101"
+      }
+    ]
+  }
+}

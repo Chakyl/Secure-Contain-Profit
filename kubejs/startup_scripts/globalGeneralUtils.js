@@ -18,6 +18,11 @@ global.getDay = (level) => Number((Math.floor(Number(level.dayTime() / 24000)) +
  */
 global.compareDay = (day, checkedDay, amount) => Number(day) < Number(checkedDay) || Number(day) - Number(checkedDay) >= amount;
 
+global.formatName = (name) => {
+  if (name.length === 0) return "";
+  return name.charAt(0).toUpperCase() + name.slice(1);
+};
+
 global.getFacingPlusOffset = (facing, pos, offset) => {
   switch (facing) {
     case "north":
