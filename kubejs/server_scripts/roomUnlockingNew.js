@@ -26,14 +26,14 @@ let directionMap = new Map([
     ['east', { rotation: "counterclockwise_90", x: 1, z: 7 }],
     ['west', { rotation: "clockwise_90", x: -1, z: -7 }],
     ['down', { x: -17, z: -16 }],
-
 ]);
-// let containmentDirectionMap = new Map([
-//     ['north', { rotation: "180", x: 7, z: -1 }],
-//     ['south', { x: -7, z: 1 }],
-//     ['east', { rotation: "counterclockwise_90", x: 1, z: 7 }],
-//     ['west', { rotation: "clockwise_90", x: -1, z: -7 }],
-// ]);
+let containmentDirectionMap = new Map([
+    ['north', { rotation: "180", x: -7, z: -1, mirror: "front_back" }],
+    ['south', { x: -7, z: 1 }],
+    ['east', { rotation: "counterclockwise_90", x: 1, z: 7 }],
+    ['west', { rotation: "clockwise_90", x: -1, z: 7, mirror: "front_back" }],
+    ['down', { x: -17, z: -16 }],
+]);
 let structureMap = new Map([
     ["scp:verdant_containment_expansion_card", { structurePool: ["verdant_containment_unit"] }],
     ["scp:verdant_hallway_expansion_card", { structurePool: ["verdant_hallways_1", "verdant_hallways_2", "verdant_hallways_3"] }],
@@ -78,6 +78,7 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
     let { level, block, hand, item, server, player } = e
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
+    if (player.stages.has("starting_items")) return;
 
     let isContainment = block.id.includes("containment")
     let foundDirection = getBedrockDirection(block)
@@ -91,13 +92,25 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
         player.tell("§7You need an §6Expansion Card§7 to unlock this.")
         return;
     }
-    if (!player.isCreative()) item.shrink(1);
-    let directionData = directionMap.get(`${foundDirection.direction}`);
+    let directionData = isContainment ? containmentDirectionMap.get(`${foundDirection.direction}`) : directionMap.get(`${foundDirection.direction}`);
     let structure = global.rollArray(structureData.structurePool);
     let command;
+    if (block.id == 'scp:verdant_hallway_lock_block' && item.id == 'scp:verdant_hallway_expansion_card' && !player.stages.has("verdant_first_hall")) {
+        structure = "verdant_hallways_first";
+        player.stages.add("verdant_first_hall");
+    }
     if (foundDirection.direction == "down" && item.id.includes("hallway")) {
-        const match = item.id.match(/:(.*?)_/);
-        command = `place template scp:${match ? match[1] : null}_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
+        const match = block.id.match(/:(.*?)_/);
+        const foundType = match ? match[1] : null;
+        if (foundType == null) {
+            console.error("Something weird happened with room gen code")
+            return;
+        }
+        if (item.id != `scp:${foundType}_hallway_expansion_card`) {
+            player.tell("§7You need a §6" + Item.of(`scp:${foundType}_hallway_expansion_card`).getDisplayName().string + "§7 to unlock this.")
+            return;
+        }
+        command = `place template scp:${foundType}_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
     } else if (item.id.includes("warehouse")) {
         if (foundDirection.direction == "up") {
             command = `place template scp:warehouse_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
@@ -106,10 +119,13 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
             return;
         }
     } else {
-        command = `place template scp:${structure} ${block.x + directionData.x} ${block.y - 2} ${block.z + directionData.z} ${directionData.rotation ? directionData.rotation : "none"}`;
-
+        command = `place template scp:${structure} ${block.x + directionData.x} ${block.y - 2} ${block.z + directionData.z} ${directionData.rotation ? directionData.rotation : "none"} ${directionData.mirror ? directionData.mirror : "none"}`;
         level.getBlock(block.getPos().below()).set("minecraft:air")
     }
+
+    console.log(foundDirection)
+    console.log(command)
+    if (!player.isCreative()) item.shrink(1);
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(command);

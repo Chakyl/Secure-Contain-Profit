@@ -22,7 +22,7 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     }
     newAbnormalityEntity.setPersistenceRequired();
 
-    let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassEnkephalinCount(tier) * 5);
+    let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassHPMult(tier));
     newAbnormalityEntity.setMaxHealth(newHealth);
     newAbnormalityEntity.setHealth(newHealth);
     newAbnormalityEntity.persistentData.abnormality = true;
@@ -36,6 +36,15 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
 }
 
 
+const getClassHPMult = (tier) => {
+    switch (tier) {
+        case "amber": return 15;
+        case "maroon": return 20;
+        case "indigo": return 30;
+        default:
+        case "verdant": return 10;
+    }
+}
 
 const getClassEnkephalinCount = (tier) => {
     switch (tier) {
@@ -191,6 +200,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     const { tier, player, abnormalityUUID, counter, researchTime } = nbt.data;
     if (abnormalityUUID == "") return;
     let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
+    let server = level.getServer();
     // TODO: Make abnormality name show in messages
     // Daily logic
     let day = global.getDay(level);
@@ -201,7 +211,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         let scanForAb = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
         if (scanForAb.length == 0) {
             let foundEntity = false;
-            for (let entity of level.getServer().getEntities()) {
+            for (let entity of server.getEntities()) {
                 if (entity.uuid.toString() == abnormalityUUID) {
                     entity.persistentData.breaching = true;
                     foundEntity = entity;
@@ -209,10 +219,10 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 }
             }
             if (foundEntity) {
-                global.paintToServer(level.getServer(), `${abnormalityName} ESCAPED CONTAINMENT AT [x:${x}/z:${z}]. COUNTER INCREASED BY 1`, '#FF5555');
+                global.paintToServer(server, `${abnormalityName} ESCAPED CONTAINMENT AT [x:${x}/z:${z}]. COUNTER INCREASED BY 1`, '#FF5555');
                 increaseCounter = true;
                 if (foundEntity.type == "creaturefeature:pathogen") {
-                    foundEntity.teleportTo("minecraft:overworld", block.x, block.y + 1, block.z, 0, 0)
+                    foundEntity.teleportTo("minecraft:overworld", x, y + 1, z, 0, 0)
                     nbt.merge({
                         data: {
                             state: "NONE",
@@ -223,7 +233,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                     global.updateSignalers(level, block);
                 }
             } else {
-                level.getServer().tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`))
+                server.tell(Text.red(`ABNORMALITY ${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`))
                 nbt.merge({
                     data: {
                         state: "EXPIRED",
@@ -234,8 +244,6 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 global.setBlockEntityData(block, nbt)
                 return;
             }
-        } else {
-            scanForAb[0].setHealth(10000);
         }
         if (state == "MAINTENANCE") {
             if (Math.random() < 0.5) {
@@ -246,8 +254,8 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             let dailyStates = ["WORKABLE", "WORKABLE"];
             if (Number(nbt.data.getInt("researchLevel")) < 4) dailyStates.push("RESEARCH");
             let newState = day < 2 ? "WORKABLE" : global.rollArray(dailyStates);
-            if (level.getServer().persistentData.disrepair && level.getServer().persistentData.getInt("disrepair") >= 1) {
-                level.getServer().persistentData.disrepair = level.getServer().persistentData.getInt("disrepair") - 1;
+            if (server.persistentData.disrepair && server.persistentData.getInt("disrepair") >= 1) {
+                server.persistentData.disrepair = server.persistentData.getInt("disrepair") - 1;
                 newState = "MAINTENANCE"
             }
             nbt.merge({
@@ -272,8 +280,8 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     // Validation logic
     let fullAbnormalityName = global.getFullAbnormalityName(nbt.data, "???");
     if (tick % 20 == 0 && state !== "BREACH") {
-        if (level.getServer().persistentData.chaos && level.getServer().persistentData.getInt("chaos") >= 1) {
-            level.getServer().persistentData.chaos = level.getServer().persistentData.getInt("chaos") - 1;
+        if (server.persistentData.chaos && server.persistentData.getInt("chaos") >= 1) {
+            server.persistentData.chaos = server.persistentData.getInt("chaos") - 1;
             global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
         }
     }
@@ -289,18 +297,71 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             }
         }
         if (!validContainmentUnit) {
-            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
+            server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             if (Math.random() < 0.1) global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
         }
 
     }
+    /** 
+     * Unique Abnormality effects
+     */
+    if (tick % 1200 == 0) {
+        let possibleAbnormality = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
+        let abnormalityType = String(`${nbt.data.getString("abnormalityType")}`).trim();
+        if (possibleAbnormality.length > 0) {
+            if (abnormalityType == 'antarchy:ouranwood_deer' && Number(server.persistentData.getInt("threat_level")) >= 100) {
+                global.paintToServer(server, `${fullAbnormalityName} IS FORCEFULLY EVOLVING. EVACUATE THE FACILITY IMMEDIATELY.`, '#FF5555');
+
+                let { radius, centerRadiusPos } = global.getClassRadii("indigo", block);
+                for (let pos of BlockPos.betweenClosed(new BlockPos(centerRadiusPos.x - radius, centerRadiusPos.y - radius, centerRadiusPos.z - radius), new BlockPos(centerRadiusPos.x + radius, centerRadiusPos.y + radius, centerRadiusPos.z + radius))) {
+                    let scanPos = new BlockPos(pos.x, pos.y, pos.z);
+                    if (!level.isLoaded(scanPos)) continue;
+
+                    let scanBlock = level.getBlock(scanPos);
+                    if (!scanBlock.hasTag("scp:setblock_immune")) {
+                        level.setBlock(scanPos, 'minecraft:air', 3);
+                    }
+                }
+                server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound antarchy:nightmare_roar block @a ${x} ${y} ${z} 2 1.0`);
+                level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+                server.scheduleInTicks(100, () => {
+                    possibleAbnormality[0].setRemoved("unloaded_to_chunk");
+                    spawnAbnormality(server, level, block, nbt, "antarchy:nightmare", "indigo")
+                    nbt.merge({
+                        data: {
+                            state: "NONE",
+                            counter: 4,
+                            tier: "indigo",
+                            abnormalityType: "antarchy:nightmare"
+                        },
+                    });
+                    global.setBlockEntityData(block, nbt)
+                    fullAbnormalityName = global.getFullAbnormalityName(nbt.data, "???");
+                    global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
+                });
+            }
+        } else {
+            if (abnormalityType == "creaturefeature:pathogen" && state !== "BREACH") {
+                for (let entity of server.getEntities()) {
+                    if (entity.uuid.toString() == abnormalityUUID) {
+                        entity.teleportTo("minecraft:overworld", block.x, block.y + 1, block.z, 0, 0)
+                        server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    // Escaping
     if (tick % 600 == 0) {
         centerRadiusPos = block.getPos().offset(0, radius, 0)
         let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos.below(), radius + 1, abnormalityUUID);
         if (checkedAbs.length == 0) {
-            level.getServer().runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
+            server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-            global.paintToServer(level.getServer(), `${global.getFullAbnormalityName(nbt.data, "???")} ESCAPED CONTAINMENT AT [x:${x}/z:${z}].`, '#FF5555');
+            global.paintToServer(server, `${global.getFullAbnormalityName(nbt.data, "???")} ESCAPED CONTAINMENT AT [x:${x}/z:${z}].`, '#FF5555');
         } else {
             if (checkedAbs[0].persistentData.respawned && checkedAbs[0].persistentData.getBoolean("respawned") && String(`${nbt.data.getString("abnormalityType")}`).trim() == checkedAbs[0].type) {
                 nbt.merge({
@@ -313,6 +374,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             }
         }
     }
+    // Research
     if (state == "RESEARCH") {
         let nearbyPlayers = level.getEntitiesWithin(AABB.ofBlock(level.getBlock(centerRadiusPos)).inflate(radius)).filter((entity) => entity.isPlayer())
         if (nearbyPlayers.length > 0 && global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length > 0) {
@@ -324,7 +386,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                 });
 
                 level.spawnParticles("companions:golden_allay_trail", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
-                level.getServer().runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound scguns:item.grenade.pin block @a ${x} ${y} ${z} 2 0.5`);
             } else {
                 incrementResearch(level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt)
                 global.updateSignalers(level, block);

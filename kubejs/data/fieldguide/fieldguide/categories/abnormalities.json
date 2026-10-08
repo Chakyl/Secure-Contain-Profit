@@ -344,6 +344,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:nightmare"
+		},
+		{
+			"type": "entry",
 			"id": "supplementaries:clock_block"
 		},
 		{

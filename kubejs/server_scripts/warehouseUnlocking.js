@@ -7,6 +7,7 @@ BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
     let { level, block, hand, item, server, player } = e
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
+    if (!player.stages.has("starting_items")) return;
     let { x, y, z } = block;
     let xyz = `${x}${y}${z}`
     if (xyz !== "31333") {

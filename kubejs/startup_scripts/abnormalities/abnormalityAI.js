@@ -196,8 +196,9 @@ global.handleAbnormality = (entity, abnormalityData) => {
                 }
             }
         }
-        server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
-        level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
+        // TODO: decount effects
+        // server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
+        // level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
 
     }
 };

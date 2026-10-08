@@ -1,50 +1,50 @@
-//replace abyssal_decor:bellmetal_plating abyssal_decor:bellmetal_trim
-//replace industrialhellscape:smooth_vesselplate abyssal_decor:bellmetal_block
-//replace industrialhellscape:smooth_gray_vesselplate abyssal_decor:bellmetal_block
-//replace industrialhellscape:gray_rockrete abyssal_decor:bellmetal_shingles
-//replace industrialhellscape:gray_riveted_vesselplate abyssal_decor:bellmetal_plating
-//replace industrialhellscape:smooth_gray_vesselplate abyssal_decor:bellmetal_block
-//replace industrialhellscape:gray_rockrete abyssal_decor:bellmetal_shingles
-//replace industrialhellscape:smooth_vesselplate abyssal_decor:bellmetal_block
-//replace industrially_plated:verdant_cut_plating industrially_plated:maroon_cut_plating
-//replace scp:verdant_hallway_lock_block scp:maroon_hallway_lock_block
-//replace scp:verdant_containment_lock_block scp:maroon_containment_lock_block
-//replace abyssal_decor:bellmetal_plating abyssal_decor:bellmetal_trim
+/kjs hand
+/incontrol reload
 /kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/kill
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/reload
-//pos 1
-//pos1
-//pos2
-//replace bedrock air
-/effect give Chakyl minecraft:night_vision infinite
-//set air
-//cop
-//copy
-//paste
-//copy
-//paste
-//copy
-//paste
-/reload
-/execute in minecraft:overworld run tp ~ ~ ~
-/reload
-//pos1
-//pos 2
-//pos2
-//replace bedrock air
-/effect give Chakyl minecraft:night_vision infinite
+/relod
 /reload
 /kjs hand
-/reload
-/kjs hand
-/reload
-/ql edit_mode
+/summon antarchy:nightmare
+/difficulty peaceful
+/difficulty normal
+/difficulty peaceful
+/difficulty normal
+/difficulty peaceful
+/difficulty normal
+/difficulty peaceful
+/summon antarchy:nightmare
+/difficulty normal
+/summon antarchy:nightmare
+/difficulty normal
+/difficulty peaceful
+/difficulty normal
+/summon companions:shade_maw
+/difficulty normal
+/summon companions:shade_bat
+/summon companions:shade_sword
+/summon antarchy:nightmare
+/data get block 39 137 -344
+/playsound antarchy:nightmare_roar
+/difficulty peaceful
+/kjs reload server-scripts
+/kjs reload startup-scripts
+/kjs persistent-data server get *
+/kjs reload startup-scripts
+/kjs persistent-data server get *
+/kjs reload server-scripts
+/data get block -6 65 -8
+/kjs reload server-scripts
+/difficulty peaceful
+/kjs reload server-scripts
+/data get block 21 65 -8
+/kjs reload server-scripts
+/data get block 21 65 -8
+/kjs reload server-scripts
+/enchant Chakyl minecraft:protection 10
+/difficulty normal
+/kjs reload server-scripts
+/damage 19826b9f-c6ad-47a8-8e1a-5ec4419841c5 1000
+/effect give Chakyl creaturefeature:sleepy
+/kjs reload server-scripts
+/data get block -8 65 -6
 /kjs reload server-scripts

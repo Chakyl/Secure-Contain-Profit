@@ -22,6 +22,12 @@
           "name": "Containment Unit 2",
           "block": "scp:verdant_containment_lock_block_2",
           "required_amount": 1
+        },
+        {
+          "type": "questlog:block_interact",
+          "name": "Containment Unit Theta",
+          "block": "scp:verdant_containment_lock_block",
+          "required_amount": 1
         }
       ],
       "required_amount": 1

@@ -5,7 +5,7 @@
     "item": "createaddition:copper_spool"
   },
   "chapter": "amber_level",
-  "sort_order": 3,
+  "sort_order": 5,
   "objectives": [
     {
       "type": "questlog:item_obtain",

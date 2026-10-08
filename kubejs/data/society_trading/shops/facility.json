@@ -53,7 +53,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 6
+				"count": 4
 			},
 			"trade_id": "facility_scp_verdant_hallway_expansion_card"
 		},
@@ -64,7 +64,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 3
+				"count": 2
 			},
 			"trade_id": "facility_scp_verdant_containment_expansion_card"
 		},
@@ -75,7 +75,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 16
+				"count": 12
 			},
 			"trade_id": "facility_scp_amber_hallway_expansion_card"
 		},
@@ -86,7 +86,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 8
+				"count": 6
 			},
 			"stage_required": "amber_level",
 			"trade_id": "facility_scp_amber_containment_expansion_card"
@@ -98,7 +98,7 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 32
+				"count": 24
 			},
 			"stage_required": "amber_level",
 			"trade_id": "facility_scp_maroon_hallway_expansion_card"
@@ -110,9 +110,9 @@
 			},
 			"request": {
 				"id": "scp:enkephalin",
-				"count": 16
+				"count": 12
 			},
-			"stage_required": "amber_level",
+			"stage_required": "maroon_level",
 			"trade_id": "facility_scp_maroon_containment_expansion_card"
 		},
 		{
@@ -162,6 +162,18 @@
 			},
 			"numismatics_cost": 16,
 			"trade_id": "facility_numismaticsutils_bank_meter"
+		},
+		{
+			"offer": {
+				"id": "supplementaries:slice_map",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sprocket",
+				"count": 1
+			},
+			"numismatics_cost": 16,
+			"trade_id": "facility_supplementaries_slice_map"
 		},
 		{
 			"offer": {

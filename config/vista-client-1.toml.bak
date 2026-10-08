@@ -77,8 +77,6 @@
 		#What a hollow cassette's tooltip reveals about its linked target once linked. HIDDEN: nothing is shown. COORDINATES: the exact block coordinates are shown. CIPHERED (default): a 5-letter word rendered in the enchanting table's font is shown instead, unique to that link but unreadable, so you can tell cassettes apart without leaking the actual location
 		#Allowed Values: HIDDEN, COORDINATES, CIPHERED
 		linked_feed_display_mode = "CIPHERED"
-		#Attempts to disable iris shaders in the live feed view
-		iris_off_hack = true
 
 [picture_tape]
 	#How a picture is fitted onto the TV screen when the two don't have the same shape. STRETCH: distorts the picture to fill the screen. CONTAIN: shows all of it, leaving bars on the two shorter sides. COVER: fills the screen, cropping whatever sticks out. FIT_WIDTH / FIT_HEIGHT: match that side of the screen and let the other one bar or crop

@@ -16,16 +16,16 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:building",
+      "quest": "questlog:bulding",
       "required_amount": 1
     }
   ],
   "rewards": [
     {
       "type": "questlog:item",
-      "item": "scp:containment_unit",
+      "item": "scp:verdant_containment_expansion_card",
       "count": 1
     }
   ],
-  "include_in_main": true
+  "include_in_main": false
 }

@@ -39,7 +39,7 @@ if (true) {
         ["creaturefeature:pathogen", { description: "Difficult to contain due to its ability to phase through solid matter and harbor inside living beings. Quick suppression is advised due to the ability for the Pathogen to entirely leave the facility at any time, though it will return to its containment unit the next day out of habit." }],
         ["creaturefeature:minedflayer", { description: "WIP" }],
         ["minecraft:goat", { description: "It looks like a goat, acts like a goat. But it's not a goat." }],
-        ['antarchy:ouranwood_deer', { description: "Halcyon Digest has been called 'the harbinger of the black forest' as it often seeing fleeing in the peripheral of a person about to experience great agony.\n\nResearchers have noted that this phenomona only exists when Halcyon Digest is in distress, despite warned test subjects being in otherwise no harm whatsoever." }],
+        ['antarchy:ouranwood_deer', { description: "Halcyon Digest has been called 'the harbinger of the black forest' as it often seeing fleeing in the peripheral of a person about to experience great agony.\n\nResearchers have noted that this phenomona only exists when Halcyon Digest is in distress, despite warned test subjects being in otherwise no harm whatsoever.\n\nIt has been observed that Halcyon Digest often winces in pain after a new abnormality is brought to the facility, as if something inside of it is agitated. The reclassification of Halcyon Digest to Indigo is pending after the advisory of T-999." }],
         ["creaturefeature:vertigo", { description: "Biological study has found Norton Commander to not contain any genetic material. It is observed to be 'soundlike' in nature, leading many to mythologize it as the sound blown from a goat horn.\n\nNorton Commander's propensity for violence implies that the horn it once came from did not get removed peacefully." }],
         ["minecraft:chicken", { description: "It looks like a chicken, acts like a chicken. But it's not a chicken." }],
         ["creaturefeature:stained_glass", { description: "WIP" }],
@@ -117,11 +117,16 @@ if (true) {
         ["antarchy:worm", { description: "WIP" }],
         ["antarchy:moleworm", { description: "WIP" }],
         ["antarchy:molevore", { description: "WIP" }],
-        ["creaturefeature:detritus", { description: "WIP" }],
         ["scguns:sulfurhead", { description: "WIP" }],
         ["antarchy:flytrap", { description: "WIP" }],
         ["antarchy:lucid", { description: "WIP" }],
         ["antarchy:vortex", { description: "Facility managers are advised to not enter Cowgirl Clue's containment unit under any circumstances. Those trapped in the vortex of this abnormalities wake often die slow and painful deaths, unless the containment unit is fitted with a way to vertically escape the containment unit." }],
+        /**
+         * INDIGO ABNORMALITIES
+         */
+        
+        ["creaturefeature:detritus", { description: "WIP" }],
+        ["antarchy:nightmare", { description: "Deerhunter is the hunter of the black forest, smuggled into your facility by the harbinger. There are no known containment methods." }],
     ]);
     for (let abnormality of global.ABNORMALITIES.keys()) {
         fieldGuideEntries.push({

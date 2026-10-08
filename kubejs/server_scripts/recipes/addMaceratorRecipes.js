@@ -1,6 +1,6 @@
 ServerEvents.recipes((e) => {
     e.custom({
-        type: "scguns:macerating",
+        type: "scguns:powered_macerating",
         processingTime: 100,
         ingredients: [
             {
@@ -19,7 +19,7 @@ ServerEvents.recipes((e) => {
         }
     })
     e.custom({
-        type: "scguns:macerating",
+        type: "scguns:powered_macerating",
         processingTime: 100,
         ingredients: [
             {
@@ -39,7 +39,7 @@ ServerEvents.recipes((e) => {
     })
     let macerating = (item, result, count) => {
         e.custom({
-            type: "scguns:macerating",
+            type: "scguns:powered_macerating",
             processingTime: 100,
             ingredients: [
                 {
@@ -59,7 +59,7 @@ ServerEvents.recipes((e) => {
             tag: "scguns:enchantable/gun"
         })
         e.custom({
-            type: "scguns:macerating",
+            type: "scguns:powered_macerating",
             processingTime: 1000 * ingredients.length,
             ingredients: ingredients,
             result: {
@@ -74,7 +74,7 @@ ServerEvents.recipes((e) => {
             tag: "industrialhellscape:rockrete_smeltable_item"
         })
         e.custom({
-            type: "scguns:macerating",
+            type: "scguns:powered_macerating",
             processingTime: 20 * ingredients.length,
             ingredients: ingredients,
             result: {

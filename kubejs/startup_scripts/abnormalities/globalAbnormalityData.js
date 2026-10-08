@@ -163,6 +163,8 @@ global.ABNORMALITIES = new Map([
      *   Indigo ABNORMALITIES
      */
     ["creaturefeature:detritus", { class: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "ESCAPEARTIST"] }],
+    // Special
+    ["antarchy:nightmare", { class: "indigo", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Deerhunter", counter: 5, breachTypes: ["GRANDIOSE", "BITE",  "SUPERCHAOS", "SLEEP", "DARKNESS", "NUKE"] }],
 ]);
 
 global.ABNORMALITY_LITTERS = new Map([
