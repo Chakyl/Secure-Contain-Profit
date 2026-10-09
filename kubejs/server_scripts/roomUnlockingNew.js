@@ -34,6 +34,15 @@ let containmentDirectionMap = new Map([
     ['west', { rotation: "clockwise_90", x: -1, z: 7, mirror: "front_back" }],
     ['down', { x: -17, z: -16 }],
 ]);
+
+let warehouseDirectionMap = new Map([
+    ['north', {rotation: "180", x: 7, z: -1 }],
+    ['south', { x: -7, z: 1 }],
+    ['east', { x: 1, z: -24 }],
+    ['west', {rotation: "180", x: -1, z: 24 }],
+    ['down', { x: -17, z: -16 }],
+    ['up', { x: -14, z: -14 }],
+])
 let structureMap = new Map([
     ["scp:verdant_containment_expansion_card", { structurePool: ["verdant_containment_unit"] }],
     ["scp:verdant_hallway_expansion_card", { structurePool: ["verdant_hallways_1", "verdant_hallways_2", "verdant_hallways_3"] }],
@@ -59,7 +68,7 @@ let structureMap = new Map([
     ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"] }],
     ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"] }],
     ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"] }],
-    ['scp:warehouse_expansion_card', {}]
+    ['scp:warehouse_expansion_card', { structurePool: [] }]
 ])
 let clearBlocks = (level, block) => {
     let radius = 1;
@@ -91,7 +100,7 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
     }
     let structureData = structureMap.get(`${item.id}`);
     if (structureData.structurePool == null || (isContainment && !isContainmentCard) || (!isContainment && isContainmentCard)) {
-        player.tell("§7You need an §6Expansion Card§7 to unlock this.")
+        player.tell("§7You need an §6Expansion Card§7 to unlock this")
         return;
     }
     let directionData = isContainment ? containmentDirectionMap.get(`${foundDirection.direction}`) : directionMap.get(`${foundDirection.direction}`);
@@ -114,19 +123,17 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
         }
         command = `place template scp:${foundType}_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
     } else if (item.id.includes("warehouse")) {
+        directionData = warehouseDirectionMap.get(`${foundDirection.direction}`)
         if (foundDirection.direction == "up") {
-            command = `place template scp:warehouse_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
+            command = `place template scp:warehouse_center ${block.x + directionData.x} ${block.y + 1} ${block.z + directionData.z}`;
         } else {
-            player.tell("§7This warehouse block is not yet implemented...")
-            return;
+            command = `place template scp:warehouse_extension ${block.x + directionData.x} ${block.y - 2} ${block.z + directionData.z} ${directionData.rotation ? directionData.rotation : "none"} ${directionData.mirror ? directionData.mirror : "none"}`;
         }
     } else {
         command = `place template scp:${structure} ${block.x + directionData.x} ${block.y - 2} ${block.z + directionData.z} ${directionData.rotation ? directionData.rotation : "none"} ${directionData.mirror ? directionData.mirror : "none"}`;
         level.getBlock(block.getPos().below()).set("minecraft:air")
     }
 
-    console.log(foundDirection)
-    console.log(command)
     if (!player.isCreative()) item.shrink(1);
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);

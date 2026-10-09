@@ -36,6 +36,7 @@ ServerEvents.tags('block', (e) => {
         'industrially_plated:verdant_cut_plating',
         'industrially_plated:indigo_cut_plating',
         'industrially_plated:amber_cut_plating',
+        'industrially_plated:white_cut_plating',
         "scp:verdant_hallway_lock_block",
         "scp:verdant_containment_lock_block",
         "scp:amber_hallway_lock_block",

@@ -1,13 +1,3 @@
-/particle antarchy:peach_leaves_particle 30 141 -320
-/particle antarchy:lotus_pollen 30 141 -320
-/kjs inventory
-/kjs reload server-scripts
-/kjs inventory
-/kjs hand
-/kjs inventory
-/reload
-/kjs inventory
-/kjs hand
 /kjs reload server-scripts
 /reload
 /kjs hand
@@ -45,6 +35,16 @@
 /kjs reload server-scripts
 /reload
 /kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+//copy
+//paste
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+/kjs hand
 /reload
 /kjs reload server-scripts
 /reload
