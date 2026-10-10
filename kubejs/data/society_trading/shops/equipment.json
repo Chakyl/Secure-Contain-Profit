@@ -25,6 +25,18 @@
 		},
 		{
 			"offer": {
+				"id": "scguns:pistol_ammo_box",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "equipment_scguns_pistol_ammo_box"
+		},
+		{
+			"offer": {
 				"id": "scguns:rifle_ammo_box",
 				"count": 1
 			},

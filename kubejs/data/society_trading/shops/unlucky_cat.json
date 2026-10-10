@@ -1,0 +1,147 @@
+{
+	"shop_id": "unlucky_cat",
+	"name": {
+		"translate": "shop.scp.unlucky_cat"
+	},
+	"texture": "unlucky_cat:textures/item/unlucky_cat",
+	"display_type": "thin",
+	"hidden_from_selector": true,
+	"jei_catalyst": {
+		"id": "whimsy_deco:lucky_cat"
+	},
+	"selector_weight": 13,
+	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:feather",
+				"count": 8
+			},
+			"request": {
+				"id": "minecraft:bee_spawn_egg",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_minecraft_feather"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:bacterium_ball",
+				"count": 3
+			},
+			"request": {
+				"id": "creaturefeature:minedflayer_goop",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_bacterium_ball"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:living_glass_shards",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:bacterium_ball",
+				"count": 3
+			},
+			"trade_id": "unlucky_cat_creaturefeature_living_glass_shards"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:minedflayer_goop",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:living_glass_shards",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_minedflayer_goop"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:down_feather",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:blighted_brain",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_down_feather"
+		},
+		{
+			"offer": {
+				"id": "peaceless:harpy_foot",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:blighted_brain",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_peaceless_harpy_foot"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:vertigo_chunk",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:blighted_brain",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_vertigo_chunk"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:blitz_rod",
+				"count": null
+			},
+			"request": {
+				"id": "minecraft:blaze_rod",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_blitz_rod"
+		},
+		{
+			"offer": {
+				"id": "minecraft:blaze_rod",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:blitz_rod",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_minecraft_blaze_rod"
+		},
+		{
+			"offer": {
+				"id": "peaceless:shrapin_scute",
+				"count": 4
+			},
+			"request": {
+				"id": "creaturefeature:thingamabob",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_peaceless_shrapin_scute"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:thingamabob",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:fiendish_essence",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_thingamabob"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:fiendish_essence",
+				"count": null
+			},
+			"request": {
+				"id": "peaceless:shrapin_scute",
+				"count": 4
+			},
+			"trade_id": "unlucky_cat_creaturefeature_fiendish_essence"
+		}
+	]
+}

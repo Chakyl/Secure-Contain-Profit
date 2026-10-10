@@ -92,7 +92,7 @@
 
 // // Priority: -100
 // runNpcDatagen("red_phone", {
-//   name: "T-001",
+//   name: "T-002",
 //   portraitPath: "abyssal_decor:textures/item/ironskull",
 //   choiceDialogs: [
 //     {

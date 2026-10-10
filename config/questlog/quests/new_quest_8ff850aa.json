@@ -16,7 +16,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:new_quest_229d9a3b",
+      "quest": "questlog:chaos",
       "required_amount": 1
     }
   ],

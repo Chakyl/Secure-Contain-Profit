@@ -39,5 +39,47 @@
         "stream": true
       }
     ]
+  },
+  
+  "music.creative": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:music/game/lonesome_warmth",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/peeling_paint",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/unknown_depths",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/dim_existence",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/kind_reminiscence",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/do_not_look_back",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/lost_and_not_found",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/the_darkness",
+        "stream": true
+      },
+      {
+        "name": "minecraft:music/game/apparition",
+        "stream": true
+      }
+    ]
   }
 }

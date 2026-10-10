@@ -324,10 +324,6 @@
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:detritus"
-		},
-		{
-			"type": "entry",
 			"id": "scguns:sulfurhead"
 		},
 		{
@@ -341,6 +337,14 @@
 		{
 			"type": "entry",
 			"id": "antarchy:vortex"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:detritus"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:nightmare"
 		},
 		{
 			"type": "entry",

@@ -27,6 +27,11 @@
       "count": 1
     },
     {
+      "type": "questlog:item",
+      "item": "scp:maroon_hallway_expansion_card",
+      "count": 1
+    },
+    {
       "type": "questlog:command",
       "name": "Additional Shops & Items",
       "command": "/kjs stages add @p maroon_level"

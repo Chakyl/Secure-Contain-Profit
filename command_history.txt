@@ -1,50 +1,50 @@
-/kjs persistent-data server merge {raidCount:0}
-/time add 24000
+//wand
+//copy
+//paste
+//undo
+//paste
+//copy
+//paste
+//copy
+//paste
 /kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:0}
-/difficulty peaceful
-/difficulty normal
-/kjs persistent-data server merge {raidCount:0}
+//wand
+/ql edit_mode
 /kjs reload server-scripts
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:1}
+/reload
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+//copy
+//paste
+/kjs reload server-scripts
+/reload
+/kjs reload server-scripts
+/kjs hand
+/reload
+/kjs reload server-scripts
+/reload
+/playsound minecraft:music.game
+/stopsound Chakyl
+/playsound minecraft:music.game
 /kjs reload startup-scripts
-/kjs persistent-data server merge {raidCount:1}
-/kjs persistent-data server get *
-/time add 24000
 /kjs reload server-scripts
-/time add 24000
-/kjs persistent-data server get *
-/kjs persistent-data server merge {raidCount:1}
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/kjs persistent-data server get *
+/kjs reload startup-scripts
+/reload
+/kjs handn
+/kjs hand
 /kjs reload server-scripts
-/kjs persistent-data server merge {raidCount:1}
+/reload
+/difficulty normal
+/playsound sinew:enter_nether
 /kjs reload server-scripts
-/time add 240000
+/summon minecraft:piglin ~ ~ ~ {IsImmuneToZombification:1b}
 /kjs reload server-scripts
-/kjs persistent-data server merge {raidCount:1}
-/time add 240000
-/time add 24000
-/time add 240000
-/time set 0
-/time add 24000
-/time set 0
-/time add 240000
-/time add 1000
-/time add 3000
-/time add 240000
-/kjs stages add Chakyl amber_level
-/time add 240000
+/kil
+/kill
 /kjs reload server-scripts
-/time add 1000
-/time add 240000
-/kjs reload server-scripts
-/time add 24000
-/time set 0
-/time add 240000
-/time add 12000
-/kjs persistent-data server get *
-/kjs reload server-scripts
-/kjs persistent-data server get *
+/data get entity 5638c3b7-25fb-4e80-b28f-11cd5941ddc4

@@ -5,7 +5,7 @@
     "item": "scguns:polar_generator"
   },
   "chapter": "amber_level",
-  "sort_order": 2,
+  "sort_order": 3,
   "objectives": [
     {
       "type": "questlog:item_obtain",

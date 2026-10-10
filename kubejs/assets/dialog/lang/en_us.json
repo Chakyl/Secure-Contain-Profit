@@ -1,6 +1,6 @@
 {
-	"dialog.npc.red_phone.name": "T-001",
-	"dialog.npc.red_phone.chatter.description": "Chatting with T-001",
+	"dialog.npc.red_phone.name": "T-002",
+	"dialog.npc.red_phone.chatter.description": "Chatting with T-002",
 	"dialog.npc.red_phone.end": "Wish granted...",
 	"dialog.npc.red_phone.dialog.choice_1.line_0": "What is it you desire today?",
 	"dialog.npc.red_phone.dialog.choice_1.option_0": "I desire wealth",

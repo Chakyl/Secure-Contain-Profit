@@ -7,6 +7,7 @@ BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
     let { level, block, hand, item, server, player } = e
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
+    if (!player.stages.has("starting_items")) return;
     let { x, y, z } = block;
     let xyz = `${x}${y}${z}`
     if (xyz !== "31333") {
@@ -22,7 +23,7 @@ BlockEvents.rightClicked('scp:warehouse_lock_block', e => {
     server.runCommandSilent(`playsound minecraft:entity.ender_dragon.hurt block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
     server.runCommandSilent(`playsound industrialhellscape:metalpipefallingsoundeffect block @a ${block.x} ${block.y} ${block.z} 1 0.5`);
 
-    server.runCommandSilent(`place template scp:${warehouse.template} ${block.x - 14} ${block.y + 1} ${block.z - 14}`);
+    server.runCommandSilent(`place template scp:legacy${warehouse.template} ${block.x - 14} ${block.y + 1} ${block.z - 14}`);
     block.set("minecraft:air")
     level.getBlock(block.getPos().above()).set("minecraft:air")
 })

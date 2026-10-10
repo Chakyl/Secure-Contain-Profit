@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:tool_abnormalities",
+      "quest": "questlog:enkephalin",
       "required_amount": 1
     }
   ],

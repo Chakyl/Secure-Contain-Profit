@@ -5,7 +5,7 @@
     "item": "minecraft:coal"
   },
   "chapter": "amber_level",
-  "sort_order": 3,
+  "sort_order": 4,
   "objectives": [
     {
       "type": "questlog:or",

@@ -39,7 +39,7 @@
 //         ["creaturefeature:pathogen", { description: "Difficult to contain due to its ability to phase through solid matter and harbor inside living beings. Quick suppression is advised due to the ability for the Pathogen to entirely leave the facility at any time, though it will return to its containment unit the next day out of habit." }],
 //         ["creaturefeature:minedflayer", { description: "WIP" }],
 //         ["minecraft:goat", { description: "It looks like a goat, acts like a goat. But it's not a goat." }],
-//         ['antarchy:ouranwood_deer', { description: "Halcyon Digest has been called 'the harbinger of the black forest' as it often seeing fleeing in the peripheral of a person about to experience great agony.\n\nResearchers have noted that this phenomona only exists when Halcyon Digest is in distress, despite warned test subjects being in otherwise no harm whatsoever." }],
+//         ['antarchy:ouranwood_deer', { description: "Halcyon Digest has been called 'the harbinger of the black forest' as it often seeing fleeing in the peripheral of a person about to experience great agony.\n\nResearchers have noted that this phenomona only exists when Halcyon Digest is in distress, despite warned test subjects being in otherwise no harm whatsoever.\n\nIt has been observed that Halcyon Digest often winces in pain after a new abnormality is brought to the facility, as if something inside of it is agitated. The reclassification of Halcyon Digest to Indigo is pending after the advisory of T-999." }],
 //         ["creaturefeature:vertigo", { description: "Biological study has found Norton Commander to not contain any genetic material. It is observed to be 'soundlike' in nature, leading many to mythologize it as the sound blown from a goat horn.\n\nNorton Commander's propensity for violence implies that the horn it once came from did not get removed peacefully." }],
 //         ["minecraft:chicken", { description: "It looks like a chicken, acts like a chicken. But it's not a chicken." }],
 //         ["creaturefeature:stained_glass", { description: "WIP" }],
@@ -80,7 +80,7 @@
 //         ["antarchy:red_ant", { description: "WIP" }],
 //         ["antarchy:stink_bug", { description: "WIP" }],
 //         ["antarchy:brown_ant", { description: "WIP" }],
-//         ["antarchy:jerry", { description: "WIP" }],
+//         ["antarchy:jerry", { description: "Managerial guidelines for Jerry strictly advise the immediate isolation of the abnormality during its external gestation period.\n\nShould Jerry latch on to the head of a facility employee, it is directly advised to do a non-breaching suppression.\n\nThe Moonlit Company advises a strict no-research policy until Jerry has lost the ability to latch." }],
 //         ["netherman:statue_entity", { description: "WIP" }],
 //         ["companions:hostile_puppet_glove", { description: "WIP" }],
 //         ["opposing_force:scorcher", { description: "WIP" }],
@@ -117,11 +117,16 @@
 //         ["antarchy:worm", { description: "WIP" }],
 //         ["antarchy:moleworm", { description: "WIP" }],
 //         ["antarchy:molevore", { description: "WIP" }],
-//         ["creaturefeature:detritus", { description: "WIP" }],
 //         ["scguns:sulfurhead", { description: "WIP" }],
 //         ["antarchy:flytrap", { description: "WIP" }],
 //         ["antarchy:lucid", { description: "WIP" }],
 //         ["antarchy:vortex", { description: "Facility managers are advised to not enter Cowgirl Clue's containment unit under any circumstances. Those trapped in the vortex of this abnormalities wake often die slow and painful deaths, unless the containment unit is fitted with a way to vertically escape the containment unit." }],
+//         /**
+//          * INDIGO ABNORMALITIES
+//          */
+        
+//         ["creaturefeature:detritus", { description: "WIP" }],
+//         ["antarchy:nightmare", { description: "Deerhunter is the hunter of the black forest, smuggled into your facility by the harbinger. There are no known containment methods." }],
 //     ]);
 //     for (let abnormality of global.ABNORMALITIES.keys()) {
 //         fieldGuideEntries.push({
@@ -132,7 +137,7 @@
 //         translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `§${getClassColor(data.class)}${data.name}`
 
 //         console.log(data)
-//         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: ${global.getAbnormalityName(data.class, abnormality)}\nClass: ${formatName(data.class)}\nQliphoth Counter: ${data.counter}\nEvolutions: ${data.evolutions ? data.evolutions.length : "None"}${data.preferences ? `\n\n${getWorkPreferences(data.preferences)}` : ""}\n\nKnown information:\n${abnormalityDescs.get(`${abnormality}`).description}`
+//         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: ${global.getAbnormalityName(data.class, abnormality)} [${formatName(data.class)}]\nQliphoth Counter: ${data.counter}${data.evolutions ? `\nEvolutions: ${data.evolutions.length}` : ""}${data.preferences ? `\n\n${getWorkPreferences(data.preferences)}` : ""}\n\nKnown information:\n${abnormalityDescs.get(`${abnormality}`).description}`
 //         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.hint`] = `Requires research level 3`
 //     }
 //     let TOOL_ABNORMALITIES = new Map([
@@ -146,9 +151,9 @@
 //         ["scp:deaths_dynamic_shroud", { num: 8, name: "Death's Dynamic Shroud", hint: "Use on an abnormality", summary: "A farmer's tool that seems to magically rip apart organic matter from abnormalities. Doing so increases its Qliphoth Counter by 1." }],
 //         ["scp:rubber_duck", { num: 9, name: "Rubber Duck", hint: "Get ducked", summary: "Promises of endless fortune are fortold by the Rubber Duck.\n The gold it drops seems to be at the expense of living abnormalities." }],
 //         ["scp:spoon_bender", { num: 10, name: "Spoon Bender", hint: "Get bent", summary: "Spoon Benders are incredibly fast, presenting as simple garden gnomes. They seem to love small objects left around, instantly grabbing items no matter where they are located.\n\n Enjoys messing around with the internals of containment units, occasionally damaging them." }],
-//         ['scguns:the_pact', { num: 11, name: "Devil Deeds Done Dirt Cheap", hint: "Make a deal", summary: "Not much is known about where the merchant that is summoned form Devil Deeds Done Dirt Cheap, or what happens to the abnormality when it is summoned. No adverse affects have been observed from usage in the last 45 years." }],
+//         ['scguns:the_pact', { num: 11, name: "Devil Deeds Done Dirt Cheap", hint: "Make a deal", summary: "Not much is known about where the merchant that is summoned from Devil Deeds Done Dirt Cheap, or what happens to the abnormality when it is summoned. No adverse affects have been observed from usage in the last 45 years." }],
 //         ['netherman:maze_door', { num: 12, name: "Slitherman", hint: "Activate Slitherman", summary: "When Slitherman was activated, a martyr for an unknown entity was summon from the gates of Slitherman's soul. After some study, this martyr was found to be harmless, so long as it was kept alive by facility management. Containment procedures require Slitherman's Martyr remain alive so long as there are abnormalities in the facility." }],
-//         ["whimsy_deco:lucky_cat", { num: 13, name: "Unlucky Cat", hint: "Not yet implemented", summary: "Not yet implemented" }],
+//         ["whimsy_deco:lucky_cat", { num: 13, name: "Unlucky Cat", hint: "Offer to the cat", summary: "The Unlucky Cat is a living statue that seems to feed off the corpses of abnormalities you may encounter in your facility. It doesn't like to share its food, but it will do so if it is traded for a 'different flavor of equivalent value', according to the Unlucky Cat.\n\nBartering with the Unlucky Cat seems to make abnormalities uneasy and fearful that the Unlucky Cat will come after their taste." }],
 //         ["whimsy_deco:singing_frog", { num: 14, name: "Jamming Frog", hint: "Activate the Jamming Frog...", summary: "Normal containment procedures render the Jamming Frog as beneficial for facility management, as placing it down immediately fills the manager with wisdom. Unfortunately, this is a single use operation as the frog seems to lock itself in stasis until activated. UNDER NO CIRCUMSTANCES SHOULD A FACILITY MANAGER EVER ACTIVATE THE JAMMING FROG." }],
 //         ["companions:empty_puppet_block", { num: 15, name: "Wooden Husk", hint: "Not yet implemented", summary: "Not yet implemented" }],
 //         ["companions:croissant_egg_block", { num: 16, name: "Cafe Crustacean", hint: "Not yet implemented", summary: "Not yet implemented" }],
@@ -156,7 +161,8 @@
 //         ['abyssal_decor:black_mold', { num: 18, name: "Wash My Hands", hint: "Place it down...", summary: "The Moonlit Company has yet to determine if 'Wash My Hands' has originated from this planet or another. It seems to be a conglomarate of living beings that rot solid materials into deepslate, and spreads onto softer materials such as dirt.\n\nCareful containment is required to prevent the swallowing up of all soil on earth by this abnormality." }],
 //         ["companions:respawn_totem_block", { num: 20, name: "Statute of Limitations", hint: "Not yet implemented", summary: "Not yet implemented" }],
 //         ["companions:porcelain_pottery", { num: 25, name: "Pot of Greed", hint: "Feed the beast", summary: "The Pot of Greed is simple in its desire for money, and thus it is not dangerous." }],
-//         ["companions:holy_porcelain_pottery", { num: 30, name: "Pot of Lust", hint: "Not yet implemented", summary: "Not yet implemented" }],
+//         ["companions:holy_porcelain_pottery", { num: 30, name: "Pot of Lust", hint: "Suck one up", summary: "Once thought to be a simple decoration, the Pot of Lust is an incredibly useful tool abnormality that can contain abnormalities inside of it. It has no known adverse effects" }],
+//         ["whimsy_deco:lucky_cat", { num: 45, name: "Fortunate Son", hint: "Get Unlucky", summary: "With enough nutrients, the Unlucky Cat seems to have transformed into a completely different abnormality. Dull to the taste of flesh and bone, Fortunate Son craves only Enkephalin, outcompeting the Moonlit Company on price. It is mandated that facility managers dispose of Fortunate Son instead of giving it valuable Enkephalin, cutting into production metrics. When Fortunate Son is satiated, it turns back into Unlucky Cat, causing abnormalities to be driven into a frenzy..." }],
 //     ])
 //     for (let abnormality of TOOL_ABNORMALITIES.keys()) {
 //         fieldGuideEntries.push({

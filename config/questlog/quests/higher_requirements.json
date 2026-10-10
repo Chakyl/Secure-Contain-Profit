@@ -6,7 +6,6 @@
   },
   "chapter": "amber_level",
   "sort_order": 1,
-  "include_in_main": false,
   "objectives": [
     {
       "type": "questlog:read",
@@ -23,7 +22,7 @@
   "rewards": [
     {
       "type": "questlog:item",
-      "item": "numismatics:sun",
+      "item": "scp:amber_containment_expansion_card",
       "count": 1
     }
   ]

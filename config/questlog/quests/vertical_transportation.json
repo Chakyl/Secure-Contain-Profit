@@ -1,0 +1,30 @@
+{
+  "title": "Vertical Transportation",
+  "description": "While we suggest all managers work on their cardio, its best if their energy is preserved for breaches rather than daily movement.\n\nPlease purchase an elevator block to make transferring wings easier. Placing two elevators on different y levels will allow you to teleport between them by jumping or crouching, depending on which one you are on.\n\nAlternatively, a Hypertube network will allow a manager to quickly respond to threats throughout the facility, provided they are placed strategically.",
+  "icon": {
+    "item": "elevatorid:elevator_amber"
+  },
+  "chapter": "amber_level",
+  "sort_order": 2,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "elevatorid:elevator_white",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "elevatorid:elevator_white",
+      "count": 1
+    }
+  ]
+}

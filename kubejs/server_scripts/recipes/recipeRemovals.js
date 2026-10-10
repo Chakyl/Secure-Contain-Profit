@@ -12,6 +12,8 @@ ServerEvents.recipes((event) => {
     const removedInputs = [];
 
     const removedOutputs = [
+        'minecraft:enchanting_table',
+        'scguns:felix_memorial',
         "createaddition:gold_wire",
         "createaddition:copper_wire",
         "createaddition:spool",

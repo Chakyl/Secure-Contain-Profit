@@ -1,0 +1,69 @@
+{
+  "defaultOffset": 0,
+  "mainSpawnIsland": {
+    "name": "facility",
+    "file": "facility.nbt",
+    "spawns": {
+      "south": [],
+      "west": [],
+      "north": [],
+      "east": [
+         [
+            12,
+            7,
+            11
+          ]
+      ]
+    },
+    "surroundingBlocks": "default",
+    "spreads": "default"
+  },
+  "netherSpreads": [],
+  "spawnPointReferences": {
+    "facility": {
+      "north": [],
+      "east": [
+        [
+          12,
+          7,
+          11
+        ]
+      ],
+      "south": [],
+      "west": []
+    }
+  },
+  "spreadReferences": {
+    "default": []
+  },
+  "surroundingBlockReferences": {
+    "default": {
+      "margin": 1
+    }
+  },
+  "templateList": [
+    {
+      "name": "facility",
+      "file": "facility.nbt",
+      "spawns": {
+        "south": [],
+        "west": [],
+        "north": [],
+        "east": [
+         [
+            12,
+            7,
+            11
+          ]
+        ]
+      },
+      "offset": [
+        0,
+        128,
+        0
+      ],
+      "surroundingBlocks": "default",
+      "spreads": "default"
+    }
+  ]
+}

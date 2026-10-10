@@ -1,36 +1,49 @@
 // Priority: 200
-let notifs = {}
-
-const flushNotifs = (server, level) => {
-    let day = global.getDay(level);
-    if (!server.persistentData.dayLastNotifFlushed) server.persistentData.dayLastNotifFlushed = day;
-    if (global.compareDay(day, server.persistentData.getInt("dayLastNotifFlushed"), 1)) {
-        server.persistentData.dayLastNotifFlushed = day;
-        notifs = {}
-    }
+if (!global.playerNotifSlots) {
+    global.playerNotifSlots = {}; 
+    global.notifCounter = 0;
 }
+
 global.paintAlert = (server, player, text, color) => {
-    flushNotifs(server, player.level);
-    let notifNum = Object.keys(notifs).filter(key => (key).includes(player.username)).length;
-    notifs[`${player.username}notif${notifNum}`] = {
+    let uuid = player.uuid.toString();
+    if (!global.playerNotifSlots[uuid]) {
+        global.playerNotifSlots[uuid] = [];
+    }
+
+    let activeSlots = global.playerNotifSlots[uuid];
+    let slotNum = 0;
+    while (activeSlots.includes(slotNum)) {
+        slotNum++;
+    }
+    activeSlots.push(slotNum);
+    let notifKey = `${uuid}_notif_${global.notifCounter++}`;
+
+    let paintAdd = {};
+    paintAdd[notifKey] = {
         type: 'text',
         text: text,
         alignX: 'left',
         x: '2',
-        y: `${34 + (notifNum * 8)} + sin(time * 5)`,
+        y: `${34 + (slotNum * 8)} + sin(time * 5)`,
         color: color
     };
-    Painter.paint(player, notifs);
+
+    Painter.paint(player, paintAdd);
+
     server.scheduleInTicks(200, ctx => {
-        notifs[`${player.username}notif${notifNum}`] = { remove: true };
-        Painter.paint(player, notifs);
-        delete notifs[`${player.username}notif${notifNum}`];
+        let paintRemove = {};
+        paintRemove[notifKey] = { remove: true };
+
+        Painter.paint(player, paintRemove);
+        if (global.playerNotifSlots[uuid]) {
+            global.playerNotifSlots[uuid] = global.playerNotifSlots[uuid].filter(slot => slot !== slotNum);
+        }
     });
 }
 
 global.paintToServer = (server, text, color) => {
     server.players.forEach((player) => {
-        global.paintAlert(server, player, text, color)
+        global.paintAlert(server, player, text, color);
     });
 }
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
