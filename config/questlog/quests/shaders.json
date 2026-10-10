@@ -1,0 +1,12 @@
+{
+  "title": "Shaders Included",
+  "description": "This modpack comes with built-in shaders that match the aesthetic.\n\nThey aim to be lightweight and compatible with the different abnormalities. The invisible one seems to be even more invisible though so do keep that in mind.\n\n",
+  "icon": {
+    "item": "companions:eternal_lighter"
+  },
+  "chapter": "main",
+  "sort_order": 4,
+  "objectives": [],
+  "prerequisites": [],
+  "rewards": []
+}

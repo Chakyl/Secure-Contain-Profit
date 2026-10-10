@@ -98,8 +98,8 @@ global.ABNORMALITIES = new Map([
     ["antarchy:spit_bug", { class: "amber", preferences: { violence: 4, insight: 4, harmony: 2 }, name: "Bugsnax", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"],  evolutions: ["opposing_force:bewilder"] }],
     ["opposing_force:bewilder", { class: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"] }],
     // [Red Ant] Rolly Polly
-    ["antarchy:rolly_polly", { class: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["minecraft:cave_spider"] }],
-    ["antarchy:red_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"], evolutions: ["antarchy:red_ant"] }],
+    ["antarchy:rolly_polly", { class: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["antarchy:red_ant"] }],
+    ["antarchy:red_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // [Brown Ant] Stink bug
     ["antarchy:stink_bug", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
     ["antarchy:brown_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],

@@ -25,6 +25,7 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassHPMult(tier));
     newAbnormalityEntity.setMaxHealth(newHealth);
     newAbnormalityEntity.setHealth(newHealth);
+    newAbnormalityEntity.mergeNbt({ IsImmuneToZombification: true });
     newAbnormalityEntity.persistentData.abnormality = true;
     newAbnormalityEntity.persistentData.researchLevel = nbt.data.researchLevel ? nbt.data.getInt("researchLevel") : 0;
     nbt.merge({

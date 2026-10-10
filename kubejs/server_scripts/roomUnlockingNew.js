@@ -36,39 +36,40 @@ let containmentDirectionMap = new Map([
 ]);
 
 let warehouseDirectionMap = new Map([
-    ['north', {rotation: "180", x: 7, z: -1 }],
+    ['north', { rotation: "180", x: 7, z: -1 }],
     ['south', { x: -7, z: 1 }],
     ['east', { x: 1, z: -24 }],
-    ['west', {rotation: "180", x: -1, z: 24 }],
+    ['west', { rotation: "180", x: -1, z: 24 }],
     ['down', { x: -17, z: -16 }],
     ['up', { x: -14, z: -14 }],
 ])
+// 'scp:maroon_hallway_lock_block', 'scp:maroon_containment_lock_block'
 let structureMap = new Map([
-    ["scp:verdant_containment_expansion_card", { structurePool: ["verdant_containment_unit"] }],
-    ["scp:verdant_hallway_expansion_card", { structurePool: ["verdant_hallways_1", "verdant_hallways_2", "verdant_hallways_3"] }],
-    ["scp:verdant_hallway_left_expansion_card", { structurePool: ["verdant_hallways_left_turn"] }],
-    ["scp:verdant_hallway_right_expansion_card", { structurePool: ["verdant_hallways_right_turn"] }],
-    ["scp:verdant_hallway_t_intersection_expansion_card", { structurePool: ["verdant_hallways_t_intersection"] }],
-    ["scp:verdant_hallway_cross_intersection_expansion_card", { structurePool: ["verdant_hallways_cross_intersection"] }],
-    ["scp:verdant_hallway_dead_end_expansion_card", { structurePool: ["verdant_hallways_deadend"] }],
+    ["scp:verdant_containment_expansion_card", { structurePool: ["verdant_containment_unit"], block: 'scp:verdant_containment_lock_block' }],
+    ["scp:verdant_hallway_expansion_card", { structurePool: ["verdant_hallways_1", "verdant_hallways_2", "verdant_hallways_3"], block: 'scp:verdant_hallway_lock_block' }],
+    ["scp:verdant_hallway_left_expansion_card", { structurePool: ["verdant_hallways_left_turn"], block: 'scp:verdant_hallway_lock_block' }],
+    ["scp:verdant_hallway_right_expansion_card", { structurePool: ["verdant_hallways_right_turn"], block: 'scp:verdant_hallway_lock_block' }],
+    ["scp:verdant_hallway_t_intersection_expansion_card", { structurePool: ["verdant_hallways_t_intersection"], block: 'scp:verdant_hallway_lock_block' }],
+    ["scp:verdant_hallway_cross_intersection_expansion_card", { structurePool: ["verdant_hallways_cross_intersection"], block: 'scp:verdant_hallway_lock_block' }],
+    ["scp:verdant_hallway_dead_end_expansion_card", { structurePool: ["verdant_hallways_deadend"], block: 'scp:verdant_hallway_lock_block' }],
 
-    ["scp:amber_containment_expansion_card", { structurePool: ["amber_containment_unit"] }],
-    ["scp:amber_hallway_expansion_card", { structurePool: ["amber_hallways_1", "amber_hallways_2", "amber_hallways_3"] }],
-    ["scp:amber_hallway_left_expansion_card", { structurePool: ["amber_hallways_left_turn"] }],
-    ["scp:amber_hallway_right_expansion_card", { structurePool: ["amber_hallways_right_turn"] }],
-    ["scp:amber_hallway_t_intersection_expansion_card", { structurePool: ["amber_hallways_t_intersection"] }],
-    ["scp:amber_hallway_cross_intersection_expansion_card", { structurePool: ["amber_hallways_cross_intersection"] }],
-    ["scp:amber_hallway_dead_end_expansion_card", { structurePool: ["amber_hallways_deadend"] }],
+    ["scp:amber_containment_expansion_card", { structurePool: ["amber_containment_unit"], block: 'scp:amber_containment_lock_block' }],
+    ["scp:amber_hallway_expansion_card", { structurePool: ["amber_hallways_1", "amber_hallways_2", "amber_hallways_3"], block: 'scp:amber_hallway_lock_block' }],
+    ["scp:amber_hallway_left_expansion_card", { structurePool: ["amber_hallways_left_turn"], block: 'scp:amber_hallway_lock_block' }],
+    ["scp:amber_hallway_right_expansion_card", { structurePool: ["amber_hallways_right_turn"], block: 'scp:amber_hallway_lock_block' }],
+    ["scp:amber_hallway_t_intersection_expansion_card", { structurePool: ["amber_hallways_t_intersection"], block: 'scp:amber_hallway_lock_block' }],
+    ["scp:amber_hallway_cross_intersection_expansion_card", { structurePool: ["amber_hallways_cross_intersection"], block: 'scp:amber_hallway_lock_block' }],
+    ["scp:amber_hallway_dead_end_expansion_card", { structurePool: ["amber_hallways_deadend"], block: 'scp:amber_hallway_lock_block' }],
 
-    ["scp:maroon_containment_expansion_card", { structurePool: ["maroon_containment_unit"] }],
-    ["scp:maroon_hallway_expansion_card", { structurePool: ["maroon_hallways_1", "maroon_hallways_2", "maroon_hallways_3"] }],
-    ["scp:maroon_hallway_left_expansion_card", { structurePool: ["maroon_hallways_left_turn"] }],
-    ["scp:maroon_hallway_right_expansion_card", { structurePool: ["maroon_hallways_right_turn"] }],
-    ["scp:maroon_hallway_t_intersection_expansion_card", { structurePool: ["maroon_hallways_t_intersection"] }],
-    ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"] }],
-    ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"] }],
-    ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"] }],
-    ['scp:warehouse_expansion_card', { structurePool: [] }]
+    ["scp:maroon_containment_expansion_card", { structurePool: ["maroon_containment_unit"], block: 'scp:maroon_containment_lock_block' }],
+    ["scp:maroon_hallway_expansion_card", { structurePool: ["maroon_hallways_1", "maroon_hallways_2", "maroon_hallways_3"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:maroon_hallway_left_expansion_card", { structurePool: ["maroon_hallways_left_turn"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:maroon_hallway_right_expansion_card", { structurePool: ["maroon_hallways_right_turn"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:maroon_hallway_t_intersection_expansion_card", { structurePool: ["maroon_hallways_t_intersection"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"], block: 'scp:maroon_hallway_lock_block' }],
+    ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"], block: ""}],
+    ['scp:warehouse_expansion_card', { structurePool: [], block: 'scp:warehouse_lock_block' }]
 ])
 let clearBlocks = (level, block) => {
     let radius = 1;
@@ -91,7 +92,6 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
     if (player.stages.has("starting_items")) return;
 
     let isContainment = block.id.includes("containment")
-    let isContainmentCard = item.id.includes("containment") || item.id.includes("utility")
     let foundDirection = getBedrockDirection(block)
     if (foundDirection == null) {
         player.tell("§7There's already a room in this direction...")
@@ -99,8 +99,8 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
         return;
     }
     let structureData = structureMap.get(`${item.id}`);
-    if (structureData.structurePool == null || (isContainment && !isContainmentCard) || (!isContainment && isContainmentCard)) {
-        player.tell("§7You need an §6Expansion Card§7 to unlock this")
+    if (structureData.structurePool == null || !((isContainment && item.id.includes("utility")) || structureData.block == block.id)) {
+        player.tell("§7You need the correct §6Expansion Card§7 to unlock this")
         return;
     }
     let directionData = isContainment ? containmentDirectionMap.get(`${foundDirection.direction}`) : directionMap.get(`${foundDirection.direction}`);

@@ -1,7 +1,7 @@
 minecraft:overworld
-antarchy:cavaryn
-minecraft:the_nether
 antarchy:thoraxis
 minecraft:the_end
+antarchy:cavaryn
 antarchy:elythia
+minecraft:the_nether
 ae2:spatial_storage

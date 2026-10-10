@@ -271,6 +271,7 @@
 //         jeiCatalyst: "create:brown_toolbox",
 //         trades: [
 //             { item: "create:brown_toolbox", count: 1, numiCost: 64 },
+//             { item: 'scguns:pistol_ammo_box', count: 1, numiCost: 128 },
 //             { item: "scguns:rifle_ammo_box", count: 1, numiCost: 128 },
 //             { item: "scguns:shotgun_ammo_box", count: 1, numiCost: 128 },
 //             { item: "scguns:magnum_ammo_box", count: 1, numiCost: 128 },

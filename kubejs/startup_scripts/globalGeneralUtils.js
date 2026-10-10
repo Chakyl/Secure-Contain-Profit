@@ -91,8 +91,7 @@ global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid || (entity.persistentData.respawned != null && entity.persistentData.getBoolean("respawned")));
 
-global.getNearestAbnormalities = (level, pos, radius) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.persistentData.getBoolean("abnormality"));
-
+global.getNearestAbnormalities = (level, pos, radius) => Array.from(level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius))).filter((entity) => entity && entity.persistentData && entity.persistentData.getBoolean("abnormality")).sort((a, b) => a.distanceToSqr(pos) - b.distanceToSqr(pos));
 global.addDisrepair = (server, block, disrepairCount) => {
   server.persistentData.disrepair = server.persistentData.disrepair ? Number(server.persistentData.getInt("disrepair")) + disrepairCount : disrepairCount;
   if (block) server.runCommandSilent(`playsound minecraft:entity.iron_golem.death block @a ${block.x} ${block.y} ${block.z} 0.5 0.2`);

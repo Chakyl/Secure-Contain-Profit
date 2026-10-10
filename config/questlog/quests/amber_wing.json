@@ -27,14 +27,14 @@
       "count": 1
     },
     {
-      "type": "questlog:command",
-      "name": "Additional Shops & Items",
-      "command": "/kjs stages add @p amber_level"
-    },
-    {
       "type": "questlog:item",
       "item": "scp:amber_hallway_expansion_card",
       "count": 1
+    },
+    {
+      "type": "questlog:command",
+      "name": "Additional Shops & Items",
+      "command": "/kjs stages add @p amber_level"
     }
   ]
 }
