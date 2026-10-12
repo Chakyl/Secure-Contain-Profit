@@ -3,5 +3,11 @@
     "hostile": true,
     "dimension": "minecraft:overworld",
     "result": "deny"
+  },
+  
+  {
+    "mob": "minecraft:bat",
+    "dimension": "minecraft:overworld",
+    "result": "deny"
   }
 ]
