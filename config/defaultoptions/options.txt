@@ -1,0 +1,6 @@
+version:3955
+guiScale:3
+renderDistance:12
+simulationDistance:24
+overrideWidth:1280
+overrideHeight:720

@@ -3,9 +3,7 @@
     "version": "0.2.3-bap",
     "overrides": [
         "config",
-        "kubejs",
-        "MODRINTH.md",
-        "options.txt"
+        "kubejs"
     ],
     "client_overrides": [
         "shaderpacks",

@@ -73,9 +73,8 @@
     "block_properties": false,
     "mod_name": true
   },
-  "item_descriptions": {
-    "block_descriptions": true,
-    "entity_descriptions": true
+  "balm": {
+    "jade": true
   },
   "ae2": {
     "part_icon": true,

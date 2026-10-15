@@ -13,7 +13,7 @@ options.txt
 command_history.txt
 resourcepacks/*
 !/resourcepacks/sunlit_overrides.zip
-!configureddefaults/options.txt
+!config/defaultoptions/options.txt
 mods/
 build/
 saves/
