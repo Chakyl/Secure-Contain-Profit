@@ -1,7 +1,11 @@
 ae2:meteorite
+antarchy:apple_cow_orchard
 antarchy:basilisk_lair
 antarchy:fallen_kingdom_castle
+antarchy:greenhouse
 antarchy:kings_tree
+antarchy:magical_castle
+antarchy:royal_shrine
 antarchy:ruined_arena
 antarchy:ruined_prison
 antarchy:sign

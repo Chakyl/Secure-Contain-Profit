@@ -14,7 +14,6 @@
  *   - [x] CHAOS - Adds CHAOS
  *   - [x] SUPERCHAOS - Adds a LOT of Chaos
  *   - [x] CLANKER - Adds disrepair
- *   - [x] CLANKER - Adds disrepair
  *   - [x] SAP - Reduces health of nearby entities
  *   - [x] BITE - Reduces health of nearby entities significantly at a lower range
  *   - [x] DARKNESS - Darknesses nearby entities
