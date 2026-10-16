@@ -27,6 +27,7 @@ let directionMap = new Map([
     ['west', { rotation: "clockwise_90", x: -1, z: -7 }],
     ['down', { x: -17, z: -16 }],
 ]);
+
 let containmentDirectionMap = new Map([
     ['north', { rotation: "180", x: -7, z: -1, mirror: "front_back" }],
     ['south', { x: -7, z: 1 }],
@@ -34,7 +35,20 @@ let containmentDirectionMap = new Map([
     ['west', { rotation: "clockwise_90", x: -1, z: 7, mirror: "front_back" }],
     ['down', { x: -17, z: -16 }],
 ]);
-
+let containmentDirection1Map = new Map([
+    ['north', { rotation: "180", x: -7, z: -1, mirror: "front_back" }],
+    ['south', { rotation: "180",x: 7, z: 1, mirror: "left_right" }],
+    ['east', { rotation: "clockwise_90", x: 1, z: -7, mirror: "left_right" }],
+    ['west', { rotation: "clockwise_90", x: -1, z: 7, mirror: "front_back" }],
+    ['down', { x: -17, z: -16 }],
+]);
+let containmentDirection2Map = new Map([
+    ['north', { rotation: "180", x: 7, z: -1 }],
+    ['south', { x: -7, z: 1 }],
+    ['east', { rotation: "counterclockwise_90", x: 1, z: 7 }],
+    ['west', { rotation: "clockwise_90", x: -1, z: -7 }],
+    ['down', { x: -17, z: -16 }],
+]);
 let warehouseDirectionMap = new Map([
     ['north', { rotation: "180", x: 7, z: -1 }],
     ['south', { x: -7, z: 1 }],
@@ -43,7 +57,7 @@ let warehouseDirectionMap = new Map([
     ['down', { x: -17, z: -16 }],
     ['up', { x: -14, z: -14 }],
 ])
-// 'scp:maroon_hallway_lock_block', 'scp:maroon_containment_lock_block'
+
 let structureMap = new Map([
     ["scp:verdant_containment_expansion_card", { structurePool: ["verdant_containment_unit"], block: 'scp:verdant_containment_lock_block' }],
     ["scp:verdant_hallway_expansion_card", { structurePool: ["verdant_hallways_1", "verdant_hallways_2", "verdant_hallways_3"], block: 'scp:verdant_hallway_lock_block' }],
@@ -68,7 +82,7 @@ let structureMap = new Map([
     ["scp:maroon_hallway_t_intersection_expansion_card", { structurePool: ["maroon_hallways_t_intersection"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"], block: 'scp:maroon_hallway_lock_block' }],
-    ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"], block: ""}],
+    ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"], block: "" }],
     ['scp:warehouse_expansion_card', { structurePool: [], block: 'scp:warehouse_lock_block' }]
 ])
 let clearBlocks = (level, block) => {
@@ -85,7 +99,21 @@ let clearBlocks = (level, block) => {
         }
     }
 }
-BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_block', 'scp:verdant_containment_lock_block', 'scp:amber_hallway_lock_block', 'scp:amber_containment_lock_block', 'scp:maroon_hallway_lock_block', 'scp:maroon_containment_lock_block'], e => {
+BlockEvents.rightClicked([
+    'scp:warehouse_lock_block',
+    'scp:verdant_hallway_lock_block',
+    'scp:verdant_containment_lock_block',
+    'scp:verdant_containment_lock_block_1',
+    'scp:verdant_containment_lock_block_2',
+    'scp:amber_hallway_lock_block',
+    'scp:amber_containment_lock_block',
+    'scp:amber_containment_lock_block_1',
+    'scp:amber_containment_lock_block_2',
+    'scp:maroon_hallway_lock_block',
+    'scp:maroon_containment_lock_block',
+    'scp:maroon_containment_lock_block_1',
+    'scp:maroon_containment_lock_block_2'
+], e => {
     let { level, block, hand, item, server, player } = e
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
@@ -99,11 +127,24 @@ BlockEvents.rightClicked(['scp:warehouse_lock_block', 'scp:verdant_hallway_lock_
         return;
     }
     let structureData = structureMap.get(`${item.id}`);
-    if (structureData.structurePool == null || !((isContainment && item.id.includes("utility")) || structureData.block == block.id)) {
+    let validBlock = structureData.block == block.id;
+    let directionData = directionMap.get(`${foundDirection.direction}`);
+    if (isContainment) {
+        if (structureData.block.includes("containment_lock_block")) validBlock = true;
+        if (block.id.includes("containment_lock_block_1")) {
+            directionData = containmentDirection1Map.get(`${foundDirection.direction}`)
+        } else if (block.id.includes("containment_lock_block_2")) {
+            directionData = containmentDirection2Map.get(`${foundDirection.direction}`)
+        }
+        else {
+            directionData = containmentDirectionMap.get(`${foundDirection.direction}`)
+        }
+    }
+    if (structureData.structurePool == null || !((isContainment && item.id.includes("utility")) || validBlock)) {
         player.tell("§7You need the correct §6Expansion Card§7 to unlock this")
         return;
     }
-    let directionData = isContainment ? containmentDirectionMap.get(`${foundDirection.direction}`) : directionMap.get(`${foundDirection.direction}`);
+
     let structure = global.rollArray(structureData.structurePool);
     let command;
     if (block.id == 'scp:verdant_hallway_lock_block' && item.id == 'scp:verdant_hallway_expansion_card' && !player.stages.has("verdant_first_hall")) {

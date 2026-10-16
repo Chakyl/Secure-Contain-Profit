@@ -3,8 +3,6 @@
 global.handleRaidUnit = (entity, breakers) => {
     const { level } = entity;
     if (level.isClientSide()) return;
-    let onPos = entity.getOnPos();
-    if (onPos.y > global.BEDROCK_Y_LEVEL && level.getBlock(onPos).id == "minecraft:bedrock") global.escapeArtist(level, entity, [-2, -3, -4, -5, -6, -7, -8, -9])
 
     if (entity.tickCount % 1400 && Math.random() < 0.5 && breakers.includes(entity.type)) {
         let abovePos = entity.getOnPos().above().offset(Math.random() < 0.5 ? 1 : -1, 0, Math.random() < 0.5 ? 1 : -1);
@@ -26,7 +24,7 @@ EntityJSEvents.modifyEntity((e) => {
     for (let abnormality of ["scguns:cog_knight", "scguns:trauma_unit", "scguns:redcoat", "scguns:cog_minion", "scguns:adjudicator", "scguns:subjugator"]) {
         e.modify(abnormality, (modifyBuilder) => {
             modifyBuilder.tick((entity) => {
-                if (entity.tickCount % 20 === 0) {
+                if (entity.tickCount % 100 === 0) {
                     global.handleRaidUnit(entity, ["scguns:cog_knight"]);
                 }
             });

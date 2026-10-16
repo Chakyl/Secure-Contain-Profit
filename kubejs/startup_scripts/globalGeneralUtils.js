@@ -91,7 +91,7 @@ global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid || (entity.persistentData.respawned != null && entity.persistentData.getBoolean("respawned")));
 
-global.getNearestAbnormalities = (level, pos, radius) => Array.from(level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius))).filter((entity) => entity && entity.persistentData && entity.persistentData.getBoolean("abnormality")).sort((a, b) => a.distanceToSqr(pos) - b.distanceToSqr(pos));
+global.getNearestAbnormalities = (level, pos, radius) => Array.from(level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).toArray()).filter((entity) => entity && entity.persistentData && entity.persistentData.getBoolean("abnormality")).sort((a, b) => a.distanceToSqr(pos) - b.distanceToSqr(pos));
 
 global.addDisrepair = (server, block, teamName, disrepairCount) => {
   server.persistentData[teamName].disrepair = server.persistentData[teamName].disrepair ? Number(server.persistentData[teamName].getInt("disrepair")) + disrepairCount : disrepairCount;

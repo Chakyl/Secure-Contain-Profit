@@ -11,7 +11,7 @@ const setEffectByTrait = (entity, traits) => {
     if (traits.includes("SULFUR")) {
         entity.potionEffects.add('scguns:sulfur_poisoning', 400, 1)
     }
-    if (Math.random() < 0.25 && traits.includes("SLEEPING")) {
+    if (Math.random() < 0.15 && traits.includes("SLEEPING")) {
         entity.potionEffects.add('creaturefeature:sleepy', 100, 1)
     }
 }
@@ -88,7 +88,6 @@ global.handleAbnormality = (entity, abnormalityData) => {
             let { x, y, z } = entity;
 
             for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y - radius, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
-                if (pos.y <= (global.BEDROCK_Y_LEVEL + 1)) continue;
                 let scanPos = new BlockPos(pos.x, pos.y, pos.z);
                 if (!level.isLoaded(scanPos)) continue;
 
@@ -140,7 +139,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
-    if (Math.random() < 0.05 && breachTypes.includes("SUMMON")) {
+    if (Math.random() < 0.01 && breachTypes.includes("SUMMON")) {
         if (server.players.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);

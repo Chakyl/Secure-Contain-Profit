@@ -4,4 +4,5 @@ antarchy:elythia
 minecraft:the_end
 antarchy:cavaryn
 minecraft:the_nether
+antarchy:elythia
 ae2:spatial_storage
