@@ -22,7 +22,7 @@ ServerEvents.tick((e) => {
     if (!server.persistentData.dayLastRaided) server.persistentData.dayLastRaided = -1;
     if (!server.persistentData.dayLastWarned) server.persistentData.dayLastWarned = -1;
     if (day > 5 && (day + 1) % 10 == 0 && global.compareDay(day, server.persistentData.getInt("dayLastWarned"), 1)) {
-        server.tell(Text.darkRed("WARNING: THE MOONLIT COMPANY HAS DETECTED TERRORIST ACTIVITY OUTSIDE YOUR FACILITY. INSURGENCY RAID OCCURRING IN 1 DAY."));
+        server.tell(Text.translatable("messages.scp.general.raid.warning").darkRed());
         server.persistentData.dayLastWarned = day;
     }
     if (day > 5 && day % 10 == 0 && global.compareDay(day, server.persistentData.getInt("dayLastRaided"), 1)) {

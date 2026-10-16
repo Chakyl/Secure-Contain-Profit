@@ -15,7 +15,7 @@ ItemEvents.entityInteracted((e) => {
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 if (target.uuid.toString() == nbt.data.abnormalityUUID) {
-                    player.tell(Text.green("ABNORMALITY CALMED"))
+                    player.tell(Text.translatable("messages.scp.containment_unit.abnormality_calmed").green())
                     if (!player.isCreative()) item.shrink(1);
                     target.persistentData.breaching = false;
                     nbt.merge({

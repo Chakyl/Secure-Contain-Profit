@@ -1,6 +1,3 @@
-/skyblock leave
-/skyblock create
-/skyblock leave
 /skyblock create
 /data get block 8231 65 8213
 /skyblock home
@@ -48,3 +45,6 @@
 /kjs reload startup-scripts
 /kjs reload server-scripts
 /kjs reload startup-scripts
+/reload
+/xp add Chakyl 100 levels
+/kjs hand

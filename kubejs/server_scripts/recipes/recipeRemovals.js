@@ -3,7 +3,8 @@ ServerEvents.recipes((event) => {
     const removedTypes = [
         "createaddition:charging",
         "createaddition:liquid_burning",
-        "createaddition:rolling"
+        "createaddition:rolling",
+        "create:mixing"
     ];
 
     const removedIDs = [

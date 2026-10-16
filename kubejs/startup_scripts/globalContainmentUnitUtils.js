@@ -88,9 +88,9 @@ global.tellTeam = (server, level, teamName, text) => {
 }
 
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
-    let breachMessage = `${abnormalityName} IS BREACHING AT [x:${block.x}/z:${block.z}]. SUPPRESS IMMEDIATELY.`;
+    let breachMessage = Text.translatable(abnormalityName, block.x, block.y, block.z);
     let teamName = String(nbt.data.getString("teamName")).trim();
-    global.tellTeam(server, level, teamName, Text.darkRed(breachMessage))
+    global.tellTeam(server, level, teamName, breachMessage.darkRed())
     global.paintToTeam(server, level, teamName, breachMessage, "#AA0000");
     nbt.merge({
         data: {
@@ -103,7 +103,7 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
     let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes;
     if (breachTypes.includes("GRANDIOSE")) {
         global.addThreatLevel(server, teamName, 5);
-        global.tellTeam(server, level, teamName, Text.darkRed(`THREAT LEVEL INCREASED TO ${Math.floor(Number(server.persistentData[teamName].getInt("threat_level")) / 5)}`))
+        global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed());
         global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
     } else if (breachTypes.includes("ESCAPEARTIST")) {
         global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);

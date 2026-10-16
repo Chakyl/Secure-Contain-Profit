@@ -124,7 +124,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             spawnAbnormality(server, level, block, nbt, newAbnormality, tier)
             global.addThreatLevel(server, teamName, 1);
             if (Number(server.persistentData[teamName].getInt("threat_level")) % 5 == 0) {
-                global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5))
+                global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed())
                 global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
             }
         });
