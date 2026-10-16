@@ -1,5 +1,5 @@
 BlockEvents.rightClicked('whimsy_deco:red_phone', (e) => {
-    const { player, item, level, hand, block, server } = e;
+    const { player, level, hand, block, server } = e;
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
     let day = global.getDay(level);
@@ -9,7 +9,7 @@ BlockEvents.rightClicked('whimsy_deco:red_phone', (e) => {
     }
     server.runCommandSilent(`execute as ${player.username} run dialog show red_phone_choice_dialog_choice_${Math.floor(Math.random() * 6) + 1}`);
     server.runCommandSilent(`playsound industrialhellscape:metal_box_opening block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
-    global.addChaos(server, block, 2);
+    global.addChaos(server, block, global.getPlayerTeamName(level, player), 2);
     player.persistentData.dayLastCalled = day;
     FieldGuide.unlock(player, `block:whimsy_deco/red_phone`);
 });

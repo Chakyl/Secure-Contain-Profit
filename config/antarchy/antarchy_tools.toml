@@ -778,26 +778,6 @@
 	# Range: 0.1 ~ 64.0
 	maxCapturableHeight = 1.65
 
-[minersDream]
-	#Master toggle. If false, the item remains craftable but cannot be used.
-	enabled = true
-	#Minimum cave length in blocks. Clamped to [8, 256].
-	# Default: 48
-	# Range: 8 ~ 256
-	minimumRange = 48
-	#Maximum cave length in blocks. Clamped to [8, 256].
-	# Default: 96
-	# Range: 8 ~ 256
-	maximumRange = 96
-	#Approximate blocks between torch placements along the cave.
-	# Default: 10
-	# Range: 4 ~ 64
-	torchSpacing = 10
-	#Maximum blocks removed per server tick while excavating.
-	# Default: 150
-	# Range: 1 ~ 2000
-	blocksPerTick = 150
-
 [ductTape]
 	#Fraction of max durability repaired per use. 0.25 = 25% per application.
 	# Default: 0.25

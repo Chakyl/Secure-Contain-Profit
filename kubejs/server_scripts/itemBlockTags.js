@@ -6,7 +6,7 @@ ServerEvents.tags('item', (e) => {
 })
 
 ServerEvents.tags('block', (e) => {
-
+    e.add('skyblockbuilder:additional_valid_spawn', "minecraft:bedrock");
     [
         "minecraft:bedrock",
         "scp:containment_unit",
@@ -48,5 +48,14 @@ ServerEvents.tags('block', (e) => {
         "scp:warehouse_lock_block"
     ].forEach((item) => {
         e.add("scp:card_clears", item);
+    });
+
+    [
+        "scp:containment_unit",
+        "minecraft:air",
+        "antarchy:mucus",
+        "minecraft:fire"
+    ].forEach((item) => {
+        e.add("scp:containment_unit_allows", item);
     });
 })

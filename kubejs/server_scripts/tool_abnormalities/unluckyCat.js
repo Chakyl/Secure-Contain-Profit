@@ -3,7 +3,7 @@ BlockEvents.rightClicked('whimsy_deco:lucky_cat', (e) => {
     if (hand !== "MAIN_HAND") return;
     if (level.isClientSide()) return;
     server.runCommandSilent(`openshop ${player.username} unlucky_cat`);
-    global.addChaos(server, block, 2);
+    global.addChaos(server, block, global.getPlayerTeamName(level, player), 2);
     FieldGuide.unlock(player, `block:whimsy_deco/lucky_cat`);
     server.runCommandSilent(`playsound minecraft:entity.cat.stray_ambient block @a ${block.x} ${block.y} ${block.z} 2 1.5`);
     if (Math.random() < 0.01) {
@@ -30,7 +30,7 @@ BlockEvents.rightClicked('whimsy_deco:gold_lucky_cat', (e) => {
     server.runCommandSilent(`playsound opposing_force:laser_bolt_impact block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
     if (Math.random() < 0.1) {
         block.set('whimsy_deco:lucky_cat')
-        global.addChaos(server, block, 5);
+        global.addChaos(server, block, global.getPlayerTeamName(level, player), 5);
         FieldGuide.unlock(player, `block:whimsy_deco/gold_lucky_cat`);
     }
 });

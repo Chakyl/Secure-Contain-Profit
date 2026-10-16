@@ -1,50 +1,50 @@
-//wand
-//copy
-//paste
-//undo
-//paste
-//copy
-//paste
-//copy
-//paste
+/skyblock leave
+/skyblock create
+/skyblock leave
+/skyblock create
+/data get block 8231 65 8213
+/skyblock home
+/skyblock dump
+/skyblock inventory
+/skyblock convert
+/skyblock spawn
+/skyblock home
 /kjs reload server-scripts
-//wand
-/ql edit_mode
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/reload
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-//copy
-//paste
-/kjs reload server-scripts
-/reload
-/kjs reload server-scripts
-/kjs hand
-/reload
-/kjs reload server-scripts
-/reload
-/playsound minecraft:music.game
-/stopsound Chakyl
-/playsound minecraft:music.game
 /kjs reload startup-scripts
 /kjs reload server-scripts
 /kjs reload startup-scripts
 /kjs reload server-scripts
 /kjs reload startup-scripts
-/reload
-/kjs handn
-/kjs hand
+/data get block 8231 65 8213
+/forceload
+/forceload add
+/forceload add 8231 8213
+/skyblock leave
+/skyblock visit Ketvalnis
+/kjs reload startup-scripts
+/data get block 8231 65 8186
+/skyblock leave
 /kjs reload server-scripts
-/reload
-/difficulty normal
-/playsound sinew:enter_nether
+/kjs reload startup-scripts
+/skyblock join Ketvalnis
+/skyblock leave
+/kjs reload startup-scripts
+/skyblock create
+/kjs reload startup-scripts
+/data get block 37 65 8184
+/forceload add 7 8183
+/forceload add 40 8184
+/skyblock leave
+/kjs reload startup-scripts
+/skyblock create zushi
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/summon minecraft:piglin ~ ~ ~ {IsImmuneToZombification:1b}
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/kil
-/kill
+/kjs reload startup-scripts
 /kjs reload server-scripts
-/data get entity 5638c3b7-25fb-4e80-b28f-11cd5941ddc4
+/kjs reload startup-scripts

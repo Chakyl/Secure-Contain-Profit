@@ -109,3 +109,36 @@
 	experimentalSettingsPopupDisabled = true
 	#If true, burning entities use soul fire / dream fire overlays where appropriate.
 	entitySpecificFireOverlayEnabled = true
+
+[portalGun]
+	canFireThroughGlass = false
+	canFireThroughLiquid = false
+	canPortalsResizeWhenCreated = true
+	canPortalProjectilesChunkload = true
+	seeThroughPortals = true
+	fancyPortals = true
+	# Default: 10000
+	# Range: > 1
+	maxShootDistance = 10000
+	#How many portals can show a live see-through view at once. Each one re-renders the world, so higher values cost frame rate. 0 shows only the animated surface.
+	# Default: 8
+	# Range: 0 ~ 32
+	maxLiveViews = 8
+	#Minimum speed in blocks/tick when leaving an upward-facing portal, so the traveller clears it. 0 disables.
+	# Default: 0.6
+	# Range: 0.0 ~ 4.0
+	minFloorExitSpeed = 0.6
+	#Maximum speed in blocks/tick when leaving a portal. 0 keeps momentum uncapped.
+	# Default: 0.0
+	# Range: 0.0 ~ 100.0
+	maxExitSpeed = 0.0
+	#Whether a portal opened by shooting the moon rips blocks loose and pulls them into space.
+	moonPullsBlocks = true
+	#How long a moon portal stays open, in seconds.
+	# Default: 10
+	# Range: 1 ~ 120
+	moonPortalSeconds = 10
+	#Maximum number of blocks a single moon portal can pull in.
+	# Default: 500
+	# Range: 0 ~ 2000
+	moonBlockCap = 500

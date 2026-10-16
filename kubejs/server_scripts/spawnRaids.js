@@ -1,8 +1,9 @@
 
 let getRaidFromTier = (player, server) => {
-    if (!server.persistentData.raidCount) server.persistentData.raidCount = 1;
-    let raidNum = Number(server.persistentData.getInt("raidCount"));
-    server.persistentData.raidCount = raidNum + 1;
+    let teamName = global.getPlayerTeamName(player.level, player);
+    if (!server.persistentData[teamName].raidCount) server.persistentData[teamName].raidCount = 1;
+    let raidNum = Number(server.persistentData[teamName].getInt("raidCount"));
+    server.persistentData[teamName].raidCount = raidNum + 1;
     if (player.stages.has("amber_level") && raidNum > 3) {
         return `amber_raid_${Math.min(6, raidNum)}`
     } else if (player.stages.has("maroon_level") && raidNum > 6) {

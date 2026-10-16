@@ -10,6 +10,7 @@ BlockEvents.placed('netherman:maze_door', (e) => {
     newAbnormalityEntity.setPersistenceRequired();
     newAbnormalityEntity.setMaxHealth(100);
     newAbnormalityEntity.setHealth(100);
+    newAbnormalityEntity.persistentData.teamName = global.getPlayerTeamName(level, player);
 });
 
 EntityEvents.death("netherman:believer", (e) => {
@@ -29,6 +30,6 @@ EntityEvents.death("netherman:believer", (e) => {
         itemEntity.item = heart
         itemEntity.spawn()
     }
-
-    global.addChaos(server, level.getBlock(entity.getOnPos()), 10);
+    let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
+    global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, 10);
 })

@@ -25,7 +25,7 @@ BlockEvents.rightClicked('minecraft:enchanting_table', (e) => {
     }
     let currentEnchantments = item.getEnchantments();
     if (currentEnchantments.size() > 0 && Math.random() < 0.1) {
-        global.addDisrepair(server, block, 1);
+        global.addDisrepair(server, block, global.getPlayerTeamName(player.level, player), 1)
     }
     if (enchantments.length > 0) {
         let randomEnchant = enchantments[Math.floor(Math.random() * enchantments.length)];

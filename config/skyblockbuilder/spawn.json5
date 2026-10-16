@@ -86,7 +86,7 @@
     // If you set the spawn height type to "set", the bottom value will be used for a set height. Otherwise, the height will be calculated.
     "range": {
       "bottom": 64,
-      "top": 319
+      "top": 64
     }
   }
 }

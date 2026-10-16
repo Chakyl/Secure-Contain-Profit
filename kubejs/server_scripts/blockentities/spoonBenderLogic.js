@@ -1,5 +1,5 @@
 BlockEvents.blockEntityTick('scp:spoon_bender', (e) => {
-    const { inventory, level, server, block } = e;
+    const { level, server, block } = e;
     const { x, y, z } = block;
     if (!level || level.isClientside) return;
     const facing = block.getProperties().get("facing")
@@ -9,5 +9,22 @@ BlockEvents.blockEntityTick('scp:spoon_bender', (e) => {
         .forEach((entity) => {
             entity.setPos(depositPos.x + 0.5, depositPos.y, depositPos.z + 0.5);
         });
-    if (Math.random() < 0.001) global.addDisrepair(server, block, 1)
+    if (Math.random() < 0.001) {
+        let nbt = block.getEntityData();
+        if (!nbt || !nbt.data) return;
+        let teamName = String(nbt.data.getString("teamName")).trim();
+        global.addDisrepair(server, block, teamName, 1)
+    }
 })
+
+BlockEvents.placed('scp:spoon_bender', (e) => {
+    const { player, level, block } = e;
+    let nbt = block.getEntityData();
+    if (!nbt || !nbt.data) return;
+    nbt.merge({
+        data: {
+            teamName: global.getPlayerTeamName(level, player)
+        },
+    });
+    global.setBlockEntityData(block, nbt);
+});

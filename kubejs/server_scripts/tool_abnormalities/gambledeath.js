@@ -6,7 +6,7 @@ BlockEvents.rightClicked('companions:frog_bonanza_block', (e) => {
     if (Math.random() < 0.01) {
         player.give(global.rollArray(['scguns:laser_musket', 'scguns:minksy']))
         server.runCommandSilent(`playsound scp:playgamblethbygcat101 block @a ${block.x} ${block.y} ${block.z} 2 0.7`);
-        global.addChaos(server, block, 25);
+        global.addChaos(server, block, global.getPlayerTeamName(level, player), 25);
     }
     FieldGuide.unlock(player, `block:companions/frog_bonanza_block`);
 });

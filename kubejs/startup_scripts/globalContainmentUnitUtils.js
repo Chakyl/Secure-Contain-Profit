@@ -1,6 +1,7 @@
 // Priority: 200
+const $SkyblockSavedData = Java.loadClass('de.melanx.skyblockbuilder.data.SkyblockSavedData')
 if (!global.playerNotifSlots) {
-    global.playerNotifSlots = {}; 
+    global.playerNotifSlots = {};
     global.notifCounter = 0;
 }
 
@@ -21,7 +22,7 @@ global.paintAlert = (server, player, text, color) => {
     let paintAdd = {};
     paintAdd[notifKey] = {
         type: 'text',
-        text: text,
+        text: `${text.getString()}`,
         alignX: 'left',
         x: '2',
         y: `${34 + (slotNum * 8)} + sin(time * 5)`,
@@ -46,10 +47,51 @@ global.paintToServer = (server, text, color) => {
         global.paintAlert(server, player, text, color);
     });
 }
+global.getTeamFromName = (level, teamName) => $SkyblockSavedData.get(level)["getTeam(java.lang.String)"](teamName);
+
+global.paintToTeam = (server, level, teamName, text, color) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                global.paintAlert(server, player, text, color);
+            }
+        });
+    } else {
+        global.paintToServer(server, "ERROR: TEAM NAME NOT FOUND! TELL CHAKYL!", '#FF5555');
+    }
+}
+
+global.getPlayerTeam = (level, player) => {
+    return $SkyblockSavedData.get(level).getTeamFromPlayer(player.uuid);
+}
+
+global.getPlayerTeamName = (level, player) => {
+    let team = global.getPlayerTeam(level, player);
+    if (team == null) return "NONE";
+    return team.getName()
+}
+
+global.tellTeam = (server, level, teamName, text) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                player.tell(text)
+            }
+        });
+    } else {
+        server.tell("ERROR: TEAM NAME NOT FOUND! TELL CHAKYL!");
+    }
+}
+
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
-    let breachMessage = `${abnormalityName} IS BREACHING AT [x:${block.x}/z:${block.z}]. SUPPRESS IMMEDIATELY.`
-    server.tell(Text.darkRed(breachMessage))
-    global.paintToServer(server, breachMessage, "#AA0000");
+    let breachMessage = `${abnormalityName} IS BREACHING AT [x:${block.x}/z:${block.z}]. SUPPRESS IMMEDIATELY.`;
+    let teamName = String(nbt.data.getString("teamName")).trim();
+    global.tellTeam(server, level, teamName, Text.darkRed(breachMessage))
+    global.paintToTeam(server, level, teamName, breachMessage, "#AA0000");
     nbt.merge({
         data: {
             state: "BREACH",
@@ -60,9 +102,9 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
     global.updateSignalers(level, block);
     let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes;
     if (breachTypes.includes("GRANDIOSE")) {
-        global.addThreatLevel(server, 5);
-        server.tell(Text.darkRed(`THREAT LEVEL INCREASED TO ${Math.floor(Number(server.persistentData.getInt("threat_level")) / 5)}`))
-        global.addChaos(server, block, Number(server.persistentData.getInt("threat_level")));
+        global.addThreatLevel(server, teamName, 5);
+        global.tellTeam(server, level, teamName, Text.darkRed(`THREAT LEVEL INCREASED TO ${Math.floor(Number(server.persistentData[teamName].getInt("threat_level")) / 5)}`))
+        global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
     } else if (breachTypes.includes("ESCAPEARTIST")) {
         global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);
     }
