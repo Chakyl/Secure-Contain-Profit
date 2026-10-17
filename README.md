@@ -26,7 +26,7 @@ Secure Contain Profit  is an incremental economy pack inspired by the worlds and
 - **Large code refactors**: These just take more time to review and verify
 - **Translations**: It takes time to find a native reader of a translation language that is willing to review translations, there's no way around that.
 ## Discuss before starting (to avoid wasting your time)
-- **Content additions/reworks**: New mechanics or significant changes to current mechanics (e.g, putting veggies in a dehydrator). Discuss these beforehand to avoid working on things that are already actively in dev or things that won't be added
+- **Content additions/reworks**: New mechanics or significant changes to current mechanics. Discuss these beforehand to avoid working on things that are already actively in dev or things that won't be added
 - **Mod additions**:  Mods will have to meet a very high threshold to be added to the pack at this point in development
 ## Automatically denied contributions
 - **License violating work**: Any work that breaks the license of another project will automatically be denied. This includes but is not limited to copying assets or code from an ARR mod without express permission.
