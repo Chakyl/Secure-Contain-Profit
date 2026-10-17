@@ -52,6 +52,16 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "csr": {
+    "zombie_clay_soldier": true,
+    "clay_mob": true,
+    "vampire_clay_soldier": true,
+    "easel_block_storage": true,
+    "clay_soldier": true,
+    "clay_wraith": true,
+    "hamster_wheel": true,
+    "boss_clay_soldier": true
+  },
   "jade_access": {
     "held_item": true,
     "sign": true,

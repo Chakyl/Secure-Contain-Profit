@@ -4,7 +4,7 @@ BlockEvents.rightClicked('whimsy_deco:gatcha_machine', (e) => {
     if (level.isClientSide()) return;
     if (item.id !== 'numismatics:cog') return;
     if (Math.random() < 0.25) {
-        global.addChaos(server, block, 1);
+        global.addChaos(server, block, global.getPlayerTeamName(level, player), 1);
         FieldGuide.unlock(player, `block:whimsy_deco/gatcha_machine`);
     }
 });

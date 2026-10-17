@@ -3,7 +3,8 @@ ServerEvents.recipes((event) => {
     const removedTypes = [
         "createaddition:charging",
         "createaddition:liquid_burning",
-        "createaddition:rolling"
+        "createaddition:rolling",
+        "create:mixing"
     ];
 
     const removedIDs = [
@@ -12,6 +13,7 @@ ServerEvents.recipes((event) => {
     const removedInputs = [];
 
     const removedOutputs = [
+        'csr:clay_soldier',
         'minecraft:enchanting_table',
         'scguns:felix_memorial',
         "createaddition:gold_wire",

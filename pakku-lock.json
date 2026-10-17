@@ -4,7 +4,7 @@
         "1.21.1"
     ],
     "loaders": {
-        "Neoforge": "21.1.252"
+        "Neoforge": "21.1.262"
     },
     "projects": [
         {
@@ -708,6 +708,67 @@
                     "required_dependencies": [],
                     "size": 328813,
                     "date_published": "2026-02-10T22:44:17.770Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "bXWZ3YCMdLy7GdJJ",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "clay-soldier-remake",
+                "modrinth": "clay-soldiers-remake"
+            },
+            "name": {
+                "curseforge": "Clay Soldier Remake",
+                "modrinth": "Clay Soldiers Remake"
+            },
+            "id": {
+                "curseforge": "1346487",
+                "modrinth": "4zyuLusz"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "csr-neoforge-1.21.1-1.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8615/163/csr-neoforge-1.21.1-1.0.3.jar",
+                    "id": "8615163",
+                    "parent_id": "1346487",
+                    "hashes": {
+                        "sha1": "6c8cb5e077cd76368364f2822c325a4d87781ced",
+                        "md5": "9fc86ca95fba92d9a35353a24cf10e57"
+                    },
+                    "required_dependencies": [],
+                    "size": 1487289,
+                    "date_published": "2026-08-10T09:33:01.513Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "csr-neoforge-1.21.1-1.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/4zyuLusz/versions/s7jP6vT9/csr-neoforge-1.21.1-1.0.3.jar",
+                    "id": "s7jP6vT9",
+                    "parent_id": "4zyuLusz",
+                    "hashes": {
+                        "sha512": "ceb63769626101dd8fb5844839aa619f6877ed5f5d3bf942a4d1aa31ee43e80b9b0f0f548802f8a6f5a0abbb2d9fda6c55253af6058c3e248e648beda8ba9b2f",
+                        "sha1": "6c8cb5e077cd76368364f2822c325a4d87781ced"
+                    },
+                    "required_dependencies": [],
+                    "size": 1487289,
+                    "date_published": "2026-08-10T09:31:36.959138Z"
                 }
             ]
         },
@@ -5394,6 +5455,77 @@
                     "required_dependencies": [],
                     "size": 176967,
                     "date_published": "2026-08-01T15:36:00.951233Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "MIYpakstpg5W0mFO",
+            "pakku_links": [
+                "MKo1UzGv72FktNbp",
+                "5wYfhfwvBu5QwxNX"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "sky-guis",
+                "modrinth": "sky-guis"
+            },
+            "name": {
+                "curseforge": "Sky GUIs",
+                "modrinth": "Sky GUIs"
+            },
+            "id": {
+                "curseforge": "557696",
+                "modrinth": "3Gdi7Qgq"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "SkyGUIs-21.1.10.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/8799/977/SkyGUIs-21.1.10.jar",
+                    "id": "8799977",
+                    "parent_id": "557696",
+                    "hashes": {
+                        "sha1": "a5e60249c850c17cb2902ec218aa146296b2969b",
+                        "md5": "9ecfde7696c61c6750fd6ce6cca86312"
+                    },
+                    "required_dependencies": [
+                        "446691",
+                        "412525"
+                    ],
+                    "size": 184150,
+                    "date_published": "2026-09-03T13:48:42.907Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "SkyGUIs-21.1.10.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/3Gdi7Qgq/versions/M32FiLBl/SkyGUIs-21.1.10.jar",
+                    "id": "M32FiLBl",
+                    "parent_id": "3Gdi7Qgq",
+                    "hashes": {
+                        "sha512": "ad601306c7c4248ed9a5d9b85da324d2aa4c082f614719c4ba1af17f63421b95dc628cb93b63df0832b5637a6e7bd45e3ec164cc4bf2976a33c0ac74a110c7f2",
+                        "sha1": "a5e60249c850c17cb2902ec218aa146296b2969b"
+                    },
+                    "required_dependencies": [
+                        "qEH6GYul",
+                        "por2AZc5"
+                    ],
+                    "size": 184150,
+                    "date_published": "2026-09-03T13:48:42.173965Z"
                 }
             ]
         },

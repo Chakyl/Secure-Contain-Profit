@@ -140,6 +140,18 @@
 		},
 		{
 			"offer": {
+				"id": "scp:room_abnormality_expansion_room_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 20
+			},
+			"stage_required": "amber_level",
+			"trade_id": "facility_scp_room_abnormality_expansion_room_card"
+		},
+		{
+			"offer": {
 				"id": "numismatics:bank_terminal",
 				"count": 1
 			},

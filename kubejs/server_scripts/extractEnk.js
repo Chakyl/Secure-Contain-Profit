@@ -285,7 +285,7 @@ ItemEvents.rightClicked('scp:tubasmoke_stick', (e) => {
         );
         processWork(level, server, player, nearestAb[0], 8, "harmony", 3);
     } else {
-        player.tell(Text.gray("There's no abnormalities nearby..."))
+        player.tell(Text.translatable("There's no abnormalities nearby...").gray())
     }
 });
 

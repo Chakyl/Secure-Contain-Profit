@@ -93,22 +93,22 @@ global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitie
 
 global.getNearestAbnormalities = (level, pos, radius) => Array.from(level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).toArray()).filter((entity) => entity && entity.persistentData && entity.persistentData.getBoolean("abnormality")).sort((a, b) => a.distanceToSqr(pos) - b.distanceToSqr(pos));
 
-global.addDisrepair = (server, block, disrepairCount) => {
-  server.persistentData.disrepair = server.persistentData.disrepair ? Number(server.persistentData.getInt("disrepair")) + disrepairCount : disrepairCount;
+global.addDisrepair = (server, block, teamName, disrepairCount) => {
+  server.persistentData[teamName].disrepair = server.persistentData[teamName].disrepair ? Number(server.persistentData[teamName].getInt("disrepair")) + disrepairCount : disrepairCount;
   if (block) server.runCommandSilent(`playsound minecraft:entity.iron_golem.death block @a ${block.x} ${block.y} ${block.z} 0.5 0.2`);
 };
 
-global.addChaos = (server, block, chaosCount) => {
-  server.persistentData.chaos = server.persistentData.chaos ? Number(server.persistentData.getInt("chaos")) + chaosCount : chaosCount;
+global.addChaos = (server, block, teamName, chaosCount) => {
+  server.persistentData[teamName].chaos = server.persistentData[teamName].chaos ? Number(server.persistentData[teamName].getInt("chaos")) + chaosCount : chaosCount;
   if (block) server.runCommandSilent(`playsound abyssal_decor:thehorrors4 block @a ${block.x} ${block.y} ${block.z} 2 1`);
 };
 
-global.addThreatLevel = (server, threatLevelCount) => server.persistentData.threat_level = server.persistentData.threat_level ? Number(server.persistentData.getInt("threat_level")) + threatLevelCount : threatLevelCount;
+global.addThreatLevel = (server, teamName, threatLevelCount) => server.persistentData[teamName].threat_level = server.persistentData[teamName].threat_level ? Number(server.persistentData[teamName].getInt("threat_level")) + threatLevelCount : threatLevelCount;
 
-global.addKnownAbnormalities = (server, id) => {
-  let known = server.persistentData.known_abnormalities ? JSON.parse(server.persistentData.getString("known_abnormalities")) : [];
+global.addKnownAbnormalities = (server, teamName, id) => {
+  let known = server.persistentData[teamName].known_abnormalities ? JSON.parse(server.persistentData[teamName].getString("known_abnormalities")) : [];
   if (!known.includes(id)) known.push(id);
-  server.persistentData.known_abnormalities = JSON.stringify(known);
+  server.persistentData[teamName].known_abnormalities = JSON.stringify(known);
 }
 
 global.updateSignalers = (level, block) => {
@@ -119,12 +119,12 @@ global.updateSignalers = (level, block) => {
   }
 }
 
-global.filterKnownAbnormalities = (server, abnormalitiesNext) => {
-  if (!server.persistentData.known_abnormalities) return abnormalitiesNext;
-  let known = JSON.parse(server.persistentData.getString("known_abnormalities"));
+global.filterKnownAbnormalities = (server, teamName, abnormalitiesNext) => {
+  if (!server.persistentData[teamName].known_abnormalities) return abnormalitiesNext;
+  let known = JSON.parse(server.persistentData[teamName].getString("known_abnormalities"));
   let filteredAbnormalities = abnormalitiesNext.filter(item => known.indexOf(item) === -1);
   if (filteredAbnormalities.length == 0) {
-    server.persistentData.known_abnormalities = JSON.stringify(known.filter((ab) => !abnormalitiesNext.includes(ab)));
+    server.persistentData[teamName].known_abnormalities = JSON.stringify(known.filter((ab) => !abnormalitiesNext.includes(ab)));
     return abnormalitiesNext;
   }
   else return filteredAbnormalities

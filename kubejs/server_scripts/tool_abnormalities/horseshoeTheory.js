@@ -18,5 +18,5 @@ BlockEvents.rightClicked('whimsy_deco:horseshoe', (e) => {
             }
         }
     }
-    if (!found) player.tell(Text.gray("No nearby containment unit..."))
+    if (!found) player.tell(Text.translatable("messages.scp.horseshoe_theory.none_nearby").gray())
 })

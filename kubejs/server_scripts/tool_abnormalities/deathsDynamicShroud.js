@@ -25,7 +25,7 @@ const handleMagicHarvest = (server, level, player, target) => {
     const droppedLoot = getMagicShearsOutput(server, level, target);
     server.runCommandSilent(`playsound minecraft:entity.sheep.shear block @a ${player.x} ${player.y} ${player.z}`);
     if (droppedLoot == -1 || droppedLoot.length < 1) {
-        player.tell(Text.gray("This abnormality didn't drop anything..."))
+        player.tell(Text.translatable("messages.scp.deaths_dynamic_shroud.no_drops").gray())
         return -1;
     } else {
         for (let i = 0; i < droppedLoot.length; i++) {

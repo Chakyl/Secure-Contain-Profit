@@ -45,6 +45,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
 
     if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
+    let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
     level.spawnParticles(
         "companions:shade_summon",
         true,
@@ -69,7 +70,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             if (scanBlock.hasTag("create:seats")) {
                 level.spawnParticles("minecraft:angry_villager", true, pos.x, pos.y + 0.5, pos.z, 0.2, 0.2, 0.2, 4, 1.01);
                 scanBlock.set("minecraft:air")
-                global.addChaos(server, scanBlock, 1);
+                global.addChaos(server, scanBlock, teamName, 1);
                 break;
             }
         }
@@ -171,10 +172,10 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
     // Facility Disasters
     if (entity.tickCount % 600 == 0 && (breachTypes.includes("SUPER") || breachTypes.includes("CHAOS"))) {
-        global.addChaos(server, level.getBlock(entity.getOnPos()), breachTypes.includes("CHAOS") ? 1 : 3);
+        global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, breachTypes.includes("CHAOS") ? 1 : 3);
     }
     if (entity.tickCount % 600 == 0 && breachTypes.includes("CLANKER")) {
-        global.addDisrepair(server, level.getBlock(entity.getOnPos()), 1);
+        global.addDisrepair(server, level.getBlock(entity.getOnPos()), teamName, 1);
     }
     if (Math.random() < 0.15 && breachTypes.includes("DECOUNT")) {
         let radius = 4;
@@ -188,7 +189,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             if (scanBlock.id == "scp:containment_unit") {
                 let nbt = scanBlock.getEntityData();
                 if (!(!nbt || !nbt.data)) {
-                    if (target.uuid.toString() == nbt.data.abnormalityUUID) {
+                    if (nbt.data.abnormalityUUID != "") {
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                         return;
                     }

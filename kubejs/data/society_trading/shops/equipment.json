@@ -13,6 +13,19 @@
 	"trades": [
 		{
 			"offer": {
+				"id": "scguns:flare_pistol",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 1
+			},
+			"numismatics_cost": 512,
+			"stage_required": "amber_level",
+			"trade_id": "equipment_scguns_flare_pistol"
+		},
+		{
+			"offer": {
 				"id": "create:brown_toolbox",
 				"count": 1
 			},

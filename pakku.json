@@ -1,6 +1,6 @@
 {
     "name": "Secure Contain Profit",
-    "version": "0.2.3-bap",
+    "version": "0.3.0",
     "overrides": [
         "config",
         "kubejs"

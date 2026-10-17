@@ -4,7 +4,8 @@ ServerEvents.commandRegistry((e) => {
         commands
             .argument('amount', argumentsNoTSError.INTEGER.create(e))
             .executes((ctx) => {
-                global.addChaos(ctx.source.server, undefined, argumentsNoTSError.INTEGER.getResult(ctx, 'amount'))
+                // TODO: Figure out wtf to do here
+                // global.addChaos(ctx.source.server, undefined, argumentsNoTSError.INTEGER.getResult(ctx, 'amount'))
                 return 1
             })
     )

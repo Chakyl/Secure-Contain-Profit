@@ -57,11 +57,6 @@
           ]
         ]
       },
-      "offset": [
-        0,
-        128,
-        0
-      ],
       "surroundingBlocks": "default",
       "spreads": "default"
     }

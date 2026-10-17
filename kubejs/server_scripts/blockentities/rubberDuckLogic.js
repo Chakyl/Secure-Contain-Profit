@@ -1,5 +1,5 @@
 BlockEvents.blockEntityTick('scp:rubber_duck', (e) => {
-    const { inventory, level, block } = e;
+    const {  level, block } = e;
     const { x, y, z } = block;
     if (!level || level.isClientside) return;
     if (Math.random() < 0.9) return;
@@ -9,7 +9,12 @@ BlockEvents.blockEntityTick('scp:rubber_duck', (e) => {
     if (newBlock.id == "minecraft:air") {
         block.set("minecraft:air");
         newBlock.set('scp:rubber_duck')
-        if (Math.random() < 0.1) global.addChaos(level.getServer(), block, 1);
+        if (Math.random() < 0.1) {
+            let nbt = block.getEntityData();
+            if (!nbt || !nbt.data) return;
+            let teamName = String(nbt.data.getString("teamName")).trim();
+            global.addChaos(level.getServer(), block, teamName, 1);
+        }
         else {
             let itemEntity = block.createEntity('item')
             itemEntity.x = x
@@ -20,4 +25,16 @@ BlockEvents.blockEntityTick('scp:rubber_duck', (e) => {
         }
         return;
     }
-})
+});
+
+BlockEvents.placed('scp:rubber_duck', (e) => {
+    const { player, level, block } = e;
+    let nbt = block.getEntityData();
+    if (!nbt || !nbt.data) return;
+    nbt.merge({
+        data: {
+            teamName: global.getPlayerTeamName(level, player)
+        },
+    });
+    global.setBlockEntityData(block, nbt);
+});

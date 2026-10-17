@@ -15,6 +15,7 @@
 //             { stageRequired: "maroon_level", item: "scp:maroon_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 12 } },
 //             { stageRequired: "amber_level", item: "scp:warehouse_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 32 } },
 //             { item: 'scp:utility_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
+//             { stageRequired: "amber_level", item: 'scp:room_abnormality_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 20 } },
 //             { item: "numismatics:bank_terminal", count: 1, numiCost: 16 },
 //             { item: "numismaticsutils:portable_bank_terminal", count: 1, numiCost: 128 },
 //             { item: "numismaticsutils:bank_meter", count: 1, numiCost: 16 },
@@ -270,6 +271,7 @@
 //         id: "equipment",
 //         jeiCatalyst: "create:brown_toolbox",
 //         trades: [
+//             { stageRequired: "amber_level", item: 'scguns:flare_pistol', count: 1, numiCost: 512 },
 //             { item: "create:brown_toolbox", count: 1, numiCost: 64 },
 //             { item: 'scguns:pistol_ammo_box', count: 1, numiCost: 128 },
 //             { item: "scguns:rifle_ammo_box", count: 1, numiCost: 128 },

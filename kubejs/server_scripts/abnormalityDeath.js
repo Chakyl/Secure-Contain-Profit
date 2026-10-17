@@ -1,9 +1,12 @@
 const $ExplosionEvent = Java.loadClass('net.neoforged.neoforge.event.level.ExplosionEvent$Start');
 
 EntityEvents.death((e) => {
-    const { entity, server,level, source } = e;
+    const { entity, server, level, source } = e;
     if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
-    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) global.addChaos(server, entity.block, 1);
+    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) {
+        let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
+        global.addChaos(server, entity.block, teamName, 1);
+    }
     let killer = source.player
 
     let heart = Item.of('scp:abnormality_heart')
@@ -21,7 +24,7 @@ EntityEvents.death((e) => {
     }
 })
 
-let respawnAbnormality = (level, tier, oldEntity) => {
+let respawnAbnormality = (level, tier, oldEntity, teamName) => {
     level.spawnParticles("supplementaries:green_flame", true, oldEntity.x, oldEntity.y + 0.5, oldEntity.z, 0.2, 0.2, 0.2, 20, 1.01);
     let newAbnormalityEntity = level.createEntity(oldEntity.type);
     newAbnormalityEntity.setPos(oldEntity.x + 0.5, oldEntity.y + 1.0, oldEntity.z + 0.5);
@@ -34,6 +37,8 @@ let respawnAbnormality = (level, tier, oldEntity) => {
     newAbnormalityEntity.setHealth(newHealth);
     newAbnormalityEntity.persistentData.abnormality = true;
     newAbnormalityEntity.persistentData.respawned = true;
+    newAbnormalityEntity.persistentData.teamName = teamName;
+
 }
 
 NativeEvents.onEvent($ExplosionEvent, (e) => {
@@ -42,10 +47,12 @@ NativeEvents.onEvent($ExplosionEvent, (e) => {
     let entity = explosion.getIndirectSourceEntity();
     if (entity && "minecraft:creeper" == entity.type) {
         if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
+
         server.scheduleInTicks(200, () => {
-            global.addChaos(server, level.getBlock(entity.getOnPos()), 1);
+            let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
+            global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, 1);
             server.runCommandSilent(`playsound netherman:respawn_totem block @a ${entity.x} ${entity.y} ${entity.z} 2 0.5`);
-            respawnAbnormality(level, "verdant", entity);
+            respawnAbnormality(level, "verdant", entity, teamName);
         });
     }
 });

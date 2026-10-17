@@ -1,0 +1,30 @@
+{
+  "title": "Room Abnormalities",
+  "description": "The Moonlit Company has a small selection of room abnormalities in our collection that you may now have access too.\n\nRoom Abnormalities are frequently dangerous and rarely helpful, but a resourceful manager might find a use for them.",
+  "icon": {
+    "item": "scp:room_abnormality_expansion_room_card"
+  },
+  "chapter": "amber_level",
+  "sort_order": 12,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:room_abnormality_expansion_room_card",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:amber_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:room_abnormality_expansion_room_card",
+      "count": 1
+    }
+  ]
+}

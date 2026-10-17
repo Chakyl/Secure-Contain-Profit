@@ -1,9 +1,9 @@
 ﻿{
-  "neoforge-21.1.252 (modloader)": {
-    "jarName": "neoforge-21.1.252 (modloader)",
+  "neoforge-21.1.262 (modloader)": {
+    "jarName": "neoforge-21.1.262 (modloader)",
     "modId": "neoforge",
     "name": "neoforge",
-    "version": "neoforge-21.1.252"
+    "version": "neoforge-21.1.262"
   },
   "abyssal_decor_1.21.1_0.11.0_Neoforge.jar": {
     "jarName": "abyssal_decor_1.21.1_0.11.0_Neoforge.jar",
@@ -188,6 +188,14 @@
     "version": "1.2.3.3",
     "curseForgeHash": 1870004536,
     "modrinthHash": "e8550e1bae25f437fdaa142877027a0b783c074b"
+  },
+  "csr-neoforge-1.21.1-1.0.3.jar": {
+    "jarName": "csr-neoforge-1.21.1-1.0.3.jar",
+    "modId": "csr",
+    "name": "Clay Soldiers Remake",
+    "version": "1.0.3",
+    "curseForgeHash": 2994713336,
+    "modrinthHash": "6c8cb5e077cd76368364f2822c325a4d87781ced"
   },
   "CTM-1.21-1.2.1+3.jar": {
     "jarName": "CTM-1.21-1.2.1+3.jar",
@@ -681,6 +689,14 @@
     "version": "21.1.37",
     "curseForgeHash": 4026390784,
     "modrinthHash": "b4d24d886fabd577fd4a52c06add7d5300998f9e"
+  },
+  "SkyGUIs-21.1.10.jar": {
+    "jarName": "SkyGUIs-21.1.10.jar",
+    "modId": "skyguis",
+    "name": "Sky GUIs",
+    "version": "21.1.10",
+    "curseForgeHash": 39584910,
+    "modrinthHash": "a5e60249c850c17cb2902ec218aa146296b2969b"
   },
   "society_trading-1.2.11-1.21.1.jar": {
     "jarName": "society_trading-1.2.11-1.21.1.jar",

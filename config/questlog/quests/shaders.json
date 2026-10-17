@@ -6,7 +6,12 @@
   },
   "chapter": "main",
   "sort_order": 4,
-  "objectives": [],
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
   "prerequisites": [],
   "rewards": []
 }

@@ -26,6 +26,7 @@ StartupEvents.registry("item", (e) => {
 
   e.create(`scp:warehouse_expansion_card`).texture(`scp:item/cards/warehouse_expansion_card`).maxStackSize(1);
   e.create(`scp:utility_expansion_room_card`).texture(`scp:item/cards/utility_room_card`).maxStackSize(1);
+  e.create(`scp:room_abnormality_expansion_room_card`).texture(`scp:item/cards/abnormal_room_card`).maxStackSize(1);
 
   [
     "verdant",

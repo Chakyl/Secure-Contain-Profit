@@ -124,7 +124,7 @@
 //         /**
 //          * INDIGO ABNORMALITIES
 //          */
-        
+
 //         ["creaturefeature:detritus", { description: "WIP" }],
 //         ["antarchy:nightmare", { description: "Deerhunter is the hunter of the black forest, smuggled into your facility by the harbinger. There are no known containment methods." }],
 //     ]);
@@ -163,6 +163,7 @@
 //         ["companions:porcelain_pottery", { num: 25, name: "Pot of Greed", hint: "Feed the beast", summary: "The Pot of Greed is simple in its desire for money, and thus it is not dangerous." }],
 //         ["companions:holy_porcelain_pottery", { num: 30, name: "Pot of Lust", hint: "Suck one up", summary: "Once thought to be a simple decoration, the Pot of Lust is an incredibly useful tool abnormality that can contain abnormalities inside of it. It has no known adverse effects" }],
 //         ["whimsy_deco:lucky_cat", { num: 45, name: "Fortunate Son", hint: "Get Unlucky", summary: "With enough nutrients, the Unlucky Cat seems to have transformed into a completely different abnormality. Dull to the taste of flesh and bone, Fortunate Son craves only Enkephalin, outcompeting the Moonlit Company on price. It is mandated that facility managers dispose of Fortunate Son instead of giving it valuable Enkephalin, cutting into production metrics. When Fortunate Son is satiated, it turns back into Unlucky Cat, causing abnormalities to be driven into a frenzy..." }],
+//         ["csr:clay_soldier", { num: 131, name: "Clay Soldier", hint: "Find R-131", summary: "Sentient mounds of clay can be found in an abnormal room of the facility. They appear to have a violent hatred of Clay Soldiers of a different color, though otherwise are safe to keep around.\n\nWhen a Clay Soldier picks up a Gold Inogt or Diamond, it will become the leader of the color. Gifting the leader a Clay Cookie will ally the team with the manager.\n\nThe Moonlit Company authorizes the usage of allied soldiers throughout the facility.\n- Assign a soldier to a Hamster Wheel using POI mode by left clicking the wheel and right clicking the Soldier. Redstone Dust can be used on the wheel to turn it into a power generator.\n- Crop harvesting & planting, item pickup, and digging jobs can be assigned using POI and work mode.\m- Abnormality suprression using T-131 is possible but not advised due to the weakness of the abnormality." }]
 //     ])
 //     for (let abnormality of TOOL_ABNORMALITIES.keys()) {
 //         fieldGuideEntries.push({
@@ -172,6 +173,23 @@
 //         let data = TOOL_ABNORMALITIES.get(`${abnormality}`);
 //         translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `${data.name}`
 //         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: T-${String(data.num).padStart(3, '0')}\nClass: Tool\n\nKnown information:\n${data.summary}`
+//         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.hint`] = data.hint
+//     }
+//     let ROOM_ABNORMALITIES = new Map([
+//         ['whimsy_deco:moroccan_sofa', { num: 2, name: "The Living Womb", hint: "Rest a bit", summary: "The inside of the Living Womb past its Sacred Veil is warm and inviting, causing those inside to not want to escape. A strange cassette plays on its tv, and the outer shell of the room is a solid wall of bone. Any personnel inside of the Living Womb may find themselves to peacefully pass, as the womb births fresh furniture in its place." }],
+//         ['scguns:sulfur_vent', { num: 5, name: "The Nutty Putty Cave", hint: "Enter the cave", summary: "Like R-006, the intern assigned to room transportation in the Moonlit Company seems to have mistaken a natural wonder of the world for an Abnormality. Given the fact that abnormalities can not become re-classified as normal, the Moonlit Company advises managers to make use of this room Vent Collectors for Sulfur." }],
+//         ['scguns:geothermal_vent', { num: 6, name: "The Camuy Cave", hint: "Enter the cave", summary: "Like R-005, the intern assigned to room transportation in the Moonlit Company seems to have mistaken a natural wonder of the world for an Abnormality. Given the fact that abnormalities can not become re-classified as normal, the Moonlit Company advises managers to make use of this room Vent Collectors for Niter." }],
+//         ['supplementaries:safe', { num: 9, name: "Shelter from the 27th of March", hint: "Stay inside...", summary: "The Starlit Company constructed the shelter at the request of the Moonlit Company after Incident 00593411 with the intent of creating the 'safest place on earth'. It has everything a human needs to survive, filling inhabitants with nutrients and life while they exist in the shelter. After the forced divestment of the two companies, the shelter seems to have corrupted from the broken will of the Starlit Company, causing choas in the facility it was placed in. After investigation, it was found that shelter was perfectly functional for its intended purpose, but its definition of the 'safest place on earth' had shifted. If it was not the safest place, it would surely become it." }],
+//         ['minecraft:chiseled_tuff_bricks', { num: 131, name: "Castle in the Clay", hint: "Enter the room", summary: "There is nothing particularly interesting or abnormal about the Castle in the Clay other then the fact that the abnormality T-131 arose from it suddenly during the inhabitants normal play hours. Said inhabitant was found alone in the room after their parents were flagged missing, ripped apart by a rabid group of T-131s commanded by the inhabitant." }],
+//     ])
+//     for (let abnormality of ROOM_ABNORMALITIES.keys()) {
+//         fieldGuideEntries.push({
+//             type: "entry",
+//             id: abnormality
+//         });
+//         let data = ROOM_ABNORMALITIES.get(`${abnormality}`);
+//         translationKeys[`fieldguide.name.${abnormality.replace(":", ".")}`] = `${data.name}`
+//         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.description`] = `ID: R-${String(data.num).padStart(3, '0')}\nClass: Room\n\nKnown information:\n${data.summary}`
 //         translationKeys[`fieldguide.${abnormality.replace(":", ".")}.hint`] = data.hint
 //     }
 //     JsonIO.write(`kubejs/assets/fieldguide/lang/en_us.json`, translationKeys);

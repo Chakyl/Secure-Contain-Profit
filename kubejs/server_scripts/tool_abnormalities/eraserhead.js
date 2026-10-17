@@ -14,18 +14,18 @@ BlockEvents.rightClicked('minecraft:enchanting_table', (e) => {
     const { player, level, server, item, hand, block } = e;
     if (hand !== "MAIN_HAND") return;
     if (player.experienceLevel < 1) {
-        player.tell(Text.darkRed("You don't have enough experience I'm afraid..."));
+        player.tell(Text.translatable("messages.scp.eraserhead.no_xp").darkRed());
         e.cancel();
     }
     let registry = level.registryAccess().registryOrThrow($Registries.ENCHANTMENT);
     let enchantments = registry.stream().filter(enchantment => enchantment.canEnchant(item)).toList();
     if (enchantments.length === 0) {
-        player.tell(Text.darkRed("I can't do anything with that..."));
+        player.tell(Text.translatable("messages.scp.eraserhead.cannot_enchant").darkRed());
         e.cancel();
     }
     let currentEnchantments = item.getEnchantments();
     if (currentEnchantments.size() > 0 && Math.random() < 0.1) {
-        global.addDisrepair(server, block, 1);
+        global.addDisrepair(server, block, global.getPlayerTeamName(player.level, player), 1)
     }
     if (enchantments.length > 0) {
         let randomEnchant = enchantments[Math.floor(Math.random() * enchantments.length)];

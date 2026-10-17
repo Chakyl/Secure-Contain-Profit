@@ -16,7 +16,7 @@ StartupEvents.registry("block", (e) => {
             .resistance(3600000)
             .texture(`scp:block/${type}_containment_lock_block`)
             .unbreakable()
-            
+
         e.create(`scp:${type}_containment_lock_block_1`)
             .displayName(`${formatName(type)} Containment Lock`)
             .soundType("metal")
@@ -59,17 +59,39 @@ StartupEvents.registry("block", (e) => {
         .unbreakable()
         .defaultCutout()
         .blockEntity((blockInfo) => {
-            blockInfo.initialData({ tier: "verdant", boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: 0, state: "", researchLevel: 0, researchTime: 0 });
+            blockInfo.initialData({ tier: "verdant", teamName: "NONE", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: 0, state: "", researchLevel: 0, researchTime: 0 });
             blockInfo.serverTicking()
             blockInfo.tickFrequency(20)
         });
 
+    e.create("scp:shelter")
+        .resistance(3600000)
+        .unbreakable()
+        .defaultCutout()
+        .texture(`minecraft:block/bedrock`)
+        .blockEntity((blockInfo) => {
+            blockInfo.initialData({ enterTime: 0 });
+            blockInfo.serverTicking()
+            blockInfo.tickFrequency(20)
+        });
+
+    e.create("scp:living_room")
+        .resistance(3600000)
+        .unbreakable()
+        .defaultCutout()
+        .texture(`minecraft:block/spruce_planks`)
+        .blockEntity((blockInfo) => {
+            blockInfo.initialData({ enterTime: 0 });
+            blockInfo.serverTicking()
+            blockInfo.tickFrequency(20)
+        });
     e.create("scp:rubber_duck", "cardinal")
         .soundType("shroomlight")
         .parentModel("whimsy_deco:block/rubber_duck")
         .defaultCutout()
         .box(1, 0, 1, 15, 16, 15)
         .blockEntity((blockInfo) => {
+            blockInfo.initialData({ teamName: "NONE" });
             blockInfo.serverTicking()
             blockInfo.tickFrequency(1000)
         });
@@ -80,6 +102,7 @@ StartupEvents.registry("block", (e) => {
         .defaultCutout()
         .box(1, 0, 1, 15, 16, 15)
         .blockEntity((blockInfo) => {
+            blockInfo.initialData({ teamName: "NONE" });
             blockInfo.serverTicking()
             blockInfo.tickFrequency(100)
         });
