@@ -189,6 +189,14 @@
     "curseForgeHash": 1870004536,
     "modrinthHash": "e8550e1bae25f437fdaa142877027a0b783c074b"
   },
+  "csr-neoforge-1.21.1-1.0.3.jar": {
+    "jarName": "csr-neoforge-1.21.1-1.0.3.jar",
+    "modId": "csr",
+    "name": "Clay Soldiers Remake",
+    "version": "1.0.3",
+    "curseForgeHash": 2994713336,
+    "modrinthHash": "6c8cb5e077cd76368364f2822c325a4d87781ced"
+  },
   "CTM-1.21-1.2.1+3.jar": {
     "jarName": "CTM-1.21-1.2.1+3.jar",
     "modId": "ctm",
@@ -332,14 +340,6 @@
     "version": "0.13.11",
     "curseForgeHash": 1313912180,
     "modrinthHash": "e46eb138fbb13a12f37154fb4ec407d64b326475"
-  },
-  "fusion-1.3.16-neoforge-mc1.21.1.jar": {
-    "jarName": "fusion-1.3.16-neoforge-mc1.21.1.jar",
-    "modId": "fusion",
-    "name": "Fusion",
-    "version": "1.3.16",
-    "curseForgeHash": 1385959600,
-    "modrinthHash": "c3cd7c2718583aa5a12e8502c6b92e050bad0c19"
   },
   "GatewaysToEternity-1.21.1-5.1.0.jar": {
     "jarName": "GatewaysToEternity-1.21.1-5.1.0.jar",
@@ -761,6 +761,14 @@
     "version": "1.3-1.21.1",
     "curseForgeHash": 1843361633,
     "modrinthHash": "c04c476db9c7bc8952feba19e3cc3a6919ea0162"
+  },
+  "worldedit-mod-7.3.8.jar": {
+    "jarName": "worldedit-mod-7.3.8.jar",
+    "modId": "worldedit",
+    "name": "WorldEdit",
+    "version": "7.3.8+6939-7d32b45",
+    "curseForgeHash": 683807693,
+    "modrinthHash": "924fe181a29bd66be6783f6d589968ab0ee02250"
   },
   "xaerominimap-neoforge-1.21.1-26.6.0.jar": {
     "jarName": "xaerominimap-neoforge-1.21.1-26.6.0.jar",

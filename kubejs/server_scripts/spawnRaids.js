@@ -1,6 +1,7 @@
 
 let getRaidFromTier = (player, server) => {
     let teamName = global.getPlayerTeamName(player.level, player);
+    if (server.persistentData[teamName] == null) server.persistentData[teamName] = {};
     if (!server.persistentData[teamName].raidCount) server.persistentData[teamName].raidCount = 1;
     let raidNum = Number(server.persistentData[teamName].getInt("raidCount"));
     server.persistentData[teamName].raidCount = raidNum + 1;
@@ -13,7 +14,7 @@ let getRaidFromTier = (player, server) => {
 }
 
 ServerEvents.tick((e) => {
-    const {  server } = e;
+    const { server } = e;
     if (server.players.length == 0) return;
     if (server.tickCount % 200 != 0) return;
     let level = server.players[0].level;
@@ -26,10 +27,32 @@ ServerEvents.tick((e) => {
         server.persistentData.dayLastWarned = day;
     }
     if (day > 5 && day % 10 == 0 && global.compareDay(day, server.persistentData.getInt("dayLastRaided"), 1)) {
-        let raid = getRaidFromTier(server.players[0], server);
-        server.runCommandSilent(`open_gateway ${server.players[0].username} gateways:${raid}`)
-        if (server.players.length >= 3) {
-            server.runCommandSilent(`open_gateway ${server.players[1].username} gateways:${raid}`)
+        let spawnedRaid = false;
+        Object.keys(server.persistentData).forEach((key) => {
+            if (key.known_abnormalities != null) {
+                let team = global.getTeamFromName(level, key);
+                if (team) {
+                    let summoned = 0;
+                    team.getPlayers().forEach((uuid) => {
+                        if (summoned < Math.floor(team.getPlayers() / 3)) {
+                            let player = server.getPlayer(uuid);
+                            if (player) {
+                                let raid = getRaidFromTier(player, server);
+                                server.runCommandSilent(`open_gateway ${player.username} gateways:${raid}`)
+                                spawnedRaid = true;
+                                summoned++;
+                            }
+                        }
+                    });
+                }
+            }
+        });
+        if (!spawnedRaid) {
+            let raid = getRaidFromTier(server.players[0], server);
+            server.runCommandSilent(`open_gateway ${server.players[0].username} gateways:${raid}`)
+            if (server.players.length >= 3) {
+                server.runCommandSilent(`open_gateway ${server.players[1].username} gateways:${raid}`)
+            }
         }
         server.persistentData.dayLastRaided = day;
     }

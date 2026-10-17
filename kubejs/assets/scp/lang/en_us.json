@@ -46,6 +46,7 @@
     "tooltip.always.scp.warehouse_expansion_card.0": "Use on a Warehouse Lock to unlock it and add a warehouse unit.",
     "tooltip.always.scp.utility_expansion_room_card.0": "Use on any type of Containment Unit Lock to unlock it and add an empty utility room.",
     "tooltip.always.scp.utility_expansion_room_card.1": "<ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Does not contain a Containment Unit.</ltcolor>",
+    "tooltip.always.scp.room_abnormality_expansion_room_card.0": "Use on any type of Containment Unit Lock to unlock it and add a room abnormality.",
 
     "tooltip.always.scguns.needle.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.scguns.needle.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence I</ltcolor>",
@@ -83,7 +84,9 @@
     "tooltip.always.scp.amber_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.scp.maroon_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.scp.indigo_research.0": "Right click a Containment Unit block to add one research point.",
-    
+    "tooltip.always.ae2.drive.0": "Comes with built-in storage cells",
+    "tooltip.always.scguns.flare_pistol.0": "Flare must not hit any blocks within a range of 10-16 to work",
+
     "tooltip.always.scp.containment_unit_signaler.0": "Reads the state of the above Containment Unit and emits a redstone signal based on it",
     "tooltip.scp.containment_unit_signaler.0": "Power map:",
     "tooltip.scp.containment_unit_signaler.1": "- BREACH = 15",
@@ -134,8 +137,8 @@
     "messages.scp.working.not_nearby": "There's no abnormalities nearby...",
 
     "messages.scp.general.threat_level_increased": "THREAT LEVEL INCREASED TO %s.",
-    "messages.scp.general.abnormality_escaped": "%s ESCAPED CONTAINMENT AT [x:%s/y:%s/z:%s]. COUNTER INCREASED BY 1.",
-    "messages.scp.general.abnormality_escaped_counter": "ABNORMALITY %s HAS EXPIRED AT [x:%s/y:%s/z:%s].",
+    "messages.scp.general.abnormality_escaped": "%s ESCAPED CONTAINMENT AT [x:%s/y:%s/z:%s].",
+    "messages.scp.general.abnormality_escaped_counter": "ABNORMALITY %s HAS EXPIRED AT [x:%s/y:%s/z:%s]. COUNTER INCREASED BY 1.",
     "messages.scp.general.abnormality_expired": "ABNORMALITY %s HAS EXPIRED AT [x:%s/y:%s/z:%s].",
 
     "messages.scp.containment_unit.unleashing_abnoramlity": "Unleashing Abnormality: %s in 10 seconds...",

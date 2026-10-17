@@ -429,6 +429,30 @@
 		{
 			"type": "entry",
 			"id": "companions:holy_porcelain_pottery"
+		},
+		{
+			"type": "entry",
+			"id": "csr:clay_soldier"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:moroccan_sofa"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:sulfur_vent"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:geothermal_vent"
+		},
+		{
+			"type": "entry",
+			"id": "supplementaries:safe"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:chiseled_tuff_bricks"
 		}
 	]
 }

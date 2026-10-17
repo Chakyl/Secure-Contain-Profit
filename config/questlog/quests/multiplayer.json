@@ -1,0 +1,17 @@
+{
+  "title": "Multiplayer",
+  "description": "Secure Contain Profit's multiplayer is in beta! \n\nYou can now create a team using the \".\" key or /skyblock create. You can also join and visit other facilities using the GUI or /skyblock commands.\n\nIf you're running a larger multiplayer server, it's a good idea to prevent players from using the main starting facility.\n\nQuest sharing is coming soon as well.",
+  "icon": {
+    "item": "companions:empty_puppet_block"
+  },
+  "chapter": "main",
+  "sort_order": 10,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [],
+  "rewards": []
+}

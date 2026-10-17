@@ -206,11 +206,18 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     if (abnormalityUUID == "") return;
     let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
     let server = level.getServer();
-    // TODO: Make abnormality name show in messages
     // Daily logic
     let day = global.getDay(level);
     let state = String(nbt.data.getString("state")).trim();
     let teamName = String(nbt.data.getString("teamName")).trim();
+    if (teamName == null || teamName == "") {
+        nbt.merge({
+            data: {
+                teamName: "NONE"
+            },
+        });
+        global.setBlockEntityData(block, nbt)
+    } 
     if (global.compareDay(day, nbt.data.getInt("dayLastTriggered"), 1) && state != "EXPIRED") {
         let abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
         let increaseCounter = false;
@@ -361,7 +368,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         }
     }
     // Escaping
-    if (tick % 600 == 0 && state != "BREACH") {
+    if (tick % 600 == 0 && state != "BREACH" && state != "EXPIRED") {
         centerRadiusPos = block.getPos().offset(0, radius, 0)
         let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos.below(), radius + 1, abnormalityUUID);
         if (checkedAbs.length == 0) {

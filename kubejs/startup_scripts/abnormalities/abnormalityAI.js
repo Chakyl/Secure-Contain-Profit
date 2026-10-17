@@ -189,7 +189,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             if (scanBlock.id == "scp:containment_unit") {
                 let nbt = scanBlock.getEntityData();
                 if (!(!nbt || !nbt.data)) {
-                    if (target.uuid.toString() == nbt.data.abnormalityUUID) {
+                    if (nbt.data.abnormalityUUID != "") {
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                         return;
                     }

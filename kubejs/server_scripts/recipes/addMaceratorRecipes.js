@@ -30,21 +30,24 @@ ServerEvents.recipes((e) => {
             }
         });
     };
+    const bulkMacerate = (ingredient, output, time) => {
+        let ingredients = [];
+        for (let index = 1; index <= 4; index++) {
+            ingredients.push(ingredient);
+            macerate(ingredients, output, index, time * index);
+        }
+    }
 
     macerate([{ item: "minecraft:redstone" }, { item: "scguns:niter_dust" }, { item: "minecraft:coal" }], "minecraft:glowstone_dust", 4);
-
     macerate([{ item: "create:brass_ingot" }, { item: "scguns:diamond_steel_blend" }, { item: "scguns:sheol" }], "scguns:treated_brass_ingot", 1);
+    macerate([{ item: "scguns:treated_iron_ingot" }, { item: 'minecraft:lapis_lazuli' }, { item: 'minecraft:diamond' }], "scguns:diamond_steel_blend", 1);
+    macerate([{ item: 'scguns:anthralite_ingot' }, { item: 'minecraft:iron_ingot' }, { item: 'minecraft:coal' }, { item: 'minecraft:coal' }], "scguns:treated_iron_ingot", 2);
 
-    let ingredients = [];
-    for (let index = 1; index <= 4; index++) {
-        ingredients.push({ tag: "scguns:enchantable/gun" });
-        macerate(ingredients, "minecraft:raw_iron", index, 1000 * index);
-    }
-    ingredients = [];
-    for (let index = 1; index <= 4; index++) {
-        ingredients.push({ tag: "industrialhellscape:rockrete_smeltable_item" });
-        macerate(ingredients, "minecraft:cobblestone", index, 20 * index);
-    }
+    bulkMacerate({ tag: "scguns:enchantable/gun" }, "minecraft:raw_iron", 1000);
+    bulkMacerate({ tag: "industrialhellscape:rockrete_smeltable_item" }, "minecraft:cobblestone",20);
+    bulkMacerate({ item: "minecraft:cobbled_deepslate" }, "minecraft:tuff",500);
+    bulkMacerate({ item: "minecraft:deepslate" }, "minecraft:tuff", 500);
+    bulkMacerate({ item: "minecraft:tuff" }, "scguns:anthralite_nugget",  250);
 
     macerate('scguns:small_copper_casing', 'create:copper_nugget', 1);
     macerate('scguns:medium_copper_casing', 'create:copper_nugget', 2);

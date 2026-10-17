@@ -64,6 +64,27 @@ StartupEvents.registry("block", (e) => {
             blockInfo.tickFrequency(20)
         });
 
+    e.create("scp:shelter")
+        .resistance(3600000)
+        .unbreakable()
+        .defaultCutout()
+        .texture(`minecraft:block/bedrock`)
+        .blockEntity((blockInfo) => {
+            blockInfo.initialData({ enterTime: 0 });
+            blockInfo.serverTicking()
+            blockInfo.tickFrequency(20)
+        });
+
+    e.create("scp:living_room")
+        .resistance(3600000)
+        .unbreakable()
+        .defaultCutout()
+        .texture(`minecraft:block/spruce_planks`)
+        .blockEntity((blockInfo) => {
+            blockInfo.initialData({ enterTime: 0 });
+            blockInfo.serverTicking()
+            blockInfo.tickFrequency(20)
+        });
     e.create("scp:rubber_duck", "cardinal")
         .soundType("shroomlight")
         .parentModel("whimsy_deco:block/rubber_duck")

@@ -37,7 +37,7 @@ let containmentDirectionMap = new Map([
 ]);
 let containmentDirection1Map = new Map([
     ['north', { rotation: "180", x: -7, z: -1, mirror: "front_back" }],
-    ['south', { rotation: "180",x: 7, z: 1, mirror: "left_right" }],
+    ['south', { rotation: "180", x: 7, z: 1, mirror: "left_right" }],
     ['east', { rotation: "clockwise_90", x: 1, z: -7, mirror: "left_right" }],
     ['west', { rotation: "clockwise_90", x: -1, z: 7, mirror: "front_back" }],
     ['down', { x: -17, z: -16 }],
@@ -83,6 +83,7 @@ let structureMap = new Map([
     ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"], block: "" }],
+    ['scp:room_abnormality_expansion_room_card', { structurePool: ["room_abnormality_clay", "room_abnormality_niter", "room_abnormality_sulfur", "room_abnormality_shelter", "room_abnormality_womb"], block: "" }],
     ['scp:warehouse_expansion_card', { structurePool: [], block: 'scp:warehouse_lock_block' }]
 ])
 let clearBlocks = (level, block) => {
@@ -99,6 +100,11 @@ let clearBlocks = (level, block) => {
         }
     }
 }
+let fieldGuideMap = new Map([
+    ["room_abnormality_clay", `minecraft:whimsy_deco/chiseled_tuff_bricks`],
+    ["room_abnormality_sulfur", `block:scguns/sulfur_vent`],
+    ["room_abnormality_niter", `block:scguns/geothermal_vent`]
+])
 BlockEvents.rightClicked([
     'scp:warehouse_lock_block',
     'scp:verdant_hallway_lock_block',
@@ -140,7 +146,7 @@ BlockEvents.rightClicked([
             directionData = containmentDirectionMap.get(`${foundDirection.direction}`)
         }
     }
-    if (structureData.structurePool == null || !((isContainment && item.id.includes("utility")) || validBlock)) {
+    if (structureData.structurePool == null || !((isContainment && item.id.includes("utility") || isContainment && item.id.includes("room_abnormality")) || validBlock)) {
         player.tell("§7You need the correct §6Expansion Card§7 to unlock this")
         return;
     }
@@ -150,6 +156,15 @@ BlockEvents.rightClicked([
     if (block.id == 'scp:verdant_hallway_lock_block' && item.id == 'scp:verdant_hallway_expansion_card' && !player.stages.has("verdant_first_hall")) {
         structure = "verdant_hallways_first";
         player.stages.add("verdant_first_hall");
+    }
+    if (item.id == 'scp:room_abnormality_expansion_room_card') {
+        let teamName = global.getPlayerTeamName(level, player);
+        structure = global.rollArray(global.filterKnownAbnormalities(server, teamName, structureData.structurePool));
+        global.addKnownAbnormalities(server, teamName, structure);
+        let fieldGuidePage = fieldGuideMap.get(`${structure}`);
+        if (fieldGuidePage != null) {
+            FieldGuide.unlock(player, fieldGuidePage);
+        }
     }
     if (foundDirection.direction == "down" && item.id.includes("hallway")) {
         const match = block.id.match(/:(.*?)_/);

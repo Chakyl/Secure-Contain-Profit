@@ -59,7 +59,11 @@ global.paintToTeam = (server, level, teamName, text, color) => {
             }
         });
     } else {
-        global.paintToServer(server, "ERROR: TEAM NAME NOT FOUND! TELL CHAKYL!", '#FF5555');
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                global.paintAlert(server, player, text, color);
+            }
+        });
     }
 }
 
@@ -83,12 +87,16 @@ global.tellTeam = (server, level, teamName, text) => {
             }
         });
     } else {
-        server.tell("ERROR: TEAM NAME NOT FOUND! TELL CHAKYL!");
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                player.tell(text)
+            }
+        });
     }
 }
 
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
-    let breachMessage = Text.translatable(abnormalityName, block.x, block.y, block.z);
+    let breachMessage = Text.translatable("messages.scp.containment_unit.breach", abnormalityName, block.x, block.y, block.z);
     let teamName = String(nbt.data.getString("teamName")).trim();
     global.tellTeam(server, level, teamName, breachMessage.darkRed())
     global.paintToTeam(server, level, teamName, breachMessage, "#AA0000");
@@ -132,7 +140,8 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
             global.breachAbnormality(server, level, block, foundEntity, abnormalityName, nbt);
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
-            global.paintToServer(server, `${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`, '#FF5555');
+            let teamName = String(nbt.data.getString("teamName")).trim();
+            global.paintToTeam(server, level, teamName, `${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`, '#FF5555');
             nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
             global.setBlockEntityData(block, nbt);
         }
