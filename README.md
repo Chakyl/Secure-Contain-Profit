@@ -15,7 +15,7 @@ Secure Contain Profit  is an incremental economy pack inspired by the worlds and
 
 ## Contribution Guide
 - Pull requests (PR) can be made in the [secure-contain-profit repo]([https://github.com/Chakyl/society-sunlit-valley](https://github.com/Chakyl/Secure-Contain-Profit))
-- PRs should target the next update branch, if it exists not `master`. Check in with Chakyl if you don't know which branch is next.
+- PRs should target the next update branch, if it exists not `main`. Check in with Chakyl if you don't know which branch is next.
 - PRs should include a list of changelog items in a similar format as [here](https://github.com/Chakyl/society-sunlit-valley/blob/master/config/fancymenu/assets/changelog.markdown?plain=1)
 ## Easily accepted contributions
 - **Documentation**: Quest related work, tips, new tooltips, etc. A large exception is any information that's intended to be hidden (ask if you don't know!)
