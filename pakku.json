@@ -1,6 +1,6 @@
 {
     "name": "Secure Contain Profit",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "overrides": [
         "config",
         "kubejs"
@@ -146,6 +146,9 @@
             "side": "BOTH"
         },
         "skillexpnotifier": {
+            "side": "BOTH"
+        },
+        "geckolib": {
             "side": "BOTH"
         }
     },

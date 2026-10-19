@@ -1,4 +1,4 @@
-100 possible biomes found:
+95 possible biomes found:
 - "minecraft:badlands"
 - "minecraft:bamboo_jungle"
 - "minecraft:basalt_deltas"
@@ -50,7 +50,6 @@
 - "minecraft:lush_caves"
 - "minecraft:mangrove_swamp"
 - "minecraft:meadow"
-- "halcyon:memorial"
 - "antarchy:moleworm_caves"
 - "minecraft:mushroom_fields"
 - "antarchy:nadir_forest"
@@ -66,10 +65,6 @@
 - "minecraft:plains"
 - "minecraft:river"
 - "antarchy:rolly_caves"
-- "halcyon:sanctuary/astral_caverns"
-- "halcyon:sanctuary/pearlescent_sea"
-- "halcyon:sanctuary/sanctuary_forest"
-- "halcyon:sanctuary/spire_fields"
 - "minecraft:savanna"
 - "minecraft:savanna_plateau"
 - "minecraft:small_end_islands"

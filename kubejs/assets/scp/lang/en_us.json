@@ -138,7 +138,7 @@
 
     "messages.scp.general.threat_level_increased": "THREAT LEVEL INCREASED TO %s.",
     "messages.scp.general.abnormality_escaped": "%s ESCAPED CONTAINMENT AT [x:%s/y:%s/z:%s].",
-    "messages.scp.general.abnormality_escaped_counter": "ABNORMALITY %s HAS EXPIRED AT [x:%s/y:%s/z:%s]. COUNTER INCREASED BY 1.",
+    "messages.scp.general.abnormality_escaped_counter": "%s ESCAPED CONTAINMENT AT  [x:%s/y:%s/z:%s]. COUNTER INCREASED BY 1.",
     "messages.scp.general.abnormality_expired": "ABNORMALITY %s HAS EXPIRED AT [x:%s/y:%s/z:%s].",
 
     "messages.scp.containment_unit.unleashing_abnoramlity": "Unleashing Abnormality: %s in 10 seconds...",
@@ -147,7 +147,7 @@
     "messages.scp.containment_unit.abnormality_calmed": "ABNORMALITY CALMED.",
     "messages.scp.containment_unit.heart_mismatch": "THIS ABNORMALITY HEART DOES NOT MATCH THIS CONTAINMENT UNIT.",
     "messages.scp.containment_unit.heart_occupied": "THIS CONTAINMENT UNIT HAS ITS ABNORMALITY ALREADY.",
-    "messages.scp.containment_unit.not_close_enough": "This only works on EXPIRED containment units.",
+    "messages.scp.containment_unit.not_close_enough": "You're not close enough to the Containment Unit.",
     "messages.scp.containment_unit.max_research": "There's nothing more to know about this abnoramlity.",
     "messages.scp.containment_unit.research_increased": "ABNORMALITY RESEARCH LEVEL INCREASED BY 1.",
     "messages.scp.containment_unit.research_missing": "FAILED TO APPLY RESEARCH! ABNORMALITY MISSING!",

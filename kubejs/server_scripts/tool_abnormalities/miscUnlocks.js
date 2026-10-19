@@ -20,3 +20,10 @@ ItemEvents.entityInteracted((e) => {
     if (item.id != 'companions:holy_porcelain_pottery') return;
     FieldGuide.unlock(e.player, `item:companions/holy_porcelain_pottery`);
 });
+
+ItemEvents.entityInteracted((e) => {
+    const { target, hand} = e;
+    if (hand !== "MAIN_HAND") return;
+    if (target.type != 'csr:clay_soldier') return;
+    FieldGuide.unlock(e.player, `item:csr/clay_soldier`);
+});

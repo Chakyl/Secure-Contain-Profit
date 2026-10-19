@@ -18,11 +18,11 @@ global.paintAlert = (server, player, text, color) => {
     }
     activeSlots.push(slotNum);
     let notifKey = `${uuid}_notif_${global.notifCounter++}`;
-
+    let translationText = text.getString();
     let paintAdd = {};
     paintAdd[notifKey] = {
         type: 'text',
-        text: `${text.getString()}`,
+        text: translationText,
         alignX: 'left',
         x: '2',
         y: `${34 + (slotNum * 8)} + sin(time * 5)`,

@@ -2805,7 +2805,7 @@
         {
             "pakku_id": "hopYaPWuN0N1TtgP",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "curseforge": "geckolib",
                 "modrinth": "geckolib"
@@ -5618,31 +5618,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "society_trading-1.2.11-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8796/330/society_trading-1.2.11-1.21.1.jar",
-                    "id": "8796330",
-                    "parent_id": "1347329",
-                    "hashes": {
-                        "sha1": "1e998d40e8b823f3c7554a237b76d7c1d735cfac",
-                        "md5": "5678e8bae61ff7f44f3c0338015e383a"
-                    },
-                    "required_dependencies": [
-                        "283644"
-                    ],
-                    "size": 219393,
-                    "date_published": "2026-09-03T00:05:19.650Z"
-                },
-                {
                     "type": "modrinth",
-                    "file_name": "society_trading-1.2.11-1.21.1.jar",
+                    "file_name": "society_trading-1.2.12-1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5650,18 +5627,41 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/rFRQxRZI/versions/3Gf6gyTx/society_trading-1.2.11-1.21.1.jar",
-                    "id": "3Gf6gyTx",
+                    "url": "https://cdn.modrinth.com/data/rFRQxRZI/versions/HU3fexng/society_trading-1.2.12-1.21.1.jar",
+                    "id": "HU3fexng",
                     "parent_id": "rFRQxRZI",
                     "hashes": {
-                        "sha512": "a7923d04c15be27fe96c5e9d18daa85cd90a5d549a81da869f496e2e3b681a0eb23f52021024c618f03b9e9cf5ba70db22985fbf58c53f40026c3b3ad0d9e06e",
-                        "sha1": "1e998d40e8b823f3c7554a237b76d7c1d735cfac"
+                        "sha512": "6129e2c8d26402a469c8468f5b3ab0202b814f86fb58a90bc82ce5c31cb87a37c3427539157d57d3f07fccb41a2513028791454d83ead08427b73e5e7ba921ea",
+                        "sha1": "5eeac49d71565ce3aab8619a318f8edb77430b5e"
                     },
                     "required_dependencies": [
                         "tCkE8p2N"
                     ],
-                    "size": 219393,
-                    "date_published": "2026-09-03T00:05:44.365119Z"
+                    "size": 220396,
+                    "date_published": "2026-10-19T00:43:43.176276Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "society_trading-1.2.12-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9251/325/society_trading-1.2.12-1.21.1.jar",
+                    "id": "9251325",
+                    "parent_id": "1347329",
+                    "hashes": {
+                        "sha1": "5eeac49d71565ce3aab8619a318f8edb77430b5e",
+                        "md5": "e9c8040793a3cecaf373ad2f4e469de9"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 220396,
+                    "date_published": "2026-10-19T00:44:14.723Z"
                 }
             ]
         },

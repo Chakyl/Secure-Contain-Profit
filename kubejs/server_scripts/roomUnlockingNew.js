@@ -101,7 +101,7 @@ let clearBlocks = (level, block) => {
     }
 }
 let fieldGuideMap = new Map([
-    ["room_abnormality_clay", `minecraft:whimsy_deco/chiseled_tuff_bricks`],
+    ["room_abnormality_clay", `minecraft:minecraft/chiseled_tuff_bricks`],
     ["room_abnormality_sulfur", `block:scguns/sulfur_vent`],
     ["room_abnormality_niter", `block:scguns/geothermal_vent`]
 ])
