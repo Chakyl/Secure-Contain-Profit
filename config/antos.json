@@ -1,7 +1,7 @@
 {
+  "configVersion": 2,
   "unlockAllArchiveEntries": false,
   "unlockAllGameEntries": false,
-  "inventoryComputerButton": false,
   "desktopApps": {
     "archive": true,
     "files": true,
@@ -15,10 +15,8 @@
     "trash": true,
     "tasks": false
   },
-  "lastAnternetUsername": "yeet",
-  "initialBootSeen": true,
-  "completedComputerTours": [
-    "e00389bb-aee3-4cb0-948b-79c0af6db8a0"
-  ],
-  "taskGroupCollapsed": {}
+  "client": {
+    "inventoryComputerButton": false,
+    "defaultPreferences": {}
+  }
 }

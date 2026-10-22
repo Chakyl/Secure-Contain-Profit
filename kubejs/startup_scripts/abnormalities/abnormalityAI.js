@@ -11,6 +11,17 @@ const setEffectByTrait = (entity, traits) => {
     if (traits.includes("SULFUR")) {
         entity.potionEffects.add('scguns:sulfur_poisoning', 400, 1)
     }
+    if (traits.includes("PATHETIC")) {
+        entity.potionEffects.add('antarchy:royal_vitality_penalty', 400, 1)
+    }
+    if (traits.includes("LOST")) {
+        entity.potionEffects.add('xaerominimap:no_minimap', 400, 1)
+        entity.potionEffects.add('xaeroworldmap:no_world_map', 400, 1)
+    }
+    if (traits.includes("SHRINKING")) {
+        entity.potionEffects.add('antarchy:shrinking', 400, 2)
+        entity.potionEffects.add('minecraft:slowness', 400, 2)
+    }
     if (Math.random() < 0.15 && traits.includes("SLEEPING")) {
         entity.potionEffects.add('creaturefeature:sleepy', 100, 1)
     }
@@ -160,7 +171,9 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
-    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("POISON") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
+    const debuffs = ["DARKNESS", "BLIND", "PATHETIC", "POISON", "SULFUR", "SLEEPING", "SHRINKING", "LOST"];
+
+    if (debuffs.some(type => breachTypes.includes(type))) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);

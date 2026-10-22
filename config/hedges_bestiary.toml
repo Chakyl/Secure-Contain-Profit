@@ -1,0 +1,19 @@
+["Hedge's Bestiary"]
+	#Disables ALL Hedge's Bestiary pets from being tamed. DEFAULT: false
+	"Disable all taming" = false
+	#Whether Hedge's Bestiary pets must be tame in order to breed. Ignored by mobs configured to be untamable. DEFAULT: true
+	"Only breed when tamed" = true
+	#Whether gurks can be tamed or not. DEFAULT: true
+	"Gurk taming enabled" = true
+	#Whether burodons can be tamed or not. DEFAULT: true
+	"Burodon taming enabled" = true
+	#Whether zappets can be tamed or not. DEFAULT: true
+	"Zappet taming enabled" = true
+	#Whether plombos can be tamed or not. DEFAULT: true
+	"Plombo taming enabled" = true
+	#Whether dawn doves can be tamed or not. DEFAULT: true
+	"Dawn Dove taming enabled" = true
+	#Whether murks can be tamed or not. DEFAULT: true
+	"Murk taming enabled" = true
+	#Whether fercetus can be tamed or not. DEFAULT: true
+	"Ferocetus taming enabled" = true

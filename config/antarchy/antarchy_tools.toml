@@ -693,11 +693,6 @@
 	# Range: 0.001 ~ 64.0
 	growthPotionDelta = 0.5
 
-[gravity]
-	#If true, projectiles fired by inverted players keep their inverted launch and gravity.
-	#Affects bows, crossbows, throwables, and firework boosts.
-	invertProjectilesFromInvertedPlayers = false
-
 [gravityGun]
 	#Master toggle for the Gravity Gun.
 	enabled = true

@@ -140,6 +140,7 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
             global.breachAbnormality(server, level, block, foundEntity, abnormalityName, nbt);
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
+            // TODO: Translation string
             let teamName = String(nbt.data.getString("teamName")).trim();
             global.paintToTeam(server, level, teamName, `${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`, '#FF5555');
             nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
