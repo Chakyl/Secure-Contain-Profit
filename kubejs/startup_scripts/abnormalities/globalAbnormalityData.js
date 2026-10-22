@@ -112,7 +112,6 @@ global.ABNORMALITIES = new Map([
     ["antarchy:stink_bug", { class: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
     ["antarchy:brown_ant", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // Ravager
-    
     ["minecraft:ravager", { class: "amber", preferences: { violence: 1, insight: 5, harmony: 0 }, name: "Decked Out", counter: 1, breachTypes: ["ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],,
     ["hedges_bestiary:burodon", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Wyclef Jean", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
     ["hedges_bestiary:plombo", { class: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Problem", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
