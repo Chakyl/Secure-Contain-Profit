@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.pig.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 0,
+		"insight": 2,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"TELEPORT",
+		"DECOUNT"
+	],
+	"evolutions": [
+		"minecraft:piglin",
+		"minecraft:creeper"
+	]
+}

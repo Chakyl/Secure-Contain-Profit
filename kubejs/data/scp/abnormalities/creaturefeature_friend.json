@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.friend.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 5,
+		"insight": 3,
+		"harmony": 2
+	},
+	"counter": 8,
+	"breach_types": [
+		"CHAOS",
+		"NUKE",
+		"STEAMROLLER",
+		"SUMMON"
+	],
+	"evolutions": []
+}

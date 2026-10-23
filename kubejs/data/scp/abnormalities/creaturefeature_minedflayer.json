@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.minedflayer.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 5,
+		"insight": 1,
+		"harmony": 2
+	},
+	"counter": 10,
+	"breach_types": [
+		"NUKE"
+	],
+	"evolutions": []
+}

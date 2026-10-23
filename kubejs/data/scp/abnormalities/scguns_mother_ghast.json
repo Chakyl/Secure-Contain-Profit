@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.scguns.mother_ghast.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 2,
+		"insight": 3,
+		"harmony": 2
+	},
+	"counter": 8,
+	"breach_types": [
+		"NUKE",
+		"CHAOS",
+		"BEGONE"
+	],
+	"evolutions": []
+}

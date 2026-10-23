@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.frog.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 3,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 8,
+	"breach_types": [
+		"NOTHING"
+	],
+	"evolutions": [
+		"companions:cornelius"
+	]
+}

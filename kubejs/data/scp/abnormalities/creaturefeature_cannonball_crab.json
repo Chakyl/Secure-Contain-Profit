@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.cannonball_crab.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 2,
+		"harmony": 3
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"TELEPORT",
+		"DARKNESS",
+		"DISSOLVE",
+		"SAP"
+	],
+	"evolutions": []
+}

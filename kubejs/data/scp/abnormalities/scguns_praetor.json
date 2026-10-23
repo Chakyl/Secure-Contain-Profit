@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.scguns.praetor.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 1,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 6,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"CHAOS"
+	],
+	"evolutions": []
+}

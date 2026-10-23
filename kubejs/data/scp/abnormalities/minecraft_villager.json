@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.villager.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 5,
+		"insight": -1,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"CHAOS"
+	],
+	"evolutions": [
+		"minecraft:zombie_villager",
+		"minecraft:zombie"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.dreamweaver.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 3,
+		"harmony": 0
+	},
+	"counter": 10,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST",
+		"SLEEPING"
+	],
+	"evolutions": []
+}

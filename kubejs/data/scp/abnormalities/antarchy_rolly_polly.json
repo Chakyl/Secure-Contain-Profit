@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.rolly_polly.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 1,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 5,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"SAP"
+	],
+	"evolutions": [
+		"antarchy:red_ant"
+	]
+}

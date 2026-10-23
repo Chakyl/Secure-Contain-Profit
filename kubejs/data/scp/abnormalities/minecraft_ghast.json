@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.ghast.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 1,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 8,
+	"breach_types": [
+		"NUKE"
+	],
+	"evolutions": [
+		"scguns:mother_ghast"
+	]
+}

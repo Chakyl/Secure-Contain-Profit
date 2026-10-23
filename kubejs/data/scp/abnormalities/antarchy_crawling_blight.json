@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.crawling_blight.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 1,
+		"harmony": 4
+	},
+	"counter": 3,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:skulking_fright"
+	]
+}

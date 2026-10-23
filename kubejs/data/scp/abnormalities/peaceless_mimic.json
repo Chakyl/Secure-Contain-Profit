@@ -1,0 +1,22 @@
+{
+	"name": {
+		"translate": "abnormality.peaceless.mimic.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 3
+	},
+	"counter": 3,
+	"breach_types": [
+		"SUCK",
+		"DARKNESS",
+		"DECOUNT",
+		"SAP",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"creaturefeature:cannonball_crab"
+	]
+}

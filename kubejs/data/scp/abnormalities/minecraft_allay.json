@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.allay.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 4,
+		"harmony": 0
+	},
+	"counter": 10,
+	"breach_types": [
+		"CHAOS",
+		"TELEPORT"
+	],
+	"evolutions": [
+		"companions:golden_allay"
+	]
+}

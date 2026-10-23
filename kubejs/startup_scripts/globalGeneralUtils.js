@@ -87,7 +87,7 @@ global.increaseStage = (input, count) => {
 
 global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${global.getSCPID(id)}`
 
-global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName(String(data.getString("tier")).trim(), String(data.getString("abnormalityType")).trim())}: ${Number(data.getInt("researchLevel")) >= 2 ? `${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).name}` : fallback}`
+global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName(String(data.getString("tier")).trim(), String(data.getString("abnormalityType")).trim())}: ${Number(data.getInt("researchLevel")) >= 2 ? `${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).name().getString()}` : fallback}`
 
 global.getPossibleAbnormalities = (level, pos, radius, uuid) => level.getEntitiesWithin(AABB.ofBlock(level.getBlock(pos)).inflate(radius)).filter((entity) => entity.uuid.toString() == uuid || (entity.persistentData.respawned != null && entity.persistentData.getBoolean("respawned")));
 

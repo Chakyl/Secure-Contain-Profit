@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.spit_bug.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 4,
+		"harmony": 2
+	},
+	"counter": 5,
+	"breach_types": [
+		"POISON",
+		"ESCAPEARTIST",
+		"DISSOLVE"
+	],
+	"evolutions": [
+		"opposing_force:bewilder"
+	]
+}

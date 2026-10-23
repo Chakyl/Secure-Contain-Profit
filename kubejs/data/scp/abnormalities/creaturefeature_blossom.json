@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.blossom.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 3,
+		"insight": 3,
+		"harmony": 1
+	},
+	"counter": 4,
+	"breach_types": [
+		"SAP",
+		"STEAMROLLER"
+	],
+	"evolutions": []
+}

@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.vertigo.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": -1,
+		"insight": 3,
+		"harmony": 1
+	},
+	"counter": 8,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"SUCK",
+		"SAP"
+	],
+	"evolutions": []
+}

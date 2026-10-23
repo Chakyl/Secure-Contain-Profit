@@ -120,13 +120,23 @@ const getResearchBuff = (researchLevel) => {
             return 0;
     }
 }
+
+const getPrefNum = (preferences, workType) => {
+    switch (workType) {
+        case "insight": return preferences.insight();
+        case "violence": return preferences.violence();
+        case "harmony": return preferences.harmony();
+        default:
+            return 0;
+    }
+}
 const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
     if (!abnormalityData) return { result: "BAD", efficiency: -1 };
-    let abnormalityPref = abnormalityData.preferences[workType];
+    let abnormalityPref = getPrefNum(abnormalityData.preferences(), workType);
     if (abnormalityPref == -1) return { result: "GOOD", efficiency: 1 };
     if (abnormalityPref == 5) return { result: "BAD", efficiency: 0 };
     let eff = workLevel / (abnormalityPref + 1);
-    eff -= getTierDebuff(abnormalityData.class);
+    eff -= getTierDebuff(abnormalityData.tier());
     eff += getResearchBuff(researchLevel);
     if (eff > 0.75) return { result: "GOOD", efficiency: eff };
     if (eff < 0.25) return { result: "BAD", efficiency: eff };

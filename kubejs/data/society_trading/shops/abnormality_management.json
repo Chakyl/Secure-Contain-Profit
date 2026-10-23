@@ -13,6 +13,18 @@
 	"trades": [
 		{
 			"offer": {
+				"id": "scp:employee_pda",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "abnormality_management_scp_employee_pda"
+		},
+		{
+			"offer": {
 				"id": "scguns:needle",
 				"count": 1
 			},

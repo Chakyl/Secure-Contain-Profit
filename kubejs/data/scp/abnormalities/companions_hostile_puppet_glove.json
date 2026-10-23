@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.companions.hostile_puppet_glove.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 1,
+		"harmony": 2
+	},
+	"counter": 8,
+	"breach_types": [
+		"CHAOS"
+	],
+	"evolutions": []
+}

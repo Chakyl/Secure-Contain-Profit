@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.flytrap.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 3,
+		"harmony": 2
+	},
+	"counter": 10,
+	"breach_types": [
+		"SUPERCHAOS",
+		"SUMMON"
+	],
+	"evolutions": []
+}

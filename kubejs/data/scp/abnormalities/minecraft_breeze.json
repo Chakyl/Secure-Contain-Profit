@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.breeze.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 7,
+	"breach_types": [
+		"TELEPORT"
+	],
+	"evolutions": [
+		"creaturefeature:blitz",
+		"minecraft:blaze"
+	]
+}

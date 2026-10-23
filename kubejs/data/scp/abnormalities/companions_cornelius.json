@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.companions.cornelius.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 3,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 15,
+	"breach_types": [
+		"NOTHING"
+	],
+	"evolutions": []
+}

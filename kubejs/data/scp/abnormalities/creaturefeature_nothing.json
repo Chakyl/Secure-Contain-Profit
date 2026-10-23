@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.nothing.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 2,
+		"harmony": 0
+	},
+	"counter": 5,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST",
+		"SAP",
+		"LOST"
+	],
+	"evolutions": []
+}

@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.rabbit.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 4,
+		"harmony": 1
+	},
+	"counter": 8,
+	"breach_types": [
+		"BITE",
+		"STEAMROLLER"
+	],
+	"evolutions": [
+		"creaturefeature:friend",
+		"antarchy:easter_bunny"
+	]
+}

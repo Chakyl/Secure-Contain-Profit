@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.doctor.name"
+	},
+	"tier": "indigo",
+	"preferences": {
+		"violence": 1,
+		"insight": 0,
+		"harmony": 1
+	},
+	"counter": 666,
+	"breach_types": [
+		"GRANDIOSE",
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

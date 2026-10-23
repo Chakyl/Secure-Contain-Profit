@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.blaze.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 3,
+		"harmony": 4
+	},
+	"counter": 6,
+	"breach_types": [
+		"TELEPORT"
+	],
+	"evolutions": []
+}

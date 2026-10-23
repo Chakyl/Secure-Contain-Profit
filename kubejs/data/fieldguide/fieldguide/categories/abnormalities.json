@@ -88,6 +88,22 @@
 		},
 		{
 			"type": "entry",
+			"id": "hedges_bestiary:goph"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:furball"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:skib"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:mushy"
+		},
+		{
+			"type": "entry",
 			"id": "companions:living_candle"
 		},
 		{
@@ -140,6 +156,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "opposing_force:terror"
+		},
+		{
+			"type": "entry",
 			"id": "creaturefeature:beauty"
 		},
 		{
@@ -188,6 +208,18 @@
 		},
 		{
 			"type": "entry",
+			"id": "minecraft:ravager"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:burodon"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:plombo"
+		},
+		{
+			"type": "entry",
 			"id": "antarchy:jerry"
 		},
 		{
@@ -201,6 +233,10 @@
 		{
 			"type": "entry",
 			"id": "opposing_force:scorcher"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:fend"
 		},
 		{
 			"type": "entry",
@@ -324,6 +360,14 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:basilisk"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:gusher"
+		},
+		{
+			"type": "entry",
 			"id": "scguns:sulfurhead"
 		},
 		{
@@ -340,11 +384,43 @@
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:detritus"
+			"id": "netherman:doctor"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:azazel"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:stratoshark"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:endgel"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:witch"
+		},
+		{
+			"type": "entry",
+			"id": "companions:sacred_pontiff"
 		},
 		{
 			"type": "entry",
 			"id": "antarchy:nightmare"
+		},
+		{
+			"type": "entry",
+			"id": "creaturefeature:detritus"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:dicer"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:guardian"
 		},
 		{
 			"type": "entry",

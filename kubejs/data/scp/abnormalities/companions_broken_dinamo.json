@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.companions.broken_dinamo.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": -1,
+		"insight": -1,
+		"harmony": -1
+	},
+	"counter": 8,
+	"breach_types": [
+		"NOTHING"
+	],
+	"evolutions": []
+}

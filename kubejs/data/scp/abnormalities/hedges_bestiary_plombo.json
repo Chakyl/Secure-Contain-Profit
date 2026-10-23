@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.hedges_bestiary.plombo.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 5,
+		"harmony": 3
+	},
+	"counter": 10,
+	"breach_types": [
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

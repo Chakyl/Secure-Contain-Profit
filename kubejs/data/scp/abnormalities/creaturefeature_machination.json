@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.machination.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 0,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

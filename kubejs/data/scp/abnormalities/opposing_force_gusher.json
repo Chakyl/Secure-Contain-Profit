@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.opposing_force.gusher.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 2,
+		"harmony": 3
+	},
+	"counter": 4,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"PATHETIC"
+	],
+	"evolutions": []
+}

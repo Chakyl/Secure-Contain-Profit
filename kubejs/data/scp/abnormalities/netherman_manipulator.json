@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.manipulator.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 1,
+		"harmony": 4
+	},
+	"counter": 8,
+	"breach_types": [
+		"SLEEPING",
+		"DARKNESS"
+	],
+	"evolutions": [
+		"creaturefeature:coat_of_arms"
+	]
+}

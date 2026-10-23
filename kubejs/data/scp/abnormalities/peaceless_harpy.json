@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.peaceless.harpy.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 3,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 7,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"DECOUNT"
+	],
+	"evolutions": []
+}

@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.peaceless.shade.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 2,
+		"harmony": 0
+	},
+	"counter": 4,
+	"breach_types": [
+		"DARKNESS",
+		"LOST",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"creaturefeature:nothing"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.ouranwood_deer.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 5,
+		"insight": 3,
+		"harmony": 0
+	},
+	"counter": 9,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"CHAOS"
+	],
+	"evolutions": []
+}

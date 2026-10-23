@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.worm.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 13,
+	"breach_types": [
+		"NONE"
+	],
+	"evolutions": [
+		"antarchy:moleworm"
+	]
+}

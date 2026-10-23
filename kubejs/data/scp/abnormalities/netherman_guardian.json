@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.guardian.name"
+	},
+	"tier": "indigo",
+	"preferences": {
+		"violence": 1,
+		"insight": 3,
+		"harmony": 3
+	},
+	"counter": 4,
+	"breach_types": [
+		"GRANDIOSE",
+		"SUPERCHAOS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

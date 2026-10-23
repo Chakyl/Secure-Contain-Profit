@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.beauty.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 2,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"DISSOLVE"
+	],
+	"evolutions": [
+		"creaturefeature:fiend"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.statue_bossunit.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 4,
+		"harmony": 1
+	},
+	"counter": 3,
+	"breach_types": [
+		"CHAOS"
+	],
+	"evolutions": [
+		"netherman:gilded_golem"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.fiend.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 1,
+		"insight": 3,
+		"harmony": 4
+	},
+	"counter": 2,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"DECOUNT"
+	],
+	"evolutions": []
+}

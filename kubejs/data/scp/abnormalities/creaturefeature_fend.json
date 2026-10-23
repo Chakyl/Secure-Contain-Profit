@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.fend.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 2,
+		"insight": 5,
+		"harmony": 2
+	},
+	"counter": 2,
+	"breach_types": [
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

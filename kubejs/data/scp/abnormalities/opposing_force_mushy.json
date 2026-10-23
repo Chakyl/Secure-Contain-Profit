@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.opposing_force.mushy.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 2,
+		"insight": 2,
+		"harmony": 0
+	},
+	"counter": 5,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"SHRINKING"
+	],
+	"evolutions": []
+}

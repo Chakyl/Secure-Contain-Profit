@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.manticore.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 2,
+		"insight": 3,
+		"harmony": 3
+	},
+	"counter": 3,
+	"breach_types": [
+		"BEGONE",
+		"ESCAPEARTIST",
+		"GRANDIOSE"
+	],
+	"evolutions": []
+}

@@ -1,0 +1,21 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.nightmare.name"
+	},
+	"tier": "indigo",
+	"preferences": {
+		"violence": 3,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 8,
+	"breach_types": [
+		"GRANDIOSE",
+		"BITE",
+		"SUPERCHAOS",
+		"SLEEP",
+		"DARKNESS",
+		"NUKE"
+	],
+	"evolutions": []
+}

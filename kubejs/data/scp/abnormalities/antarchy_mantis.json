@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.mantis.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 5,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:alpha_mantis"
+	]
+}

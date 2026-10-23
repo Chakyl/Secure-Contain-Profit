@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.ravager.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 1,
+		"insight": 5,
+		"harmony": 0
+	},
+	"counter": 1,
+	"breach_types": [
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:brown_ant"
+	]
+}

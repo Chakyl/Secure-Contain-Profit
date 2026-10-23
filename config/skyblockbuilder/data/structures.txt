@@ -69,6 +69,7 @@ netherman:monument
 netherman:nether_geyser
 netherman:pipes
 netherman:trap
+opposing_force:motif_ruin
 scguns:asgharian_citadel
 scguns:asgharian_tower
 scguns:cog_chambers

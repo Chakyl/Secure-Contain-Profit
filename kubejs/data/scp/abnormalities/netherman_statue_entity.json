@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.statue_entity.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 1,
+		"harmony": 4
+	},
+	"counter": 3,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

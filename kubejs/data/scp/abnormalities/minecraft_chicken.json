@@ -1,0 +1,21 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.chicken.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": -1,
+		"insight": -1,
+		"harmony": -1
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"SAP"
+	],
+	"evolutions": [
+		"creaturefeature:stained_glass",
+		"creaturefeature:mockingbird",
+		"peaceless:harpy"
+	]
+}

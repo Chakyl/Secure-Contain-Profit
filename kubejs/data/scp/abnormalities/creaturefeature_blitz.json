@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.blitz.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 2,
+		"insight": 2,
+		"harmony": 4
+	},
+	"counter": 5,
+	"breach_types": [
+		"TELEPORT"
+	],
+	"evolutions": []
+}

@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.skulking_fright.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 1,
+		"harmony": 4
+	},
+	"counter": 3,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:termite"
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.stink_bug.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 2
+	},
+	"counter": 1,
+	"breach_types": [
+		"DARKNESS",
+		"SULFUR",
+		"DISSOLVE",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:brown_ant"
+	]
+}

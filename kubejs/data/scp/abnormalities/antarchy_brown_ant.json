@@ -1,0 +1,19 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.brown_ant.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 5,
+		"harmony": 3
+	},
+	"counter": 10,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST",
+		"BEGONE",
+		"CHAOS"
+	],
+	"evolutions": []
+}

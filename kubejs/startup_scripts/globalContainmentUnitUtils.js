@@ -108,18 +108,18 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
     });
     global.setBlockEntityData(block, nbt);
     global.updateSignalers(level, block);
-    let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes;
-    if (breachTypes.includes("GRANDIOSE")) {
+    let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes();
+    if (breachTypes.contains("GRANDIOSE")) {
         global.addThreatLevel(server, teamName, 5);
         global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed());
         global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
-    } else if (breachTypes.includes("ESCAPEARTIST")) {
+    } else if (breachTypes.contains("ESCAPEARTIST")) {
         global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);
     }
 }
 global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
     let { x, y, z } = block;
-    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter) {
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
         nbt.merge({
             data: {
                 counter: global.increaseStage(Number(nbt.data.getInt("counter")))
@@ -177,11 +177,11 @@ global.renderUiText = (player, server, messages, clearedMessages) => {
 
 let getClassHexColor = (tier) => {
     switch (tier) {
-        case "amber": return "#ca8f0b";
-        case "maroon": return "#c53c23";
-        case "indigo": return "#623f8e";
+        case "AMBER": return "#ca8f0b";
+        case "MAROON": return "#c53c23";
+        case "INDIGO": return "#623f8e";
         default:
-        case "verdant": return "#398e36";
+        case "VERDANT": return "#398e36";
     }
 }
 
@@ -194,14 +194,14 @@ global.printContainmentUnitInfo = (player, server, data) => {
         {
             containmentSummary: {
                 type: 'text',
-                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${abnomalityData.counter}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
+                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${abnomalityData.counter()}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
                 alignX: 'center',
                 alignY: 'bottom',
                 shadow: true,
                 centered: true,
                 x: 2,
                 y: -110,
-                color: getClassHexColor(abnomalityData.class)
+                color: getClassHexColor(abnomalityData.tier())
             }
         },
         global.mainUiElementIds

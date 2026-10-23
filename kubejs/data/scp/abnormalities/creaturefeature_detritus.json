@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.detritus.name"
+	},
+	"tier": "indigo",
+	"preferences": {
+		"violence": 1,
+		"insight": 3,
+		"harmony": 3
+	},
+	"counter": 14,
+	"breach_types": [
+		"GRANDIOSE",
+		"ESCAPEARTIST"
+	],
+	"evolutions": []
+}

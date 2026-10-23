@@ -1,0 +1,16 @@
+{
+	"name": {
+		"translate": "abnormality.minecraft.piglin_brute.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 6,
+	"breach_types": [
+		"STEAMROLLER"
+	],
+	"evolutions": []
+}

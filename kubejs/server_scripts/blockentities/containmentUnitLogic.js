@@ -217,7 +217,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             },
         });
         global.setBlockEntityData(block, nbt)
-    } 
+    }
     if (global.compareDay(day, nbt.data.getInt("dayLastTriggered"), 1) && state != "EXPIRED") {
         let abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
         let increaseCounter = false;
@@ -430,7 +430,8 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
         })
     }
     if (researchLevel >= 3) {
-        let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions;
+        let evolutions = Array.from(global.ABNORMALITIES.get(abnormalityId).evolutions()).map(e => e.id);
+
         if (evolutions && evolutions.length > 0) {
             let teamName = global.getPlayerTeamName(level, nearbyPlayers[0])
             evolutions = global.filterKnownAbnormalities(server, teamName, evolutions);
@@ -439,9 +440,11 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
             server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
             level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
             let evolution = global.rollArray(evolutions);
+
+            global.addKnownAbnormalities(server, teamName, evolution);
             server.scheduleInTicks(100, () => {
                 possibleAbnormality[0].setRemoved("unloaded_to_chunk");
-                spawnAbnormality(server, level, block, nbt, evolution, String(nbt.data.getString("tier")).trim())
+                spawnAbnormality(server, level, block, nbt, String(evolution), String(nbt.data.getString("tier")).trim())
             });
             dropEnkephalin(block, x, y, z, (getClassEnkephalinCount(nbt.data.getString("tier")) * 3));
             nbt.merge({

@@ -1,0 +1,21 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.wasp.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 4,
+		"harmony": 4
+	},
+	"counter": 7,
+	"breach_types": [
+		"SULFUR",
+		"SAP",
+		"CHAOS",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"scguns:hive"
+	]
+}

@@ -2,3 +2,5 @@
 enableProgression = true
 #Whether a fix should be applied to stop mob pathfinding from being biased towards higher locations
 fixLandRandomPos = true
+#Whether the Resistance effect should grant 20% Damage Reduction per level instead of using its vanilla damage calculation
+resistanceUsesDamageReduction = true

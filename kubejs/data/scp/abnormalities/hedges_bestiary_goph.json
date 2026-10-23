@@ -1,0 +1,17 @@
+{
+	"name": {
+		"translate": "abnormality.hedges_bestiary.goph.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 1,
+		"insight": 2,
+		"harmony": 1
+	},
+	"counter": 10,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"POISON"
+	],
+	"evolutions": []
+}

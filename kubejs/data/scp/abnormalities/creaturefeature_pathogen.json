@@ -1,0 +1,18 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.pathogen.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 3,
+		"insight": 0,
+		"harmony": 1
+	},
+	"counter": 3,
+	"breach_types": [
+		"TELEPORT"
+	],
+	"evolutions": [
+		"creaturefeature:minedflayer"
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.ghastly.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 2,
+		"harmony": 2
+	},
+	"counter": 8,
+	"breach_types": [
+		"DISSOLVE",
+		"BLIND",
+		"DECOUNT"
+	],
+	"evolutions": [
+		"minecraft:ghast"
+	]
+}
