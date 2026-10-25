@@ -21,6 +21,7 @@ companions:companions_factory
 companions:companions_monkey_temple
 companions:companions_teddytower
 companions:companions_tent
+echoes:portal_structure
 hedges_bestiary:dawn_dove_nest
 hedges_bestiary:plombo_territory
 hedges_bestiary:zappet_roost

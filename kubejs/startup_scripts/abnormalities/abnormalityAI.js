@@ -34,16 +34,7 @@ const dropLitter = (block, x, y, z, item) => {
     itemEntity.item = item;
     itemEntity.spawn()
 };
-
-global.handleAbnormality = (entity, abnormalityData) => {
-    const { level } = entity;
-    if (level.isClientSide()) return;
-    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return
-    if (!abnormalityData) return;
-    let server = level.getServer();
-    /**
-     * Littering
-     */
+global.handleLittering = (entity, level) => {
     if (entity.tickCount % 1000 == 0) {
         let litters = global.ABNORMALITY_LITTERS.get(`${entity.type}`)
         if (litters) {
@@ -54,9 +45,77 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
+}
+global.handleUniqueBehaviors = (entity, level, breaching, teamName) => {
+    let server = level.getServer();
+    if (entity.type == "minecraft:chicken" && entity.tickCount % 100 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(breaching ? 12 : 4)).filter((target) => target.isPlayer())
+        if (nearby.length >= 1) {
+            nearby.forEach((scanPlayer) => {
+                let hunger = scanPlayer.getFoodData();
+                hunger.setFoodLevel(Math.max(0, hunger.getFoodLevel() - (breaching ? 8 : 4)))
+            });
+        }
+    }
+    if (entity.type == "scguns:praetor" && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                let transformed = level.createEntity("scguns:dissident");
+                transformed.setPos(employee.x + 0.5, employee.y + 1.0, employee.z + 0.5);
+                transformed.spawn();
+                transformed.setCustomName(Text.of("Bart's 'Employee'").red().bold());
+                transformed.setPersistenceRequired();
+                transformed.setMaxHealth(100);
+                transformed.setHealth(100);
+                employee.kill()
+            });
+        }
+    }
+    if (breaching) {
+        if (entity.type == "companions:hostile_puppet_glove" && entity.tickCount % 1200 == 0) {
+            let nearest = global.getNearestAbnormalities(level, entity.pos, 32).filter((fe) => fe.type != entity.type)
+            if (!nearest || nearest.length == 0) return;
+            console
+            if (entity.persistentData.gloveTarget) {
+                let foundPlayer = server.getPlayer(String(`${entity.persistentData.getString("gloveTarget")}`));
+                if (foundPlayer) {
+                    nearest[0].teleportTo("minecraft:overworld", foundPlayer.x, foundPlayer.y + 1, foundPlayer.z, 0, 0)
+                }
 
-    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
+                entity.persistentData.gloveTarget = undefined;
+
+            } else {
+                let members = global.getTeamMembers(server, level, teamName);
+                console.log(members)
+                if (members && members.length > 0) {
+                    let uuidToFetch = global.rollArray(members);
+                    console.log(uuidToFetch)
+                    if (uuidToFetch) {
+                        let foundPlayer = server.getPlayer(uuidToFetch);
+                        if (foundPlayer) {
+                            global.tellTeam(server, level, teamName, Text.translatable("messages.scp.meteora_blues_threaten", foundPlayer.username));
+                            entity.persistentData.gloveTarget = foundPlayer.uuid.toString();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+global.handleAbnormality = (entity, abnormalityData) => {
+    const { level } = entity;
+    if (level.isClientSide()) return;
+    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return
+    if (!abnormalityData) return;
+    let server = level.getServer();
+    global.handleLittering(entity, level);
+    let breaching = !(!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching"));
     let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
+    global.handleUniqueBehaviors(entity, level, breaching, teamName);
+    if (!breaching) return
+
     level.spawnParticles(
         "companions:shade_summon",
         true,

@@ -1,0 +1,13 @@
+{
+  "add": [
+    {
+      "damage_increase_per_level": 0.5,
+      "health_increase_per_level": 1.3,
+      "id": "creaturefeature:mockingbird",
+      "level_range": 5,
+      "loot_rolls": 1.0,
+      "preferred_level": 20,
+      "weight": 0
+    }
+  ]
+}

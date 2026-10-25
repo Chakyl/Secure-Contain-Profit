@@ -14,6 +14,11 @@ EntityEvents.death((e) => {
 
     if (killer && killer.isPlayer()) {
         killer.give(heart)
+        if (entity.type == "minecraft:chicken") {
+            killer.getFoodData().setFoodLevel(200)
+            killer.getFoodData().setSaturation(20)
+    
+        }
     } else {
         let itemEntity = entity.block.createEntity('item')
         itemEntity.x = entity.x

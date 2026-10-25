@@ -22,7 +22,7 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
     }
     newAbnormalityEntity.setPersistenceRequired();
 
-    let newHealth = newAbnormalityEntity.getMaxHealth() * (getClassHPMult(tier));
+    let newHealth = getHealthPerTier(newAbnormalityEntity.getMaxHealth(), tier);
     newAbnormalityEntity.setMaxHealth(newHealth);
     newAbnormalityEntity.setHealth(newHealth);
     newAbnormalityEntity.mergeNbt({ IsImmuneToZombification: true });
@@ -38,13 +38,13 @@ const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
 }
 
 
-const getClassHPMult = (tier) => {
+const getHealthPerTier = (hp, tier) => {
     switch (tier) {
-        case "amber": return 15;
-        case "maroon": return 20;
-        case "indigo": return 30;
+        case "amber": return Math.max(128, Math.min(512, hp * 15));
+        case "maroon": return Math.max(256, Math.min(1024, hp * 20));
+        case "indigo": return Math.max(512, Math.min(2048, hp * 30));
         default:
-        case "verdant": return 10;
+        case "verdant": return Math.max(64, Math.min(256, hp * 10));
     }
 }
 
@@ -74,7 +74,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
     if (hand !== "MAIN_HAND") return;
     let nbt = block.getEntityData();
     if (!nbt || !nbt.data) return;
-    // nbt.merge({ data: { tier: "maroon" } });
+    // nbt.merge({ data: { tier: "indigo" } });
     // global.setBlockEntityData(block, nbt)
     // return;
     let tier = String(nbt.data.getString("tier")).trim();
@@ -218,8 +218,9 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         });
         global.setBlockEntityData(block, nbt)
     }
+
+    let abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
     if (global.compareDay(day, nbt.data.getInt("dayLastTriggered"), 1) && state != "EXPIRED") {
-        let abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
         let increaseCounter = false;
         let scanForAb = global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID);
         if (scanForAb.length == 0) {
@@ -291,11 +292,13 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         global.updateSignalers(level, block);
     }
     // Validation logic
-    let fullAbnormalityName = global.getFullAbnormalityName(nbt.data, "???");
     if (tick % 20 == 0 && state !== "BREACH") {
+        if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) >= global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
+            global.increaseUnitCounter(level, block, abnormalityName, nbt);
+        }
         if (server.persistentData[teamName].chaos && server.persistentData[teamName].getInt("chaos") >= 1) {
             server.persistentData[teamName].chaos = server.persistentData[teamName].getInt("chaos") - 1;
-            global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
+            global.increaseUnitCounter(level, block, abnormalityName, nbt);
         }
     }
     if (tick % 100 == 0) {
@@ -311,7 +314,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         }
         if (!validContainmentUnit) {
             server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
-            if (Math.random() < 0.1) global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
+            if (Math.random() < 0.1) global.increaseUnitCounter(level, block, abnormalityName, nbt);
         }
 
     }
@@ -351,8 +354,8 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                         },
                     });
                     global.setBlockEntityData(block, nbt)
-                    fullAbnormalityName = global.getFullAbnormalityName(nbt.data, "???");
-                    global.increaseUnitCounter(level, block, fullAbnormalityName, nbt);
+                    abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
+                    global.increaseUnitCounter(level, block, abnormalityName, nbt);
                 });
             }
         } else {

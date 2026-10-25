@@ -17,7 +17,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:new_quest_ecf943ab",
+      "quest": "questlog:adding_containment_units",
       "required_amount": 1
     }
   ],

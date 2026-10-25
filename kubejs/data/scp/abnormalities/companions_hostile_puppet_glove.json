@@ -10,7 +10,7 @@
 	},
 	"counter": 8,
 	"breach_types": [
-		"CHAOS"
+		"NONE"
 	],
 	"evolutions": []
 }

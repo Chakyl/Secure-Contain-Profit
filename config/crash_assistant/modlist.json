@@ -149,6 +149,14 @@
     "curseForgeHash": 1306717928,
     "modrinthHash": "8a34424fc1428778be2fdbfa4da67b21b70bcbfe"
   },
+  "corpse-neoforge-1.21.1-1.1.22.jar": {
+    "jarName": "corpse-neoforge-1.21.1-1.1.22.jar",
+    "modId": "corpse",
+    "name": "Corpse",
+    "version": "1.21.1-1.1.22",
+    "curseForgeHash": 2298573,
+    "modrinthHash": "0d73e082e4d5c0f185aa8030bcefb68c259d1107"
+  },
   "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar": {
     "jarName": "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
     "modId": "crash_assistant",
@@ -276,6 +284,14 @@
     "version": "2.4.0",
     "curseForgeHash": 2155661946,
     "modrinthHash": "74bf0fcb43d97ec9f3934dad78b8cb6a94f8f502"
+  },
+  "echoes-0.6-NEOFORGE-1.21.1.jar": {
+    "jarName": "echoes-0.6-NEOFORGE-1.21.1.jar",
+    "modId": "echoes",
+    "name": "Timeless Echoes",
+    "version": "0.6-NEOFORGE-1.21.1",
+    "curseForgeHash": 270832797,
+    "modrinthHash": "ba968ae8df689030182ec52d2e3e342b573ad103"
   },
   "elevatorid-neoforge-1.21.1-1.11.4.jar": {
     "jarName": "elevatorid-neoforge-1.21.1-1.11.4.jar",
@@ -687,8 +703,8 @@
     "modId": "scp",
     "name": "Secure Contain Profit",
     "version": "1.0-1.21.1",
-    "curseForgeHash": 81182502,
-    "modrinthHash": "00399ffb51c05f0afc99d3f0a8d2e11d0bc34220"
+    "curseForgeHash": 898418198,
+    "modrinthHash": "b676db924a5cdc97c3806349f0524674806106a8"
   },
   "Searchables-neoforge-1.21.1-1.0.2.jar": {
     "jarName": "Searchables-neoforge-1.21.1-1.0.2.jar",

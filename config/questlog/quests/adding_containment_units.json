@@ -36,7 +36,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:new_quest_c4acc052",
+      "quest": "questlog:verdant_wing",
       "required_amount": 1
     }
   ],

@@ -95,6 +95,21 @@ global.tellTeam = (server, level, teamName, text) => {
     }
 }
 
+global.getTeamMembers = (server, level, teamName) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        return team.getPlayers();
+    } else {
+        let unassignedPlayers = []
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                unassignedPlayers.push(player.uuid)
+            }
+        });
+        return unassignedPlayers;
+    }
+}
+
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
     let breachMessage = Text.translatable("messages.scp.containment_unit.breach", abnormalityName, block.x, block.y, block.z);
     let teamName = String(nbt.data.getString("teamName")).trim();
@@ -114,9 +129,12 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
         global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed());
         global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
     } else if (breachTypes.contains("ESCAPEARTIST")) {
-        global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);
+        global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4], 8, 8);
+    }else if (breachTypes.contains("INDIGO_ESCAPEARTIST")) {
+        global.escapeArtist(level, entity, [-1, 0, 1, 2], 12, 24);
     }
 }
+
 global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
     let { x, y, z } = block;
     if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
@@ -224,10 +242,9 @@ global.getClassRadii = (tier, block) => {
 }
 
 let maxAttempts = 30;
-let minRange = 8;
-let maxRange = 8;
-global.escapeArtist = (level, entity, possibleYLevels) => {
-    let { x, y, z } = entity;
+
+global.escapeArtist = (level, entity, possibleYLevels, minRange, maxRange) => {
+    let { x, y, z } = entity.getOnPos();
     let found = false
     let foundX = 0
     let foundY = 0

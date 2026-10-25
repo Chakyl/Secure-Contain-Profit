@@ -4,7 +4,7 @@
   "icon": {
     "item": "abyssal_decor:rockwater_tear"
   },
-  "chapter": "maroon_wing",
+  "chapter": "indigo_wing",
   "sort_order": 2,
   "objectives": [
     {
@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:maroon_wing",
+      "quest": "questlog:indigo_wing",
       "required_amount": 1
     }
   ],

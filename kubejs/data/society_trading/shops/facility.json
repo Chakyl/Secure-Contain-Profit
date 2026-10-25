@@ -129,6 +129,30 @@
 		},
 		{
 			"offer": {
+				"id": "scp:indigo_hallway_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 64
+			},
+			"stage_required": "maroon_level",
+			"trade_id": "facility_scp_indigo_hallway_expansion_card"
+		},
+		{
+			"offer": {
+				"id": "scp:indigo_containment_expansion_card",
+				"count": 1
+			},
+			"request": {
+				"id": "scp:enkephalin",
+				"count": 24
+			},
+			"stage_required": "indigo_level",
+			"trade_id": "facility_scp_indigo_containment_expansion_card"
+		},
+		{
+			"offer": {
 				"id": "scp:utility_expansion_room_card",
 				"count": 1
 			},

@@ -1,4 +1,4 @@
-95 possible biomes found:
+96 possible biomes found:
 - "minecraft:badlands"
 - "minecraft:bamboo_jungle"
 - "minecraft:basalt_deltas"
@@ -83,6 +83,7 @@
 - "minecraft:taiga"
 - "minecraft:the_end"
 - "minecraft:the_void"
+- "echoes:timeless"
 - "antarchy:truffalo_forest"
 - "antarchy:umbral_hills"
 - "antarchy:vortex_expanse"

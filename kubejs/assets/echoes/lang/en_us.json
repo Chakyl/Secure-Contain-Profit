@@ -1,0 +1,12 @@
+{
+  "block.echoes.upgrader" : "Upgrader",
+  "entity.echoes.lantern" : "Timeless Lantern",
+  "entity.echoes.hollowed" : "Hollowed",
+  "entity.echoes.sculk_heart" : "Sculk Heart",
+  "entity.echoes.soul" : "Soul",
+  "entity.echoes.soul_spectator" : "Soul Spectator",
+  "entity.echoes.soul_trader" : "Soul Trader",
+  "entity.echoes.timeless_corpse" : "Corpse",
+  "entity.echoes.sculked" : "Sculked"
+
+}

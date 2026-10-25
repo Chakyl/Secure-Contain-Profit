@@ -14,6 +14,8 @@ const shops = [
             { stageRequired: "amber_level", item: "scp:maroon_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 24 } },
             { stageRequired: "maroon_level", item: "scp:maroon_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 12 } },
             { stageRequired: "amber_level", item: "scp:warehouse_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 32 } },
+            { stageRequired: "maroon_level", item: "scp:indigo_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 64 } },
+            { stageRequired: "indigo_level", item: "scp:indigo_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 24 } },
             { item: 'scp:utility_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
             { stageRequired: "amber_level", item: 'scp:room_abnormality_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 20 } },
             { item: "numismatics:bank_terminal", count: 1, numiCost: 16 },

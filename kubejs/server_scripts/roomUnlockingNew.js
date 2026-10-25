@@ -82,8 +82,17 @@ let structureMap = new Map([
     ["scp:maroon_hallway_t_intersection_expansion_card", { structurePool: ["maroon_hallways_t_intersection"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:maroon_hallway_cross_intersection_expansion_card", { structurePool: ["maroon_hallways_cross_intersection"], block: 'scp:maroon_hallway_lock_block' }],
     ["scp:maroon_hallway_dead_end_expansion_card", { structurePool: ["maroon_hallways_deadend"], block: 'scp:maroon_hallway_lock_block' }],
+
+    ["scp:indigo_containment_expansion_card", { structurePool: ["indigo_containment_unit"], block: 'scp:indigo_containment_lock_block' }],
+    ["scp:indigo_hallway_expansion_card", { structurePool: ["indigo_hallways_1", "indigo_hallways_2", "indigo_hallways_3"], block: 'scp:indigo_hallway_lock_block' }],
+    ["scp:indigo_hallway_left_expansion_card", { structurePool: ["indigo_hallways_left_turn"], block: 'scp:indigo_hallway_lock_block' }],
+    ["scp:indigo_hallway_right_expansion_card", { structurePool: ["indigo_hallways_right_turn"], block: 'scp:indigo_hallway_lock_block' }],
+    ["scp:indigo_hallway_t_intersection_expansion_card", { structurePool: ["indigo_hallways_t_intersection"], block: 'scp:indigo_hallway_lock_block' }],
+    ["scp:indigo_hallway_cross_intersection_expansion_card", { structurePool: ["indigo_hallways_cross_intersection"], block: 'scp:indigo_hallway_lock_block' }],
+    ["scp:indigo_hallway_dead_end_expansion_card", { structurePool: ["indigo_hallways_deadend"], block: 'scp:indigo_hallway_lock_block' }],
+
     ["scp:utility_expansion_room_card", { structurePool: ["utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_1", "utility_room_2", "utility_room_3_1", "utility_room_3_2", "utility_room_3_3", "utility_room_4_1", "utility_room_4_2", "utility_room_4_3"], block: "" }],
-    ['scp:room_abnormality_expansion_room_card', { structurePool: ["room_abnormality_clay", "room_abnormality_niter", "room_abnormality_sulfur", "room_abnormality_shelter", "room_abnormality_womb"], block: "" }],
+    ['scp:room_abnormality_expansion_room_card', { structurePool: ["room_abnormality_blood_pond", "room_abnormality_timeless", "room_abnormality_clay", "room_abnormality_niter", "room_abnormality_sulfur", "room_abnormality_shelter", "room_abnormality_womb"], block: "" }],
     ['scp:warehouse_expansion_card', { structurePool: [], block: 'scp:warehouse_lock_block' }]
 ])
 let clearBlocks = (level, block) => {
@@ -101,7 +110,8 @@ let clearBlocks = (level, block) => {
     }
 }
 let fieldGuideMap = new Map([
-    ["room_abnormality_clay", `minecraft:minecraft/chiseled_tuff_bricks`],
+    ["room_abnormality_clay", `block:minecraft/chiseled_tuff_bricks`],
+    ["room_abnormality_blood_pond", `block:abyssal_decor/rough_blood_coral`],
     ["room_abnormality_sulfur", `block:scguns/sulfur_vent`],
     ["room_abnormality_niter", `block:scguns/geothermal_vent`]
 ])
@@ -118,7 +128,11 @@ BlockEvents.rightClicked([
     'scp:maroon_hallway_lock_block',
     'scp:maroon_containment_lock_block',
     'scp:maroon_containment_lock_block_1',
-    'scp:maroon_containment_lock_block_2'
+    'scp:maroon_containment_lock_block_2',
+    'scp:indigo_hallway_lock_block',
+    'scp:indigo_containment_lock_block',
+    'scp:indigo_containment_lock_block_1',
+    'scp:indigo_containment_lock_block_2'
 ], e => {
     let { level, block, hand, item, server, player } = e
     if (hand !== "MAIN_HAND") return;
@@ -177,7 +191,7 @@ BlockEvents.rightClicked([
             player.tell("§7You need a §6" + Item.of(`scp:${foundType}_hallway_expansion_card`).getDisplayName().string + "§7 to unlock this.")
             return;
         }
-        command = `place template scp:${foundType}_center ${block.x + directionData.x} ${block.y - 13} ${block.z + directionData.z}`;
+        command = `place template scp:${foundType}_center ${block.x + directionData.x} ${block.y - (item.id.includes("indigo") ? 24 : 13)} ${block.z + directionData.z}`;
     } else if (item.id.includes("warehouse")) {
         directionData = warehouseDirectionMap.get(`${foundDirection.direction}`)
         if (foundDirection.direction == "up") {

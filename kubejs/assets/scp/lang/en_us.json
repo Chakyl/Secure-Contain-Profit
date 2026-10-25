@@ -161,6 +161,8 @@
     "messages.scp.eraserhead.curse": "I've already cursed you with %s. I'll let your greed slide this time...",
     
     "messages.scp.deaths_dynamic_shroud.no_drops": "This abnormality didn't drop anything...",
-    "messages.scp.horseshoe_theory.none_nearby": "No nearby containment unit..."
+    "messages.scp.horseshoe_theory.none_nearby": "No nearby containment unit...",
+
+    "messages.scp.meteora_blues_threaten": "%s feels a hand approaching!"
 
 }

@@ -204,7 +204,6 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
 }
 
 
-
 ItemEvents.entityInteracted((e) => {
     const { item, target, level, hand, server } = e;
     if (hand !== "MAIN_HAND") return;

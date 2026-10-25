@@ -13,5 +13,7 @@
 		"ESCAPEARTIST",
 		"POISON"
 	],
-	"evolutions": []
+	"evolutions": [
+		"opposing_force:furball"
+	]
 }

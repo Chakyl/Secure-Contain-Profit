@@ -1,0 +1,34 @@
+{
+	"sort_index": 4,
+	"icon": "fieldguide:textures/gui/icons/book.png",
+	"contents": [
+		{
+			"type": "entry",
+			"id": "whimsy_deco:moroccan_sofa"
+		},
+		{
+			"type": "entry",
+			"id": "echoes:portal"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:sulfur_vent"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:geothermal_vent"
+		},
+		{
+			"type": "entry",
+			"id": "supplementaries:safe"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:chiseled_tuff_bricks"
+		},
+		{
+			"type": "entry",
+			"id": "abyssal_decor:rough_blood_coral"
+		}
+	]
+}

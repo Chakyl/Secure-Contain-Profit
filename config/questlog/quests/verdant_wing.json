@@ -17,7 +17,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:new_quest_ba2877aa",
+      "quest": "questlog:welcome_manager",
       "required_amount": 1
     }
   ],
