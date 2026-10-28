@@ -43,6 +43,17 @@
     "tooltip.always.industrialhellscape.monitor_and_keyboard.0": "Allows you to purchase goods from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
     "tooltip.always.scguns.anthralite_lamp.0": "Sends Enkephalin used on it to the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>. It's your job to do this.",
 
+    "tooltip.always.scp.employee_pda.0": "Manages Containment Unit assignments for employees",
+    "tooltip.scp.employee_pda.0": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click a Containment Unit</ltcolor> to track",
+    "tooltip.scp.employee_pda.1": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click</ltcolor> to manage tracked units",
+    "tooltip.scp.employee_pda.2": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click an employee</ltcolor> to assign/unassign",
+
+    "tooltip.always.scp.employee_request.0": "Right click to request an employee from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
+    
+    "tooltip.always.scp.home_marker.0": "Marks a block as an employee's home point",
+    "tooltip.scp.home_marker.0": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click a block</ltcolor> to set the marker's home point",
+    "tooltip.scp.home_marker.1": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click an employee</ltcolor> to assign to marker's home point",
+
     "tooltip.always.scp.warehouse_expansion_card.0": "Use on a Warehouse Lock to unlock it and add a warehouse unit.",
     "tooltip.always.scp.utility_expansion_room_card.0": "Use on any type of Containment Unit Lock to unlock it and add an empty utility room.",
     "tooltip.always.scp.utility_expansion_room_card.1": "<ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Does not contain a Containment Unit.</ltcolor>",

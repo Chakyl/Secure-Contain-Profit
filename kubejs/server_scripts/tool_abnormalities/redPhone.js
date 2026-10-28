@@ -9,7 +9,9 @@ BlockEvents.rightClicked('whimsy_deco:red_phone', (e) => {
     }
     server.runCommandSilent(`execute as ${player.username} run dialog show red_phone_choice_dialog_choice_${Math.floor(Math.random() * 6) + 1}`);
     server.runCommandSilent(`playsound industrialhellscape:metal_box_opening block @a ${block.x} ${block.y} ${block.z} 2 0.5`);
-    global.addChaos(server, block, global.getPlayerTeamName(level, player), 2);
+    let teamName = global.getPlayerTeamName(level, player);
+    global.addChaos(server, block, teamName, 2);
+    global.questCompleteForTeam(server, level, teamName, "questlog:chaos");
     player.persistentData.dayLastCalled = day;
     FieldGuide.unlock(player, `block:whimsy_deco/red_phone`);
 });

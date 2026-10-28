@@ -1,6 +1,6 @@
 {
   "title": "The WORK Task",
-  "description": "When a Containment Unit is in its WORK state, you can extract Enkephalin from the abnormality.\n\nThere is nuance to how you do this, but for now you can do this using crude syringes.\n",
+  "description": "When a Containment Unit is in its WORK state, you can extract Enkephalin from the abnormality.\n\nThere is nuance to how you do this, but for now you can do this using crude syringes.\n\nNot working abnormalities impacts the Moonlit Company's bottom line, so it's best to do this even if it puts you and your facility at risk!",
   "icon": {
     "item": "scguns:syringe"
   },

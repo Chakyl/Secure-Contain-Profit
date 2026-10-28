@@ -8,6 +8,16 @@
 		"insight": 3,
 		"harmony": 2
 	},
+	"bad_result_counter_impact": {
+		"violence": -1,
+		"insight": -1,
+		"harmony": -1
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
 	"counter": 10,
 	"breach_types": [
 		"SUPERCHAOS",

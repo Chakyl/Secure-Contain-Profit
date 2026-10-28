@@ -109,7 +109,40 @@ global.getTeamMembers = (server, level, teamName) => {
         return unassignedPlayers;
     }
 }
-
+global.questCompleteForTeam = (server, level, teamName, quest) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                server.runCommandSilent(`ql progress complete ${quest} ${player.username}`)
+            }
+        });
+    } else {
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                server.runCommandSilent(`ql progress complete ${quest} ${player.username}`)
+            }
+        });
+    }
+}
+global.notesForTeam = (server, level, teamName, noteId) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                FieldGuide.unlock(player, noteId)
+            }
+        });
+    } else {
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                FieldGuide.unlock(player, noteId)
+            }
+        });
+    }
+}
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
     let breachMessage = Text.translatable("messages.scp.containment_unit.breach", abnormalityName, block.x, block.y, block.z);
     let teamName = String(nbt.data.getString("teamName")).trim();
@@ -130,7 +163,7 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
         global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
     } else if (breachTypes.contains("ESCAPEARTIST")) {
         global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4], 8, 8);
-    }else if (breachTypes.contains("INDIGO_ESCAPEARTIST")) {
+    } else if (breachTypes.contains("INDIGO_ESCAPEARTIST")) {
         global.escapeArtist(level, entity, [-1, 0, 1, 2], 12, 24);
     }
 }

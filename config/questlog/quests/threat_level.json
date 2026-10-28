@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:bulding",
+      "quest": "questlog:threat_level",
       "required_amount": 1
     }
   ],

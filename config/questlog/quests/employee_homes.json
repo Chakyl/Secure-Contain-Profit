@@ -1,0 +1,24 @@
+{
+  "title": "Employee Homes",
+  "description": "Employees are exceptionally lazy, and will not wander too far outside of their working area. This is designated by you, the manager.\n\nUse Home Marker to mark a block, and then right click an employee with it to designate it as their home.\n\nNote that employees also tend to not like working on mulitple wings of your facility.",
+  "icon": {
+    "item": "scp:home_marker"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 5,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:home_marker",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:employees",
+      "required_amount": 1
+    }
+  ],
+  "rewards": []
+}

@@ -197,7 +197,8 @@ const abnormalities = new Map([
 
 if (true) {
     let translationKeys = {};
-
+    let badWorkDefaults = { violence: -1, insight: -1, harmony: -1 };
+    let goodWorkDefaults = { violence: 0, insight: 0, harmony: 0 };
     abnormalities.forEach((data, abnormality) => {
         let [namespace, path] = abnormality.split(":");
         let langKey = `abnormality.${abnormality.replace(":", ".")}.name`;
@@ -208,6 +209,8 @@ if (true) {
             },
             tier: data.tier,
             preferences: data.preferences,
+            bad_result_counter_impact: data.badWorkCounterResults ? bad_result_counter_impact : badWorkDefaults,
+            good_result_counter_impact: data.goodWorkCounterResults ? good_result_counter_impact : goodWorkDefaults,
             counter: data.counter,
             breach_types: data.breachTypes,
             evolutions: data.evolutions ? data.evolutions : []

@@ -125,6 +125,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             global.addThreatLevel(server, teamName, 1);
             if (Number(server.persistentData[teamName].getInt("threat_level")) % 5 == 0) {
                 global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed())
+                global.questCompleteForTeam(server, level, teamName, "questlog:threat_level");
                 global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
             }
         });
@@ -427,16 +428,15 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
     let researchLevel = Number(nbt.data.getInt("researchLevel"));
     let newLevel = global.increaseStage(researchLevel)
     let abnormalityId = String(`${nbt.data.getString("abnormalityType")}`).trim()
+    let teamName = global.getPlayerTeamName(level, nearbyPlayers[0])
     if (researchLevel == 2) {
-        nearbyPlayers.forEach((player) => {
-            FieldGuide.unlock(player, `entity:${abnormalityId.replace(":", "/")}`)
-        })
+        global.notesForTeam(server, level, teamName, `entity:${abnormalityId.replace(":", "/")}`);
+        global.questCompleteForTeam(server, level, teamName, "questlog:abnormality_notes");
     }
     if (researchLevel >= 3) {
         let evolutions = Array.from(global.ABNORMALITIES.get(abnormalityId).evolutions()).map(e => e.id);
 
         if (evolutions && evolutions.length > 0) {
-            let teamName = global.getPlayerTeamName(level, nearbyPlayers[0])
             evolutions = global.filterKnownAbnormalities(server, teamName, evolutions);
             global.paintToTeam(server, level, teamName, Text.translatable("messages.scp.containment_unit.evolving", global.getFullAbnormalityName(nbt.data, "???")), '#55FF55');
             server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
