@@ -1,7 +1,7 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken", "opposing_force:mushy", "hedges_bestiary:goph"]],
     ["amber", ["minecraft:ravager", "creaturefeature:fend", "antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:sinister", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:illager_golem", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove", "opposing_force:scorcher", "antarchy:spit_bug"]],
-    ["maroon", ["antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
+    ["maroon", ["antarchy:basilisk", "antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
     ["indigo", ["creaturefeature:detritus", "minecraft:witch", "antarchy:stratoshark", "opposing_force:dicer", "netherman:guardian", "netherman:doctor"]]
 ])
 
@@ -138,13 +138,13 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
                     global.paintAlert(server, player, Text.translatable("messages.scp.containment_unit.abnormality_restored"), '#55FF55');
                     if (!player.isCreative()) item.shrink(1);
                     spawnAbnormality(server, level, block, nbt, String(nbt.data.getString("abnormalityType")).trim(), tier)
-
                     nbt.merge({
                         data: {
                             state: "NONE"
                         },
                     });
                     global.setBlockEntityData(block, nbt);
+                    return;
                 } else {
                     player.tell(Text.translatable("messages.scp.containment_unit.heart_mismatch").red())
                 }
@@ -294,7 +294,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     }
     // Validation logic
     if (tick % 20 == 0 && state !== "BREACH") {
-        if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) >= global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
+        if ((nbt.data.counter ? Number(nbt.data.getInt("counter"))  : 0) >= global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
             global.increaseUnitCounter(level, block, abnormalityName, nbt);
         }
         if (server.persistentData[teamName].chaos && server.persistentData[teamName].getInt("chaos") >= 1) {

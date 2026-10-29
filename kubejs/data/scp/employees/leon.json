@@ -7,7 +7,7 @@
         "translate": "society.npc_schedule.work"
       },
       "target_tag": "scp:pda_trackable",
-      "start_time": 20000,
+      "start_time":  13000,
       "end_time": 0
     },
     {
@@ -16,7 +16,7 @@
       },
       "target_tag": "minecraft:beds",
       "start_time": 0,
-      "end_time": 20000
+      "end_time": 13000
     }
   ],
   "starting_stats": {

@@ -31,6 +31,8 @@ const shops = [
         jeiCatalyst: "scp:enkephalin",
         trades: [
             { item: "scp:employee_pda", count: 1, numiCost: 1024 },
+            { item: "scp:employee_request", count: 1, numiCost: 4096 },
+            { item: "scp:home_marker", count: 1, numiCost: 64 },
             { item: "scguns:needle", count: 1, numiCost: 256 },
             { item: "supplementaries:flute", count: 1, numiCost: 256 },
             { item: "minecraft:book", count: 1, numiCost: 256 },

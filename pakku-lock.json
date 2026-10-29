@@ -792,29 +792,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "csr-neoforge-1.21.1-1.0.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/8615/163/csr-neoforge-1.21.1-1.0.3.jar",
-                    "id": "8615163",
-                    "parent_id": "1346487",
-                    "hashes": {
-                        "sha1": "6c8cb5e077cd76368364f2822c325a4d87781ced",
-                        "md5": "9fc86ca95fba92d9a35353a24cf10e57"
-                    },
-                    "required_dependencies": [],
-                    "size": 1487289,
-                    "date_published": "2026-08-10T09:33:01.513Z"
-                },
-                {
                     "type": "modrinth",
-                    "file_name": "csr-neoforge-1.21.1-1.0.3.jar",
+                    "file_name": "csr-neoforge-1.21.1-1.0.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -822,16 +801,37 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/4zyuLusz/versions/s7jP6vT9/csr-neoforge-1.21.1-1.0.3.jar",
-                    "id": "s7jP6vT9",
+                    "url": "https://cdn.modrinth.com/data/4zyuLusz/versions/lWPhtjId/csr-neoforge-1.21.1-1.0.4.jar",
+                    "id": "lWPhtjId",
                     "parent_id": "4zyuLusz",
                     "hashes": {
-                        "sha512": "ceb63769626101dd8fb5844839aa619f6877ed5f5d3bf942a4d1aa31ee43e80b9b0f0f548802f8a6f5a0abbb2d9fda6c55253af6058c3e248e648beda8ba9b2f",
-                        "sha1": "6c8cb5e077cd76368364f2822c325a4d87781ced"
+                        "sha512": "8b83cf7d5b04df1ec338262dc1f2b1b9eff738744f48c730f6b75eca7b01ddfa69110b77ef64dbf69b76d2702aa5c9fa3bf49cfd53bdb67a78cbd38a762e7ae5",
+                        "sha1": "c2b0259819736d0d85cf8d60ab138425e44775a9"
                     },
                     "required_dependencies": [],
-                    "size": 1487289,
-                    "date_published": "2026-08-10T09:31:36.959138Z"
+                    "size": 1487437,
+                    "date_published": "2026-10-25T07:09:39.772233Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "csr-neoforge-1.21.1-1.0.4.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9318/433/csr-neoforge-1.21.1-1.0.4.jar",
+                    "id": "9318433",
+                    "parent_id": "1346487",
+                    "hashes": {
+                        "sha1": "c2b0259819736d0d85cf8d60ab138425e44775a9",
+                        "md5": "d7e4bc6ba22e049c46d694883ba2a4a5"
+                    },
+                    "required_dependencies": [],
+                    "size": 1487437,
+                    "date_published": "2026-10-25T07:07:47.887Z"
                 }
             ]
         },

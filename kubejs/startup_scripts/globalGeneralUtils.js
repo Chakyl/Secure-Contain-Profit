@@ -84,7 +84,11 @@ global.increaseStage = (input, count) => {
   num += count || 1;
   return num;
 };
-
+global.decreaseStage = (input, count) => {
+  let num = Number(input);
+  num -= count || 1;
+  return Math.max(0, num);
+};
 global.getAbnormalityName = (tier, id) => `${tier.charAt(0).toUpperCase()}-${global.getSCPID(id)}`
 
 global.getFullAbnormalityName = (data, fallback) => `${global.getAbnormalityName(String(data.getString("tier")).trim(), String(data.getString("abnormalityType")).trim())}: ${Number(data.getInt("researchLevel")) >= 2 ? `${global.ABNORMALITIES.get(String(`${data.getString("abnormalityType")}`).trim()).name().getString()}` : fallback}`

@@ -168,12 +168,13 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
     }
 }
 
-global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
+global.increaseUnitCounter = (level, block, abnormalityName, nbt, amount) => {
+    let resolvedAmount = amount ? amount : 1;
     let { x, y, z } = block;
-    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + resolvedAmount : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
         nbt.merge({
             data: {
-                counter: global.increaseStage(Number(nbt.data.getInt("counter")))
+                counter: global.increaseStage(Number(nbt.data.getInt("counter")), resolvedAmount)
             }
         });
     } else {
@@ -199,6 +200,17 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
         }
     }
 }
+
+global.decreaseUnitCounter = (nbt, amount) => {
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) : 0) > 0) {
+        nbt.merge({
+            data: {
+                counter: global.decreaseStage(Number(nbt.data.getInt("counter")), amount)
+            }
+        });
+    }
+}
+
 global.mainUiElementIds = [
     "containmentSummary",
     "workResult"

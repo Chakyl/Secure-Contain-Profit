@@ -8,7 +8,7 @@ const setEffectByTrait = (entity, traits) => {
     if (traits.contains("POISON")) {
         entity.potionEffects.add('minecraft:poison', 400, 1)
     }
-    if (traits.contains("SULFUR")) {
+    if (traits.contains("SULFUR") && entity.headArmorItem.id !== 'scguns:anthralite_respirator') {
         entity.potionEffects.add('scguns:sulfur_poisoning', 400, 1)
     }
     if (traits.contains("PATHETIC")) {

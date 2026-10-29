@@ -45,6 +45,13 @@
       },
       "weight": 5
     },
+        {
+      "rarity": "common",
+      "stack": {
+        "identifier": "scguns:sculk_tome"
+      },
+      "weight": 2
+    },
     {
       "rarity": "rare",
       "stack": {
@@ -92,35 +99,35 @@
       "stack": {
         "identifier": "abyssal_decor:echo_shard_block"
       },
-      "weight": 5
+      "weight": 7
     },
     {
       "rarity": "epic",
       "stack": {
         "identifier": "minecraft:sculk_catalyst"
       },
-      "weight": 3
+      "weight": 6
     },
     {
       "rarity": "rare",
       "stack": {
         "identifier": "antarchy:raw_titanium_scrap"
       },
-      "weight": 7
+      "weight": 14
     },
     {
       "rarity": "epic",
       "stack": {
         "identifier": "reliable_requiem:crystal_shard"
       },
-      "weight": 5
+      "weight": 10
     },
     {
       "rarity": "common",
       "stack": {
         "identifier": "minecraft:sculk"
       },
-      "weight": 20
+      "weight":40
     }
   ]
 }

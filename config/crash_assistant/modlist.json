@@ -205,13 +205,13 @@
     "curseForgeHash": 1870004536,
     "modrinthHash": "e8550e1bae25f437fdaa142877027a0b783c074b"
   },
-  "csr-neoforge-1.21.1-1.0.3.jar": {
-    "jarName": "csr-neoforge-1.21.1-1.0.3.jar",
+  "csr-neoforge-1.21.1-1.0.4.jar": {
+    "jarName": "csr-neoforge-1.21.1-1.0.4.jar",
     "modId": "csr",
     "name": "Clay Soldiers Remake",
-    "version": "1.0.3",
-    "curseForgeHash": 2994713336,
-    "modrinthHash": "6c8cb5e077cd76368364f2822c325a4d87781ced"
+    "version": "1.0.4",
+    "curseForgeHash": 3864516079,
+    "modrinthHash": "c2b0259819736d0d85cf8d60ab138425e44775a9"
   },
   "CTM-1.21-1.2.1+3.jar": {
     "jarName": "CTM-1.21-1.2.1+3.jar",
@@ -703,8 +703,8 @@
     "modId": "scp",
     "name": "Secure Contain Profit",
     "version": "1.0-1.21.1",
-    "curseForgeHash": 745357802,
-    "modrinthHash": "c9e4074241515be18188321f95f3fb5b23b99b28"
+    "curseForgeHash": 939733730,
+    "modrinthHash": "ba2ce7da1965f549f87e53b1ee7f4e66780f0b60"
   },
   "Searchables-neoforge-1.21.1-1.0.2.jar": {
     "jarName": "Searchables-neoforge-1.21.1-1.0.2.jar",

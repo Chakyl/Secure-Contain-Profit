@@ -49,7 +49,7 @@ const abnormalities = new Map([
     ["creaturefeature:pathogen", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 1 }, name: "Pathogen", counter: 3, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:minedflayer"] }],
     ["creaturefeature:minedflayer", { tier: "verdant", preferences: { violence: 5, insight: 1, harmony: 2 }, name: "According to the Mind's Flayed Eye", counter: 10, breachTypes: ["NUKE"] }],
     // Goat
-    ["minecraft:goat", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, name: "Tailwhip", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
+    ["minecraft:goat", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, goodWorkCounterResults: { violence: 1, insight: -2, harmony: 0 },  neutralWorkCounterResults: { violence: 1, insight: -2, harmony: 0 },  badWorkCounterResults: { violence: 0, insight: -2, harmony: -1 },   name: "Tailwhip", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
     ['antarchy:ouranwood_deer', { tier: "verdant", preferences: { violence: 5, insight: 3, harmony: 0 }, name: "Halcyon Digest", counter: 9, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
     ["creaturefeature:vertigo", { tier: "verdant", preferences: { violence: -1, insight: 3, harmony: 1 }, name: "Norton Commander", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
     // Chicken
@@ -64,8 +64,8 @@ const abnormalities = new Map([
     ["creaturefeature:blossom", { tier: "verdant", preferences: { violence: 3, insight: 3, harmony: 1 }, name: "Flatbush", counter: 4, breachTypes: ["SAP", "STEAMROLLER"] }],
     ["creaturefeature:minds", { tier: "verdant", preferences: { violence: 3, insight: 1, harmony: 3 }, name: "Minehuck", counter: 2, breachTypes: ["CHAOS", "DISSOLVE"] }],
     // Frog
-    ["minecraft:frog", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog", counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:cornelius"] }],
-    ["companions:cornelius", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog UNCHAINED", counter: 15, breachTypes: ["NOTHING"] }],
+    ["minecraft:frog", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog",goodWorkCounterResults: { violence: 0, insight: 0, harmony: 1 },  counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:cornelius"] }],
+    ["companions:cornelius", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog UNCHAINED", goodWorkCounterResults: { violence: 0, insight: 0, harmony: 1 },  counter: 15, breachTypes: ["NOTHING"] }],
     // Goph
     ["hedges_bestiary:goph", { tier: "verdant", preferences: { violence: 1, insight: 2, harmony: 1 }, name: "Hollywood Baby", counter: 10, breachTypes: ["ESCAPEARTIST", "POISON"], evolutions: ["opposing_force:furball"] }],
     ["opposing_force:furball", { tier: "verdant", preferences: { violence: 1, insight: 3, harmony: 0 }, name: "Money Machine", counter: 6, breachTypes: ["ESCAPEARTIST", "BITE"] }],
@@ -92,7 +92,7 @@ const abnormalities = new Map([
     ["minecraft:blaze", { tier: "amber", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Blaze Bird", counter: 6, breachTypes: ["TELEPORT"] }],
     // Turtle
     ["minecraft:turtle", { tier: "amber", preferences: { violence: 4, insight: 0, harmony: 0 }, name: "EoO", counter: 6, breachTypes: ["NOTHING"], evolutions: ["peaceless:shrapin", "opposing_force:terror"] }],
-    ["peaceless:shrapin", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["SUMMON", "SUCK"] }],
+    ["peaceless:shrapin", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["SUCK"] }],
     ["opposing_force:terror", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "BOKeTE", counter: 5, breachTypes: ["SUCK"] }],
     // Beauty
     ["creaturefeature:beauty", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "Pagan Poetry", counter: 3, breachTypes: ["ESCAPEARTIST", "DISSOLVE"], evolutions: ["creaturefeature:fiend"] }],
@@ -110,10 +110,10 @@ const abnormalities = new Map([
     ["antarchy:rolly_polly", { tier: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["antarchy:red_ant"] }],
     ["antarchy:red_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // [Brown Ant] Stink bug
-    ["antarchy:stink_bug", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
+    ["antarchy:stink_bug", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, badWorkCounterResults: { violence: 0, insight: 0, harmony: 0 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
     ["antarchy:brown_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
     // Ravager
-    ["minecraft:ravager", { tier: "amber", preferences: { violence: 1, insight: 5, harmony: 0 }, name: "Decked Out", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
+    ["minecraft:ravager", { tier: "amber", preferences: { violence: 1, insight: 5, harmony: 0 }, name: "Decked Out", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["hedges_bestiary:burodon","hedges_bestiary:plombo"] }],
     ["hedges_bestiary:burodon", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Wyclef Jean", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
     ["hedges_bestiary:plombo", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Problem", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
     // No evos
@@ -168,7 +168,7 @@ const abnormalities = new Map([
     ["antarchy:moleworm", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:molevore"] }],
     ["antarchy:molevore", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
     // Basilisk
-    ["antarchy:basilisk", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Debold", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
+    ["antarchy:basilisk", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Debold", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"], evolutions: ["opposing_force:gusher"] }],
     ["opposing_force:gusher", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Yeet 3ZeroK [126 BPM]", counter: 4, breachTypes: ["ESCAPEARTIST", "PATHETIC"] }],
     // No evos
     ["scguns:sulfurhead", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Head in the Clouds", counter: 3, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
@@ -181,24 +181,25 @@ const abnormalities = new Map([
     ["netherman:doctor", { tier: "indigo", preferences: { violence: 1, insight: 0, harmony: 1 }, name: "Plague Doctor", counter: 666, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
     ["netherman:azazel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Cathedral of Shadows", counter: 7, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
     // Stratoshark
-    ["antarchy:stratoshark", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Shark Smile", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["antarchy:stratoshark", { tier: "indigo", preferences: { violence: 5, insight: 2, harmony: 2 }, name: "Shark Smile", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
     ["hedges_bestiary:endgel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Mythological Beauty", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
     // Witch
-    ["minecraft:witch", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Belispeak", counter: 3, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["companions:sacred_pontiff", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Fineshrine", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["minecraft:witch", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Belispeak", counter: 3, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["companions:sacred_pontiff", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Fineshrine", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
     // Special
     ["antarchy:nightmare", { tier: "indigo", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Deerhunter", counter: 8, breachTypes: ["GRANDIOSE", "BITE", "SUPERCHAOS", "SLEEP", "DARKNESS", "NUKE"] }],
     // No evos
-    ["creaturefeature:detritus", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["opposing_force:dicer", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Dancer in the Dark", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["netherman:guardian", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "PANIC!!!", counter: 4, breachTypes: ["GRANDIOSE", "SUPERCHAOS", "INDIGO_ESCAPEARTIST"] }]
+    ["creaturefeature:detritus", { tier: "indigo", preferences: { violence: 5, insight: 3, harmony: 2 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["opposing_force:dicer", { tier: "indigo", preferences: { violence: 2, insight: 3, harmony: 5 }, name: "Dancer in the Dark", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST", "BITE", "BLIND", "DARKNESS"] }],
+    ["netherman:guardian", { tier: "indigo", preferences: { violence: 1, insight: 2, harmony: 5 }, name: "PANIC!!!", counter: 4, breachTypes: ["GRANDIOSE", "SUPERCHAOS", "INDIGO_ESCAPEARTIST"] }]
 ]);
 
 
 if (true) {
     let translationKeys = {};
-    let badWorkDefaults = { violence: -1, insight: -1, harmony: -1 };
+    let badWorkDefaults = { violence: 1, insight: 1, harmony: 1 };
     let goodWorkDefaults = { violence: 0, insight: 0, harmony: 0 };
+    let neutralWorkDefaults = { violence: 0, insight: 0, harmony: 0 };
     abnormalities.forEach((data, abnormality) => {
         let [namespace, path] = abnormality.split(":");
         let langKey = `abnormality.${abnormality.replace(":", ".")}.name`;
@@ -209,8 +210,9 @@ if (true) {
             },
             tier: data.tier,
             preferences: data.preferences,
-            bad_result_counter_impact: data.badWorkCounterResults ? bad_result_counter_impact : badWorkDefaults,
-            good_result_counter_impact: data.goodWorkCounterResults ? good_result_counter_impact : goodWorkDefaults,
+            bad_result_counter_impact: data.badWorkCounterResults ? data.badWorkCounterResults  : badWorkDefaults,
+            neutral_result_counter_impact: data.badWorkCounterResults ? data.badWorkCounterResults : neutralWorkDefaults,
+            good_result_counter_impact: data.goodWorkCounterResults ? data.goodWorkCounterResults : goodWorkDefaults,
             counter: data.counter,
             breach_types: data.breachTypes,
             evolutions: data.evolutions ? data.evolutions : []
@@ -263,8 +265,8 @@ if (true) {
         ["minecraft:zombified_piglin", { description: "WIP" }],
         ["minecraft:creeper", { description: "Evolution has torn apart the DNA of the ZUSHI, causing it to only vaguely resemble itself. Its explosions are anomalous in nature, causing some other being to return it back from the dead. This seems to make abnormalities at the facility uncomfortable." }],
         ["creaturefeature:pathogen", { description: "Difficult to contain due to its ability to phase through solid matter and harbor inside living beings. Quick suppression is advised due to the ability for the Pathogen to entirely leave the facility at any time, though it will return to its containment unit the next day out of habit." }],
-        ["creaturefeature:minedflayer", { description: "WIP" }],
-        ["minecraft:goat", { description: "It looks like a goat, acts like a goat. But it's not a goat." }],
+        ["creaturefeature:minedflayer", { description: "The chemical composition of According to the Mind's Flayed Eye is yet to be discovered, but it is observed to be primarily inorganic matter.\n\nThis abnormality is particularly docile, though it causes strange hallucinations in nearby workers.\n\nWhen breaching, According to the Mind's Flayed Eye will cause spacial distortions around it, voiding the facility in a large area." }],
+        ["minecraft:goat", { description: "Tailwhip was rescued from a Moonlit Company associated factory farm after causing massive rolling blackouts in the local area.\n\nIt reacts strongly to rational thought, breaching whenever insight work is performed." }],
         ['antarchy:ouranwood_deer', { description: "Halcyon Digest has been called 'the harbinger of the black forest' as it often seeing fleeing in the peripheral of a person about to experience great agony.\n\nResearchers have noted that this phenomona only exists when Halcyon Digest is in distress, despite warned test subjects being in otherwise no harm whatsoever.\n\nIt has been observed that Halcyon Digest often winces in pain after a new abnormality is brought to the facility, as if something inside of it is agitated. The reclassification of Halcyon Digest to Indigo is pending after the advisory of T-999." }],
         ["creaturefeature:vertigo", { description: "Biological study has found Norton Commander to not contain any genetic material. It is observed to be 'soundlike' in nature, leading many to mythologize it as the sound blown from a goat horn.\n\nNorton Commander's propensity for violence implies that the horn it once came from did not get removed peacefully." }],
         ["minecraft:chicken", { description: "Containment procedures dictate that all personnel should make a reasonable effort to enter and leave A Feast Before The Drought unit swiftly. Lingering too long causes a gradual increasing longing for nourishment.\n\nDuring Incident 00007348, the manager on site allowed the abnormality to breach, causing a hunger so ravenous that the abnormality was ripped apart using the manager's bare hands. The manager immediately felt a sense of bloating and satisfaction wash over them, despite not consuming any parts of the abnormality." }],
@@ -308,9 +310,9 @@ if (true) {
         ["opposing_force:bewilder", { description: "WIP" }],
         ["creaturefeature:nothing", { description: "WIP" }],
         ["antarchy:rolly_polly", { description: "WIP" }],
-        ["antarchy:red_ant", { description: "WIP" }],
-        ["antarchy:stink_bug", { description: "WIP" }],
-        ["antarchy:brown_ant", { description: "WIP" }],
+        ["antarchy:red_ant", { description: "Empire Ant is one of three known insects the facility manager can enter. It's terrain is colloquially known as 'Thoraxis', an extremely harsh and hostile landscape filled with violent and distorting entities. Staying inside of Empire Ant is not recommended as it remains largely unexplored, and is considered manager abandonment.\n\nEscaping Empire Ant can be done through death or finding a paradoxal 'Red Ant'." }],
+        ["antarchy:stink_bug", { description: "Crust Punk is considered an extreme threat to your facility, and it's classification is only considered low due to the scale of its impact.\n\nImmediate suppression is recommended before it crawls into tiny holes and melts the facility with its odor." }],
+        ["antarchy:brown_ant", { description: "Exapunk is one of three known insects the facility manager can enter. It's terrain is colloquially known as 'Elythia', and is largely a peaceful and lush place with various threats sprinkled about. Staying inside of Exapunk is not recommended as it remains largely unexplored, and is considered manager abandonment.\n\nEscaping Exapunk can be done through death or finding a paradoxal 'Brown Ant'." }],
         ["minecraft:ravager", { description: "WIP" }],
         ["hedges_bestiary:burodon", { description: "WIP" }],
         ["hedges_bestiary:plombo", { description: "WIP" }],
@@ -344,7 +346,7 @@ if (true) {
         ["creaturefeature:cannonball_crab", { description: "WIP" }],
         ["antarchy:crawling_blight", { description: "WIP" }],
         ["antarchy:skulking_fright", { description: "WIP" }],
-        ["antarchy:termite", { description: "WIP" }],
+        ["antarchy:termite", { description: "Artificial Death in the West is one of three known insects the facility manager can enter. It's terrain is colloquially known as 'Cavaryn', an underground cave infested with insectoid life forms.\nIt is imperative that any managers protect and preserve any life found in Cavaryn to avoid becoming a target by the hive mind.\n\n.Staying inside of 'Artificial Death in the West' is not recommended as it remains largely unexplored, and is considered manager abandonment.\n\nEscaping 'Artificial Death in the West' can be done through death or finding a paradoxal 'Termite'." }],
         ["antarchy:elka", { description: "WIP" }],
         ["antarchy:manticore", { description: "WIP" }],
         ["antarchy:mantis", { description: "WIP" }],
@@ -368,8 +370,8 @@ if (true) {
         ["minecraft:witch", { description: "WIP" }],
         ["companions:sacred_pontiff", { description: "WIP" }],
         ["antarchy:nightmare", { description: "Deerhunter is the hunter of the black forest, smuggled into your facility by the harbinger. There are no known containment methods." }],
-        ["creaturefeature:detritus", { description: "WIP" }],
-        ["opposing_force:dicer", { description: "WIP" }],
+        ["creaturefeature:detritus", { description: "Walking Wake was reclassified as Indigo after Incident 1021944. Once Walking Wake has begun its march towards death, little can stop it. Its waves of Detritus will wash over everything in its path, infesting your facility in a ceaseless fashion.\n\nYou are a pathetic creature of meat and bone, panting and sweating as you run through the corridors of your overtaken facility. How can you challenge a perfect, immortal army?\n\nDo not engage with Walking Wake. Do not enter its Containment Unit. Do not let it breach. There's nothing you really can do. " }],
+        ["opposing_force:dicer", { description: "Dancer in the Dark is part of a set of twin automatons corrupted by T-459. Its desire to dance has been bent towards violence, demanding the perfect performance. Its heart is enormous lake, black with potion. You are blind, and will drown in its ocean.\n\nBad work results will trigger Dancer in the Dark's autonomous elimination system, marking the manager for death. The next time a bad work result is performed by the manager, two autonomous Dancing Twins will be sent to kill the manager. The Moonlit Company recommends turning the dancer's propensitiy for violence on each of the dancers, using a diplomatic approach." }],
         ["netherman:guardian", { description: "WIP" }],
     ]);
     for (let abnormality of abnormalities.keys()) {

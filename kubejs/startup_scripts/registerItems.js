@@ -2,6 +2,7 @@ StartupEvents.registry("item", (e) => {
   e.create("scp:manager_pda").displayName("Manager PDA");
   e.create("scp:abnormality_heart");
   e.create("scp:spiritual_book");
+  e.create("scp:architects_digest");
   e.create("scp:soul_needle");
   e.create("scp:black_opal");
   e.create("scp:tubasmoke_stick");
