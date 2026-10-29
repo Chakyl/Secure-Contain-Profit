@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"PATHETIC"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:slimy_shield"
 }

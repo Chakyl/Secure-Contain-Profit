@@ -28,5 +28,6 @@
 		"SUPERCHAOS",
 		"SUMMON"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:growth_ray"
 }

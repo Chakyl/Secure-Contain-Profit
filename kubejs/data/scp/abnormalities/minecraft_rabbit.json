@@ -29,7 +29,7 @@
 		"STEAMROLLER"
 	],
 	"evolutions": [
-		"creaturefeature:friend",
-		"antarchy:easter_bunny"
-	]
+		"creaturefeature:friend"
+	],
+	"malformation": "minecraft:air"
 }

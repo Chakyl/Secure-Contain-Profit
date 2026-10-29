@@ -29,5 +29,6 @@
 		"NUKE",
 		"STEAMROLLER"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:hoverboard"
 }

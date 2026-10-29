@@ -4,9 +4,9 @@
 	},
 	"tier": "indigo",
 	"preferences": {
-		"violence": 1,
-		"insight": 3,
-		"harmony": 3
+		"violence": 5,
+		"insight": 2,
+		"harmony": 2
 	},
 	"bad_result_counter_impact": {
 		"violence": 1,
@@ -25,8 +25,11 @@
 	},
 	"counter": 14,
 	"breach_types": [
-		"GRANDIOSE",
+		"LIGHTNING",
 		"INDIGO_ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [
+		"hedges_bestiary:endgel"
+	],
+	"malformation": "minecraft:air"
 }

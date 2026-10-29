@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"SAP"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:relic_feather"
 }

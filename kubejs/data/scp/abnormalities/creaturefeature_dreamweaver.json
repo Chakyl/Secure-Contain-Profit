@@ -29,5 +29,6 @@
 		"ESCAPEARTIST",
 		"SLEEPING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:moon_shoes"
 }

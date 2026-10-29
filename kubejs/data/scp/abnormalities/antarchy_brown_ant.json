@@ -30,5 +30,6 @@
 		"BEGONE",
 		"CHAOS"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:nailer"
 }

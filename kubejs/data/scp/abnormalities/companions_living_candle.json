@@ -29,5 +29,6 @@
 		"SULFUR",
 		"DARKNESS"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:vehement_coal_block"
 }

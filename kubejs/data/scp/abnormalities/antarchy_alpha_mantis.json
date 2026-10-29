@@ -29,5 +29,6 @@
 		"NUKE",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:uranium_knuckles"
 }

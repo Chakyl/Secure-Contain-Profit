@@ -31,5 +31,6 @@
 	],
 	"evolutions": [
 		"creaturefeature:nothing"
-	]
+	],
+	"malformation": "minecraft:air"
 }

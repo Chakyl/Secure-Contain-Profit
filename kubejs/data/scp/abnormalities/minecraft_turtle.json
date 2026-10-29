@@ -30,5 +30,6 @@
 	"evolutions": [
 		"peaceless:shrapin",
 		"opposing_force:terror"
-	]
+	],
+	"malformation": "minecraft:air"
 }

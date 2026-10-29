@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"netherman:gilded_golem"
-	]
+	],
+	"malformation": "minecraft:air"
 }

@@ -27,5 +27,6 @@
 	"breach_types": [
 		"NOTHING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:advanced_exo_suit_core"
 }

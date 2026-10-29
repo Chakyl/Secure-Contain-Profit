@@ -32,5 +32,6 @@
 		"DARKNESS",
 		"NUKE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:nightmare_sword"
 }

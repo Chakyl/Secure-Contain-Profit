@@ -21,11 +21,12 @@
 	"good_result_counter_impact": {
 		"violence": 0,
 		"insight": 0,
-		"harmony": 1
+		"harmony": -1
 	},
 	"counter": 15,
 	"breach_types": [
 		"NOTHING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "minecraft:air"
 }

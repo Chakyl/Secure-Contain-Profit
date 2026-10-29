@@ -29,5 +29,6 @@
 		"SUCK",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:fiery_carapace"
 }

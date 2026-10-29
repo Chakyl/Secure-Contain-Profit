@@ -29,5 +29,6 @@
 		"ESCAPEARTIST",
 		"GRANDIOSE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:manticore_wings"
 }

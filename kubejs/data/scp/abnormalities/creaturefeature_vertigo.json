@@ -29,5 +29,6 @@
 		"SUCK",
 		"SAP"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "creaturefeature:vertigo_horn"
 }

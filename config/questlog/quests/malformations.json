@@ -1,0 +1,29 @@
+{
+  "title": "Malformations",
+  "description": "Sometimes abnormalities with good working relationships with facility managers will gift a small 'bribe' to the manager.\n\nThe Moonlit Company strongly advises swift disposal of these Malformations as the pose a threat to the company's power structure.",
+  "icon": {
+    "item": "echoes:soul_heart_container"
+  },
+  "chapter": "training",
+  "sort_order": 20,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:malformations",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "numismatics:sun",
+      "count": 1
+    }
+  ]
+}

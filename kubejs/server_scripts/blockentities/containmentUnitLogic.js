@@ -134,15 +134,26 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
         let { radius, centerRadiusPos } = global.getClassRadii(tier, block);
         if (item.id == "scp:abnormality_heart") {
             if (global.getPossibleAbnormalities(level, centerRadiusPos, radius, abnormalityUUID).length == 0) {
-                if (String(nbt.data.getString("abnormalityType")).trim().equals(String(item.getCustomData().get("entity_id")).trim().replace('\"', "").replace('\"', ""))) {
+                let heartId = String(item.getCustomData().get("entity_id")).trim().replace('\"', "").replace('\"', "");
+                if (String(nbt.data.getString("abnormalityType")).trim().equals(heartId)) {
                     global.paintAlert(server, player, Text.translatable("messages.scp.containment_unit.abnormality_restored"), '#55FF55');
                     if (!player.isCreative()) item.shrink(1);
-                    spawnAbnormality(server, level, block, nbt, String(nbt.data.getString("abnormalityType")).trim(), tier)
-                    nbt.merge({
-                        data: {
-                            state: "NONE"
-                        },
-                    });
+                    if (heartId.equals("companions:sacred_pontiff")) {
+                        spawnAbnormality(server, level, block, nbt, "minecraft:witch", tier)
+                        nbt.merge({
+                            data: {
+                                state: "NONE",
+                                abnormalityType: "minecraft:witch"
+                            },
+                        });
+                    } else {
+                        spawnAbnormality(server, level, block, nbt, String(nbt.data.getString("abnormalityType")).trim(), tier)
+                        nbt.merge({
+                            data: {
+                                state: "NONE"
+                            },
+                        });
+                    }
                     global.setBlockEntityData(block, nbt);
                     return;
                 } else {
@@ -294,7 +305,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     }
     // Validation logic
     if (tick % 20 == 0 && state !== "BREACH") {
-        if ((nbt.data.counter ? Number(nbt.data.getInt("counter"))  : 0) >= global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
+        if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) : 0) >= global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
             global.increaseUnitCounter(level, block, abnormalityName, nbt);
         }
         if (server.persistentData[teamName].chaos && server.persistentData[teamName].getInt("chaos") >= 1) {
@@ -359,6 +370,25 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                     global.increaseUnitCounter(level, block, abnormalityName, nbt);
                 });
             }
+            if (abnormalityType == 'minecraft:witch' && (nbt.data.counter ? Number(nbt.data.getInt("counter")) : 0) >= 4) {
+                global.paintToTeam(server, level, teamName, Text.translatable("messages.scp.containment_unit.forced_evolving", global.getFullAbnormalityName(nbt.data, "???")), '#FF5555');
+                server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound netherman:respawn_totem block @a ${x} ${y} ${z} 2 1.0`);
+                level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+                server.scheduleInTicks(100, () => {
+                    possibleAbnormality[0].setRemoved("unloaded_to_chunk");
+                    spawnAbnormality(server, level, block, nbt, "companions:sacred_pontiff", "indigo")
+                    nbt.merge({
+                        data: {
+                            state: "NONE",
+                            counter: 0,
+                            abnormalityType: "companions:sacred_pontiff"
+                        },
+                    });
+                    global.setBlockEntityData(block, nbt)
+                });
+            }
         } else {
             if (abnormalityType == "creaturefeature:pathogen" && state !== "BREACH") {
                 for (let entity of server.getEntities()) {
@@ -374,7 +404,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
     // Escaping
     if (tick % 600 == 0 && state != "BREACH" && state != "EXPIRED") {
         centerRadiusPos = block.getPos().offset(0, radius, 0)
-        let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos.below(), radius + 1, abnormalityUUID);
+        let checkedAbs = global.getPossibleAbnormalities(level, centerRadiusPos.below(), radius + 2, abnormalityUUID);
         if (checkedAbs.length == 0) {
             server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 1 0.5`);
             level.spawnParticles("minecraft:angry_villager", true, x, y + 0.5, z, 0.2, 0.2, 0.2, 4, 1.01);
@@ -412,7 +442,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
         }
     }
 })
-
+let notNaturalEvo = ["minecraft:witch", "netherman:doctor"]
 let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID, nearbyPlayers, nbt, item) => {
     let { x, y, z } = block;
     let server = level.getServer();
@@ -436,7 +466,7 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
     if (researchLevel >= 3) {
         let evolutions = Array.from(global.ABNORMALITIES.get(abnormalityId).evolutions()).map(e => e.id);
 
-        if (evolutions && evolutions.length > 0) {
+        if (evolutions && evolutions.length > 0 && !notNaturalEvo.includes(abnormalityId)) {
             evolutions = global.filterKnownAbnormalities(server, teamName, evolutions);
             global.paintToTeam(server, level, teamName, Text.translatable("messages.scp.containment_unit.evolving", global.getFullAbnormalityName(nbt.data, "???")), '#55FF55');
             server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);

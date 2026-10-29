@@ -31,5 +31,6 @@
 	],
 	"evolutions": [
 		"opposing_force:bewilder"
-	]
+	],
+	"malformation": "minecraft:air"
 }

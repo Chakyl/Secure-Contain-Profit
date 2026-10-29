@@ -29,5 +29,6 @@
 		"DARKNESS",
 		"SULFUR"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:lone_wonder"
 }

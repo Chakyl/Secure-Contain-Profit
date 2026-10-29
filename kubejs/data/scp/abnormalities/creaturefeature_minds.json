@@ -28,5 +28,6 @@
 		"CHAOS",
 		"DISSOLVE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:lucky_tacklebox"
 }

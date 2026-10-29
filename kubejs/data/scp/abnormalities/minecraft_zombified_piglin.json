@@ -27,5 +27,6 @@
 	"breach_types": [
 		"STEAMROLLER"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:trotters"
 }

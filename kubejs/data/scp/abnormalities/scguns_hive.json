@@ -29,5 +29,6 @@
 		"CHAOS",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:locust"
 }

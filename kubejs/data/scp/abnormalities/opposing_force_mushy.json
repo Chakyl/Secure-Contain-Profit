@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"SHRINKING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:shrink_ray"
 }

@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"DECOUNT"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:prima_materia"
 }

@@ -29,5 +29,6 @@
 		"ESCAPEARTIST",
 		"SLEEPING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:ultimate_pickaxe"
 }

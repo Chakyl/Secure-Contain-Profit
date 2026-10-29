@@ -5,8 +5,8 @@
 	"tier": "indigo",
 	"preferences": {
 		"violence": 1,
-		"insight": 3,
-		"harmony": 3
+		"insight": 2,
+		"harmony": 5
 	},
 	"bad_result_counter_impact": {
 		"violence": 1,
@@ -27,7 +27,9 @@
 	"breach_types": [
 		"GRANDIOSE",
 		"SUPERCHAOS",
-		"INDIGO_ESCAPEARTIST"
+		"INDIGO_ESCAPEARTIST",
+		"SPAWN_FEND"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "netherman:azazel_spear"
 }

@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"antarchy:moleworm"
-	]
+	],
+	"malformation": "minecraft:air"
 }

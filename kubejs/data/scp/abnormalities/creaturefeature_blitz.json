@@ -27,5 +27,6 @@
 	"breach_types": [
 		"TELEPORT"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:carapice"
 }

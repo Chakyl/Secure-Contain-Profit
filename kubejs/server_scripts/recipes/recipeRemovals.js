@@ -13,6 +13,8 @@ ServerEvents.recipes((event) => {
     const removedInputs = [];
 
     const removedOutputs = [
+        'scguns:diamond_steel_flare', 
+        'scguns:sculk_flare',
         'csr:clay_soldier',
         'minecraft:enchanting_table',
         'scguns:felix_memorial',

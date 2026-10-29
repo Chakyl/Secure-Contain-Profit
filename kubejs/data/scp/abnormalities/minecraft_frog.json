@@ -21,7 +21,7 @@
 	"good_result_counter_impact": {
 		"violence": 0,
 		"insight": 0,
-		"harmony": 1
+		"harmony": -1
 	},
 	"counter": 8,
 	"breach_types": [
@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"companions:cornelius"
-	]
+	],
+	"malformation": "minecraft:air"
 }

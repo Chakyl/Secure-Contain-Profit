@@ -29,5 +29,6 @@
 		"ESCAPEARTIST",
 		"DISSOLVE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:corn_seeds"
 }

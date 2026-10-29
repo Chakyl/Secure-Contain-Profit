@@ -28,5 +28,6 @@
 		"DARKNESS",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:enchanted_chisel"
 }

@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"creaturefeature:canary"
-	]
+	],
+	"malformation": "minecraft:air"
 }

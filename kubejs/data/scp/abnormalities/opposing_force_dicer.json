@@ -4,9 +4,9 @@
 	},
 	"tier": "indigo",
 	"preferences": {
-		"violence": 1,
+		"violence": 2,
 		"insight": 3,
-		"harmony": 3
+		"harmony": 5
 	},
 	"bad_result_counter_impact": {
 		"violence": 1,
@@ -25,11 +25,11 @@
 	},
 	"counter": 14,
 	"breach_types": [
-		"GRANDIOSE",
 		"INDIGO_ESCAPEARTIST",
 		"BITE",
 		"BLIND",
 		"DARKNESS"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:rat_king_and_queen"
 }

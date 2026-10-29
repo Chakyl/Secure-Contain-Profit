@@ -141,19 +141,17 @@
     "tooltip.always.scguns.advanced_composter.0": "Turns organic items into useful resources",
 
     "gateways.verdant_raid_1": "Verdant Raid I",
-    "gateways.amber_raid_1": "Amber Raid I",
-    "gateways.maroon_raid_1": "Maroon Raid I",
-    "gateways.indigo_raid_1": "Verdant Raid I",
-
     "gateways.verdant_raid_2": "Verdant Raid II",
-    "gateways.amber_raid_2": "Amber Raid II",
-    "gateways.maroon_raid_2": "Maroon Raid II",
-    "gateways.indigo_raid_2": "Verdant Raid II",
-
     "gateways.verdant_raid_3": "Verdant Raid III",
-    "gateways.amber_raid_3": "Amber Raid III",
-    "gateways.maroon_raid_3": "Maroon Raid III",
-    "gateways.indigo_raid_3": "Verdant Raid III",
+    "gateways.amber_raid_4": "Amber Raid I",
+    "gateways.amber_raid_5": "Amber Raid II",
+    "gateways.amber_raid_6": "Amber Raid III",
+    "gateways.maroon_raid_7": "Maroon Raid I",
+    "gateways.maroon_raid_8": "Maroon Raid II",
+    "gateways.maroon_raid_9": "Maroon Raid III",
+    "gateways.indigo_raid_10": "Indigo Raid I",
+    "gateways.indigo_raid_11": "Indigo Raid II",
+    "gateways.indigo_raid_12": "Indigo Raid III",
 
     "item.abnormality_heart.filled_tooltip": "Abnormality: %s",
     "item.abnormality_heart.default_tooltip": "Just a random heart. No abnormality",
@@ -163,6 +161,7 @@
     "messages.scp.general.raid.warning": "WARNING: THE MOONLIT COMPANY HAS DETECTED TERRORIST ACTIVITY OUTSIDE YOUR FACILITY. INSURGENCY RAID OCCURRING IN 1 DAY.",
 
     "messages.scp.working.not_nearby": "There's no abnormalities nearby...",
+    "messages.scp.malformation": "The abnormality gave you a small gift!",
 
     "messages.scp.general.threat_level_increased": "THREAT LEVEL INCREASED TO %s.",
     "messages.scp.general.abnormality_escaped": "%s ESCAPED CONTAINMENT AT [x:%s/y:%s/z:%s].",

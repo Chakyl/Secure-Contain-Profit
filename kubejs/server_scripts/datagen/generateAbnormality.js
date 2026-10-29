@@ -23,6 +23,9 @@
  *   - [x] SHRINKING - Shrinks nearby entities
 *    - [x] PATHETIC - Reduces max health temp
 *    - [x] LOST - Hides maps
+*    - [x] LIGHTNINING - Creates lightning nearby
+*    - [x] SPAWN_FEND - Spawns creaturefeature:fend periodically
+*    - [x] SPAWN_WITHER_SKELETON - Spawns minecraft:wither_skeleton periodically
  *   - [x] NOTHING - Does nothing. Same as not including any breaching behaviors, just more 
  */
 /**
@@ -42,156 +45,155 @@ const abnormalities = new Map([
     // Pig line
     ["minecraft:pig", { tier: "verdant", preferences: { violence: 0, insight: 2, harmony: 0 }, name: "ZUSHI", counter: 3, breachTypes: ["TELEPORT", "DECOUNT"], evolutions: ["minecraft:piglin", "minecraft:creeper"] }],
     ["minecraft:piglin", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Direct Line", counter: 5, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:piglin_brute", "minecraft:zombified_piglin"] }],
-    ["minecraft:piglin_brute", { tier: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Direct Line 2", counter: 6, breachTypes: ["STEAMROLLER"] }],
-    ["minecraft:zombified_piglin", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 2 }, name: "Coroner", counter: 3, breachTypes: ["STEAMROLLER"] }],
-    ["minecraft:creeper", { tier: "verdant", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "Heaven Surrounds Us Like a Hood", counter: 12, breachTypes: ["ESCAPEARTIST"] }],
+    ["minecraft:piglin_brute", { tier: "verdant", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Direct Line 2", counter: 6, breachTypes: ["STEAMROLLER"], malformation: 'scguns:freyr' }],
+    ["minecraft:zombified_piglin", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 2 }, name: "Coroner", counter: 3, breachTypes: ["STEAMROLLER"], malformation: 'scguns:trotters' }],
+    ["minecraft:creeper", { tier: "verdant", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "Heaven Surrounds Us Like a Hood", counter: 12, breachTypes: ["ESCAPEARTIST"], malformation: 'netherman:chance_totem' }],
     // Pathogen
     ["creaturefeature:pathogen", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 1 }, name: "Pathogen", counter: 3, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:minedflayer"] }],
-    ["creaturefeature:minedflayer", { tier: "verdant", preferences: { violence: 5, insight: 1, harmony: 2 }, name: "According to the Mind's Flayed Eye", counter: 10, breachTypes: ["NUKE"] }],
+    ["creaturefeature:minedflayer", { tier: "verdant", preferences: { violence: 5, insight: 1, harmony: 2 }, name: "According to the Mind's Flayed Eye", counter: 10, breachTypes: ["NUKE"], malformation: 'scguns:target_tracker_module' }],
     // Goat
-    ["minecraft:goat", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, goodWorkCounterResults: { violence: 1, insight: -2, harmony: 0 },  neutralWorkCounterResults: { violence: 1, insight: -2, harmony: 0 },  badWorkCounterResults: { violence: 0, insight: -2, harmony: -1 },   name: "Tailwhip", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
-    ['antarchy:ouranwood_deer', { tier: "verdant", preferences: { violence: 5, insight: 3, harmony: 0 }, name: "Halcyon Digest", counter: 9, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
-    ["creaturefeature:vertigo", { tier: "verdant", preferences: { violence: -1, insight: 3, harmony: 1 }, name: "Norton Commander", breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], counter: 8 }],
+    ["minecraft:goat", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 1 }, goodWorkCounterResults: { violence: -1, insight: 2, harmony: 0 }, neutralWorkCounterResults: { violence: -1, insight: 2, harmony: 0 }, badWorkCounterResults: { violence: 0, insight: 2, harmony: 1 }, name: "Tailwhip", counter: 2, breachTypes: ["ESCAPEARTIST", "BITE"], evolutions: ["creaturefeature:vertigo", 'antarchy:ouranwood_deer'] }],
+    ['antarchy:ouranwood_deer', { tier: "verdant", preferences: { violence: 5, insight: 3, harmony: 0 }, name: "Halcyon Digest", counter: 9, breachTypes: ["ESCAPEARTIST", "CHAOS"], malformation: 'scp:cornucopia' }],
+    ["creaturefeature:vertigo", { tier: "verdant", preferences: { violence: -1, insight: 3, harmony: 1 }, name: "Norton Commander", counter: 8, breachTypes: ["ESCAPEARTIST", "SUCK", "SAP"], malformation: 'creaturefeature:vertigo_horn' }],
     // Chicken
     ["minecraft:chicken", { tier: "verdant", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "A Feast Before The Drought", counter: 3, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["creaturefeature:stained_glass", "creaturefeature:mockingbird", "peaceless:harpy"] }],
-    ["creaturefeature:stained_glass", { tier: "verdant", preferences: { violence: 3, insight: 2, harmony: 1 }, name: "Fragments Of A Lily", counter: 4, breachTypes: ["TELEPORT"] }],
-    ["creaturefeature:mockingbird", { tier: "verdant", preferences: { violence: 1, insight: 2, harmony: 4 }, name: "Crude Drawing of an Angel", counter: 6, breachTypes: ["ESCAPEARTIST", "SAP"] }],
-    ["peaceless:harpy", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "TU AMIGO", counter: 7, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
+    ["creaturefeature:stained_glass", { tier: "verdant", preferences: { violence: 3, insight: 2, harmony: 1 }, name: "Fragments Of A Lily", counter: 4, breachTypes: ["TELEPORT"], malformation: 'companions:book_ice_shard' }],
+    ["creaturefeature:mockingbird", { tier: "verdant", preferences: { violence: 1, insight: 2, harmony: 4 }, name: "Crude Drawing of an Angel", counter: 6, breachTypes: ["ESCAPEARTIST", "SAP"], malformation: 'opposing_force:relic_feather' }],
+    ["peaceless:harpy", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "TU AMIGO", counter: 7, breachTypes: ["ESCAPEARTIST", "DECOUNT"], malformation: 'opposing_force:thorny_bracelet' }],
     // Villager
     ["minecraft:villager", { tier: "verdant", preferences: { violence: 5, insight: -1, harmony: 0 }, name: "The Architect", counter: 3, breachTypes: ["ESCAPEARTIST", "CHAOS"], evolutions: ["minecraft:zombie_villager", "minecraft:zombie"] }],
     ["minecraft:zombie_villager", { tier: "verdant", preferences: { violence: 0, insight: 1, harmony: 4 }, name: "The Painter", counter: 4, breachTypes: ["ESCAPEARTIST", "SUPERCHAOS"], evolutions: ["creaturefeature:blossom"] }],
     ["minecraft:zombie", { tier: "verdant", preferences: { violence: 0, insight: 3, harmony: 3 }, name: "Live From Hell", counter: 4, breachTypes: ["ESCAPEARTIST", "SAP", "CHAOS"], evolutions: ["creaturefeature:minds"] }],
-    ["creaturefeature:blossom", { tier: "verdant", preferences: { violence: 3, insight: 3, harmony: 1 }, name: "Flatbush", counter: 4, breachTypes: ["SAP", "STEAMROLLER"] }],
-    ["creaturefeature:minds", { tier: "verdant", preferences: { violence: 3, insight: 1, harmony: 3 }, name: "Minehuck", counter: 2, breachTypes: ["CHAOS", "DISSOLVE"] }],
+    ["creaturefeature:blossom", { tier: "verdant", preferences: { violence: 3, insight: 3, harmony: 1 }, name: "Flatbush", counter: 4, breachTypes: ["SAP", "STEAMROLLER"], malformation: 'scguns:shard_culler' }],
+    ["creaturefeature:minds", { tier: "verdant", preferences: { violence: 3, insight: 1, harmony: 3 }, name: "Minehuck", counter: 2, breachTypes: ["CHAOS", "DISSOLVE"], malformation: 'opposing_force:lucky_tacklebox' }],
     // Frog
-    ["minecraft:frog", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog",goodWorkCounterResults: { violence: 0, insight: 0, harmony: 1 },  counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:cornelius"] }],
-    ["companions:cornelius", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog UNCHAINED", goodWorkCounterResults: { violence: 0, insight: 0, harmony: 1 },  counter: 15, breachTypes: ["NOTHING"] }],
+    ["minecraft:frog", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog", goodWorkCounterResults: { violence: 0, insight: 0, harmony: -1 }, counter: 8, breachTypes: ["NOTHING"], evolutions: ["companions:cornelius"] }],
+    ["companions:cornelius", { tier: "verdant", preferences: { violence: 3, insight: 0, harmony: 0 }, name: "Cornelius the Frog UNCHAINED", goodWorkCounterResults: { violence: 0, insight: 0, harmony: -1 }, counter: 15, breachTypes: ["NOTHING"] }],
     // Goph
     ["hedges_bestiary:goph", { tier: "verdant", preferences: { violence: 1, insight: 2, harmony: 1 }, name: "Hollywood Baby", counter: 10, breachTypes: ["ESCAPEARTIST", "POISON"], evolutions: ["opposing_force:furball"] }],
-    ["opposing_force:furball", { tier: "verdant", preferences: { violence: 1, insight: 3, harmony: 0 }, name: "Money Machine", counter: 6, breachTypes: ["ESCAPEARTIST", "BITE"] }],
+    ["opposing_force:furball", { tier: "verdant", preferences: { violence: 1, insight: 3, harmony: 0 }, name: "Money Machine", counter: 6, breachTypes: ["ESCAPEARTIST", "BITE"], malformation: 'opposing_force:sharpshooter_coin' }],
     // No Evos
-    ["hedges_bestiary:skib", { tier: "verdant", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Critical", counter: 6, breachTypes: ["ESCAPEARTIST"] }],
-    ["opposing_force:mushy", { tier: "verdant", preferences: { violence: 2, insight: 2, harmony: 0 }, name: "Slowdive", counter: 5, breachTypes: ["ESCAPEARTIST", "SHRINKING"] }],
-    ["companions:living_candle", { tier: "verdant", preferences: { violence: 3, insight: 3, harmony: 0 }, name: "Friend of Coal", counter: 6, breachTypes: ["ESCAPEARTIST", "SULFUR", "DARKNESS"] }],
+    ["hedges_bestiary:skib", { tier: "verdant", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Critical", counter: 6, breachTypes: ["ESCAPEARTIST"], malformation: 'scguns:laser_musket' }],
+    ["opposing_force:mushy", { tier: "verdant", preferences: { violence: 2, insight: 2, harmony: 0 }, name: "Slowdive", counter: 5, breachTypes: ["ESCAPEARTIST", "SHRINKING"], malformation: 'antarchy:shrink_ray' }],
+    ["companions:living_candle", { tier: "verdant", preferences: { violence: 3, insight: 3, harmony: 0 }, name: "Friend of Coal", counter: 6, breachTypes: ["ESCAPEARTIST", "SULFUR", "DARKNESS"], malformation: 'scguns:vehement_coal_block' }],
     /**
      *   AMBER ABNORMALITIES
      */
     // Machination
     ["creaturefeature:sinister", { tier: "amber", preferences: { violence: 4, insight: -1, harmony: 3 }, name: "Portrait of a Lady on Fire", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:machination"] }],
-    ["creaturefeature:machination", { tier: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 3, breachTypes: ["ESCAPEARTIST"] }],
+    ["creaturefeature:machination", { tier: "amber", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Front Load", counter: 3, breachTypes: ["ESCAPEARTIST"], malformation: 'opposing_force:black_belt' }],
     // Spider
     ["minecraft:spider", { tier: "amber", preferences: { violence: 1, insight: 1, harmony: 1 }, name: "Dewpider", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["minecraft:cave_spider"] }],
     ["minecraft:cave_spider", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Araquanid", counter: 10, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:dreamweaver"] }],
-    ["creaturefeature:dreamweaver", { tier: "amber", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "A I Alien Observer", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
+    ["creaturefeature:dreamweaver", { tier: "amber", preferences: { violence: 4, insight: 3, harmony: 0 }, name: "A I Alien Observer", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"], malformation: 'opposing_force:moon_shoes' }],
     // Bear
     ["minecraft:polar_bear", { tier: "amber", preferences: { violence: 4, insight: 1, harmony: 1 }, name: "Ice Peek", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["creaturefeature:saint_solis"] }],
-    ["creaturefeature:saint_solis", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Society Sunlit Bearly", counter: 6, breachTypes: ["NUKE"] }],
+    ["creaturefeature:saint_solis", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Society Sunlit Bearly", counter: 6, breachTypes: ["NUKE"], malformation: 'scguns:spitfire' }],
     // Breeze
     ["minecraft:breeze", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Choke Enough", counter: 7, breachTypes: ["TELEPORT"], evolutions: ["creaturefeature:blitz", "minecraft:blaze"] }],
-    ["creaturefeature:blitz", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 4 }, name: "Endless", counter: 5, breachTypes: ["TELEPORT"] }],
-    ["minecraft:blaze", { tier: "amber", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Blaze Bird", counter: 6, breachTypes: ["TELEPORT"] }],
+    ["creaturefeature:blitz", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 4 }, name: "Endless", counter: 5, breachTypes: ["TELEPORT"], malformation: 'scguns:carapice' }],
+    ["minecraft:blaze", { tier: "amber", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Blaze Bird", counter: 6, breachTypes: ["TELEPORT"], malformation: "scguns:blasphemy" }],
     // Turtle
     ["minecraft:turtle", { tier: "amber", preferences: { violence: 4, insight: 0, harmony: 0 }, name: "EoO", counter: 6, breachTypes: ["NOTHING"], evolutions: ["peaceless:shrapin", "opposing_force:terror"] }],
-    ["peaceless:shrapin", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["SUCK"] }],
-    ["opposing_force:terror", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "BOKeTE", counter: 5, breachTypes: ["SUCK"] }],
+    ["peaceless:shrapin", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "TURiSTA", counter: 5, breachTypes: ["SUCK"], malformation: 'opposing_force:pot_of_green' }],
+    ["opposing_force:terror", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 1 }, name: "BOKeTE", counter: 5, breachTypes: ["ESCAPEARTIST", "SUCK"], malformation: 'scguns:rg_jigsaw' }],
     // Beauty
     ["creaturefeature:beauty", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "Pagan Poetry", counter: 3, breachTypes: ["ESCAPEARTIST", "DISSOLVE"], evolutions: ["creaturefeature:fiend"] }],
-    ["creaturefeature:fiend", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 4 }, name: "All Neon Like", counter: 2, breachTypes: ["ESCAPEARTIST", "DECOUNT"] }],
+    ["creaturefeature:fiend", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 4 }, name: "All Neon Like", counter: 2, breachTypes: ["ESCAPEARTIST", "DECOUNT"], malformation: 'scguns:prima_materia' }],
     // Dinamo
     ["companions:illager_golem", { tier: "amber", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Slush Puppy", counter: 4, breachTypes: ["CLANKER", "SUCK", "ESCAPEARTIST"], evolutions: ["companions:broken_dinamo"] }],
-    ["companions:broken_dinamo", { tier: "amber", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "Baby Blue", counter: 8, breachTypes: ["NOTHING"] }],
+    ["companions:broken_dinamo", { tier: "amber", preferences: { violence: -1, insight: -1, harmony: -1 }, name: "Baby Blue", counter: 8, breachTypes: ["NOTHING"], malformation: 'scguns:advanced_exo_suit_core' }],
     // Shade
     ["peaceless:shade", { tier: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "LOST", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
-    ["creaturefeature:nothing", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "LOST"] }],
+    ["creaturefeature:nothing", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "LOST"], malformation: 'opposing_force:stalker_gloves' }],
     // Spit bug
     ["antarchy:spit_bug", { tier: "amber", preferences: { violence: 4, insight: 4, harmony: 2 }, name: "Bugsnax", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"], evolutions: ["opposing_force:bewilder"] }],
-    ["opposing_force:bewilder", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"] }],
+    ["opposing_force:bewilder", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"], malformation: 'antarchy:corn_seeds' }],
     // [Red Ant] Rolly Polly
     ["antarchy:rolly_polly", { tier: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["antarchy:red_ant"] }],
-    ["antarchy:red_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
+    ["antarchy:red_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"], malformation: 'scguns:pyroclastic_flow' }],
     // [Brown Ant] Stink bug
     ["antarchy:stink_bug", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 2 }, badWorkCounterResults: { violence: 0, insight: 0, harmony: 0 }, name: "Crust Punk", counter: 1, breachTypes: ["DARKNESS", "SULFUR", "DISSOLVE", "ESCAPEARTIST"], evolutions: ["antarchy:brown_ant"] }],
-    ["antarchy:brown_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"] }],
+    ["antarchy:brown_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Exapunk", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"], malformation: 'scguns:nailer' }],
     // Ravager
-    ["minecraft:ravager", { tier: "amber", preferences: { violence: 1, insight: 5, harmony: 0 }, name: "Decked Out", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["hedges_bestiary:burodon","hedges_bestiary:plombo"] }],
-    ["hedges_bestiary:burodon", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Wyclef Jean", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
-    ["hedges_bestiary:plombo", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Problem", counter: 10, breachTypes: ["ESCAPEARTIST"] }],
+    ["minecraft:ravager", { tier: "amber", preferences: { violence: 1, insight: 5, harmony: 0 }, name: "Decked Out", counter: 2, breachTypes: ["ESCAPEARTIST"], evolutions: ["hedges_bestiary:burodon", "hedges_bestiary:plombo"] }],
+    ["hedges_bestiary:burodon", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Wyclef Jean", counter: 10, breachTypes: ["ESCAPEARTIST"], malformation: 'opposing_force:tear_of_aquarius' }],
+    ["hedges_bestiary:plombo", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Problem", counter: 10, breachTypes: ["ESCAPEARTIST", "BITE"], malformation: 'scguns:inertial' }],
     // No evos
-    ["antarchy:jerry", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Jerry", counter: 8, breachTypes: ["ESCAPEARTIST", "BITE", "SUCK"] }],
-    ["netherman:statue_entity", { tier: "amber", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Security!", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
-    ["companions:hostile_puppet_glove", { tier: "amber", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "Meteora Blues", counter: 8, breachTypes: ["NONE"] }],
-    ["opposing_force:scorcher", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Paprika Pony", counter: 2, breachTypes: ["DARKNESS", "SUCK", "ESCAPEARTIST"] }],
+    ["antarchy:jerry", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Jerry", counter: 8, breachTypes: ["ESCAPEARTIST", "BITE", "SUCK"], malformation: 'opposing_force:blood_amulet' }],
+    ["netherman:statue_entity", { tier: "amber", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Security!", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], malformation: 'opposing_force:enchanted_chisel' }],
+    ["companions:hostile_puppet_glove", { tier: "amber", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "Meteora Blues", counter: 8, breachTypes: ["NONE"], malformation: 'opposing_force:momentum_gauntlet' }],
+    ["opposing_force:scorcher", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Paprika Pony", counter: 2, breachTypes: ["DARKNESS", "SUCK", "ESCAPEARTIST"], malformation: 'opposing_force:fiery_carapace' }],
     /**
      *   MAROON ABNORMALITIES
      */
     // Viventrum
     ["scguns:viventrum", { tier: "maroon", preferences: { violence: 3, insight: 3, harmony: 4 }, name: "Mchngrl", counter: 8, breachTypes: ["NUKE"], evolutions: ["creaturefeature:canary"] }],
-    ["creaturefeature:canary", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 5 }, name: "Bitten Twice", counter: 8, breachTypes: ["DISSOLVE", "NUKE", "STEAMROLLER"] }],
+    ["creaturefeature:canary", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 5 }, name: "Bitten Twice", counter: 8, breachTypes: ["DISSOLVE", "NUKE", "STEAMROLLER"], malformation: 'antarchy:hoverboard' }],
     // Manipulator
     ["netherman:manipulator", { tier: "maroon", preferences: { violence: 4, insight: 1, harmony: 4 }, name: "Quavo", counter: 8, breachTypes: ["SLEEPING", "DARKNESS"], evolutions: ["creaturefeature:coat_of_arms"] }],
-    ["creaturefeature:coat_of_arms", { tier: "maroon", preferences: { violence: 5, insight: 2, harmony: 3 }, name: "RAF", counter: 8, breachTypes: ["TELEPORT", "SUMMON", "SLEEPING"] }],
+    ["creaturefeature:coat_of_arms", { tier: "maroon", preferences: { violence: 5, insight: 2, harmony: 3 }, name: "RAF", counter: 8, breachTypes: ["TELEPORT", "SUMMON", "SLEEPING"], malformation: 'scguns:earths_corpse' }],
     // Rabbit
-    ["minecraft:rabbit", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Cottagecore", counter: 8, breachTypes: ["BITE", "STEAMROLLER"], evolutions: ["creaturefeature:friend", "antarchy:easter_bunny"] }],
-    ["creaturefeature:friend", { tier: "maroon", preferences: { violence: 5, insight: 3, harmony: 2 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "NUKE", "STEAMROLLER", "SUMMON"] }],
-    ["antarchy:easter_bunny", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Gorpcore", counter: 8, breachTypes: ["SUPERCHAOS", "BITE", "TELEPORT"] }],
+    ["minecraft:rabbit", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Cottagecore", counter: 8, breachTypes: ["BITE", "STEAMROLLER"], evolutions: ["creaturefeature:friend"] }],
+    ["creaturefeature:friend", { tier: "maroon", preferences: { violence: 5, insight: 3, harmony: 2 }, name: "Krizcore", counter: 8, breachTypes: ["CHAOS", "NUKE", "STEAMROLLER", "SUMMON"], malformation: 'scguns:weevil' }],
     // Ghastly
     ["netherman:ghastly", { tier: "maroon", preferences: { violence: 4, insight: 2, harmony: 2 }, name: "For I Am The Light (And Mine Is The Only Way)", counter: 8, breachTypes: ["DISSOLVE", "BLIND", "DECOUNT"], evolutions: ["minecraft:ghast"] }],
     ["minecraft:ghast", { tier: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "PENNSYLVANIA FURNACE", counter: 8, breachTypes: ["NUKE"], evolutions: ["scguns:mother_ghast"] }],
-    ["scguns:mother_ghast", { tier: "maroon", preferences: { violence: 2, insight: 3, harmony: 2 }, name: "Big Autumn Ghastjam", counter: 8, breachTypes: ["NUKE", "CHAOS", "BEGONE"] }],
+    ["scguns:mother_ghast", { tier: "maroon", preferences: { violence: 2, insight: 3, harmony: 2 }, name: "Big Autumn Ghastjam", counter: 8, breachTypes: ["NUKE", "CHAOS", "BEGONE"], malformation: 'scguns:bomb_lance' }],
     // Dissident
     ["scguns:dissident", { tier: "maroon", preferences: { violence: 0, insight: 4, harmony: 4 }, name: "Leroy", counter: 4, breachTypes: ["ESCAPEARTIST"], evolutions: ["scguns:praetor"] }],
-    ["scguns:praetor", { tier: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Bart", counter: 6, breachTypes: ["ESCAPEARTIST", "CHAOS"] }],
+    ["scguns:praetor", { tier: "maroon", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Bart", counter: 6, breachTypes: ["ESCAPEARTIST", "CHAOS"], malformation: 'scguns:newborn_cyst' }],
     // Bell
     ["netherman:statue_bossunit", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 1 }, name: "For Whom the Bell Tolls", counter: 3, breachTypes: ["CHAOS"], evolutions: ["netherman:gilded_golem"] }],
-    ["netherman:gilded_golem", { tier: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"] }],
+    ["netherman:gilded_golem", { tier: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Lawrence The Painful", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DISSOLVE"], malformation: 'scguns:terra_incognita' }],
     // Swarm
     ["antarchy:wasp", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Big Fig Wasp", counter: 7, breachTypes: ["SULFUR", "SAP", "CHAOS", "ESCAPEARTIST"], evolutions: ["scguns:hive"] }],
-    ["scguns:hive", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "People-Vulture", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"] }],
+    ["scguns:hive", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "People-Vulture", counter: 4, breachTypes: ["DARKNESS", "CHAOS", "ESCAPEARTIST"], malformation: 'scguns:locust' }],
     // Allay
-    ["minecraft:allay", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Silver Soul", counter: 10, breachTypes: ["CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
-    ["companions:golden_allay", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"] }],
+    ["minecraft:allay", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "Silver Soul", counter: 10, breachTypes: ["SPAWN_FEND", "CHAOS", "TELEPORT"], evolutions: ["companions:golden_allay"] }],
+    ["companions:golden_allay", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 0 }, name: "I Saw the Lemon Glow", counter: 20, breachTypes: ["SPAWN_FEND", "SUPERCHAOS", "TELEPORT", "SUCK", "BEGONE"], malformation: 'scguns:nervepinch' }],
     // Mimic
     ["peaceless:mimic", { tier: "maroon", preferences: { violence: 2, insight: 4, harmony: 3 }, name: "Melos", counter: 3, breachTypes: ["SUCK", "DARKNESS", "DECOUNT", "SAP", "ESCAPEARTIST"], evolutions: ["creaturefeature:cannonball_crab"] }],
-    ["creaturefeature:cannonball_crab", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"] }],
+    ["creaturefeature:cannonball_crab", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Days Go By", counter: 3, breachTypes: ["ESCAPEARTIST", "TELEPORT", "DARKNESS", "DISSOLVE", "SAP"], malformation: 'opposing_force:crystallized_heart' }],
     // [Termite] Crawling Blight
     ["antarchy:crawling_blight", { tier: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "YMTHLYFYMBIKWHRLYFIYBNLSPH", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:skulking_fright"] }],
     ["antarchy:skulking_fright", { tier: "maroon", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Inanimate Sensation", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:termite"] }],
-    ["antarchy:termite", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Artificial Death in the West", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"] }],
+    ["antarchy:termite", { tier: "maroon", preferences: { violence: 4, insight: 4, harmony: 1 }, name: "Artificial Death in the West", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], malformation: 'scguns:super_shotgun' }],
     // Elka
     ["antarchy:elka", { tier: "maroon", preferences: { violence: 4, insight: 3, harmony: 1 }, name: "BOA", counter: 3, breachTypes: ["SUPERCHAOS", "STEAMROLLER", "DECOUNT"], evolutions: ["antarchy:manticore"] }],
-    ["antarchy:manticore", { tier: "maroon", preferences: { violence: 2, insight: 3, harmony: 3 }, name: "Figueroa", counter: 3, breachTypes: ["BEGONE", "ESCAPEARTIST", "GRANDIOSE"] }],
+    ["antarchy:manticore", { tier: "maroon", preferences: { violence: 2, insight: 3, harmony: 3 }, name: "Figueroa", counter: 3, breachTypes: ["BEGONE", "ESCAPEARTIST", "GRANDIOSE"], malformation: 'antarchy:manticore_wings' }],
     // Mantis 
     ["antarchy:mantis", { tier: "maroon", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Killer Queen", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:alpha_mantis"] }],
-    ["antarchy:alpha_mantis", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bites the Dust", counter: 3, breachTypes: ["DARKNESS", "NUKE", "ESCAPEARTIST"] }],
+    ["antarchy:alpha_mantis", { tier: "maroon", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Bites the Dust", counter: 3, breachTypes: ["DARKNESS", "NUKE", "ESCAPEARTIST"], malformation: 'opposing_force:uranium_knuckles' }],
     // Worm
     ["antarchy:worm", { tier: "maroon", preferences: { violence: 0, insight: 0, harmony: 0 }, name: "Eartheater", counter: 13, breachTypes: ["NONE"], evolutions: ["antarchy:moleworm"] }],
     ["antarchy:moleworm", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Crushing", counter: 7, breachTypes: ["DARKNESS", "ESCAPEARTIST"], evolutions: ["antarchy:molevore"] }],
-    ["antarchy:molevore", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"] }],
+    ["antarchy:molevore", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Fast Asleep", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"], malformation: 'antarchy:ultimate_pickaxe' }],
     // Basilisk
     ["antarchy:basilisk", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Debold", counter: 4, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SLEEPING"], evolutions: ["opposing_force:gusher"] }],
-    ["opposing_force:gusher", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Yeet 3ZeroK [126 BPM]", counter: 4, breachTypes: ["ESCAPEARTIST", "PATHETIC"] }],
+    ["opposing_force:gusher", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Yeet 3ZeroK [126 BPM]", counter: 4, breachTypes: ["ESCAPEARTIST", "PATHETIC"], malformation: 'opposing_force:slimy_shield' }],
     // No evos
-    ["scguns:sulfurhead", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Head in the Clouds", counter: 3, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"] }],
-    ["antarchy:flytrap", { tier: "maroon", preferences: { violence: 3, insight: 3, harmony: 2 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"] }],
-    ["antarchy:lucid", { tier: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Rhinestone Eye", counter: 6, breachTypes: ["SLEEP", "ESCAPEARTIST"] }],
-    ["antarchy:vortex", { tier: "maroon", preferences: { violence: 4, insight: 3, harmony: 2 }, name: "Cowgirl Clue", counter: 6, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"] }],
+    ["scguns:sulfurhead", { tier: "maroon", preferences: { violence: 3, insight: 2, harmony: 3 }, name: "Head in the Clouds", counter: 3, breachTypes: ["DISSOLVE", "DARKNESS", "SULFUR"], malformation: 'scguns:lone_wonder' }],
+    ["antarchy:flytrap", { tier: "maroon", preferences: { violence: 3, insight: 3, harmony: 2 }, name: "The Garden", counter: 10, breachTypes: ["SUPERCHAOS", "SUMMON"], malformation: 'antarchy:growth_ray' }],
+    ["antarchy:lucid", { tier: "maroon", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Rhinestone Eye", counter: 6, breachTypes: ["SLEEP", "ESCAPEARTIST"], malformation: 'scguns:astella' }],
+    ["antarchy:vortex", { tier: "maroon", preferences: { violence: 4, insight: 3, harmony: 2 }, name: "Cowgirl Clue", counter: 6, breachTypes: ["SUCK", "DECOUNT", "ESCAPEARTIST"], malformation: 'scguns:shellurker' }],
     /**
      *   Indigo ABNORMALITIES
      */
-    ["netherman:doctor", { tier: "indigo", preferences: { violence: 1, insight: 0, harmony: 1 }, name: "Plague Doctor", counter: 666, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["netherman:azazel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Cathedral of Shadows", counter: 7, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["netherman:doctor", { tier: "indigo", preferences: { violence: 1, insight: 0, harmony: 1 }, name: "Plague Doctor", counter: 666, breachTypes: ["INDIGO_ESCAPEARTIST"], evolutions: ["netherman:azazel"], increment_hidden_counter: true }],
+    ["netherman:azazel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Cathedral of Shadows", counter: 7, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"], malformation: 'netherman:azazel_trophy' }],
     // Stratoshark
-    ["antarchy:stratoshark", { tier: "indigo", preferences: { violence: 5, insight: 2, harmony: 2 }, name: "Shark Smile", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["hedges_bestiary:endgel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Mythological Beauty", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["antarchy:stratoshark", { tier: "indigo", preferences: { violence: 5, insight: 2, harmony: 2 }, name: "Shark Smile", counter: 14, breachTypes: ["LIGHTNING", "INDIGO_ESCAPEARTIST"], evolutions: ["hedges_bestiary:endgel"] }],
+    ["hedges_bestiary:endgel", { tier: "indigo", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Mythological Beauty", counter: 14, breachTypes: ["LIGHTNING", "INDIGO_ESCAPEARTIST"], malformation: 'scguns:lone_wonder' }],
     // Witch
-    ["minecraft:witch", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Belispeak", counter: 3, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["companions:sacred_pontiff", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Fineshrine", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
+    ["minecraft:witch", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Belispeak", counter: 8, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"], goodWorkCounterResults: { violence: 1, insight: 1, harmony: 1 }, neutralWorkCounterResults: { violence: 1, insight: 1, harmony: 1 }, badWorkCounterResults: { violence: -1, insight: -1, harmony: -1 }, evolutions: ["companions:sacred_pontiff"] }],
+    ["companions:sacred_pontiff", { tier: "indigo", preferences: { violence: 4, insight: 2, harmony: 3 }, name: "Fineshrine", counter: 14, breachTypes: ["INDIGO_ESCAPEARTIST"], malformation: 'netherman:manipulator_stick' }],
     // Special
-    ["antarchy:nightmare", { tier: "indigo", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Deerhunter", counter: 8, breachTypes: ["GRANDIOSE", "BITE", "SUPERCHAOS", "SLEEP", "DARKNESS", "NUKE"] }],
+    ["antarchy:nightmare", { tier: "indigo", preferences: { violence: 3, insight: 4, harmony: 4 }, name: "Deerhunter", counter: 8, breachTypes: ["GRANDIOSE", "BITE", "SUPERCHAOS", "SLEEP", "DARKNESS", "NUKE"], malformation: 'antarchy:nightmare_sword' }],
     // No evos
-    ["creaturefeature:detritus", { tier: "indigo", preferences: { violence: 5, insight: 3, harmony: 2 }, name: "Walking Wake", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST"] }],
-    ["opposing_force:dicer", { tier: "indigo", preferences: { violence: 2, insight: 3, harmony: 5 }, name: "Dancer in the Dark", counter: 14, breachTypes: ["GRANDIOSE", "INDIGO_ESCAPEARTIST", "BITE", "BLIND", "DARKNESS"] }],
-    ["netherman:guardian", { tier: "indigo", preferences: { violence: 1, insight: 2, harmony: 5 }, name: "PANIC!!!", counter: 4, breachTypes: ["GRANDIOSE", "SUPERCHAOS", "INDIGO_ESCAPEARTIST"] }]
+    ["creaturefeature:detritus", { tier: "indigo", preferences: { violence: 5, insight: 3, harmony: 2 }, name: "Walking Wake", counter: 14, breachTypes: ["INDIGO_ESCAPEARTIST"], malformation: 'minecraft:totem_of_undying' }],
+    ["opposing_force:dicer", { tier: "indigo", preferences: { violence: 2, insight: 3, harmony: 5 }, name: "Dancer in the Dark", counter: 14, breachTypes: ["INDIGO_ESCAPEARTIST", "BITE", "BLIND", "DARKNESS"], malformation: 'scguns:rat_king_and_queen' }],
+    ["netherman:guardian", { tier: "indigo", preferences: { violence: 1, insight: 2, harmony: 5 }, name: "PANIC!!!", counter: 4, breachTypes: ["GRANDIOSE", "SUPERCHAOS", "INDIGO_ESCAPEARTIST", "SPAWN_FEND"], malformation: 'netherman:azazel_spear' }]
 ]);
 
 
@@ -210,12 +212,14 @@ if (true) {
             },
             tier: data.tier,
             preferences: data.preferences,
-            bad_result_counter_impact: data.badWorkCounterResults ? data.badWorkCounterResults  : badWorkDefaults,
-            neutral_result_counter_impact: data.badWorkCounterResults ? data.badWorkCounterResults : neutralWorkDefaults,
+            bad_result_counter_impact: data.badWorkCounterResults ? data.badWorkCounterResults : badWorkDefaults,
+            neutral_result_counter_impact: data.neutralWorkCounterResults ? data.neutralWorkCounterResults : neutralWorkDefaults,
             good_result_counter_impact: data.goodWorkCounterResults ? data.goodWorkCounterResults : goodWorkDefaults,
             counter: data.counter,
             breach_types: data.breachTypes,
-            evolutions: data.evolutions ? data.evolutions : []
+            evolutions: data.evolutions ? data.evolutions : [],
+            increment_hidden_counter: data.increment_hidden_counter,
+            malformation: data.malformation ? data.malformation : "minecraft:air"
         };
 
         JsonIO.write(`kubejs/data/scp/abnormalities/${namespace}_${path}.json`, abnormalityJson);
@@ -365,10 +369,10 @@ if (true) {
          */
         ["netherman:doctor", { description: "WIP" }],
         ["netherman:azazel", { description: "WIP" }],
-        ["antarchy:stratoshark", { description: "WIP" }],
-        ["hedges_bestiary:endgel", { description: "WIP" }],
-        ["minecraft:witch", { description: "WIP" }],
-        ["companions:sacred_pontiff", { description: "WIP" }],
+        ["antarchy:stratoshark", { description: "Shark Smile has took down a collective 27 military and commercial flights in existence in the field.\nIts breaches are considered extremely due to Shark Smile's ability to peirce the heavens with its lightning, striking and killing everything in its holy light." }],
+        ["hedges_bestiary:endgel", { description: "Mythological Beauty swims through the space between the stars. It is the dark and the light, the life and death. It is a beauty to the eyes, and will instantly raise the threat level of your facility." }],
+        ["minecraft:witch", { description: "Belispeak is a backwater witch discovered by field agent [REDACTED] in XXXX. Unlike most witches, Belispeak seemed to react strongly to the agent's Qliphoth meter, crying out in agony and attempting to perform a ritual before being suppressed in the field.\n\nWhen Belispeak's counter reaches 4, it will perform its ritual to force its own evolution.\n\nAny good or neutral work result will cause Qliphoth anomalies that irritate Belispeak, while bad work results calm it." }],
+        ["companions:sacred_pontiff", { description: "Fineshrine is the ascended Belispeak, and is the only known abnormality to devolve. When killed, it's heart is unbound from the ritual, and return back to its base humanoid form." }],
         ["antarchy:nightmare", { description: "Deerhunter is the hunter of the black forest, smuggled into your facility by the harbinger. There are no known containment methods." }],
         ["creaturefeature:detritus", { description: "Walking Wake was reclassified as Indigo after Incident 1021944. Once Walking Wake has begun its march towards death, little can stop it. Its waves of Detritus will wash over everything in its path, infesting your facility in a ceaseless fashion.\n\nYou are a pathetic creature of meat and bone, panting and sweating as you run through the corridors of your overtaken facility. How can you challenge a perfect, immortal army?\n\nDo not engage with Walking Wake. Do not enter its Containment Unit. Do not let it breach. There's nothing you really can do. " }],
         ["opposing_force:dicer", { description: "Dancer in the Dark is part of a set of twin automatons corrupted by T-459. Its desire to dance has been bent towards violence, demanding the perfect performance. Its heart is enormous lake, black with potion. You are blind, and will drown in its ocean.\n\nBad work results will trigger Dancer in the Dark's autonomous elimination system, marking the manager for death. The next time a bad work result is performed by the manager, two autonomous Dancing Twins will be sent to kill the manager. The Moonlit Company recommends turning the dancer's propensitiy for violence on each of the dancers, using a diplomatic approach." }],

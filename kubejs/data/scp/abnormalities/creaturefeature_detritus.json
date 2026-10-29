@@ -4,9 +4,9 @@
 	},
 	"tier": "indigo",
 	"preferences": {
-		"violence": 1,
+		"violence": 5,
 		"insight": 3,
-		"harmony": 3
+		"harmony": 2
 	},
 	"bad_result_counter_impact": {
 		"violence": 1,
@@ -25,8 +25,8 @@
 	},
 	"counter": 14,
 	"breach_types": [
-		"GRANDIOSE",
 		"INDIGO_ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "minecraft:totem_of_undying"
 }

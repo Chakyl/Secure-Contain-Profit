@@ -16,7 +16,7 @@ const handleEnk = (level, server, abnormality, radius, mult, item, type, workRes
                         item.shrink(1);
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
                     } else {
-                        handleWorkResultCounters(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt, type, workResultCounterImpact);
+                        handleWorkResultCounters(level, scanBlock, nbt, type, workResultCounterImpact);
                     }
                     server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.5`);
                     server.runCommandSilent(`playsound minecraft:entity.cow.milk block @a ${x} ${y} ${z} 2 0.5`);
@@ -38,6 +38,8 @@ const handleEnk = (level, server, abnormality, radius, mult, item, type, workRes
 
 const handleWorkResultCounters = (level, block, nbt, type, workResultCounterImpact) => {
     let counterChange = getWorkResultCounterImpact(type, workResultCounterImpact)
+    console.log(workResultCounterImpact)
+    console.log("Counter Change: " + counterChange)
     if (counterChange >= 1) {
         global.increaseUnitCounter(level, block, global.getFullAbnormalityName(nbt.data, "???"), nbt, counterChange);
     } else if (counterChange <= -1) {
@@ -70,7 +72,7 @@ const handleBadWorkResult = (level, abnormality, radius, type, workResultCounter
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 if (String(nbt.data.getString("state")).trim() == "WORKABLE" && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
-                    handleWorkResultCounters(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt, type, workResultCounterImpact);
+                    handleWorkResultCounters(level, scanBlock, nbt, type, workResultCounterImpact);
                     nbt.merge({
                         data: {
                             state: "NONE"
@@ -208,6 +210,10 @@ const spawnDancer = (level, player) => {
 }
 
 const processWork = (level, server, player, abnormality, radius, workType, workLevel, item, dropOverride) => {
+    if (abnormality.type == "netherman:doctor") {
+        server.runCommandSilent(`execute as ${player.username} run dialog show plague_doctor_choice_dialog_begone`);
+        return;
+    }
     let abnormalityData = global.ABNORMALITIES.get(`${abnormality.type}`);
     let workResult = getWorkResult(abnormalityData, workType, workLevel, abnormality.persistentData.getInt("researchLevel"))
     let processed = false;
@@ -222,6 +228,11 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
                 if (dropOverride) dropItem(level.getBlock(abnormality.getOnPos()), dropOverride);
             } else {
                 dropItem(level.getBlock(abnormality.getOnPos()), dropOverride ? dropOverride : 'numismatics:cog');
+            }
+            if (Math.random() < 0.05 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
+                player.tell(Text.translatable("messages.scp.malformation").green());
+                server.runCommandSilent(`ql progress complete questlog:malformations ${player.username}`)
+                dropItem(level.getBlock(abnormality.getOnPos()), abnormalityData.malformation());
             }
         }
     } else if (workResult.result == "NEUTRAL") {

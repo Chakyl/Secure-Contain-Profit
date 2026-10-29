@@ -28,5 +28,6 @@
 		"DARKNESS",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:super_shotgun"
 }

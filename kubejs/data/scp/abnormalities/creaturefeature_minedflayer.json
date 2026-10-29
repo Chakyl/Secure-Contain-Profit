@@ -27,5 +27,6 @@
 	"breach_types": [
 		"NUKE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:target_tracker_module"
 }

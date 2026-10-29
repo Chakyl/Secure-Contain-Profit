@@ -31,5 +31,6 @@
 	"evolutions": [
 		"minecraft:zombie_villager",
 		"minecraft:zombie"
-	]
+	],
+	"malformation": "minecraft:air"
 }

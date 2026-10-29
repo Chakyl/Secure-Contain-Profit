@@ -27,5 +27,6 @@
 	"breach_types": [
 		"NONE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:momentum_gauntlet"
 }

@@ -4,8 +4,8 @@
 	},
 	"tier": "indigo",
 	"preferences": {
-		"violence": 1,
-		"insight": 3,
+		"violence": 4,
+		"insight": 2,
 		"harmony": 3
 	},
 	"bad_result_counter_impact": {
@@ -25,8 +25,8 @@
 	},
 	"counter": 14,
 	"breach_types": [
-		"GRANDIOSE",
 		"INDIGO_ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "netherman:manipulator_stick"
 }

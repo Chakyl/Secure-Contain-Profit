@@ -25,7 +25,9 @@
 	},
 	"counter": 5,
 	"breach_types": [
+		"ESCAPEARTIST",
 		"SUCK"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:rg_jigsaw"
 }

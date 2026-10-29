@@ -25,8 +25,9 @@
 	},
 	"counter": 14,
 	"breach_types": [
-		"GRANDIOSE",
+		"LIGHTNING",
 		"INDIGO_ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:lone_wonder"
 }

@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"CHAOS"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scp:cornucopia"
 }

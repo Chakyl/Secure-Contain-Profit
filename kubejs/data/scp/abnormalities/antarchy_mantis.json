@@ -30,5 +30,6 @@
 	],
 	"evolutions": [
 		"antarchy:alpha_mantis"
-	]
+	],
+	"malformation": "minecraft:air"
 }

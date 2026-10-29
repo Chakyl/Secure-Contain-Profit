@@ -242,6 +242,23 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
+    if (entity.tickCount % 20 == 0 && Math.random() < 0.25 && breachTypes.contains("LIGHTNING")) {
+        let d = 4 + Math.random() * 2;
+        let strikes = [
+            [entity.x + d, entity.z],
+            [entity.x - d, entity.z],
+            [entity.x, entity.z + d],
+            [entity.x, entity.z - d]
+        ];
+
+        for (let [x, z] of strikes) {
+            server.runCommandSilent(`summon lightning_bolt ${x} ${entity.y - 5} ${z}`);
+        }
+    }
+    if (entity.tickCount % 400 == 0 && (breachTypes.contains("SPAWN_FEND"))) {
+        let spawnPos = entity.getOnPos().offset(Math.floor((Math.random() - 0.5) * 6), 0, Math.floor((Math.random() - 0.5) * 6));
+        server.runCommandSilent(`summon creaturefeature:fend ${spawnPos.x} ${entity.y} ${spawnPos.z}`);
+    }
     // Facility Disasters
     if (entity.tickCount % 600 == 0 && (breachTypes.contains("SUPER") || breachTypes.contains("CHAOS"))) {
         global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, breachTypes.contains("CHAOS") ? 1 : 3);

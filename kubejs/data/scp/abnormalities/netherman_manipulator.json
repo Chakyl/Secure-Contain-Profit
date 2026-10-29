@@ -30,5 +30,6 @@
 	],
 	"evolutions": [
 		"creaturefeature:coat_of_arms"
-	]
+	],
+	"malformation": "minecraft:air"
 }

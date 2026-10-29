@@ -30,5 +30,6 @@
 	],
 	"evolutions": [
 		"opposing_force:furball"
-	]
+	],
+	"malformation": "minecraft:air"
 }

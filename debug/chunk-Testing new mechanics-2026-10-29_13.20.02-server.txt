@@ -1,0 +1,305 @@
+---- Minecraft Chunk IO Error Report ----
+// Not my proudest moment
+
+Time: 2026-10-29 13:20:02
+Description: Loading NBT data
+
+java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readUnsignedByte(Unknown Source) ~[?:?] {}
+	at java.base/java.io.DataInputStream.readByte(Unknown Source) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.readNamedTagType(CompoundTag.java:51) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:59) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.RegionFileStorage.read(RegionFileStorage.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$loadAsync$4(IOWorker.java:192) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$submitTask$13(IOWorker.java:242) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.StrictQueue$IntRunnable.run(StrictQueue.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.run(ProcessorMailbox.java:102) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: IO-Worker-4
+Stacktrace:
+	at java.base/java.io.DataInputStream.readUnsignedByte(Unknown Source) ~[?:?] {}
+	at java.base/java.io.DataInputStream.readByte(Unknown Source) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.readNamedTagType(CompoundTag.java:51) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:59) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.RegionFileStorage.read(RegionFileStorage.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$loadAsync$4(IOWorker.java:192) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$submitTask$13(IOWorker.java:242) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.StrictQueue$IntRunnable.run(StrictQueue.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+-- NBT Tag --
+Details:
+	Tag name: KubeJSPersistentData
+	Tag type: COMPOUND
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:computing_frames,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs.mixins.json:CompoundTagMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.RegionFileStorage.read(RegionFileStorage.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$loadAsync$4(IOWorker.java:192) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.chunk.storage.IOWorker.lambda$submitTask$13(IOWorker.java:242) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.StrictQueue$IntRunnable.run(StrictQueue.java:60) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ProcessorMailbox.run(ProcessorMailbox.java:102) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:classloading}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?] {}
+
+
+-- Chunk Info --
+Details:
+	Level: Testing new mechanics
+	Dimension: minecraft:overworld
+	Storage: entities
+	Position: [4, 0]
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$storeChunkIoError$38(MinecraftServer.java:2040) ~[client-1.21.1-20240808.144430-srg.jar%23295!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:lmft-common.mixins.json:MinecraftServerMixin from mod lmft,pl:mixin:APP:kubejs.mixins.json:MinecraftServerMixin from mod kubejs,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:moonlight.mixins.json:MinecraftServerMixin from mod moonlight,pl:mixin:APP:ae2.mixins.json:spatial.MinecraftServerMixin from mod ae2,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:A}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.10, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 671534912 bytes (640 MiB) / 3229614080 bytes (3080 MiB) up to 8388608000 bytes (8000 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 7800X3D 8-Core Processor           
+	Identifier: AuthenticAMD Family 25 Model 97 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 4.19
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: AMD Radeon(TM) Graphics
+	Graphics card #0 vendor: Advanced Micro Devices, Inc.
+	Graphics card #0 VRAM (MiB): 512.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.22044.1
+	Graphics card #1 name: NVIDIA TITAN X (Pascal)
+	Graphics card #1 vendor: NVIDIA
+	Graphics card #1 VRAM (MiB): 12288.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.15.6094
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 4.80
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 4.80
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 59733.63
+	Virtual memory used (MiB): 26521.98
+	Swap memory total (MiB): 27838.09
+	Swap memory used (MiB): 252.48
+	Space in storage for jna.tmpdir (MiB): available: 684856.63, total: 1906713.25
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): available: 684856.63, total: 1906713.25
+	Space in storage for io.netty.native.workdir (MiB): available: 684856.63, total: 1906713.25
+	Space in storage for java.io.tmpdir (MiB): available: 684856.63, total: 1906713.25
+	Space in storage for workdir (MiB): available: 684856.63, total: 1906713.25
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx8000m -Xms256m
+	Loaded Shaderpack: (off)
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclient
+	ModLauncher services: 
+		sponge-mixin-0.16.4+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.45.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.45.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.45.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar crash_assistant TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.12.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		abyssal_decor_1.21.1_0.11.0_Neoforge.jar          |Abyssal Decor                 |abyssal_decor                 |0.11.0              |Manifest: NOSIGNATURE
+		antarchy-2.2.6+1.21.1-neoforge.jar                |Antarchy                      |antarchy                      |2.2.6+1.21.1-neoforg|Manifest: NOSIGNATURE
+		anthology-1.0.0+1.21.1-neoforge.jar               |Anthology                     |anthology                     |1.0.0+1.21.1-neoforg|Manifest: NOSIGNATURE
+		antos-neoforge-1.21.1-1.4.6.jar                   |AntOS                         |antos                         |1.4.6               |Manifest: NOSIGNATURE
+		ApothicAttributes-1.21.1-2.10.1.jar               |Apothic Attributes            |apothic_attributes            |2.10.1              |Manifest: NOSIGNATURE
+		appleskin-neoforge-mc1.21-3.0.9.jar               |AppleSkin                     |appleskin                     |3.0.9+mc1.21        |Manifest: NOSIGNATURE
+		appliedenergistics2-19.2.18.jar                   |Applied Energistics 2         |ae2                           |19.2.18             |Manifest: NOSIGNATURE
+		architectury-13.0.11-neoforge.jar                 |Architectury                  |architectury                  |13.0.11             |Manifest: NOSIGNATURE
+		balm-neoforge-1.21.1-21.0.66.jar                  |Balm                          |balm                          |21.0.66             |Manifest: NOSIGNATURE
+		better-advanced-tooltips-2101.1.0-build.5.jar     |Better Advanced Tooltips      |betteradvancedtooltips        |2101.1.0-build.5    |Manifest: NOSIGNATURE
+		blueprint-1.21.1-8.2.0.jar                        |Blueprint                     |blueprint                     |8.2.0               |Manifest: NOSIGNATURE
+		bookshelf-neoforge-1.21.1-21.1.81.jar             |Bookshelf                     |bookshelf                     |21.1.81             |Manifest: NOSIGNATURE
+		csr-neoforge-1.21.1-1.0.4.jar                     |Clay Soldiers Remake          |csr                           |1.0.4               |Manifest: NOSIGNATURE
+		cloth-config-15.0.140-neoforge.jar                |Cloth Config v15 API          |cloth_config                  |15.0.140            |Manifest: NOSIGNATURE
+		codecui-neoforge-1.21.1-1.4.7.jar                 |CodecUI                       |codecui                       |1.21.1-1.4.7        |Manifest: NOSIGNATURE
+		collective-1.21.1-8.40.jar                        |Collective                    |collective                    |8.40                |Manifest: NOSIGNATURE
+		colorfulhearts-neoforge-1.21.1-10.5.9.jar         |Colorful Hearts               |colorfulhearts                |10.5.9              |Manifest: NOSIGNATURE
+		companions-neoforge-1.21.1-1.3.6.jar              |Companions!                   |companions                    |1.3.6               |Manifest: NOSIGNATURE
+		CTM-1.21-1.2.1+3.jar                              |ConnectedTexturesMod          |ctm                           |1.21-1.2.1+3        |Manifest: NOSIGNATURE
+		constructionwand-kots-1.21.1-2.16.12.jar          |Construction Wand KOTS        |constructionwand              |2.16.12             |Manifest: NOSIGNATURE
+		Controlling-neoforge-1.21.1-19.0.5.jar            |Controlling                   |controlling                   |19.0.5              |Manifest: NOSIGNATURE
+		corpse-neoforge-1.21.1-1.1.22.jar                 |Corpse                        |corpse                        |1.21.1-1.1.22       |Manifest: NOSIGNATURE
+		crash_assistant-neoforge.jar                      |Crash Assistant               |crash_assistant               |1.11.12             |Manifest: NOSIGNATURE
+		create-1.21.1-6.0.10.jar                          |Create                        |create                        |6.0.10              |Manifest: NOSIGNATURE
+		createaddition-1.7.2.jar                          |Create Crafts & Additions     |createaddition                |1.7.2               |Manifest: NOSIGNATURE
+		create_hypertube-0.6.0-NEOFORGE.jar               |Create Hypertube              |create_hypertube              |0.6.0               |Manifest: NOSIGNATURE
+		CreateNumismatics-1.1.0+neoforge-mc1.21.1.jar     |Create: Numismatics           |numismatics                   |1.1.0+neoforge-mc1.2|Manifest: NOSIGNATURE
+		numismaticsutils-2.3-1.21.1.jar                   |Create: Numismatics Utils     |numismaticsutils              |2.3-1.21.1          |Manifest: NOSIGNATURE
+		creaturefeature-1.2.3.3.jar                       |Creature Feature              |creaturefeature               |1.2.3.3             |Manifest: NOSIGNATURE
+		cultofazazelneoforge-1.1.4.12.jar                 |Cult of Azazel                |netherman                     |1.1.4.12            |Manifest: NOSIGNATURE
+		curios-neoforge-9.5.1+1.21.1.jar                  |Curios API                    |curios                        |9.5.1+1.21.1        |Manifest: NOSIGNATURE
+		cyanide-neoforge-1.21.1-5.0.0.jar                 |Cyanide                       |cyanide                       |5.0.0               |Manifest: NOSIGNATURE
+		dashpanels-2.1+neoforge1.21.1.jar                 |Dashpanels                    |dashpanels                    |2.1                 |Manifest: NOSIGNATURE
+		defaultoptions-neoforge-1.21.1-21.1.8.jar         |Default Options               |defaultoptions                |21.1.8              |Manifest: NOSIGNATURE
+		DefaultWorldType-1.21-5.0.4.jar                   |Default World Type            |defaultworldtype              |1.21-5.0.4          |Manifest: NOSIGNATURE
+		dye_depot-1.21.1-neoforge-2.1.2.jar               |Dye Depot                     |dye_depot                     |2.1.2               |Manifest: NOSIGNATURE
+		dye_the_world-2.4.0.jar                           |Dye The World!                |dye_the_world                 |2.4.0               |Manifest: NOSIGNATURE
+		elevatorid-neoforge-1.21.1-1.11.4.jar             |ElevatorMod                   |elevatorid                    |1.21.1-1.11.4       |Manifest: NOSIGNATURE
+		emi-1.1.24+1.21.1+neoforge.jar                    |EMI                           |emi                           |1.1.24+1.21.1+neofor|Manifest: NOSIGNATURE
+		enchdesc-neoforge-1.21.1-21.1.11.jar              |EnchantmentDescriptions       |enchdesc                      |21.1.11             |Manifest: NOSIGNATURE
+		entityjs-1.5.0.jar                                |EntityJS                      |entityjs                      |1.5.0               |Manifest: NOSIGNATURE
+		ExtremeSoundMuffler-3.56_NeoForge-1.21.jar        |Extreme Sound Muffler         |extremesoundmuffler           |3.56                |Manifest: NOSIGNATURE
+		fancytabsections-6.2-NEOFORGE-1.21.1.jar          |Fancy Tab Sections            |fancytabsections              |6.2-NEOFORGE-1.21.1 |Manifest: NOSIGNATURE
+		fancymenu_neoforge_3.9.12_MC_1.21.1.jar           |FancyMenu                     |fancymenu                     |3.9.12              |Manifest: NOSIGNATURE
+		ferritecore-7.0.3-neoforge.jar                    |Ferrite Core                  |ferritecore                   |7.0.3               |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		fieldguide-1.22.2+1.21.1-neoforge.jar             |Field Guide                   |fieldguide                    |1.22.2+1.21.1       |Manifest: NOSIGNATURE
+		flywheel-neoforge-1.21.1-1.0.6.jar                |Flywheel                      |flywheel                      |1.0.6               |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.42+d1308ded19.jar             |Forgified Fabric API Base     |fabric_api_base               |0.4.42+d1308ded19   |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar    |Forgified Fabric BlockView API|fabric_block_view_api_v2      |1.0.10+9afaaf8c19   |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.4.1+9125b6dc19.jar       |Forgified Fabric Renderer API |fabric_renderer_api_v1        |3.4.1+9125b6dc19    |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.48+73761d2|Forgified Fabric Rendering Dat|fabric_rendering_data_attachme|0.3.48+73761d2e19   |Manifest: NOSIGNATURE
+		framework-neoforge-1.21.1-0.13.11.jar             |Framework                     |framework                     |0.13.11             |Manifest: NOSIGNATURE
+		hats-neoforge-1.21.1-1.2.5.jar                    |Galena Hats                   |galena_hats                   |1.21.1-1.2.5        |Manifest: NOSIGNATURE
+		GatewaysToEternity-1.21.1-5.1.0.jar               |Gateways To Eternity          |gateways                      |5.1.0               |Manifest: NOSIGNATURE
+		geckolib-neoforge-1.21.1-4.9.3.jar                |GeckoLib 4                    |geckolib                      |4.9.3               |Manifest: NOSIGNATURE
+		guiclock-1.21.1-4.7.jar                           |GUI Clock                     |guiclock                      |4.7                 |Manifest: NOSIGNATURE
+		guideme-21.1.19.jar                               |GuideME                       |guideme                       |21.1.19             |Manifest: NOSIGNATURE
+		hedges_bestiary-1.1.3-neo.jar                     |Hedge's Bestiary              |hedges_bestiary               |1.1.3               |Manifest: NOSIGNATURE
+		hideexperimentalwarning-1.21.1-1.2.jar            |Hide Experimental Warning     |hideexperimentalwarning       |1.2                 |Manifest: NOSIGNATURE
+		ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar        |ImmediatelyFast               |immediatelyfast               |1.6.14+1.21.1       |Manifest: NOSIGNATURE
+		incontrol-1.21-10.3.0.jar                         |InControl                     |incontrol                     |1.21-10.3.0         |Manifest: NOSIGNATURE
+		industrialhellscape-1.0.3.jar                     |Industrial Hellscape          |industrialhellscape           |1.0.3               |Manifest: NOSIGNATURE
+		industrially_plated-1.1.0.jar                     |Industrially Plated           |industrially_plated           |1.1.0               |Manifest: NOSIGNATURE
+		integrated_api-neoforge-1.21.1-1.9.1.jar          |Integrated API                |integrated_api                |1.9.1               |Manifest: NOSIGNATURE
+		iris-neoforge-1.8.14-beta.1+mc1.21.1.jar          |Iris                          |iris                          |1.8.14-beta.1+mc1.21|Manifest: NOSIGNATURE
+		Jade-1.21.1-NeoForge-15.10.6.jar                  |Jade                          |jade                          |15.10.6+neoforge    |Manifest: NOSIGNATURE
+		jei-1.21.1-neoforge-19.57.0.446.jar               |Just Enough Items             |jei                           |19.57.0.446         |Manifest: NOSIGNATURE
+		knightlib-neoforge-1.21.1-2.0.4.jar               |Knight Lib                    |knightlib                     |2.0.4               |Manifest: NOSIGNATURE
+		konkrete_neoforge_1.9.9_MC_1.21.jar               |Konkrete                      |konkrete                      |1.9.9               |Manifest: NOSIGNATURE
+		thedarkcolour.kffmod-5.12.0.jar                   |Kotlin For Forge              |kotlinforforge                |5.12.0              |Manifest: NOSIGNATURE
+		kubejs-neoforge-2101.7.2-build.377.jar            |KubeJS                        |kubejs                        |2101.7.2-build.377  |Manifest: NOSIGNATURE
+		kuma-api-neoforge-21.0.8+1.21.jar                 |KumaAPI                       |kuma_api                      |21.0.8              |Manifest: NOSIGNATURE
+		LibX-1.21.1-6.0.15.jar                            |LibX                          |libx                          |1.21.1-6.0.15       |Manifest: NOSIGNATURE
+		lmft-1.1.1+1.21.9-neoforge.jar                    |Load My F***ing Tags          |lmft                          |1.1.1+1.21.9        |Manifest: NOSIGNATURE
+		melody_neoforge_1.0.10_MC_1.21.jar                |Melody                        |melody                        |1.0.10              |Manifest: NOSIGNATURE
+		mezz_config-1.21.1-neoforge-0.5.12.jar            |MezzConfig                    |mezz_config                   |0.5.12              |Manifest: NOSIGNATURE
+		client-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		music_tweaks-neoforge-1.21.1-1.8.0.jar            |Mini Music Tweaks             |music_tweaks                  |1.8.0               |Manifest: NOSIGNATURE
+		modernfix-neoforge-5.27.24+mc1.21.1.jar           |ModernFix                     |modernfix                     |5.27.24+mc1.21.1    |Manifest: NOSIGNATURE
+		moonlight-1.21.1-3.7.2-neoforge.jar               |Moonlight Lib                 |moonlight                     |1.21.1-3.7.2        |Manifest: NOSIGNATURE
+		MouseTweaks-neoforge-mc1.21-2.26.1.jar            |Mouse Tweaks                  |mousetweaks                   |2.26.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.262-universal.jar                   |NeoForge                      |neoforge                      |21.1.262            |Manifest: NOSIGNATURE
+		Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar    |Not Enough Recipe Book        |nerb                          |0.4.3               |Manifest: NOSIGNATURE
+		OctoLib-NEOFORGE-0.6.2+1.21.jar                   |OctoLib                       |octolib                       |0.6.2               |Manifest: NOSIGNATURE
+		Opposing-Force-1.21.1-3.0.0-beta8.jar             |Opposing Force                |opposing_force                |3.0.0-beta8         |Manifest: NOSIGNATURE
+		painterjs-1.2.0.jar                               |PainterJS                     |painterjs                     |1.2.0               |Manifest: NOSIGNATURE
+		Patchouli-1.21.1-93-NEOFORGE.jar                  |Patchouli                     |patchouli                     |1.21.1-93-NEOFORGE  |Manifest: NOSIGNATURE
+		peaceless-1.0.jar                                 |Peaceless                     |peaceless                     |1.0                 |Manifest: NOSIGNATURE
+		Placebo-1.21.1-9.9.2.jar                          |Placebo                       |placebo                       |9.9.2               |Manifest: NOSIGNATURE
+		ponder-neoforge-1.0.82+mc1.21.1.jar               |Ponder                        |ponder                        |1.0.82+mc1.21.1     |Manifest: NOSIGNATURE
+		prickle-neoforge-1.21.1-21.1.11.jar               |PrickleMC                     |prickle                       |21.1.11             |Manifest: NOSIGNATURE
+		questlog-neoforge-1.21.1-3.4.1.jar                |Questlog                      |questlog                      |3.4.1               |Manifest: NOSIGNATURE
+		remi-neoforge-1.21.1-4.7.6.jar                    |Reliable EMI                  |remi                          |4.7.6               |Manifest: NOSIGNATURE
+		reliable_recipes-neoforge-1.21.1-3.2.0.jar        |Reliable Recipes              |reliable_recipes              |3.2.0               |Manifest: NOSIGNATURE
+		reliable_remover-neoforge-1.21.1-3.2.0.jar        |Reliable Remover              |reliable_remover              |3.2.0               |Manifest: NOSIGNATURE
+		reliable_requiem-2.0.0+1.21.1-neoforge.jar        |Reliable Requiem              |reliable_requiem              |2.0.0+1.21.1        |Manifest: NOSIGNATURE
+		rhino-2101.2.8-build.91.jar                       |Rhino                         |rhino                         |2101.2.8-build.91   |Manifest: NOSIGNATURE
+		sable-companion-common-1.21.1-1.6.0.jar           |Sable Companion               |sablecompanion                |1.6.0               |Manifest: NOSIGNATURE
+		ScorchedGuns-1.5.jar                              |Scorched Guns                 |scguns                        |1.5                 |Manifest: NOSIGNATURE
+		Searchables-neoforge-1.21.1-1.0.2.jar             |Searchables                   |searchables                   |1.0.2               |Manifest: NOSIGNATURE
+		scp-1.0-1.21.1.jar                                |Secure Contain Profit         |scp                           |1.0-1.21.1          |Manifest: NOSIGNATURE
+		Sinew-1.21.1-1.4.0.jar                            |Sinew                         |sinew                         |1.4.0               |Manifest: NOSIGNATURE
+		sizeable_foliage-neoforge-1.21.1-1.2.1.jar        |Sizeable Foliage              |sizeable_foliage              |1.2.1               |Manifest: NOSIGNATURE
+		SkyGUIs-21.1.10.jar                               |Sky GUIs                      |skyguis                       |21.1.10             |Manifest: NOSIGNATURE
+		SkyblockBuilder-21.1.37.jar                       |Skyblock Builder              |skyblockbuilder               |21.1.37             |Manifest: NOSIGNATURE
+		society_trading-1.2.12-1.21.1.jar                 |Society Trading               |society_trading               |1.2.12-1.21.1       |Manifest: NOSIGNATURE
+		net.caffeinemc.sodium-neoforge-0.8.13+mc1.21.1-mod|Sodium                        |sodium                        |0.8.13+mc1.21.1     |Manifest: NOSIGNATURE
+		supplementaries-1.21.1-4.0.2-neoforge.jar         |Supplementaries               |supplementaries               |1.21.1-4.0.2        |Manifest: NOSIGNATURE
+		SVDialog-1.6-1.21.1.jar                           |SVDialog                      |dialog                        |1.6-1.21.1          |Manifest: NOSIGNATURE
+		teallib-1.3.teal.jar                              |Teal Lib                      |teallib                       |1.3.teal            |Manifest: NOSIGNATURE
+		echoes-0.6-NEOFORGE-1.21.1.jar                    |Timeless Echoes               |echoes                        |0.6-NEOFORGE-1.21.1 |Manifest: NOSIGNATURE
+		ToastControl-1.21.1-9.0.1.jar                     |Toast Control                 |toastcontrol                  |9.0.1               |Manifest: NOSIGNATURE
+		triggers-1.0.1-1.21.1-neoforge.jar                |Triggers                      |triggers                      |1.0.1               |Manifest: NOSIGNATURE
+		vista-1.21.1-5.5.7-neoforge.jar                   |Vista                         |vista                         |1.21.1-5.5.7        |Manifest: NOSIGNATURE
+		libtooltips-2.3.2-NEOFORGE-1.21.1.jar             |wd's Tooltips Library         |libtooltips                   |2.3.2-NEOFORGE-1.21.|Manifest: NOSIGNATURE
+		wdUtils-2.2-NEOFORGE-1.21.1.jar                   |wd's Utils                    |wdutils                       |2.2-NEOFORGE-1.21.1 |Manifest: NOSIGNATURE
+		whimsy_deco-1.3-1.21.1.jar                        |Whimsy Deco                   |whimsy_deco                   |1.3-1.21.1          |Manifest: NOSIGNATURE
+		worldedit-mod-7.3.8.jar                           |WorldEdit                     |worldedit                     |7.3.8+6939-7d32b45  |Manifest: NOSIGNATURE
+		xaerominimap-neoforge-1.21.1-26.6.0.jar           |Xaero's Minimap               |xaerominimap                  |26.6.0              |Manifest: NOSIGNATURE
+		xaeroworldmap-neoforge-1.21.1-1.46.0.jar          |Xaero's World Map             |xaeroworldmap                 |1.46.0              |Manifest: NOSIGNATURE
+		xaerolib-neoforge-1.21.1-1.7.3.jar                |XaeroLib                      |xaerolib                      |1.7.3               |Manifest: NOSIGNATURE
+		yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.ja|YetAnotherConfigLib           |yet_another_config_lib_v3     |3.8.2+1.21.1-neoforg|Manifest: NOSIGNATURE
+	Crash Report UUID: 9f9d22eb-4c82-4f68-95c7-ea60cb14fee4
+	FML: 4.0.45
+	NeoForge: 21.1.262
+	Flywheel Backend: flywheel:indirect

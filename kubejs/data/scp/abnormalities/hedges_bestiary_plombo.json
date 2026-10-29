@@ -25,7 +25,9 @@
 	},
 	"counter": 10,
 	"breach_types": [
-		"ESCAPEARTIST"
+		"ESCAPEARTIST",
+		"BITE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:inertial"
 }

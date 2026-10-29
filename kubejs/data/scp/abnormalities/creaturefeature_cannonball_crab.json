@@ -31,5 +31,6 @@
 		"DISSOLVE",
 		"SAP"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:crystallized_heart"
 }

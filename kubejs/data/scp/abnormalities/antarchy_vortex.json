@@ -29,5 +29,6 @@
 		"DECOUNT",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:shellurker"
 }

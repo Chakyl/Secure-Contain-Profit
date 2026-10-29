@@ -29,5 +29,6 @@
 		"BITE",
 		"TELEPORT"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "antarchy:prince_egg"
 }

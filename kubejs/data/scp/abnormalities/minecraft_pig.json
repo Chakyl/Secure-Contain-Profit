@@ -31,5 +31,6 @@
 	"evolutions": [
 		"minecraft:piglin",
 		"minecraft:creeper"
-	]
+	],
+	"malformation": "minecraft:air"
 }

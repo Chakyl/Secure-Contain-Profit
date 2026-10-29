@@ -30,5 +30,6 @@
 		"SAP",
 		"LOST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:stalker_gloves"
 }

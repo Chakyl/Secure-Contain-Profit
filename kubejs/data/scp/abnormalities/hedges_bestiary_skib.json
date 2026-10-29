@@ -27,5 +27,6 @@
 	"breach_types": [
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:laser_musket"
 }

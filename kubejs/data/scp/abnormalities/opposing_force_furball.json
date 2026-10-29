@@ -28,5 +28,6 @@
 		"ESCAPEARTIST",
 		"BITE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:sharpshooter_coin"
 }

@@ -27,5 +27,6 @@
 	"breach_types": [
 		"TELEPORT"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "companions:book_ice_shard"
 }

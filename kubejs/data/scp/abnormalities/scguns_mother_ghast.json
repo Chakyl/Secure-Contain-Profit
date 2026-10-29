@@ -29,5 +29,6 @@
 		"CHAOS",
 		"BEGONE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:bomb_lance"
 }

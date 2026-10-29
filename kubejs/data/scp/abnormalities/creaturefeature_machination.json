@@ -27,5 +27,6 @@
 	"breach_types": [
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:black_belt"
 }

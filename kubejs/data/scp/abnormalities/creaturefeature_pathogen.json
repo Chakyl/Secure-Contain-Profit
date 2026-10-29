@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"creaturefeature:minedflayer"
-	]
+	],
+	"malformation": "minecraft:air"
 }

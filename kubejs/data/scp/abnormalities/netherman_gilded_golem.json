@@ -29,5 +29,6 @@
 		"STEAMROLLER",
 		"DISSOLVE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:terra_incognita"
 }

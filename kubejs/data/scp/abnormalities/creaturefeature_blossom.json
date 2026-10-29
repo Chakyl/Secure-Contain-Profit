@@ -28,5 +28,6 @@
 		"SAP",
 		"STEAMROLLER"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:shard_culler"
 }

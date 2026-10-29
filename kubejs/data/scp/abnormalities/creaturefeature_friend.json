@@ -30,5 +30,6 @@
 		"STEAMROLLER",
 		"SUMMON"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:weevil"
 }

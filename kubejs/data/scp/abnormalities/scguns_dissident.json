@@ -29,5 +29,6 @@
 	],
 	"evolutions": [
 		"scguns:praetor"
-	]
+	],
+	"malformation": "minecraft:air"
 }

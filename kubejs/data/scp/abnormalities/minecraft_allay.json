@@ -25,10 +25,12 @@
 	},
 	"counter": 10,
 	"breach_types": [
+		"SPAWN_FEND",
 		"CHAOS",
 		"TELEPORT"
 	],
 	"evolutions": [
 		"companions:golden_allay"
-	]
+	],
+	"malformation": "minecraft:air"
 }

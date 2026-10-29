@@ -30,5 +30,6 @@
 	"evolutions": [
 		"hedges_bestiary:burodon",
 		"hedges_bestiary:plombo"
-	]
+	],
+	"malformation": "minecraft:air"
 }

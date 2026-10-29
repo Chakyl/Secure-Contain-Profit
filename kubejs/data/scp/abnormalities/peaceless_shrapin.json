@@ -27,5 +27,6 @@
 	"breach_types": [
 		"SUCK"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:pot_of_green"
 }

@@ -30,5 +30,6 @@
 	],
 	"evolutions": [
 		"creaturefeature:blossom"
-	]
+	],
+	"malformation": "minecraft:air"
 }

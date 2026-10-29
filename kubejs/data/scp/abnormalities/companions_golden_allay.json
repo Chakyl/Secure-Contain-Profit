@@ -25,10 +25,12 @@
 	},
 	"counter": 20,
 	"breach_types": [
+		"SPAWN_FEND",
 		"SUPERCHAOS",
 		"TELEPORT",
 		"SUCK",
 		"BEGONE"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:nervepinch"
 }

@@ -28,5 +28,6 @@
 		"SLEEP",
 		"ESCAPEARTIST"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:astella"
 }

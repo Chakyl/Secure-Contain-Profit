@@ -29,5 +29,6 @@
 		"SUMMON",
 		"SLEEPING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "scguns:earths_corpse"
 }

@@ -170,8 +170,9 @@ const shops = [
             { item: "scguns:grapeshot", count: 4, numiCost: 4 },
             { item: "scguns:powder_and_ball", count: 4, numiCost: 8 },
             { item: 'scguns:sculk_cell', count: 4, numiCost: 128 },
+            { item: 'scguns:shulkshot', count: 4, numiCost: 256 },
             { item: 'scguns:depleted_energy_core', count: 1, numiCost: 1024 },
-            { item: 'scguns:empty_cell', count: 1, numiCost: 2048 }
+        
         ]
     },
     {

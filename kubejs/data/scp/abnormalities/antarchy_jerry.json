@@ -29,5 +29,6 @@
 		"BITE",
 		"SUCK"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "opposing_force:blood_amulet"
 }
