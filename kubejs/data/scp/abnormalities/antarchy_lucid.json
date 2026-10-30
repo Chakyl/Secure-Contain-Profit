@@ -2,7 +2,7 @@
 	"name": {
 		"translate": "abnormality.antarchy.lucid.name"
 	},
-	"tier": "maroon",
+	"tier": "indigo",
 	"preferences": {
 		"violence": 4,
 		"insight": 2,
@@ -26,7 +26,8 @@
 	"counter": 6,
 	"breach_types": [
 		"SLEEP",
-		"ESCAPEARTIST"
+		"BLIND",
+		"INDIGO_ESCAPEARTIST"
 	],
 	"evolutions": [],
 	"malformation": "scguns:astella"

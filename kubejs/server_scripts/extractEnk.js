@@ -229,7 +229,7 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
             } else {
                 dropItem(level.getBlock(abnormality.getOnPos()), dropOverride ? dropOverride : 'numismatics:cog');
             }
-            if (Math.random() < 0.1 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
+            if (Math.random() < 0.15 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
                 player.tell(Text.translatable("messages.scp.malformation").green());
                 server.runCommandSilent(`ql progress complete questlog:malformations ${player.username}`)
                 dropItem(level.getBlock(abnormality.getOnPos()), abnormalityData.malformation());

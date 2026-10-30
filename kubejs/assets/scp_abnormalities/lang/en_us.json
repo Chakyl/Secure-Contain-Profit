@@ -90,8 +90,6 @@
 	"abnormality.opposing_force.gusher.name": "Yeet 3ZeroK [126 BPM]",
 	"abnormality.scguns.sulfurhead.name": "Head in the Clouds",
 	"abnormality.antarchy.flytrap.name": "The Garden",
-	"abnormality.antarchy.lucid.name": "Rhinestone Eye",
-	"abnormality.antarchy.vortex.name": "Cowgirl Clue",
 	"abnormality.netherman.doctor.name": "Plague Doctor",
 	"abnormality.netherman.azazel.name": "Cathedral of Shadows",
 	"abnormality.antarchy.stratoshark.name": "Shark Smile",
@@ -101,5 +99,7 @@
 	"abnormality.antarchy.nightmare.name": "Deerhunter",
 	"abnormality.creaturefeature.detritus.name": "Walking Wake",
 	"abnormality.opposing_force.dicer.name": "Dancer in the Dark",
-	"abnormality.netherman.guardian.name": "PANIC!!!"
+	"abnormality.netherman.guardian.name": "PANIC!!!",
+	"abnormality.antarchy.lucid.name": "Rhinestone Eye",
+	"abnormality.antarchy.vortex.name": "Cowgirl Clue"
 }

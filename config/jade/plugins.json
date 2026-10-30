@@ -86,6 +86,10 @@
   "corpse": {
     "corpse": true
   },
+  "item_descriptions": {
+    "block_descriptions": true,
+    "entity_descriptions": true
+  },
   "balm": {
     "jade": true
   },

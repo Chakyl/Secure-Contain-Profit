@@ -522,6 +522,10 @@ antsStealFromChests = true
 	# Default: 4.5
 	# Range: 0.5 ~ 16.0
 	royalBossSoundVolume = 4.5
+	#Share of damage above maxSingleHitDamage that still lands. 0 makes the cap a hard limit.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	hitOverflowRate = 0.25
 
 [royalMounts]
 	#Chance denominator for a royal egg advancing one hatch stage on a random tick.

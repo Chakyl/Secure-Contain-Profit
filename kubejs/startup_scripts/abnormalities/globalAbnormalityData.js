@@ -17,4 +17,7 @@ global.ABNORMALITY_LITTERS = new Map([
     ["scguns:sulfurhead", { items: [{ item: 'scguns:sulfur_chunk', chance: 0.32 }] }],
     ["creaturefeature:blossom", { items: [{ item: "minecraft:oak_sapling", chance: 0.45 }] }],
     ["creaturefeature:beauty", { items: [{ item: "minecraft:oak_sapling", chance: 0.45 }] }],
+    ["antarchy:elka", { items: [{ item: "minecraft:purple_wool", chance: 0.75 }] }],
+    ["antarchy:manticore", { items: [{ item: "minecraft:blue_wool", chance: 0.25 }] }],
+    ["minecraft:villager", { items: [{ item: "scp:architects_digestl", chance: 0.01 }] }]
 ])

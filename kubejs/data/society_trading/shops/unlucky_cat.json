@@ -142,6 +142,39 @@
 				"count": 4
 			},
 			"trade_id": "unlucky_cat_creaturefeature_fiendish_essence"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:carapace",
+				"count": 4
+			},
+			"request": {
+				"id": "creaturefeature:coat_scraps",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_carapace"
+		},
+		{
+			"offer": {
+				"id": "creaturefeature:coat_scraps",
+				"count": null
+			},
+			"request": {
+				"id": "antarchy:mantis_claw",
+				"count": 1
+			},
+			"trade_id": "unlucky_cat_creaturefeature_coat_scraps"
+		},
+		{
+			"offer": {
+				"id": "antarchy:mantis_claw",
+				"count": null
+			},
+			"request": {
+				"id": "creaturefeature:carapace",
+				"count": 2
+			},
+			"trade_id": "unlucky_cat_antarchy_mantis_claw"
 		}
 	]
 }

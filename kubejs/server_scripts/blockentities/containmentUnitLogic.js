@@ -239,7 +239,7 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
             let foundEntity = false;
             for (let entity of server.getEntities()) {
                 if (entity.uuid.toString() == abnormalityUUID) {
-                    entity.persistentData.breaching = true;
+                    // entity.persistentData.breaching = true;
                     foundEntity = entity;
                     break;
                 }

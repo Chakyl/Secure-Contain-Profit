@@ -13,13 +13,13 @@
     "curseForgeHash": 2856970585,
     "modrinthHash": "8033176da762df7e9455f6c8584b20b7461c707f"
   },
-  "antarchy-2.2.6+1.21.1-neoforge.jar": {
-    "jarName": "antarchy-2.2.6+1.21.1-neoforge.jar",
+  "antarchy-2.2.9+1.21.1-neoforge.jar": {
+    "jarName": "antarchy-2.2.9+1.21.1-neoforge.jar",
     "modId": "antarchy",
     "name": "Antarchy",
-    "version": "2.2.6+1.21.1-neoforge",
-    "curseForgeHash": 1442448973,
-    "modrinthHash": "30927487277ddd801d6fbdac81f1b91e5dfba83e"
+    "version": "2.2.9+1.21.1-neoforge",
+    "curseForgeHash": 2764465902,
+    "modrinthHash": "6368962a1fde19b7a2e9d6999f0cb9a01db33708"
   },
   "anthology-1.0.0+1.21.1-neoforge.jar": {
     "jarName": "anthology-1.0.0+1.21.1-neoforge.jar",
@@ -29,13 +29,13 @@
     "curseForgeHash": 1812777907,
     "modrinthHash": "079f3da4ffe3f74e24d3d538306490f535e7043e"
   },
-  "antos-neoforge-1.21.1-1.4.6.jar": {
-    "jarName": "antos-neoforge-1.21.1-1.4.6.jar",
+  "antos-neoforge-1.21.1-1.6.1.jar": {
+    "jarName": "antos-neoforge-1.21.1-1.6.1.jar",
     "modId": "antos",
     "name": "AntOS",
-    "version": "1.4.6",
-    "curseForgeHash": 1084523181,
-    "modrinthHash": "a085774d0064996d77f09d25552b67c0734273ff"
+    "version": "1.6.1",
+    "curseForgeHash": 3491105269,
+    "modrinthHash": "16b8617ff80e20b85f7e0971ab5c940cab59cd42"
   },
   "ApothicAttributes-1.21.1-2.10.1.jar": {
     "jarName": "ApothicAttributes-1.21.1-2.10.1.jar",
@@ -698,13 +698,13 @@
     "curseForgeHash": 2296179517,
     "modrinthHash": "d9b2678b014c3ee4ad2599877dbb3e017675dd6b"
   },
-  "scp-1.0-1.21.1.jar": {
-    "jarName": "scp-1.0-1.21.1.jar",
+  "scp-1.1-1.21.1.jar": {
+    "jarName": "scp-1.1-1.21.1.jar",
     "modId": "scp",
     "name": "Secure Contain Profit",
-    "version": "1.0-1.21.1",
-    "curseForgeHash": 310371330,
-    "modrinthHash": "568a95b6088d06b15779f1247c10bdb1c825eecb"
+    "version": "1.1-1.21.1",
+    "curseForgeHash": 310504433,
+    "modrinthHash": "a7b043885f228028f4d88bdb0a13ede7d7f0ac89"
   },
   "Searchables-neoforge-1.21.1-1.0.2.jar": {
     "jarName": "Searchables-neoforge-1.21.1-1.0.2.jar",
@@ -713,6 +713,14 @@
     "version": "1.0.2",
     "curseForgeHash": 2093242437,
     "modrinthHash": "5b8a0b43a474c066371b2e16f9bfb88622552a74"
+  },
+  "SimpleBackups-1.21-4.0.30.jar": {
+    "jarName": "SimpleBackups-1.21-4.0.30.jar",
+    "modId": "simplebackups",
+    "name": "Simple Backups",
+    "version": "1.21-4.0.30",
+    "curseForgeHash": 4239850879,
+    "modrinthHash": "fd9c1374463d2802b119fb5865e43f280573cb4c"
   },
   "Sinew-1.21.1-1.4.0.jar": {
     "jarName": "Sinew-1.21.1-1.4.0.jar",
@@ -809,14 +817,6 @@
     "version": "1.3-1.21.1",
     "curseForgeHash": 1843361633,
     "modrinthHash": "c04c476db9c7bc8952feba19e3cc3a6919ea0162"
-  },
-  "worldedit-mod-7.3.8.jar": {
-    "jarName": "worldedit-mod-7.3.8.jar",
-    "modId": "worldedit",
-    "name": "WorldEdit",
-    "version": "7.3.8+6939-7d32b45",
-    "curseForgeHash": 683807693,
-    "modrinthHash": "924fe181a29bd66be6783f6d589968ab0ee02250"
   },
   "xaerominimap-neoforge-1.21.1-26.6.0.jar": {
     "jarName": "xaerominimap-neoforge-1.21.1-26.6.0.jar",

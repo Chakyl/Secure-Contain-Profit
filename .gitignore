@@ -1,5 +1,7 @@
 node_modules/
+simplebackups/
 backups/
+debug/
 blueprints/
 portable_blueprints/tablet_data
 crash-reports/

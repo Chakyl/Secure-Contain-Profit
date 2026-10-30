@@ -45,7 +45,14 @@
       },
       "weight": 5
     },
-        {
+    {
+      "rarity": "common",
+      "stack": {
+        "identifier": "supplementaries:flax_seeds"
+      },
+      "weight": 5
+    },
+    {
       "rarity": "common",
       "stack": {
         "identifier": "scguns:sculk_tome"
@@ -127,7 +134,7 @@
       "stack": {
         "identifier": "minecraft:sculk"
       },
-      "weight":40
+      "weight": 40
     }
   ]
 }

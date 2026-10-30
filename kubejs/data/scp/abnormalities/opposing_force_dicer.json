@@ -27,7 +27,6 @@
 	"breach_types": [
 		"INDIGO_ESCAPEARTIST",
 		"BITE",
-		"BLIND",
 		"DARKNESS"
 	],
 	"evolutions": [],

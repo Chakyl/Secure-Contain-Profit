@@ -1,8 +1,8 @@
 minecraft:overworld
-antarchy:elythia
-antarchy:thoraxis
-minecraft:the_nether
-minecraft:the_end
 echoes:timeless
+minecraft:the_end
+minecraft:the_nether
 antarchy:cavaryn
+antarchy:thoraxis
+antarchy:elythia
 ae2:spatial_storage

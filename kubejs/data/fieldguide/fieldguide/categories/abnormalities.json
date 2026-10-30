@@ -368,14 +368,6 @@
 		},
 		{
 			"type": "entry",
-			"id": "antarchy:lucid"
-		},
-		{
-			"type": "entry",
-			"id": "antarchy:vortex"
-		},
-		{
-			"type": "entry",
 			"id": "netherman:doctor"
 		},
 		{
@@ -413,6 +405,14 @@
 		{
 			"type": "entry",
 			"id": "netherman:guardian"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:lucid"
+		},
+		{
+			"type": "entry",
+			"id": "antarchy:vortex"
 		}
 	]
 }

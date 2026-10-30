@@ -27,5 +27,6 @@
 	"breach_types": [
 		"NOTHING"
 	],
-	"evolutions": []
+	"evolutions": [],
+	"malformation": "whimsy_deco:froggy_chair"
 }
