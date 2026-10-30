@@ -31,6 +31,5 @@
 	],
 	"evolutions": [
 		"companions:golden_allay"
-	],
-	"malformation": "minecraft:air"
+	]
 }

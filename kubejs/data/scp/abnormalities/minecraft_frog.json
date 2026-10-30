@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"companions:cornelius"
-	],
-	"malformation": "minecraft:air"
+	]
 }

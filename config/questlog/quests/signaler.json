@@ -1,0 +1,30 @@
+{
+  "title": "Containment Unit Signaler",
+  "description": "Unlike managers, employees are both incapable and unauthorized to maintain or research containment units.\n\nThe Containment Unit Signaler was designed for this problem. It allows you to monitor the state of a unit using redstone.\n\nA smart manager will remotely monitor units to avoid manually checking.",
+  "icon": {
+    "item": "scp:containment_unit_signaler"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 10,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:containment_unit_signaler",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:maroon_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "create:redstone_link",
+      "count": 16
+    }
+  ]
+}

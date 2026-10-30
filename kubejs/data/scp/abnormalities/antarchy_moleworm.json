@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"antarchy:molevore"
-	],
-	"malformation": "minecraft:air"
+	]
 }

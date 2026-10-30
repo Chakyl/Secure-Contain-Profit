@@ -5,7 +5,7 @@
     "item": "industrially_plated:generic_fire_safety_sign"
   },
   "chapter": "training",
-  "sort_order": 11,
+  "sort_order": 12,
   "objectives": [
     {
       "type": "questlog:read",

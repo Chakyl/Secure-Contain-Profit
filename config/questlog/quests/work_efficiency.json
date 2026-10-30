@@ -1,0 +1,29 @@
+{
+  "title": "Work Efficiency",
+  "description": "At the lower tiers, Work Efficiency is relatively simple: do what the abnormality likes. \n\nAt higher tiers, paying attention to the Work Efficiency number after performing work is key.\n\nAt Eff. 75% and above, the work will always be good. Whatever you did, do it again.\n\nAt Eff. less than 25%, the work will always be bad. It's unlikely the work type is appropriate. \nBetween 75% and 25% Eff., the work result may be either neutral or bad. This is random, with a higher efficency reducing the chance of bad results.\n\nResearch increases the work efficency by 5% per level.\n\nThe tier of abnormality after verdant lowers work efficency by 10% per tier. \n\nThis is complicated, but you need to know this.",
+  "icon": {
+    "item": "scp:spiritual_book"
+  },
+  "chapter": "training",
+  "sort_order": 11,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:maroon_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "numismatics:sun",
+      "count": 1
+    }
+  ]
+}

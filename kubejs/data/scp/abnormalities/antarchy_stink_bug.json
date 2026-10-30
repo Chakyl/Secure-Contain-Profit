@@ -32,6 +32,5 @@
 	],
 	"evolutions": [
 		"antarchy:brown_ant"
-	],
-	"malformation": "minecraft:air"
+	]
 }

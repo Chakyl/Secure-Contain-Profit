@@ -30,5 +30,5 @@
 	"evolutions": [
 		"netherman:azazel"
 	],
-	"malformation": "minecraft:air"
+	"increment_hidden_counter": true
 }

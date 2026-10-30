@@ -19,7 +19,6 @@ BlockEvents.rightClicked('whimsy_deco:singing_frog', (e) => {
         player.persistentData.jamming = false;
         block.set("minecraft:air")
         server.runCommandSilent(`playsound netherman:bell_beast5 block @a ${block.x} ${block.y} ${block.z} 2 1`);
-
     });
     for (let index = 1; index < iterations; index++) {
         server.scheduleInTicks(index * (20 * 4), () => {

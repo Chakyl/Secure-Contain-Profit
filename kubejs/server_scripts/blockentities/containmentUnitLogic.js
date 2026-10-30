@@ -1,6 +1,6 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken", "opposing_force:mushy", "hedges_bestiary:goph"]],
-    ["amber", ["minecraft:ravager", "creaturefeature:fend", "antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:sinister", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:illager_golem", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove", "opposing_force:scorcher", "antarchy:spit_bug"]],
+    ["amber", ["companions:hostile_puppet_glove", "opposing_force:scorcher", "antarchy:spit_bug"]],
     ["maroon", ["antarchy:basilisk", "antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
     ["indigo", ["creaturefeature:detritus", "minecraft:witch", "antarchy:stratoshark", "opposing_force:dicer", "netherman:guardian", "netherman:doctor"]]
 ])
@@ -124,7 +124,7 @@ BlockEvents.rightClicked('scp:containment_unit', e => {
             spawnAbnormality(server, level, block, nbt, newAbnormality, tier)
             global.addThreatLevel(server, teamName, 1);
             if (Number(server.persistentData[teamName].getInt("threat_level")) % 5 == 0) {
-                global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed())
+                global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Math.floor(Number(server.persistentData[teamName].getInt("threat_level")) / 5)).darkRed())
                 global.questCompleteForTeam(server, level, teamName, "questlog:threat_level");
                 global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
             }
@@ -387,6 +387,28 @@ BlockEvents.blockEntityTick('scp:containment_unit', e => {
                         },
                     });
                     global.setBlockEntityData(block, nbt)
+                    abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
+                });
+            }
+            if (abnormalityType == "netherman:doctor" && (nbt.data.hidden_counter ? Number(nbt.data.getInt("hidden_counter")) : 0) >= 12) {
+                global.paintToTeam(server, level, teamName, Text.translatable("messages.scp.containment_unit.forced_evolving", global.getFullAbnormalityName(nbt.data, "???")), '#FF5555');
+                server.runCommandSilent(`playsound scguns:item.pistol.reload block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound sinew:enter_nether block @a ${x} ${y} ${z} 2 0.5`);
+                server.runCommandSilent(`playsound netherman:respawn_totem block @a ${x} ${y} ${z} 2 1.0`);
+                level.spawnParticles("creaturefeature:sleepy_explode", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+                server.scheduleInTicks(100, () => {
+                    possibleAbnormality[0].setRemoved("unloaded_to_chunk");
+                    spawnAbnormality(server, level, block, nbt, "netherman:azazel", "indigo")
+                    nbt.merge({
+                        data: {
+                            state: "NONE",
+                            counter: 6,
+                            abnormalityType: "netherman:azazel"
+                        },
+                    });
+                    global.setBlockEntityData(block, nbt)
+                    abnormalityName = global.getFullAbnormalityName(nbt.data, "???");
+                    global.increaseUnitCounter(level, block, abnormalityName, nbt);
                 });
             }
         } else {

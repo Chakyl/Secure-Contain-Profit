@@ -27,6 +27,5 @@
 	"breach_types": [
 		"NOTHING"
 	],
-	"evolutions": [],
-	"malformation": "minecraft:air"
+	"evolutions": []
 }

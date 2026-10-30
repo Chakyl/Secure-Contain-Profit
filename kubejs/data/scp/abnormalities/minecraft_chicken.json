@@ -32,6 +32,5 @@
 		"creaturefeature:stained_glass",
 		"creaturefeature:mockingbird",
 		"peaceless:harpy"
-	],
-	"malformation": "minecraft:air"
+	]
 }

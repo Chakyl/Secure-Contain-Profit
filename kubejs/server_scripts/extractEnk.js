@@ -156,7 +156,7 @@ const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
     let eff = workLevel / (abnormalityPref + 1);
     eff -= getTierDebuff(abnormalityData.tier());
     eff += getResearchBuff(researchLevel);
-    if (eff > 0.75) return { result: "GOOD", efficiency: eff };
+    if (eff >= 0.75) return { result: "GOOD", efficiency: eff };
     if (eff < 0.25) return { result: "BAD", efficiency: eff };
     if (Math.random() < eff) return { result: "BAD", efficiency: eff };
     else return { result: "NEUTRAL", efficiency: eff };
@@ -229,7 +229,7 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
             } else {
                 dropItem(level.getBlock(abnormality.getOnPos()), dropOverride ? dropOverride : 'numismatics:cog');
             }
-            if (Math.random() < 0.05 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
+            if (Math.random() < 0.1 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
                 player.tell(Text.translatable("messages.scp.malformation").green());
                 server.runCommandSilent(`ql progress complete questlog:malformations ${player.username}`)
                 dropItem(level.getBlock(abnormality.getOnPos()), abnormalityData.malformation());

@@ -9,4 +9,5 @@ PlayerEvents.loggedIn((e) => {
   if (server.persistentData[teamName] == null) {
     server.persistentData[teamName] = { chaos: 0 };
   }
+  player.persistentData.jamming = false;
 });

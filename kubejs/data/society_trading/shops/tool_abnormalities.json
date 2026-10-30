@@ -227,6 +227,18 @@
 		},
 		{
 			"offer": {
+				"id": "whimsy_deco:recorder",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_whimsy_deco_recorder"
+		},
+		{
+			"offer": {
 				"id": "companions:respawn_totem_block",
 				"count": 1
 			},

@@ -126,6 +126,7 @@
     "tooltip.always.vista.television.0": "When powered with redstone, plays a video based off the provided cassette. Forms multiblock screens",
     "tooltip.always.vista.viewfinder.0": "Captures live footage of the pointed area when linked with a Hollow Cassette",
     "tooltip.always.vista.hollow_cassette.0": "Right click on a viewfinder to link",
+    "tooltip.always.industrialhellscape.cassette_player.0": "Decorative. Use a television to play Cassettes.",
 
     "block.scp.rubber_duck": "Abnormality T-009",
     "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
@@ -187,6 +188,8 @@
     "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?",
     "messages.scp.eraserhead.curse": "I've already cursed you with %s. I'll let your greed slide this time...",
     
+    "messages.scp.tvotr.death": "Gather round' everyone, we're taking a look at %s's fate! Can you believe they let the threat of their facility get to %s? A few more abnormalities and they're gonna be torn from limb to limb by horrors beyond my comprehension! Wonderful!",
+
     "messages.scp.dancer_in_the_dark.marked": "You've been marked for elimination.",
     "messages.scp.dancer_in_the_dark.elimination": "You prepare yourself for death...",
 

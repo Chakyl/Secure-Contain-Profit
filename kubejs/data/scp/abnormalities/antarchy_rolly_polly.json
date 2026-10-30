@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"antarchy:red_ant"
-	],
-	"malformation": "minecraft:air"
+	]
 }

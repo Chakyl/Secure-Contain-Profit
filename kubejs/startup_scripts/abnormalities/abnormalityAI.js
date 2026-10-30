@@ -72,29 +72,54 @@ global.handleUniqueBehaviors = (entity, level, breaching, teamName) => {
             });
         }
     }
+
+    if (entity.type == "netherman:doctor" && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                employee.persistentData.blessed = true;
+            });
+        }
+    }
+    if (entity.type == "netherman:azazel" && breaching && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                if (employee.persistentData.getBoolean("blessed")) {
+                    let transformed = level.createEntity(Math.random() < 0.5 ? "netherman:statue_bossunit" : "netherman:guardian");
+                    transformed.setPos(employee.x + 0.5, employee.y + 1.0, employee.z + 0.5);
+                    transformed.spawn();
+                    transformed.setCustomName(Text.of("Disciple").red().bold());
+                    transformed.setPersistenceRequired();
+                    transformed.setMaxHealth(666);
+                    transformed.setHealth(666);
+                    employee.kill()
+                }
+            });
+        }
+    }
     if (breaching) {
         if (entity.type == "companions:hostile_puppet_glove" && entity.tickCount % 1200 == 0) {
             let nearest = global.getNearestAbnormalities(level, entity.pos, 32).filter((fe) => fe.type != entity.type)
             if (!nearest || nearest.length == 0) return;
-            console
-            if (entity.persistentData.gloveTarget) {
+            if (entity.persistentData.gloveTarget != "") {
                 let foundPlayer = server.getPlayer(String(`${entity.persistentData.getString("gloveTarget")}`));
                 if (foundPlayer) {
                     nearest[0].teleportTo("minecraft:overworld", foundPlayer.x, foundPlayer.y + 1, foundPlayer.z, 0, 0)
+                      server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
+                      server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${foundPlayer.x} ${foundPlayer.y} ${foundPlayer.z} 0.2 0.5`);
                 }
 
-                entity.persistentData.gloveTarget = undefined;
+                entity.persistentData.gloveTarget = "";
 
             } else {
                 let members = global.getTeamMembers(server, level, teamName);
-                console.log(members)
                 if (members && members.length > 0) {
                     let uuidToFetch = global.rollArray(members);
-                    console.log(uuidToFetch)
                     if (uuidToFetch) {
                         let foundPlayer = server.getPlayer(uuidToFetch);
                         if (foundPlayer) {
-                            global.tellTeam(server, level, teamName, Text.translatable("messages.scp.meteora_blues_threaten", foundPlayer.username));
+                            global.tellTeam(server, level, teamName, Text.translatable("messages.scp.meteora_blues_threaten", foundPlayer.username).red());
                             entity.persistentData.gloveTarget = foundPlayer.uuid.toString();
                         }
                     }

@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"scguns:mother_ghast"
-	],
-	"malformation": "minecraft:air"
+	]
 }

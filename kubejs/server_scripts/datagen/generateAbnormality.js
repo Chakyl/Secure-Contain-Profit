@@ -217,11 +217,10 @@ if (true) {
             good_result_counter_impact: data.goodWorkCounterResults ? data.goodWorkCounterResults : goodWorkDefaults,
             counter: data.counter,
             breach_types: data.breachTypes,
-            evolutions: data.evolutions ? data.evolutions : [],
-            increment_hidden_counter: data.increment_hidden_counter,
-            malformation: data.malformation ? data.malformation : "minecraft:air"
+            evolutions: data.evolutions ? data.evolutions : []
         };
-
+        if(data.increment_hidden_counter) abnormalityJson.increment_hidden_counter = true;
+        if(data.malformation) abnormalityJson.malformation = data.malformation;
         JsonIO.write(`kubejs/data/scp/abnormalities/${namespace}_${path}.json`, abnormalityJson);
     });
 
@@ -415,6 +414,7 @@ if (true) {
         ["companions:croissant_egg_block", { num: 16, name: "Cafe Crustacean", hint: "Not yet implemented", summary: "Not yet implemented" }],
         ['companions:soul_furnace_block', { num: 17, name: "Pulsewidth", hint: "Not yet implemented", summary: "Not yet implemented" }],
         ['abyssal_decor:black_mold', { num: 18, name: "Wash My Hands", hint: "Place it down...", summary: "The Moonlit Company has yet to determine if 'Wash My Hands' has originated from this planet or another. It seems to be a conglomarate of living beings that rot solid materials into deepslate, and spreads onto softer materials such as dirt.\n\nCareful containment is required to prevent the swallowing up of all soil on earth by this abnormality." }],
+        ['whimsy_deco:recorder', {num: 19, name: "TV On the Radio", hint: "Take a message", summary: "TV On The Radio very simply tells the user how close they are to death, paralyzing them with fear. In your case, as the facility manager it tells you your facility's threat level.\nNo long term adverse effects have been recorded."}],
         ["companions:respawn_totem_block", { num: 20, name: "Statute of Limitations", hint: "Not yet implemented", summary: "Not yet implemented" }],
         ["companions:porcelain_pottery", { num: 25, name: "Pot of Greed", hint: "Feed the beast", summary: "The Pot of Greed is simple in its desire for money, and thus it is not dangerous." }],
         ["companions:holy_porcelain_pottery", { num: 30, name: "Pot of Lust", hint: "Suck one up", summary: "Once thought to be a simple decoration, the Pot of Lust is an incredibly useful tool abnormality that can contain abnormalities inside of it. It has no known adverse effects" }],

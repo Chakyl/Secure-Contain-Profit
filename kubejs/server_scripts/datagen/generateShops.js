@@ -172,7 +172,7 @@ const shops = [
             { item: 'scguns:sculk_cell', count: 4, numiCost: 128 },
             { item: 'scguns:shulkshot', count: 4, numiCost: 256 },
             { item: 'scguns:depleted_energy_core', count: 1, numiCost: 1024 },
-        
+
         ]
     },
     {
@@ -218,6 +218,7 @@ const shops = [
             { stageRequired: "amber_level", item: "companions:empty_puppet_block", count: 1, numiCost: 16384 },
             { stageRequired: "maroon_level", item: "companions:croissant_egg_block", count: 1, numiCost: 16384 },
             { stageRequired: "maroon_level", item: 'companions:soul_furnace_block', count: 1, numiCost: 32768 },
+            { item: 'whimsy_deco:recorder', count: 1, numiCost: 2048 },
             { stageRequired: "maroon_level", item: "companions:respawn_totem_block", count: 1, numiCost: 32768 },
             { stageRequired: "maroon_level", item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
         ]

@@ -30,6 +30,5 @@
 	"evolutions": [
 		"minecraft:piglin_brute",
 		"minecraft:zombified_piglin"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"antarchy:skulking_fright"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -31,6 +31,5 @@
 	],
 	"evolutions": [
 		"minecraft:ghast"
-	],
-	"malformation": "minecraft:air"
+	]
 }

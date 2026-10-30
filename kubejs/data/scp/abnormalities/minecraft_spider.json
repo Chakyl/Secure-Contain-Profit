@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"minecraft:cave_spider"
-	],
-	"malformation": "minecraft:air"
+	]
 }

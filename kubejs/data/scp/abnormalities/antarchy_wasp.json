@@ -32,6 +32,5 @@
 	],
 	"evolutions": [
 		"scguns:hive"
-	],
-	"malformation": "minecraft:air"
+	]
 }

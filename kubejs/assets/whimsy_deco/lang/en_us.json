@@ -10,5 +10,7 @@
   "block.whimsy_deco.gold_lucky_cat": "Abnormality T-045",
   "tooltip.always.whimsy_deco.gold_lucky_cat.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Fortunate Son</ltcolor>",
   "block.whimsy_deco.singing_frog": "Abnormality T-014",
-  "tooltip.always.whimsy_deco.singing_frog.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Jamming Frog</ltcolor>"
+  "tooltip.always.whimsy_deco.singing_frog.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Jamming Frog</ltcolor>",
+  "block.whimsy_deco.recorder": "Abnormality T-019",
+  "tooltip.always.whimsy_deco.recorder.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;TV on the Radio</ltcolor>"
 }

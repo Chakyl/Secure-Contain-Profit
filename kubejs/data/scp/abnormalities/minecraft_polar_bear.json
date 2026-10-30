@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"creaturefeature:saint_solis"
-	],
-	"malformation": "minecraft:air"
+	]
 }

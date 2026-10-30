@@ -65,5 +65,6 @@ ServerEvents.recipes((e) => {
     macerate('scguns:small_brass_casing', 'create:brass_nugget', 1);
     macerate('scguns:medium_brass_casing', 'create:brass_nugget', 2);
     macerate('scguns:large_brass_casing', 'create:brass_nugget', 3);
+    macerate('minecraft:saddle', 'minecraft:leather', 2);
 })
 

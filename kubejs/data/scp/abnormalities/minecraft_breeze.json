@@ -30,6 +30,5 @@
 	"evolutions": [
 		"creaturefeature:blitz",
 		"minecraft:blaze"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -76,6 +76,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "whimsy_deco:recorder"
+		},
+		{
+			"type": "entry",
 			"id": "companions:respawn_totem_block"
 		},
 		{

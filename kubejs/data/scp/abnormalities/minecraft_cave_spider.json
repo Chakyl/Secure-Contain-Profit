@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"creaturefeature:dreamweaver"
-	],
-	"malformation": "minecraft:air"
+	]
 }

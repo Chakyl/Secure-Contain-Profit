@@ -33,6 +33,5 @@
 	],
 	"evolutions": [
 		"creaturefeature:cannonball_crab"
-	],
-	"malformation": "minecraft:air"
+	]
 }

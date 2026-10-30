@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"companions:sacred_pontiff"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -29,6 +29,5 @@
 	],
 	"evolutions": [
 		"creaturefeature:machination"
-	],
-	"malformation": "minecraft:air"
+	]
 }

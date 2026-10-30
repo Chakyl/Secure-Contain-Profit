@@ -5,7 +5,7 @@
     "item": "fieldguide:page"
   },
   "chapter": "training",
-  "sort_order": 12,
+  "sort_order": 13,
   "objectives": [
     {
       "type": "questlog:read",

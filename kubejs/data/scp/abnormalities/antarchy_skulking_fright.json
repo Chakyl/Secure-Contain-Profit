@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"antarchy:termite"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"creaturefeature:fiend"
-	],
-	"malformation": "minecraft:air"
+	]
 }

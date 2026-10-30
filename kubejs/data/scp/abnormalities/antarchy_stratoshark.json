@@ -30,6 +30,5 @@
 	],
 	"evolutions": [
 		"hedges_bestiary:endgel"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -31,6 +31,5 @@
 	],
 	"evolutions": [
 		"antarchy:manticore"
-	],
-	"malformation": "minecraft:air"
+	]
 }

@@ -31,6 +31,5 @@
 	],
 	"evolutions": [
 		"companions:broken_dinamo"
-	],
-	"malformation": "minecraft:air"
+	]
 }
