@@ -171,6 +171,8 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
 global.increaseUnitCounter = (level, block, abnormalityName, nbt, amount) => {
     let resolvedAmount = amount ? amount : 1;
     let { x, y, z } = block;
+    let state = String(nbt.data.getString("state")).trim();
+    if (state == "BREACH") return;
     if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + resolvedAmount : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
         nbt.merge({
             data: {

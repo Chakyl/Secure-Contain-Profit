@@ -6217,6 +6217,42 @@
             ]
         },
         {
+            "pakku_id": "r2YDogKItHEaMacn",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "timeless-echoes"
+            },
+            "name": {
+                "curseforge": "Timeless Echoes"
+            },
+            "id": {
+                "curseforge": "1660408"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "echoes-0.6-NEOFORGE-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9270/864/echoes-0.6-NEOFORGE-1.21.1.jar",
+                    "id": "9270864",
+                    "parent_id": "1660408",
+                    "hashes": {
+                        "sha1": "ba968ae8df689030182ec52d2e3e342b573ad103",
+                        "md5": "8bc3e716818f2278fd9b4f57e87ee1ec"
+                    },
+                    "required_dependencies": [],
+                    "size": 1898078,
+                    "date_published": "2026-10-20T20:03:54.937Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ehyiIAn1K1Zq31Qc",
             "pakku_links": [
                 "sPmY3D0SXBa6fcJC"

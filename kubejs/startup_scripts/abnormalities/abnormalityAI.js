@@ -106,8 +106,8 @@ global.handleUniqueBehaviors = (entity, level, breaching, teamName) => {
                 let foundPlayer = server.getPlayer(String(`${entity.persistentData.getString("gloveTarget")}`));
                 if (foundPlayer) {
                     nearest[0].teleportTo("minecraft:overworld", foundPlayer.x, foundPlayer.y + 1, foundPlayer.z, 0, 0)
-                      server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
-                      server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${foundPlayer.x} ${foundPlayer.y} ${foundPlayer.z} 0.2 0.5`);
+                    server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
+                    server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${foundPlayer.x} ${foundPlayer.y} ${foundPlayer.z} 0.2 0.5`);
                 }
 
                 entity.persistentData.gloveTarget = "";
@@ -303,16 +303,16 @@ global.handleAbnormality = (entity, abnormalityData) => {
             if (scanBlock.id == "scp:containment_unit") {
                 let nbt = scanBlock.getEntityData();
                 if (!(!nbt || !nbt.data)) {
-                    if (nbt.data.abnormalityUUID != "") {
+                    if (nbt.data.abnormalityUUID != "" && entity.uuid.toString() != nbt.data.abnormalityUUID) {
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
+                        level.spawnParticles("ae2:lightning_fx", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
+                        server.runCommandSilent(`playsound opposing_force:gun_shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
                         return;
                     }
                 }
             }
         }
         // TODO: decount effects
-        // server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
-        // level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
 
     }
 };

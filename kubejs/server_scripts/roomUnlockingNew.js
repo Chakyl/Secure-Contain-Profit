@@ -113,7 +113,8 @@ let fieldGuideMap = new Map([
     ["room_abnormality_clay", `block:minecraft/chiseled_tuff_bricks`],
     ["room_abnormality_blood_pond", `block:abyssal_decor/rough_blood_coral`],
     ["room_abnormality_sulfur", `block:scguns/sulfur_vent`],
-    ["room_abnormality_niter", `block:scguns/geothermal_vent`]
+    ["room_abnormality_niter", `block:scguns/geothermal_vent`],
+    ["room_abnormality_timeless", `block:echoes/portal`]
 ])
 BlockEvents.rightClicked([
     'scp:warehouse_lock_block',
