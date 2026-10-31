@@ -21,6 +21,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
+			"stage_required": "maroon_level",
 			"trade_id": "abnormality_management_scp_employee_pda"
 		},
 		{
@@ -33,6 +34,7 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
+			"stage_required": "maroon_level",
 			"trade_id": "abnormality_management_scp_employee_request"
 		},
 		{
@@ -45,6 +47,7 @@
 				"count": 1
 			},
 			"numismatics_cost": 64,
+			"stage_required": "maroon_level",
 			"trade_id": "abnormality_management_scp_home_marker"
 		},
 		{
