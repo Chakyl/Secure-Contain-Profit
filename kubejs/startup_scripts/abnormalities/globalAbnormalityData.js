@@ -8,7 +8,7 @@ global.ABNORMALITIES = {
     },
 
     keys: function() {
-        return Array.from(AbnormalityRegistry.getAllEntityIds());
+        return AbnormalityRegistry.getAllEntityIds().toArray();
     }
 };
 

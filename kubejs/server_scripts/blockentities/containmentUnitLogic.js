@@ -1,8 +1,8 @@
 const scpPool = new Map([
     ["verdant", ["companions:living_candle", "minecraft:pig", "creaturefeature:pathogen", "minecraft:villager", "minecraft:goat", "minecraft:frog", "minecraft:chicken", "opposing_force:mushy", "hedges_bestiary:goph"]],
-    ["amber", ["companions:hostile_puppet_glove", "opposing_force:scorcher", "antarchy:spit_bug"]],
-    ["maroon", ["antarchy:basilisk", "antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "antarchy:lucid", "antarchy:vortex", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
-    ["indigo", ["creaturefeature:detritus", "minecraft:witch", "antarchy:stratoshark", "opposing_force:dicer", "netherman:guardian", "netherman:doctor"]]
+    ["amber", ["minecraft:ravager", "creaturefeature:fend", "antarchy:jerry", "antarchy:rolly_polly", "antarchy:stink_bug", "creaturefeature:sinister", "minecraft:spider", "minecraft:polar_bear", "minecraft:breeze", "minecraft:turtle", "creaturefeature:beauty", "companions:illager_golem", "peaceless:shade", "netherman:statue_entity", "companions:hostile_puppet_glove", "opposing_force:scorcher", "antarchy:spit_bug"]],
+    ["maroon", ["antarchy:basilisk", "antarchy:elka", "antarchy:mantis", "antarchy:worm", "antarchy:crawling_blight", "antarchy:flytrap", "netherman:statue_bossunit", "scguns:viventrum", "netherman:manipulator", "minecraft:rabbit", "netherman:ghastly", "scguns:dissident", "antarchy:wasp", "minecraft:allay", "peaceless:mimic"]],
+    ["indigo", ["creaturefeature:detritus", "minecraft:witch", "antarchy:stratoshark", "opposing_force:dicer", "netherman:guardian", "antarchy:lucid", "antarchy:vortex", "netherman:doctor"]]
 ])
 
 const spawnAbnormality = (server, level, block, nbt, abnormalityId, tier) => {
@@ -486,7 +486,7 @@ let incrementResearch = (level, block, centerRadiusPos, radius, abnormalityUUID,
         global.questCompleteForTeam(server, level, teamName, "questlog:abnormality_notes");
     }
     if (researchLevel >= 3) {
-        let evolutions = Array.from(global.ABNORMALITIES.get(abnormalityId).evolutions()).map(e => e.id);
+        let evolutions = global.ABNORMALITIES.get(abnormalityId).evolutions().toArray().map(e => e.id);
 
         if (evolutions && evolutions.length > 0 && !notNaturalEvo.includes(abnormalityId)) {
             evolutions = global.filterKnownAbnormalities(server, teamName, evolutions);
