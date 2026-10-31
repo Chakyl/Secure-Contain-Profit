@@ -29,6 +29,7 @@ BlockEvents.blockEntityTick('scp:shelter', (e) => {
     } else {
         let teamName = global.getPlayerTeamName(level, nearbyPlayers[0]);
         global.addChaos(server, block, teamName, 1);
+        global.questCompleteForTeam(server, level, teamName, "questlog:chaos");
         FieldGuide.unlock(nearbyPlayers[0], `block:supplementaries/safe`);
     }
     nearbyPlayers.forEach((player) => {

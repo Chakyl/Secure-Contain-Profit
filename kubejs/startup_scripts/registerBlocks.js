@@ -85,6 +85,17 @@ StartupEvents.registry("block", (e) => {
             blockInfo.serverTicking()
             blockInfo.tickFrequency(20)
         });
+
+    e.create("scp:blood_pond")
+        .resistance(3600000)
+        .unbreakable()
+        .defaultCutout()
+        .texture(`minecraft:block/stone`)
+        .blockEntity((blockInfo) => {
+            blockInfo.serverTicking()
+            blockInfo.tickFrequency(600)
+        });
+
     e.create("scp:rubber_duck", "cardinal")
         .soundType("shroomlight")
         .parentModel("whimsy_deco:block/rubber_duck")

@@ -93,6 +93,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 8192,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_scp_deaths_dynamic_shroud"
 		},
 		{
@@ -117,6 +118,7 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_scp_rubber_duck"
 		},
 		{
@@ -129,6 +131,7 @@
 				"count": 1
 			},
 			"numismatics_cost": 4096,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_scp_spoon_bender"
 		},
 		{
@@ -141,6 +144,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 1024,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_scguns_the_pact"
 		},
 		{
@@ -153,6 +157,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 2048,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_netherman_maze_door"
 		},
 		{
@@ -165,6 +170,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 8192,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_whimsy_deco_lucky_cat"
 		},
 		{
@@ -177,6 +183,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 8192,
+			"stage_required": "maroon_level",
 			"trade_id": "tool_abnormalities_whimsy_deco_singing_frog"
 		},
 		{
@@ -189,6 +196,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
+			"stage_required": "amber_level",
 			"trade_id": "tool_abnormalities_companions_empty_puppet_block"
 		},
 		{
@@ -201,6 +209,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 16384,
+			"stage_required": "maroon_level",
 			"trade_id": "tool_abnormalities_companions_croissant_egg_block"
 		},
 		{
@@ -213,7 +222,20 @@
 				"count": 8
 			},
 			"numismatics_cost": 32768,
+			"stage_required": "maroon_level",
 			"trade_id": "tool_abnormalities_companions_soul_furnace_block"
+		},
+		{
+			"offer": {
+				"id": "whimsy_deco:recorder",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 4
+			},
+			"numismatics_cost": 2048,
+			"trade_id": "tool_abnormalities_whimsy_deco_recorder"
 		},
 		{
 			"offer": {
@@ -225,6 +247,7 @@
 				"count": 8
 			},
 			"numismatics_cost": 32768,
+			"stage_required": "maroon_level",
 			"trade_id": "tool_abnormalities_companions_respawn_totem_block"
 		},
 		{
@@ -237,6 +260,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 2048,
+			"stage_required": "maroon_level",
 			"trade_id": "tool_abnormalities_companions_porcelain_pottery"
 		}
 	]

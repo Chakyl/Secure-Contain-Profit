@@ -160,3 +160,14 @@
 //     }
 //   ]
 // });
+
+// runNpcDatagen("plague_doctor", {
+//   name: "I-386",
+//   portraitPath: "netherman:textures/item/doctor_spawn_egg",
+//   choiceDialogs: [
+//     {
+//       name: "begone",
+//       text: ["I don't care to work with those cloaked in power over the weak.", "Send over those you lord over, I will give them salvation."]
+//     }
+//   ]
+// });

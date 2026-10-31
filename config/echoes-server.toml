@@ -1,0 +1,12 @@
+#Adds ticks to the base duration of a level inside the Timeless.
+# Default: 0
+# Range: 0 ~ 9223372036854775807
+global_extra_timeless_duration = 0
+#Each level will multiply the loot drops by this amount
+# Default: 0.10000000149011612
+# Range: 0.0 ~ 3.4028234663852886E38
+global_extra_timeless_loot_drops = 0.10000000149011612
+#How many base rolls to do per chest
+# Default: 5
+# Range: > 0
+base_chest_rolls = 5

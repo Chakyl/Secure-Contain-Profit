@@ -1,0 +1,37 @@
+{
+	"name": {
+		"translate": "abnormality.peaceless.mimic.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 3
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"SUCK",
+		"DARKNESS",
+		"DECOUNT",
+		"SAP",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"creaturefeature:cannonball_crab"
+	]
+}

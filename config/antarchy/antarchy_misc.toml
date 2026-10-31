@@ -3,21 +3,7 @@
 	fireflyParticlesEnabled = true
 
 [dreamSand]
-	#If true, jumping from dream sand applies temporary low gravity until solid ground is touched.
-	enabled = true
-	#Multiplier applied to upward jump velocity when leaving dream sand.
-	# Default: 1.3
-	# Range: 0.0 ~ 16.0
-	jumpVelocityMultiplier = 1.3
-	#Multiplier applied to downward velocity while low gravity is active.
-	# Default: 0.45
-	# Range: 0.0 ~ 1.0
-	gravityMultiplier = 0.45
-	#Seconds the low-gravity effect remains active after leaving dream sand.
-	# Default: 7.0
-	# Range: 0.0 ~ 60.0
-	effectDurationSeconds = 7.0
-	#Multiplier applied to dream sand's own falling-block gravity (how slowly it falls as a block, distinct from the player low-gravity effect).
+	#Multiplier applied to dream sand's falling-block gravity, i.e. how slowly it falls as a block.
 	# Default: 0.4
 	# Range: 0.0 ~ 16.0
 	fallingBlockGravityMultiplier = 0.4

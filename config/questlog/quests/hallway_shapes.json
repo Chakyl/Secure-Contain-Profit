@@ -1,6 +1,6 @@
 {
   "title": "Hallway Shapes",
-  "description": "There is infinite space for you to expand your facility at will.\n\nThe HAVEN tool can be used to select which shape you want a given hallway to be. Some hallway types have more or less containment units, as there can only be a hallway or containment unit slot in the 4 cardinal directions.",
+  "description": "There is infinite space for you to expand your facility at will.\n\nThe HAVEN tool can be used to select which shape you want a given hallway to be. Some hallway types have more or less containment units, as there can only be a hallway or containment unit slot in the 4 cardinal directions.\n\nMake a Verdant Hallway Intersection Cross Expansion Card to demonstrate your capabilities.",
   "icon": {
     "item": "scp:verdant_hallway_cross_intersection_expansion_card"
   },
@@ -26,6 +26,5 @@
       "item": "scp:verdant_containment_expansion_card",
       "count": 1
     }
-  ],
-  "include_in_main": false
+  ]
 }

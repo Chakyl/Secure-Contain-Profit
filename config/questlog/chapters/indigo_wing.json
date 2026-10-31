@@ -1,0 +1,9 @@
+{
+  "name": "Indigo Wing",
+  "icon": {
+    "item": "dye_depot:indigo_dye"
+  },
+  "order": 5,
+  "default_chapter": false,
+  "hidden": false
+}

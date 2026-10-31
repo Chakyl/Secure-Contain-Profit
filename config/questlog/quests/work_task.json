@@ -1,0 +1,30 @@
+{
+  "title": "The WORK Task",
+  "description": "When a Containment Unit is in its WORK state, you can extract Enkephalin from the abnormality.\n\nThere is nuance to how you do this, but for now you can do this using crude syringes.\n\nNot working abnormalities impacts the Moonlit Company's bottom line, so it's best to do this even if it puts you and your facility at risk!",
+  "icon": {
+    "item": "scguns:syringe"
+  },
+  "chapter": "training",
+  "sort_order": 5,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:enkephalin",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:first_abnormality",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:verdant_hallway_expansion_card",
+      "count": 1
+    }
+  ]
+}

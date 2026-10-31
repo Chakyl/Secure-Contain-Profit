@@ -1,5 +1,7 @@
 node_modules/
+simplebackups/
 backups/
+debug/
 blueprints/
 portable_blueprints/tablet_data
 crash-reports/
@@ -38,6 +40,7 @@ usernamecache.json
 .curseclient
 .qmenu_opened.marker
 emi.json
+XaeroWaypoints_BACKUP*/
 rhino.local.properties
 minecraftinstance.json
 user-prefs.json

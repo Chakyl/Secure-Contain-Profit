@@ -13,6 +13,42 @@
 	"trades": [
 		{
 			"offer": {
+				"id": "scp:employee_pda",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:crown",
+				"count": 2
+			},
+			"numismatics_cost": 1024,
+			"trade_id": "abnormality_management_scp_employee_pda"
+		},
+		{
+			"offer": {
+				"id": "scp:employee_request",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:sun",
+				"count": 1
+			},
+			"numismatics_cost": 4096,
+			"trade_id": "abnormality_management_scp_employee_request"
+		},
+		{
+			"offer": {
+				"id": "scp:home_marker",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"numismatics_cost": 64,
+			"trade_id": "abnormality_management_scp_home_marker"
+		},
+		{
+			"offer": {
 				"id": "scguns:needle",
 				"count": 1
 			},

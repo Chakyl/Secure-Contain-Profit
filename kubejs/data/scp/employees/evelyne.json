@@ -1,0 +1,30 @@
+{
+  "npc_id": "evelyne",
+  "name": "Evelyne",
+  "is_slim": true,
+  "schedule": [
+    {
+      "description": {
+        "translate": "society.npc_schedule.work"
+      },
+      "target_tag": "scp:pda_trackable",
+      "start_time": 13000,
+      "end_time": 0
+    },
+    {
+      "description": {
+        "translate": "society.npc_schedule.sleep"
+      },
+      "target_tag": "minecraft:beds",
+      "start_time": 0,
+      "end_time": 13000
+    }
+  ],
+  "starting_stats": {
+    "max_hp": 14,
+    "walk_speed": 0.4,
+    "violence": -0.4,
+    "insight": 0.25,
+    "harmony": -0.4
+  }
+}

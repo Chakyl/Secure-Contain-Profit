@@ -21,6 +21,10 @@ companions:companions_factory
 companions:companions_monkey_temple
 companions:companions_teddytower
 companions:companions_tent
+echoes:portal_structure
+hedges_bestiary:dawn_dove_nest
+hedges_bestiary:plombo_territory
+hedges_bestiary:zappet_roost
 minecraft:ancient_city
 minecraft:bastion_remnant
 minecraft:buried_treasure
@@ -66,6 +70,7 @@ netherman:monument
 netherman:nether_geyser
 netherman:pipes
 netherman:trap
+opposing_force:motif_ruin
 scguns:asgharian_citadel
 scguns:asgharian_tower
 scguns:cog_chambers

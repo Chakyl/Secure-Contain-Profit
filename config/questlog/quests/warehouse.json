@@ -1,6 +1,6 @@
 {
   "title": "The Warehouse",
-  "description": "The facility you manage has one primary purpose: containing abnormalities. Because of this, your space is limited to maximize profits for the Moonlit Company. \n\nDue to your performance in the Verdant Wing, you've been given the authorization to expand your management area vertically. \n\n(Do not buy more than one of these, you can't use more than 1 right now)",
+  "description": "The facility you manage has one primary purpose: containing abnormalities. Because of this, your space is limited to maximize profits for the Moonlit Company. \n\nDue to your performance in the Verdant Wing, you've been given the authorization to expand your management area vertically. ",
   "icon": {
     "item": "scp:warehouse_expansion_card"
   },

@@ -1,17 +1,28 @@
 const setEffectByTrait = (entity, traits) => {
-    if (traits.includes("DARKNESS")) {
+    if (traits.contains("DARKNESS")) {
         entity.potionEffects.add('minecraft:darkness', 200, 1)
     }
-    if (Math.random() < 0.1 && traits.includes("BLIND")) {
+    if (Math.random() < 0.1 && traits.contains("BLIND")) {
         entity.potionEffects.add('scguns:blinded', 100, 1)
     }
-    if (traits.includes("POISON")) {
+    if (traits.contains("POISON")) {
         entity.potionEffects.add('minecraft:poison', 400, 1)
     }
-    if (traits.includes("SULFUR")) {
+    if (traits.contains("SULFUR") && entity.headArmorItem.id !== 'scguns:anthralite_respirator') {
         entity.potionEffects.add('scguns:sulfur_poisoning', 400, 1)
     }
-    if (Math.random() < 0.15 && traits.includes("SLEEPING")) {
+    if (traits.contains("PATHETIC")) {
+        entity.potionEffects.add('antarchy:royal_vitality_penalty', 400, 1)
+    }
+    if (traits.contains("LOST")) {
+        entity.potionEffects.add('xaerominimap:no_minimap', 400, 1)
+        entity.potionEffects.add('xaeroworldmap:no_world_map', 400, 1)
+    }
+    if (traits.contains("SHRINKING")) {
+        entity.potionEffects.add('antarchy:shrinking', 400, 2)
+        entity.potionEffects.add('minecraft:slowness', 400, 2)
+    }
+    if (Math.random() < 0.15 && traits.contains("SLEEPING")) {
         entity.potionEffects.add('creaturefeature:sleepy', 100, 1)
     }
 }
@@ -23,16 +34,7 @@ const dropLitter = (block, x, y, z, item) => {
     itemEntity.item = item;
     itemEntity.spawn()
 };
-
-global.handleAbnormality = (entity, abnormalityData) => {
-    const { level } = entity;
-    if (level.isClientSide()) return;
-    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return
-    if (!abnormalityData) return;
-    let server = level.getServer();
-    /**
-     * Littering
-     */
+global.handleLittering = (entity, level) => {
     if (entity.tickCount % 1000 == 0) {
         let litters = global.ABNORMALITY_LITTERS.get(`${entity.type}`)
         if (litters) {
@@ -43,9 +45,102 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
+}
+global.handleUniqueBehaviors = (entity, level, breaching, teamName) => {
+    let server = level.getServer();
+    if (entity.type == "minecraft:chicken" && entity.tickCount % 100 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(breaching ? 12 : 4)).filter((target) => target.isPlayer())
+        if (nearby.length >= 1) {
+            nearby.forEach((scanPlayer) => {
+                let hunger = scanPlayer.getFoodData();
+                hunger.setFoodLevel(Math.max(0, hunger.getFoodLevel() - (breaching ? 8 : 4)))
+            });
+        }
+    }
+    if (entity.type == "scguns:praetor" && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                let transformed = level.createEntity("scguns:dissident");
+                transformed.setPos(employee.x + 0.5, employee.y + 1.0, employee.z + 0.5);
+                transformed.spawn();
+                transformed.setCustomName(Text.of("Bart's 'Employee'").red().bold());
+                transformed.setPersistenceRequired();
+                transformed.setMaxHealth(100);
+                transformed.setHealth(100);
+                employee.kill()
+            });
+        }
+    }
 
-    if (!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching")) return
+    if (entity.type == "netherman:doctor" && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                employee.persistentData.blessed = true;
+            });
+        }
+    }
+    if (entity.type == "netherman:azazel" && breaching && entity.tickCount % 200 == 0) {
+        let nearby = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((target) => target.type == "scp:employee")
+        if (nearby.length >= 1) {
+            nearby.forEach((employee) => {
+                if (employee.persistentData.getBoolean("blessed")) {
+                    let transformed = level.createEntity(Math.random() < 0.5 ? "netherman:statue_bossunit" : "netherman:guardian");
+                    transformed.setPos(employee.x + 0.5, employee.y + 1.0, employee.z + 0.5);
+                    transformed.spawn();
+                    transformed.setCustomName(Text.of("Disciple").red().bold());
+                    transformed.setPersistenceRequired();
+                    transformed.setMaxHealth(666);
+                    transformed.setHealth(666);
+                    employee.kill()
+                }
+            });
+        }
+    }
+    if (breaching) {
+        if (entity.type == "companions:hostile_puppet_glove" && entity.tickCount % 1200 == 0) {
+            let nearest = global.getNearestAbnormalities(level, entity.pos, 32).filter((fe) => fe.type != entity.type)
+            if (!nearest || nearest.length == 0) return;
+            if (entity.persistentData.gloveTarget != "") {
+                let foundPlayer = server.getPlayer(String(`${entity.persistentData.getString("gloveTarget")}`));
+                if (foundPlayer) {
+                    nearest[0].teleportTo("minecraft:overworld", foundPlayer.x, foundPlayer.y + 1, foundPlayer.z, 0, 0)
+                    server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
+                    server.runCommandSilent(`playsound minecraft:entity.breeze.shoot block @a ${foundPlayer.x} ${foundPlayer.y} ${foundPlayer.z} 0.2 0.5`);
+                }
+
+                entity.persistentData.gloveTarget = "";
+
+            } else {
+                let members = global.getTeamMembers(server, level, teamName);
+                if (members && members.length > 0) {
+                    let uuidToFetch = global.rollArray(members);
+                    if (uuidToFetch) {
+                        let foundPlayer = server.getPlayer(uuidToFetch);
+                        if (foundPlayer) {
+                            global.tellTeam(server, level, teamName, Text.translatable("messages.scp.meteora_blues_threaten", foundPlayer.username).red());
+                            entity.persistentData.gloveTarget = foundPlayer.uuid.toString();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+global.handleAbnormality = (entity, abnormalityData) => {
+    const { level } = entity;
+    if (level.isClientSide()) return;
+    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return
+    if (!abnormalityData) return;
+    let server = level.getServer();
+    global.handleLittering(entity, level);
+    let breaching = !(!entity.persistentData.breaching || !entity.persistentData.getBoolean("breaching"));
     let teamName = entity.persistentData.teamName ? String(entity.persistentData.getString("teamName")).trim() : "NONE";
+    global.handleUniqueBehaviors(entity, level, breaching, teamName);
+    if (!breaching) return
+
     level.spawnParticles(
         "companions:shade_summon",
         true,
@@ -78,9 +173,9 @@ global.handleAbnormality = (entity, abnormalityData) => {
     /**
      * Breaching
      */
-    let breachTypes = abnormalityData.breachTypes;
-    if (breachTypes.includes("DISSOLVE") || breachTypes.includes("NUKE")) {
-        let blockType = breachTypes.includes("NUKE") ? "NUKE" : "DISSOLVE";
+    let breachTypes = abnormalityData.breachTypes();
+    if (breachTypes.contains("DISSOLVE") || breachTypes.contains("NUKE")) {
+        let blockType = breachTypes.contains("NUKE") ? "NUKE" : "DISSOLVE";
         let triggerChance = blockType == "NUKE" ? 0.05 : 0.5;
         if (Math.random() < triggerChance) {
             let radius = blockType == "NUKE" ? 3 : 2;
@@ -100,7 +195,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
         }
     }
-    if (breachTypes.includes("STEAMROLLER")) {
+    if (breachTypes.contains("STEAMROLLER")) {
         let abovePos = entity.getOnPos().above().offset(Math.random() < 0.5 ? 1 : -1, 0, Math.random() < 0.5 ? 1 : -1);
         let aboveAbovePos = abovePos.above();
         if (!level.getBlock(abovePos).hasTag("scp:setblock_immune")) {
@@ -112,7 +207,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
     // Teleportation
     let entities;
-    if (Math.random() < 0.1 && breachTypes.includes("TELEPORT")) {
+    if (Math.random() < 0.1 && breachTypes.contains("TELEPORT")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(10)).filter((foundEntity) => foundEntity.type != entity.type);
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
@@ -120,7 +215,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             entity.teleportTo("minecraft:overworld", entities[1].x, entities[1].y + 1, entities[1].z, 0, 0)
         }
     }
-    if (Math.random() < 0.01 && breachTypes.includes("BEGONE")) {
+    if (Math.random() < 0.01 && breachTypes.contains("BEGONE")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(14)).filter((foundEntity) => foundEntity.type != entity.type);
         let closeEntities = level.getEntitiesWithin(entity.boundingBox.inflate(5)).filter((foundEntity) => foundEntity.type != entity.type);
         if (entities.length > 1 && closeEntities.length >= 1) {
@@ -129,7 +224,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             closeEntities[0].teleportTo("minecraft:overworld", entities[1].x, entities[1].y + 1, entities[1].z, 0, 0)
         }
     }
-    if (Math.random() < 0.1 && breachTypes.includes("SUCK")) {
+    if (Math.random() < 0.1 && breachTypes.contains("SUCK")) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(6)).filter((foundEntity) => foundEntity.type != entity.type);
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
@@ -139,7 +234,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             })
         }
     }
-    if (Math.random() < 0.01 && breachTypes.includes("SUMMON")) {
+    if (Math.random() < 0.01 && breachTypes.contains("SUMMON")) {
         if (server.players.length >= 1) {
             server.runCommandSilent(`playsound minecraft:entity.enderman.teleport block @a ${entity.x} ${entity.y} ${entity.z} 2 1.2`);
             level.spawnParticles("minecraft:glow", true, entity.x, entity.y, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
@@ -148,8 +243,8 @@ global.handleAbnormality = (entity, abnormalityData) => {
     }
 
     // Effects/damage
-    if (Math.random() < 0.75 && breachTypes.includes("SAP") || breachTypes.includes("BITE")) {
-        let bite = breachTypes.includes("BITE")
+    if (Math.random() < 0.75 && breachTypes.contains("SAP") || breachTypes.contains("BITE")) {
+        let bite = breachTypes.contains("BITE")
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(bite ? 2 : 5)).filter((entity) => entity.isPlayer())
 
         if (entities.length >= 1) {
@@ -160,7 +255,9 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
-    if (breachTypes.includes("DARKNESS") || breachTypes.includes("BLIND") || breachTypes.includes("POISON") || breachTypes.includes("SULFUR") || breachTypes.includes("SLEEPING")) {
+    const debuffs = ["DARKNESS", "BLIND", "PATHETIC", "POISON", "SULFUR", "SLEEPING", "SHRINKING", "LOST"];
+
+    if (debuffs.some(type => breachTypes.contains(type))) {
         entities = level.getEntitiesWithin(entity.boundingBox.inflate(4)).filter((entity) => entity.isPlayer());
         if (entities.length >= 1) {
             server.runCommandSilent(`playsound vista:block.television.static block @a ${entity.x} ${entity.y} ${entity.z} 0.1 1.2`);
@@ -170,14 +267,31 @@ global.handleAbnormality = (entity, abnormalityData) => {
             });
         }
     }
-    // Facility Disasters
-    if (entity.tickCount % 600 == 0 && (breachTypes.includes("SUPER") || breachTypes.includes("CHAOS"))) {
-        global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, breachTypes.includes("CHAOS") ? 1 : 3);
+    if (entity.tickCount % 20 == 0 && Math.random() < 0.25 && breachTypes.contains("LIGHTNING")) {
+        let d = 4 + Math.random() * 2;
+        let strikes = [
+            [entity.x + d, entity.z],
+            [entity.x - d, entity.z],
+            [entity.x, entity.z + d],
+            [entity.x, entity.z - d]
+        ];
+
+        for (let [x, z] of strikes) {
+            server.runCommandSilent(`summon lightning_bolt ${x} ${entity.y - 5} ${z}`);
+        }
     }
-    if (entity.tickCount % 600 == 0 && breachTypes.includes("CLANKER")) {
+    if (entity.tickCount % 400 == 0 && (breachTypes.contains("SPAWN_FEND"))) {
+        let spawnPos = entity.getOnPos().offset(Math.floor((Math.random() - 0.5) * 6), 0, Math.floor((Math.random() - 0.5) * 6));
+        server.runCommandSilent(`summon creaturefeature:fend ${spawnPos.x} ${entity.y} ${spawnPos.z}`);
+    }
+    // Facility Disasters
+    if (entity.tickCount % 600 == 0 && (breachTypes.contains("SUPER") || breachTypes.contains("CHAOS"))) {
+        global.addChaos(server, level.getBlock(entity.getOnPos()), teamName, breachTypes.contains("CHAOS") ? 1 : 3);
+    }
+    if (entity.tickCount % 600 == 0 && breachTypes.contains("CLANKER")) {
         global.addDisrepair(server, level.getBlock(entity.getOnPos()), teamName, 1);
     }
-    if (Math.random() < 0.15 && breachTypes.includes("DECOUNT")) {
+    if (Math.random() < 0.15 && breachTypes.contains("DECOUNT")) {
         let radius = 4;
         let { x, y, z } = entity;
 
@@ -189,16 +303,16 @@ global.handleAbnormality = (entity, abnormalityData) => {
             if (scanBlock.id == "scp:containment_unit") {
                 let nbt = scanBlock.getEntityData();
                 if (!(!nbt || !nbt.data)) {
-                    if (nbt.data.abnormalityUUID != "") {
+                    if (nbt.data.abnormalityUUID != "" && entity.uuid.toString() != nbt.data.abnormalityUUID) {
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
+                        level.spawnParticles("ae2:lightning_fx", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
+                        server.runCommandSilent(`playsound opposing_force:gun_shoot block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
                         return;
                     }
                 }
             }
         }
         // TODO: decount effects
-        // server.runCommandSilent(`playsound ${blockType == "NUKE" ? "minecraft:entity.generic.explode" : "minecraft:block.fire.extinguish"} block @a ${entity.x} ${entity.y} ${entity.z} 0.2 0.5`);
-        // level.spawnParticles("companions:ember_pole_explosion", true, entity.x, entity.y + 1.0, entity.z, 0.3, 1.0, 0.3, 1, 0.01);
 
     }
 };

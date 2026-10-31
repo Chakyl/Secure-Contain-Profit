@@ -1,0 +1,32 @@
+{
+	"name": {
+		"translate": "abnormality.peaceless.shrapin.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 4,
+		"insight": 2,
+		"harmony": 1
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 5,
+	"breach_types": [
+		"SUCK"
+	],
+	"evolutions": [],
+	"malformation": "opposing_force:pot_of_green"
+}

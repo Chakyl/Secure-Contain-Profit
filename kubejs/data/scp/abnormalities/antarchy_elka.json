@@ -1,0 +1,35 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.elka.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 3,
+		"harmony": 1
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"SUPERCHAOS",
+		"STEAMROLLER",
+		"DECOUNT"
+	],
+	"evolutions": [
+		"antarchy:manticore"
+	]
+}

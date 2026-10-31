@@ -1,0 +1,36 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.cannonball_crab.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 2,
+		"harmony": 3
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 3,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"TELEPORT",
+		"DARKNESS",
+		"DISSOLVE",
+		"SAP"
+	],
+	"evolutions": [],
+	"malformation": "opposing_force:crystallized_heart"
+}

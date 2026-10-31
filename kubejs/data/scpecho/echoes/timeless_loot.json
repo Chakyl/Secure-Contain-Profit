@@ -1,0 +1,140 @@
+{
+  "remove": [
+    {
+      "rarity": "epic",
+      "stack": {
+        "identifier": "minecraft:emerald"
+      },
+      "weight": 2
+    },
+    {
+      "rarity": "rare",
+      "stack": {
+        "identifier": "minecraft:gold_ingot"
+      },
+      "weight": 10
+    },
+    {
+      "rarity": "uncommon",
+      "stack": {
+        "identifier": "minecraft:iron_ingot"
+      },
+      "weight": 10
+    },
+    {
+      "rarity": "uncommon",
+      "stack": {
+        "identifier": "minecraft:copper_ingot"
+      },
+      "weight": 10
+    },
+    {
+      "rarity": "common",
+      "stack": {
+        "count": 3,
+        "identifier": "minecraft:redstone"
+      },
+      "weight": 15
+    }
+  ],
+  "add": [
+    {
+      "rarity": "common",
+      "stack": {
+        "identifier": "scguns:sculk_flare"
+      },
+      "weight": 5
+    },
+    {
+      "rarity": "common",
+      "stack": {
+        "identifier": "supplementaries:flax_seeds"
+      },
+      "weight": 5
+    },
+    {
+      "rarity": "common",
+      "stack": {
+        "identifier": "scguns:sculk_tome"
+      },
+      "weight": 2
+    },
+    {
+      "rarity": "rare",
+      "stack": {
+        "identifier": "scguns:whispers"
+      },
+      "weight": 3
+    },
+    {
+      "rarity": "legendary",
+      "stack": {
+        "identifier": "scguns:ultra_knight_hawk"
+      },
+      "weight": 1
+    },
+    {
+      "rarity": "legendary",
+      "stack": {
+        "identifier": "antarchy:portal_gun_atlas"
+      },
+      "weight": 1
+    },
+    {
+      "rarity": "epic",
+      "stack": {
+        "identifier": "scguns:echoes_2"
+      },
+      "weight": 2
+    },
+    {
+      "rarity": "rare",
+      "stack": {
+        "identifier": "scguns:sculk_resonator"
+      },
+      "weight": 3
+    },
+    {
+      "rarity": "rare",
+      "stack": {
+        "identifier": "scguns:forlorn_hope"
+      },
+      "weight": 3
+    },
+    {
+      "rarity": "epic",
+      "stack": {
+        "identifier": "abyssal_decor:echo_shard_block"
+      },
+      "weight": 7
+    },
+    {
+      "rarity": "epic",
+      "stack": {
+        "identifier": "minecraft:sculk_catalyst"
+      },
+      "weight": 6
+    },
+    {
+      "rarity": "rare",
+      "stack": {
+        "identifier": "antarchy:raw_titanium_scrap"
+      },
+      "weight": 14
+    },
+    {
+      "rarity": "epic",
+      "stack": {
+        "identifier": "reliable_requiem:crystal_shard"
+      },
+      "weight": 10
+    },
+    {
+      "rarity": "common",
+      "stack": {
+        "identifier": "minecraft:sculk"
+      },
+      "weight": 40
+    }
+  ]
+}

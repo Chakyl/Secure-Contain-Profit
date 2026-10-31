@@ -1,0 +1,45 @@
+{
+	"id": "plague_doctor_choice_dialog_begone",
+	"title": "plague_doctor begone",
+	"description": "dialog.npc.plague_doctor.dialog.begone",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.plague_doctor.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.plague_doctor.dialog.begone.line_0"
+				}
+			],
+			"portraits": [
+				{
+					"path": "netherman:textures/item/doctor_spawn_egg.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.plague_doctor.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.plague_doctor.dialog.begone.line_1"
+				}
+			],
+			"portraits": [
+				{
+					"path": "netherman:textures/item/doctor_spawn_egg.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			]
+		}
+	]
+}

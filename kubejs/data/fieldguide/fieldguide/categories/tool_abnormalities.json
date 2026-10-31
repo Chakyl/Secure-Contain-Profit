@@ -1,0 +1,98 @@
+{
+	"sort_index": 3,
+	"icon": "fieldguide:textures/gui/icons/ore.png",
+	"contents": [
+		{
+			"type": "entry",
+			"id": "supplementaries:clock_block"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:red_phone"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:horseshoe"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:gatcha_machine"
+		},
+		{
+			"type": "entry",
+			"id": "abyssal_decor:bottomless_bag_of_dirt"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:enchanting_table"
+		},
+		{
+			"type": "entry",
+			"id": "companions:frog_bonanza_block"
+		},
+		{
+			"type": "entry",
+			"id": "scp:deaths_dynamic_shroud"
+		},
+		{
+			"type": "entry",
+			"id": "scp:rubber_duck"
+		},
+		{
+			"type": "entry",
+			"id": "scp:spoon_bender"
+		},
+		{
+			"type": "entry",
+			"id": "scguns:the_pact"
+		},
+		{
+			"type": "entry",
+			"id": "netherman:maze_door"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:lucky_cat"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:singing_frog"
+		},
+		{
+			"type": "entry",
+			"id": "companions:empty_puppet_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:croissant_egg_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:soul_furnace_block"
+		},
+		{
+			"type": "entry",
+			"id": "abyssal_decor:black_mold"
+		},
+		{
+			"type": "entry",
+			"id": "whimsy_deco:recorder"
+		},
+		{
+			"type": "entry",
+			"id": "companions:respawn_totem_block"
+		},
+		{
+			"type": "entry",
+			"id": "companions:porcelain_pottery"
+		},
+		{
+			"type": "entry",
+			"id": "companions:holy_porcelain_pottery"
+		},
+		{
+			"type": "entry",
+			"id": "csr:clay_soldier"
+		}
+	]
+}

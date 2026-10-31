@@ -95,6 +95,54 @@ global.tellTeam = (server, level, teamName, text) => {
     }
 }
 
+global.getTeamMembers = (server, level, teamName) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        return team.getPlayers();
+    } else {
+        let unassignedPlayers = []
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                unassignedPlayers.push(player.uuid)
+            }
+        });
+        return unassignedPlayers;
+    }
+}
+global.questCompleteForTeam = (server, level, teamName, quest) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                server.runCommandSilent(`ql progress complete ${quest} ${player.username}`)
+            }
+        });
+    } else {
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                server.runCommandSilent(`ql progress complete ${quest} ${player.username}`)
+            }
+        });
+    }
+}
+global.notesForTeam = (server, level, teamName, noteId) => {
+    let team = global.getTeamFromName(level, teamName);
+    if (team) {
+        team.getPlayers().forEach((uuid) => {
+            let player = server.getPlayer(uuid);
+            if (player) {
+                FieldGuide.unlock(player, noteId)
+            }
+        });
+    } else {
+        server.players.forEach((player) => {
+            if (global.getPlayerTeamName(level, player) == "NONE") {
+                FieldGuide.unlock(player, noteId)
+            }
+        });
+    }
+}
 global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) => {
     let breachMessage = Text.translatable("messages.scp.containment_unit.breach", abnormalityName, block.x, block.y, block.z);
     let teamName = String(nbt.data.getString("teamName")).trim();
@@ -108,21 +156,27 @@ global.breachAbnormality = (server, level, block, entity, abnormalityName, nbt) 
     });
     global.setBlockEntityData(block, nbt);
     global.updateSignalers(level, block);
-    let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes;
-    if (breachTypes.includes("GRANDIOSE")) {
+    let breachTypes = global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).breachTypes();
+    if (breachTypes.contains("GRANDIOSE")) {
         global.addThreatLevel(server, teamName, 5);
         global.tellTeam(server, level, teamName, Text.translatable("messages.scp.general.threat_level_increased", Number(server.persistentData[teamName].getInt("threat_level")) / 5).darkRed());
         global.addChaos(server, block, teamName, Number(server.persistentData[teamName].getInt("threat_level")));
-    } else if (breachTypes.includes("ESCAPEARTIST")) {
-        global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4]);
+    } else if (breachTypes.contains("ESCAPEARTIST")) {
+        global.escapeArtist(level, entity, [-1, 0, 1, 2, 3, 4], 8, 8);
+    } else if (breachTypes.contains("INDIGO_ESCAPEARTIST")) {
+        global.escapeArtist(level, entity, [-1, 0, 1, 2], 12, 24);
     }
 }
-global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
+
+global.increaseUnitCounter = (level, block, abnormalityName, nbt, amount) => {
+    let resolvedAmount = amount ? amount : 1;
     let { x, y, z } = block;
-    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + 1 : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter) {
+    let state = String(nbt.data.getString("state")).trim();
+    if (state == "BREACH") return;
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) + resolvedAmount : 0) < global.ABNORMALITIES.get(String(`${nbt.data.getString("abnormalityType")}`).trim()).counter()) {
         nbt.merge({
             data: {
-                counter: global.increaseStage(Number(nbt.data.getInt("counter")))
+                counter: global.increaseStage(Number(nbt.data.getInt("counter")), resolvedAmount)
             }
         });
     } else {
@@ -140,6 +194,7 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
             global.breachAbnormality(server, level, block, foundEntity, abnormalityName, nbt);
         } else {
             // Reset since the abnormality is probably dead TODO maybe not?
+            // TODO: Translation string
             let teamName = String(nbt.data.getString("teamName")).trim();
             global.paintToTeam(server, level, teamName, `${abnormalityName} HAS EXPIRED AT [x:${x}/z:${z}].`, '#FF5555');
             nbt.merge({ data: { boundPlayer: "", abnormalityType: "", abnormalityUUID: "", counter: 0, dayLastTriggered: -1, state: "", researchLevel: 0, researchTime: 0 } });
@@ -147,6 +202,17 @@ global.increaseUnitCounter = (level, block, abnormalityName, nbt) => {
         }
     }
 }
+
+global.decreaseUnitCounter = (nbt, amount) => {
+    if ((nbt.data.counter ? Number(nbt.data.getInt("counter")) : 0) > 0) {
+        nbt.merge({
+            data: {
+                counter: global.decreaseStage(Number(nbt.data.getInt("counter")), amount)
+            }
+        });
+    }
+}
+
 global.mainUiElementIds = [
     "containmentSummary",
     "workResult"
@@ -176,11 +242,11 @@ global.renderUiText = (player, server, messages, clearedMessages) => {
 
 let getClassHexColor = (tier) => {
     switch (tier) {
-        case "amber": return "#ca8f0b";
-        case "maroon": return "#c53c23";
-        case "indigo": return "#623f8e";
+        case "AMBER": return "#ca8f0b";
+        case "MAROON": return "#c53c23";
+        case "INDIGO": return "#623f8e";
         default:
-        case "verdant": return "#398e36";
+        case "VERDANT": return "#398e36";
     }
 }
 
@@ -193,14 +259,14 @@ global.printContainmentUnitInfo = (player, server, data) => {
         {
             containmentSummary: {
                 type: 'text',
-                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${abnomalityData.counter}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
+                textLines: [global.getFullAbnormalityName(data, "REQUIRES RESEARCH LEVEL 2"), `State: ${state}`, `Qliphoth Counter: ${Number(data.getInt("researchLevel")) >= 1 ? `${data.getInt("counter")}/${abnomalityData.counter()}` : "REQUIRES RESEARCH LEVEL 1"} ${Number(data.getInt("researchLevel")) ? ` | Research Level: ${Number(data.getInt("researchLevel"))}` : ""}`],
                 alignX: 'center',
                 alignY: 'bottom',
                 shadow: true,
                 centered: true,
                 x: 2,
                 y: -110,
-                color: getClassHexColor(abnomalityData.class)
+                color: getClassHexColor(abnomalityData.tier())
             }
         },
         global.mainUiElementIds
@@ -223,10 +289,9 @@ global.getClassRadii = (tier, block) => {
 }
 
 let maxAttempts = 30;
-let minRange = 8;
-let maxRange = 8;
-global.escapeArtist = (level, entity, possibleYLevels) => {
-    let { x, y, z } = entity;
+
+global.escapeArtist = (level, entity, possibleYLevels, minRange, maxRange) => {
+    let { x, y, z } = entity.getOnPos();
     let found = false
     let foundX = 0
     let foundY = 0

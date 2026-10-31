@@ -1,4 +1,4 @@
-const handleEnk = (level, server, abnormality, radius, mult, item) => {
+const handleEnk = (level, server, abnormality, radius, mult, item, type, workResultCounterImpact) => {
     let x = abnormality.x;
     let y = abnormality.y;
     let z = abnormality.z;
@@ -12,9 +12,11 @@ const handleEnk = (level, server, abnormality, radius, mult, item) => {
             if (!(!nbt || !nbt.data)) {
                 if (String(nbt.data.getString("state")).trim() == "WORKABLE" && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
                     // Syringe
-                    if (item) {
+                    if (item && item.id == "scguns:syringe") {
                         item.shrink(1);
                         global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
+                    } else {
+                        handleWorkResultCounters(level, scanBlock, nbt, type, workResultCounterImpact);
                     }
                     server.runCommandSilent(`playsound abyssal_decor:trashbag_break block @a ${x} ${y} ${z} 2 0.5`);
                     server.runCommandSilent(`playsound minecraft:entity.cow.milk block @a ${x} ${y} ${z} 2 0.5`);
@@ -34,7 +36,31 @@ const handleEnk = (level, server, abnormality, radius, mult, item) => {
     }
 }
 
-const handleBadWorkResult = (level, abnormality, radius) => {
+const handleWorkResultCounters = (level, block, nbt, type, workResultCounterImpact) => {
+    let counterChange = getWorkResultCounterImpact(type, workResultCounterImpact)
+    console.log(workResultCounterImpact)
+    console.log("Counter Change: " + counterChange)
+    if (counterChange >= 1) {
+        global.increaseUnitCounter(level, block, global.getFullAbnormalityName(nbt.data, "???"), nbt, counterChange);
+    } else if (counterChange <= -1) {
+        global.decreaseUnitCounter(nbt, Math.abs(counterChange));
+    }
+}
+
+const getWorkResultCounterImpact = (type, workResultCounterImpact) => {
+    if (type == "harmony") {
+        return workResultCounterImpact.harmony();
+    }
+    if (type == "violence") {
+        return workResultCounterImpact.violence();
+    }
+    if (type == "insight") {
+        return workResultCounterImpact.insight();
+    }
+    return 0;
+}
+
+const handleBadWorkResult = (level, abnormality, radius, type, workResultCounterImpact) => {
     let x = abnormality.x;
     let y = abnormality.y;
     let z = abnormality.z;
@@ -46,7 +72,7 @@ const handleBadWorkResult = (level, abnormality, radius) => {
             let nbt = scanBlock.getEntityData();
             if (!(!nbt || !nbt.data)) {
                 if (String(nbt.data.getString("state")).trim() == "WORKABLE" && abnormality.uuid.toString() == nbt.data.abnormalityUUID) {
-                    global.increaseUnitCounter(level, scanBlock, global.getFullAbnormalityName(nbt.data, "???"), nbt);
+                    handleWorkResultCounters(level, scanBlock, nbt, type, workResultCounterImpact);
                     nbt.merge({
                         data: {
                             state: "NONE"
@@ -84,23 +110,15 @@ const handleResearchFromWork = (level, abnormality, radius) => {
     }
 }
 
-const dropCog = (block) => {
+const dropItem = (block, item) => {
     let itemEntity = block.createEntity('item')
     itemEntity.x = block.x
     itemEntity.y = block.y + 0.2
     itemEntity.z = block.z
-    itemEntity.item = 'numismatics:cog';
+    itemEntity.item = item;
     itemEntity.spawn()
 };
 
-const dropShard = (block) => {
-    let itemEntity = block.createEntity('item')
-    itemEntity.x = block.x
-    itemEntity.y = block.y + 0.2
-    itemEntity.z = block.z
-    itemEntity.item = 'reliable_requiem:crystal_shard';
-    itemEntity.spawn()
-};
 const getTierDebuff = (abnormalityClass) => {
     switch (abnormalityClass) {
         case "amber": return 0.1
@@ -120,15 +138,25 @@ const getResearchBuff = (researchLevel) => {
             return 0;
     }
 }
+
+const getPrefNum = (preferences, workType) => {
+    switch (workType) {
+        case "insight": return preferences.insight();
+        case "violence": return preferences.violence();
+        case "harmony": return preferences.harmony();
+        default:
+            return 0;
+    }
+}
 const getWorkResult = (abnormalityData, workType, workLevel, researchLevel) => {
     if (!abnormalityData) return { result: "BAD", efficiency: -1 };
-    let abnormalityPref = abnormalityData.preferences[workType];
+    let abnormalityPref = getPrefNum(abnormalityData.preferences(), workType);
     if (abnormalityPref == -1) return { result: "GOOD", efficiency: 1 };
     if (abnormalityPref == 5) return { result: "BAD", efficiency: 0 };
     let eff = workLevel / (abnormalityPref + 1);
-    eff -= getTierDebuff(abnormalityData.class);
+    eff -= getTierDebuff(abnormalityData.tier());
     eff += getResearchBuff(researchLevel);
-    if (eff > 0.75) return { result: "GOOD", efficiency: eff };
+    if (eff >= 0.75) return { result: "GOOD", efficiency: eff };
     if (eff < 0.25) return { result: "BAD", efficiency: eff };
     if (Math.random() < eff) return { result: "BAD", efficiency: eff };
     else return { result: "NEUTRAL", efficiency: eff };
@@ -164,26 +192,67 @@ const printWorkResult = (player, server, workResult) => {
     );
 }
 
-const processWork = (level, server, player, abnormality, radius, workType, workLevel, item) => {
+const spawnDancer = (level, player) => {
+    let { x, y, z } = player;
+    level.spawnParticles("companions:teddy_transformation_cloud", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+    level.spawnParticles("scguns:sonic_blast", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+    level.spawnParticles("companions:blink", true, x, y + 1.0, z, 0, 0, 0, 1, 0.01);
+    let newAbnormalityEntity = level.createEntity("opposing_force:dicer");
+    newAbnormalityEntity.setPos(x + 0.5, y + 0.5, z + 0.5);
+    newAbnormalityEntity.spawn();
+    newAbnormalityEntity.setCustomName(Text.of("Dancing Twin").red().bold());
+    newAbnormalityEntity.setPersistenceRequired();
+
+    newAbnormalityEntity.setMaxHealth(999);
+    newAbnormalityEntity.setHealth(999);
+    newAbnormalityEntity.persistentData.abnormality = true;
+    newAbnormalityEntity.persistentData.breaching = true;
+}
+
+const processWork = (level, server, player, abnormality, radius, workType, workLevel, item, dropOverride) => {
+    if (abnormality.type == "netherman:doctor") {
+        server.runCommandSilent(`execute as ${player.username} run dialog show plague_doctor_choice_dialog_begone`);
+        return;
+    }
     let abnormalityData = global.ABNORMALITIES.get(`${abnormality.type}`);
     let workResult = getWorkResult(abnormalityData, workType, workLevel, abnormality.persistentData.getInt("researchLevel"))
     let processed = false;
-    // TODO: Sounds, effects
     if (workResult.result == "GOOD") {
-        processed = handleEnk(level, server, abnormality, radius, 2, item);
+        processed = handleEnk(level, server, abnormality, radius, 2, item, workType, abnormalityData.goodResultCounterImpact());
         if (processed) {
             if (workType == "violence") {
-                dropShard(level.getBlock(player.getOnPos()));
+                dropItem(level.getBlock(abnormality.getOnPos()), dropOverride ? dropOverride : 'reliable_requiem:crystal_shard');
             } else if (workType == "insight") {
-                player.giveExperienceLevels(1)
+                player.giveExperienceLevels(item == "scp:architects_digest" ? 5 : 1)
+
+                if (dropOverride) dropItem(level.getBlock(abnormality.getOnPos()), dropOverride);
             } else {
-                dropCog(level.getBlock(player.getOnPos()));
+                dropItem(level.getBlock(abnormality.getOnPos()), dropOverride ? dropOverride : 'numismatics:cog');
+            }
+            if (Math.random() < 0.15 && abnormality.persistentData.getInt("researchLevel") >= 4 && abnormalityData.malformation().id != "minecraft:air") {
+                player.tell(Text.translatable("messages.scp.malformation").green());
+                server.runCommandSilent(`ql progress complete questlog:malformations ${player.username}`)
+                dropItem(level.getBlock(abnormality.getOnPos()), abnormalityData.malformation());
             }
         }
     } else if (workResult.result == "NEUTRAL") {
-        processed = handleEnk(level, server, abnormality, radius, 1, item);
+        processed = handleEnk(level, server, abnormality, radius, 1, item, workType, abnormalityData.neutralResultCounterImpact());
     } else {
-        processed = handleBadWorkResult(level, abnormality, radius);
+        processed = handleBadWorkResult(level, abnormality, radius, workType, abnormalityData.badResultCounterImpact());
+        if (player.persistentData.dicer_flag && player.persistentData.getBoolean("dicer_flag") == true) {
+            player.persistentData.dicer_flag = false;
+            player.tell(Text.translatable("messages.scp.dancer_in_the_dark.elimination").darkRed());
+            server.runCommandSilent(`playsound abyssal_decor:door_knock_funnyblock @a ${player.x} ${player.y} ${player} 2 0.75`);
+            server.scheduleInTicks(100, () => {
+                server.runCommandSilent(`playsound opposing_force:dicer_dash_warn block @a ${player.x} ${player.y} ${player} 2 1`);
+                spawnDancer(level, player)
+                spawnDancer(level, player)
+            });
+        }
+        if (abnormality.type == "opposing_force:dicer") {
+            player.persistentData.dicer_flag = true;
+            player.tell(Text.translatable("messages.scp.dancer_in_the_dark.marked").darkRed());
+        }
     }
     if (processed) {
         printWorkResult(player, server, workResult)
@@ -192,7 +261,6 @@ const processWork = (level, server, player, abnormality, radius, workType, workL
         }
     }
 }
-
 
 
 ItemEvents.entityInteracted((e) => {
@@ -216,9 +284,25 @@ ItemEvents.entityInteracted((e) => {
 ItemEvents.entityInteracted((e) => {
     const { item, target, player, level, hand, server } = e;
     if (hand !== "MAIN_HAND") return;
+    if (item.id != 'scp:architects_digest') return;
+    if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;
+    processWork(level, server, player, target, 8, "insight", 1);
+});
+
+ItemEvents.entityInteracted((e) => {
+    const { item, target, player, level, hand, server } = e;
+    if (hand !== "MAIN_HAND") return;
     if (item.id != 'scp:spiritual_book') return;
     if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;
     processWork(level, server, player, target, 8, "insight", 2);
+});
+
+ItemEvents.entityInteracted((e) => {
+    const { item, target, player, level, hand, server } = e;
+    if (hand !== "MAIN_HAND") return;
+    if (item.id != 'scguns:sculk_tome') return;
+    if (!target.persistentData.abnormality || !target.persistentData.getBoolean("abnormality")) return;
+    processWork(level, server, player, target, 8, "insight", 3);
 });
 
 const getBlackOpalInsight = (experienceLevel) => {
@@ -257,6 +341,22 @@ ItemEvents.rightClicked('minecraft:goat_horn', (e) => {
     let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
     if (nearestAb && nearestAb.length > 0) {
         processWork(level, server, player, nearestAb[0], 8, "harmony", 2);
+    }
+})
+
+ItemEvents.rightClicked('scp:cornucopia', (e) => {
+    const { player, level, server } = e;
+    let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
+    if (nearestAb && nearestAb.length > 0) {
+        processWork(level, server, player, nearestAb[0], 8, "harmony", 2, "nuimismatics:crown");
+    }
+})
+
+ItemEvents.rightClicked('creaturefeature:vertigo_horn', (e) => {
+    const { player, level, server } = e;
+    let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
+    if (nearestAb && nearestAb.length > 0) {
+        processWork(level, server, player, nearestAb[0], 8, "harmony", 3);
     }
 })
 
@@ -308,6 +408,14 @@ EntityEvents.afterHurt((e) => {
     processWork(level, server, source.player, entity, 8, "violence", 2);
 });
 
+EntityEvents.afterHurt((e) => {
+    const { level, server, entity, source } = e;
+    if (!source.player) return;
+    if (source.player.getHeldItem("main_hand").id != 'antarchy:basilisk_dagger') return;
+    if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
+    processWork(level, server, source.player, entity, 8, "violence", 3);
+});
+
 const getSoulNeedleViolence = (health) => {
     if (health <= 10) return 4;
     if (health <= 20) return 3;
@@ -321,3 +429,4 @@ EntityEvents.afterHurt((e) => {
     if (!entity.persistentData.abnormality || !entity.persistentData.getBoolean("abnormality")) return;
     processWork(level, server, source.player, entity, 8, "violence", getSoulNeedleViolence(source.player.getHealth()));
 });
+

@@ -63,6 +63,16 @@
 	toolEnchantability = 25
 	#If false, Ultimate pickaxe, axe, shovel, and hoe lose their 3x3 mining mode and tooltip.
 	threeByThreeEnabled = true
+	#If false, the Ultimate Pickaxe and Axe lose Vein Mining and the Battle Axe stops felling trees.
+	veinMiningEnabled = true
+	#Most extra blocks the Ultimate Pickaxe or Axe breaks in one Vein Mining swing. Logs use treeFellingMaxLogs instead.
+	# Default: 64
+	# Range: 1 ~ 1024
+	veinMiningMaxBlocks = 64
+	#Most extra logs broken at once by Vein Mining on logs or by the Battle Axe.
+	# Default: 128
+	# Range: 1 ~ 1024
+	treeFellingMaxLogs = 128
 
 [ultimateBow]
 	#Damage dealt to non-player targets.
@@ -692,11 +702,6 @@
 	# Default: 0.5
 	# Range: 0.001 ~ 64.0
 	growthPotionDelta = 0.5
-
-[gravity]
-	#If true, projectiles fired by inverted players keep their inverted launch and gravity.
-	#Affects bows, crossbows, throwables, and firework boosts.
-	invertProjectilesFromInvertedPlayers = false
 
 [gravityGun]
 	#Master toggle for the Gravity Gun.

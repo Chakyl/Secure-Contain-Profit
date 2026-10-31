@@ -88,6 +88,22 @@
 		},
 		{
 			"type": "entry",
+			"id": "hedges_bestiary:goph"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:furball"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:skib"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:mushy"
+		},
+		{
+			"type": "entry",
 			"id": "companions:living_candle"
 		},
 		{
@@ -140,6 +156,10 @@
 		},
 		{
 			"type": "entry",
+			"id": "opposing_force:terror"
+		},
+		{
+			"type": "entry",
 			"id": "creaturefeature:beauty"
 		},
 		{
@@ -188,6 +208,18 @@
 		},
 		{
 			"type": "entry",
+			"id": "minecraft:ravager"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:burodon"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:plombo"
+		},
+		{
+			"type": "entry",
 			"id": "antarchy:jerry"
 		},
 		{
@@ -225,10 +257,6 @@
 		{
 			"type": "entry",
 			"id": "creaturefeature:friend"
-		},
-		{
-			"type": "entry",
-			"id": "antarchy:easter_bunny"
 		},
 		{
 			"type": "entry",
@@ -324,6 +352,14 @@
 		},
 		{
 			"type": "entry",
+			"id": "antarchy:basilisk"
+		},
+		{
+			"type": "entry",
+			"id": "opposing_force:gusher"
+		},
+		{
+			"type": "entry",
 			"id": "scguns:sulfurhead"
 		},
 		{
@@ -332,15 +368,27 @@
 		},
 		{
 			"type": "entry",
-			"id": "antarchy:lucid"
+			"id": "netherman:doctor"
 		},
 		{
 			"type": "entry",
-			"id": "antarchy:vortex"
+			"id": "netherman:azazel"
 		},
 		{
 			"type": "entry",
-			"id": "creaturefeature:detritus"
+			"id": "antarchy:stratoshark"
+		},
+		{
+			"type": "entry",
+			"id": "hedges_bestiary:endgel"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:witch"
+		},
+		{
+			"type": "entry",
+			"id": "companions:sacred_pontiff"
 		},
 		{
 			"type": "entry",
@@ -348,111 +396,23 @@
 		},
 		{
 			"type": "entry",
-			"id": "supplementaries:clock_block"
+			"id": "creaturefeature:detritus"
 		},
 		{
 			"type": "entry",
-			"id": "whimsy_deco:red_phone"
+			"id": "opposing_force:dicer"
 		},
 		{
 			"type": "entry",
-			"id": "whimsy_deco:horseshoe"
+			"id": "netherman:guardian"
 		},
 		{
 			"type": "entry",
-			"id": "whimsy_deco:gatcha_machine"
+			"id": "antarchy:lucid"
 		},
 		{
 			"type": "entry",
-			"id": "abyssal_decor:bottomless_bag_of_dirt"
-		},
-		{
-			"type": "entry",
-			"id": "minecraft:enchanting_table"
-		},
-		{
-			"type": "entry",
-			"id": "companions:frog_bonanza_block"
-		},
-		{
-			"type": "entry",
-			"id": "scp:deaths_dynamic_shroud"
-		},
-		{
-			"type": "entry",
-			"id": "scp:rubber_duck"
-		},
-		{
-			"type": "entry",
-			"id": "scp:spoon_bender"
-		},
-		{
-			"type": "entry",
-			"id": "scguns:the_pact"
-		},
-		{
-			"type": "entry",
-			"id": "netherman:maze_door"
-		},
-		{
-			"type": "entry",
-			"id": "whimsy_deco:lucky_cat"
-		},
-		{
-			"type": "entry",
-			"id": "whimsy_deco:singing_frog"
-		},
-		{
-			"type": "entry",
-			"id": "companions:empty_puppet_block"
-		},
-		{
-			"type": "entry",
-			"id": "companions:croissant_egg_block"
-		},
-		{
-			"type": "entry",
-			"id": "companions:soul_furnace_block"
-		},
-		{
-			"type": "entry",
-			"id": "abyssal_decor:black_mold"
-		},
-		{
-			"type": "entry",
-			"id": "companions:respawn_totem_block"
-		},
-		{
-			"type": "entry",
-			"id": "companions:porcelain_pottery"
-		},
-		{
-			"type": "entry",
-			"id": "companions:holy_porcelain_pottery"
-		},
-		{
-			"type": "entry",
-			"id": "csr:clay_soldier"
-		},
-		{
-			"type": "entry",
-			"id": "whimsy_deco:moroccan_sofa"
-		},
-		{
-			"type": "entry",
-			"id": "scguns:sulfur_vent"
-		},
-		{
-			"type": "entry",
-			"id": "scguns:geothermal_vent"
-		},
-		{
-			"type": "entry",
-			"id": "supplementaries:safe"
-		},
-		{
-			"type": "entry",
-			"id": "minecraft:chiseled_tuff_bricks"
+			"id": "antarchy:vortex"
 		}
 	]
 }

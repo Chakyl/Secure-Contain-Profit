@@ -1,0 +1,36 @@
+{
+	"name": {
+		"translate": "abnormality.companions.golden_allay.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 4,
+		"insight": 4,
+		"harmony": 0
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 20,
+	"breach_types": [
+		"SPAWN_FEND",
+		"SUPERCHAOS",
+		"TELEPORT",
+		"SUCK",
+		"BEGONE"
+	],
+	"evolutions": [],
+	"malformation": "scguns:nervepinch"
+}

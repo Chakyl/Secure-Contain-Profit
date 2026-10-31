@@ -28,6 +28,7 @@ antarchy:umbral_hills
 antarchy:vortex_expanse
 antarchy:wormy_caves
 blueprint:original_source_marker
+echoes:timeless
 minecraft:badlands
 minecraft:bamboo_jungle
 minecraft:basalt_deltas

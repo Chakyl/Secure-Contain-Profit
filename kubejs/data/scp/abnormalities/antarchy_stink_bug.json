@@ -1,0 +1,36 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.stink_bug.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 2,
+		"insight": 4,
+		"harmony": 2
+	},
+	"bad_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 1,
+	"breach_types": [
+		"DARKNESS",
+		"SULFUR",
+		"DISSOLVE",
+		"ESCAPEARTIST"
+	],
+	"evolutions": [
+		"antarchy:brown_ant"
+	]
+}

@@ -1,0 +1,34 @@
+{
+	"name": {
+		"translate": "abnormality.netherman.doctor.name"
+	},
+	"tier": "indigo",
+	"preferences": {
+		"violence": 1,
+		"insight": 0,
+		"harmony": 1
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 666,
+	"breach_types": [
+		"INDIGO_ESCAPEARTIST"
+	],
+	"evolutions": [
+		"netherman:azazel"
+	],
+	"increment_hidden_counter": true
+}

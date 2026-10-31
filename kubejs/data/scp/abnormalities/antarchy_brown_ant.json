@@ -1,0 +1,35 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.brown_ant.name"
+	},
+	"tier": "amber",
+	"preferences": {
+		"violence": 3,
+		"insight": 5,
+		"harmony": 3
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 10,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST",
+		"BEGONE",
+		"CHAOS"
+	],
+	"evolutions": [],
+	"malformation": "scguns:nailer"
+}

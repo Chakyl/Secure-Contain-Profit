@@ -66,4 +66,12 @@ ServerEvents.tags('block', (e) => {
     ].forEach((item) => {
         e.add("scp:containment_unit_allows", item);
     });
+    [
+        'industrialhellscape:stamped_metal_door',
+        'industrialhellscape:armored_door',
+        'industrialhellscape:bulkhead_door',
+    ].forEach((item) => {
+        e.add('minecraft:mob_interactable_doors', item)
+        e.add("minecraft:doors", item);
+    });
 })

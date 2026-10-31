@@ -1,0 +1,2 @@
+#Whether portals should apply the post-processing effects.
+enable_portal_post_processing = true

@@ -1,0 +1,30 @@
+{
+  "title": "Requesting Employees",
+  "description": "Due to your work in the Amber tier, the Moonlit Company has authorized you to make employee requests.\n\nOur employee registration program makes use of [REDACTED]. Due to instability of said program, the intelligence of said employees... Leaves something to be desired.\n\nYou may still find them useful, as most abnormalities do not recognize them as souls, and thus are not threat.\n\nBe weary of abnormalities that prefer domination and subjugation as employees are easy targets.",
+  "icon": {
+    "item": "scp:employee_request"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 1,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:employee_request",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:maroon_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:maroon_containment_expansion_card",
+      "count": 1
+    }
+  ]
+}

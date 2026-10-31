@@ -5,7 +5,7 @@
     "item": "industrially_plated:fire_alarm_sign"
   },
   "chapter": "training",
-  "sort_order": 12,
+  "sort_order": 20,
   "objectives": [
     {
       "type": "questlog:read",
@@ -15,7 +15,7 @@
   "prerequisites": [
     {
       "type": "questlog:quest_complete",
-      "quest": "questlog:bulding",
+      "quest": "questlog:threat_level",
       "required_amount": 1
     }
   ],

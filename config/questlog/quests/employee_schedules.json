@@ -1,0 +1,30 @@
+{
+  "title": "Employee Schedules",
+  "description": "Employees have working schedules that vary.\n\nWhen not working, they will typically be sleeping. Placing a bed near their home will let you get a better idea of when they work, and is generally humane.\n\nNote that unlike you, employees don't like sleeping in hospital beds.\n\n",
+  "icon": {
+    "item": "minecraft:white_bed"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 10,
+  "include_in_main": false,
+  "objectives": [
+    {
+      "type": "questlog:read",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:employees",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "minecraft:white_bed",
+      "count": 1
+    }
+  ]
+}

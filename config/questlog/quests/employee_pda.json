@@ -1,0 +1,35 @@
+{
+  "title": "Managing Employees",
+  "description": "Due to... Reasons pertaining to the development of the Employee Program... Employees need no upkeep. \n\nThe Employee PDA can be used to assign workers to containment units tracked by it.\n\nClick on a Containment Unit to add it to your PDA. From there, it can be assigned to an employee by right clicking the employee and then the plus button.\n\nNote that like you, most employees are not very good at their job. They may have negative or positive affinities to the 3 types of work that you can access by interacting with them. \n\nGiving them a good work tool may compensate for this, which can be done by putting the tool in the top right slot.\n\nA pressure plate is a good investment to ensure containment unit doors stay closed.\n",
+  "icon": {
+    "item": "scp:employee_pda"
+  },
+  "chapter": "maroon_wing",
+  "sort_order": 2,
+  "objectives": [
+    {
+      "type": "questlog:item_obtain",
+      "item": "scp:employee_pda",
+      "required_amount": 1
+    }
+  ],
+  "prerequisites": [
+    {
+      "type": "questlog:quest_complete",
+      "quest": "questlog:maroon_wing",
+      "required_amount": 1
+    }
+  ],
+  "rewards": [
+    {
+      "type": "questlog:item",
+      "item": "scp:employee_request",
+      "count": 1
+    },
+    {
+      "type": "questlog:item",
+      "item": "minecraft:stone_pressure_plate",
+      "count": 1
+    }
+  ]
+}

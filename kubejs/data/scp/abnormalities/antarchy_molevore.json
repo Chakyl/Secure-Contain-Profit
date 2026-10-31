@@ -1,0 +1,34 @@
+{
+	"name": {
+		"translate": "abnormality.antarchy.molevore.name"
+	},
+	"tier": "maroon",
+	"preferences": {
+		"violence": 3,
+		"insight": 2,
+		"harmony": 3
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 4,
+	"breach_types": [
+		"DARKNESS",
+		"ESCAPEARTIST",
+		"SLEEPING"
+	],
+	"evolutions": [],
+	"malformation": "antarchy:ultimate_pickaxe"
+}

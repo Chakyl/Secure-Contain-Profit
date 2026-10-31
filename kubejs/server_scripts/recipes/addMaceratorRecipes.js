@@ -42,7 +42,9 @@ ServerEvents.recipes((e) => {
     macerate([{ item: "create:brass_ingot" }, { item: "scguns:diamond_steel_blend" }, { item: "scguns:sheol" }], "scguns:treated_brass_ingot", 1);
     macerate([{ item: "scguns:treated_iron_ingot" }, { item: 'minecraft:lapis_lazuli' }, { item: 'minecraft:diamond' }], "scguns:diamond_steel_blend", 1);
     macerate([{ item: 'scguns:anthralite_ingot' }, { item: 'minecraft:iron_ingot' }, { item: 'minecraft:coal' }, { item: 'minecraft:coal' }], "scguns:treated_iron_ingot", 2);
-
+    macerate([{ item: 'scguns:anthralite_ingot' }, { item: 'minecraft:iron_ingot' }, { item: 'minecraft:coal' }, { item: 'minecraft:coal' }], "scguns:treated_iron_ingot", 2);
+    macerate([{ item: 'scguns:weird_flesh' }, { item: 'scguns:sulfur_dust' }, { item: 'minecraft:blaze_powder' }], 'scguns:nitro_powder_dust', 4);
+    
     bulkMacerate({ tag: "scguns:enchantable/gun" }, "minecraft:raw_iron", 1000);
     bulkMacerate({ tag: "industrialhellscape:rockrete_smeltable_item" }, "minecraft:cobblestone",20);
     bulkMacerate({ item: "minecraft:cobbled_deepslate" }, "minecraft:tuff",500);
@@ -58,9 +60,11 @@ ServerEvents.recipes((e) => {
     macerate('scguns:small_diamond_steel_casing', 'scguns:diamond_steel_blend', 1);
     macerate('scguns:medium_diamond_steel_casing', 'scguns:diamond_steel_blend', 2);
     macerate('scguns:diamond_steel_flare', 'scguns:diamond_steel_blend', 5);
+    macerate('scguns:sculk_flare', 'scguns:peal', 8);
 
     macerate('scguns:small_brass_casing', 'create:brass_nugget', 1);
     macerate('scguns:medium_brass_casing', 'create:brass_nugget', 2);
     macerate('scguns:large_brass_casing', 'create:brass_nugget', 3);
+    macerate('minecraft:saddle', 'minecraft:leather', 2);
 })
 

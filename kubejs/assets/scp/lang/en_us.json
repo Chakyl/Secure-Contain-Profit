@@ -43,6 +43,17 @@
     "tooltip.always.industrialhellscape.monitor_and_keyboard.0": "Allows you to purchase goods from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
     "tooltip.always.scguns.anthralite_lamp.0": "Sends Enkephalin used on it to the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>. It's your job to do this.",
 
+    "tooltip.always.scp.employee_pda.0": "Manages Containment Unit assignments for employees",
+    "tooltip.scp.employee_pda.0": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click a Containment Unit</ltcolor> to track",
+    "tooltip.scp.employee_pda.1": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click</ltcolor> to manage tracked units",
+    "tooltip.scp.employee_pda.2": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click an employee</ltcolor> to assign/unassign",
+
+    "tooltip.always.scp.employee_request.0": "Right click to request an employee from the <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Moonlit Company</ltcolor>.",
+    
+    "tooltip.always.scp.home_marker.0": "Marks a block as an employee's home point",
+    "tooltip.scp.home_marker.0": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click a block</ltcolor> to set the marker's home point",
+    "tooltip.scp.home_marker.1": "<ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Right Click an employee</ltcolor> to assign to marker's home point",
+
     "tooltip.always.scp.warehouse_expansion_card.0": "Use on a Warehouse Lock to unlock it and add a warehouse unit.",
     "tooltip.always.scp.utility_expansion_room_card.0": "Use on any type of Containment Unit Lock to unlock it and add an empty utility room.",
     "tooltip.always.scp.utility_expansion_room_card.1": "<ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Does not contain a Containment Unit.</ltcolor>",
@@ -53,16 +64,26 @@
     "tooltip.scguns.needle.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
     "tooltip.always.companions.netherite_dagger.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.companions.netherite_dagger.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence II</ltcolor>",
+    "tooltip.companions.netherite_dagger.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
     "tooltip.always.scp.soul_needle.0":  "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.scp.soul_needle.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence I-IV</ltcolor>. Correlates negatively to user's <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;HP</ltcolor>.",
     "tooltip.scp.soul_needle.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
+    "tooltip.always.antarchy.basilisk_dagger.0": "Attack an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.antarchy.basilisk_dagger.1": "Type: <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence III</ltcolor>",
+    "tooltip.antarchy.basilisk_dagger.0": "Good <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Violence</ltcolor> work results cause abnormalities to drop <ltcolor>c=AA0000;c=FF5555;c=#D10000;p=3;w=5;Crystal Shards</ltcolor>.",
 
     "tooltip.always.minecraft.book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.minecraft.book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I</ltcolor>",
     "tooltip.minecraft.book.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
+    "tooltip.always.scp.architects_digest.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scp.architects_digest.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I</ltcolor>",
+    "tooltip.scp.architects_digest.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;5x Experience</ltcolor>.",
     "tooltip.always.scp.spiritual_book.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.scp.spiritual_book.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight II</ltcolor>",
     "tooltip.scp.spiritual_book.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
+    "tooltip.always.scguns.sculk_tome.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scguns.sculk_tome.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight III</ltcolor>",
+    "tooltip.scguns.sculk_tome.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
     "tooltip.always.scp.black_opal.0": "Use on an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.scp.black_opal.1": "Type: <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight I-IV</ltcolor>. Correlates positively to user's <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
     "tooltip.scp.black_opal.0": "Good <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Insight</ltcolor> work results grant <ltcolor>c=D9D968;c=D9D968;c=#D9D968;p=3;w=5;Experience</ltcolor>.",
@@ -73,6 +94,12 @@
     "tooltip.always.minecraft.goat_horn.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
     "tooltip.always.minecraft.goat_horn.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony II</ltcolor>",
     "tooltip.minecraft.goat_horn.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
+    "tooltip.always.scp.cornucopia.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.scp.cornucopia.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony II</ltcolor>",
+    "tooltip.scp.cornucopia.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Gold Coins</ltcolor>.",
+    "tooltip.always.creaturefeature.vertigo_horn.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin.",
+    "tooltip.always.creaturefeature.vertigo_horn.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony III</ltcolor>",
+    "tooltip.creaturefeature.vertigo_horn.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
     "tooltip.always.scp.tubasmoke_stick.0": "Use near an abnormality in the WORKABLE state to extract Enkephalin. Consumed after use.",
     "tooltip.always.scp.tubasmoke_stick.1": "Type: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony III</ltcolor>",
     "tooltip.scp.tubasmoke_stick.0": "Good <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Harmony</ltcolor> work results cause abnormalities to drop <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=3;w=5;Brass Coins</ltcolor>.",
@@ -86,6 +113,7 @@
     "tooltip.always.scp.indigo_research.0": "Right click a Containment Unit block to add one research point.",
     "tooltip.always.ae2.drive.0": "Comes with built-in storage cells",
     "tooltip.always.scguns.flare_pistol.0": "Flare must not hit any blocks within a range of 10-16 to work",
+    "tooltip.always.scguns.anthralite_respirator.0": "Prevents Sulfur Poisoning from most sources",
 
     "tooltip.always.scp.containment_unit_signaler.0": "Reads the state of the above Containment Unit and emits a redstone signal based on it",
     "tooltip.scp.containment_unit_signaler.0": "Power map:",
@@ -98,6 +126,7 @@
     "tooltip.always.vista.television.0": "When powered with redstone, plays a video based off the provided cassette. Forms multiblock screens",
     "tooltip.always.vista.viewfinder.0": "Captures live footage of the pointed area when linked with a Hollow Cassette",
     "tooltip.always.vista.hollow_cassette.0": "Right click on a viewfinder to link",
+    "tooltip.always.industrialhellscape.cassette_player.0": "Decorative. Use a television to play Cassettes.",
 
     "block.scp.rubber_duck": "Abnormality T-009",
     "tooltip.always.scp.rubber_duck.0": "Name: <ltcolor>c=77c9c0;c=61b0a7;c=498f87;p=6;w=5;Rubber Duck</ltcolor>",
@@ -113,19 +142,17 @@
     "tooltip.always.scguns.advanced_composter.0": "Turns organic items into useful resources",
 
     "gateways.verdant_raid_1": "Verdant Raid I",
-    "gateways.amber_raid_1": "Amber Raid I",
-    "gateways.maroon_raid_1": "Maroon Raid I",
-    "gateways.indigo_raid_1": "Verdant Raid I",
-
     "gateways.verdant_raid_2": "Verdant Raid II",
-    "gateways.amber_raid_2": "Amber Raid II",
-    "gateways.maroon_raid_2": "Maroon Raid II",
-    "gateways.indigo_raid_2": "Verdant Raid II",
-
     "gateways.verdant_raid_3": "Verdant Raid III",
-    "gateways.amber_raid_3": "Amber Raid III",
-    "gateways.maroon_raid_3": "Maroon Raid III",
-    "gateways.indigo_raid_3": "Verdant Raid III",
+    "gateways.amber_raid_4": "Amber Raid I",
+    "gateways.amber_raid_5": "Amber Raid II",
+    "gateways.amber_raid_6": "Amber Raid III",
+    "gateways.maroon_raid_7": "Maroon Raid I",
+    "gateways.maroon_raid_8": "Maroon Raid II",
+    "gateways.maroon_raid_9": "Maroon Raid III",
+    "gateways.indigo_raid_10": "Indigo Raid I",
+    "gateways.indigo_raid_11": "Indigo Raid II",
+    "gateways.indigo_raid_12": "Indigo Raid III",
 
     "item.abnormality_heart.filled_tooltip": "Abnormality: %s",
     "item.abnormality_heart.default_tooltip": "Just a random heart. No abnormality",
@@ -135,6 +162,7 @@
     "messages.scp.general.raid.warning": "WARNING: THE MOONLIT COMPANY HAS DETECTED TERRORIST ACTIVITY OUTSIDE YOUR FACILITY. INSURGENCY RAID OCCURRING IN 1 DAY.",
 
     "messages.scp.working.not_nearby": "There's no abnormalities nearby...",
+    "messages.scp.malformation": "The abnormality gave you a small gift!",
 
     "messages.scp.general.threat_level_increased": "THREAT LEVEL INCREASED TO %s.",
     "messages.scp.general.abnormality_escaped": "%s ESCAPED CONTAINMENT AT [x:%s/y:%s/z:%s].",
@@ -160,7 +188,14 @@
     "messages.scp.eraserhead.death": "You already have %s... Are you trying to cheat me?",
     "messages.scp.eraserhead.curse": "I've already cursed you with %s. I'll let your greed slide this time...",
     
+    "messages.scp.tvotr.death": "Gather round' everyone, we're taking a look at %s's fate! Can you believe they let the threat of their facility get to %s? A few more abnormalities and they're gonna be torn from limb to limb by horrors beyond my comprehension! Wonderful!",
+
+    "messages.scp.dancer_in_the_dark.marked": "You've been marked for elimination.",
+    "messages.scp.dancer_in_the_dark.elimination": "You prepare yourself for death...",
+
     "messages.scp.deaths_dynamic_shroud.no_drops": "This abnormality didn't drop anything...",
-    "messages.scp.horseshoe_theory.none_nearby": "No nearby containment unit..."
+    "messages.scp.horseshoe_theory.none_nearby": "No nearby containment unit...",
+
+    "messages.scp.meteora_blues_threaten": "%s feels a hand approaching!"
 
 }

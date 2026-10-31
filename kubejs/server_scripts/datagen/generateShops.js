@@ -14,6 +14,8 @@
 //             { stageRequired: "amber_level", item: "scp:maroon_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 24 } },
 //             { stageRequired: "maroon_level", item: "scp:maroon_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 12 } },
 //             { stageRequired: "amber_level", item: "scp:warehouse_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 32 } },
+//             { stageRequired: "maroon_level", item: "scp:indigo_hallway_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 64 } },
+//             { stageRequired: "indigo_level", item: "scp:indigo_containment_expansion_card", count: 1, itemCost1: { item: 'scp:enkephalin', count: 24 } },
 //             { item: 'scp:utility_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 4 } },
 //             { stageRequired: "amber_level", item: 'scp:room_abnormality_expansion_room_card', count: 1, itemCost1: { item: 'scp:enkephalin', count: 20 } },
 //             { item: "numismatics:bank_terminal", count: 1, numiCost: 16 },
@@ -28,6 +30,9 @@
 //         id: "abnormality_management",
 //         jeiCatalyst: "scp:enkephalin",
 //         trades: [
+//             { item: "scp:employee_pda", count: 1, numiCost: 1024 },
+//             { item: "scp:employee_request", count: 1, numiCost: 4096 },
+//             { item: "scp:home_marker", count: 1, numiCost: 64 },
 //             { item: "scguns:needle", count: 1, numiCost: 256 },
 //             { item: "supplementaries:flute", count: 1, numiCost: 256 },
 //             { item: "minecraft:book", count: 1, numiCost: 256 },
@@ -165,8 +170,9 @@
 //             { item: "scguns:grapeshot", count: 4, numiCost: 4 },
 //             { item: "scguns:powder_and_ball", count: 4, numiCost: 8 },
 //             { item: 'scguns:sculk_cell', count: 4, numiCost: 128 },
+//             { item: 'scguns:shulkshot', count: 4, numiCost: 256 },
 //             { item: 'scguns:depleted_energy_core', count: 1, numiCost: 1024 },
-//             { item: 'scguns:empty_cell', count: 1, numiCost: 2048 }
+
 //         ]
 //     },
 //     {
@@ -201,19 +207,20 @@
 //             { item: "whimsy_deco:gatcha_machine", count: 1, numiCost: 1024 },
 //             { item: 'abyssal_decor:bottomless_bag_of_dirt', count: 1, numiCost: 1024 },
 //             { item: 'minecraft:enchanting_table', count: 1, numiCost: 1024 },
-//             { item: 'scp:deaths_dynamic_shroud', count: 1, numiCost: 8192 },
+//             { stageRequired: "amber_level", item: 'scp:deaths_dynamic_shroud', count: 1, numiCost: 8192 },
 //             { item: "companions:frog_bonanza_block", count: 1, numiCost: 2048 },
-//             { item: "scp:rubber_duck", count: 1, numiCost: 4096 },
-//             { item: "scp:spoon_bender", count: 1, numiCost: 4096 },
-//             { item: 'scguns:the_pact', count: 1, numiCost: 1024 },
-//             { item: 'netherman:maze_door', count: 1, numiCost: 2048 },
-//             { item: "whimsy_deco:lucky_cat", count: 1, numiCost: 8192 },
-//             { item: "whimsy_deco:singing_frog", count: 1, numiCost: 8192 },
-//             { item: "companions:empty_puppet_block", count: 1, numiCost: 16384 },
-//             { item: "companions:croissant_egg_block", count: 1, numiCost: 16384 },
-//             { item: 'companions:soul_furnace_block', count: 1, numiCost: 32768 },
-//             { item: "companions:respawn_totem_block", count: 1, numiCost: 32768 },
-//             { item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
+//             { stageRequired: "amber_level", item: "scp:rubber_duck", count: 1, numiCost: 4096 },
+//             { stageRequired: "amber_level", item: "scp:spoon_bender", count: 1, numiCost: 4096 },
+//             { stageRequired: "amber_level", item: 'scguns:the_pact', count: 1, numiCost: 1024 },
+//             { stageRequired: "amber_level", item: 'netherman:maze_door', count: 1, numiCost: 2048 },
+//             { stageRequired: "amber_level", item: "whimsy_deco:lucky_cat", count: 1, numiCost: 8192 },
+//             { stageRequired: "maroon_level", item: "whimsy_deco:singing_frog", count: 1, numiCost: 8192 },
+//             { stageRequired: "amber_level", item: "companions:empty_puppet_block", count: 1, numiCost: 16384 },
+//             { stageRequired: "maroon_level", item: "companions:croissant_egg_block", count: 1, numiCost: 16384 },
+//             { stageRequired: "maroon_level", item: 'companions:soul_furnace_block', count: 1, numiCost: 32768 },
+//             { item: 'whimsy_deco:recorder', count: 1, numiCost: 2048 },
+//             { stageRequired: "maroon_level", item: "companions:respawn_totem_block", count: 1, numiCost: 32768 },
+//             { stageRequired: "maroon_level", item: "companions:porcelain_pottery", count: 1, numiCost: 2048 },
 //         ]
 //     },
 //     {
@@ -450,6 +457,9 @@
 //             { item: "peaceless:shrapin_scute", count: 4, itemCost1: { item: "creaturefeature:thingamabob", count: 1 } },
 //             { item: "creaturefeature:thingamabob", itemCost1: { item: "creaturefeature:fiendish_essence", count: 1 } },
 //             { item: "creaturefeature:fiendish_essence", itemCost1: { item: "peaceless:shrapin_scute", count: 4 } },
+//             { item: 'creaturefeature:carapace', count: 4, itemCost1: { item: 'creaturefeature:coat_scraps', count: 1 } },
+//             { item: 'creaturefeature:coat_scraps', itemCost1: { item: 'antarchy:mantis_claw', count: 1 } },
+//             { item: 'antarchy:mantis_claw', itemCost1: { item: 'creaturefeature:carapace', count: 2 } },
 //         ]
 //     }
 // ]

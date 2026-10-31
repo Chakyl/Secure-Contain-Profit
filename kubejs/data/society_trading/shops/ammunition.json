@@ -109,6 +109,18 @@
 		},
 		{
 			"offer": {
+				"id": "scguns:shulkshot",
+				"count": 4
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 256,
+			"trade_id": "ammunition_scguns_shulkshot"
+		},
+		{
+			"offer": {
 				"id": "scguns:depleted_energy_core",
 				"count": 1
 			},
@@ -118,18 +130,6 @@
 			},
 			"numismatics_cost": 1024,
 			"trade_id": "ammunition_scguns_depleted_energy_core"
-		},
-		{
-			"offer": {
-				"id": "scguns:empty_cell",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:crown",
-				"count": 4
-			},
-			"numismatics_cost": 2048,
-			"trade_id": "ammunition_scguns_empty_cell"
 		}
 	]
 }

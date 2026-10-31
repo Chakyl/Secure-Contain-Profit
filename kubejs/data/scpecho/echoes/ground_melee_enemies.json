@@ -1,0 +1,40 @@
+{
+  "add": [
+    {
+      "damage_increase_per_level": 0.5,
+      "health_increase_per_level": 1.3,
+      "id": "creaturefeature:fend",
+      "level_range": 2,
+      "loot_rolls": 1.0,
+      "preferred_level": 10,
+      "weight": 1
+    },
+    {
+      "damage_increase_per_level": 0.5,
+      "health_increase_per_level": 1.3,
+      "id": "creaturefeature:dreamweaver",
+      "level_range": 2,
+      "loot_rolls": 1.0,
+      "preferred_level": 15,
+      "weight": 1
+    },
+    {
+      "damage_increase_per_level": 0.5,
+      "health_increase_per_level": 1.3,
+      "id": "minecraft:phantom",
+      "level_range": 10,
+      "loot_rolls": 1.0,
+      "preferred_level": 20,
+      "weight": 1
+    },
+    {
+      "damage_increase_per_level": 0.5,
+      "health_increase_per_level": 1.3,
+      "id": "peaceless:harpy",
+      "level_range": 10,
+      "loot_rolls": 1.0,
+      "preferred_level": 25,
+      "weight": 1
+    }
+  ]
+}

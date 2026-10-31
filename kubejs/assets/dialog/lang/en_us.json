@@ -25,5 +25,10 @@
 	"dialog.npc.red_phone.dialog.choice_6.line_0": "What is it you desire today?",
 	"dialog.npc.red_phone.dialog.choice_6.option_0": "I fear war",
 	"dialog.npc.red_phone.dialog.choice_6.option_1": "I desire war",
-	"dialog.npc.red_phone.dialog.choice_6.option_2": "I desire peace"
+	"dialog.npc.red_phone.dialog.choice_6.option_2": "I desire peace",
+	"dialog.npc.plague_doctor.name": "I-386",
+	"dialog.npc.plague_doctor.chatter.description": "Chatting with I-386",
+	"dialog.npc.plague_doctor.end": "Wish granted...",
+	"dialog.npc.plague_doctor.dialog.begone.line_0": "I don't care to work with those cloaked in power over the weak.",
+	"dialog.npc.plague_doctor.dialog.begone.line_1": "Send over those you lord over, I will give them salvation."
 }

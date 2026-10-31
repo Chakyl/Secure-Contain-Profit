@@ -1,0 +1,33 @@
+{
+	"name": {
+		"translate": "abnormality.creaturefeature.mockingbird.name"
+	},
+	"tier": "verdant",
+	"preferences": {
+		"violence": 1,
+		"insight": 2,
+		"harmony": 4
+	},
+	"bad_result_counter_impact": {
+		"violence": 1,
+		"insight": 1,
+		"harmony": 1
+	},
+	"neutral_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"good_result_counter_impact": {
+		"violence": 0,
+		"insight": 0,
+		"harmony": 0
+	},
+	"counter": 6,
+	"breach_types": [
+		"ESCAPEARTIST",
+		"SAP"
+	],
+	"evolutions": [],
+	"malformation": "opposing_force:relic_feather"
+}
