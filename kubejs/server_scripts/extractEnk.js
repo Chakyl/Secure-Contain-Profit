@@ -348,7 +348,7 @@ ItemEvents.rightClicked('scp:cornucopia', (e) => {
     const { player, level, server } = e;
     let nearestAb = global.getNearestAbnormalities(level, player.getOnPos(), 8);
     if (nearestAb && nearestAb.length > 0) {
-        processWork(level, server, player, nearestAb[0], 8, "harmony", 2, "nuimismatics:crown");
+        processWork(level, server, player, nearestAb[0], 8, "harmony", 2, null, "numismatics:crown");
     }
 })
 

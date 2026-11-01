@@ -257,6 +257,30 @@
 		},
 		{
 			"offer": {
+				"id": "abyssal_decor:iron_panel",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_iron_panel"
+		},
+		{
+			"offer": {
+				"id": "abyssal_decor:dull_iron_panel",
+				"count": 8
+			},
+			"request": {
+				"id": "numismatics:bevel",
+				"count": 1
+			},
+			"numismatics_cost": 8,
+			"trade_id": "blocks_abyssal_decor_dull_iron_panel"
+		},
+		{
+			"offer": {
 				"id": "abyssal_decor:serpent_scales",
 				"count": 8
 			},

@@ -13,29 +13,29 @@
     "curseForgeHash": 2856970585,
     "modrinthHash": "8033176da762df7e9455f6c8584b20b7461c707f"
   },
-  "antarchy-2.2.9+1.21.1-neoforge.jar": {
-    "jarName": "antarchy-2.2.9+1.21.1-neoforge.jar",
+  "antarchy-2.3.0+1.21.1-neoforge.jar": {
+    "jarName": "antarchy-2.3.0+1.21.1-neoforge.jar",
     "modId": "antarchy",
     "name": "Antarchy",
-    "version": "2.2.9+1.21.1-neoforge",
-    "curseForgeHash": 2764465902,
-    "modrinthHash": "6368962a1fde19b7a2e9d6999f0cb9a01db33708"
+    "version": "2.3.0+1.21.1-neoforge",
+    "curseForgeHash": 246787333,
+    "modrinthHash": "b53b60587d2289b4b4d8c1d3b371f07c70e2f870"
   },
-  "anthology-1.0.0+1.21.1-neoforge.jar": {
-    "jarName": "anthology-1.0.0+1.21.1-neoforge.jar",
+  "anthology-1.0.2+1.21.1-neoforge.jar": {
+    "jarName": "anthology-1.0.2+1.21.1-neoforge.jar",
     "modId": "anthology",
     "name": "Anthology",
-    "version": "1.0.0+1.21.1-neoforge",
-    "curseForgeHash": 1812777907,
-    "modrinthHash": "079f3da4ffe3f74e24d3d538306490f535e7043e"
+    "version": "1.0.2+1.21.1-neoforge",
+    "curseForgeHash": 2419860017,
+    "modrinthHash": "cafb8125f30a523a89a540a9a0bf1ce3ba3ec170"
   },
-  "antos-neoforge-1.21.1-1.6.1.jar": {
-    "jarName": "antos-neoforge-1.21.1-1.6.1.jar",
+  "antos-neoforge-1.21.1-1.6.2.jar": {
+    "jarName": "antos-neoforge-1.21.1-1.6.2.jar",
     "modId": "antos",
     "name": "AntOS",
-    "version": "1.6.1",
-    "curseForgeHash": 3491105269,
-    "modrinthHash": "16b8617ff80e20b85f7e0971ab5c940cab59cd42"
+    "version": "1.6.2",
+    "curseForgeHash": 3643055742,
+    "modrinthHash": "021ca1eaf2a7e12fa1207e95ef840d3eac6fdd79"
   },
   "ApothicAttributes-1.21.1-2.10.1.jar": {
     "jarName": "ApothicAttributes-1.21.1-2.10.1.jar",
@@ -698,13 +698,13 @@
     "curseForgeHash": 2296179517,
     "modrinthHash": "d9b2678b014c3ee4ad2599877dbb3e017675dd6b"
   },
-  "scp-1.1-1.21.1.jar": {
-    "jarName": "scp-1.1-1.21.1.jar",
+  "scp-1.2-1.21.1.jar": {
+    "jarName": "scp-1.2-1.21.1.jar",
     "modId": "scp",
     "name": "Secure Contain Profit",
-    "version": "1.1-1.21.1",
-    "curseForgeHash": 310504433,
-    "modrinthHash": "a7b043885f228028f4d88bdb0a13ede7d7f0ac89"
+    "version": "1.2-1.21.1",
+    "curseForgeHash": 1777721232,
+    "modrinthHash": "80510a9edc7fa02050a594a0b4a67e00435f14b4"
   },
   "Searchables-neoforge-1.21.1-1.0.2.jar": {
     "jarName": "Searchables-neoforge-1.21.1-1.0.2.jar",

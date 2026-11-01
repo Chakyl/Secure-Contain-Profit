@@ -826,3 +826,27 @@
 	# Default: 20.0
 	# Range: 1.0 ~ 128.0
 	visionRadius = 20.0
+
+[anvilCannon]
+	#Cooldown in seconds after firing. Set to 0 to disable.
+	# Default: 2.5
+	# Range: 0.0 ~ 3600.0
+	cooldownSeconds = 2.5
+	#Initial launch velocity applied to the fired anvil.
+	# Default: 2.2
+	# Range: 0.1 ~ 20.0
+	launchVelocity = 2.2
+	#Damage dealt by a fired anvil hitting an entity at launch speed.
+	# Default: 30.0
+	# Range: 0.0 ~ 4096.0
+	impactDamage = 30.0
+	#Knockback strength applied to an entity hit by a fired anvil.
+	# Default: 1.5
+	# Range: 0.0 ~ 20.0
+	impactKnockback = 1.5
+	#How hard the shooter is pushed backwards when firing.
+	# Default: 0.8
+	# Range: 0.0 ~ 10.0
+	recoilStrength = 0.8
+	#Whether a fired anvil lands one damage stage worse (anvil, chipped, damaged, destroyed).
+	degradeOnImpact = true
