@@ -1,6 +1,70 @@
 [elythia]
 	#Whether firefly ambient particles appear at night in the Elythia dimension.
 	fireflyParticlesEnabled = true
+	#Whether Elythia uses its denser atmospheric fog. Client-side visual only.
+	fogEnabled = true
+	#Whether low ground mist drifts over Elythia meadows in the mornings. Client-side visual only.
+	groundMistEnabled = true
+	#Whether the low, mid and towering Elythia clouds use soft translucent clouds instead of solid blocky ones. Client-side visual only.
+	softCloudsEnabled = true
+	#Whether shadows, caves, and nights in Elythia are tinted lavender instead of fading to black. Client-side visual only.
+	dreamShadowsEnabled = true
+	#Strength of the Elythia lavender shadow tint, from 0.0 to 1.0.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	dreamShadowsStrength = 1.0
+	#Whether beds in Elythia set your spawn and let you lie down at any time, but never skip the night.
+	alreadyDreaming = true
+	#Whether water in Elythia is clearer and tinted turquoise. Client-side visual only.
+	clearWater = true
+	#Whether brown ant trips to Elythia play the Descent, sinking into a void and gliding down from the sky, and trips home play the Waking.
+	brownAntDescent = true
+	#Whether red ant trips to and from Thoraxis play the Flip, where you fall upward as the world rolls over.
+	redAntFlip = true
+	#Whether termite trips to and from Cavaryn play the Burrow, crumbling through the ground or bursting back out.
+	termiteBurrow = true
+	#Whether rainbow ant trips to and from Infinity dimensions play the Prism, splitting the world into color.
+	rainbowAntPrism = true
+	#Whether rain in Elythia is purple and falls slowly. Client-side visual only.
+	purpleRain = true
+	#Whether a faint echo of yourself sometimes replays where you walked a few minutes earlier. Client-side visual only.
+	echoes = true
+	#Whether Elythia rolls sky, weather, and creature events such as auroras, meteor showers, lumen rain, towering clouds, and deer migrations.
+	events = true
+	#Whether rain in Elythia makes exposed crops and saplings grow faster. Lumen rain doubles the effect.
+	rainGrowth = true
+	#Whether Thoraxis rolls events such as weightlessness, temporal bubbles, upward antiwater rain, the watching eyes, blind skies, and dreamstorms.
+	thoraxisEvents = true
+
+	[elythia.throwbackZones]
+		#Whether Throwback Zones appear around nostalgic structures and in the wild in Elythia.
+		enabled = true
+		#How many blocks a Throwback Zone extends beyond a nostalgic structure.
+		# Default: 10
+		# Range: 1 ~ 128
+		structureZoneRadius = 10
+		#Chance that each 320x320 block region of Elythia contains a free-standing Throwback Zone.
+		# Default: 0.35
+		# Range: 0.0 ~ 1.0
+		wildZoneChance = 0.35
+		#Whether players inside a Throwback Zone have no attack cooldown.
+		noAttackCooldown = true
+		#Whether players inside a Throwback Zone use the classic hurt sound.
+		classicHurtSound = true
+		#Whether hunger is hidden and paused inside a Throwback Zone, with food healing hearts directly like pre-Beta 1.8.
+		classicFood = true
+		#Whether classic music plays inside a Throwback Zone.
+		classicMusic = true
+		#Whether fog closes in inside a Throwback Zone.
+		denseFog = true
+		#Whether the dream post effect and Elythia color grade are rendered.
+		dreamHaze = true
+		#Strength of the dream post effect inside Throwback Zones, from 0.0 to 1.0.
+		# Default: 1.0
+		# Range: 0.0 ~ 1.0
+		dreamStrength = 1.0
+		#Whether the very faint afterimage part of the dream effect is rendered.
+		afterimages = true
 
 [dreamSand]
 	#Multiplier applied to dream sand's falling-block gravity, i.e. how slowly it falls as a block.

@@ -19,11 +19,11 @@
 		"harmony": 0
 	},
 	"good_result_counter_impact": {
-		"violence": 0,
-		"insight": 0,
-		"harmony": 0
+		"violence": -1,
+		"insight": -1,
+		"harmony": -1
 	},
-	"counter": 2,
+	"counter": 3,
 	"breach_types": [
 		"DARKNESS",
 		"SUCK",

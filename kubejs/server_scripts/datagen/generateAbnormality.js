@@ -107,8 +107,8 @@
 //     ["peaceless:shade", { tier: "amber", preferences: { violence: 3, insight: 2, harmony: 0 }, name: "Rip The Slit", counter: 4, breachTypes: ["DARKNESS", "LOST", "ESCAPEARTIST"], evolutions: ["creaturefeature:nothing"] }],
 //     ["creaturefeature:nothing", { tier: "amber", preferences: { violence: 4, insight: 2, harmony: 0 }, name: "No Thing There", counter: 5, breachTypes: ["DARKNESS", "ESCAPEARTIST", "SAP", "LOST"], malformation: 'opposing_force:stalker_gloves' }],
 //     // Spit bug
-//     ["antarchy:spit_bug", { tier: "amber", preferences: { violence: 4, insight: 4, harmony: 2 }, name: "Bugsnax", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"], evolutions: ["opposing_force:bewilder"] }],
-//     ["opposing_force:bewilder", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST", "DISSOLVE"], malformation: 'antarchy:corn_seeds' }],
+//     ["antarchy:spit_bug", { tier: "amber", preferences: { violence: 4, insight: 4, harmony: 2 }, name: "Bugsnax", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST"], evolutions: ["opposing_force:bewilder"] }],
+//     ["opposing_force:bewilder", { tier: "amber", preferences: { violence: 2, insight: 2, harmony: 2 }, name: "Only Acting", counter: 5, breachTypes: ["POISON", "ESCAPEARTIST"], malformation: 'antarchy:corn_seeds' }],
 //     // [Red Ant] Rolly Polly
 //     ["antarchy:rolly_polly", { tier: "amber", preferences: { violence: 1, insight: 4, harmony: 4 }, name: "Little Dragon", counter: 5, breachTypes: ["ESCAPEARTIST", "SAP"], evolutions: ["antarchy:red_ant"] }],
 //     ["antarchy:red_ant", { tier: "amber", preferences: { violence: 3, insight: 5, harmony: 3 }, name: "Empire Ant", counter: 10, breachTypes: ["DARKNESS", "ESCAPEARTIST", "BEGONE", "CHAOS"], malformation: 'scguns:pyroclastic_flow' }],
@@ -123,7 +123,7 @@
 //     ["antarchy:jerry", { tier: "amber", preferences: { violence: 2, insight: 4, harmony: 4 }, name: "Jerry", counter: 8, breachTypes: ["ESCAPEARTIST", "BITE", "SUCK"], malformation: 'opposing_force:blood_amulet' }],
 //     ["netherman:statue_entity", { tier: "amber", preferences: { violence: 3, insight: 1, harmony: 4 }, name: "Security!", counter: 3, breachTypes: ["DARKNESS", "ESCAPEARTIST"], malformation: 'opposing_force:enchanted_chisel' }],
 //     ["companions:hostile_puppet_glove", { tier: "amber", preferences: { violence: 4, insight: 1, harmony: 2 }, name: "Meteora Blues", counter: 8, breachTypes: ["NONE"], malformation: 'opposing_force:momentum_gauntlet' }],
-//     ["opposing_force:scorcher", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Paprika Pony", counter: 2, breachTypes: ["DARKNESS", "SUCK", "ESCAPEARTIST"], malformation: 'opposing_force:fiery_carapace' }],
+//     ["opposing_force:scorcher", { tier: "amber", preferences: { violence: 1, insight: 3, harmony: 3 }, name: "Paprika Pony", counter: 3, goodWorkCounterResults: { violence: -1, insight: -1, harmony: -1 }, breachTypes: ["DARKNESS", "SUCK", "ESCAPEARTIST"], malformation: 'opposing_force:fiery_carapace' }],
 //     /**
 //      *   MAROON ABNORMALITIES
 //      */

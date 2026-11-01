@@ -87,7 +87,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "antos-neoforge-1.21.1-1.6.1.jar",
+                    "file_name": "antos-neoforge-1.21.1-1.6.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -95,20 +95,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MzU6Lh9B/versions/AxS4HNeS/antos-neoforge-1.21.1-1.6.1.jar",
-                    "id": "AxS4HNeS",
+                    "url": "https://cdn.modrinth.com/data/MzU6Lh9B/versions/vcX9yPCp/antos-neoforge-1.21.1-1.6.2.jar",
+                    "id": "vcX9yPCp",
                     "parent_id": "MzU6Lh9B",
                     "hashes": {
-                        "sha512": "19f781b07ab77beb0253d8d8dcf33e0f0f9b5d0a8e1f67af20e22958366623a23c406dd575c9eeb809a367c624f05f89cd5e8a1e400738a7c599ffff21af17f7",
-                        "sha1": "16b8617ff80e20b85f7e0971ab5c940cab59cd42"
+                        "sha512": "009e3df385cf7737d6332442a4848fcb6a1d7e1f4e4587dfc0e3ee981b894d5ba974b3c7e8e9e9848e2ebf72f303845287242f9cc5b313c9124c0dfb400cbe74",
+                        "sha1": "021ca1eaf2a7e12fa1207e95ef840d3eac6fdd79"
                     },
                     "required_dependencies": [],
-                    "size": 2322836,
-                    "date_published": "2026-10-29T23:41:21.270971Z"
+                    "size": 2323317,
+                    "date_published": "2026-11-01T03:03:25.570035Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "antos-neoforge-1.21.1-1.6.1.jar",
+                    "file_name": "antos-neoforge-1.21.1-1.6.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -116,16 +116,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9367/129/antos-neoforge-1.21.1-1.6.1.jar",
-                    "id": "9367129",
+                    "url": "https://edge.forgecdn.net/files/9391/254/antos-neoforge-1.21.1-1.6.2.jar",
+                    "id": "9391254",
                     "parent_id": "1700593",
                     "hashes": {
-                        "sha1": "16b8617ff80e20b85f7e0971ab5c940cab59cd42",
-                        "md5": "b3e95d27eef58e7d37b4ba7e3918b512"
+                        "sha1": "021ca1eaf2a7e12fa1207e95ef840d3eac6fdd79",
+                        "md5": "9fb9343b696be7f6736f8b5638dbf8b7"
                     },
                     "required_dependencies": [],
-                    "size": 2322836,
-                    "date_published": "2026-10-29T23:41:10.937Z"
+                    "size": 2323317,
+                    "date_published": "2026-11-01T03:03:14.777Z"
                 }
             ]
         },
@@ -156,7 +156,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "antarchy-2.2.9+1.21.1-neoforge.jar",
+                    "file_name": "antarchy-2.3.0+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -164,20 +164,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/bnrJEOg5/versions/t3jQO1j3/antarchy-2.2.9+1.21.1-neoforge.jar",
-                    "id": "t3jQO1j3",
+                    "url": "https://cdn.modrinth.com/data/bnrJEOg5/versions/wyar4I04/antarchy-2.3.0+1.21.1-neoforge.jar",
+                    "id": "wyar4I04",
                     "parent_id": "bnrJEOg5",
                     "hashes": {
-                        "sha512": "8ad1b21fd1994bff073a5e4d7af8e13bf975e27f799e12d1cad881bd453d4ea08f2ae71bc0f2144f520e32f6b60c13fb1b96799b88eab34a85693721a347c733",
-                        "sha1": "6368962a1fde19b7a2e9d6999f0cb9a01db33708"
+                        "sha512": "8721f29f1f947905e1a74efd378ef9b2c195fb5bd1172a3c114fb449fc44f4c68c550361307ecf9b374fe7bba79bcd30ed965059442b22ea0e8c8459399eac30",
+                        "sha1": "b53b60587d2289b4b4d8c1d3b371f07c70e2f870"
                     },
                     "required_dependencies": [],
-                    "size": 71304485,
-                    "date_published": "2026-10-25T18:23:43.244566Z"
+                    "size": 72813521,
+                    "date_published": "2026-11-01T18:08:56.011273Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "antarchy-2.2.9+1.21.1-neoforge.jar",
+                    "file_name": "antarchy-2.3.0-1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -185,23 +185,23 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9325/158/antarchy-2.2.9+1.21.1-neoforge.jar",
-                    "id": "9325158",
+                    "url": "https://edge.forgecdn.net/files/9397/491/antarchy-2.3.0-1.21.1-neoforge.jar",
+                    "id": "9397491",
                     "parent_id": "1504802",
                     "hashes": {
-                        "sha1": "6368962a1fde19b7a2e9d6999f0cb9a01db33708",
-                        "md5": "cd29c44ecbe125bf242cdd031691f541"
+                        "sha1": "b53b60587d2289b4b4d8c1d3b371f07c70e2f870",
+                        "md5": "4e90a19e8b9403870fdb950778a9de3e"
                     },
                     "required_dependencies": [
-                        "1700593",
-                        "981829",
-                        "1741821",
                         "1601832",
                         "388172",
-                        "817709"
+                        "981829",
+                        "817709",
+                        "1741821",
+                        "1700593"
                     ],
-                    "size": 71304485,
-                    "date_published": "2026-10-25T18:23:55.750Z"
+                    "size": 72813521,
+                    "date_published": "2026-11-01T18:06:55.230Z"
                 }
             ]
         },
@@ -223,29 +223,8 @@
             },
             "files": [
                 {
-                    "type": "curseforge",
-                    "file_name": "anthology-1.0.0+1.21.1-neoforge.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9152/560/anthology-1.0.0+1.21.1-neoforge.jar",
-                    "id": "9152560",
-                    "parent_id": "1741821",
-                    "hashes": {
-                        "sha1": "079f3da4ffe3f74e24d3d538306490f535e7043e",
-                        "md5": "6054943050f382cb840defe56bb66e1d"
-                    },
-                    "required_dependencies": [],
-                    "size": 449386,
-                    "date_published": "2026-10-13T00:38:10.400Z"
-                },
-                {
                     "type": "modrinth",
-                    "file_name": "anthology-1.0.0+1.21.1-neoforge.jar",
+                    "file_name": "anthology-1.0.2+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -253,16 +232,37 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/L7cI8p0P/versions/WwajQatW/anthology-1.0.0+1.21.1-neoforge.jar",
-                    "id": "WwajQatW",
+                    "url": "https://cdn.modrinth.com/data/L7cI8p0P/versions/BVUNTE3a/anthology-1.0.2+1.21.1-neoforge.jar",
+                    "id": "BVUNTE3a",
                     "parent_id": "L7cI8p0P",
                     "hashes": {
-                        "sha512": "15d05eb462c5c8fd6cd473bc51a703b165799faf07154dd2eb0b19cebe33cfcf1c8cd1e0ff00b6ad5acf923bdacb57e9d4f1f0f91c901ee64283bdec2c071a1b",
-                        "sha1": "079f3da4ffe3f74e24d3d538306490f535e7043e"
+                        "sha512": "6ef35b4c46a35e921321cce08f73100c692f5963fb2b8a4926f752151abd88906f52814fe2075ba10fb848210fb40dadb652ca7fb4f67d177a820fe03d58c009",
+                        "sha1": "cafb8125f30a523a89a540a9a0bf1ce3ba3ec170"
                     },
                     "required_dependencies": [],
-                    "size": 449386,
-                    "date_published": "2026-10-13T00:38:21.427060Z"
+                    "size": 502288,
+                    "date_published": "2026-11-01T17:30:49.014592Z"
+                },
+                {
+                    "type": "curseforge",
+                    "file_name": "anthology-1.0.2-1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/9397/99/anthology-1.0.2-1.21.1-neoforge.jar",
+                    "id": "9397099",
+                    "parent_id": "1741821",
+                    "hashes": {
+                        "sha1": "cafb8125f30a523a89a540a9a0bf1ce3ba3ec170",
+                        "md5": "7b7757adc26b504dc9db240a89a89c27"
+                    },
+                    "required_dependencies": [],
+                    "size": 502288,
+                    "date_published": "2026-11-01T17:30:39.667Z"
                 }
             ]
         },
@@ -5570,7 +5570,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "scp-1.1-1.21.1.jar",
+                    "file_name": "scp-1.2-1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5578,16 +5578,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9373/938/scp-1.1-1.21.1.jar",
-                    "id": "9373938",
+                    "url": "https://edge.forgecdn.net/files/9396/422/scp-1.2-1.21.1.jar",
+                    "id": "9396422",
                     "parent_id": "1759843",
                     "hashes": {
-                        "sha1": "a7b043885f228028f4d88bdb0a13ede7d7f0ac89",
-                        "md5": "01393a624f5f5fb844444cb2baaa3e90"
+                        "sha1": "80510a9edc7fa02050a594a0b4a67e00435f14b4",
+                        "md5": "20b614045ad62471be717784fb9ce33c"
                     },
                     "required_dependencies": [],
-                    "size": 230989,
-                    "date_published": "2026-10-30T14:52:19.423Z"
+                    "size": 230420,
+                    "date_published": "2026-11-01T16:23:59.347Z"
                 }
             ]
         },
@@ -6213,42 +6213,6 @@
                     "required_dependencies": [],
                     "size": 262609,
                     "date_published": "2026-07-25T15:06:30.068933Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "k02YmWfeofB3dp5p",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "timeless-echoes"
-            },
-            "name": {
-                "curseforge": "Timeless Echoes"
-            },
-            "id": {
-                "curseforge": "1660408"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "echoes-0.6-NEOFORGE-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/9270/864/echoes-0.6-NEOFORGE-1.21.1.jar",
-                    "id": "9270864",
-                    "parent_id": "1660408",
-                    "hashes": {
-                        "sha1": "ba968ae8df689030182ec52d2e3e342b573ad103",
-                        "md5": "8bc3e716818f2278fd9b4f57e87ee1ec"
-                    },
-                    "required_dependencies": [],
-                    "size": 1898078,
-                    "date_published": "2026-10-20T20:03:54.937Z"
                 }
             ]
         },

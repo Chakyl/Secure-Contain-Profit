@@ -182,7 +182,7 @@ global.handleAbnormality = (entity, abnormalityData) => {
             let chance = blockType == "NUKE" ? 1 : 0.05;
             let { x, y, z } = entity;
 
-            for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y - radius, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
+            for (let pos of BlockPos.betweenClosed(new BlockPos(x - radius, y, z - radius), new BlockPos(x + radius, y + radius, z + radius))) {
                 let scanPos = new BlockPos(pos.x, pos.y, pos.z);
                 if (!level.isLoaded(scanPos)) continue;
 

@@ -174,7 +174,7 @@
 	"fieldguide.companions.hostile_puppet_glove.description": "ID: A-145 [Amber]\nQliphoth Counter: 8\n\nWork preferences:\n- Violence: Hated\n- Insight: Liked\n- Harmony: Neutral\n\nKnown information:\nMeteora Blues is known to enjoy playing a high stakes game of rock-paper-scissors. Managers may use representative items if they are able to acquire them. Winning a few games will cause Meteora Blues to take a liking to the manager, permanently unbinding it from the Containment Unit. It can them merge with T-015 to become a useful asset to the company.\n\nWhen breaching, Meteora Blues is not hostile on its own. Suppression is encouraged as it has a tendency to throw nearby abnormalities from other Containment Units at facility managers.",
 	"fieldguide.companions.hostile_puppet_glove.hint": "Requires research level 3",
 	"fieldguide.name.opposing_force.scorcher": "§6Paprika Pony",
-	"fieldguide.opposing_force.scorcher.description": "ID: A-126 [Amber]\nQliphoth Counter: 2\n\nWork preferences:\n- Violence: Liked\n- Insight: Disliked\n- Harmony: Disliked\n\nKnown information:\nWIP",
+	"fieldguide.opposing_force.scorcher.description": "ID: A-126 [Amber]\nQliphoth Counter: 3\n\nWork preferences:\n- Violence: Liked\n- Insight: Disliked\n- Harmony: Disliked\n\nKnown information:\nWIP",
 	"fieldguide.opposing_force.scorcher.hint": "Requires research level 3",
 	"fieldguide.name.scguns.viventrum": "§4Mchngrl",
 	"fieldguide.scguns.viventrum.description": "ID: M-953 [Maroon]\nQliphoth Counter: 8\nEvolutions: 1\n\nWork preferences:\n- Violence: Disliked\n- Insight: Disliked\n- Harmony: Hated\n\nKnown information:\nWIP",

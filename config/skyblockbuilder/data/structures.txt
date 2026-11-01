@@ -2,6 +2,7 @@ ae2:meteorite
 antarchy:apple_cow_orchard
 antarchy:basilisk_lair
 antarchy:fallen_kingdom_castle
+antarchy:glimmering_falls_castle
 antarchy:greenhouse
 antarchy:kings_tree
 antarchy:magical_castle

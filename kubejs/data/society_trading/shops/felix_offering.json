@@ -124,6 +124,61 @@
 		},
 		{
 			"offer": {
+				"id": "minecraft:ochre_froglight",
+				"count": 16
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_minecraft_ochre_froglight"
+		},
+		{
+			"offer": {
+				"id": "minecraft:verdant_froglight",
+				"count": 16
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_minecraft_verdant_froglight"
+		},
+		{
+			"offer": {
+				"id": "minecraft:pearlescent_froglight",
+				"count": 16
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_minecraft_pearlescent_froglight"
+		},
+		{
+			"offer": {
+				"id": "antarchy:lumen_froglight",
+				"count": 16
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_antarchy_lumen_froglight"
+		},
+		{
+			"offer": {
+				"id": "antarchy:roseate_froglight",
+				"count": 16
+			},
+			"request": {
+				"id": "companions:copper_coin",
+				"count": 1
+			},
+			"trade_id": "felix_offering_antarchy_roseate_froglight"
+		},
+		{
+			"offer": {
 				"id": "companions:relic_gold",
 				"count": null
 			},

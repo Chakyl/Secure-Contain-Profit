@@ -230,6 +230,18 @@ antsStealFromChests = true
 	# Default: 6000
 	# Range: 0 ~ 1000000
 	minDespawnTicks = 6000
+	#Max health multiplier for the Glimmer Emperor Scorpion summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Emperor Scorpion's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer Emperor Scorpion's claw, sting and harden cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65
 
 [scorpion]
 	# Default: 30.0
@@ -295,6 +307,18 @@ antsStealFromChests = true
 	# Default: 6.0
 	# Range: 0.0 ~ 1024.0
 	lightningDamagePhaseOne = 6.0
+	#Max health multiplier for the Glimmer Kraken summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Kraken's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer Kraken's attack, minion and lightning cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65
 
 [royalBosses]
 	#Base max health for the King.
@@ -526,6 +550,30 @@ antsStealFromChests = true
 	# Default: 0.25
 	# Range: 0.0 ~ 1.0
 	hitOverflowRate = 0.25
+	#Max health multiplier for the Glimmer King summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	kingGlimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer King's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	kingGlimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer King's royal attack cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	kingGlimmerCooldownMultiplier = 0.65
+	#Max health multiplier for the Glimmer Queen summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	queenGlimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Queen's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	queenGlimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer Queen's royal attack cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	queenGlimmerCooldownMultiplier = 0.65
 
 [royalMounts]
 	#Chance denominator for a royal egg advancing one hatch stage on a random tick.
@@ -630,6 +678,18 @@ antsStealFromChests = true
 	# Default: 0.55
 	# Range: 0.0 ~ 10.0
 	flyingSpeed = 0.55
+	#Max health multiplier for the Glimmer Brutalfly summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Brutalfly's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer Brutalfly's spit and swipe cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65
 
 [mantis]
 	#Base max health.
@@ -680,6 +740,18 @@ antsStealFromChests = true
 	# Default: 25.0
 	# Range: 1.0 ~ 256.0
 	damageRange = 25.0
+	#Max health multiplier for the Glimmer Alpha Mantis summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Attack damage multiplier for the Glimmer Alpha Mantis.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Minion summon interval multiplier for the Glimmer Alpha Mantis (lower = summons more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65
 
 [rollyPolly]
 	#Base max health.
@@ -1287,6 +1359,18 @@ antsStealFromChests = true
 	# Default: 25.0
 	# Range: 1.0 ~ 256.0
 	damageRange = 25.0
+	#Max health multiplier for the Glimmer Hercules Beetle summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Hercules Beetle's attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Cooldown multiplier for the Glimmer Hercules Beetle's cry, attack and charge cooldowns (lower = more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65
 
 [toreterror]
 	#Base max health.
@@ -1333,3 +1417,15 @@ antsStealFromChests = true
 	# Default: 1.2
 	# Range: 0.0 ~ 10.0
 	waterBombKnockback = 1.2
+	#Max health multiplier for the Glimmer Toreterror summoned with a Glimmer Sigil.
+	# Default: 1.75
+	# Range: 0.1 ~ 100.0
+	glimmerHealthMultiplier = 1.75
+	#Damage multiplier for the Glimmer Toreterror's jump, spin, and water bomb attacks.
+	# Default: 1.35
+	# Range: 0.0 ~ 100.0
+	glimmerDamageMultiplier = 1.35
+	#Attack cooldown multiplier for the Glimmer Toreterror (lower = attacks more often).
+	# Default: 0.65
+	# Range: 0.05 ~ 10.0
+	glimmerCooldownMultiplier = 0.65

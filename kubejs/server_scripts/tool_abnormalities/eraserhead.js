@@ -36,7 +36,7 @@ BlockEvents.rightClicked('minecraft:enchanting_table', (e) => {
         }
 
         if (hasDupe(currentEnchantments, enchantmentKey, registry)) {
-            if (enchantmentKey.toString().includes("curse_")) {
+            if (enchantmentKey.toString().includes("curse")) {
                 player.tell(Text.translatable("messages.scp.eraserhead.curse", Text.translatable(`enchantment.${splitId[0]}.${splitId[1]}`)).darkRed());
                 server.runCommandSilent(`playsound netherman:bell_beast_laugh block @a ${block.x} ${block.y} ${block.z} 2 1.5`);
                 e.cancel();
